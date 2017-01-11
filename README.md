@@ -1,0 +1,2 @@
+# flatpak-docs
+Flatpak documentation
