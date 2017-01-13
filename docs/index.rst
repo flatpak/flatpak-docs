@@ -17,4 +17,4 @@ Contents
    building-simple-apps
    flatpak-builder
    working-with-the-sandbox
-   hosting-a-repository
+   distributing-applications

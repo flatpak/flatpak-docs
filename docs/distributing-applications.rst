@@ -1,14 +1,24 @@
+Distributing Applications
+=========================
+
+Flatpak provides several ways to distribute applications. The primary method is to host a repository. This is relatively simple (although there are some important details to be aware of) and allows application updates to be distributed.
+
+It is also possible to distribute Flatpaks as single file bundles, which can be useful in some situations.
+
 Hosting a repository
-====================
+--------------------
 
-While it is relatively simple to host a flatpak repository, there are some important details to be aware of.
+The previous sections of this guide describe how to generate repositories using ``build-export`` or ``flatpak-builder``. The resulting OSTree repository can be hosted on a web server for consumption by users.
 
-archive-z2 repositories contain a single file for each file in the application. This means that pull operations will do a lot of HTTP requests. Since new requests are slow, it is important to enable HTTP keep-alive on the web server.
+Important details
+^^^^^^^^^^^^^^^^^
 
-OSTree supports something called static deltas. These are single files in the repo that contains all the data needed to go between two revisions (or from nothing to a revision). Creating such deltas will take up more space on the server, but will make downloads much faster. This can be done with the ``build-update-repo --generate-static-deltas``.
+OSTree repositories use archive-z2, meaning that they contain a single file for each file in the application. This means that pull operations will do a lot of HTTP requests. Since new requests are slow, it is important to enable HTTP keep-alive on the web server.
+
+OSTree supports something called static deltas. These are single files in the repo that contains all the data needed to go between two revisions (or from nothing to a revision). Creating such deltas will take up more space on the server, but will make downloads much faster. This can be done with the ``build-update-repo --generate-static-deltas`` option.
 
 GPG signatures
---------------
+^^^^^^^^^^^^^^
 
 By default OSTree refuses to pull from a remote repository that is not signed. To disable GPG verification, the ``--no-gpg-verify`` option needs to be used when a remote is added. Alternatively, it can be disabled on an existing remote using ``flatpak remote-modify``.
 
@@ -19,7 +29,7 @@ OSTree requires signatures for every commit and on repository summary files. The
   $ flatpak build-export --gpg-sign=KEYID --gpg-homedir=/some/dir appdir repo
 
 Referring to repositories
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A convenient way to point users to the repository containing your application is to provide a ``.flatpakrepo`` file that they can download and install. To install a ``.flatpakrepo`` file manually, use the command::
 
