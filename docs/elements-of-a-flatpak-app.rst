@@ -26,7 +26,7 @@ When an application is built using flatpak, it is outputted with the following s
 All the files in the export directory must have the application ID as a prefix. This guarantees that applications cannot cause conflicts, and that they can’t override any system installed applications.
 
 Metadata files
-^^^^^^^^^^^^^^
+--------------
 
 The application's ``metadata`` file provides information that allows flatpak to set up the sandbox for running the application. A typical metadata file looks like this::
 
