@@ -23,12 +23,14 @@ When an application is built using flatpak, it is outputted with the following s
 * ``/files/bin`` - application binaries
 * ``/export`` - files which the host environment needs access to, such as the application's AppData, .desktop file, icon and D-Bus service file
 
-All the files in the export directory must have the application ID as a prefix. This guarantees that applications cannot cause conflicts, and that they can’t override any system installed applications.
+All the files in the export directory must have the application ID as a prefix (for example: ``org.gnome.App.appdata.xml``, ``org.gnome.App.desktop``, ``org.gnome.App.png``, ``org.gnome.App.service``). Naming files in this way guarantees that applications cannot cause conflicts and that they can’t override any system installed applications.
+
+To name exported files in this way, either rename the relevant source files with the application ID, or use flatpak-builder to rename the files at build time (this is explained in more detail in the section on flatpak-builder).
 
 Metadata files
 --------------
 
-The application's ``metadata`` file provides information that allows flatpak to set up the sandbox for running the application. A typical metadata file looks like this::
+An application's ``metadata`` file provides information that allows flatpak to set up the sandbox for running the application. A typical metadata file looks like this::
 
   [Application]
   name=org.gnome.gedit
