@@ -1,7 +1,7 @@
 Introduction to Flatpak
 =======================
 
-Flatpak is a technology for building, distributing, installing and running applications. It is primarily targetted at Linux desktop applications, although it can also be used as the basis for application distribution in other contexts, such as embedded systems.
+Flatpak is a technology for building, distributing, installing and running applications. It is primarily targetted at the Linux desktop, although it can also be used as the basis for application distribution in other contexts, such as embedded systems.
 
 Flatpak has been designed and implemented with a number of goals:
 
@@ -11,7 +11,7 @@ Flatpak has been designed and implemented with a number of goals:
 * Allow applications to bundle their own dependencies, so that they can use libraries that aren't provided by a Linux distribution, and so they can depend on specific versions or even patched versions of a library.
 * Increase the security of Linux desktops, by isolating applications in sandboxes.
 
-It is easy to take advantage of these features, by using Flatpak to build and distribute applications. If you haven't already, it is recommended that you try the `hello world <http://flatpak.org/hello-world.html>`_ example, as a way of getting started.
+Flatpak makes it easy to take advantage of these features. If you haven't already, it is recommended that you try the `hello world <http://flatpak.org/hello-world.html>`_ example, as a way of getting started.
 
 More information about Flatpak can be found on `flatpak.org <http://flatpak.org/>`_.
 
@@ -30,7 +30,7 @@ Runtimes provide the basic dependencies that applications might require. Various
 Each application must be built against a runtime, and this runtime must be installed on a host system in order for the application to run. Users can install multiple different runtimes at the same time, including different versions of the same runtime.
 
 .. tip::
-  Each runtime can be thought of as a ``/usr`` filesystem. Indeed, when an app is run, its runtime is mounted at ``/usr``.
+  Each runtime can be thought of as a ``/usr`` filesystem. Indeed, when an application is run, its runtime is mounted at ``/usr``.
 
 .. note::
   Flatpak identifies runtimes (as well as SDKs and applications) by a triple of name/arch/branch. The name is expected to be in inverse-dns notation, which needs to match the D-Bus name used for the application. For example: ``org.gnome.Sdk/x86_64/3.14`` or ``org.gnome.Builder/i386/master``.
@@ -38,7 +38,7 @@ Each application must be built against a runtime, and this runtime must be insta
 Bundled libraries
 ^^^^^^^^^^^^^^^^^
 
-If an application requires any dependencies that aren't in its runtime, they can be bundled along with the application itself. This allows apps to use dependencies that aren't available in a distribution, or to use a different version of a dependency from the one that's installed on the host.
+If an application requires any dependencies that aren't in its runtime, they can be bundled along with the application itself. This allows applications to use dependencies that aren't available in a distribution, or to use a different version of a dependency from the one that's installed on the host.
 
 .. note::
   Both runtimes and app bundles can be installed per-user and system-wide.
@@ -69,7 +69,7 @@ Flatpak tries to avoid reinventing the wheel. We build on existing technologies 
 * `D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_, a well-established way to provide high-level APIs to application
 * The OCI format from the `Open Container Initiative <https://www.opencontainers.org/>`_, as a convenient transport format for single-file bundles
 * The `OSTree <https://ostree.readthedocs.io/en/latest/>`_ system for versioning and distributing filesystem trees
-* `Appstream <https://www.freedesktop.org/software/appstream/docs/>`_ metadata that makes Flatpak apps show up nicely in software-center applications
+* `Appstream <https://www.freedesktop.org/software/appstream/docs/>`_ metadata that makes Flatpak applications show up nicely in software-center applications
 
 The flatpak command
 --------------------
