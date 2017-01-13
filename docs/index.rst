@@ -13,7 +13,8 @@ Contents
    :glob:
 
    introduction
-   anatomy-of-a-flatpak-app
+   elements-of-a-flatpak-app
+   extensions
    building-simple-apps
    flatpak-builder
    working-with-the-sandbox
