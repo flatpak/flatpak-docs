@@ -53,10 +53,17 @@ Sandboxes
 
 With Flatpak, each app is built and run in an isolated environment. By default, the application can only 'see' itself and its runtime. Access to user files, network, graphics sockets, subsystems on the bus and devices have to be explicitly granted. (As will be described later, Flatpak provides several ways to do this.) Access to other things, such as other processes, is (deliberately) not possible.
 
-Technologies
-------------
+The flatpak command
+--------------------
 
-Flatpak tries to avoid reinventing the wheel. We build on existing technologies where it makes sense. Many of the important ingredients for Flatpak are inherited from Linux containers and related initiatives:
+``flatpak`` is the command that is used to install, remove and update runtimes and applications. It can also be used to view what is currently installed, and has commands for building and distributing application bundles. ``flatpak --help`` provides a full list of available commands.
+
+Most flatpak commands are performed system-wide by default. To perform a command for the current user only, use the ``--user`` option.
+
+Under the hood
+--------------
+
+Flatpak uses a number of pre-existing technologies. It generally isn't necessary to be familiar with these in order to use Flatpak, although in some cases it might be useful. They include:
 
 * The `bubblewrap <https://github.com/projectatomic/bubblewrap>`_ utility from `Project Atomic <http://www.projectatomic.io/>`_, which lets unprivileged users set up and run containers, using kernel features such as:
 
@@ -65,17 +72,9 @@ Flatpak tries to avoid reinventing the wheel. We build on existing technologies 
   * Bind mounts
   * Seccomp rules
 
-* `systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_ to set up cgroups for our sandbox
-* `D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_, a well-established way to provide high-level APIs to application
+* `systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_ to set up cgroups for sandboxes
+* `D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_, a well-established way to provide high-level APIs to applications
 * The OCI format from the `Open Container Initiative <https://www.opencontainers.org/>`_, as a convenient transport format for single-file bundles
 * The `OSTree <https://ostree.readthedocs.io/en/latest/>`_ system for versioning and distributing filesystem trees
-* `Appstream <https://www.freedesktop.org/software/appstream/docs/>`_ metadata that makes Flatpak applications show up nicely in software-center applications
-
-The flatpak command
---------------------
-
-``flatpak`` is the command that is used to install, remove and update runtimes and applications. It can also be used to view what is currently installed, and has commands for building and distributing application bundles. ``flatpak --help`` provides a full list of available commands.
-
-Most flatpak commands are performed system-wide by default. To perform a command for the current user only, use the ``--user`` option.
-
+* `Appstream <https://www.freedesktop.org/software/appstream/docs/>`_ metadata, to allow Flatpak applications to show up nicely in software-center applications
 
