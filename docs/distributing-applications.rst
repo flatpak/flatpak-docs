@@ -20,13 +20,13 @@ OSTree supports something called static deltas. These are single files in the re
 GPG signatures
 ^^^^^^^^^^^^^^
 
-By default OSTree refuses to pull from a remote repository that is not signed. To disable GPG verification, the ``--no-gpg-verify`` option needs to be used when a remote is added. Alternatively, it can be disabled on an existing remote using ``flatpak remote-modify``.
-
-Note that GPG signatures are required for the user to be able to install trusted remotes that can be updated from without needing to be root.
-
-OSTree requires signatures for every commit and on repository summary files. These objects are created by the ``build-update-repo`` and ``build-export`` commands, as well as indirectly by ``flatpak-builder``. A GPG key should therefore be passed to each of these commands, and optionally the GPG home directory to use. For example::
+OSTree uses GPG to verify the identity of repositories. A signature is therefore required for every commit and for repository summary files. These objects are created by the ``build-update-repo`` and ``build-export`` commands, as well as indirectly by ``flatpak-builder``. A GPG key therefore needs to be passed to each of these commands, and optionally the GPG home directory to use. For example::
 
   $ flatpak build-export --gpg-sign=KEYID --gpg-homedir=/some/dir appdir repo
+
+It is recommended that OSTree repositories are verified using GPG whenever they are used. However, if you want to disable GPG verification, the ``--no-gpg-verify`` option can be used when a remote is added. GPG verification can also be disabled on an existing remote using ``flatpak remote-modify``.
+
+Note that it is necessary to become root in order to update a remote that does not have GPG verification enabled.
 
 Referring to repositories
 ^^^^^^^^^^^^^^^^^^^^^^^^^
