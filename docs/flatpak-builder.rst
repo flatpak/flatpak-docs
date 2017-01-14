@@ -18,9 +18,9 @@ The GNOME Dictionary manifest is short, because the only module is the applicati
     "runtime-version": "3.22",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-dictionary",
-    "finish-args": [ 
-       "--socket=x11", 
-       "--share=network"  
+    "finish-args": [
+       "--socket=x11",
+       "--share=network"
     ],
     "modules": [
       {
@@ -28,7 +28,7 @@ The GNOME Dictionary manifest is short, because the only module is the applicati
         "sources": [
           {
             "type": "archive",
-            "url": "https://download.gnome.org/sources/gnome-dictionary/3.22/gnome-dictionary-3.22.0.tar.xz",
+            "url": "https://download.gnome.org/sources/gnome-dictionary/3.20/gnome-dictionary-3.20.0.tar.xz",
             "sha256": "efb36377d46eff9291d3b8fec37baab2355f9dc8bc7edb791b6a625574716121"
           }
         ]
@@ -67,7 +67,7 @@ Example
 You can try flatpak-builder for yourself, using the repository that was created in the previous section. To do this, place the manifest json from above into a file called ``org.gnome.Dictionary.json`` and run the following command::
 
   $ flatpak-builder --repo=repo dictionary2 org.gnome.Dictionary.json
-  
+
 This will:
 
 * Create a new directory (called dictionary2)
@@ -86,11 +86,11 @@ To check that the application has been successfully updated, you can compare the
 
   $ flatpak info org.gnome.Dictionary
   $ flatpak info org.gnome.Dictionary.Locale
-  
+
 And finally, you can run the new version of the Dictionary app::
 
   $ flatpak run org.gnome.Dictionary
-  
+
 Example manifests
 -----------------
 
