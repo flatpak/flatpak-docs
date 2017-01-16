@@ -55,11 +55,13 @@ Interface toolkits can implement transparent support for portals. If an applicat
 
 Examples of capabilities that can be accessed through portals include:
 
-* Sending an item to be printed
-* Taking a screenshot
-* Showing a notification
-* Finding out network status
-* Opening a file using a native file chooser dialog
+* Inhibit the user session from ending, suspending, idling or getting switched away
+* Network status information
+* Notifications
+* Open a URI
+* Open files with a native file chooser dialog
+* Printing
+* Screenshots
 
 Applications that aren't using a toolkit with support for portals can refer to the `xdg-desktop-portal API documentation <http://flatpak.org/xdg-desktop-portal/portal-docs.html>`_ for information on how to access them.
 
