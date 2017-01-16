@@ -59,7 +59,7 @@ Splitting things up
 
 By default, flatpak-builder splits off translations into a separate .Locale runtime, and debuginfo into a .Debug runtime, and adds these 'standard' extension points to the application metadata. You can turn this off with the ``separate-locales`` and ``no-debuginfo`` keys, but there shouldn't be any reason for it.
 
-When flatpak-builder exports the build into a repository, it automatically includes the .Locale`` and .Debug runtimes. If you do the exporting manually, don't forget to include them.
+When flatpak-builder exports the build into a repository, it automatically includes the .Locale and .Debug runtimes. If you do the exporting manually, don't forget to include them.
 
 Example
 -------
