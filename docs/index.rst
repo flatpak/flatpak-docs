@@ -12,7 +12,6 @@ Contents
 
    introduction
    elements-of-a-flatpak-app
-   extensions
    getting-setup
    building-simple-apps
    flatpak-builder

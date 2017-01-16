@@ -48,6 +48,11 @@ SDKs (Software Developer Kits)
 
 An SDK is a runtime that includes the 'devel' parts which are not needed at runtime, such as build and packaging tools, header files, compilers and debuggers. Each application is built against an SDK, which is typically paired with a runtime (this is the runtime that will be used by the application at runtime).
 
+Extensions
+^^^^^^^^^^
+
+An extension is an optional add-on for a runtime or application. They are most commonly used to split out translations and debug info from runtimes. For example, ``org.freedesktop.Platform.Locale`` can be added to the ``org.freedesktop.Platform`` runtime in order to enable translations.
+
 Sandboxes
 ^^^^^^^^^
 
