@@ -1,34 +1,14 @@
 Building Simple Apps
 ====================
 
-The ``flatpak`` utility provides a simple set of commands for building and distributing applications. These allow creating new Flatpaks, into which new or existing applications can be built. This section describes how to build a simple application which doesn't require any additional dependencies outside of the runtime it is built against.
+The ``flatpak`` utility provides a simple set of commands for building and distributing applications. These allow creating new Flatpaks, into which new or existing applications can be built.
 
-Installing an SDK
------------------
-
-As described above, an SDK is a special type of runtime that is used to build applcations. Typically, an SDK is paired with a runtime that will be used by the app at runtime. For example the GNOME 3.22 SDK is used to build applications that use the GNOME 3.22 runtime. The rest of this guide uses this SDK and runtime for its examples. To do this, download the repository GPG key and then add the repository that contains the runtime and SDK::
-
-  $ flatpak remote-add --from gnome https://sdk.gnome.org/gnome.flatpakrepo
-
-You can now download and install the runtime and SDK. (If you have already completed the tutorial on the Flatpak homepage, you will already have the runtime installed.) ::
-
-  $ flatpak install gnome org.gnome.Platform//3.22 org.gnome.Sdk//3.22
-
-This might be a good time to try installing an application and having a look 'under the hood'. To do this, you need to add a repository that contains applications. In this case we are going to use the gnome-apps repository and install gedit::
-
-  $ flatpak remote-add --from gnome-apps https://sdk.gnome.org/gnome-apps.flatpakrepo
-  $ flatpak install gnome-apps org.gnome.gedit
-
-You can now use the following command to get a shell in the 'devel sandbox'::
-
-  $ flatpak run --devel --command=bash org.gnome.gedit
-
-This gives you an environment which has the application bundle mounted in ``/app``, and the SDK it was built against mounted in ``/usr``. You can explore these two directories to see what a typical flatpak looks like, as well as what is included in the SDK.
+This section describes how to build a simple application which doesn't require any additional dependencies outside of the runtime it is built against. In order to complete the examples, you should have completed the steps in Getting Setup first.
 
 Creating an app
 ---------------
 
-To create an application, the first step is to use the build-init command. This creates a directory into which an applcation can be built, which contains the correct directory structure and a metadata file which contains information about the app. The format for build-init is::
+To create an application, the first step is to use the ``build-init`` command. This creates a directory into which an applcation can be built, which contains the correct directory structure and a metadata file which contains information about the app. The format for build-init is::
 
   $ flatpak build-init DIRECTORY APPNAME SDK RUNTIME [BRANCH]
 
