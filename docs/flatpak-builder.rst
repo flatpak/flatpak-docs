@@ -3,12 +3,12 @@ Flatpak Builder
 
 Most applications require additional dependencies that aren't provided by their runtimes. Flatpak allows these dependencies to be bundled as part of the application itself. In order to do this, each dependency must be built inside the application build directory. The ``flatpak-builder`` tool automates this multi-step build process, making it possible to build all application modules with a single command. 
 
-flatpak-builder expects modules to be built in the standard manner by following what is called the `Build API <https://github.com/cgwalters/build-api/>`_. If any modules don't conform to this API, they will need to be modified.
+flatpak-builder expects modules to be built in the standard manner by following what is called the `Build API <https://github.com/cgwalters/build-api/>`_. This requires modifying modules to follow the build API, if they don't already.
 
 Manifests
 ---------
 
-The input to flatpak-builder is a json file that describes the parameters for building an app, as well as each of the modules to be bundled. This file is called the manifest. Module sources can be of several types, including ``.tar`` or ``.zip`` archives, Git or Bzr repositories, patch files or shell commands that are run.
+The input to flatpak-builder is a JSON file that describes the parameters for building an application, as well as each of the modules to be bundled. This file is called the manifest. Module sources can be of several types, including ``.tar`` or ``.zip`` archives, Git or Bzr repositories, patch files or shell commands that are run.
 
 The GNOME Dictionary manifest is short, because the only module is the application itself::
 
@@ -66,7 +66,7 @@ When flatpak-builder exports the build into a repository, it automatically inclu
 Example
 -------
 
-You can try flatpak-builder for yourself, using the repository that was created in the `previous section <building-simple-apps.html>`_. To do this, place the manifest json from above into a file called ``org.gnome.Dictionary.json`` and run the following command::
+You can try flatpak-builder for yourself, using the repository that was created in the `previous section <building-simple-apps.html>`_. To do this, place the manifest JSON from above into a file called ``org.gnome.Dictionary.json`` and run the following command::
 
   $ flatpak-builder --repo=repo dictionary2 org.gnome.Dictionary.json
 
@@ -80,7 +80,7 @@ This will:
 
 flatpak-builder will also do some other useful things, like creating a separately installable debug runtime (called `org.gnome.Dictionary.Debug` in this case) and a separately installable translation runtime (called ``org.gnome.Dictionary.Locale``).
 
-It is now possible to update the installed version of the Dictionary application with the new version that was built and exported by flatpak-builder::
+If you completed the tutorial in `Building Simple Apps`, you can update the Dictionary application you installed with the new version that was built and exported by flatpak-builder::
 
   $ flatpak --user update org.gnome.Dictionary
 
