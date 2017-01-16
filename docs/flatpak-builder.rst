@@ -66,7 +66,7 @@ When flatpak-builder exports the build into a repository, it automatically inclu
 Example
 -------
 
-You can try flatpak-builder for yourself, using the repository that was created in the `previous section <building-simple-apps>`_. To do this, place the manifest json from above into a file called ``org.gnome.Dictionary.json`` and run the following command::
+You can try flatpak-builder for yourself, using the repository that was created in the `previous section <building-simple-apps.html>`_. To do this, place the manifest json from above into a file called ``org.gnome.Dictionary.json`` and run the following command::
 
   $ flatpak-builder --repo=repo dictionary2 org.gnome.Dictionary.json
 
