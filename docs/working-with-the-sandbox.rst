@@ -1,7 +1,7 @@
 Working with the Sandbox
 ========================
 
-One of Flatpak's main goals is to increase the security of desktop systems by isolating applications from one-another. This is done using sandboxing and it means that, by default, a Flatpak has extremely limited access to the host environment. This includes:
+One of Flatpak's main goals is to increase the security of desktop systems by isolating applications from one another. This is done using sandboxing and it means that, by default, a Flatpak has extremely limited access to the host environment. This includes:
 
 * No access to any host files except the runtime, the app and ``~/.var/app/$APPID``. Only the last of these is writable.
 * No access to the network.
@@ -11,12 +11,14 @@ One of Flatpak's main goals is to increase the security of desktop systems by is
 * Limited access to the session D-Bus instance - an app can only own its own name on the bus.
 * No access to host services like X, system D-Bus, or PulseAudio.
 
-Most applications will need access to some of these resources in order to be useful, and Flatpak provides a number of ways to give an application access to them. While there are no restrictions on which sandbox permissions an application can use, as good practice, it is recommended to use the minimum number of as permissions possible. Certain permissions, such as blanket access to the system bus (using the ``--socket=system-bus`` option) are strongly discouraged.
+Most applications will need access to some of these resources in order to be useful, and Flatpak provides a number of ways to give an application access to them.
+
+While there are no restrictions on which sandbox permissions an application can use, as good practice, it is recommended to use the minimum number of as permissions possible. Certain permissions, such as blanket access to the system bus (using the ``--socket=system-bus`` option) are strongly discouraged.
 
 Configuring sandbox permissions
 -------------------------------
 
-Using the ``build-finish`` command is the simplest way to configure sandbox permissions. As was seen in a previous example, this can be used to add access to graphics sockets and network::
+Using the ``build-finish`` command is the simplest way to configure sandbox permissions. As was seen in a previous example, this can be used to add access to graphics sockets and the network::
 
   $ flatpak build-finish dictionary2 --socket=x11 --share=network --command=gnome-dictionary
 
@@ -32,7 +34,9 @@ These arguments translate into several properties in the application's metadata 
   shared=network;
   sockets=x11;
   
-build-finish allows a whole range of resources to be added to an application. The table at the bottom of this page provides an overview of many of them. The full list can also be viewed using ``flatpak build-finish --help``. These options can also be passed to flatpak-builder as ``finish-args`` properties.
+build-finish allows a whole range of resources to be added to an application. These options can also be passed to flatpak-builder as ``finish-args`` properties.
+
+The table at the bottom of this page provides an overview of many sandbox permissions. The full list can also be viewed using ``flatpak build-finish --help``. 
 
 .. note::
   Until a sandbox-compatible backend is available, access to dconf needs to be enabled using the following options::
@@ -45,7 +49,9 @@ build-finish allows a whole range of resources to be added to an application. Th
 Portals
 -------
 
-Portals are the mechanism through which applications can interact with the host environment from within a sandbox. In this way, they give additional abilities to interact with data, files and services without the need to add sandbox permissions. Interface toolkits can implement transparent support for portals. If an application is using one of these toolkits, there is no additional work required to use them.
+Portals are a mechanism through which applications can interact with the host environment from within a sandbox. In this way, they give additional abilities to interact with data, files and services without the need to add sandbox permissions.
+
+Interface toolkits can implement transparent support for portals. If an application uses one of these toolkits, there is no additional work required to access them.
 
 Examples of capabilities that can be accessed through portals include:
 
@@ -60,7 +66,7 @@ Applications that aren't using a toolkit with support for portals can refer to t
 Overriding sandbox permissions
 ------------------------------
 
-When developing an application, it can sometimes be useful to temporarily override a Flatpak's sandbox configuration. There are several ways to do this. One is to override them using ``flatpak run``, which accepts the same parameters as ``build-finish``. For example, this will let the Dictionary application see your home directory::
+When developing an application, it can sometimes be useful to override a Flatpak's sandbox configuration. There are several ways to do this. One is to override them using ``flatpak run``, which accepts the same parameters as ``build-finish``. For example, this will let the Dictionary application see your home directory::
 
   $ flatpak run --filesystem=home --command=ls org.gnome.Dictionary ~/
   
