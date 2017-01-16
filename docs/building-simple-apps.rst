@@ -3,7 +3,7 @@ Building Simple Apps
 
 The ``flatpak`` utility provides a simple set of commands for building and distributing applications. These allow creating new Flatpaks, into which new or existing applications can be built.
 
-This section describes how to build a simple application which doesn't require any additional dependencies outside of the runtime it is built against. In order to complete the examples, you should have completed the steps in Getting Setup first.
+This section describes how to build a simple application which doesn't require any additional dependencies outside of the runtime it is built against. In order to complete the examples, you should have completed the steps in `Getting Setup <getting-setup.html>`_ first.
 
 Creating an app
 ---------------
