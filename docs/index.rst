@@ -1,7 +1,11 @@
 Welcome to Flatpak's documentation!
 ===================================
 
-This documentation covers everything you need to know to build and distribute applications as Flatpaks. They start with an introduction to the basic concepts and a simple app building tutorial, before moving on to cover automated building and repository hosting.
+These docs cover everything you need to know to build and/or distribute applications as Flatpaks. They contain a high-level introduction to Flatpak, tutorials on building applications and essential information on how to develop and distribute applictaions as Flatpaks.
+
+The docs are primarily intended for application developers and distributors. However, they might be interesting if you are interested in Flatpak more generally.
+
+If you are looking for information about how to install and use Flatpak applications, please refer to `the Flatpak website <http://flatpak.org>`_. Otherwise, if you want information about Flatpak internals or how to create runtimes, the `Flatpak wiki <https://github.com/flatpak/flatpak/wiki>`_ is the best place to start.
 
 Contents
 --------
