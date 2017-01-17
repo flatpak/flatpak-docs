@@ -9,9 +9,11 @@ Standard application elements
 The following are some of the Linux desktop conventions that are supported and expected by Flatpak. Application developers are encouraged to use them.
 
 * `AppData <https://www.freedesktop.org/software/appstream/docs/chap-Quickstart.html#sect-Quickstart-DesktopApps>`_, for providing information that can be used by app stores, such as an application description and screenshots
-* Application icons, provided in the typical sizes, formats and locations
-* D-Bus service files, for D-Bus activation and any services provided by the application
-* .desktop files, for providing basic information about the application
+* Application icons, as specified by the `Freedesktop icon theme specification <https://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html>`_
+* `D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_, for interaction with the host
+* `Desktop files <https://standards.freedesktop.org/desktop-entry-spec/latest/>`_, for providing basic information about the application
+* `PulseAudio <https://www.freedesktop.org/wiki/Software/PulseAudio/>`_, for sound
+* `X11 <https://www.x.org/wiki/>`_ and `Wayland <https://wayland.freedesktop.org/>`_, for display
 
 Application structure
 ---------------------
@@ -21,7 +23,7 @@ When an application is built using flatpak, it is outputted with the following s
 * ``metadata`` - a keyfile which provides information about the application
 * ``/files`` - the files that make up the application, include source code and application data
 * ``/files/bin`` - application binaries
-* ``/export`` - files which the host environment needs access to, such as the application's AppData, .desktop file, icon and D-Bus service file
+* ``/export`` - files which the host environment needs access to, such as the application's AppData, .desktop file, icon and D-Bus service files
 
 All the files in the export directory must have the application ID as a prefix (for example: ``org.gnome.App.appdata.xml``, ``org.gnome.App.desktop``, ``org.gnome.App.png``, ``org.gnome.App.service``). Naming files in this way guarantees that applications cannot cause conflicts and that they can’t override any system installed applications.
 
