@@ -17,7 +17,7 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
+import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
@@ -83,7 +83,20 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+
+
+# Currently if you import sphinx_rtd_theme in your local sphinx build, then pass
+# that same config to Read the Docs, it will fail, since RTD gets confused. 
+# If you want to run this theme locally and then also have it build on RTD, 
+# then you can add something like this to your config. Thanks to Daniel Oaks for this.
+#   https://github.com/snide/sphinx_rtd_theme#using-this-theme-locally-then-building-on-read-the-docs
+#   http://read-the-docs.readthedocs.io/en/latest/faq.html#how-do-i-change-behavior-for-read-the-docs
+on_rtd = os.environ.get('READTHEDOCS') == 'True'
+if on_rtd:
+    html_theme = 'default'
+else:
+    html_theme = 'sphinx_rtd_theme'
+    html_theme_path = ['_themes', ]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
