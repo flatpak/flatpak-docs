@@ -1,0 +1,24 @@
+/* GNOME Overrides */
+
+/* Overpass for headings */
+@import url("http://overpass-30e2.kxcdn.com/overpass.css");
+
+/* Source Sans for text */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,700i,400,400i&amp;subset=latin-ext");
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Overpass", sans-serif;
+  font-weight: 200;
+}
+
+.wy-side-nav-search {
+  background-color: #4a90d9;
+}
+
+a, a:visited { color: #4a90d9; }
+  .wy-menu a { color: #919191; }
+  .wy-side-nav-search a { color: #fff; }

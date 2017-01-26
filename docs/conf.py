@@ -83,6 +83,7 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
+#html_theme = 'sphinx_rtd_theme'
 html_theme = 'default'
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -96,6 +97,11 @@ html_theme = 'default'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+html_context = {
+    'css_files': [
+        '_static/theme_overrides.css', #GNOME specific overrides
+        ],
+    }
 
 # -- Options for HTMLHelp output ------------------------------------------
 
