@@ -7,7 +7,7 @@ Flatpak has been designed and implemented with a number of goals:
 
 * Allow applications to be installed on any Linux distribution.
 * Provide consistent environments for applications, to facilitate testing and reduce bugs.
-* Decouple applications from operating system, so that applications don't depend on specific versions of each distribution.
+* Decouple applications from the operating system, so that applications don't depend on specific versions of each distribution.
 * Allow applications to bundle their own dependencies, so that they can use libraries that aren't provided by a Linux distribution, and so they can depend on specific versions or even patched versions of a library.
 * Increase the security of Linux desktops, by isolating applications in sandboxes.
 
@@ -18,14 +18,14 @@ More information about Flatpak can be found on `flatpak.org <http://flatpak.org/
 How it works
 ------------
 
-Familiarity with a few key concepts is enough to understand how Flatpak works, as well as how it differs from traditional software packages.
+Flatpak can be understood through a small number of key concepts. These also help to explain how it differs from traditional software packages.
 
 .. image:: ../images/diagram.svg
 
 Runtimes
 ^^^^^^^^
 
-Runtimes provide the basic dependencies that applications might require. Various runtimes are available, from more minimal (but more stable) Freedesktop runtimes, to larger runtimes produced by desktops like GNOME or KDE. (The `runtimes page <http://flatpak.org/runtimes.html>`_ on flatpak.org provides an overview of the runtimes that are currently available.)
+Runtimes provide the basic dependencies that are used by applications. Various runtimes are available, from more minimal (but more stable) Freedesktop runtimes, to larger runtimes produced by desktops like GNOME or KDE. (The `runtimes page <http://flatpak.org/runtimes.html>`_ on flatpak.org provides an overview of the runtimes that are currently available.)
 
 Each application must be built against a runtime, and this runtime must be installed on a host system in order for the application to run. Users can install multiple different runtimes at the same time, including different versions of the same runtime.
 
@@ -40,30 +40,27 @@ Bundled libraries
 
 If an application requires any dependencies that aren't in its runtime, they can be bundled along with the application itself. This allows applications to use dependencies that aren't available in a distribution, or to use a different version of a dependency from the one that's installed on the host.
 
-.. note::
-  Both runtimes and app bundles can be installed per-user and system-wide.
-
 SDKs (Software Developer Kits)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-An SDK is a runtime that includes the 'devel' parts which are not needed at runtime, such as build and packaging tools, header files, compilers and debuggers. Each application is built against an SDK, which is typically paired with a runtime (this is the runtime that will be used by the application at runtime).
+An SDK is a runtime that includes the 'devel' parts which are not needed at runtime, such as build and packaging tools, header files, compilers and debuggers. Each application is built against an SDK, which is paired with a runtime (this is the runtime that will be used by the application at runtime).
 
 Extensions
 ^^^^^^^^^^
 
-An extension is an optional add-on for a runtime or application. They are most commonly used to split out translations and debug info from runtimes. For example, ``org.freedesktop.Platform.Locale`` can be added to the ``org.freedesktop.Platform`` runtime in order to enable translations.
+An extension is an optional add-on for a runtime or application. They are most commonly used to split out translations and debug info from runtimes. For example, ``org.freedesktop.Platform.Locale`` can be added to the ``org.freedesktop.Platform`` runtime in order to add translations.
 
 Sandboxes
 ^^^^^^^^^
 
-With Flatpak, each app is built and run in an isolated environment. By default, the application can only 'see' itself and its runtime. Access to user files, network, graphics sockets, subsystems on the bus and devices have to be explicitly granted. (As will be described later, Flatpak provides several ways to do this.) Access to other things, such as other processes, is (deliberately) not possible.
+With Flatpak, each app is built and run in an isolated environment. By default, the application can only 'see' itself and its runtime. Access to user files, network, graphics sockets, subsystems on the bus and devices have to be explicitly granted. (As will be described later, Flatpak provides several ways to do this.) Access to other things, such as other processes, is deliberately not possible.
 
 The flatpak command
 --------------------
 
 ``flatpak`` is the command that is used to install, remove and update runtimes and applications. It can also be used to view what is currently installed, and has commands for building and distributing application bundles. ``flatpak --help`` provides a full list of available commands.
 
-Most flatpak commands are performed system-wide by default. To perform a command for the current user only, use the ``--user`` option.
+Most flatpak commands are performed system-wide by default. To perform a command for the current user only, use the ``--user`` option. This allows runtimes and application bundles to be installed per-user, for instance.
 
 Under the hood
 --------------

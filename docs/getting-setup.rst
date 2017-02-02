@@ -3,7 +3,7 @@ Getting Setup
 
 Getting setup to build Flatpaks is quick and easy. First, it is necessary to have the ``flatpak`` and ``flatpak-builder`` packages installed on your system. These are available for most distributions, and the Flatpak website provides `details on how to get them <http://flatpak.org/getting.html>`_.
 
-Once flatpak has been installed, it is necessary to pick a runtime and install the SDK and install it.
+Once flatpak has been installed, it is necessary to pick a runtime and install it, along with the matching SDK.
 
 Installing an SDK
 -----------------
@@ -12,7 +12,7 @@ An SDK is a special type of runtime that is used to build applcations. Typically
 
 The Flatpak website provides a `list of the available runtimes <http://flatpak.org/runtimes.html>`_. Once you have decided which one to use, getting setup is just a matter of installing it and its SDK.
 
-The examples in the rest of the Flatpak documentation uses the GNOME 3.22 runtime and SDK. If you haven't installed these already, download the repository GPG key and then add the repository that contains the runtime and SDK::
+The examples in the rest of the Flatpak documentation use the GNOME 3.22 runtime and SDK. If you haven't installed these already, download the repository GPG key and then add the repository that contains the runtime and SDK::
 
   $ flatpak remote-add --from gnome https://sdk.gnome.org/gnome.flatpakrepo
 
@@ -25,7 +25,7 @@ This same procedure can be used to install any other runtime and SDK.
 Taking a look around
 --------------------
 
-If this is the first time you've used Flatpak, this might be a good time to try installing an application and having a look 'under the hood'. To do this, you need to add a repository that contains applications. We can do this using the gnome-apps repository to install gedit::
+If this is the first time you've used Flatpak, it is a good time to try installing an application and having a look 'under the hood'. To do this, you need to add a repository that contains applications. We can do this using the gnome-apps repository to install gedit::
 
   $ flatpak remote-add --from gnome-apps https://sdk.gnome.org/gnome-apps.flatpakrepo
   $ flatpak install gnome-apps org.gnome.gedit
