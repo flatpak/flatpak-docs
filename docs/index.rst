@@ -21,11 +21,3 @@ Contents
    flatpak-builder
    working-with-the-sandbox
    distributing-applications
-   best-practices-gtk
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
