@@ -59,6 +59,7 @@ A typical ``.flatpakref`` file looks like this::
   Url=http://sdk.gnome.org/repo-apps/
   IsRuntime=False
   GPGKey=mQENBFUUCGcBCAC/K9WeV4xCaKr3...
+  RuntimeRepo=https://sdk.gnome.org/gnome.flatpakrepo
 
 Note that the GPGKey key in these files contains the base64-encoded GPG key, which you can get with the following command::
 
