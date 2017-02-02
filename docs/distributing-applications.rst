@@ -20,11 +20,15 @@ OSTree supports something called static deltas. These are single files in the re
 GPG signatures
 ^^^^^^^^^^^^^^
 
-OSTree uses GPG to verify the identity of repositories. A signature is therefore required for every commit and for repository summary files. These objects are created by the ``build-update-repo`` and ``build-export`` commands, as well as indirectly by ``flatpak-builder``. A GPG key therefore needs to be passed to each of these commands, and optionally the GPG home directory to use. For example::
+OSTree uses GPG to verify the identity of repositories. This requires that every commit to a repository uses a GPG signature, as well as when repository summary files are modified.
 
-  $ flatpak build-export --gpg-sign=KEYID --gpg-homedir=/some/dir appdir repo
+To do this, a GPG key needs to be passed to the ``build-update-repo`` and ``build-export`` commands, as well as ``flatpak-builder`` if it is being used to modify or create a repository. (If you don't already have a key, `it is easy to generate one <https://help.github.com/articles/generating-a-new-gpg-key/>`_.) For example::
 
-It is recommended that OSTree repositories are verified using GPG whenever they are used. However, if you want to disable GPG verification, the ``--no-gpg-verify`` option can be used when a remote is added. GPG verification can also be disabled on an existing remote using ``flatpak remote-modify``.
+  $ flatpak build-export --gpg-sign=KEYID --gpg-homedir=PATH DIRECTORY REPOSITORY
+
+Here ``--gpg-homedir`` is optional, and allows specifying the home directory of the key to be used.
+
+Though it generally isn't recommended, it is possible to disable GPG verification of OSTree repositories. To do this, the ``--no-gpg-verify`` option can be used when a remote is added. GPG verification can also be disabled on an existing remote using ``flatpak remote-modify``.
 
 Note that it is necessary to become root in order to update a remote that does not have GPG verification enabled.
 
