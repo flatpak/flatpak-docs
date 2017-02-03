@@ -5,6 +5,8 @@ Most applications require additional dependencies that aren't provided by their 
 
 flatpak-builder expects modules to be built in the standard manner by following what is called the `Build API <https://github.com/cgwalters/build-api/>`_. This requires modifying modules to follow the build API, if they don't already.
 
+All json entities are explained in the man page of ``flatpak-builder``.
+
 Manifests
 ---------
 
