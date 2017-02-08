@@ -1,7 +1,7 @@
 Flatpak Builder
 ===============
 
-Most applications require additional dependencies that aren't provided by their runtimes. Flatpak allows these dependencies to be bundled as part of the application itself. In order to do this, each dependency must be built inside the application build directory. The ``flatpak-builder`` tool automates this multi-step build process, making it possible to build all application modules with a single command. 
+Most applications require additional dependencies that aren't provided by their runtimes. Flatpak allows these dependencies to be bundled as part of the application itself. In order to do this, each dependency must be built inside the application build directory. The ``flatpak-builder`` tool automates this multi-step build process, making it possible to build all application modules with a single command.
 
 flatpak-builder expects modules to be built in the standard manner by following what is called the `Build API <https://github.com/cgwalters/build-api/>`_. This requires modifying modules to follow the build API, if they don't already.
 
@@ -61,7 +61,7 @@ Files that are exported by a flatpak must be prefixed using the application ID. 
 Splitting things up
 -------------------
 
-By default, flatpak-builder splits off translations and dubug information into separate .Locale and .Debug extensions. These 'standard' extension points are then added to the application's metadata file. You can turn this off with the ``separate-locales`` and ``no-debuginfo`` keys, but there shouldn't be any reason for it.
+By default, flatpak-builder splits off translations and debug information into separate .Locale and .Debug extensions. These 'standard' extension points are then added to the application's metadata file. You can turn this off with the ``separate-locales`` and ``no-debuginfo`` keys, but there shouldn't be any reason for it.
 
 When flatpak-builder exports the build into a repository, it automatically includes the .Locale and .Debug extensions. If you do the exporting manually, don't forget to include them.
 
