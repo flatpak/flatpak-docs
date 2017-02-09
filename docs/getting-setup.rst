@@ -8,7 +8,7 @@ Once flatpak has been installed, it is necessary to pick a runtime and install i
 Installing an SDK
 -----------------
 
-An SDK is a special type of runtime that is used to build applcations. Typically, an SDK is paired with a runtime that will be used by the application at runtime. For example the GNOME 3.22 SDK is used to build applications that use the GNOME 3.22 runtime. 
+An SDK is a special type of runtime that is used to build applications. Typically, an SDK is paired with a runtime that will be used by the application at runtime. For example the GNOME 3.22 SDK is used to build applications that use the GNOME 3.22 runtime.
 
 The Flatpak website provides a `list of the available runtimes <http://flatpak.org/runtimes.html>`_. Once you have decided which one to use, getting setup is just a matter of installing it and its SDK.
 

@@ -8,7 +8,7 @@ This section describes how to build a simple application which doesn't require a
 Creating an app
 ---------------
 
-To create an application, the first step is to use the ``build-init`` command. This creates a directory into which an applcation can be built, which contains the correct directory structure and a metadata file which contains information about the app. The format for build-init is::
+To create an application, the first step is to use the ``build-init`` command. This creates a directory into which an application can be built, which contains the correct directory structure and a metadata file which contains information about the app. The format for build-init is::
 
   $ flatpak build-init DIRECTORY APPNAME SDK RUNTIME [BRANCH]
 
