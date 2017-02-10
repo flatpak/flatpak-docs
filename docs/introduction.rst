@@ -32,9 +32,6 @@ Each application must be built against a runtime, and this runtime must be insta
 .. tip::
   Each runtime can be thought of as a ``/usr`` filesystem. Indeed, when an application is run, its runtime is mounted at ``/usr``.
 
-.. note::
-  Flatpak identifies runtimes (as well as SDKs and applications) by a triple of name/arch/branch. The name is expected to be in inverse-dns notation, which needs to match the D-Bus name used for the application. For example: ``org.gnome.Sdk/x86_64/3.14`` or ``org.gnome.Builder/i386/master``.
-
 Bundled libraries
 ^^^^^^^^^^^^^^^^^
 
@@ -61,6 +58,25 @@ The flatpak command
 ``flatpak`` is the command that is used to install, remove and update runtimes and applications. It can also be used to view what is currently installed, and has commands for building and distributing application bundles. ``flatpak --help`` provides a full list of available commands.
 
 Most flatpak commands are performed system-wide by default. To perform a command for the current user only, use the ``--user`` option. This allows runtimes and application bundles to be installed per-user, for instance.
+
+Identifiers
+-----------
+
+Flatpak identifies each application, runtime and SDK according to a reverse DNS identifier, which is sometimes combined with a name/arch/branch triple.
+
+Naming
+^^^^^^
+
+Flatpak requires each application, runtime and SDK to have a unique name, which takes the form of an inverse DNS address, such as ``com.company.App``. Here, the final segment of the address is the application's name, and the preceding part is the domain that the application belongs to. In order to prevent name conflicts, this domain should correspond to a DNS registered address. This means using a domain from a website, either for the application or the organization that produced it. For instance, if an application has its own website at ``app.com``, its Flatpak name would be ``com.app.App``. Multiple applications can belong to the same domain, such as ``org.organization.App1`` and ``org.organization.App2``.
+
+If you do not have a registered domain for your application, it is easy to use a third party website to get one. For example, Github allows the creation of personal pages that can be used for this purpose. Here, a personal namespace of ``name.github.io`` could be used as the basis of application identifier ``io.github.name.App``.
+
+If an application provides a D-Bus service, the D-Bus service name is expected to be the same as the application name.
+
+Identifier triples
+^^^^^^^^^^^^^^^^^^
+
+Many flatpak commands only require the name of an application, runtime or SDK. However, in some circumstances it is also necessary to specify the architecture and branch (branches allow a particular version to be specified). This is done using a name/arch/branch triple. For example: ``org.gnome.Sdk/x86_64/3.14`` or ``org.gnome.Builder/i386/master``.
 
 Under the hood
 --------------
