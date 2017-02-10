@@ -1,7 +1,7 @@
 Introduction to Flatpak
 =======================
 
-Flatpak is a technology for building, distributing, installing and running applications. It is primarily targetted at the Linux desktop, although it can also be used as the basis for application distribution in other contexts, such as embedded systems.
+Flatpak is a technology for building, distributing, installing and running applications. It is primarily targeted at the Linux desktop, although it can also be used as the basis for application distribution in other contexts, such as embedded systems.
 
 Flatpak has been designed and implemented with a number of goals:
 
