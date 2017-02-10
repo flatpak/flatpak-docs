@@ -62,12 +62,12 @@ Most flatpak commands are performed system-wide by default. To perform a command
 Identifiers
 -----------
 
-Flatpak identifies each application, runtime and SDK according to a reverse DNS identifier, which is sometimes combined with a name/arch/branch triple.
+Flatpak identifies each application, runtime and SDK using a unique name, which is sometimes used as part of a name/arch/branch triple.
 
 Naming
 ^^^^^^
 
-Flatpak requires each application, runtime and SDK to have a unique name, which takes the form of an inverse DNS address, such as ``com.company.App``. Here, the final segment of the address is the application's name, and the preceding part is the domain that the application belongs to. In order to prevent name conflicts, this domain should correspond to a DNS registered address. This means using a domain from a website, either for the application or the organization that produced it. For instance, if an application has its own website at ``app.com``, its Flatpak name would be ``com.app.App``. Multiple applications can belong to the same domain, such as ``org.organization.App1`` and ``org.organization.App2``.
+Flatpak names take the form of an inverse DNS address, such as ``com.company.App``. The final segment of this address is the object's name, and the preceding part is the domain that it belongs to. In order to prevent name conflicts, this domain should correspond to a DNS registered address. This means using a domain from a website, either for an application or an organization. For instance, if application ``App`` has its own website at ``app.com``, its Flatpak name would be ``com.app.App``. Multiple applications can belong to the same domain, such as ``org.organization.App1`` and ``org.organization.App2``.
 
 If you do not have a registered domain for your application, it is easy to use a third party website to get one. For example, Github allows the creation of personal pages that can be used for this purpose. Here, a personal namespace of ``name.github.io`` could be used as the basis of application identifier ``io.github.name.App``.
 
