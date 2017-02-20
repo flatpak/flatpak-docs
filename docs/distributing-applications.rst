@@ -24,7 +24,7 @@ OSTree uses GPG to verify the identity of repositories. This requires that every
 
 To do this, a GPG key needs to be passed to the ``build-update-repo`` and ``build-export`` commands, as well as ``flatpak-builder`` if it is being used to modify or create a repository. (If you don't already have a key, `it is easy to generate one <https://help.github.com/articles/generating-a-new-gpg-key/>`_.) For example::
 
-  $ flatpak build-export --gpg-sign=KEYID --gpg-homedir=PATH DIRECTORY REPOSITORY
+  $ flatpak build-export --gpg-sign=KEYID --gpg-homedir=PATH REPOSITORY DIRECTORY
 
 Here ``--gpg-homedir`` is optional, and allows specifying the home directory of the key to be used.
 
