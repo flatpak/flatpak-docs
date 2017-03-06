@@ -5,7 +5,7 @@ These docs cover everything you need to know to build and distribute application
 
 The docs are primarily intended for application developers and distributors. Their content is also relevant to those who have a general interest in Flatpak.
 
-If you are looking for information about how to install and use Flatpak applications, please refer to `the Flatpak website <http://flatpak.org>`_. Otherwise, if you want information about Flatpak internals or how to create runtimes, the `Flatpak wiki <https://github.com/flatpak/flatpak/wiki>`_ is the best place to start.
+If you are looking for information about how to install and use Flatpak applications, please refer to `the Flatpak website <http://flatpak.org>`_.
 
 Contents
 --------
