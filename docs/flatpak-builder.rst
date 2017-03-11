@@ -68,17 +68,17 @@ When flatpak-builder exports the build into a repository, it automatically inclu
 Example
 -------
 
-You can try flatpak-builder for yourself, using the repository that was created in the `previous section <building-simple-apps.html>`_. To do this, place the manifest JSON from above into a file called ``org.gnome.Dictionary.json`` and run the following command::
+You can try flatpak-builder for yourself. To do this, place the manifest JSON from above into a file called ``org.gnome.Dictionary.json`` and run the following command::
 
   $ flatpak-builder --repo=repo dictionary2 org.gnome.Dictionary.json
 
 This will:
 
-* Create a new directory (called dictionary2)
+* Create a new directory called dictionary2 (with the same result as setting it up manually with "flatpak build-init").
 * Download and verify the Dictionary source code
 * Build and install the source code, using the SDK rather than the host system
 * Finish the build, by setting permissions (in this case giving access to X and the network)
-* Export the resulting build to the tutorial repository, which contains the Dictionary app that was previously installed
+* Create new repository called repo if it doesn't exist and export the resulting build to it
 
 flatpak-builder will also do some other useful things, like creating a separately installable debug runtime (called `org.gnome.Dictionary.Debug` in this case) and a separately installable translation runtime (called ``org.gnome.Dictionary.Locale``).
 
