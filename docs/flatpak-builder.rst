@@ -68,7 +68,7 @@ When flatpak-builder exports the build into a repository, it automatically inclu
 Example
 -------
 
-To try flatpak-builder for yourself, create a file called ``org.gnome.Dictionary.json`` and place the manifest JSON into it. Then run the following command::
+To try flatpak-builder yourself, create a file called ``org.gnome.Dictionary.json`` and paste the Dictionary manifest JSON from above into it. Then run the following command::
 
   $ flatpak-builder --repo=repo dictionary2 org.gnome.Dictionary.json
 
