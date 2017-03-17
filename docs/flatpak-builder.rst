@@ -98,4 +98,4 @@ And finally, you can run the new version of the Dictionary app::
 Example manifests
 -----------------
 
-A `complete manifest for GNOME Dictionary built from Git <https://git.gnome.org/browse/gnome-apps-nightly/tree/org.gnome.Dictionary.json>`_ is available, in addition to `manifests for a range of other GNOME applications <https://git.gnome.org/browse/gnome-apps-nightly/tree/>`_.
+A `complete manifest for GNOME Dictionary built from Git <https://git.gnome.org/browse/gnome-dictionary/tree/data/org.gnome.Dictionary.json>`_ is available, in addition to `manifests for a range of other GNOME applications <https://git.gnome.org/browse/gnome-apps-nightly/tree/>`_.
