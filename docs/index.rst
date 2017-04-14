@@ -21,3 +21,4 @@ Contents
    flatpak-builder
    working-with-the-sandbox
    distributing-applications
+   Command reference <http://flatpak.readthedocs.io/en/latest/command-reference.html>
