@@ -34,3 +34,8 @@ a.icon-home, a.icon-home:hover {
 a, a:visited { color: #4a90d9; }
   .wy-menu a { color: #919191; }
   .wy-side-nav-search a { color: #fff; }
+
+/* Hide the original title in the docbook-generated man pages (flatpak-docs.html) */
+.titlepage .title {
+  display: none;
+}
