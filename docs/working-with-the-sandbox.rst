@@ -72,7 +72,7 @@ When developing an application, it can sometimes be useful to override a Flatpak
 
   $ flatpak run --filesystem=home --command=ls org.gnome.Dictionary ~/
   
-``flatpak run`` can also be used to permanently override an application's permissions::
+``flatpak override`` can also be used to permanently override an application's permissions::
 
   $ flatpak --user override --filesystem=home org.gnome.Dictionary
   $ flatpak run --command=ls org.gnome.Dictionary ~/
