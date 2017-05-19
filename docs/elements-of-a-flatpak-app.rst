@@ -63,4 +63,4 @@ An application's ``metadata`` file provides information that allows flatpak to s
 This specifies the name of the application, the runtime it requires, the SDK that it was built against and the command used to run it. It also specifies file and device access, sets certain environment variables (inside the application's sandbox, of course), and how it connects to the session bus. Details on how to change these metadata parameters are included in subsequent sections.
 
 .. note::
-  While it is most common to encounter application metadata files, runtimes and extensions also have them.
+  While it is most common to encounter metadata files for applications, runtimes and extensions also have them.
