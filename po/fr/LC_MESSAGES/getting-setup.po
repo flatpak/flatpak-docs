@@ -1,0 +1,71 @@
+# Documentation Flatpak
+# Copyright (C) 2017, Flatpak Team
+# This file is distributed under the same license as the Flatpak package.
+# Baptiste Mille-Mathias <baptiste.millemathias@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-30 18:01+0200\n"
+"PO-Revision-Date: 2017-06-30 18:01+0200\n"
+"Last-Translator: Baptiste Mille-Mathias <baptiste.millemathias@gmail.com>\n"
+"Language: fr_FR"
+"Language-Team: fr_FR <traduc@traduc.org>
+\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../getting-setup.rst:2
+msgid "Getting Setup"
+msgstr "Mise en place"
+
+#: ../../getting-setup.rst:4
+msgid "Getting setup to build Flatpaks is quick and easy. First, it is necessary to have the ``flatpak`` and ``flatpak-builder`` packages installed on your system. These are available for most distributions, and the Flatpak website provides `details on how to get them <http://flatpak.org/getting.html>`_."
+msgstr "La mise en place pour construire des Flatpaks est rapide et simple.  Premièrement, il est nécessaire d'avoir les paquets ``flatpak`` et ``flatpak-builder`` installés sur votre système. Ils sont disponibles pour la plupart des distributions, et le site web Flatpak fournit les `détails pour les récuperer <http://flatpak.org/getting.html>`_."
+
+#: ../../getting-setup.rst:6
+msgid "Once flatpak has been installed, it is necessary to pick a runtime and install it, along with the matching SDK."
+msgstr "Une fois flatpak installé, il est nécessaire de choisir un runtime et de l'installer, avec le SDK correspondant."
+
+#: ../../getting-setup.rst:9
+msgid "Installing an SDK"
+msgstr "Installer un SDK"
+
+#: ../../getting-setup.rst:11
+msgid "An SDK is a special type of runtime that is used to build applications. Typically, an SDK is paired with a runtime that will be used by the application at runtime. For example the GNOME 3.22 SDK is used to build applications that use the GNOME 3.22 runtime."
+msgstr "Un SDK est un type spécial de runtime qui est utilisé pour contruire des applications. Typiquement, un SDK est lié avec un runtime qui sera utilisé par l'application à l'exécution Par exemple le SDK GNOME 3.22 est utilisé pour construire des applications qui utilisent le runtime GNOME 3.22."
+
+#: ../../getting-setup.rst:13
+msgid "The Flatpak website provides a `list of the available runtimes <http://flatpak.org/runtimes.html>`_. Once you have decided which one to use, getting setup is just a matter of installing it and its SDK."
+msgstr "Le site web de Flatpak fournit une `liste des runtimes disponibles <http://flatpak.org/runtimes.html>`_. Une fois décidé celui que vous allez utiliser, être en place est juste une question de l'installer et son SDK."
+
+#: ../../getting-setup.rst:15
+msgid "The examples in the rest of the Flatpak documentation use the GNOME 3.22 runtime and SDK. If you haven't installed these already, download the repository GPG key and then add the repository that contains the runtime and SDK::"
+msgstr "Les exemples dans la suite de la documentation Flatpak utilise le runtime et le SDK GNOME 3.22. Si vous ne les avez pas déjà installé, téléchargez la clé GPG du dépôt, ensuite ajoutez le dépôt qui contient le runtime et le SDK::"
+
+#: ../../getting-setup.rst:19
+msgid "You can now download and install the runtime and SDK::"
+msgstr "Vous pouvez maintenant télécharger et installer un runtime et un SDK::"
+
+#: ../../getting-setup.rst:23
+msgid "This same procedure can be used to install any other runtime and SDK."
+msgstr "La même procédure peut-être utilisé pour installer n'importe quel autre runtime et SDK."
+
+#: ../../getting-setup.rst:26
+msgid "Taking a look around"
+msgstr "Jeter un coup d'œil"
+
+#: ../../getting-setup.rst:28
+msgid "If this is the first time you've used Flatpak, it is a good time to try installing an application and having a look 'under the hood'. To do this, you need to add a repository that contains applications. We can do this using the gnome-apps repository to install gedit::"
+msgstr "Si c'est la première fois que vous utilisez Flatpak, c'est un bon moment pour tenter d'installer une application et jetez un œil à \"Sous le capot\". Pour faire cela, vous aurez à ajouter un dépôt qui contient les applications. Vous pouvez faire cela à l'aide du dépôt gnome-apps pour installer gedit::"
+
+#: ../../getting-setup.rst:33
+msgid "You can now use the following command to get a shell in the 'devel sandbox'::"
+msgstr "Vous pouvez mainteant utiliser la commande suivante pour obtenir un shell dans un 'bac à sable devel'::"
+
+#: ../../getting-setup.rst:37
+msgid "This gives you an environment which has the application bundle mounted in ``/app``, and the SDK it was built against mounted in ``/usr``. You can explore these two directories to see what a typical flatpak looks like, as well as what is included in the SDK."
+msgstr "Cela vous donne un environnement qui a le lot d'applications monté dans ``/app``, et le SDK avec lequel il a été construit monté dans ``/usr``. Vous pouvez explorer ces deux répertoires pour voir à quoi ressemble un flatpak typique, ainsi que ce qui est inclus dans le SDK."
+
