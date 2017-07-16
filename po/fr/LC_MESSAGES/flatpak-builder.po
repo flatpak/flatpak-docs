@@ -1,0 +1,143 @@
+# Documentation Flatpak
+# Copyright (C) 2017, Flatpak Team
+# This file is distributed under the same license as the Flatpak package.
+# Baptiste Mille-Mathias <baptiste.millemathias@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-30 18:01+0200\n"
+"PO-Revision-Date: 2017-06-30 18:01+0200\n"
+"Last-Translator: Baptiste Mille-Mathias <baptiste.millemathias@gmail.com>\n"
+"Language: fr_FR"
+"Language-Team: fr_FR <traduc@traduc.org>
+\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../flatpak-builder.rst:2
+msgid "Flatpak Builder"
+msgstr ""
+
+#: ../../flatpak-builder.rst:4
+msgid "Most applications require additional dependencies that aren't provided by their runtimes. Flatpak allows these dependencies to be bundled as part of the application itself. In order to do this, each dependency must be built inside the application build directory. The ``flatpak-builder`` tool automates this multi-step build process, making it possible to build all application modules with a single command."
+msgstr "La plupart des applications nécessite des dépendences additionnelles qui ne sont pas fournies avec leur runtime. Flatpak permet à ces dépendences d'être incluses à l'application elle-même. Afin de faire ceci, chaque dépendence doit être construit à l'intérieur du répertoire de construction. L'outil ``flatpak-builder`` automatise ce processus de plusieurs étapes, permettant de contruire tous les modules avec une seule commande."
+
+#: ../../flatpak-builder.rst:6
+msgid "flatpak-builder expects modules to be built in the standard manner by following what is called the `Build API <https://github.com/cgwalters/build-api/>`_. This requires modifying modules to follow the build API, if they don't already."
+msgstr "flatpak-builder s'attend que les modules soient construits de manière standard en suivant ce qui est appelé l'`API Build <https://github.com/cgwalters/build-api/>`_. Cela requiert la modification des modules pour qu'ils suivent l'API de construction, si ils ne le suivent pas déjà."
+
+#: ../../flatpak-builder.rst:8
+msgid "All json entities are explained in the man page of ``flatpak-builder``."
+msgstr "Toutes les entités json sont décrites dans la page de manuel de ``flatpak-builder``."
+
+#: ../../flatpak-builder.rst:11
+msgid "Manifests"
+msgstr "Manifestes"
+
+#: ../../flatpak-builder.rst:13
+msgid "The input to flatpak-builder is a JSON file that describes the parameters for building an application, as well as each of the modules to be bundled. This file is called the manifest. Module sources can be of several types, including ``.tar`` or ``.zip`` archives, Git or Bzr repositories, patch files or shell commands that are run."
+msgstr "L'entrée pour flatpak-builder est un fichier JSON descrivant les parametres pour construire une application, ainsi que les modules à intégrer.  Ce fichier est appelé le manifest. Les sources de modules peuvent être de plusieurs type, comme des archives ``.tar`` ou ``.zip``, des dépôts Git ou Bzr, des fichiers patch ou des commande shell à exécuter."
+
+#: ../../flatpak-builder.rst:15
+msgid "The GNOME Dictionary manifest is short, because the only module is the application itself::"
+msgstr "Le manifeste de Dictionnaire GNOME est court, parce que le seul module est l'application elle-même::"
+
+#: ../../flatpak-builder.rst:41
+msgid "As can be seen, this manifest includes basic information about the application before specifying a single .tar file to be downloaded and built. More complex manifests include a sequence of modules."
+msgstr "Comme vous pouvez voir, ce manifeste inclus les informations basiques à propos de l'application avant de spécifier un seul fichier .tar à télécharger et construire. Des manisfestes plus complexes include une suite de modules."
+
+#: ../../flatpak-builder.rst:44
+msgid "Cleanup"
+msgstr "Nettoyage"
+
+#: ../../flatpak-builder.rst:46
+msgid "After building has taken place, flatpak-builder performs a cleanup phase. This can be used to remove headers and development documentation, among other things. Two properties in the manifest file are used for this. First, a list of filename patterns can be included::"
+msgstr "Après que la construction ait été faite, flatpak-builder réalise une phase de nettoyage. Cela peut être utilisé pour supprimer les en-têtes et la documentation de développement, parmis d'autres choses. Deux propriétés dans le fichier manisfeste sont utilisés pour cela. Premièrement, une liste de patrons de nom de fichiers peut être incluse::"
+
+#: ../../flatpak-builder.rst:50
+msgid "The second cleanup property is a list of commands that are run during the cleanup phase::"
+msgstr "La seconde propriété de nettoyage est une liste de commandes qui sera lancée durant la phase de nettoyage::"
+
+#: ../../flatpak-builder.rst:54
+msgid "Cleanup properties can be set on a per-module basis, in which case only filenames that were created by that particular module will be matched."
+msgstr "Les propriétés de nettoyage peuvent être définies par module, dans ce cas seuls les fichiers créés dans ce module particulier seront ciblés."
+
+#: ../../flatpak-builder.rst:57
+msgid "File renaming"
+msgstr "Renommage de fichier"
+
+#: ../../flatpak-builder.rst:59
+msgid "Files that are exported by a flatpak must be prefixed using the application ID. If an application's source files are not named using this convention, flatpak-builder allows them to be renamed as part of the build process. To rename application icons, desktop files and AppData files, use the ``rename-icon``, ``rename-desktop-file`` and ``rename-appdata`` properties."
+msgstr "Les fichiers exportés par Flatpak doivent être préfixés avec l'identifiant d'application. Si les fichiers sources d'une application ne sont pas nommés suivant cette convention, flatpak-builder permet de les renommer durant le processus de construction. Pour renommer les fichiers icônes, desktop et AppData, utilisez les propriétés ``rename-icon``, ``rename-desktop-file`` et ``rename-appdata``." 
+
+#: ../../flatpak-builder.rst:62
+msgid "Splitting things up"
+msgstr "Séparer les choses"
+
+#: ../../flatpak-builder.rst:64
+msgid "By default, flatpak-builder splits off translations and debug information into separate .Locale and .Debug extensions. These 'standard' extension points are then added to the application's metadata file. You can turn this off with the ``separate-locales`` and ``no-debuginfo`` keys, but there shouldn't be any reason for it."
+msgstr "Par défaut, flatpak-builder séparer les traductions et les informations de débogage dans des extensions .Locale et .Debug. Ces extensions \"standards\" sont ensuite ajoutées dans le fichier de meta-données de l'application. Cela peut être désactivé avec les clés ``separate-locales`` et ``no-debuginfo``, mais il ne devrait pas y avoir de raisons valables pour le faire."
+
+#: ../../flatpak-builder.rst:66
+msgid "When flatpak-builder exports the build into a repository, it automatically includes the .Locale and .Debug extensions. If you do the exporting manually, don't forget to include them."
+msgstr "Quand flatpak-builder exporte le résultat de la construction dans un dépôt, il inclus automatiquement les extensions  .Locale et .Debug. Dans le cas d'un export manuel, n'oubliez pas de les inclure."
+
+#: ../../flatpak-builder.rst:69
+msgid "Example"
+msgstr "Exemple"
+
+#: ../../flatpak-builder.rst:71
+msgid "To try flatpak-builder yourself, create a file called ``org.gnome.Dictionary.json`` and paste the Dictionary manifest JSON from above into it. Then run the following command::"
+msgstr "Pour essayer flatpak-builder vous-même, créez un fichier nommé ``org.gnome.Dictionary.json`` et copiez le manifeste JSON de l'application dictionnaire ci-dessus dedans. Puis lancez la commande suivante::"
+
+#: ../../flatpak-builder.rst:75
+msgid "This will:"
+msgstr "Cela va:"
+
+#: ../../flatpak-builder.rst:77
+msgid "Create a new directory called dictionary2 (equivalent to using `flatpak build-init`)"
+msgstr "Créer un nouveau répertoire nommé dictionary2 (équivalent à `flatpak build-init`)"
+
+#: ../../flatpak-builder.rst:78
+msgid "Download and verify the Dictionary source code"
+msgstr "Télécharger et vérifier le code source de GNOME Dictionnaire"
+
+#: ../../flatpak-builder.rst:79
+msgid "Build and install the source code, using the SDK rather than the host system"
+msgstr "Construire et installer le code source à l'aide du SDK plutôt que de l'ĥôte système"
+
+#: ../../flatpak-builder.rst:80
+msgid "Finish the build, by setting permissions (in this case giving access to X and the network)"
+msgstr "Finir la construction en définissant les permissions (dans ce cas donnez accès au serveur X et au réseau)"
+
+#: ../../flatpak-builder.rst:81
+msgid "Create a new repository called repo (if it doesn't exist) and export the resulting build into it"
+msgstr "Créer un nouveau dépôt nommé repo (si il n'existe pas déjà) et exporter le résultat de la construction dedans"
+
+#: ../../flatpak-builder.rst:83
+msgid "flatpak-builder will also do some other useful things, like creating a separately installable debug runtime (called `org.gnome.Dictionary.Debug` in this case) and a separately installable translation runtime (called ``org.gnome.Dictionary.Locale``)."
+msgstr "flatpak-builder fera aussi d'autres choses utiles, tel que créer un runtime de débogage séparé (appelé ``org.gnome.Dictionary.Debug`` dans ce cas) and un runtime de traduction séparé (appelé ``org.gnome.Dictionary.Locale``)"
+
+#: ../../flatpak-builder.rst:85
+msgid "If you completed the tutorial in `Building Simple Apps <building-simple-apps.html>`_, you can update the Dictionary application you installed with the new version that was built and exported by flatpak-builder::"
+msgstr "Si vous terminez le tutoriel dans `Construction d'applications simples <building-simple-apps.html>`_, vous pouvez mettre à jour l'application Dictionnaire installée avec la nouvelle version qui a été construite et exportée par flatpak-builder::"
+
+#: ../../flatpak-builder.rst:89
+msgid "To check that the application has been successfully updated, you can compare the sha256 commit of the installed app with the commit ID that was printed by flatpak-builder::"
+msgstr "Pour vérifier que l'application a été mise à jour avec succès, vous pouvez comparer les commits sha256 de l'application installée avec celui affiché par flatpak-builder::" 
+
+#: ../../flatpak-builder.rst:94
+msgid "And finally, you can run the new version of the Dictionary app::"
+msgstr "Et finalement vous pouvez lancer la nouvelle version de l'application Dictionnaire::"
+
+#: ../../flatpak-builder.rst:99
+msgid "Example manifests"
+msgstr "Manifestes d'exemple"
+
+#: ../../flatpak-builder.rst:101
+msgid "A `complete manifest for GNOME Dictionary built from Git <https://git.gnome.org/browse/gnome-dictionary/tree/data/org.gnome.Dictionary.json>`_ is available, in addition to `manifests for a range of other GNOME applications <https://git.gnome.org/browse/gnome-apps-nightly/tree/>`_."
+msgstr "Un manifeste complete pour GNOME Dictionnaire construit à partir de Git <https://git.gnome.org/browse/gnome-dictionary/tree/data/org.gnome.Dictionary.json>`_ est disponible, en plus d'`autres manisfestes d'autres applications GNOME <https://git.gnome.org/browse/gnome-apps-nightly/tree/>`_."
+
