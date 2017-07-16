@@ -80,7 +80,7 @@ This will:
 * Finish the build, by setting permissions (in this case giving access to X and the network)
 * Create a new repository called repo (if it doesn't exist) and export the resulting build into it
 
-flatpak-builder will also do some other useful things, like creating a separately installable debug runtime (called `org.gnome.Dictionary.Debug` in this case) and a separately installable translation runtime (called ``org.gnome.Dictionary.Locale``).
+flatpak-builder will also do some other useful things, like creating a separately installable debug runtime (called ``org.gnome.Dictionary.Debug`` in this case) and a separately installable translation runtime (called ``org.gnome.Dictionary.Locale``).
 
 If you completed the tutorial in `Building Simple Apps <building-simple-apps.html>`_, you can update the Dictionary application you installed with the new version that was built and exported by flatpak-builder::
 
