@@ -3,12 +3,12 @@ Working with the Sandbox
 
 One of Flatpak's main goals is to increase the security of desktop systems by isolating applications from one another. This is done using sandboxing and it means that, by default, a Flatpak has extremely limited access to the host environment. This includes:
 
-* No access to any host files except the runtime, the app and ``~/.var/app/$APPID``. Only the last of these is writable.
+* No access to any host files except the runtime, the application and ``~/.var/app/$APPID``. Only the last of these is writable.
 * No access to the network.
 * No access to any device nodes (apart from ``/dev/null``, etc).
 * No access to processes outside the sandbox.
 * Limited syscalls.  For instance, apps can't use nonstandard network socket types or ptrace other processes.
-* Limited access to the session D-Bus instance - an app can only own its own name on the bus.
+* Limited access to the session D-Bus instance - an application can only own its own name on the bus.
 * No access to host services like X, system D-Bus, or PulseAudio.
 
 Most applications will need access to some of these resources in order to be useful, and Flatpak provides a number of ways to give an application access to them.

@@ -73,7 +73,7 @@ Hosting a repository is the preferred way to distribute an application, but some
   $ flatpak build-bundle [OPTION...] LOCATION FILENAME NAME [BRANCH]
   $ flatpak build-import-bundle [OPTION...] LOCATION FILENAME
 
-For example, to create a bundle named `dictionary.flatpak` containing the GNOME dictionary app from the repository at ~/repositories/apps, run::
+For example, to create a bundle named `dictionary.flatpak` containing the GNOME dictionary application from the repository at ~/repositories/apps, run::
 
   $ flatpak build-bundle ~/repositories/apps dictionary.flatpak org.gnome.Dictionary
 

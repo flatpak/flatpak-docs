@@ -86,7 +86,7 @@ If you completed the tutorial in `Building Simple Apps <building-simple-apps.htm
 
   $ flatpak --user update org.gnome.Dictionary
 
-To check that the application has been successfully updated, you can compare the sha256 commit of the installed app with the commit ID that was printed by flatpak-builder::
+To check that the application has been successfully updated, you can compare the sha256 commit of the installed application with the commit ID that was printed by flatpak-builder::
 
   $ flatpak info org.gnome.Dictionary
   $ flatpak info org.gnome.Dictionary.Locale
