@@ -56,7 +56,7 @@ Cleanup properties can be set on a per-module basis, in which case only filename
 File renaming
 -------------
 
-Files that are exported by a flatpak must be prefixed using the application ID. If an application's source files are not named using this convention, flatpak-builder allows them to be renamed as part of the build process. To rename application icons, desktop files and AppData files, use the ``rename-icon``, ``rename-desktop-file`` and ``rename-appdata`` properties.
+Files that are exported by a flatpak must be prefixed using the application ID. If an application's source files are not named using this convention, ``flatpak-builder`` allows them to be renamed as part of the build process. To rename application icons, desktop files and AppData files, use the ``rename-icon``, ``rename-desktop-file`` and ``rename-appdata`` properties.
 
 Splitting things up
 -------------------
@@ -74,7 +74,7 @@ To try flatpak-builder yourself, create a file called ``org.gnome.Dictionary.jso
 
 This will:
 
-* Create a new directory called dictionary2 (equivalent to using `flatpak build-init`)
+* Create a new directory called dictionary2 (equivalent to using ``flatpak build-init``)
 * Download and verify the Dictionary source code
 * Build and install the source code, using the SDK rather than the host system
 * Finish the build, by setting permissions (in this case giving access to X and the network)
@@ -82,11 +82,11 @@ This will:
 
 flatpak-builder will also do some other useful things, like creating a separately installable debug runtime (called ``org.gnome.Dictionary.Debug`` in this case) and a separately installable translation runtime (called ``org.gnome.Dictionary.Locale``).
 
-If you completed the tutorial in `Building Simple Apps <building-simple-apps.html>`_, you can update the Dictionary application you installed with the new version that was built and exported by flatpak-builder::
+If you completed the tutorial in `Building Simple Apps <building-simple-apps.html>`_, you can update the Dictionary application you installed with the new version that was built and exported by ``flatpak-builder``::
 
   $ flatpak --user update org.gnome.Dictionary
 
-To check that the application has been successfully updated, you can compare the sha256 commit of the installed application with the commit ID that was printed by flatpak-builder::
+To check that the application has been successfully updated, you can compare the sha256 commit of the installed application with the commit ID that was printed by ``flatpak-builder``::
 
   $ flatpak info org.gnome.Dictionary
   $ flatpak info org.gnome.Dictionary.Locale

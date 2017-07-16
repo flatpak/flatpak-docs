@@ -33,7 +33,7 @@ Building
 
 (It is best to remove this file before continuing.)
 
-The build command allows existing applications that have been made using the traditional configure, make, make install routine to be built inside a flatpak. You can try this using GNOME Dictionary. First, download the source files, extract them and switch to the resulting directory::
+The build command allows existing applications that have been made using the traditional ``configure``, ``make``, ``make install`` routine to be built inside a flatpak. You can try this using GNOME Dictionary. First, download the source files, extract them and switch to the resulting directory::
 
   $ wget https://download.gnome.org/sources/gnome-dictionary/3.20/gnome-dictionary-3.20.0.tar.xz
   $ tar xvf gnome-dictionary-3.20.0.tar.xz

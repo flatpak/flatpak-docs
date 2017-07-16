@@ -39,7 +39,7 @@ To name exported files in this way, either rename the relevant source files or u
 Metadata files
 --------------
 
-An application's ``metadata`` file provides information that allows flatpak to set up the sandbox for running the application. A typical metadata file looks like this::
+An application's ``metadata`` file provides information that allows flatpak to set up the sandbox for running the application. A typical ``metadata`` file looks like this::
 
   [Application]
   name=org.gnome.gedit

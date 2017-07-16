@@ -46,7 +46,7 @@ A typical ``.flatpakrepo`` file looks like this::
   Url=http://sdk.gnome.org/repo-apps/
   GPGKey=mQENBFUUCGcBCAC/K9WeV4xCaKr3...
 
-If your repository contains just a single application, it may be more convenient to use a .flatpakref file instead, which contains enough information to add the repository and install the application at the same time. To install a ``.flatpakref`` file manually, use the command::
+If your repository contains just a single application, it may be more convenient to use a ``.flatpakref`` file instead, which contains enough information to add the repository and install the application at the same time. To install a ``.flatpakref`` file manually, use the command::
 
   $ flatpak install --from foo.flatpakref
 
@@ -73,7 +73,7 @@ Hosting a repository is the preferred way to distribute an application, but some
   $ flatpak build-bundle [OPTION...] LOCATION FILENAME NAME [BRANCH]
   $ flatpak build-import-bundle [OPTION...] LOCATION FILENAME
 
-For example, to create a bundle named `dictionary.flatpak` containing the GNOME dictionary application from the repository at ~/repositories/apps, run::
+For example, to create a bundle named `dictionary.flatpak` containing the GNOME dictionary application from the repository at ``~/repositories/apps``, run::
 
   $ flatpak build-bundle ~/repositories/apps dictionary.flatpak org.gnome.Dictionary
 
