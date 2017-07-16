@@ -61,9 +61,9 @@ Files that are exported by a flatpak must be prefixed using the application ID. 
 Splitting things up
 -------------------
 
-By default, flatpak-builder splits off translations and debug information into separate .Locale and .Debug extensions. These 'standard' extension points are then added to the application's metadata file. You can turn this off with the ``separate-locales`` and ``no-debuginfo`` keys, but there shouldn't be any reason for it.
+By default, flatpak-builder splits off translations and debug information into separate `.Locale` and `.Debug` extensions. These 'standard' extension points are then added to the application's metadata file. You can turn this off with the ``separate-locales`` and ``no-debuginfo`` keys, but there shouldn't be any reason for it.
 
-When flatpak-builder exports the build into a repository, it automatically includes the .Locale and .Debug extensions. If you do the exporting manually, don't forget to include them.
+When flatpak-builder exports the build into a repository, it automatically includes the `.Locale` and `.Debug` extensions. If you do the exporting manually, don't forget to include them.
 
 Example
 -------
