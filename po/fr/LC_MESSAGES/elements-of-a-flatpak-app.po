@@ -80,7 +80,7 @@ msgid "``/export`` - files which the host environment needs access to, such as t
 msgstr "``/export`` - les fichiers que l'environnement de l'hôte a besoin d'accéder, comme l'AppData de l'application, le fichier ``.desktop``, les fichiers du service D-Bus et des icônes"
 
 #: ../../elements-of-a-flatpak-app.rst:28
-msgid "All the files in the export directory must have the application ID as their prefix. For example:"
+msgid "All the files in the ``/export`` directory must have the application ID as their prefix. For example:"
 msgstr "Tous les fichiers dans le répertoire ``/export`` doivent avoir un identifiant d'application comme préfixe. Par exemple:"
  
 #: ../../elements-of-a-flatpak-app.rst:30
