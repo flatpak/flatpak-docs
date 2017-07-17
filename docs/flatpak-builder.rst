@@ -3,7 +3,7 @@ Flatpak Builder
 
 Most applications require additional dependencies that aren't provided by their runtimes. Flatpak allows these dependencies to be bundled as part of the application itself. In order to do this, each dependency must be built inside the application build directory. The ``flatpak-builder`` tool automates this multi-step build process, making it possible to build all application modules with a single command.
 
-flatpak-builder expects modules to be built in the standard manner by following what is called the `Build API <https://github.com/cgwalters/build-api/>`_. This requires modifying modules to follow the build API, if they don't already.
+``flatpak-builder`` expects modules to be built in the standard manner by following what is called the `Build API <https://github.com/cgwalters/build-api/>`_. This requires modifying modules to follow the build API, if they don't already.
 
 All json entities are explained in the man page of ``flatpak-builder``.
 
@@ -38,12 +38,12 @@ The GNOME Dictionary manifest is short, because the only module is the applicati
     ]
   }
 
-As can be seen, this manifest includes basic information about the application before specifying a single .tar file to be downloaded and built. More complex manifests include a sequence of modules.
+As can be seen, this manifest includes basic information about the application before specifying a single ``.tar`` file to be downloaded and built. More complex manifests include a sequence of modules.
 
 Cleanup
 -------
 
-After building has taken place, flatpak-builder performs a cleanup phase. This can be used to remove headers and development documentation, among other things. Two properties in the manifest file are used for this. First, a list of filename patterns can be included::
+After building has taken place, ``flatpak-builder`` performs a cleanup phase. This can be used to remove headers and development documentation, among other things. Two properties in the manifest file are used for this. First, a list of filename patterns can be included::
 
   "cleanup": [ "/include", "/bin/foo-*", "*.a" ]
 
@@ -56,19 +56,19 @@ Cleanup properties can be set on a per-module basis, in which case only filename
 File renaming
 -------------
 
-Files that are exported by a flatpak must be prefixed using the application ID. If an application's source files are not named using this convention, ``flatpak-builder`` allows them to be renamed as part of the build process. To rename application icons, desktop files and AppData files, use the ``rename-icon``, ``rename-desktop-file`` and ``rename-appdata`` properties.
+Files that are exported by a flatpak must be prefixed using the application identifier. If an application's source files are not named using this convention, ``flatpak-builder`` allows them to be renamed as part of the build process. To rename application icons, ``.desktop`` files and AppData files, use the ``rename-icon``, ``rename-desktop-file`` and ``rename-appdata`` properties.
 
 Splitting things up
 -------------------
 
-By default, flatpak-builder splits off translations and debug information into separate `.Locale` and `.Debug` extensions. These 'standard' extension points are then added to the application's metadata file. You can turn this off with the ``separate-locales`` and ``no-debuginfo`` keys, but there shouldn't be any reason for it.
+By default, ``flatpak-builder`` splits off translations and debug information into separate ``.Locale`` and ``.Debug`` extensions. These 'standard' extension points are then added to the application's metadata file. You can turn this off with the ``separate-locales`` and ``no-debuginfo`` keys, but there shouldn't be any reason for it.
 
-When flatpak-builder exports the build into a repository, it automatically includes the `.Locale` and `.Debug` extensions. If you do the exporting manually, don't forget to include them.
+When ``flatpak-builder`` exports the build into a repository, it automatically includes the ``.Locale`` and ``.Debug`` extensions. If you do the exporting manually, don't forget to include them.
 
 Example
 -------
 
-To try flatpak-builder yourself, create a file called ``org.gnome.Dictionary.json`` and paste the Dictionary manifest JSON from above into it. Then run the following command::
+To try ``flatpak-builder`` yourself, create a file called ``org.gnome.Dictionary.json`` and paste the Dictionary manifest JSON from above into it. Then run the following command::
 
   $ flatpak-builder --repo=repo dictionary2 org.gnome.Dictionary.json
 
