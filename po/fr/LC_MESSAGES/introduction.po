@@ -41,7 +41,7 @@ msgstr "Découpler les applications du système d'exploitation, ainsi les applic
 
 #: ../../introduction.rst:11
 msgid "Allow applications to bundle their own dependencies, so that they can use libraries that aren't provided by a Linux distribution, and so they can depend on specific versions or even patched versions of a library."
-msgstr "Permet aux applications de fournir leurs propres dépendences, ainsi ils peuvent utiliser des bibliothèques qui ne sont pas fournies par une distribution Linux, et dépendre de versions spécifiques voire même de versions patchées d'une bibliothèque."
+msgstr "Permettre aux applications de fournir leurs propres dépendences, ainsi elles peuvent utiliser des bibliothèques qui ne sont pas fournies par une distribution Linux, et dépendre de versions spécifiques voire même de versions patchées d'une bibliothèque."
 
 #: ../../introduction.rst:12
 msgid "Increase the security of Linux desktops, by isolating applications in sandboxes."
@@ -61,7 +61,7 @@ msgstr "Comment cela fonctionne"
 
 #: ../../introduction.rst:21
 msgid "Flatpak can be understood through a small number of key concepts. These also help to explain how it differs from traditional software packages."
-msgstr "Flatpak peut être compris à travers un petit nombre de concepts-clés. Ils aident aussi à expliquer comment il diffère des paquets logiciel traditionnels."
+msgstr "Flatpak peut être compris à travers un petit nombre de concepts-clés.  Ils aident aussi à expliquer comment il diffère des paquets logiciels traditionnels."
 
 #: ../../introduction.rst:26
 msgid "Runtimes"
@@ -69,7 +69,7 @@ msgstr "Runtimes"
 
 #: ../../introduction.rst:28
 msgid "Runtimes provide the basic dependencies that are used by applications. Various runtimes are available, from more minimal (but more stable) Freedesktop runtimes, to larger runtimes produced by desktops like GNOME or KDE. (The `runtimes page <http://flatpak.org/runtimes.html>`_ on flatpak.org provides an overview of the runtimes that are currently available.)"
-msgstr "Les runtime fournissent les dépendences essentielles qui sont utilisées par les applications. Différents runtimes sont disponibles, du très minimal (mais plus stable) Freedesktop, à de plus gros produits par des environnements de bureaux comme GNOME ou KDE. La `page runtimes <http://flatpak.org/runtimes.html>`_ sur flatpak.org fournit un aperçu des runtimes qui sont actuellement disponibles.)"
+msgstr "Les runtimes fournissent les dépendances essentielles qui sont utilisées par les applications. Différents runtimes sont disponibles, du très minimal (mais plus stable) Freedesktop, à de plus gros produits par des environnements de bureaux comme GNOME ou KDE. La `page runtimes <http://flatpak.org/runtimes.html>`_ sur flatpak.org fournit un aperçu des runtimes qui sont actuellement disponibles.)"
 
 #: ../../introduction.rst:30
 msgid "Each application must be built against a runtime, and this runtime must be installed on a host system in order for the application to run. Users can install multiple different runtimes at the same time, including different versions of the same runtime."
@@ -85,7 +85,7 @@ msgstr "Bibiothèques empaquetées"
 
 #: ../../introduction.rst:38
 msgid "If an application requires any dependencies that aren't in its runtime, they can be bundled along with the application itself. This allows applications to use dependencies that aren't available in a distribution, or to use a different version of a dependency from the one that's installed on the host."
-msgstr "Si une application requiert des dépendances qui n'est pas dans son runtime, elles peuvent intégrées au côté de l'application. Cela permet aux application d'utiliser des dépendences qui ne sont pas disponibles dans une distribution, ou d'utiliser une version différente de celle qui est installé sur l'hôte."
+msgstr "Si une application requiert des dépendances qui ne sontt pas dans son runtime, elles peuvent être intégrées au côté de l'application. Cela permet aux applications d'utiliser des dépendances qui ne sont pas disponibles dans une distribution, ou d'utiliser une version différente de celle qui est installé sur l'hôte."
 
 #: ../../introduction.rst:41
 msgid "SDKs (Software Developer Kits)"
@@ -93,7 +93,7 @@ msgstr "SDKs (kits de développement logiciel)"
 
 #: ../../introduction.rst:43
 msgid "An SDK is a runtime that includes the 'devel' parts which are not needed at runtime, such as build and packaging tools, header files, compilers and debuggers. Each application is built against an SDK, which is paired with a runtime (this is the runtime that will be used by the application at runtime)."
-msgstr "Un SDK est un runtime qui inclut les parties 'devel' qui ne sont pas nécessaires au runtime, comme si les outils de construction et d'empaquettage, les fichiers d'en-tête, les compilateurs et les débogueurs. Chaque application est construite avec ce SDK, qui est lié avec le runtime (ce runtime qui sera utilisé par l'application à son exécution)."
+msgstr "Un SDK est un runtime qui inclut les parties 'devel' qui ne sont pas nécessaires au runtime, comme les outils de construction et d'empaquettage, les fichiers d'en-tête, les compilateurs et les débogueurs. Chaque application est construite avec ce SDK, qui est lié avec le runtime (ce runtime qui sera utilisé par l'application à son exécution)."
 
 #: ../../introduction.rst:46
 msgid "Extensions"
@@ -109,7 +109,7 @@ msgstr "Bacs à sable"
 
 #: ../../introduction.rst:53
 msgid "With Flatpak, each app is built and run in an isolated environment. By default, the application can only 'see' itself and its runtime. Access to user files, network, graphics sockets, subsystems on the bus and devices have to be explicitly granted. (As will be described later, Flatpak provides several ways to do this.) Access to other things, such as other processes, is deliberately not possible."
-msgstr "Avec Flatpak, chaque application est construite et lancer dans un environnement isolé. Par défaut, l'application peut uniquement se \"voir\" elle-même et ses runtimes. L'accès aux fichiers utilisateurs, au réseau, aux sockets graphiques, aux sous-systèmes sur le bus et aux périphériques doit être explicitement permis. (Comme vous le verrez plus tard, Flatpak fournit plusieurs façons de faire cela.) L'accès à d'autres éléments, comme les autres processus, est délibéremment impossible."
+msgstr "Avec Flatpak, chaque application est construite et lancée dans un environnement isolé. Par défaut, l'application peut uniquement se \"voir\" elle-même et ses runtimes. L'accès aux fichiers utilisateurs, au réseau, aux sockets graphiques, aux sous-systèmes sur le bus et aux périphériques doit être explicitement permis. (Comme vous le verrez plus tard, Flatpak fournit plusieurs façons de faire cela.) L'accès à d'autres éléments, comme les autres processus, est délibéremment impossible."
 
 #: ../../introduction.rst:56
 msgid "The flatpak command"
@@ -141,7 +141,7 @@ msgstr "Nommage"
 
 #: ../../introduction.rst:72
 msgid "Flatpak names take the form of an inverse DNS address, such as ``com.company.App``. The final segment of this address is the object's name, and the preceding part is the domain that it belongs to. In order to prevent name conflicts, this domain should correspond to a DNS registered address. This means using a domain from a website, either for an application or an organization. For instance, if application ``App`` has its own website at ``app.com``, its Flatpak name would be ``com.app.App``. Multiple applications can belong to the same domain, such as ``org.organization.App1`` and ``org.organization.App2``."
-msgstr "la nomenclature Flatpak prend la forme d'une adresse DNS inversée, comme ``com.entreprise.Application``. Le segment final de cette adresse est le nom de l'objet, and la partie précédente est le domain auquel elle appartient.  Afin d'éviter les conflits de nom, ce domaine doit correspondre à une adresse DNS enregistrée. Cela signifie utiliser un domain d'une site web, soit pour une application ou une organisation. Par exemple, si une application ``App`` a son propre site web à ``app.com``, son nom Flatpak serait ``com.app.App``.  Plusieurs applications peuvent appartenir au même domaine, comme ``org.organization.App1`` et ``org.organization.App2``." 
+msgstr "la nomenclature Flatpak prend la forme d'une adresse DNS inversée, comme ``com.entreprise.Application``. Le segment final de cette adresse est le nom de l'objet, and la partie précédente est le domaine auquel elle appartient.  Afin d'éviter les conflits de nom, ce domaine doit correspondre à une adresse DNS enregistrée. Cela signifie utiliser un domaine d'une site web, soit pour une application ou une organisation. Par exemple, si une application ``App`` a son propre site web à ``app.com``, son nom Flatpak serait ``com.app.App``.  Plusieurs applications peuvent appartenir au même domaine, comme ``org.organization.App1`` et ``org.organization.App2``."
 
 #: ../../introduction.rst:74
 msgid "If you do not have a registered domain for your application, it is easy to use a third party website to get one. For example, Github allows the creation of personal pages that can be used for this purpose. Here, a personal namespace of ``name.github.io`` could be used as the basis of application identifier ``io.github.name.App``."
@@ -149,7 +149,7 @@ msgstr "Si vous n'avez pas un domaine enregistré pour votre application, il est
 
 #: ../../introduction.rst:76
 msgid "If an application provides a D-Bus service, the D-Bus service name is expected to be the same as the application name."
-msgstr "Quand une application fournit un service D-Bus, on s'attend que le nom de service D-Bus doit être le même que le nom d'application."
+msgstr "Si une application fournit un service D-Bus, on s'attend que le nom de service D-Bus soit le même que le nom d'application."
 
 #: ../../introduction.rst:79
 msgid "Identifier triples"
@@ -165,11 +165,11 @@ msgstr "Sous le capot"
 
 #: ../../introduction.rst:86
 msgid "Flatpak uses a number of pre-existing technologies. It generally isn't necessary to be familiar with these in order to use Flatpak, although in some cases it might be useful. They include:"
-msgstr "Flatpak utilise un nombre de technologies déjà existantes. Il n'est généralement pas nécessaire d'être familier avec celles-ci pour utiliser Flatpak, néanmoins dans certains cas cela peut-etre utile. Elles inclues:"
+msgstr "Flatpak utilise un nombre de technologies déjà existantes. Il n'est généralement pas nécessaire d'être familier avec celles-ci pour utiliser Flatpak, néanmoins dans certains cas cela peut-etre utile. Elles incluent:"
 
 #: ../../introduction.rst:88
 msgid "The `bubblewrap <https://github.com/projectatomic/bubblewrap>`_ utility from `Project Atomic <http://www.projectatomic.io/>`_, which lets unprivileged users set up and run containers, using kernel features such as:"
-msgstr "L'utilitaire `bubblewrap <https://github.com/projectatomic/bubblewrap>`_ de `Projet Atomic <http://www.projectatomic.io/>`_, qui laisse les utilisateurs non-privilégies créer et lanceur des conteneurs, à l'aide des fonctions noyau tels que:"
+msgstr "L'utilitaire `bubblewrap <https://github.com/projectatomic/bubblewrap>`_ de `Projet Atomic <http://www.projectatomic.io/>`_, qui laisse les utilisateurs non-privilégiés créer et lancer des conteneurs, à l'aide des fonctions noyau tels que:"
 
 #: ../../introduction.rst:90
 msgid "Cgroups"
@@ -197,7 +197,7 @@ msgstr "`D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_, une méthode
 
 #: ../../introduction.rst:97
 msgid "The OCI format from the `Open Container Initiative <https://www.opencontainers.org/>`_, as a convenient transport format for single-file bundles"
-msgstr "Le format OCI de l'`initiative Open Container <https://www.opencontainers.org/>`_ comme un format de transport pratique pour les paquets en un seul fichier"
+msgstr "Le format OCI de l'`initiative Open Container <https://www.opencontainers.org/>`_ comme format de transport pratique pour les paquets en un seul fichier"
 
 #: ../../introduction.rst:98
 msgid "The `OSTree <https://ostree.readthedocs.io/en/latest/>`_ system for versioning and distributing filesystem trees"
@@ -205,5 +205,5 @@ msgstr "Le système `OSTree <https://ostree.readthedocs.io/en/latest/>`_ pour le
 
 #: ../../introduction.rst:99
 msgid "`Appstream <https://www.freedesktop.org/software/appstream/docs/>`_ metadata, to allow Flatpak applications to show up nicely in software-center applications"
-msgstr "Les méta-données `Appstream <https://www.freedesktop.org/software/appstream/docs/>`_, qui permettent les applications Flatpak d'apparaître proprement dans l'application software-center"
+msgstr "Les méta-données `Appstream <https://www.freedesktop.org/software/appstream/docs/>`_, qui permettent les applications Flatpak d'apparaître proprement dans les applications software-center"
 

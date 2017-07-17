@@ -37,7 +37,7 @@ msgstr "Un SDK est un type spécial de runtime qui est utilisé pour contruire d
 
 #: ../../getting-setup.rst:13
 msgid "The Flatpak website provides a `list of the available runtimes <http://flatpak.org/runtimes.html>`_. Once you have decided which one to use, getting setup is just a matter of installing it and its SDK."
-msgstr "Le site web de Flatpak fournit une `liste des runtimes disponibles <http://flatpak.org/runtimes.html>`_. Une fois décidé celui que vous allez utiliser, être en place est juste une question de l'installer et son SDK."
+msgstr "Le site web de Flatpak fournit une `liste des runtimes disponibles <http://flatpak.org/runtimes.html>`_. Une fois décidé celui à utiliser, être en place est juste une question de l'installer celui-ci et son SDK."
 
 #: ../../getting-setup.rst:15
 msgid "The examples in the rest of the Flatpak documentation use the GNOME 3.22 runtime and SDK. If you haven't installed these already, download the repository GPG key and then add the repository that contains the runtime and SDK::"
@@ -49,15 +49,15 @@ msgstr "Vous pouvez maintenant télécharger et installer un runtime et un SDK::
 
 #: ../../getting-setup.rst:23
 msgid "This same procedure can be used to install any other runtime and SDK."
-msgstr "La même procédure peut-être utilisé pour installer n'importe quel autre runtime et SDK."
+msgstr "La même procédure peut-être utilisée pour installer n'importe quel autre runtime et SDK."
 
 #: ../../getting-setup.rst:26
 msgid "Taking a look around"
-msgstr "Jeter un coup d'œil"
+msgstr "Jeter un coup d'œil autour"
 
 #: ../../getting-setup.rst:28
 msgid "If this is the first time you've used Flatpak, it is a good time to try installing an application and having a look 'under the hood'. To do this, you need to add a repository that contains applications. We can do this using the gnome-apps repository to install gedit::"
-msgstr "Si c'est la première fois que vous utilisez Flatpak, c'est un bon moment pour tenter d'installer une application et jetez un œil à \"Sous le capot\". Pour faire cela, vous aurez à ajouter un dépôt qui contient les applications. Vous pouvez faire cela à l'aide du dépôt gnome-apps pour installer gedit::"
+msgstr "Si c'est la première fois que vous utilisez Flatpak, c'est le bon moment pour tenter d'installer une application et jetez un œil \"sous le capot\". Pour faire cela, vous aurez à ajouter un dépôt qui contient les applications. Vous pouvez faire cela à l'aide du dépôt gnome-apps pour installer gedit::"
 
 #: ../../getting-setup.rst:33
 msgid "You can now use the following command to get a shell in the 'devel sandbox'::"
@@ -65,5 +65,5 @@ msgstr "Vous pouvez mainteant utiliser la commande suivante pour obtenir un shel
 
 #: ../../getting-setup.rst:37
 msgid "This gives you an environment which has the application bundle mounted in ``/app``, and the SDK it was built against mounted in ``/usr``. You can explore these two directories to see what a typical flatpak looks like, as well as what is included in the SDK."
-msgstr "Cela vous donne un environnement qui a le lot d'applications monté dans ``/app``, et le SDK avec lequel il a été construit monté dans ``/usr``. Vous pouvez explorer ces deux répertoires pour voir à quoi ressemble un flatpak typique, ainsi que ce qui est inclus dans le SDK."
+msgstr "Cela vous donne un environnement qui a le lot applicatif monté dans ``/app``, et le SDK avec lequel il a été construit montés dans ``/usr``. Vous pouvez explorer ces deux répertoires pour voir à quoi ressemble un flatpak typique, ainsi que ce qui est inclus dans le SDK."
 

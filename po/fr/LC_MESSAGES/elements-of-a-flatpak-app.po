@@ -21,7 +21,7 @@ msgstr "Élements d'une application Flatpak"
 
 #: ../../elements-of-a-flatpak-app.rst:4
 msgid "Flatpak expects applications to follow standard Linux desktop conventions. These are supplemented with a small number of Flatpak-specific elements that are used to distribute, install and run applications."
-msgstr "Flatpak s'attend à ce que les applications suivent les conventions des environnements de bureau Linux standards. Ils sont complétées par un petit nombre d'éléments spécifiques à Flatpak qui sont utilisés pour distribuer, installer and lancer les applications."
+msgstr "Flatpak s'attend à ce que les applications suivent les conventions standards des environnements de bureau Linux. Elles sont complétées par un petit nombre d'éléments spécifiques à Flatpak qui sont utilisés pour distribuer, installer and lancer les applications."
 
 #: ../../elements-of-a-flatpak-app.rst:7
 msgid "Standard application elements"
@@ -29,7 +29,7 @@ msgstr "Éléments d'une application standard"
 
 #: ../../elements-of-a-flatpak-app.rst:9
 msgid "The following are some of the Linux desktop conventions that are supported and expected by Flatpak. Application developers are encouraged to use them."
-msgstr "Les éléments suivants font partis des conventions des environnements de bureau Linux qui sont supportés et attendus par Flatpak. Les développeurs d'application sont encouragés à les utiliser."
+msgstr "Les éléments suivants font partis des conventions des environnements de bureau Linux qui sont supporteés et attendues par Flatpak. Les développeurs d'application sont encouragés à les utiliser."
 
 #: ../../elements-of-a-flatpak-app.rst:11
 msgid "`AppData <https://www.freedesktop.org/software/appstream/docs/chap-Quickstart.html#sect-Quickstart-DesktopApps>`_, for providing application information, such as descriptions and screenshots, that is used by app stores"
@@ -61,7 +61,7 @@ msgstr "Structure d'une application"
 
 #: ../../elements-of-a-flatpak-app.rst:21
 msgid "When an application is built using flatpak, it is outputted with the following structure:"
-msgstr "Quand une application est construite à l'aide de flatpak, elle est … avec la structure suivante"
+msgstr "Quand une application est construite à l'aide de flatpak, elle est extraite avec la structure suivante"
 
 #: ../../elements-of-a-flatpak-app.rst:23
 msgid "``metadata`` - a keyfile which provides information about the application"
@@ -105,7 +105,7 @@ msgstr "Nommer les fichiers de cette façon évite les conflits de nommage et as
 
 #: ../../elements-of-a-flatpak-app.rst:37
 msgid "To name exported files in this way, either rename the relevant source files or use flatpak-builder to rename the files at build time (this is explained in more detail in `the section on flatpak-builder <flatpak-builder.html>`_)."
-msgstr "Pour nommer les fichiers exportés de cette façon, soit renommez les fichiers sources pertients ou utilisez ``flatpak-builder`` pour renommer les fichiers au moment de la construction (Ceci est plus amplement détaillé dans `la section sur flatpak-builder <flatpak-builder.html>`_).`"
+msgstr "Pour nommer les fichiers exportés de cette façon, soit renommez les fichiers sources pertinents ou utilisez ``flatpak-builder`` pour renommer les fichiers au moment de la construction (ceci est plus amplement détaillé dans `la section sur flatpak-builder <flatpak-builder.html>`_).`"
 
 #: ../../elements-of-a-flatpak-app.rst:40
 msgid "Metadata files"

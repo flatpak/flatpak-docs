@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../flatpak-builder.rst:4
 msgid "Most applications require additional dependencies that aren't provided by their runtimes. Flatpak allows these dependencies to be bundled as part of the application itself. In order to do this, each dependency must be built inside the application build directory. The ``flatpak-builder`` tool automates this multi-step build process, making it possible to build all application modules with a single command."
-msgstr "La plupart des applications nécessite des dépendences additionnelles qui ne sont pas fournies avec leur runtime. Flatpak permet à ces dépendences d'être incluses à l'application elle-même. Afin de faire ceci, chaque dépendence doit être construit à l'intérieur du répertoire de construction. L'outil ``flatpak-builder`` automatise ce processus de plusieurs étapes, permettant de contruire tous les modules avec une seule commande."
+msgstr "La plupart des applications nécessite des dépendances additionnelles qui ne sont pas fournies avec leur runtime. Flatpak permet à ces dépendances d'être incluses à l'application elle-même. Pour faire ceci, chaque dépendance doit être construite à l'intérieur du répertoire de construction. L'outil ``flatpak-builder`` automatise ce processus de plusieurs étapes, permettant de contruire tous les modules avec une seule commande."
 
 #: ../../flatpak-builder.rst:6
 msgid "flatpak-builder expects modules to be built in the standard manner by following what is called the `Build API <https://github.com/cgwalters/build-api/>`_. This requires modifying modules to follow the build API, if they don't already."
@@ -37,11 +37,11 @@ msgstr "Manifestes"
 
 #: ../../flatpak-builder.rst:13
 msgid "The input to flatpak-builder is a JSON file that describes the parameters for building an application, as well as each of the modules to be bundled. This file is called the manifest. Module sources can be of several types, including ``.tar`` or ``.zip`` archives, Git or Bzr repositories, patch files or shell commands that are run."
-msgstr "L'entrée pour flatpak-builder est un fichier JSON descrivant les parametres pour construire une application, ainsi que les modules à intégrer.  Ce fichier est appelé le manifest. Les sources de modules peuvent être de plusieurs type, comme des archives ``.tar`` ou ``.zip``, des dépôts Git ou Bzr, des fichiers patch ou des commande shell à exécuter."
+msgstr "L'entrée pour flatpak-builder est un fichier JSON descrivant les paramètres pour construire une application, ainsi que les modules à intégrer.  Ce fichier est appelé le manifeste. Les sources de modules peuvent être de plusieurs types, comme des archives ``.tar`` ou ``.zip``, des dépôts Git ou Bzr, des fichiers patch ou des commandes shell à exécuter."
 
 #: ../../flatpak-builder.rst:15
 msgid "The GNOME Dictionary manifest is short, because the only module is the application itself::"
-msgstr "Le manifeste de Dictionnaire GNOME est court, parce que le seul module est l'application elle-même::"
+msgstr "Le manifeste du Dictionnaire GNOME est court, parce que le seul module est l'application elle-même::"
 
 #: ../../flatpak-builder.rst:41
 msgid "As can be seen, this manifest includes basic information about the application before specifying a single .tar file to be downloaded and built. More complex manifests include a sequence of modules."
@@ -133,9 +133,9 @@ msgstr "Et finalement vous pouvez lancer la nouvelle version de l'application Di
 
 #: ../../flatpak-builder.rst:99
 msgid "Example manifests"
-msgstr "Manifestes d'exemple"
+msgstr "Exemples de manifestes"
 
 #: ../../flatpak-builder.rst:101
 msgid "A `complete manifest for GNOME Dictionary built from Git <https://git.gnome.org/browse/gnome-dictionary/tree/data/org.gnome.Dictionary.json>`_ is available, in addition to `manifests for a range of other GNOME applications <https://git.gnome.org/browse/gnome-apps-nightly/tree/>`_."
-msgstr "Un manifeste complete pour GNOME Dictionnaire construit à partir de Git <https://git.gnome.org/browse/gnome-dictionary/tree/data/org.gnome.Dictionary.json>`_ est disponible, en plus d'`autres manisfestes d'autres applications GNOME <https://git.gnome.org/browse/gnome-apps-nightly/tree/>`_."
+msgstr "Un manifeste complet pour GNOME Dictionnaire construit à partir de Git <https://git.gnome.org/browse/gnome-dictionary/tree/data/org.gnome.Dictionary.json>`_ est disponible, en plus de `manisfestes d'autres applications GNOME <https://git.gnome.org/browse/gnome-apps-nightly/tree/>`_."
 

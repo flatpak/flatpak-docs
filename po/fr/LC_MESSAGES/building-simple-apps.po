@@ -25,7 +25,7 @@ msgstr "L'utilitaire ``flatpak`` fournit un ensemble simple de commandes pour co
 
 #: ../../building-simple-apps.rst:6
 msgid "This section describes how to build a simple application which doesn't require any additional dependencies outside of the runtime it is built against. In order to complete the examples, you should have completed the steps in `Getting Setup <getting-setup.html>`_ first."
-msgstr "Cette section descrit comment construite une application simple qui ne nécessite aucune dépendence additionnelle en-dehors du runtime avec lequel elle a été construite. Afin de terminer les exemples, vous devrez avoir terminé les étapes de `Getting Setup <getting-setup.html>` d'abord."
+msgstr "Cette section descrit comment construire une application simple qui ne nécessite aucune dépendence additionnelle en-dehors du runtime avec lequel elle a été construite. Afin de terminer les exemples, vous devrez avoir terminé les étapes de `Getting Setup <getting-setup.html>`_ d'abord."
 
 #: ../../building-simple-apps.rst:9
 msgid "Creating an app"
@@ -33,7 +33,7 @@ msgstr "Création d'une application"
 
 #: ../../building-simple-apps.rst:11
 msgid "To create an application, the first step is to use the ``build-init`` command. This creates a directory into which an application can be built, which contains the correct directory structure and a metadata file which contains information about the app. The format for build-init is::"
-msgstr "Pour crééer une application, la première étape est d'utiliser la commande ``build-init``. Cela créé un répertoire dans lequel l'application peut être construit, qui contient la structure de répertoire adéquate and un fichier metadata qui contient les informations à propos de l'application. Le format pour build-init est::"
+msgstr "Pour créer une application, la première étape est d'utiliser la commande ``build-init``. Cela créé un répertoire dans lequel l'application peut être construit, qui contient la structure de répertoire adéquate et un fichier metadata qui contient les informations à propos de l'application. Le format pour build-init est::"
 
 #: ../../building-simple-apps.rst:15
 msgid "DIRECTORY is the name of the directory that will be created to contain the application"
@@ -57,7 +57,7 @@ msgstr "BRANCH is typiquement la version du SDK et du runtime qui sera utilisé"
 
 #: ../../building-simple-apps.rst:21
 msgid "For example, to build the GNOME Dictionary application using the GNOME 3.22 SDK, the command would look like::"
-msgstr "Par exemple, pour construire l'application GNOME dictionnaire en utilisant le SDK GNOME 3.22, la commande ressemblerait à::"
+msgstr "Par exemple, pour construire l'application Dictionnaire GNOME en utilisant le SDK GNOME 3.22, la commande ressemblerait à::"
 
 #: ../../building-simple-apps.rst:25
 msgid "You can try this command now. In the next step we will build an application inside the resulting dictionary directory."
@@ -77,7 +77,7 @@ msgstr "(Il est préférable de supprimer ce fichier avant de continuer.)"
 
 #: ../../building-simple-apps.rst:36
 msgid "The build command allows existing applications that have been made using the traditional configure, make, make install routine to be built inside a flatpak. You can try this using GNOME Dictionary. First, download the source files, extract them and switch to the resulting directory::"
-msgstr "La commande build permet aux applications existantes construite à l'aide des routines traditionnelles configure, make, make install à l'intérieur d'un flatpak. Vous pouvez essayer cela à l'aide de GNOME dictionnaire.  Premièrement, téléchargez les fichiers sources, extrayez-les et déplacez-vous dans le répertoire résultant::"
+msgstr "La commande build permet aux applications existantes construites à l'aide des routines traditionnelles configure, make, make install à l'intérieur d'un flatpak. Vous pouvez essayer cela à l'aide de Dictionnaire GNOME. Premièrement, téléchargez les fichiers sources, extrayez-les et déplacez-vous dans le répertoire résultant::"
 
 #: ../../building-simple-apps.rst:42
 msgid "Then you can use the build command to build and install the source inside the dictionary directory that was previously made::"
@@ -101,4 +101,4 @@ msgstr "À ce moment, vous avez construit un flatpak avec succès et l'avez pré
 
 #: ../../building-simple-apps.rst:65
 msgid "This exports the app, creates a repository called tutorial-repo, installs the Dictionary application in the per-user installation area and runs it."
-msgstr "Cela exporte l'application, créé un dépôt appelé tutorial-repo, intalle l'application Dictionnaire dans une zone d'installation utilisateur, et l'exécute."
+msgstr "Cela exporte l'application, créé un dépôt appelé tutorial-repo, installe l'application Dictionnaire dans une zone d'installation utilisateur, et l'exécute."
