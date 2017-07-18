@@ -17,7 +17,7 @@ Contents
    introduction
    elements-of-a-flatpak-app
    getting-setup
-   building-simple-apps
+   building-simple-applications
    flatpak-builder
    working-with-the-sandbox
    distributing-applications

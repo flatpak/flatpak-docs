@@ -3,7 +3,7 @@ Getting Setup
 
 Getting setup to build Flatpaks is quick and easy. First, it is necessary to have the ``flatpak`` and ``flatpak-builder`` packages installed on your system. These are available for most distributions, and the Flatpak website provides `details on how to get them <http://flatpak.org/getting.html>`_.
 
-Once flatpak has been installed, it is necessary to pick a runtime and install it, along with the matching SDK.
+Once Flatpak has been installed, it is necessary to pick a runtime and install it, along with the matching SDK.
 
 Installing an SDK
 -----------------

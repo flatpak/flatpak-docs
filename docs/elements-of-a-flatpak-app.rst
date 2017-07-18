@@ -23,7 +23,7 @@ When an application is built using flatpak, it is outputted with the following s
 * ``metadata`` - a keyfile which provides information about the application
 * ``/files`` - the files that make up the application, include source code and application data
 * ``/files/bin`` - application binaries
-* ``/export`` - files which the host environment needs access to, such as the application's AppData, .desktop file, icon and D-Bus service files
+* ``/export`` - files which the host environment needs access to, such as the application's AppData, ``.desktop`` file, icon and D-Bus service files
 
 All the files in the export directory must have the application ID as their prefix. For example: 
 
@@ -39,7 +39,7 @@ To name exported files in this way, either rename the relevant source files or u
 Metadata files
 --------------
 
-An application's ``metadata`` file provides information that allows flatpak to set up the sandbox for running the application. A typical metadata file looks like this::
+An application's ``metadata`` file provides information that allows flatpak to set up the sandbox for running the application. A typical ``metadata`` file looks like this::
 
   [Application]
   name=org.gnome.gedit

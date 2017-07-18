@@ -1,12 +1,12 @@
-Building Simple Apps
-====================
+Building Simple Applications
+============================
 
 The ``flatpak`` utility provides a simple set of commands for building and distributing applications. These allow creating new Flatpaks, into which new or existing applications can be built.
 
 This section describes how to build a simple application which doesn't require any additional dependencies outside of the runtime it is built against. In order to complete the examples, you should have completed the steps in `Getting Setup <getting-setup.html>`_ first.
 
-Creating an app
----------------
+Creating an application
+-----------------------
 
 To create an application, the first step is to use the ``build-init`` command. This creates a directory into which an application can be built, which contains the correct directory structure and a metadata file which contains information about the app. The format for build-init is::
 
@@ -33,7 +33,7 @@ Building
 
 (It is best to remove this file before continuing.)
 
-The build command allows existing applications that have been made using the traditional configure, make, make install routine to be built inside a flatpak. You can try this using GNOME Dictionary. First, download the source files, extract them and switch to the resulting directory::
+The build command allows existing applications that have been made using the traditional ``configure``, ``make``, ``make install`` routine to be built inside a flatpak. You can try this using GNOME Dictionary. First, download the source files, extract them and switch to the resulting directory::
 
   $ wget https://download.gnome.org/sources/gnome-dictionary/3.20/gnome-dictionary-3.20.0.tar.xz
   $ tar xvf gnome-dictionary-3.20.0.tar.xz
@@ -51,7 +51,7 @@ Since these are run in a sandbox, the compiler and other tools from the SDK are 
 Completing the build
 --------------------
 
-Once an application has been built, the ``build-finish`` command needs to be used to specify access to different parts of the host, such as networking and graphics sockets. This command is also used to specify the command that is used to run the app (done by modifying the metadata file), and to create the application's exports directory. For example::
+Once an application has been built, the ``build-finish`` command needs to be used to specify access to different parts of the host, such as networking and graphics sockets. This command is also used to specify the command that is used to run the application (done by modifying the metadata file), and to create the application's exports directory. For example::
 
   $ flatpak build-finish dictionary --socket=x11 --share=network --command=gnome-dictionary
 
