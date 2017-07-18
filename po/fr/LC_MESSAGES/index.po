@@ -25,7 +25,7 @@ msgstr "Cette documentation couvre tout ce que vous devez savoir pour contruire 
 
 #: ../../index.rst:6
 msgid "The docs are primarily intended for application developers and distributors. Their content is also relevant to those who have a general interest in Flatpak."
-msgstr "Cette documentation est premièrement à l'attention des développeurs et distributeurs d'applications. Son contenu est aussi pertinent à ceux qui souhaite posséder une connaissance générale de Flatpak."
+msgstr "Cette documentation est principalement à l'attention des développeurs et distributeurs d'applications. Son contenu est aussi pertinent à ceux qui souhaitent posséder une connaissance générale sur Flatpak."
 
 #: ../../index.rst:8
 msgid "If you are looking for information about how to install and use Flatpak applications, please refer to `the Flatpak website <http://flatpak.org>`_."

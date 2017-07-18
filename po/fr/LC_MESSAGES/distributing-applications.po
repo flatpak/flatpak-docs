@@ -21,11 +21,11 @@ msgstr "Distribution d'applications"
 
 #: ../../distributing-applications.rst:4
 msgid "Flatpak provides several ways to distribute applications. The primary method is to host a repository. This is relatively simple (although there are some important details to be aware of) and allows application updates to be distributed."
-msgstr "Flatpak fournit plusieurs façon de distribuer des applications. La méthode principale est d'héberger un dépôt. Cela est relativement simple (néanmoins il y a certains détails important qu'il faut connaître) et permet aux mises à jour d'applications d'être distribuées."
+msgstr "Flatpak fournit plusieurs façons de distribuer des applications. La méthode principale est d'héberger un dépôt. Cela est relativement simple (néanmoins il y a certains détails important qu'il faut connaître) et permet aux mises à jour d'applications d'être distribuées."
 
 #: ../../distributing-applications.rst:6
 msgid "It is also possible to distribute Flatpaks as single file bundles, which can be useful in some situations."
-msgstr "Il est aussi possible de distribuer des flatpaks comme de simples paquets de fichiers, qui peut être utile dans certaines situations."
+msgstr "Il est aussi possible de distribuer des flatpaks comme des lots de fichiers seuls, qui peut être utile dans certaines situations."
 
 #: ../../distributing-applications.rst:9
 msgid "Hosting a repository"
@@ -41,11 +41,11 @@ msgstr "Détails importants"
 
 #: ../../distributing-applications.rst:16
 msgid "OSTree repositories use archive-z2, meaning that they contain a single file for each file in the application. This means that pull operations will do a lot of HTTP requests. Since new requests are slow, it is important to enable HTTP keep-alive on the web server."
-msgstr "Les dépôts OSTree utilisent articles-z2, ce qui signifie qu'ils contiennent un seul fichier pour chaque fichier dans l'application. Les opérations de récupération feront donc beaucoup de requêtes HTTP. Comment la création de requête prend du temps, il est important d'activer la fonctionnalité HTTP keep-alive sur le serveur web."
+msgstr "Les dépôts OSTree utilisent archive-z2, ce qui signifie qu'ils contiennent un seul fichier pour chaque fichier dans l'application. Les opérations de récupération feront donc beaucoup de requêtes HTTP. Comment la création de requête est lente, il est important d'activer la fonctionnalité HTTP keep-alive sur le serveur web."
 
 #: ../../distributing-applications.rst:18
 msgid "OSTree supports something called static deltas. These are single files in the repo that contains all the data needed to go between two revisions (or from nothing to a revision). Creating such deltas will take up more space on the server, but will make downloads much faster. This can be done with the ``build-update-repo --generate-static-deltas`` option."
-msgstr "OSTree supporte quelque-chose appelé deltas statiques. Ce sont de simples fichiers dans le dépôt qui contiennent toutes les données pour passer entre deux révisions (ou pour partir de zero). Créer de tels deltas prendra plus d'espace sur le serveur, mais accélerera les téléchargements. Cela peut être avec l'option ``build-update-repo --generate-static-deltas``."
+msgstr "OSTree supporte quelque-chose appelé deltas statiques. Ce sont des fichiers seuls dans le dépôt qui contiennent toutes les données pour passer entre deux révisions (ou pour partir de zéro). Créer de tels deltas prendra plus d'espace sur le serveur, mais accélerera les téléchargements. Cela peut effectuée être avec l'option ``build-update-repo --generate-static-deltas``."
 
 #: ../../distributing-applications.rst:21
 msgid "GPG signatures"
@@ -53,7 +53,7 @@ msgstr "Signatures GPG"
 
 #: ../../distributing-applications.rst:23
 msgid "OSTree uses GPG to verify the identity of repositories. This requires that every commit to a repository uses a GPG signature, as well as when repository summary files are modified."
-msgstr "OSTree utilises GPG pour vérifier l'identité des dépôts. Cela requiert que chaque commit sur le dépôt utilise une signature GPG, ainsi que lorsque les fichiers sommaires du dépôt sont modifiés."
+msgstr "OSTree utilise GPG pour vérifier l'identité des dépôts. Cela requiert que chaque commit sur le dépôt utilise une signature GPG, ainsi que lorsque les fichiers sommaires du dépôt sont modifiés."
 
 #: ../../distributing-applications.rst:25
 msgid "To do this, a GPG key needs to be passed to the ``build-update-repo`` and ``build-export`` commands, as well as ``flatpak-builder`` if it is being used to modify or create a repository. (If you don't already have a key, `it is easy to generate one <https://help.github.com/articles/generating-a-new-gpg-key/>`_.) For example::"
@@ -89,11 +89,11 @@ msgstr "Si votre dépôt contient juste une seule application, il serait plus pr
 
 #: ../../distributing-applications.rst:53
 msgid "A typical ``.flatpakref`` file looks like this::"
-msgstr "Un fichier ``.flatpakref`` typique resulting à cela::"
+msgstr "Un fichier ``.flatpakref`` typique ressemble à cela::"
 
 #: ../../distributing-applications.rst:64
 msgid "Note that the GPGKey key in these files contains the base64-encoded GPG key, which you can get with the following command::"
-msgstr "Notez que la clé GPGKey dans ces fichiers contient la clé GPG encodé en base64, que vous pouvez récupérer avec la commande suivante::"
+msgstr "Notez que la clé GPGKey dans ces fichiers contient la clé GPG encodée en base64, que vous pouvez récupérer avec la commande suivante::"
 
 #: ../../distributing-applications.rst:69
 msgid "Single-file bundles"
@@ -101,7 +101,7 @@ msgstr "Paquets de fichier-seul"
 
 #: ../../distributing-applications.rst:71
 msgid "Hosting a repository is the preferred way to distribute an application, but sometimes a single-file bundle that you can make available from a website or send as an email attachment is more convenient. Flatpak supports this with the ``build-bundle`` and ``build-import-bundle`` commands to convert an application in a repository to a bundle and back::"
-msgstr "Héberger un dépôt est la façon préféree pour distribuer une application, mais parfois un paquet de fichier-seul que vous pouvez rendre disponible à partir d'un site web ou à envoyer comme pièce-jointe d'un courrier électronique est plus pratique. Flatpak supporte cela avec les commandes ``build-bundle`` et ``build-import-bundle`` pour convertir une application d'un dépôt vers un paquet et inversement."
+msgstr "Héberger un dépôt est la façon préférée pour distribuer une application, mais parfois un paquet de fichier-seul que vous pouvez rendre disponible à partir d'un site web ou à envoyer comme pièce-jointe d'un courrier électronique est plus pratique. Flatpak supporte cela avec les commandes ``build-bundle`` et ``build-import-bundle`` pour convertir une application d'un dépôt vers un paquet et inversement."
 
 #: ../../distributing-applications.rst:76
 msgid "For example, to create a bundle named `dictionary.flatpak` containing the GNOME dictionary app from the repository at ~/repositories/apps, run::"
@@ -113,5 +113,5 @@ msgstr "Pour importer un paquet dans un dépôt d'une autre machine, lancez::"
 
 #: ../../distributing-applications.rst:84
 msgid "Note that bundles have some drawbacks, compared to repositories. For example, distributing updates is much more convenient with a hosted repository, since users can just run ``flatpak update``."
-msgstr "Notez que les paquets ont certains désavantages comparés aux dépôts.  Par exemple, la distribution de mises à jour est plus pratique avec un dépôt hébergé, comme les utilisateur ont juste à lancer ``flatpak update``."
+msgstr "Notez que les paquets ont certains désavantages comparés aux dépôts.  Par exemple, la distribution de mises à jour est plus pratique avec un dépôt hébergé, comme cela les utilisateurs ont juste à lancer ``flatpak update``."
 

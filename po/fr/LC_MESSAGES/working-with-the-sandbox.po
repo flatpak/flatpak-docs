@@ -25,7 +25,7 @@ msgstr "Un des buts principaux est d'améliorer la sécurité des environnements
 
 #: ../../working-with-the-sandbox.rst:6
 msgid "No access to any host files except the runtime, the app and ``~/.var/app/$APPID``. Only the last of these is writable."
-msgstr "Pas d'accès à aucun des fichiers de l'hôte excepté le runtome, l'application et ``~/.var/app/$APPID``. Seul le dernier est autorisé en écriture."
+msgstr "Pas d'accès aux fichiers de l'hôte excepté le runtime, l'application et ``~/.var/app/$APPID``. Seul le dernier est autorisé en écriture."
 
 #: ../../working-with-the-sandbox.rst:7
 msgid "No access to the network."
@@ -33,7 +33,7 @@ msgstr "Pas d'accès au réseau."
 
 #: ../../working-with-the-sandbox.rst:8
 msgid "No access to any device nodes (apart from ``/dev/null``, etc)."
-msgstr "Pas d'accès à aucun périphérique (à part ``/dev/null``, etc)."
+msgstr "Pas d'accès aux périphériques (à part ``/dev/null``, etc)."
 
 #: ../../working-with-the-sandbox.rst:9
 msgid "No access to processes outside the sandbox."
@@ -57,7 +57,7 @@ msgstr "La plupart des applications auront besoin d'accéder à certaines de ces
 
 #: ../../working-with-the-sandbox.rst:16
 msgid "While there are no restrictions on which sandbox permissions an application can use, as good practice, it is recommended to use the minimum number of as permissions possible. Certain permissions, such as blanket access to the system bus (using the ``--socket=system-bus`` option) are strongly discouraged."
-msgstr "Bien qu'il n'y ait pas de restriction sur les permissions bac à sable qu'une application peut utiliser, comme bonne pratique, il est recommander d'utiliser le nombre minimum de permissions possibles. Certains permissions, comme l'accès général au bus système (à l'aide de l'option ``--socket=system-bus``) sont fortement découragés."
+msgstr "Bien qu'il n'y ait pas de restriction sur quels permissions bac à sable une application peut utiliser, comme bonne pratique, il est recommandé d'utiliser le minimum de permissions possibles. Certains permissions, comme l'accès général au bus système (à l'aide de l'option ``--socket=system-bus``) sont fortement découragés."
 
 #: ../../working-with-the-sandbox.rst:19
 msgid "Configuring sandbox permissions"
