@@ -1,0 +1,23 @@
+# Flatpak docs
+# Copyright (C) 2017, Flatpak Team
+# This file is distributed under the same license as the Flatpak package.
+# Markus Richter <semanticdesign@mailbox.org>, 2017.
+#
+msgid ""
+msgstr "Project-Id-Version: Flatpak \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-01 18:01+0200\n"
+"PO-Revision-Date: 2017-08-29 18:01+0200\n"
+"Last-Translator: Markus Richter <semanticdesign@mailbox.org>\n"
+"Language-Team: de_DE <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: OmegaT 4.12\n"
+"Language: de_DE\n"
+
+
+#: ../../command-reference.rst:2
+msgid "Command Reference"
+msgstr ""
+
