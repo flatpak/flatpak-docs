@@ -4,10 +4,11 @@
 # Markus Richter <semanticdesign@mailbox.org>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: Flatpak \n"
+msgstr ""
+"Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-01 18:01+0200\n"
-"PO-Revision-Date: 2017-08-29 18:01+0200\n"
+"PO-Revision-Date: 2017-10-08 18:01+0200\n"
 "Last-Translator: Markus Richter <semanticdesign@mailbox.org>\n"
 "Language-Team: de_DE <>\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +19,7 @@ msgstr "Project-Id-Version: Flatpak \n"
 
 #: ../../index.rst:2
 msgid "Welcome to Flatpak's documentation!"
-msgstr "Willkomen zur Flatpak-Dokumentation!"
+msgstr "Willkomen zur Flatpak-Dokumentation"
 
 #: ../../index.rst:4
 msgid ""
@@ -26,21 +27,21 @@ msgid ""
 "applications as Flatpaks. They contain a high-level introduction to "
 "Flatpak, tutorials and essential information on how to develop, build and"
 " distribute applications."
-msgstr "Diese Dokumente decken alles ab, was Sie wissen müssen, um Applikationen als Flatpak zu bauen und zu verteilen. Sie enthalten eine tiefgehende Einführung zu Flatpkak, Tutorials und essentielle Informationen, wie man Applikationen entwickelt, erzeugt und verteilt."
+msgstr "Diese Dokumente decken alles ab, was Sie wissen müssen, um Applikationen als Flatpak zu bauen und zu verteilen. Sie enthalten eine tiefgehende Einführung zu Flatpak, Tutorials und essentielle Informationen, wie man Applikationen entwickelt, erzeugt und verteilt."
 
 #: ../../index.rst:6
 msgid ""
 "The docs are primarily intended for application developers and "
 "distributors. Their content is also relevant to those who have a general "
 "interest in Flatpak."
-msgstr "Die Dokumente richten sich vorrangig an Applikationsentwickler und Distributoren. Der Inhalt ist ebenso relevant für diejenigen, die ein generelles Interesse an Flatpak besitzen."
+msgstr "Die Dokumente richten sich vorrangig an Applikationsentwickler und Distributoren. Der Inhalt ist aber auch ebenso wissenswert für diejenigen, die ein allgemeines Interesse an Flatpak haben."
 
 #: ../../index.rst:8
 msgid ""
 "If you are looking for information about how to install and use Flatpak "
 "applications, please refer to `the Flatpak website "
 "<http://flatpak.org>`_."
-msgstr "Wenn Sie nach Informationen suchen, wie man Flatpak installiert und verwendet, finden Sie diese auf der `Flatpak Website <http://flatpak.org>`_."
+msgstr "Wenn Sie nach Informationen suchen, wie man Flatpak installiert und verwendet, finden Sie diese auf der `Flatpak Webseite <http://flatpak.org>`_."
 
 #: ../../index.rst:11
 msgid "Contents"

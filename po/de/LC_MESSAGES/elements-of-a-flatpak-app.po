@@ -4,10 +4,11 @@
 # Markus Richter <semanticdesign@mailbox.org>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: Flatpak \n"
+msgstr ""
+"Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-01 18:01+0200\n"
-"PO-Revision-Date: 2017-08-29 18:01+0200\n"
+"PO-Revision-Date: 2017-10-08 18:01+0200\n"
 "Last-Translator: Markus Richter <semanticdesign@mailbox.org>\n"
 "Language-Team: de_DE <>\n"
 "MIME-Version: 1.0\n"
@@ -18,31 +19,31 @@ msgstr "Project-Id-Version: Flatpak \n"
 
 #: ../../elements-of-a-flatpak-app.rst:2
 msgid "Elements of a Flatpak Application"
-msgstr "Elemente einer Flatpak-Applikation"
+msgstr "Elemente einer Flatpak-Anwendung"
 
 #: ../../elements-of-a-flatpak-app.rst:4
 msgid ""
 "Flatpak expects applications to follow standard Linux desktop conventions. "
 "These are supplemented with a small number of Flatpak-specific elements that "
 "are used to distribute, install and run applications."
-msgstr "Flatpak erwartet von Anwendungen, dass sie den normalen Linux-Desktop-Konventionen folgen. Diese werden um eine kleine Anzahl von Flatpak-spezifischen Elementen ergänzt. Diese Elemente werden benötigt, um die Applikationen zu verteilen, zu installieren und laufen zu lassen."
+msgstr "Flatpak erwartet von Anwendungen, dass sie den maßgebenden Konventionen des Linux-Desktops folgen. Diese werden um eine kleine Anzahl von Flatpak-spezifischen Elementen ergänzt. Diese werden benötigt, um die Applikationen zu verteilen, zu installieren und auszuführen."
 
 #: ../../elements-of-a-flatpak-app.rst:7
 msgid "Standard application elements"
-msgstr "Elemente einer Standard-Applikation"
+msgstr "Standardelemente einer Anwendung"
 
 #: ../../elements-of-a-flatpak-app.rst:9
 msgid ""
 "The following are some of the Linux desktop conventions that are supported "
 "and expected by Flatpak. Application developers are encouraged to use them."
-msgstr "Im Folgenden einige der Linux-Desktop-Konventionen, die supportet und erwartet werden von Flatpak. Anwendungsentwicklern wird empfohlen, diese zu verwenden."
+msgstr "Im Folgenden einige Konventionen des Linux-Desktops, die von Flatpak supportet und erwartet werden. Anwendungsentwicklern wird empfohlen, diese zu verwenden."
 
 #: ../../elements-of-a-flatpak-app.rst:11
 msgid ""
 "`AppData <https://www.freedesktop.org/software/appstream/docs/chap-"
 "Quickstart.html#sect-Quickstart-DesktopApps>`_, for providing application "
 "information, such as descriptions and screenshots, that is used by app stores"
-msgstr "`AppData <https://www.freedesktop.org/software/appstream/docs/chap-Quickstart.html#sect-Quickstart-DesktopApps>`_, für die Bereitstellung von Informationen zur Applikation, wie Beschreibungen und Screenshots, die von App-Stores genutzt werden."
+msgstr "`AppData <https://www.freedesktop.org/software/appstream/docs/chap-Quickstart.html#sect-Quickstart-DesktopApps>`_, für die Bereitstellung von Informationen zur Anwendung, wie Beschreibungen und Screenshots, die von App-Stores verwendet werden"
 
 #: ../../elements-of-a-flatpak-app.rst:12
 msgid ""
@@ -83,28 +84,28 @@ msgstr "Applikationsstruktur"
 msgid ""
 "When an application is built using flatpak, it is outputted with the "
 "following structure:"
-msgstr "Wenn eine Applikation generiert wird mittels Flatpak, wird diese ausgegeben mit der folgenden Struktur:"
+msgstr "Wenn eine Anwendung generiert wird mittels Flatpak, wird diese ausgegeben mit der folgenden Struktur:"
 
 #: ../../elements-of-a-flatpak-app.rst:23
 msgid ""
 "``metadata`` - a keyfile which provides information about the application"
-msgstr "``metadata`` - eine Schlüsseldatei, die Informationen über die Anwendung enthält"
+msgstr "``metadata`` – eine Schlüsseldatei, die Informationen über die Anwendung enthält"
 
 #: ../../elements-of-a-flatpak-app.rst:24
 msgid ""
 "``/files`` - the files that make up the application, include source code and "
 "application data"
-msgstr "``/files`` - die Dateien, die die Applikation bilden, dies beinhaltet den Quellcode und die Anwendungsdaten"
+msgstr "``/files`` – die Dateien, die die Anwendung bilden, dies beinhaltet den Quellcode und die Anwendungsdaten"
 
 #: ../../elements-of-a-flatpak-app.rst:25
 msgid "``/files/bin`` - application binaries"
-msgstr "``/files/bin`` - Applikationsbinärdateien"
+msgstr "``/files/bin`` – Applikationsbinärdateien"
 
 #: ../../elements-of-a-flatpak-app.rst:26
 msgid ""
 "``/export`` - files which the host environment needs access to, such as the "
 "application's AppData, .desktop file, icon and D-Bus service files"
-msgstr "``/export`` - Dateien, zu denen die Hostumgebung Zugriff benötigt, wie AppData der Applikation, die `.desktop`-Datei, das Icon und die D-Bus-Dienstdateien"
+msgstr "``/export`` – Dateien, zu denen die Hostumgebung Zugriff benötigt, wie AppData der Applikation, die `.desktop`-Datei, das Icon und die D-Bus-Dienstdateien"
 
 #: ../../elements-of-a-flatpak-app.rst:28
 msgid ""
@@ -114,25 +115,25 @@ msgstr "Alle Dateien in dem Exportverzeichnis müssen die Applikations-ID als ih
 
 #: ../../elements-of-a-flatpak-app.rst:30
 msgid "``org.gnome.App.appdata.xml``"
-msgstr ""
+msgstr "``org.gnome.App.appdata.xml``"
 
 #: ../../elements-of-a-flatpak-app.rst:31
 msgid "``org.gnome.App.desktop``"
-msgstr ""
+msgstr "``org.gnome.App.desktop``"
 
 #: ../../elements-of-a-flatpak-app.rst:32
 msgid "``org.gnome.App.png``"
-msgstr ""
+msgstr "``org.gnome.App.png``"
 
 #: ../../elements-of-a-flatpak-app.rst:33
 msgid "``org.gnome.App.service``"
-msgstr ""
+msgstr "``org.gnome.App.service``"
 
 #: ../../elements-of-a-flatpak-app.rst:35
 msgid ""
 "Naming files in this way prevents naming conflicts and ensures that system "
 "installed applications aren't overwritten."
-msgstr "Dateien in dieser Form zu benennen schützt vor Namenskonflikten und garantiert, dass systemseitig installierte Anwendungen nicht überschrieben werden."
+msgstr "Dateien in dieser Form zu benennen, schützt vor Namenskonflikten und garantiert, dass systemseitig installierte Anwendungen nicht überschrieben werden."
 
 #: ../../elements-of-a-flatpak-app.rst:37
 msgid ""
@@ -143,7 +144,7 @@ msgstr "Um exportierte Dateien in dieser Form zu benennen, müssen die relevante
 
 #: ../../elements-of-a-flatpak-app.rst:40
 msgid "Metadata files"
-msgstr "Metadaten-Dateien"
+msgstr "Metadatendateien"
 
 #: ../../elements-of-a-flatpak-app.rst:42
 msgid ""
@@ -160,10 +161,10 @@ msgid ""
 "application's sandbox, of course), and how it connects to the session bus. "
 "Details on how to change these metadata parameters are included in "
 "subsequent sections."
-msgstr "Dies spezifiziert den Namen der Anwendung, die Runtime, die sie benötigt, das SDK gegen die sie generiert wurde und das Kommando, mit dem man sie startet. Es spezifiziert zudem Datei- und Gerätezugriff, setzt verschiedene Umgebungsvariablen (natürlich innerhalb der Anwendungssandbox) und gibt an, wie sie sich mit dem Session-Bus konnektiert. Details wie man diese Metadatenparameter ändert sind in Unterkapiteln vorhanden."
+msgstr "Dies spezifiziert den Namen der Anwendung, die benötigte Runtime, das SDK, gegen die sie erzeugt wurde und das Kommando, mit dem man sie ausführt. Es spezifiziert zudem Datei- und Gerätezugriff, setzt verschiedene Umgebungsvariablen (natürlich innerhalb der Anwendungssandbox) und gibt an, wie sie sich mit dem Sessionbus konnektiert. Details, wie man diese Metadatenparameter ändert, sind in nachfolgenden Abschnitten vorhanden."
 
 #: ../../elements-of-a-flatpak-app.rst:66
 msgid ""
 "While it is most common to encounter metadata files for applications, "
 "runtimes and extensions also have them."
-msgstr "Während es geläufig ist Metadatendateien für die Applikationen vorzufinden, ist anzumerken, dass Laufzeitumgebungen und Erweiterungen diese ebenso besitzen."
+msgstr "Metadatendateien für Applikationen sind erwartungsgemäß vorzufinden, allerdings sind solche zusätzlich auch für die Laufzeitumgebungen und Erweiterungen vorhanden."

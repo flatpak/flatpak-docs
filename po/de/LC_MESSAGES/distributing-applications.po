@@ -4,10 +4,11 @@
 # Markus Richter <semanticdesign@mailbox.org>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: Flatpak \n"
+msgstr ""
+"Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-01 18:01+0200\n"
-"PO-Revision-Date: 2017-08-29 18:01+0200\n"
+"PO-Revision-Date: 2017-10-08 18:01+0200\n"
 "Last-Translator: Markus Richter <semanticdesign@mailbox.org>\n"
 "Language-Team: de_DE <>\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +19,7 @@ msgstr "Project-Id-Version: Flatpak \n"
 
 #: ../../distributing-applications.rst:2
 msgid "Distributing Applications"
-msgstr "Applikationen verteilen"
+msgstr "Verteilen von Applikationen"
 
 #: ../../distributing-applications.rst:4
 msgid ""
@@ -26,7 +27,7 @@ msgid ""
 "method is to host a repository. This is relatively simple (although "
 "there are some important details to be aware of) and allows application "
 "updates to be distributed."
-msgstr "Flatpak bietet verschiedene Wege Applikationen zu verteilen. Die beste Methode ist es, ein Repository zu hosten. Das ist relativ einfach zu handhaben (allerdings sollte man sich einiger wichtiger Details bewusst sein) und erlaubt es, Updates für Applikationen zu verteilen."
+msgstr "Flatpak bietet verschiedene Wege, Anwendungen zu verteilen. Die primäre Methode ist es, ein Repository zu hosten. Das ist relativ einfach zu handhaben (allerdings sollte man sich einiger wichtiger Details bewusst sein) und erlaubt es, Aktualisierungen für Anwendungen zu verteilen."
 
 #: ../../distributing-applications.rst:6
 msgid ""
@@ -36,7 +37,7 @@ msgstr "Es ist ebenso möglich, Flatpaks als Einzeldateipakete zu verteilen, was
 
 #: ../../distributing-applications.rst:9
 msgid "Hosting a repository"
-msgstr "Ein Repository hosten"
+msgstr "Hosten eines Repositorys"
 
 #: ../../distributing-applications.rst:11
 msgid ""
@@ -44,7 +45,7 @@ msgid ""
 "repositories using ``build-export`` or ``flatpak-builder``. The "
 "resulting OSTree repository can be hosted on a web server for "
 "consumption by users."
-msgstr "Die vorherigen Abschnitte dieser Anleitung beschreiben, wie man Repositorys generiert mittels ``build-export`` oder ``flatpak-builder``. Das resultierende OSTree-Repository kann auf einem Webserver gehosted werden, für die Verteilung an Anwender."
+msgstr "Die vorherigen Abschnitte dieser Anleitung beschreiben, wie man Repositorys generiert mittels ``build-export`` oder ``flatpak-builder``. Für die Verteilung an Anwender, kann das resultierende OSTree-Repository auf einem Webserver gehosted werden."
 
 #: ../../distributing-applications.rst:14
 msgid "Important details"
@@ -66,7 +67,7 @@ msgid ""
 "take up more space on the server, but will make downloads much faster. "
 "This can be done with the ``build-update-repo --generate-static-deltas`` "
 "option."
-msgstr "OSTree supportet etwas, das statische Deltas genannt wird. Dies sind einzelne Dateien im Repo, die alle Daten enthalten, die benötigt werden zwischen zwei Revisionen (oder von Nichts zu einer Revision). Solche Deltas zu erstellen wird mehr Platz auf dem Server beanspruchen, aber wird Downloads schneller machen. Dies kann durchgeführt werden mittels der ``build-update-repo --generate-static-deltas``-Option."
+msgstr "OSTree supportet etwas, das statische Deltas genannt wird. Dies sind einzelne Dateien im Repo, die alle Daten enthalten, die benötigt werden zwischen zwei Revisionen (oder von Nichts zu einer Revision). Solche Deltas zu erstellen wird mehr Platz auf dem Server beanspruchen, dafür aber Downloads beschleunigen. Dies kann durchgeführt werden mittels der ``build-update-repo --generate-static-deltas``-Option."
 
 #: ../../distributing-applications.rst:21
 msgid "GPG signatures"
@@ -77,7 +78,7 @@ msgid ""
 "OSTree uses GPG to verify the identity of repositories. This requires "
 "that every commit to a repository uses a GPG signature, as well as when "
 "repository summary files are modified."
-msgstr "OSTree verwendet GPG um die Identität von Repositorys zu verifizieren. Dies setzt voraus, dass jedes Commit zu einem Repository GPG-Signaturen verwendet, ebenso wenn Repository-Summarydateien modifiziert werden."
+msgstr "OSTree verwendet GPG um die Identität von Repositorys zu verifizieren. Dies setzt voraus, dass jedes Commit zu einem Repository GPG-Signaturen verwendet, ebenso wenn Summarydateien des Repositorys modifiziert werden."
 
 #: ../../distributing-applications.rst:25
 msgid ""
@@ -86,7 +87,7 @@ msgid ""
 "being used to modify or create a repository. (If you don't already have "
 "a key, `it is easy to generate one <https://help.github.com/articles/"
 "generating-a-new-gpg-key/>`_.) For example::"
-msgstr "Um dies zu tun, muss ein GPG-Schlüssel weitergereicht werden zu den ``build-update-repo``- und ``build-export``-Kommandos, ebenso wie zu Flatpak-Builder, wenn es verwendet wird, um ein Repository zu modifizieren oder zu erstellen. (Wenn noch kein Schlüssel vorhanden ist, `ist es einfach, einen zu generieren <https://help.github.com/articles/generating-a-new-gpg-key/>`_). Zum Beispiel::"
+msgstr "Um dies zu tun, muss ein GPG-Schlüssel weitergereicht werden zu den ``build-update-repo``- und ``build-export``-Kommandos. Ebenso zu ``flatpak-builder``, wenn dieses Kommando verwendet wird, um ein Repository zu modifizieren oder zu erstellen. (Wenn noch kein Schlüssel vorhanden ist, `ist es einfach, einen zu generieren <https://help.github.com/articles/generating-a-new-gpg-key/>`_). Zum Beispiel::"
 
 #: ../../distributing-applications.rst:29
 msgid ""
@@ -100,17 +101,17 @@ msgid ""
 "verification of OSTree repositories. To do this, the ``--no-gpg-verify`` "
 "option can be used when a remote is added. GPG verification can also be "
 "disabled on an existing remote using ``flatpak remote-modify``."
-msgstr "Obwohl es generell nicht empfohlen ist, ist es möglich die GPG-Verifizierung von OSTree-Repositorys zu deaktivieren. Um dies zu tun, kann die ``--no-gpg-verify``-Option verwendet werden, wenn ein Remote hinzugefügt wird. GPG-Verifizierung kann ebenso auf einem existierenden Remote mittels ``flatpak remote-modify`` deaktiviert werden."
+msgstr "Obwohl es generell nicht empfohlen ist, ist es möglich die GPG-Verifizierung von OSTree-Repositorys zu deaktivieren. Um dies zu tun, kann die ``--no-gpg-verify``-Option verwendet werden, wenn ein entferntes Repository hinzugefügt wird. GPG-Verifizierung kann ebenso auf einem existierenden Remote mittels ``flatpak remote-modify`` deaktiviert werden."
 
 #: ../../distributing-applications.rst:33
 msgid ""
 "Note that it is necessary to become root in order to update a remote "
 "that does not have GPG verification enabled."
-msgstr "Es ist zu beachten, dass es notwendig ist Root zu werden, um ein Remote zu aktualisieren, das keine GPG-Verifizierung aktiviert hat."
+msgstr "Es ist zu beachten, dass es notwendig ist Root zu werden, um ein externes Repository zu aktualisieren, das keine GPG-Verifizierung aktiviert hat."
 
 #: ../../distributing-applications.rst:36
 msgid "Referring to repositories"
-msgstr "Auf ein Repository referenzieren"
+msgstr "Referenzieren auf ein Repository"
 
 #: ../../distributing-applications.rst:38
 msgid ""
@@ -118,7 +119,7 @@ msgid ""
 "application is to provide a ``.flatpakrepo`` file that they can download "
 "and install. To install a ``.flatpakrepo`` file manually, use the "
 "command::"
-msgstr "Eine praktische Variante Benutzer auf ein Repository zu lenken, das eine Applikation enthält, ist es eine `.flatpakrepo`-Datei zur Verfügung zu stellen, die sie herunterladen und installieren können. Um die `.flatpakrepo`-Datei manuell zu installieren, verwendet man folgendes Kommando::"
+msgstr "Eine praktische Variante Benutzer auf ein Repository zu lenken, das die Applikation enthält, ist es eine `.flatpakrepo`-Datei zur Verfügung zu stellen, die heruntergeladen und installiert werden kann. Um die `.flatpakrepo`-Datei manuell zu installieren, verwendet man folgendes Kommando::"
 
 #: ../../distributing-applications.rst:42
 msgid "A typical ``.flatpakrepo`` file looks like this::"
@@ -130,7 +131,7 @@ msgid ""
 "convenient to use a .flatpakref file instead, which contains enough "
 "information to add the repository and install the application at the "
 "same time. To install a ``.flatpakref`` file manually, use the command::"
-msgstr "Wenn das Repository lediglich eine einzige Applikation enthält, ist es möglicherweise sinnvoller, eine `.flatpakref`-Datei zu verwenden, die genügend Informationen enthält, das Repository hinzuzufügen und die Applikation zur gleichen Zeit zu installieren. Um eine `.flatpakref`-Datei manuell zu installieren, verwendet man folgendes Kommando::"
+msgstr "Wenn das Repository lediglich eine einzige Applikation enthält, ist es möglicherweise sinnvoller, eine `.flatpakref`-Datei zu verwenden. Diese enthält genügend Informationen, das Repository hinzuzufügen und die Applikation zur gleichen Zeit zu installieren. Um eine `.flatpakref`-Datei manuell zu installieren, verwendet man folgendes Kommando::"
 
 #: ../../distributing-applications.rst:53
 msgid "A typical ``.flatpakref`` file looks like this::"
@@ -140,7 +141,7 @@ msgstr "Eine typische `.flatpakref`-Datei sieht so aus::"
 msgid ""
 "Note that the GPGKey key in these files contains the base64-encoded GPG "
 "key, which you can get with the following command::"
-msgstr "Beachte, dass der GPG-Schlüssel in den Dateien den base64-codierten GPG-Schlüssel enthält, welchen man mit dem folgenden Kommando erhalten kann::"
+msgstr "Beachte, dass der GPG-Schlüssel in diesen Dateien den base64-codierten GPG-Schlüssel enthält, welchen man mit dem folgenden Kommando erhalten kann::"
 
 #: ../../distributing-applications.rst:69
 msgid "Single-file bundles"
@@ -153,22 +154,22 @@ msgid ""
 "website or send as an email attachment is more convenient. Flatpak "
 "supports this with the ``build-bundle`` and ``build-import-bundle`` "
 "commands to convert an application in a repository to a bundle and back::"
-msgstr "Ein Repository zu hosten ist die bevorzugte Methode eine Applikation zu verteilen, aber manchmal ist es angebrachter ein Einzeldateipaket zur Verfügung zu stellen, über eine Website oder als Email-Anhang versendet. Flatpak unterstützt dies mit den ``build-bundle``- und ``build-import-bundle``-Kommandos, mittels derer eine Applikation in einem Repository zu einem Paket und zurück konvertiert werden kann::"
+msgstr "Ein Repository zu hosten ist die bevorzugte Methode eine Applikation zu verteilen. Allerdings ist es manchmal angebrachter ein Einzeldateipaket über eine Website oder als Email-Anhang zur Verfügung zu stellen. Flatpak unterstützt dies mit den ``build-bundle``- und ``build-import-bundle``-Kommandos, mittels derer eine Anwendung in einem Repository zu einem Paket und zurück konvertiert werden kann::"
 
 #: ../../distributing-applications.rst:76
 msgid ""
 "For example, to create a bundle named `dictionary.flatpak` containing "
 "the GNOME dictionary app from the repository at ~/repositories/apps, "
 "run::"
-msgstr "Zum Beispiel, um ein Paket namens `dictionary.flatpak` zu erstellen, dass die GNOME-Dictionary- App aus dem Repository `~/repositories/apps` enthält, startet man::"
+msgstr "Zum Beispiel, um ein Paket namens `dictionary.flatpak` zu erstellen, dass die GNOME Dictionary App aus dem Repository `~/repositories/apps` enthält, startet man::"
 
 #: ../../distributing-applications.rst:80
 msgid "To import the bundle into a repository on another machine, run::"
-msgstr "Um das Paket in ein Repository auf einer anderen Maschine zu importieren, starte::"
+msgstr "Um das Paket in ein Repository auf einer anderen Maschine zu importieren, führt man folgendes Kommando aus::"
 
 #: ../../distributing-applications.rst:84
 msgid ""
 "Note that bundles have some drawbacks, compared to repositories. For "
 "example, distributing updates is much more convenient with a hosted "
 "repository, since users can just run ``flatpak update``."
-msgstr "Beachte, das Pakete einige Nachteile mit sich bringen, verglichen mit Repositorys. Zum Beispiel ist es wesentlich einfacher Distributions-Updates zu verteilen mit einem gehosteten Repository, da Benutzer einfach ``flatpak update`` laufen lassen können."
+msgstr "Beachte, das Pakete einige Nachteile mit sich bringen, verglichen mit Repositorys. Zum Beispiel ist es wesentlich einfacher mit einem gehosteten Repository Aktualisierungen zu verteilen, da Benutzer einfach ``flatpak update`` ausführen können."

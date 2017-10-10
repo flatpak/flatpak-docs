@@ -4,10 +4,11 @@
 # Markus Richter <semanticdesign@mailbox.org>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: Flatpak \n"
+msgstr ""
+"Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-01 18:01+0200\n"
-"PO-Revision-Date: 2017-08-29 18:01+0200\n"
+"PO-Revision-Date: 2017-10-08 18:01+0200\n"
 "Last-Translator: Markus Richter <semanticdesign@mailbox.org>\n"
 "Language-Team: de_DE <>\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +19,7 @@ msgstr "Project-Id-Version: Flatpak \n"
 
 #: ../../working-with-the-sandbox.rst:2
 msgid "Working with the Sandbox"
-msgstr "Mit der Sandbox arbeiten"
+msgstr "Arbeiten mit der Sandbox"
 
 #: ../../working-with-the-sandbox.rst:4
 msgid ""
@@ -26,48 +27,48 @@ msgid ""
 "by isolating applications from one another. This is done using sandboxing "
 "and it means that, by default, a Flatpak has extremely limited access to "
 "the host environment. This includes:"
-msgstr "Eines von Flatpaks Hauptzielen ist die Sicherheit von Desktopsystemen zu verbessern durch die Isolierung der Applikationen zueinander. Dies wird erreicht durch sandboxing und bedeutet das Flatpak standardmäßig extrem limitierten Zugang zur Hostumgebung hat. Dies beinhaltet:"
+msgstr "Eines von Flatpaks Hauptzielen ist es, die Sicherheit von Desktopsystemen zu verbessern, durch die Isolierung der Anwendungen zueinander. Dies wird erreicht durch sandboxing und bedeutet das Flatpak standardmäßig extrem limitierten Zugang zur Hostumgebung hat. Dies beinhaltet:"
 
 #: ../../working-with-the-sandbox.rst:6
 msgid ""
 "No access to any host files except the runtime, the app and ``~/.var/app/"
 "$APPID``. Only the last of these is writable."
-msgstr "Kein Zugriff zu irgendwelchen Hostdateien, außer der Runtime, der App und ``~/.var/app/$APPID``. Lediglich die letztgennante ist beschreibbar."
+msgstr "Kein Zugriff zu irgendwelchen Hostdateien, außer der Runtime, der App und ``~/.var/app/$APPID``. Lediglich die letztgennante ist beschreibbar"
 
 #: ../../working-with-the-sandbox.rst:7
 msgid "No access to the network."
-msgstr "Kein Zugriff auf das Netzwerk."
+msgstr "Kein Zugriff auf das Netzwerk"
 
 #: ../../working-with-the-sandbox.rst:8
 msgid "No access to any device nodes (apart from ``/dev/null``, etc)."
-msgstr "Kein Zugriff auf Gerätedateien (abgesehen von ``/dev/null``, etc)."
+msgstr "Kein Zugriff auf Gerätedateien (abgesehen von ``/dev/null``, etc)"
 
 #: ../../working-with-the-sandbox.rst:9
 msgid "No access to processes outside the sandbox."
-msgstr "Kein Zugriff auf Prozesse außerhalb der Sandbox."
+msgstr "Kein Zugriff auf Prozesse außerhalb der Sandbox"
 
 #: ../../working-with-the-sandbox.rst:10
 msgid ""
 "Limited syscalls.  For instance, apps can't use nonstandard network socket "
 "types or ptrace other processes."
-msgstr "Limitierte Systemaufrufe. Zum Beispiel können Apps keine nichtstandardisierten Netzwerk-Sockettypen benutzen oder ein `ptrace` auf andere Prozesse ansetzen."
+msgstr "Limitierte Systemaufrufe. Zum Beispiel können Apps keine nichtstandardisierten Netzwerk-Sockettypen benutzen oder ein `ptrace` auf andere Prozesse ansetzen"
 
 #: ../../working-with-the-sandbox.rst:11
 msgid ""
 "Limited access to the session D-Bus instance - an app can only own its own "
 "name on the bus."
-msgstr "Limitierter Zugriff auf die Instanz des Session-D-Bus - eine App kann lediglich ihren eigenen Namen besitzen auf dem Bus."
+msgstr "Limitierter Zugriff auf die Instanz des Session-D-Bus – eine App kann lediglich ihren eigenen Namen besitzen auf dem Bus"
 
 #: ../../working-with-the-sandbox.rst:12
 msgid "No access to host services like X, system D-Bus, or PulseAudio."
-msgstr "Kein Zugriff auf Dienste wie X, System-D-Bus oder PulseAudio."
+msgstr "Kein Zugriff auf Hostdienste wie X, den System-D-Bus oder PulseAudio"
 
 #: ../../working-with-the-sandbox.rst:14
 msgid ""
 "Most applications will need access to some of these resources in order to "
 "be useful, and Flatpak provides a number of ways to give an application "
 "access to them."
-msgstr "Die meisten Applikationen werden Zugriff zu einigen dieser Ressourcen benötigen, um nützlich zu sein. Flatpak stellt eine Reihe von Wegen zur Verfügung, einer Applikation Zugriff darauf zu gewähren."
+msgstr "Die meisten Applikationen werden Zugriff zu einigen dieser Ressourcen benötigen, um nützlich zu sein. Flatpak stellt eine Reihe von Wegen zur Verfügung, einer Applikation Zugriff auf diese zu gewähren."
 
 #: ../../working-with-the-sandbox.rst:16
 msgid ""
@@ -80,7 +81,7 @@ msgstr "Obwohl es keine Restriktionen gibt, welche Sandboxberechtigungen eine Ap
 
 #: ../../working-with-the-sandbox.rst:19
 msgid "Configuring sandbox permissions"
-msgstr "Sandboxberechtigungen konfigurieren"
+msgstr "Konfigurieren von Sandboxberechtigungen"
 
 #: ../../working-with-the-sandbox.rst:21
 msgid ""
@@ -100,20 +101,20 @@ msgid ""
 "build-finish allows a whole range of resources to be added to an "
 "application. These options can also be passed to flatpak-builder as "
 "``finish-args`` properties."
-msgstr "``build-finish`` erlaubt es, einer Applikation eine ganze Reihe von Ressourcen hinzuzufügen. Diese Optionen können ebenso an Flatpak-Builder weitergeleitet werden wie ``finish-args``-Eigenschaften."
+msgstr "``build-finish`` erlaubt es, einer Applikation eine ganze Reihe von Ressourcen hinzuzufügen. Diese Optionen können ebenso an Flatpak Builder weitergeleitet werden als ``finish-args``-Eigenschaften."
 
 #: ../../working-with-the-sandbox.rst:39
 msgid ""
 "The table at the bottom of this page provides an overview of many sandbox "
 "permissions. The full list can also be viewed using ``flatpak build-finish "
 "--help``."
-msgstr "Die Tabelle am Ende der Seite beinhaltet eine Übersicht über viele Sandbox-Berechtigungen. Die volle Liste kann ebenso angesehen werden mittels ``flatpak build-finish --help``."
+msgstr "Die Tabelle am Ende der Seite beinhaltet eine Übersicht über viele Sandbox-Berechtigungen. Die vollständige Liste kann ebenso angesehen werden mittels ``flatpak build-finish --help``."
 
 #: ../../working-with-the-sandbox.rst:42
 msgid ""
 "Until a sandbox-compatible backend is available, access to dconf needs to "
 "be enabled using the following options::"
-msgstr "Solange bis ein Sandbox-kompatibles Backend verfügbar ist, muss der Zugriff auf dconf aktiviert werden mittels der folgenden Optionen::"
+msgstr "Solange, bis ein Sandbox-kompatibles Backend verfügbar ist, muss der Zugriff auf dconf aktiviert werden mittels der folgenden Optionen::"
 
 #: ../../working-with-the-sandbox.rst:50
 msgid "Portals"
@@ -132,7 +133,7 @@ msgid ""
 "Interface toolkits can implement transparent support for portals. If an "
 "application uses one of these toolkits, there is no additional work "
 "required to access them."
-msgstr "Interface-Toolkits können transparenten Support für Portale implementieren. Wenn eine Applikation eines dieser Toolkits nutzt, dann ist keine zusätzliche Arbeit benötigt, um Zugriff auf sie zu erlangen."
+msgstr "Interface-Toolkits können transparenten Support für Portale implementieren. Wenn eine Applikation eines dieser Toolkits nutzt, dann ist keine zusätzliche Arbeit notwendig, um Zugriff auf sie zu erhalten."
 
 #: ../../working-with-the-sandbox.rst:56
 msgid "Examples of capabilities that can be accessed through portals include:"
@@ -142,7 +143,7 @@ msgstr "Beispiele von Kapazitäten, auf die zugegriffen werden kann durch Portal
 msgid ""
 "Inhibit the user session from ending, suspending, idling or getting "
 "switched away"
-msgstr "Verhindern, dass die Benutzersitzung beendet, unterbrochen, pausiert oder gewechselt wird."
+msgstr "Verhindern, dass die Benutzersitzung beendet, unterbrochen, pausiert oder gewechselt wird"
 
 #: ../../working-with-the-sandbox.rst:59
 msgid "Network status information"
@@ -166,18 +167,18 @@ msgstr "Drucken"
 
 #: ../../working-with-the-sandbox.rst:64
 msgid "Screenshots"
-msgstr ""
+msgstr "Screenshots"
 
 #: ../../working-with-the-sandbox.rst:66
 msgid ""
 "Applications that aren't using a toolkit with support for portals can refer "
 "to the `xdg-desktop-portal API documentation <http://flatpak.org/xdg-"
 "desktop-portal/portal-docs.html>`_ for information on how to access them."
-msgstr "Applikationen, die kein Toolkit mit Support für Portale nutzen, können sich auf die `xdg-desktop-portal-API-Dokumentation <http://flatpak.org/xdg-desktop-portal/portal-docs.html>`_ beziehen, für Informationenen, wie man auf sie zugreift."
+msgstr "Applikationen, die kein Toolkit für Portale unterstützen, können sich auf die `Dokumentation der xdg-desktop-portal-API (en) <http://flatpak.org/xdg-desktop-portal/portal-docs.html>`_ beziehen, für Informationenen, wie man auf sie zugreift."
 
 #: ../../working-with-the-sandbox.rst:69
 msgid "Overriding sandbox permissions"
-msgstr "Sandbox-Berechtigungen überschreiben"
+msgstr "Überschreiben von Sandbox-Berechtigungen"
 
 #: ../../working-with-the-sandbox.rst:71
 msgid ""
@@ -186,20 +187,20 @@ msgid ""
 "to override them using ``flatpak run``, which accepts the same parameters "
 "as ``build-finish``. For example, this will let the Dictionary application "
 "see your home directory::"
-msgstr "Wenn man eine Applikation entwickelt, kann es manchmal nützlich sein Flatpaks Sandbox-Konfiguration zu überschreiben. Es gibt verschiedene Wege dies zu tun.  Einer ist es, diese zu überschreiben mittels ``flatpak run``, welches die gleichen Parameter akzeptiert wie ``build-finish``. Dies lässt z.B. die Dictionary-App dein Heimverzeichnis sehen::"
+msgstr "Beim entwickeln einer Anwendung kann es manchmal nützlich sein, Flatpaks Sandbox-Konfiguration zu überschreiben. Es gibt verschiedene Wege, dies zu tun.  Einer ist es, diese zu überschreiben mittels ``flatpak run``, welches die gleichen Parameter akzeptiert wie ``build-finish``. Dies lässt z.B. die Dictionary-App dein Heimverzeichnis sehen::"
 
 #: ../../working-with-the-sandbox.rst:75
 msgid ""
 "``flatpak override`` can also be used to permanently override an "
 "application's permissions::"
-msgstr "``flatpak override`` kann ebenso benutzt werden, permanent die Berechtigungen einer Applikation zu überschreiben::"
+msgstr "``flatpak override`` kann ebenso verwendet werden, permanent die Berechtigungen einer Applikation zu überschreiben::"
 
 #: ../../working-with-the-sandbox.rst:80
 msgid ""
 "It is also possible to remove permissions using the same method. You can "
 "use the following command to see what happens when access to the filesystem "
 "is removed, for example::"
-msgstr "Es ist ebenso möglich, Berechtigungen zu entfernen mit dieser Methode. Das folgende Kommando kann verwendet werden, um zu sehen was passiert, wenn der Zugriff auf das Dateisystem  entfernt wird:"
+msgstr "Es ist ebenso möglich, Berechtigungen zu entfernen mit dieser Methode. Das folgende Kommando kann verwendet werden, um zu sehen was passiert, wenn bspw. der Zugriff auf das Dateisystem  entfernt wird:"
 
 #: ../../working-with-the-sandbox.rst:85
 msgid "Useful sandbox permissions"
@@ -209,11 +210,11 @@ msgstr "Nützliche Sandbox-Berechtigungen"
 msgid ""
 "Flatpak provides an array of options for controlling sandbox permissions. "
 "The following are some of the most useful:"
-msgstr "Flatpak stellt eine Vielzahl von Optionen zur Verfügung, um Sandbox-Berechtigungen zu kontrollieren. Die Folgenden sind einige der Nützlichsten:"
+msgstr "Flatpak stellt eine Reihe von Optionen zur Verfügung, um Sandbox-Berechtigungen zu kontrollieren. Die Folgenden sind einige der Nützlichsten:"
 
 #: ../../working-with-the-sandbox.rst:90
 msgid "--filesystem=host"
-msgstr ""
+msgstr "--filesystem=host"
 
 #: ../../working-with-the-sandbox.rst:90
 msgid "Access all files"
@@ -221,7 +222,7 @@ msgstr "Zugriff auf alle Dateien"
 
 #: ../../working-with-the-sandbox.rst:91
 msgid "--filesystem=home"
-msgstr ""
+msgstr "--filesystem=home"
 
 #: ../../working-with-the-sandbox.rst:91
 msgid "Access the home directory"
@@ -229,7 +230,7 @@ msgstr "Zugriff auf das Heimverzeichnis"
 
 #: ../../working-with-the-sandbox.rst:92
 msgid "--filesystem=home:ro"
-msgstr ""
+msgstr "--filesystem=home:ro"
 
 #: ../../working-with-the-sandbox.rst:92
 msgid "Access the home directory, read-only"
@@ -237,7 +238,7 @@ msgstr "Zugriff auf das Heimverzeichnis, nur-Lesezugriff"
 
 #: ../../working-with-the-sandbox.rst:93
 msgid "--filesystem=/some/dir --filesystem=~/other/dir"
-msgstr ""
+msgstr "--filesystem=/some/dir --filesystem=~/other/dir"
 
 #: ../../working-with-the-sandbox.rst:93
 msgid "Access paths"
@@ -245,7 +246,7 @@ msgstr "Zugriffspfade"
 
 #: ../../working-with-the-sandbox.rst:94
 msgid "--filesystem=xdg-download"
-msgstr ""
+msgstr "--filesystem=xdg-download"
 
 #: ../../working-with-the-sandbox.rst:94
 msgid "Access the XDG download directory"
@@ -253,7 +254,7 @@ msgstr "Zugriff auf das XDG-Downloadverzeichnis"
 
 #: ../../working-with-the-sandbox.rst:95
 msgid "--nofilesystem=..."
-msgstr ""
+msgstr "--nofilesystem=..."
 
 #: ../../working-with-the-sandbox.rst:95
 msgid "Undo some of the above"
@@ -261,7 +262,7 @@ msgstr "Etwas rückgängig machen von dem genannten"
 
 #: ../../working-with-the-sandbox.rst:96
 msgid "--socket=x11 --share=ipc"
-msgstr ""
+msgstr "--socket=x11 --share=ipc"
 
 #: ../../working-with-the-sandbox.rst:96
 msgid "Show windows using X11 [#f1]_"
@@ -269,7 +270,7 @@ msgstr "Zeige Fenster unter Verwendung von X11 [#f1]_"
 
 #: ../../working-with-the-sandbox.rst:97
 msgid "--device=dri"
-msgstr ""
+msgstr "--device=dri"
 
 #: ../../working-with-the-sandbox.rst:97
 msgid "OpenGL rendering"
@@ -277,7 +278,7 @@ msgstr "OpenGL-Rendering"
 
 #: ../../working-with-the-sandbox.rst:98
 msgid "--socket=wayland"
-msgstr ""
+msgstr "--socket=wayland"
 
 #: ../../working-with-the-sandbox.rst:98
 msgid "Show windows using Wayland"
@@ -285,15 +286,15 @@ msgstr "Zeige Fenster unter Verwendung von Wayland"
 
 #: ../../working-with-the-sandbox.rst:99
 msgid "--socket=pulseaudio"
-msgstr ""
+msgstr "--socket=pulseaudio"
 
 #: ../../working-with-the-sandbox.rst:99
 msgid "Play sounds using PulseAudio"
-msgstr "Spiele Sound ab unter Verwendung von PulseAudio"
+msgstr "Spiele mittels PulseAudio Sound ab"
 
 #: ../../working-with-the-sandbox.rst:100
 msgid "--share=network"
-msgstr ""
+msgstr "--share=network"
 
 #: ../../working-with-the-sandbox.rst:100
 msgid "Access the network [#f2]_"
@@ -301,7 +302,7 @@ msgstr "Zugriff auf das Netzwerk [#f2]_"
 
 #: ../../working-with-the-sandbox.rst:101
 msgid "--talk-name=org.freedesktop.secrets"
-msgstr ""
+msgstr "--talk-name=org.freedesktop.secrets"
 
 #: ../../working-with-the-sandbox.rst:101
 msgid "Talk to a named service on the session bus"
@@ -309,7 +310,7 @@ msgstr "Kommuniziere mit einem benannten Dienst auf dem Session-Bus"
 
 #: ../../working-with-the-sandbox.rst:102
 msgid "--system-talk-name=org.freedesktop.GeoClue2"
-msgstr ""
+msgstr "--system-talk-name=org.freedesktop.GeoClue2"
 
 #: ../../working-with-the-sandbox.rst:102
 msgid "Talk to a named service on the system bus"
@@ -317,7 +318,7 @@ msgstr "Kommuniziere mit einem benannten Dienst auf dem System-Bus"
 
 #: ../../working-with-the-sandbox.rst:103
 msgid "--socket=system-bus"
-msgstr ""
+msgstr "--socket=system-bus"
 
 #: ../../working-with-the-sandbox.rst:103
 msgid "Unlimited access to all of D-Bus"
@@ -332,7 +333,7 @@ msgid ""
 "``–share=ipc`` means that the sandbox shares IPC namespace with the host. "
 "This is not necessarily required, but without it the X shared memory "
 "extension will not work, which is very bad for X performance."
-msgstr "``–share=ipc`` bedeutet dass die Sandbox IPC-Namensräume mit dem Host teilt. Dies ist nicht zwingend erforderlich, aber ohne dies wird die X-Shared-Memory-Erweiterung nicht funktionieren, was sich sehr negativ auf die X-Performance auswirkt ."
+msgstr "``–share=ipc`` bedeutet, dass die Sandbox IPC-Namensraum mit dem Host teilt. Dies ist nicht zwingend erforderlich, aber ohne dies wird die Erweiterung für Shared Memory unter X11 nicht funktionieren – was sich sehr negativ auf die X-Performance auswirkt."
 
 #: ../../working-with-the-sandbox.rst:109
 msgid ""
