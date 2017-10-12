@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-01 18:01+0200\n"
-"PO-Revision-Date: 2017-10-08 18:01+0200\n"
+"PO-Revision-Date: 2017-08-29 18:01+0200\n"
 "Last-Translator: Markus Richter <semanticdesign@mailbox.org>\n"
 "Language-Team: de_DE <>\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +29,7 @@ msgid ""
 "inside the application build directory. The ``flatpak-builder`` tool "
 "automates this multi-step build process, making it possible to build all "
 "application modules with a single command."
-msgstr "Die meisten Anwendungen benötigen zusätzliche Abhängigkeiten, die nicht von ihren Laufzeitumgebungen bereit gestellt werden. Flatpak erlaubt es, diese Abhängigkeiten als Teil der Anwendung selbst zu bündeln. Um dies durchzuführen, muss jede Abhängigkeit innerhalb des Build-Verzeichnisses der App erzeugt werden. Das ``flatpak-builder``-Tool automatisiert diesen mehrstufigen Buildprozess und ermöglicht es alle Applikationen mit einem einzigen Kommando zu erzeugen"
+msgstr "Die meisten Anwendungen benötigen zusätzliche Abhängigkeiten, die nicht von ihren Laufzeitumgebungen bereit gestellt werden. Flatpak erlaubt es, diese Abhängigkeiten als Teil der Anwendung selbst zu bündeln. Um dies durchzuführen, muss jede Abhängigkeit innerhalb des Build-Verzeichnisses der App erzeugt werden. Das ``flatpak-builder``-Tool automatisiert diesen mehrstufigen Buildprozess und ermöglicht es, alle Applikationsmodule mit einem einzigen Kommando zu erzeugen."
 
 #: ../../flatpak-builder.rst:6
 msgid ""
@@ -41,7 +41,7 @@ msgstr "Flatpak Builder erwartet, dass Module mit der Standardmethode erzeugt we
 
 #: ../../flatpak-builder.rst:8
 msgid "All json entities are explained in the man page of ``flatpak-builder``."
-msgstr "Alle Json-Entitäten sind erläutert in der man-page von ``flatpak-builder``."
+msgstr "Alle JSON-Entitäten sind erläutert in der Man-Page von ``flatpak-builder``."
 
 #: ../../flatpak-builder.rst:11
 msgid "Manifests"
@@ -67,7 +67,7 @@ msgid ""
 "As can be seen, this manifest includes basic information about the "
 "application before specifying a single .tar file to be downloaded and built. "
 "More complex manifests include a sequence of modules."
-msgstr "Wie man sehen kann, enthält dieses Manifest Basisinformationen über die Anwendung, bevor eine einzelne `.tar`-Datei spezifiziert wird, die dann heruntergeladen und erzeugt wird. Mehr komplexe Module beinhalten eine Sequenz von Modulen."
+msgstr "Wie man sehen kann, enthält dieses Manifest Basisinformationen über die Anwendung, bevor eine einzelne `.tar`-Datei spezifiziert wird, die dann heruntergeladen und erzeugt wird. Komplexere Module beinhalten eine Sequenz von Modulen."
 
 #: ../../flatpak-builder.rst:44
 msgid "Cleanup"
@@ -79,7 +79,7 @@ msgid ""
 "This can be used to remove headers and development documentation, among "
 "other things. Two properties in the manifest file are used for this. First, "
 "a list of filename patterns can be included::"
-msgstr "Nach Abschluss der Erstellung führt Flatpak Builder eine Aufräumphase durch. Diese kann genutzt werden, um Header und Entwicklerdokumentation zu entfernen, neben anderen Dingen. Zwei Eigenschaften in der Manifest-Datei werden hierfür genutzt. Zuerst kann eine Liste von Dateinamenmustern hinzugefügt werden::"
+msgstr "Nach Abschluss der Erstellung führt Flatpak Builder eine Aufräumphase durch. Diese kann genutzt werden, um Header und Entwicklerdokumentation zu entfernen, neben anderen Dingen. Zwei Eigenschaften in der Manifestdatei werden hierfür genutzt. Zuerst kann eine Liste von Dateinamenmustern hinzugefügt werden::"
 
 #: ../../flatpak-builder.rst:50
 msgid ""
@@ -91,7 +91,7 @@ msgstr "Die zweite Aufräumeigenschaft ist eine Liste von Kommandos, die währen
 msgid ""
 "Cleanup properties can be set on a per-module basis, in which case only "
 "filenames that were created by that particular module will be matched."
-msgstr "Aufräumeigenschaften können gesetzt werden auf einer pro-Modul-Basis. In diesem Fall werden lediglich Dateinamen gefunden, die von dem jeweiligen Modul erstellt wurden."
+msgstr "Aufräumeigenschaften können pro Modul gesetzt werden. In diesem Fall werden lediglich Dateinamen gefunden, die von dem jeweiligen Modul erstellt wurden."
 
 #: ../../flatpak-builder.rst:57
 msgid "File renaming"
@@ -104,7 +104,7 @@ msgid ""
 "flatpak-builder allows them to be renamed as part of the build process. To "
 "rename application icons, desktop files and AppData files, use the ``rename-"
 "icon``, ``rename-desktop-file`` and ``rename-appdata`` properties."
-msgstr "Dateien, die nach Flatpak exportiert werden, muss die Applikations-ID vorangestellt werden. Wenn die Quelldateien einer Applikation nicht benannt sind nach dieser Konvention, erlaubt es Flatpak Builder diese als Teil des Erstellungsprozesses umzubenennen. Um Applikationssymbole, Desktopdateien und AppData-Dateien umzubenennen, verwendet man die ``rename-icon``-, ``rename-desktop-file``- und ``rename-appdata``-Eigenschaften."
+msgstr "Dateien, die nach Flatpak exportiert werden, muss die Applikations-ID vorangestellt werden. Wenn die Quelldateien einer Applikation nicht benannt sind nach dieser Konvention, erlaubt es Flatpak Builder, diese als Teil des Erstellungsprozesses umzubenennen. Um Applikationssymbole, Desktopdateien und AppData-Dateien umzubenennen, verwendet man die ``rename-icon``-, ``rename-desktop-file``- und ``rename-appdata``-Eigenschaften."
 
 #: ../../flatpak-builder.rst:62
 msgid "Splitting things up"
@@ -117,14 +117,14 @@ msgid ""
 "points are then added to the application's metadata file. You can turn this "
 "off with the ``separate-locales`` and ``no-debuginfo`` keys, but there "
 "shouldn't be any reason for it."
-msgstr "In den Standardeinstellungen splittet Flatpak Builder Übersetzungen und Debug-Informationen in separate `.Locale`- und `.Debug`-Erweiterungen. Diese "Standard"-Erweiterungspunkte werden dann zur Metadatendatei der Applikation hinzugefügt. Dies kann abgeschaltet werden mittels der ``separate-locales``- und ``no-debuginfo``-Schlüssel. Regulär sollte hierzu jedoch kein Grund bestehen."
+msgstr "In den Standardeinstellungen splittet Flatpak Builder Übersetzungen und Debug-Informationen in separate `.Locale`- und `.Debug`-Erweiterungen. Diese „Standard"-Erweiterungspunkte werden dann zur Metadatendatei der Applikation hinzugefügt. Dies kann abgeschaltet werden mittels der ``separate-locales``- und ``no-debuginfo``-Schlüssel. Regulär sollte hierzu jedoch kein Grund bestehen."
 
 #: ../../flatpak-builder.rst:66
 msgid ""
 "When flatpak-builder exports the build into a repository, it automatically "
 "includes the .Locale and .Debug extensions. If you do the exporting "
 "manually, don't forget to include them."
-msgstr "Wenn Flatpak Builder den Build in ein Repository exportiert, fügt es automatisch  die `.Locale`- und `.Debug`-Erweiterungen hinzu. Wenn der Export manuell vorgenommen wird, darf nicht vergessen werden, diese beizufügen."
+msgstr "Wenn Flatpak Builder den Build in ein Repository exportiert, fügt es automatisch  die `.Locale`- und `.Debug`-Extensions hinzu. Wenn der Export manuell vorgenommen wird, darf nicht vergessen werden, diese beizufügen."
 
 #: ../../flatpak-builder.rst:69
 msgid "Example"
@@ -145,28 +145,28 @@ msgstr "Dies wird:"
 msgid ""
 "Create a new directory called dictionary2 (equivalent to using `flatpak "
 "build-init`)"
-msgstr "Ein neues Verzeichnis erzeugen namens `dictionary2` (equivalent zum verwenden von ``flatpak build-init``)"
+msgstr "Ein neues Verzeichnis erzeugen namens `dictionary2` (equivalent zum Verwenden von ``flatpak build-init``)."
 
 #: ../../flatpak-builder.rst:78
 msgid "Download and verify the Dictionary source code"
-msgstr "Den Quellcode des GNOME Dictionary herunterladen und verifizieren"
+msgstr "Den Quellcode des GNOME Dictionary herunterladen und verifizieren."
 
 #: ../../flatpak-builder.rst:79
 msgid ""
 "Build and install the source code, using the SDK rather than the host system"
-msgstr "Den Quellcode kompilieren und installieren unter Verwendung des SDK, anstelle des Hostsystems"
+msgstr "Den Quellcode kompilieren und installieren unter Verwendung des SDK, anstelle des Host-Systems."
 
 #: ../../flatpak-builder.rst:80
 msgid ""
 "Finish the build, by setting permissions (in this case giving access to X "
 "and the network)"
-msgstr "Beendet den Build mit dem Setzen von Berechtigungen (in diesem Fall Zugriff auf X und das Netzwerk geben)"
+msgstr "Den Build beenden mit dem Setzen von Berechtigungen (in diesem Fall wird Zugriff auf X und das Netzwerk gewährt)."
 
 #: ../../flatpak-builder.rst:81
 msgid ""
 "Create a new repository called repo (if it doesn't exist) and export the "
 "resulting build into it"
-msgstr "Erstellt ein neues Repository names `repo` (wenn es nicht bereits existiert) und exportiert den erstellten Build in dieses hinein"
+msgstr "Ein neues Repository erzeugen names `repo` (wenn es nicht bereits existiert) und den erstellten Build in dieses hinein exportieren."
 
 #: ../../flatpak-builder.rst:83
 msgid ""
@@ -181,7 +181,7 @@ msgid ""
 "If you completed the tutorial in `Building Simple Apps <building-simple-apps."
 "html>`_, you can update the Dictionary application you installed with the "
 "new version that was built and exported by flatpak-builder::"
-msgstr "Wenn das Tutorial in `Einfache Apps bauen <building-simple-apps.html>`_ vervollständigt wurde, kann die installierte Dictionary-App mit der neuen Version, die von Flatpak Builder erzeugt und exportiert wurde, aktualisiert werden::"
+msgstr "Wenn das Tutorial in `Erstellen einfacher Apps <building-simple-apps.html>`_ vervollständigt wurde, kann die installierte Dictionary-App mit der neuen Version, die von Flatpak Builder erzeugt und exportiert wurde, aktualisiert werden::"
 
 #: ../../flatpak-builder.rst:89
 msgid ""

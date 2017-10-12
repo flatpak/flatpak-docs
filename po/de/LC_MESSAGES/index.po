@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-01 18:01+0200\n"
-"PO-Revision-Date: 2017-10-08 18:01+0200\n"
+"PO-Revision-Date: 2017-08-29 18:01+0200\n"
 "Last-Translator: Markus Richter <semanticdesign@mailbox.org>\n"
 "Language-Team: de_DE <>\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../index.rst:2
 msgid "Welcome to Flatpak's documentation!"
-msgstr "Willkomen zur Flatpak-Dokumentation"
+msgstr "Willkommen zur Flatpak-Dokumentation"
 
 #: ../../index.rst:4
 msgid ""
@@ -27,7 +27,7 @@ msgid ""
 "applications as Flatpaks. They contain a high-level introduction to "
 "Flatpak, tutorials and essential information on how to develop, build and"
 " distribute applications."
-msgstr "Diese Dokumente decken alles ab, was Sie wissen müssen, um Applikationen als Flatpak zu bauen und zu verteilen. Sie enthalten eine tiefgehende Einführung zu Flatpak, Tutorials und essentielle Informationen, wie man Applikationen entwickelt, erzeugt und verteilt."
+msgstr "Diese Dokumente decken alles ab, was Sie wissen müssen, um Anwendungen als Flatpak zu erstellen und zu verteilen. Sie enthalten eine tiefgehende Einführung zu Flatpak, Tutorials und essentielle Informationen, wie man Applikationen entwickelt, erzeugt und verteilt."
 
 #: ../../index.rst:6
 msgid ""
@@ -41,7 +41,7 @@ msgid ""
 "If you are looking for information about how to install and use Flatpak "
 "applications, please refer to `the Flatpak website "
 "<http://flatpak.org>`_."
-msgstr "Wenn Sie nach Informationen suchen, wie man Flatpak installiert und verwendet, finden Sie diese auf der `Flatpak Webseite <http://flatpak.org>`_."
+msgstr "Wenn Sie nach Informationen suchen, wie man Flatpak installiert und verwendet, finden Sie diese auf der `Flatpak Website <http://flatpak.org>`_."
 
 #: ../../index.rst:11
 msgid "Contents"

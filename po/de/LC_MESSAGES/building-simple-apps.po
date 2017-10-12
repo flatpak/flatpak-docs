@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-01 18:01+0200\n"
-"PO-Revision-Date: 2017-10-08 18:01+0200\n"
+"PO-Revision-Date: 2017-08-29 18:01+0200\n"
 "Last-Translator: Markus Richter <semanticdesign@mailbox.org>\n"
 "Language-Team: de_DE <>\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../building-simple-apps.rst:2
 msgid "Building Simple Apps"
-msgstr "Einfache Apps bauen"
+msgstr "Erstellen einfacher Apps"
 
 #: ../../building-simple-apps.rst:4
 msgid ""
@@ -38,7 +38,7 @@ msgstr "Dieser Abschnitt beschreibt, wie man eine einfache Anwendung erstellt, d
 
 #: ../../building-simple-apps.rst:9
 msgid "Creating an app"
-msgstr "Erstellen einer App"
+msgstr "Vorbereitende Maßnahmen"
 
 #: ../../building-simple-apps.rst:11
 msgid ""
@@ -52,7 +52,7 @@ msgstr "Der erste Schritt, um eine Applikation zu erstellen, ist die Verwendung 
 msgid ""
 "DIRECTORY is the name of the directory that will be created to contain the "
 "application"
-msgstr "DIRECTORY ist der Name des Verzeichnises, das erstellt wird, um die Applikation zu beinhalten"
+msgstr "DIRECTORY ist der Name des Verzeichnisses, das erstellt wird, um die Applikation zu beinhalten"
 
 #: ../../building-simple-apps.rst:16
 msgid "APPNAME is the D-Bus name of the application"
@@ -82,22 +82,22 @@ msgstr "Zum Beispiel würde das Kommando, um unter Verwendung des GNOME 3.22 SDK
 msgid ""
 "You can try this command now. In the next step we will build an application "
 "inside the resulting dictionary directory."
-msgstr "Dieser Befehl kann jetzt einmal ausgeführt werden. Im nächsten Schritt wird dann eine Applikation im erstellten Verzeichnis erzeugt."
+msgstr "Dieser Befehl kann jetzt einmal ausgeführt werden. Im nächsten Schritt wird dann eine Anwendung im erstellten Verzeichnis erzeugt."
 
 #: ../../building-simple-apps.rst:28
 msgid "Building"
-msgstr "Erstellung"
+msgstr "Erstellen der App"
 
 #: ../../building-simple-apps.rst:30
 msgid ""
 "``flatpak build`` is used to build an application using an SDK. This command "
 "is used to provide access to a sandbox. For example, the following will "
 "create a file inside the appdir sandbox (in the files directory)::"
-msgstr "``flatpak build`` wird verwendet, um eine Applikation, unter Verwendung eines SDK, zu erzeugen. Dieses Kommando wird verwendet, um Zugriff auf einer Sandbox zu erhalten. Zum Beispiel würde das Folgende, innerhalb der `appdir`-Sandbox, eine Datei (im Dateiverzeichnis) erstellen::"
+msgstr "``flatpak build`` wird verwendet, um eine Applikation, unter Verwendung eines SDK, zu erzeugen. Dieses Kommando wird verwendet, um Zugriff auf eine Sandbox zu erhalten. Zum Beispiel würde das Folgende eine Datei innerhalb der `appdir`-Sandbox im Dateiverzeichnis erstellen::"
 
 #: ../../building-simple-apps.rst:34
 msgid "(It is best to remove this file before continuing.)"
-msgstr "(Es ist am Besten, diese Datei zu entfernen, bevor wir fortfahren.)"
+msgstr "(Es ist empfehlenswert, diese Datei zu entfernen, bevor weitere Schritte durchgeführt werden.)"
 
 #: ../../building-simple-apps.rst:36
 msgid ""
@@ -111,17 +111,17 @@ msgstr "Das ``build``-Kommdando erlaubt existierenden Applikationen, die mittels
 msgid ""
 "Then you can use the build command to build and install the source inside "
 "the dictionary directory that was previously made::"
-msgstr "Dann kann das ``build``-Kommando verwendet werden, um den Quellcode zu kompilieren und innerhalb des Dictionary-Verzeichnisses, das vorher generiert wurde, zu installieren::"
+msgstr "Dann kann das ``build``-Kommando verwendet werden, um den Quellcode zu kompilieren und innerhalb des Dictionary-Verzeichnisses, das zuvor generiert wurde, zu installieren::"
 
 #: ../../building-simple-apps.rst:49
 msgid ""
 "Since these are run in a sandbox, the compiler and other tools from the SDK "
 "are used to build and install, rather than those on the host system."
-msgstr "Da dies in einer Sandbox abläuft, werden der Compiler und andere Tools des SDK für die Erstellung und Installation verwendet – und nicht die des Hostsystems::"
+msgstr "Da dies in einer Sandbox abläuft, werden der Compiler und andere Tools des SDK für die Erstellung und Installation verwendet – und nicht die des Host-Systems::"
 
 #: ../../building-simple-apps.rst:52
 msgid "Completing the build"
-msgstr "Abschluss der Erstellung"
+msgstr "Abschließende Maßnahmen"
 
 #: ../../building-simple-apps.rst:54
 msgid ""
@@ -130,14 +130,14 @@ msgid ""
 "and graphics sockets. This command is also used to specify the command that "
 "is used to run the app (done by modifying the metadata file), and to create "
 "the application's exports directory. For example::"
-msgstr "Sobald eine Applikation erzeugt wurde, muss das ``build-finish``-Kommando verwendet werden, um Zugriff auf verschiedene Teile des Hostsystems zu spezifizieren, sowie Netzwerk und Grafik-Sockets. Dieser Befehl wird auch verwendet, um das Kommando zu spezifizieren, das verwendet wird, um die App auszuführen (hierfür wird die Metadatendatei modifiziert) und um das Exportverzeichnis der Anwendung zu generieren. Zum Beispiel::"
+msgstr "Sobald eine Applikation erzeugt wurde, muss das ``build-finish``-Kommando verwendet werden, um Zugriff auf verschiedene Teile des Host-Systems zu spezifizieren, sowie das Netzwerk und Grafik-Sockets. Dieser Befehl wird auch verwendet, um das Kommando zu spezifizieren, das verwendet wird, um die App auszuführen (hierfür wird die Metadatendatei modifiziert) und um das Exportverzeichnis der Anwendung zu generieren. Zum Beispiel::"
 
 #: ../../building-simple-apps.rst:58
 msgid ""
 "At this point you have successfully built a flatpak and prepared it to be "
 "run. To test the app, you need to export the Dictionary to a repository, add "
 "that repository and then install and run the app::"
-msgstr "An diesem Punkt wurde erfolgreich ein Flatpak erzeugt und lauffähig gemacht. Um die App zu testen, muss das GNOME Dictionary zu einem Repository exportiert werden Dieses Repository wird dann hinzugefügt, danach kann die App installiert und ausgeführt werden::"
+msgstr "An diesem Punkt wurde erfolgreich ein Flatpak erzeugt und lauffähig gemacht. Um die App zu testen, muss das GNOME Dictionary zu einem Repository exportiert werden. Dieses Repository wird dann hinzugefügt, danach kann die App installiert und ausgeführt werden::"
 
 #: ../../building-simple-apps.rst:65
 msgid ""

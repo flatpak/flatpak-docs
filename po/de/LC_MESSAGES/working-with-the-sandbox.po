@@ -5,10 +5,11 @@
 #
 msgid ""
 msgstr ""
+
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-01 18:01+0200\n"
-"PO-Revision-Date: 2017-10-08 18:01+0200\n"
+"PO-Revision-Date: 2017-08-29 18:01+0200\n"
 "Last-Translator: Markus Richter <semanticdesign@mailbox.org>\n"
 "Language-Team: de_DE <>\n"
 "MIME-Version: 1.0\n"
@@ -27,48 +28,48 @@ msgid ""
 "by isolating applications from one another. This is done using sandboxing "
 "and it means that, by default, a Flatpak has extremely limited access to "
 "the host environment. This includes:"
-msgstr "Eines von Flatpaks Hauptzielen ist es, die Sicherheit von Desktopsystemen zu verbessern, durch die Isolierung der Anwendungen zueinander. Dies wird erreicht durch sandboxing und bedeutet das Flatpak standardmäßig extrem limitierten Zugang zur Hostumgebung hat. Dies beinhaltet:"
+msgstr "Eines von Flatpaks Hauptzielen ist es, die Sicherheit von Desktop-Systemen zu verbessern, durch die Isolierung der Anwendungen zueinander. Dies wird erreicht durch sandboxing und bedeutet das Flatpak standardmäßig extrem limitierten Zugang zur Hostumgebung hat. Dies beinhaltet:"
 
 #: ../../working-with-the-sandbox.rst:6
 msgid ""
 "No access to any host files except the runtime, the app and ``~/.var/app/"
 "$APPID``. Only the last of these is writable."
-msgstr "Kein Zugriff zu irgendwelchen Hostdateien, außer der Runtime, der App und ``~/.var/app/$APPID``. Lediglich die letztgennante ist beschreibbar"
+msgstr "Kein Zugriff zu irgendwelchen Hostdateien, außer der Runtime, der App und ``~/.var/app/$APPID``. Lediglich die Letztgennante ist beschreibbar."
 
 #: ../../working-with-the-sandbox.rst:7
 msgid "No access to the network."
-msgstr "Kein Zugriff auf das Netzwerk"
+msgstr "Kein Zugriff auf das Netzwerk."
 
 #: ../../working-with-the-sandbox.rst:8
 msgid "No access to any device nodes (apart from ``/dev/null``, etc)."
-msgstr "Kein Zugriff auf Gerätedateien (abgesehen von ``/dev/null``, etc)"
+msgstr "Kein Zugriff auf Gerätedateien (abgesehen von ``/dev/null``, etc)."
 
 #: ../../working-with-the-sandbox.rst:9
 msgid "No access to processes outside the sandbox."
-msgstr "Kein Zugriff auf Prozesse außerhalb der Sandbox"
+msgstr "Kein Zugriff auf Prozesse außerhalb der Sandbox."
 
 #: ../../working-with-the-sandbox.rst:10
 msgid ""
 "Limited syscalls.  For instance, apps can't use nonstandard network socket "
 "types or ptrace other processes."
-msgstr "Limitierte Systemaufrufe. Zum Beispiel können Apps keine nichtstandardisierten Netzwerk-Sockettypen benutzen oder ein `ptrace` auf andere Prozesse ansetzen"
+msgstr "Limitierte Systemaufrufe. Zum Beispiel können Apps keine nicht standardisierten Netzwerk-Sockettypen benutzen oder ein `ptrace` auf andere Prozesse ansetzen."
 
 #: ../../working-with-the-sandbox.rst:11
 msgid ""
 "Limited access to the session D-Bus instance - an app can only own its own "
 "name on the bus."
-msgstr "Limitierter Zugriff auf die Instanz des Session-D-Bus – eine App kann lediglich ihren eigenen Namen besitzen auf dem Bus"
+msgstr "Limitierter Zugriff auf die Instanz des Session-D-Bus – eine App kann lediglich ihren eigenen Namen besitzen auf dem Bus."
 
 #: ../../working-with-the-sandbox.rst:12
 msgid "No access to host services like X, system D-Bus, or PulseAudio."
-msgstr "Kein Zugriff auf Hostdienste wie X, den System-D-Bus oder PulseAudio"
+msgstr "Kein Zugriff auf Hostdienste wie X, den System-D-Bus oder PulseAudio."
 
 #: ../../working-with-the-sandbox.rst:14
 msgid ""
 "Most applications will need access to some of these resources in order to "
 "be useful, and Flatpak provides a number of ways to give an application "
 "access to them."
-msgstr "Die meisten Applikationen werden Zugriff zu einigen dieser Ressourcen benötigen, um nützlich zu sein. Flatpak stellt eine Reihe von Wegen zur Verfügung, einer Applikation Zugriff auf diese zu gewähren."
+msgstr "Die meisten Anwendungen werden Zugriff zu einigen dieser Ressourcen benötigen, um nützlich zu sein. Flatpak stellt eine Reihe von Wegen zur Verfügung, einer Applikation Zugriff auf diese zu gewähren."
 
 #: ../../working-with-the-sandbox.rst:16
 msgid ""
@@ -88,7 +89,7 @@ msgid ""
 "Using the ``build-finish`` command is the simplest way to configure sandbox "
 "permissions. As was seen in a previous example, this can be used to add "
 "access to graphics sockets and the network::"
-msgstr "Die Verwendung des ``build-finish``-Kommandos ist der einfachste Weg, die Sandboxberechtigungen zu konfigurieren. Wie wir in einem vorherigen Beispiel gesehen haben, kann dies genutzt werden, Zugriff auf Grafik-Sockets und das Netzwerk zu geben."
+msgstr "Die Verwendung des ``build-finish``-Kommandos ist der einfachste Weg, die Sandboxberechtigungen zu konfigurieren. Wie in einem vorherigen Beispiel zu sehen war, kann dies genutzt werden, Zugriff auf Grafik-Sockets und das Netzwerk zu geben."
 
 #: ../../working-with-the-sandbox.rst:25
 msgid ""
@@ -126,7 +127,7 @@ msgid ""
 "host environment from within a sandbox. In this way, they give additional "
 "abilities to interact with data, files and services without the need to add "
 "sandbox permissions."
-msgstr "Portale sind ein Mechanismus durch den Applikationen mit der Hostumgebung aus der Sandbox heraus interagieren können. Über diesen Weg geben sie zusätzliche Möglichkeiten frei mit Daten, Dateien und Diensten zu interagieren, ohne die Notwendigkeit Sandbox-Berechtigungen hinzuzufügen."
+msgstr "Portale sind ein Mechanismus durch den Applikationen aus der Sandbox heraus mit der Hostumgebung interagieren können. Über diesen Weg geben sie zusätzliche Möglichkeiten frei mit Daten, Dateien und Diensten zu interagieren, ohne die Notwendigkeit Sandbox-Berechtigungen hinzuzufügen."
 
 #: ../../working-with-the-sandbox.rst:54
 msgid ""
@@ -174,7 +175,7 @@ msgid ""
 "Applications that aren't using a toolkit with support for portals can refer "
 "to the `xdg-desktop-portal API documentation <http://flatpak.org/xdg-"
 "desktop-portal/portal-docs.html>`_ for information on how to access them."
-msgstr "Applikationen, die kein Toolkit für Portale unterstützen, können sich auf die `Dokumentation der xdg-desktop-portal-API (en) <http://flatpak.org/xdg-desktop-portal/portal-docs.html>`_ beziehen, für Informationenen, wie man auf sie zugreift."
+msgstr "Applikationen, die kein Toolkit für Portale unterstützen, können sich auf die `Dokumentation der xdg-desktop-portal-API (en) <http://flatpak.org/xdg-desktop-portal/portal-docs.html>`_ beziehen, für Informationen, wie man auf sie zugreift."
 
 #: ../../working-with-the-sandbox.rst:69
 msgid "Overriding sandbox permissions"
@@ -187,7 +188,7 @@ msgid ""
 "to override them using ``flatpak run``, which accepts the same parameters "
 "as ``build-finish``. For example, this will let the Dictionary application "
 "see your home directory::"
-msgstr "Beim entwickeln einer Anwendung kann es manchmal nützlich sein, Flatpaks Sandbox-Konfiguration zu überschreiben. Es gibt verschiedene Wege, dies zu tun.  Einer ist es, diese zu überschreiben mittels ``flatpak run``, welches die gleichen Parameter akzeptiert wie ``build-finish``. Dies lässt z.B. die Dictionary-App dein Heimverzeichnis sehen::"
+msgstr "Beim Entwickeln einer Anwendung kann es manchmal nützlich sein, Flatpaks Sandbox-Konfiguration zu überschreiben. Es gibt verschiedene Wege, dies zu tun. Einer ist es, diese zu überschreiben mittels ``flatpak run``, welches die gleichen Parameter akzeptiert wie ``build-finish``. Dies lässt z. B. die Dictionary-App das Heimverzeichnis sehen::"
 
 #: ../../working-with-the-sandbox.rst:75
 msgid ""
@@ -200,7 +201,7 @@ msgid ""
 "It is also possible to remove permissions using the same method. You can "
 "use the following command to see what happens when access to the filesystem "
 "is removed, for example::"
-msgstr "Es ist ebenso möglich, Berechtigungen zu entfernen mit dieser Methode. Das folgende Kommando kann verwendet werden, um zu sehen was passiert, wenn bspw. der Zugriff auf das Dateisystem  entfernt wird:"
+msgstr "Es ist ebenso möglich, Berechtigungen zu entfernen mit dieser Methode. Das folgende Kommando kann verwendet werden, um zu sehen was passiert, wenn bspw. der Zugriff auf das Dateisystem entfernt wird:"
 
 #: ../../working-with-the-sandbox.rst:85
 msgid "Useful sandbox permissions"
@@ -258,7 +259,7 @@ msgstr "--nofilesystem=..."
 
 #: ../../working-with-the-sandbox.rst:95
 msgid "Undo some of the above"
-msgstr "Etwas rückgängig machen von dem genannten"
+msgstr "Etwas rückgängig machen von dem Genannten"
 
 #: ../../working-with-the-sandbox.rst:96
 msgid "--socket=x11 --share=ipc"
@@ -290,7 +291,7 @@ msgstr "--socket=pulseaudio"
 
 #: ../../working-with-the-sandbox.rst:99
 msgid "Play sounds using PulseAudio"
-msgstr "Spiele mittels PulseAudio Sound ab"
+msgstr "Spiele Sound mittels PulseAudio ab"
 
 #: ../../working-with-the-sandbox.rst:100
 msgid "--share=network"
@@ -333,7 +334,7 @@ msgid ""
 "``–share=ipc`` means that the sandbox shares IPC namespace with the host. "
 "This is not necessarily required, but without it the X shared memory "
 "extension will not work, which is very bad for X performance."
-msgstr "``–share=ipc`` bedeutet, dass die Sandbox IPC-Namensraum mit dem Host teilt. Dies ist nicht zwingend erforderlich, aber ohne dies wird die Erweiterung für Shared Memory unter X11 nicht funktionieren – was sich sehr negativ auf die X-Performance auswirkt."
+msgstr "``–share=ipc`` bedeutet, dass die Sandbox den IPC-Namensraum mit dem Host teilt. Dies ist nicht zwingend erforderlich, aber ohne dies wird die Erweiterung für Shared Memory unter X11 nicht funktionieren – was sich sehr negativ auf die X-Performance auswirkt."
 
 #: ../../working-with-the-sandbox.rst:109
 msgid ""
@@ -342,4 +343,4 @@ msgid ""
 "no permission checks. This unfortunately affects e.g. the X server and the "
 "session bus which listens to abstract sockets by default. A secure "
 "distribution should disable these and just use regular sockets."
-msgstr "Die Erteilung des Netzwerkzugriffs gibt zudem Zugriff auf alle Hostdienste frei, die auf abstrakten Unix-Sockets lauschen (aufgrund der Art wie Netzwerk-Namensräume arbeiten), und diese arbeiten nicht mit Berechtigungsprüfungen. Dies betrifft unglücklicherweise z.B. den X-Server und den Session-Bus, der regulär auf akstrakten Sockets lauscht. Eine sichere Distribution sollte diese deaktivieren und lediglich reguläre Sockets verwenden."
+msgstr "Die Erteilung des Netzwerkzugriffs gibt zudem Zugriff auf alle Hostdienste frei, die auf abstrakten Unix-Sockets lauschen (aufgrund der Art wie Netzwerk-Namensräume arbeiten), und diese arbeiten nicht mit Berechtigungsprüfungen. Dies betrifft unglücklicherweise z. B. den X-Server und den Session-Bus, der regulär auf abstrakten Sockets lauscht. Eine sichere Distribution sollte diese deaktivieren und lediglich reguläre Sockets verwenden."
