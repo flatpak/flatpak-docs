@@ -8,13 +8,12 @@ msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-01 18:01+0200\n"
-"PO-Revision-Date: 2017-08-29 18:01+0200\n"
+"PO-Revision-Date: 2017-10-13 18:01+0200\n"
 "Last-Translator: Markus Richter <semanticdesign@mailbox.org>\n"
 "Language-Team: de_DE <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: OmegaT 4.12\n"
 "Language: de_DE\n"
 
 #: ../../getting-setup.rst:2
@@ -45,7 +44,7 @@ msgid ""
 "Typically, an SDK is paired with a runtime that will be used by the "
 "application at runtime. For example the GNOME 3.22 SDK is used to build "
 "applications that use the GNOME 3.22 runtime."
-msgstr "Ein SDK ist eine spezielle Form einer Laufzeitumgebung, die verwendet wird, um Applikationen zu erstellen. Normalerweise ist ein SDK mit einer Runtime gekoppelt, die von der Applikation zur Laufzeit verwendet wird. Zum Beispiel wird das GNOME 3.22 SDK verwendet um Applikationen zu bauen, die die GNOME 3.22 Runtime verwenden."
+msgstr "Ein SDK ist eine spezielle Form einer Laufzeitumgebung, die verwendet wird, um Applikationen zu erstellen. Normalerweise ist ein SDK mit einer Runtime gekoppelt, die von der Applikation zur Laufzeit verwendet wird. Zum Beispiel wird das GNOME 3.22 SDK verwendet, um Applikationen zu bauen, die die GNOME 3.22 Runtime verwenden."
 
 #: ../../getting-setup.rst:13
 msgid ""
@@ -80,7 +79,7 @@ msgid ""
 "installing an application and having a look 'under the hood'. To do this, "
 "you need to add a repository that contains applications. We can do this "
 "using the gnome-apps repository to install gedit::"
-msgstr "Wenn dies das erste Mal ist, dass Flatpak verwendet wird, ist es eine gute Idee, den Versuch zu unternehmen, eine Anwendung zu installieren und einen Blick "unter die Haube" zu wagen. Um dies zu tun, muss ein Repository installiert werden, das Applikationen enthält. In diesem Fall wird das ``gnome-apps``-Repository verwendet, um Gedit zu installieren::"
+msgstr "Wenn dies das erste Mal ist, dass Flatpak verwendet wird, ist es eine gute Idee, den Versuch zu unternehmen, eine Anwendung zu installieren und einen Blick »unter die Haube« zu wagen. Um dies zu tun, muss ein Repository installiert werden, das Applikationen enthält. In diesem Fall wird das ``gnome-apps``-Repository verwendet, um Gedit zu installieren::"
 
 #: ../../getting-setup.rst:33
 msgid ""

@@ -8,13 +8,12 @@ msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-01 18:01+0200\n"
-"PO-Revision-Date: 2017-08-29 18:01+0200\n"
+"PO-Revision-Date: 2017-10-13 18:01+0200\n"
 "Last-Translator: Markus Richter <semanticdesign@mailbox.org>\n"
 "Language-Team: de_DE <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: OmegaT 4.12\n"
 "Language: de_DE\n"
 
 #: ../../building-simple-apps.rst:2
@@ -130,7 +129,7 @@ msgid ""
 "and graphics sockets. This command is also used to specify the command that "
 "is used to run the app (done by modifying the metadata file), and to create "
 "the application's exports directory. For example::"
-msgstr "Sobald eine Applikation erzeugt wurde, muss das ``build-finish``-Kommando verwendet werden, um Zugriff auf verschiedene Teile des Host-Systems zu spezifizieren, sowie das Netzwerk und Grafik-Sockets. Dieser Befehl wird auch verwendet, um das Kommando zu spezifizieren, das verwendet wird, um die App auszuführen (hierfür wird die Metadatendatei modifiziert) und um das Exportverzeichnis der Anwendung zu generieren. Zum Beispiel::"
+msgstr "Sobald eine Applikation erzeugt wurde, muss das ``build-finish``-Kommando verwendet werden, um Zugriff auf verschiedene Teile des Host-Systems zu spezifizieren, sowie Netzwerk und Grafik-Sockets. Dieser Befehl wird auch verwendet, um das Kommando zu spezifizieren, das verwendet wird, um die App auszuführen (hierfür wird die Metadatendatei modifiziert) und um das Exportverzeichnis der Anwendung zu generieren. Zum Beispiel::"
 
 #: ../../building-simple-apps.rst:58
 msgid ""

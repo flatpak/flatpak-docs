@@ -8,13 +8,12 @@ msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-01 18:01+0200\n"
-"PO-Revision-Date: 2017-08-29 18:01+0200\n"
+"PO-Revision-Date: 2017-10-13 18:01+0200\n"
 "Last-Translator: Markus Richter <semanticdesign@mailbox.org>\n"
 "Language-Team: de_DE <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: OmegaT 4.12\n"
 "Language: de_DE\n"
 
 #: ../../elements-of-a-flatpak-app.rst:2
@@ -56,7 +55,7 @@ msgstr "Anwendungssymbole, wie spezifiziert in der `Freedesktop icon theme speci
 msgid ""
 "`D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_, for interaction "
 "with the host"
-msgstr "`D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_ zur Interaktion mit dem Host-System"
+msgstr "`D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_, zur Interaktion mit dem Host-System"
 
 #: ../../elements-of-a-flatpak-app.rst:14
 msgid ""
@@ -140,7 +139,7 @@ msgid ""
 "To name exported files in this way, either rename the relevant source files "
 "or use flatpak-builder to rename the files at build time (this is explained "
 "in more detail in `the section on flatpak-builder <flatpak-builder.html>`_)."
-msgstr "Um exportierte Dateien in dieser Form zu benennen, müssen die relevanten Quelldateien umbenannt werden oder Flatpak Builder verwendet werden, um die Dateien während des Erstellungsprozesses umzubenennen (dies wird detaillierter beschrieben in dem `Kapitel über Flatpak Builder <flatpak-builder.html>`_)."
+msgstr "Um exportierte Dateien in dieser Form zu benennen, müssen die relevanten Quelldateien umbenannt oder Flatpak Builder verwendet werden, um die Dateien während des Erstellungsprozesses umzubenennen (dies wird detaillierter beschrieben in dem `Kapitel über Flatpak Builder <flatpak-builder.html>`_)."
 
 #: ../../elements-of-a-flatpak-app.rst:40
 msgid "Metadata files"
@@ -161,10 +160,10 @@ msgid ""
 "application's sandbox, of course), and how it connects to the session bus. "
 "Details on how to change these metadata parameters are included in "
 "subsequent sections."
-msgstr "Dies spezifiziert den Namen der Anwendung, die benötigte Runtime, das SDK, gegen die sie erzeugt wurde und das Kommando, mit dem man sie ausführt. Es spezifiziert zudem Datei- und Gerätezugriff, setzt verschiedene Umgebungsvariablen (natürlich innerhalb der Anwendungssandbox) und gibt an, wie sie sich mit dem Sessionbus konnektiert. Details, wie man diese Metadatenparameter ändert, sind in nachfolgenden Abschnitten vorhanden."
+msgstr "Dies spezifiziert den Namen der Anwendung, die benötigte Runtime, das SDK, gegen die sie erzeugt wurde und das Kommando, mit dem man sie ausführt. Es spezifiziert zudem Datei- und Gerätezugriff, setzt verschiedene Umgebungsvariablen (natürlich innerhalb der Anwendungssandbox) und gibt an, wie sie sich mit dem Session-Bus konnektiert. Details, wie man diese Metadatenparameter ändert, sind in nachfolgenden Abschnitten vorhanden."
 
 #: ../../elements-of-a-flatpak-app.rst:66
 msgid ""
 "While it is most common to encounter metadata files for applications, "
 "runtimes and extensions also have them."
-msgstr "Während es gängig ist Metadatendateien für Applikationen vorzufinden, sind diese zudem auch für die Laufzeitumgebungen und Erweiterungen vorhanden."
+msgstr "Während es gängig ist, Metadatendateien für Applikationen vorzufinden, sind diese zudem auch für die Laufzeitumgebungen und Erweiterungen vorhanden."

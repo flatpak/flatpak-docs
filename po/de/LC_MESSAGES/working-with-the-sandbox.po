@@ -5,17 +5,15 @@
 #
 msgid ""
 msgstr ""
-
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-01 18:01+0200\n"
-"PO-Revision-Date: 2017-08-29 18:01+0200\n"
+"PO-Revision-Date: 2017-10-13 18:01+0200\n"
 "Last-Translator: Markus Richter <semanticdesign@mailbox.org>\n"
 "Language-Team: de_DE <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: OmegaT 4.12\n"
 "Language: de_DE\n"
 
 #: ../../working-with-the-sandbox.rst:2
@@ -23,12 +21,8 @@ msgid "Working with the Sandbox"
 msgstr "Arbeiten mit der Sandbox"
 
 #: ../../working-with-the-sandbox.rst:4
-msgid ""
-"One of Flatpaks main goals is to increase the security of desktop systems "
-"by isolating applications from one another. This is done using sandboxing "
-"and it means that, by default, a Flatpak has extremely limited access to "
-"the host environment. This includes:"
-msgstr "Eines von Flatpaks Hauptzielen ist es, die Sicherheit von Desktop-Systemen zu verbessern, durch die Isolierung der Anwendungen zueinander. Dies wird erreicht durch sandboxing und bedeutet das Flatpak standardmäßig extrem limitierten Zugang zur Hostumgebung hat. Dies beinhaltet:"
+msgid "One of Flatpak's main goals is to increase the security of desktop systems by isolating applications from one another. This is done using sandboxing and it means that, by default, a Flatpak has extremely limited access to the host environment. This includes:"
+msgstr "Eines von Flatpaks Hauptzielen ist es, durch die Isolierung der Anwendungen zueinander, die Sicherheit von Desktop-Systemen zu verbessern. Dies wird erreicht durch sandboxing und bedeutet, dass Flatpak standardmäßig extrem limitierten Zugang zur Hostumgebung hat. Dies beinhaltet:"
 
 #: ../../working-with-the-sandbox.rst:6
 msgid ""
@@ -343,4 +337,4 @@ msgid ""
 "no permission checks. This unfortunately affects e.g. the X server and the "
 "session bus which listens to abstract sockets by default. A secure "
 "distribution should disable these and just use regular sockets."
-msgstr "Die Erteilung des Netzwerkzugriffs gibt zudem Zugriff auf alle Hostdienste frei, die auf abstrakten Unix-Sockets lauschen (aufgrund der Art wie Netzwerk-Namensräume arbeiten), und diese arbeiten nicht mit Berechtigungsprüfungen. Dies betrifft unglücklicherweise z. B. den X-Server und den Session-Bus, der regulär auf abstrakten Sockets lauscht. Eine sichere Distribution sollte diese deaktivieren und lediglich reguläre Sockets verwenden."
+msgstr "Die Erteilung des Netzwerkzugriffs gibt zudem Zugriff auf alle Hostdienste frei, die auf abstrakten Unix-Sockets lauschen (aufgrund der Art wie Netzwerk-Namensräume arbeiten) – und diese arbeiten nicht mit Berechtigungsprüfungen. Dies betrifft unglücklicherweise z. B. den X-Server und den Session-Bus, der regulär auf abstrakten Sockets lauscht. Eine sichere Distribution sollte diese deaktivieren und lediglich reguläre Sockets verwenden."

@@ -8,13 +8,12 @@ msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-01 18:01+0200\n"
-"PO-Revision-Date: 2017-08-29 18:01+0200\n"
+"PO-Revision-Date: 2017-10-13 18:01+0200\n"
 "Last-Translator: Markus Richter <semanticdesign@mailbox.org>\n"
 "Language-Team: de_DE <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: OmegaT 4.12\n"
 "Language: de_DE\n"
 
 #: ../../distributing-applications.rst:2
@@ -67,7 +66,7 @@ msgid ""
 "take up more space on the server, but will make downloads much faster. "
 "This can be done with the ``build-update-repo --generate-static-deltas`` "
 "option."
-msgstr "OSTree supportet etwas, das statische Deltas genannt wird. Dies sind einzelne Dateien im Repo, die alle Daten enthalten, die benötigt werden zwischen zwei Revisionen (oder von nichts zu einer Revision). Solche Deltas zu erstellen wird mehr Platz auf dem Server beanspruchen, dafür aber Downloads beschleunigen. Dies kann durchgeführt werden mittels der ``build-update-repo --generate-static-deltas``-Option."
+msgstr "OSTree unterstützt etwas, das statische Deltas genannt wird. Dies sind einzelne Dateien im Repo, die alle Daten enthalten, die benötigt werden zwischen zwei Revisionen (oder von nichts zu einer Revision). Solche Deltas zu erstellen wird mehr Platz auf dem Server beanspruchen, dafür aber Downloads beschleunigen. Dies kann durchgeführt werden mittels der ``build-update-repo --generate-static-deltas``-Option."
 
 #: ../../distributing-applications.rst:21
 msgid "GPG signatures"
@@ -78,7 +77,7 @@ msgid ""
 "OSTree uses GPG to verify the identity of repositories. This requires "
 "that every commit to a repository uses a GPG signature, as well as when "
 "repository summary files are modified."
-msgstr "OSTree verwendet GPG um die Identität von Repositorys zu verifizieren. Dies setzt voraus, dass jedes Commit zu einem Repository GPG-Signaturen verwendet, ebenso wenn Summarydateien des Repositorys modifiziert werden."
+msgstr "OSTree verwendet GPG, um die Identität von Repositorys zu verifizieren. Dies setzt voraus, dass jedes Commit zu einem Repository GPG-Signaturen verwendet, ebenso wenn Summarydateien des Repositorys modifiziert werden."
 
 #: ../../distributing-applications.rst:25
 msgid ""

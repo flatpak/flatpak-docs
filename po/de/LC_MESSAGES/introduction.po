@@ -5,17 +5,15 @@
 #
 msgid ""
 msgstr ""
-
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-01 18:01+0200\n"
-"PO-Revision-Date: 2017-08-29 18:01+0200\n"
+"PO-Revision-Date: 2017-10-13 18:01+0200\n"
 "Last-Translator: Markus Richter <semanticdesign@mailbox.org>\n"
 "Language-Team: de_DE <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: OmegaT 4.12\n"
 "Language: de_DE\n"
 
 #: ../../introduction.rst:2
@@ -105,7 +103,7 @@ msgid ""
 "installed on a host system in order for the application to run. Users can "
 "install multiple different runtimes at the same time, including different "
 "versions of the same runtime."
-msgstr "Jede Applikation muss gegen eine Laufzeitumgebung erzeugt werden. Als Voraussetzung für eine ausführbare Anwendung, muss die Laufzeitumgebung auf einem Hostsystem installiert sein. Benutzer können mehrere unterschiedliche Runtimes gleichzeitig installieren, ebenso verschiedene Versionen der gleichen Laufzeitumgebung."
+msgstr "Jede Applikation muss gegen eine Laufzeitumgebung erzeugt werden. Als Voraussetzung für eine ausführbare Anwendung, muss die Laufzeitumgebung auf einem Host-System installiert sein. Benutzer können mehrere unterschiedliche Runtimes parallel installieren, ebenso verschiedene Versionen der gleichen Runtime."
 
 #: ../../introduction.rst:33
 msgid ""
@@ -123,7 +121,7 @@ msgid ""
 "can be bundled along with the application itself. This allows applications "
 "to use dependencies that aren't available in a distribution, or to use a "
 "different version of a dependency from the one that's installed on the host."
-msgstr "Wenn eine Anwendung Voraussetzungen benötigt, die nicht in seiner Laufzeitumgebung zur Verfügung stehen, können diese mit der Anwendung selbst gebündelt werden. Dies erlaubt es, Anwendungen Abhängigkeiten zu verwenden, die innerhalb einer Distribution nicht vorhanden sind. Ebenso kann eine andere Version einer Abhängigkeit verwendet werden, als diejenige, die auf dem Host-System installiert ist."
+msgstr "Wenn eine Anwendung Voraussetzungen benötigt, die nicht in seiner Laufzeitumgebung zur Verfügung stehen, können diese mit der Anwendung selbst gebündelt werden. Dies erlaubt es Anwendungen, Abhängigkeiten zu verwenden, die innerhalb einer Distribution nicht vorhanden sind. Ebenso kann eine andere Version einer Abhängigkeit verwendet werden, als diejenige, die auf dem Host-System installiert ist."
 
 #: ../../introduction.rst:41
 msgid "SDKs (Software Developer Kits)"
@@ -136,7 +134,7 @@ msgid ""
 "debuggers. Each application is built against an SDK, which is paired with a "
 "runtime (this is the runtime that will be used by the application at "
 "runtime)."
-msgstr "Ein SDK ist eine Runtime, die die 'devel'-Teile, die nicht während der Laufzeit benötigt werden, enthält. Hierzu gehören bspw.: Erstellungs- & Paketierungstools, Header-Dateien, Compiler und Debugger. Jede Anwendung wird gegen ein SDK erzeugt, welches mit einer Runtime gekoppelt ist (dies ist die Runtime, die während der Laufzeit von der Applikation verwendet wird)."
+msgstr "Ein SDK ist eine Runtime, die die `devel`-Teile, die nicht während der Laufzeit benötigt werden, enthält. Hierzu gehören bspw.: Erstellungs- & Paketierungstools, Header-Dateien, Compiler und Debugger. Jede Anwendung wird gegen ein SDK erzeugt, welches mit einer Runtime gekoppelt ist (dies ist die Runtime, die während der Laufzeit von der Applikation verwendet wird)."
 
 #: ../../introduction.rst:46
 msgid "Extensions"
@@ -162,7 +160,7 @@ msgid ""
 "have to be explicitly granted. (As will be described later, Flatpak provides "
 "several ways to do this.) Access to other things, such as other processes, "
 "is deliberately not possible."
-msgstr "Mit Flatpak wird jede App in einer isolierten Umgebung erzeugt und ausgeführt. Standardmäßig kann die Anwendung lediglich sich selbst und seine Runtime "sehen". Zugriff auf Benutzerdateien, Netzwerk, Grafik-Sockets, Subsysteme auf dem Bus und auf Geräte müssen explizit erlaubt werden. (Flatpak bietet hierzu verschiedene Wege, wie noch später beschrieben wird.) Zugriff auf andere Dinge, wie andere Prozesse, ist bewusst nicht möglich."
+msgstr "Mit Flatpak wird jede App in einer isolierten Umgebung erzeugt und ausgeführt. Standardmäßig kann die Anwendung lediglich sich selbst und seine Runtime »sehen«. Zugriff auf Benutzerdateien, Netzwerk, Grafik-Sockets, Subsysteme auf dem Bus und auf Geräte müssen explizit erlaubt werden. (Flatpak bietet hierzu verschiedene Wege, wie noch später beschrieben wird.) Zugriff auf andere Dinge, wie andere Prozesse, ist bewusst nicht möglich."
 
 #: ../../introduction.rst:56
 msgid "The flatpak command"
@@ -222,7 +220,7 @@ msgid ""
 "creation of personal pages that can be used for this purpose. Here, a "
 "personal namespace of ``name.github.io`` could be used as the basis of "
 "application identifier ``io.github.name.App``."
-msgstr "Wenn man keine registrierte Domain für seine Anwendung besitzt, ist es sehr einfach hierzu eine Website von Drittanbietern zu verwenden. Zum Beispiel erlaubt GitHub die Erstellung von persönlichen Seiten, die für diesen Zweck genutzt werden können. Somit könnte hier ein persönlicher Namensraum von ``name.github.io`` verwendet werden, als Basis des Applikationsbezeichners ``io.github.name.App``."
+msgstr "Wenn man keine registrierte Domain für seine Anwendung besitzt, ist es sehr einfach, hierzu eine Website von Drittanbietern zu verwenden. Zum Beispiel erlaubt GitHub die Erstellung von persönlichen Seiten, die für diesen Zweck genutzt werden können. Somit könnte hier ein persönlicher Namensraum von ``name.github.io`` verwendet werden, als Basis des Applikationsbezeichners ``io.github.name.App``."
 
 #: ../../introduction.rst:76
 msgid ""
@@ -241,7 +239,7 @@ msgid ""
 "architecture and branch (branches allow a particular version to be "
 "specified). This is done using a name/arch/branch triple. For example: ``org."
 "gnome.Sdk/x86_64/3.14`` or ``org.gnome.Builder/i386/master``."
-msgstr "Viele Kommandos unter Flatpak benötigen lediglich den Namen einer Applikation, der Runtime oder des SDK. Jedoch ist es unter einigen Umständen notwendig die Architektur und den Zweig (Branch) zu spezifizieren (Zweige erlauben es eine bestimmte Version zu spezifizieren). Dies wird unter Verwendung eines `name/architecture/branch`-Tripels durchgeführt. Zum Beispiel ``org.gnome.Sdk/x86_64/3.14`` oder ``org.gnome.Builder/i386/master``."
+msgstr "Viele Kommandos unter Flatpak benötigen lediglich den Namen einer Applikation, der Runtime oder des SDK. Jedoch ist es unter einigen Umständen notwendig, die Architektur und den Zweig (Branch) zu spezifizieren (Zweige erlauben es eine bestimmte Version zu spezifizieren). Dies wird unter Verwendung eines `name/architecture/branch`-Tripels durchgeführt. Zum Beispiel ``org.gnome.Sdk/x86_64/3.14`` oder ``org.gnome.Builder/i386/master``."
 
 #: ../../introduction.rst:84
 msgid "Under the hood"
@@ -252,7 +250,7 @@ msgid ""
 "Flatpak uses a number of pre-existing technologies. It generally isn't "
 "necessary to be familiar with these in order to use Flatpak, although in "
 "some cases it might be useful. They include:"
-msgstr "Flatpak verwendet eine Anzahl von bereits existierenden Technologien. Es ist normalerweise nicht notwendig, mit diesen vertraut zu sein, um mit Flatpaks zu arbeiten – wobei es in einigen Fällen nützlich sein kann. Diese beinhalten:"
+msgstr "Flatpak verwendet eine Anzahl von bereits existierenden Technologien. Es ist normalerweise nicht notwendig, mit diesen vertraut zu sein, um mit Flatpaks zu arbeiten – wobei es in einigen Fällen nützlich sein kann. Dies umfasst:"
 
 #: ../../introduction.rst:88
 msgid ""
@@ -281,7 +279,7 @@ msgstr "Seccomp-Regeln"
 msgid ""
 "`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_ to set up "
 "cgroups for sandboxes"
-msgstr "`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_ zum Erstellen von Cgroups für Sandboxen"
+msgstr "`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_, zum Erstellen von Cgroups für Sandboxen"
 
 #: ../../introduction.rst:96
 msgid ""
@@ -300,7 +298,7 @@ msgstr "Das OCI-Format der `Open Container Initiative <https://www.opencontainer
 msgid ""
 "The `OSTree <https://ostree.readthedocs.io/en/latest/>`_ system for "
 "versioning and distributing filesystem trees"
-msgstr "Das `OSTree <https://ostree.readthedocs.io/en/latest/>`_-System für die Versionierung und Verteilung von Dateisystembäumen"
+msgstr "Das `OSTree <https://ostree.readthedocs.io/en/latest/>`_-System, für die Versionierung und Verteilung von Dateisystembäumen"
 
 #: ../../introduction.rst:99
 msgid ""
