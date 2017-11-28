@@ -86,7 +86,7 @@ If you completed the tutorial in `Building Simple Apps <building-simple-apps.htm
 
   $ flatpak --user update org.gnome.Dictionary
   
-Otherwise, you need to add the repo to Flatpak and install the application. To do so:
+Otherwise, you need to add the repo to Flatpak and install the application. To do so::
 
   $ flatpak --user remote-add --no-gpg-verify --if-not-exists tutorial-repo repo
   $ flatpak --user install tutorial-repo org.gnome.Dictionary
