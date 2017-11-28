@@ -85,7 +85,12 @@ flatpak-builder will also do some other useful things, like creating a separatel
 If you completed the tutorial in `Building Simple Apps <building-simple-apps.html>`_, you can update the Dictionary application you installed with the new version that was built and exported by flatpak-builder::
 
   $ flatpak --user update org.gnome.Dictionary
+  
+Otherwise, you need to add the repo to Flatpak and install the application. To do so::
 
+  $ flatpak --user remote-add --no-gpg-verify --if-not-exists tutorial-repo repo
+  $ flatpak --user install tutorial-repo org.gnome.Dictionary
+  
 To check that the application has been successfully updated, you can compare the sha256 commit of the installed app with the commit ID that was printed by flatpak-builder::
 
   $ flatpak info org.gnome.Dictionary
