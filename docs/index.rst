@@ -22,3 +22,4 @@ Contents
    working-with-the-sandbox
    distributing-applications
    command-reference
+   flatpak-builder-command-reference
