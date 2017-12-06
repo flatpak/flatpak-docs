@@ -22,7 +22,7 @@ For example, to build the GNOME Dictionary application using the GNOME 3.22 SDK,
 
   $ flatpak build-init dictionary org.gnome.Dictionary org.gnome.Sdk org.gnome.Platform 3.22
 
-You can try this command now. In the next step we will build an application inside the resulting dictionary directory.
+You can try this command now. In the next step we will build an application inside the resulting ``dictionary`` directory.
 
 Building
 --------
