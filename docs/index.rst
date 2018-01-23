@@ -21,5 +21,6 @@ Contents
    flatpak-builder
    working-with-the-sandbox
    distributing-applications
+   available-runtimes
    command-reference
    flatpak-builder-command-reference
