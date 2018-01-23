@@ -50,6 +50,9 @@ Applications can be found in any of your remotes using the ``search`` command. F
 
 Search will return any applications matching the search terms. Each search result includes the application ID and the remote that the application is in. In this example, the search term is ``gimp``.
 
+.. note::
+  Search will only work for remotes whose application metadata has been updated. This can be done by either running ``flatpak update`` or ``flatpak update --appstream``.
+
 Install applications
 ````````````````````
 
@@ -61,9 +64,9 @@ Here, ``flathub`` is the name of the remote the application is to be installed f
 
 Sometimes, an application will require a particular runtime, and this will be installed prior to the application.
 
-The details of the application to be installed can also be provided by a ``.flatpakref`` file, which could be local or remote. To specify a ``.flatpakref`` instead of manually providing the remote and application ID, run::
+The details of the application to be installed can also be provided by a ``.flatpakref`` file, which can be either remote or local. To specify a ``.flatpakref`` instead of manually providing the remote and application ID, run::
 
- $ flatpak install ~/Downloads/org.gimp.GIMP.flatpakref
+ $ flatpak install https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
 
 If the ``.flatpakref`` file specifies that the application is to be installed from a remote that hasn't already been added, you will be asked whether to add it before the application is installed.
 
