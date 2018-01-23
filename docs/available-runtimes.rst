@@ -28,14 +28,10 @@ GNOME
 
 The GNOME runtime is appropriate for any application that uses the GNOME platform. It is based on the Freedesktop runtime and adds the GNOME platform, including:
 
-* AT-SPI
-* ATK (Accessibility Toolkit)
 * Clutter
-* dconf
 * Gjs
 * GObject Introspection
 * GStreamer
-* GTK+
 * GVFS
 * Libnotify
 * Libsecret
