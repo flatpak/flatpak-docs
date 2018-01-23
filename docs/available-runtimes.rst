@@ -54,7 +54,7 @@ org.gnome.Sdk.Docs         SDK documentation (extension)
 =========================  =================================
 
 KDE
-===
+---
 
 The KDE runtime is also based on the Freedesktop runtime and adds Qt and KDE Frameworks. It is appropriate for any application that makes use of the KDE platform and most Qt-based applications.
 
