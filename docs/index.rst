@@ -16,6 +16,7 @@ Contents
 
    introduction
    elements-of-a-flatpak-app
+   using-flatpak
    getting-setup
    building-simple-apps
    flatpak-builder
