@@ -27,7 +27,7 @@ Adding a remote allows you to search and list its contents, and to install appli
 
  $ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-Here, ``flathub`` is the local name that is given to the remote. The URL points to the remote's ``.flatpakrepo`` file. ``--if-not-exists`` prevents an existing remote from being overwritten.
+Here, ``flathub`` is the local name that is given to the remote. The URL points to the remote's ``.flatpakrepo`` file. ``--if-not-exists`` stops the command from producing an error if the remote already exists.
 
 Remove a remote
 ```````````````
