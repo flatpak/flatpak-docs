@@ -42,7 +42,9 @@ Most Flatpaks are built using the `flatpak-builder` tool. This reads a manifest
 file which describes the key properties of the application and how it is to be
 built.
 
-To add a manifest to the hello world app, add the following to an empty file::
+To add a manifest to the hello world app, add the following to an empty file:
+
+.. code-block:: json
 
   {
       "app-id": "org.flatpak.Hello",
