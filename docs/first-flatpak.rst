@@ -18,11 +18,11 @@ tools (similar to what is typically found in -devel/-dev packages in Linux
 distributions). This SDK is required to build apps for the runtime.
 
 In this tutorial we will use the Freedesktop runtime version 1.6. This runtime
-is provided by the Flathub repository. To add this, run:
+is provided by the Flathub repository. To add this, run::
 
   $ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-Then, to install the runtime and the SDK, run:
+Then, to install the runtime and the SDK, run::
 
   $ flatpak install flathub org.freedesktop.Platform//1.6 org.freedesktop.Sdk//1.6
 
@@ -30,7 +30,7 @@ Then, to install the runtime and the SDK, run:
 -----------------
 
 The app that is going to be created for this tutorial is a a simple script. To
-create it, copy the following to an empty file and save it as `hello.sh`:
+create it, copy the following to an empty file and save it as `hello.sh`::
 
   #!/bin/sh
   echo "Hello world, from a sandbox"
@@ -42,7 +42,7 @@ Most Flatpaks are built using the `flatpak-builder` tool. This reads a manifest
 file which describes the key properties of the application and how it is to be
 built.
 
-To add a manifest to the hello world app, add the following to an empty file:
+To add a manifest to the hello world app, add the following to an empty file::
 
   {
       "app-id": "org.flatpak.Hello",
@@ -78,7 +78,7 @@ runtime.
 ------------------------
 
 Now that the app has a manifest, `flatpak-builder` can be used to build it.
-This is done by specifying the the manifest file and a target directory:
+This is done by specifying the the manifest file and a target directory::
 
   $ flatpak-builder app-dir org.flatpak.Hello.json
 
@@ -88,7 +88,7 @@ it to the `/app` subdirectory, inside the `app-dir` directory.
 5. Test the build
 -----------------
 
-To verify that the build was successful, the following can be run:
+To verify that the build was successful, the following can be run::
 
   $ flatpak-builder --run app-dir org.flatpak.Hello.json hello.sh
 
@@ -98,7 +98,7 @@ Congratulations, you've made an app!
 ------------------------------
 
 Before you can install and run the app, it first needs to be put in a
-repository. This is done by passing the `--repo` argument to `flatpak-builder`:
+repository. This is done by passing the `--repo` argument to `flatpak-builder`::
 
  $ flatpak-builder --repo=repo --force-clean app-dir org.flatpak.Hello.json
 
@@ -114,7 +114,7 @@ created `app-dir` directory was deleted before the new build was started.
 ------------------
 
 Now we're ready to add the repository that was just created and install the
-app. This is done with two commands:
+app. This is done with two commands::
 
   $ flatpak --user remote-add --no-gpg-verify tutorial-repo repo
   $ flatpak --user install tutorial-repo org.flatpak.Hello
@@ -132,7 +132,7 @@ official repositories you should sign them with a private GPG key.
 8. Run the app
 --------------
 
-All that's left is to try the app. This can be done with the following command:
+All that's left is to try the app. This can be done with the following command::
 
   $ flatpak run org.flatpak.Hello
 
