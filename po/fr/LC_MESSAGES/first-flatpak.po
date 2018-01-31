@@ -1,0 +1,145 @@
+# Documentation Flatpak
+# Copyright (C) 2018, Flatpak Team
+# This file is distributed under the same license as the Flatpak package.
+# Baptiste Mille-Mathias <baptiste.millemathias@gmail.com>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-28 16:16+0100\n"
+"PO-Revision-Date: 2018-01-28 16:16+0100\n"
+"Last-Translator: Baptiste Mille-Mathias\n"
+"Language-Team: fr_FR <traduc@traduc.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../first-flatpak.rst:2
+msgid "Building Your First Flatpak"
+msgstr "Construire votre premier flatpak"
+
+#: ../../first-flatpak.rst:4
+msgid "This tutorial provides a quick introduction to Flatpak. In it, you will learn how to create a basic Flatpak application, which can be installed and run."
+msgstr "Ce tutoriel fournit une rapide introduction à Flatpak. À l'intérieur, vous apprendrez comment créer une application Flatpak basique, qui peut être installée et lancée."
+
+#: ../../first-flatpak.rst:7
+msgid "To complete this tutorial, you should have installed Flatpak by following `the setup guide <https://flatpak.org/getting.html>`_. You will also need to haves the ``flatpak-builder`` tool, which is generally available as a package."
+msgstr "Pour compléter ce tutorial, vous devez avoir installé Flatpak en suivant `le guide de mise en place <https://flatpak.org/getting.html>`_. Vous aurez également besoin de l'outil ``flatpak-builder``, qui est généralement disponilble comme paquet."
+
+#: ../../first-flatpak.rst:12
+msgid "1. Install a runtime and the matching SDK"
+msgstr "1. Installer un runtime et le SDK correspondant"
+
+#: ../../first-flatpak.rst:14
+msgid "Flatpak requires every app to specify a runtime that it uses for its basic dependencies. Each runtime has a matching SDK (Software Development Kit), which contains all the things that are in the runtime, plus headers and development tools (similar to what is typically found in -devel/-dev packages in Linux distributions). This SDK is required to build apps for the runtime."
+msgstr "Flathub nécessite que chaque application spécifie un runtime à utiliser pour ses dépendances basiques. Chaque runtime à un SDK correspondant (Software Development Kit / Kit de développement logiciel), qui contient toutes les objets du runtime, plus les en-têtes et les outils de développment (équivalent à ce qui peut être trouvé dans les paquets -devel/-dev dans une distribution Linux). Ce SDK is requis pour contruire des applications pour ce runtime."
+
+#: ../../first-flatpak.rst:20
+msgid "In this tutorial we will use the Freedesktop runtime version 1.6. This runtime is provided by the Flathub repository. To add this, run::"
+msgstr "Dans ce tutoriel nous utiliserons la version 1.6 du runtime Freedesktop. Ce runtime est fournit par le dépôt Flathub. Pour l'ajouter, lancez:"
+
+#: ../../first-flatpak.rst:25
+msgid "Then, to install the runtime and the SDK, run::"
+msgstr "Puis, pour installer le run et le SDK, lancez"
+
+#: ../../first-flatpak.rst:30
+msgid "2. Create the app"
+msgstr "2. Créer l'application"
+
+#: ../../first-flatpak.rst:32
+msgid "The app that is going to be created for this tutorial is a a simple script. To create it, copy the following to an empty file and save it as `hello.sh`::"
+msgstr "L'application qui sera créée pour ce tutoriel est un simple script.  Pour le créer, copiez le code suivant dans un fichier vide et sauvez-le comme `hello.sh`:"
+
+#: ../../first-flatpak.rst:39
+msgid "3. Add a manifest"
+msgstr "3. Ajouter un manifeste"
+
+#: ../../first-flatpak.rst:41
+msgid "Most Flatpaks are built using the `flatpak-builder` tool. This reads a manifest file which describes the key properties of the application and how it is to be built."
+msgstr "La plupart des Flatpaks sont construits à l'aide de l'outil `flatpak-builder`. Il lit un fichier manifeste qui décrit les propriétés clés d'une application et comment il doit être construit."
+
+#: ../../first-flatpak.rst:45
+msgid "To add a manifest to the hello world app, add the following to an empty file:"
+msgstr "Pour ajouter un manifest à l'application bonjour monde, ajouter le code suivant dans un fichier vide:"
+
+#: ../../first-flatpak.rst:72
+msgid "Now save the file alongside `hello.sh` and call it `org.flatpak.Hello.json`."
+msgstr "Maintenant sauvez le fichier à côté de `hello.sh` et nommez-le `org.flatpak.Hello.json`."
+
+#: ../../first-flatpak.rst:74
+msgid "In a more complex application, the manifest would list multiple modules. The last one would typically be the application itself, and the earlier ones would be dependencies that are bundled with the app because they are not part of the runtime."
+msgstr "Dans une application plus complexe, le manifest listerait plusieurs modules. Le dernier serait typiquement l'application elle-même, et les premiers seraient les dépendances fournies avec l'application car elles ne font pas parties du runtime."
+
+#: ../../first-flatpak.rst:80
+msgid "4. Build the application"
+msgstr "4. Construite l'application"
+
+#: ../../first-flatpak.rst:82
+msgid "Now that the app has a manifest, `flatpak-builder` can be used to build it. This is done by specifying the the manifest file and a target directory::"
+msgstr "Maintenant que l'application a un manifeste, `flatpak-builder` peut être utilisé pour la construite. C'est effectué en spécifiant le fichier manifeste et un répertoire de destination:"
+
+#: ../../first-flatpak.rst:87
+msgid "This command will build each module that is listed in the manifest and install it to the `/app` subdirectory, inside the `app-dir` directory."
+msgstr "Cette commande construira chaque module qui est listé dans le manifeste et l'installera dans le sous-répertoire `/app`, à l'instérieur du répertoire `app-dir`."
+
+#: ../../first-flatpak.rst:91
+msgid "5. Test the build"
+msgstr "5. Tester la résultat de la construction"
+
+#: ../../first-flatpak.rst:93
+msgid "To verify that the build was successful, the following can be run::"
+msgstr "Pour vérifier que la construction a été réussie, vous pouvez lancer la commande suivante:"
+
+#: ../../first-flatpak.rst:97
+msgid "Congratulations, you've made an app!"
+msgstr "Félicitation, vous avez créé une application !"
+
+#: ../../first-flatpak.rst:100
+msgid "6. Put the app in a repository"
+msgstr "6. Poussez une application dans un dépôt"
+
+#: ../../first-flatpak.rst:102
+msgid "Before you can install and run the app, it first needs to be put in a repository. This is done by passing the `--repo` argument to `flatpak-builder`::"
+msgstr "Avant de pouvoir installer et lancer l'application, vous avez besoin d'abord de la pousser dans un dépôt. Cela peut être fait en passant l'argument `--repo` à `flatpak-builder`:"
+
+#: ../../first-flatpak.rst:107
+msgid "This does the build again, and at the end exports the result to a local directory called `repo`. Note that `flatpak-builder` keeps a cache of previous builds in the `.flatpak-builder` subdirectory, so doing a second build like this is very fast."
+msgstr "Cela construit l'application encore, et à la fin exporte le résultat dans un répertoire local appelé `repo`. Notez que `flatpak-builder` garde un cache des construction précédente dans le sous-répertoire `.flatpak-builder`, ainsi réaliser une seconde construction sera très rapide."
+
+#: ../../first-flatpak.rst:112
+msgid "This second time we passed in `--force-clean`, which means that the previously created `app-dir` directory was deleted before the new build was started."
+msgstr "La seconde fois nous avons passé `--force-clean`, qui signifie que le répertoire `app-dir` précedemment créé a été supprimé avant que la nouvelle constuction démarre."
+
+#: ../../first-flatpak.rst:116
+msgid "7. Install the app"
+msgstr "7. Installer l'application"
+
+#: ../../first-flatpak.rst:118
+msgid "Now we're ready to add the repository that was just created and install the app. This is done with two commands::"
+msgstr "Vous êtes désormais prêt à ajouter le dépôt qui vient juste d'être créé et installer l'application. Cela est fait avec ces deux commandes :"
+
+#: ../../first-flatpak.rst:124
+msgid "The first command adds the repository that was created in the previous step. The second command installs the app from the repository."
+msgstr "La première commande ajoute le dépôt qui a été créé dans l'étape précedente. La seconde commande install l'application depuis le dépôt."
+
+#: ../../first-flatpak.rst:127
+msgid "Both these commands use the `--user` argument, which means that the repository and the app are added per-user rather than system-wide. This is useful for testing."
+msgstr "Ces deux commandes utilise l'argument `--user`, qui signifie que le dépôt et l'application sont ajoutés par utilisateur plutôt qu'au niveau du système. C'est utile à des fins de test."
+
+#: ../../first-flatpak.rst:130
+msgid "Note that the repository was added with `--no-gpg-verify`, since a GPG key wasn't specified when the app was built. This is fine for testing, but for official repositories you should sign them with a private GPG key."
+msgstr "Notez que le dépôt a été ajouté avec `--no-gpg-verify`, parce qu'une clé GPG n'a pas été spécifié quand l'application a été construite. C'est tolérable pour un test, mais pour les dépôt officiels vous devriez les signer avec une clé privée GPG."
+
+#: ../../first-flatpak.rst:135
+msgid "8. Run the app"
+msgstr "8. Lancer l'application"
+
+#: ../../first-flatpak.rst:137
+msgid "All that's left is to try the app. This can be done with the following command::"
+msgstr "Tout ce qui nous reste c'est d'essayer l'application. Cela peut être fait avec la commande suivante:"
+
+#: ../../first-flatpak.rst:141
+msgid "This runs the app, so that it prints `Hello world, from a sandbox`."
+msgstr "Cela lance l'application, ainsi cela affiche `Hello world, from a sandbox`."
+
