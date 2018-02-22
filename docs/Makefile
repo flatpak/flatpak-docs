@@ -3,7 +3,7 @@
 
 # You can set these variables from the command line.
 SPHINXOPTS    =
-SPHINXBUILD   = sphinx-build
+SPHINXBUILD  := `sh -c '[ -e /usr/bin/sphinx-build-3 ] && echo sphinx-build-3 || echo sphinx-build'`
 SPHINXPROJ    = Flatpak
 SOURCEDIR     = .
 BUILDDIR      = _build
