@@ -11,8 +11,6 @@ Flatpak has been designed and implemented with a number of goals:
 * Allow applications to bundle their own dependencies, so that they can use libraries that aren't provided by a Linux distribution, and so they can depend on specific versions or even patched versions of a library.
 * Increase the security of Linux desktops, by isolating applications in sandboxes.
 
-Flatpak makes it easy to take advantage of these features. If you haven't already, it is recommended that you try the `hello world <http://flatpak.org/hello-world.html>`_ example, as a way of getting started.
-
 More information about Flatpak can be found on `flatpak.org <http://flatpak.org/>`_.
 
 How it works
@@ -25,7 +23,7 @@ Flatpak can be understood through a small number of key concepts. These also hel
 Runtimes
 ^^^^^^^^
 
-Runtimes provide the basic dependencies that are used by applications. Various runtimes are available, from more minimal (but more stable) Freedesktop runtimes, to larger runtimes produced by desktops like GNOME or KDE. (The `runtimes page <http://flatpak.org/runtimes.html>`_ on flatpak.org provides an overview of the runtimes that are currently available.)
+Runtimes provide the basic dependencies that are used by applications. Various runtimes are available, from more minimal (but more stable) Freedesktop runtimes, to larger runtimes produced by desktops like GNOME or KDE. (See :doc:`available-runtimes` for an overview of the runtimes that are currently available.)
 
 Each application must be built against a runtime, and this runtime must be installed on a host system in order for the application to run. Users can install multiple different runtimes at the same time, including different versions of the same runtime.
 
@@ -55,7 +53,7 @@ With Flatpak, each app is built and run in an isolated environment. By default, 
 The flatpak command
 --------------------
 
-``flatpak`` is the command that is used to install, remove and update runtimes and applications. It can also be used to view what is currently installed, and has commands for building and distributing application bundles. ``flatpak --help`` provides a full list of available commands.
+``flatpak`` is the command that is used to find, install and remove applications. ``flatpak --help`` provides a full list of available commands.
 
 Most flatpak commands are performed system-wide by default. To perform a command for the current user only, use the ``--user`` option. This allows runtimes and application bundles to be installed per-user, for instance.
 
