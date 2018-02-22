@@ -34,7 +34,7 @@ All the files in the export directory must have the application ID as their pref
 
 Naming files in this way prevents naming conflicts and ensures that system installed applications aren't overwritten.
 
-To name exported files in this way, either rename the relevant source files or use flatpak-builder to rename the files at build time (this is explained in more detail in `the section on flatpak-builder <flatpak-builder.html>`_).
+To name exported files in this way, either rename the relevant source files or use flatpak-builder to rename the files at build time (this is explained in more detail in :doc:`flatpak-builder`).
 
 Metadata files
 --------------
