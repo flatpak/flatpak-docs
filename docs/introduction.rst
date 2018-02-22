@@ -35,16 +35,6 @@ Bundled libraries
 
 If an application requires any dependencies that aren't in its runtime, they can be bundled along with the application itself. This allows applications to use dependencies that aren't available in a distribution, or to use a different version of a dependency from the one that's installed on the host.
 
-SDKs (Software Developer Kits)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-An SDK is a runtime that includes the 'devel' parts which are not needed at runtime, such as build and packaging tools, header files, compilers and debuggers. Each application is built against an SDK, which is paired with a runtime (this is the runtime that will be used by the application at runtime).
-
-Extensions
-^^^^^^^^^^
-
-An extension is an optional add-on for a runtime or application. They are most commonly used to split out translations and debug info from runtimes. For example, ``org.freedesktop.Platform.Locale`` can be added to the ``org.freedesktop.Platform`` runtime in order to add translations.
-
 Sandboxes
 ^^^^^^^^^
 
