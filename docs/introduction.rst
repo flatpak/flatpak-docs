@@ -59,7 +59,7 @@ The flatpak command
 
 Most flatpak commands are performed system-wide by default. To perform a command for the current user only, use the ``--user`` option. This allows runtimes and application bundles to be installed per-user, for instance.
 
-For more information on flatpak commands, see the :doc:`command-reference`
+For more information on flatpak commands, see the :doc:`flatpak-command-reference`
 
 Identifiers
 -----------

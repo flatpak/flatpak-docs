@@ -12,7 +12,6 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :glob:
 
    introduction
    elements-of-a-flatpak-app
@@ -24,5 +23,4 @@ Contents
    working-with-the-sandbox
    distributing-applications
    available-runtimes
-   command-reference
-   flatpak-builder-command-reference
+   command-references

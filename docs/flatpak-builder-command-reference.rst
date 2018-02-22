@@ -1,4 +1,4 @@
-Flatpak-builder Command Reference
+Flatpak Builder Command Reference
 =================================
 
 .. raw:: html
