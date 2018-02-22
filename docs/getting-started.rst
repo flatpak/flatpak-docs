@@ -1,5 +1,21 @@
-Building Your First Flatpak
-===========================
+Getting Started
+===============
+
+Install flatpak and flatpak-builder
+-----------------------------------
+
+First, it is necessary to have the ``flatpak`` and ``flatpak-builder`` packages installed on your system. The Flatpak website provides `details on how to install flatpak <http://flatpak.org/getting.html>`_. ``flatpak-builder`` is typically found as a package from the same source as ``flatpak`` itself.
+
+Add the flathub repository
+--------------------------
+
+Flathub is the main Flatpak repository and contains the runtimes and SDKs that will be needed to run and build apps. If you haven't added it already, it can be setup with the following command::
+
+  $ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+
+Building your first Flatpak
+---------------------------
 
 This tutorial provides a quick introduction to Flatpak. In it, you will learn
 how to create a basic Flatpak application, which can be installed and run.
@@ -9,7 +25,7 @@ To complete this tutorial, you should have installed Flatpak by following
 haves the ``flatpak-builder`` tool, which is generally available as a package.
 
 1. Install a runtime and the matching SDK
------------------------------------------
+`````````````````````````````````````````
 
 Flatpak requires every app to specify a runtime that it uses for its basic
 dependencies. Each runtime has a matching SDK (Software Development Kit), which
@@ -27,7 +43,7 @@ Then, to install the runtime and the SDK, run::
   $ flatpak install flathub org.freedesktop.Platform//1.6 org.freedesktop.Sdk//1.6
 
 2. Create the app
------------------
+`````````````````
 
 The app that is going to be created for this tutorial is a a simple script. To
 create it, copy the following to an empty file and save it as `hello.sh`::
@@ -36,7 +52,7 @@ create it, copy the following to an empty file and save it as `hello.sh`::
   echo "Hello world, from a sandbox"
 
 3. Add a manifest
------------------
+`````````````````
 
 Most Flatpaks are built using the `flatpak-builder` tool. This reads a manifest
 file which describes the key properties of the application and how it is to be
@@ -77,7 +93,7 @@ be dependencies that are bundled with the app because they are not part of the
 runtime.
 
 4. Build the application
-------------------------
+````````````````````````
 
 Now that the app has a manifest, `flatpak-builder` can be used to build it.
 This is done by specifying the the manifest file and a target directory::
@@ -88,7 +104,7 @@ This command will build each module that is listed in the manifest and install
 it to the `/app` subdirectory, inside the `app-dir` directory.
 
 5. Test the build
------------------
+`````````````````
 
 To verify that the build was successful, the following can be run::
 
@@ -97,7 +113,7 @@ To verify that the build was successful, the following can be run::
 Congratulations, you've made an app!
 
 6. Put the app in a repository
-------------------------------
+``````````````````````````````
 
 Before you can install and run the app, it first needs to be put in a
 repository. This is done by passing the `--repo` argument to `flatpak-builder`::
@@ -113,7 +129,7 @@ This second time we passed in `--force-clean`, which means that the previously
 created `app-dir` directory was deleted before the new build was started.
 
 7. Install the app
-------------------
+``````````````````
 
 Now we're ready to add the repository that was just created and install the
 app. This is done with two commands::
@@ -132,7 +148,7 @@ wasn't specified when the app was built. This is fine for testing, but for
 official repositories you should sign them with a private GPG key.
 
 8. Run the app
---------------
+``````````````
 
 All that's left is to try the app. This can be done with the following command::
 

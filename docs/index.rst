@@ -14,13 +14,9 @@ Contents
    :maxdepth: 2
 
    introduction
-   elements-of-a-flatpak-app
    using-flatpak
-   first-flatpak
-   getting-setup
-   building-simple-apps
-   flatpak-builder
+   getting-started
+   building
    working-with-the-sandbox
    distributing-applications
-   available-runtimes
-   command-references
+   reference
