@@ -17,7 +17,7 @@ The GNOME Dictionary manifest is short, because the only module is the applicati
   {
     "app-id": "org.gnome.Dictionary",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.22",
+    "runtime-version": "3.26",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-dictionary",
     "finish-args": [
@@ -30,8 +30,8 @@ The GNOME Dictionary manifest is short, because the only module is the applicati
         "sources": [
           {
             "type": "archive",
-            "url": "https://download.gnome.org/sources/gnome-dictionary/3.20/gnome-dictionary-3.20.0.tar.xz",
-            "sha256": "efb36377d46eff9291d3b8fec37baab2355f9dc8bc7edb791b6a625574716121"
+            "url": "https://download.gnome.org/sources/gnome-dictionary/3.26/gnome-dictionary-3.26.0.tar.xz",
+            "sha256": "387ff8fbb8091448453fd26dcf0b10053601c662e59581097bc0b54ced52e9ef"
           }
         ]
       }
