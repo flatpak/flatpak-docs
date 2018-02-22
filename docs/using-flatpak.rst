@@ -1,7 +1,7 @@
 Using Flatpak
 =============
 
-This page provides an introduction to the most common commands needed to use Flatpak. It is not intended to be exhaustive or to cover all the options for each command (a full list of all the commands and their options can be found in `the command reference <command-reference.html>`_).
+This page provides an introduction to the most common commands needed to use Flatpak. It is not intended to be exhaustive or to cover all the options for each command (a full list of all the commands and their options can be found in `the command reference <flatpak-command-reference.html>`_).
 
 .. note::
   Flatpak commands can be run either per-user or system-wide. All the examples in this guide use the default system-wide behavior.
