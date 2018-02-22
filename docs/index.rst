@@ -14,7 +14,6 @@ Contents
    :maxdepth: 2
 
    introduction
-   using-flatpak
    getting-started
    building
    working-with-the-sandbox
