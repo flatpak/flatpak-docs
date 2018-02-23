@@ -1,9 +1,9 @@
 Publishing
 ==========
 
-Flatpak provides several ways to distribute applications. The primary method is to host a repository. This is relatively simple (although there are some important details to be aware of) and allows application updates to be distributed.
+Flatpak provides several ways to distribute applications to users. For many applications, the most convenient and effective method is to use `Flathub <https://flathub.com>`_, which provides a large centralized repository of Flatpak applications.
 
-It is also possible to distribute Flatpaks as single file bundles, which can be useful in some situations.
+Alternatively, it is possible to host a repository yourself, or to distribute Flatpaks as single file bundles.
 
 .. toctree::
    repositories
