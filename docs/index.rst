@@ -17,5 +17,5 @@ Contents
    getting-started
    building
    working-with-the-sandbox
-   distributing-applications
+   publishing
    reference
