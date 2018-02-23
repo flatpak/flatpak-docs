@@ -1,106 +1,40 @@
 Flatpak Builder
 ===============
 
-``flatpak-builder`` is the easiest and most common way to build apps as Flatpaks. It allows you to specify a series of modules which are to be built as part of the build process, which can include both the app and any dependencies that you want to bundle. ``flatpak-builder`` will then automate the building of all these modules as part of a multi-step build process, making it possible to build all application modules with a single command.
+Flatpaks are built using the ``flatpak-builder`` tool. This allows a series of modules to be built into a single application bundle. These modules can include libraries and dependencies in addition to the application itself, and are specified in a manifest file, which is passed to ``flatpak-builder`` when it is run.
 
-flatpak-builder supports a variety of build systems, including `autotools <https://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html>`_, `cmake <https://cmake.org/>`_, `cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_, `meson <http://mesonbuild.com/>`_, a simple one called "simple" which allows to provide a series of commands to run, and the so called `Build API <https://github.com/cgwalters/build-api/>`_.
+Modules can be built with a variety of build systems, including `autotools <https://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html>`_, `cmake <https://cmake.org/>`_, `cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_, `meson <http://mesonbuild.com/>`_, and the so called `Build API <https://github.com/cgwalters/build-api/>`_. A "simple" build method is also available, which allows a series of commands to be specified.
 
-All json entities are explained in the man page of ``flatpak-builder``.
-
-Manifests
+Exporting
 ---------
 
-The input to flatpak-builder is a JSON file that describes the parameters for building an application, as well as each of the modules to be bundled. This file is called the manifest. Module sources can be of several types, including ``.tar`` or ``.zip`` archives, Git or Bzr repositories, patch files or shell commands that are run.
+The result of the build process can be exported to a repository or automatically installed locally.
 
-The GNOME Dictionary manifest is short, because the only module is the application itself::
+Exporting to a repository
+`````````````````````````
 
-  {
-    "app-id": "org.gnome.Dictionary",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "3.26",
-    "sdk": "org.gnome.Sdk",
-    "command": "gnome-dictionary",
-    "finish-args": [
-       "--socket=x11",
-       "--share=network"
-    ],
-    "modules": [
-      {
-        "name": "gnome-dictionary",
-        "sources": [
-          {
-            "type": "archive",
-            "url": "https://download.gnome.org/sources/gnome-dictionary/3.26/gnome-dictionary-3.26.0.tar.xz",
-            "sha256": "387ff8fbb8091448453fd26dcf0b10053601c662e59581097bc0b54ced52e9ef"
-          }
-        ]
-      }
-    ]
-  }
+The ``--repo`` option allows a repository to be specified, which the resulting application will be added to. This takes the format::
 
-As can be seen, this manifest includes basic information about the application before specifying a single .tar file to be downloaded and built. More complex manifests include a sequence of modules.
+ $ flatpak-builder --repo=<repository-destination> application.id.json
 
-Cleanup
+
+.. note::
+
+  By default, flatpak-builder splits off translations and debug information into separate `.Locale` and `.Debug` extensions. These extensions are automatically exported into a repository along with the application.
+
+
+Installing builds directly
+``````````````````````````
+
+Instead of exporting to a repository, the application bundle that is produced by ``flatpak-builder`` can be automatically installed locally::
+
+  $ flatpak-builder --install application.id.json
+
+Signing
 -------
 
-After building has taken place, flatpak-builder performs a cleanup phase. This can be used to remove headers and development documentation, among other things. Two properties in the manifest file are used for this. First, a list of filename patterns can be included::
+Every commit to a Flatpak repository must be signed with a GPP signature. If ``flatpak-builder`` is being used to modify or create a repository, a GPG key must therefore be passed to it. This can be done with the ``--gpg-sign`` option, such as::
 
-  "cleanup": [ "/include", "/bin/foo-*", "*.a" ]
+  $ flatpak-builder --gpg-sign=<key-id> --repo=<repository-destination> application.id.json
 
-The second cleanup property is a list of commands that are run during the cleanup phase::
-
-  "cleanup-commands": [ "sed s/foo/bar/ /bin/app.sh" ]
-
-Cleanup properties can be set on a per-module basis, in which case only filenames that were created by that particular module will be matched.
-
-File renaming
--------------
-
-Files that are exported by a flatpak must be prefixed using the application ID. If an application's source files are not named using this convention, flatpak-builder allows them to be renamed as part of the build process. To rename application icons, desktop files and AppData files, use the ``rename-icon``, ``rename-desktop-file`` and ``rename-appdata-file`` properties.
-
-Splitting things up
--------------------
-
-By default, flatpak-builder splits off translations and debug information into separate `.Locale` and `.Debug` extensions. These 'standard' extension points are then added to the application's metadata file. You can turn this off with the ``separate-locales`` and ``no-debuginfo`` keys, but there shouldn't be any reason for it.
-
-When flatpak-builder exports the build into a repository, it automatically includes the `.Locale` and `.Debug` extensions. If you do the exporting manually, don't forget to include them.
-
-Example
--------
-
-To try flatpak-builder yourself, create a file called ``org.gnome.Dictionary.json`` and paste the Dictionary manifest JSON from above into it. Then run the following command::
-
-  $ flatpak-builder --repo=repo dictionary2 org.gnome.Dictionary.json
-
-This will:
-
-* Create a new directory called dictionary2 (equivalent to using `flatpak build-init`)
-* Download and verify the Dictionary source code
-* Build and install the source code, using the SDK rather than the host system
-* Finish the build, by setting permissions (in this case giving access to X and the network)
-* Create a new repository called repo (if it doesn't exist) and export the resulting build into it
-
-flatpak-builder will also do some other useful things, like creating a separately installable debug runtime (called ``org.gnome.Dictionary.Debug`` in this case) and a separately installable translation runtime (called ``org.gnome.Dictionary.Locale``).
-
-If you completed the tutorial in :doc:`building-simple-apps`, you can update the Dictionary application you installed with the new version that was built and exported by flatpak-builder::
-
-  $ flatpak --user update org.gnome.Dictionary
-  
-Otherwise, you need to add the repo to Flatpak and install the application. To do so::
-
-  $ flatpak --user remote-add --no-gpg-verify --if-not-exists tutorial-repo repo
-  $ flatpak --user install tutorial-repo org.gnome.Dictionary
-  
-To check that the application has been successfully updated, you can compare the sha256 commit of the installed app with the commit ID that was printed by flatpak-builder::
-
-  $ flatpak info org.gnome.Dictionary
-  $ flatpak info org.gnome.Dictionary.Locale
-
-And finally, you can run the new version of the Dictionary app::
-
-  $ flatpak run org.gnome.Dictionary
-
-Example manifests
------------------
-
-A `complete manifest for GNOME Dictionary built from Git <https://git.gnome.org/browse/gnome-dictionary/tree/data/org.gnome.Dictionary.json>`_ is available, in addition to `manifests for a range of other GNOME applications <https://git.gnome.org/browse/gnome-apps-nightly/tree/>`_.
+The ``--gpg-homedir`` option can also be used to specify the home directory of the key that is being used.

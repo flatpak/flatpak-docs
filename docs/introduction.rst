@@ -40,6 +40,27 @@ Sandboxes
 
 With Flatpak, each app is built and run in an isolated environment. By default, the application can only 'see' itself and its runtime. Access to user files, network, graphics sockets, subsystems on the bus and devices have to be explicitly granted. (As will be described later, Flatpak provides several ways to do this.) Access to other things, such as other processes, is deliberately not possible.
 
+By necessity, some resources that are inside the sandbox need to be exposed outside, to be used by the host system. These are known as "exports", since they are files that are exported out of the sandbox, and include things like the application's ``.desktop`` file and icon.
+
+Portals
+^^^^^^^
+
+Portals are a mechanism through which applications can interact with the host environment from within a sandbox. In this way, they give additional abilities to interact with data, files and services without the need to add sandbox permissions.
+
+Interface toolkits can implement transparent support for portals. If an application uses one of these toolkits, there is no additional work required to access them.
+
+Examples of capabilities that can be accessed through portals include:
+
+* Inhibit the user session from ending, suspending, idling or getting switched away
+* Network status information
+* Notifications
+* Open a URI
+* Open files with a native file chooser dialog
+* Printing
+* Screenshots
+
+Applications that aren't using a toolkit with support for portals can refer to the `xdg-desktop-portal API documentation <http://flatpak.org/xdg-desktop-portal/portal-docs.html>`_ for information on how to access them.
+
 The flatpak command
 --------------------
 

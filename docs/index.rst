@@ -16,6 +16,5 @@ Contents
    introduction
    getting-started
    building
-   working-with-the-sandbox
    publishing
    reference
