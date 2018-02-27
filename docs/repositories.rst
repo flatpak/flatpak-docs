@@ -7,12 +7,14 @@ Some aspects of repositories are addressed by other sections of the documentatio
 
 To use a repository to publish an application, it is possible to either host your own (covered in the next section, :doc:`hosting-a-repository`) or use `Flathub <http://flathub.org>`_, the primary publishing and hosting service for Flatpak applications.
 
-Whether you are hosting your own or using Flathub, once your application has been added to a repository, it can be discovered and installed by users through a software center, like GNOME Software or KDE Discover. It can also be searched for and installed through the command line. A third option is to provide a ``.flatpakref`` file which allows the application to be installed through a download link.
+Software center applications like GNOME Software or KDE Discover allow browsing repositories, and can also dynamically promote new or popular applications. If you use Flathub, the repository will typically have already been added by users, so adding an application to the repository is sufficient to make it available to them.
 
 .flatpakref files
 -----------------
 
-``.flatpakref`` files are simple description files that include information about a Flatpak application. An example::
+``.flatpakref`` files can be used in combination with repositories to provide an additional, easy way for users to install an application, often by clicking on the file or a download link.
+
+Internally, ``.flatpakref`` files are simple description files that include information about a Flatpak application. An example::
 
   [Flatpak Ref]
   Name=fr.free.Homebank
@@ -23,9 +25,17 @@ Whether you are hosting your own or using Flathub, once your application has bee
   IsRuntime=false
   GPGKey=mQINBFlD2sABEADsiUZUO...
 
-As can be seen, the file includes the ID of the application and the location of the repository that contains it, as well a link to information about the repository that provides the application's runtime. In short, the ``.flatpakref`` contains all the information needed to install the application.
+As can be seen, the file includes the ID of the application and the location of the repository that contains it, as well a link to information about the repository that provides the application's runtime. ``.flatpakref`` files therefore contain all the information needed to install an application.
 
-The ``flatpak install`` command accepts both local and remote ``.flatpakref`` files. For example::
+.. note::
+
+  ``.flatpakref`` files should include the base64-encoded version of the GPG key that was used to sign the repository. This can be obtained with the following command::
+
+  $ base64 --wrap=0 < key.gpg
+
+One advantage of ``.flatpakref`` files is that they can be used to install applications even if their repository hasn't been added by the user. In this case the repository that contains the application will either be automatically installed, or the user will be prompted to install it. This will also happen if the necessary runtime isn't present.
+
+``.flatpakref`` can be used to install applications from the command line as well as with graphical software installers. This is done with the standard ``flatpak install`` command, which accepts both local and remote ``.flatpakref`` files. For example::
 
   $ flatpak install https://flathub.org/repo/appstream/fr.free.Homebank.flatpakref
 
@@ -33,13 +43,6 @@ Or, if the same file has been downloaded::
 
   $ flatpak install fr.free.Homebank.flatpakref
 
-Alternatively, Flatpak-enabled desktops allow opening a ``.flatpakref`` file to install an application, either by clicking a local file or a download link to the file.
-
-.. note::
-
-  ``.flatpakref`` files should include the base64-encoded version of the GPG key that was used to sign the repository. This can be obtained with the following command::
-
-  $ base64 --wrap=0 < key.gpg
 
 Publishing updates
 ------------------

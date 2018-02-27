@@ -33,8 +33,10 @@ Instead of exporting to a repository, the application bundle that is produced by
 Signing
 -------
 
-Every commit to a Flatpak repository must be signed with a GPG signature. If ``flatpak-builder`` is being used to modify or create a repository, a GPG key must therefore be passed to it. This can be done with the ``--gpg-sign`` option, such as::
+Every commit to a Flatpak repository should be signed with a GPG signature. If ``flatpak-builder`` is being used to modify or create a repository, a GPG key should therefore be passed to it. This can be done with the ``--gpg-sign`` option, such as::
 
   $ flatpak-builder --gpg-sign=<key-id> --repo=<repository-destination> application.id.json
 
 The ``--gpg-homedir`` option can also be used to specify the home directory of the key that is being used.
+
+Though it generally isn't recommended, it is possible not to use GPG verification. In this case, the ``--no-gpg-verify`` option should be used when adding the repository. Note that it is necessary to become root in order to update a repository that does not have GPG verification enabled.
