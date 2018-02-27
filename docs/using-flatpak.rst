@@ -4,7 +4,7 @@ Using Flatpak
 This page provides an introduction to the most common commands needed to use Flatpak. It is not intended to be exhaustive or to cover all the options for each command (a full list of all the commands and their options can be found in the :doc:`flatpak-command-reference`.
 
 .. note::
-  Flatpak commands can be run either per-user or system-wide. All the examples in this guide use the default system-wide behavior.
+  Flatpak commands can be run either per-user or system-wide. All the examples on this page use the default system-wide behavior, which is generally the right option to use.
 
 Remotes
 -------
@@ -51,7 +51,7 @@ Applications can be found in any of your remotes using the ``search`` command. F
 Search will return any applications matching the search terms. Each search result includes the application ID and the remote that the application is in. In this example, the search term is ``gimp``.
 
 .. note::
-  Search will only work for remotes whose application metadata has been updated. This can be done by either running ``flatpak update`` or ``flatpak update --appstream``.
+  Prior to Flatpak 0.11.1, it was necessary to manually update the metadata for your remotes before search will work. This can be done by either running ``flatpak update`` or ``flatpak update --appstream``.
 
 Install applications
 ````````````````````
