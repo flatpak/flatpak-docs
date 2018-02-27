@@ -6,6 +6,8 @@ Flatpak provides several ways to distribute applications to users. For many appl
 Alternatively, it is possible to host a repository yourself, or to distribute Flatpaks as single file bundles.
 
 .. toctree::
+   :maxdepth: 2
+
    repositories
    hosting-a-repository
    single-file-bundles
