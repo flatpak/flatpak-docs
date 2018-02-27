@@ -7,12 +7,26 @@ Each runtime is paired with an SDK (Software Develpment Kit). For example, for t
 
 Applications must be built with the SDK that corresponds to their runtime. For example, an application that uses the Freedesktop 1.6 runtime in order to run must be built with the Freedesktop 1.6 SDK.
 
-Installing an SDK
------------------
+..
+  TODO: describe how SDK extensions work
 
-When you come to build a Flatpak app, it is necessary to decide which runtime it will use, and then ensure that you have installed both that runtime and the matching SDK.
+Choosing a runtime
+------------------
 
-SDKs are installed in the same way as any other runtime. For example, the command to install the GNOME 3.25 runtime and SDK is::
+When you come to build a Flatpak app, you will need to decide which runtime it will use. An overview of the runtimes that are available can be found in the :doc:`available-runtimes` page. There are deliberately only a small number of runtimes to choose from.
+
+Runtimes require regular maintenance, and application developers should generally not consider creating their own.
+
+..
+   TODO: include details of what the alternatives to creating a runtime are.
+   Might want to mention meta-apps.
+
+Installing a runtime and SDK
+----------------------------
+
+Once you have chosen a runtime for your application, it is necessary to install it as well as the matching SDK. (Runtimes and SDKs are installed in exactly the same way.)
+
+For example, the command to install the GNOME 3.25 runtime and SDK is::
 
   $ flatpak install flathub org.gnome.Platform//3.26 org.gnome.Sdk//3.26
 

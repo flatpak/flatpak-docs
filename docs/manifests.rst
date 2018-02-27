@@ -1,7 +1,7 @@
 Manifests
 =========
 
-The input to ``flatpak-builder`` is a JSON file that describes the parameters for building an application, as well as each of the modules to be bundled. This file is called the manifest. Module sources can be of several types, including ``.tar`` or ``.zip`` archives, Git or Bzr repositories, patch files or shell commands that are run.
+The input to ``flatpak-builder`` is a JSON file that describes the parameters for building an application, as well as instructions for each of the modules that are to be built. This file is called the manifest.
 
 The following example is the manifest for the GNOME Dictionary application. It is short, because only one module is built - the application itself::
 
@@ -29,9 +29,9 @@ The following example is the manifest for the GNOME Dictionary application. It i
     ]
   }
 
-As can be seen, this manifest includes basic information about the application before specifying a single .tar file to be downloaded and built. More complex manifests include a sequence of modules.
+As can be seen, this manifest includes basic information about the application before specifying a single .tar file to be downloaded and built. More complex manifests include a sequence of modules. Module sources can be of several types, including ``.tar`` or ``.zip`` archives, Git or Bzr repositories, patch files or shell commands that are run.
 
-Each of the entities that can be specified in a manifest are listed in :doc:`flatpak-builder-command-reference`, as well as the ``flatpak-builder`` man page.
+Each of the properties that can be specified in a manifest file are listed in the :doc:`flatpak-builder-command-reference`, as well as the ``flatpak-builder`` man page.
 
 .. TODO
 

@@ -1,7 +1,7 @@
 Building
 ========
 
-Documentation on how to build apps with Flatpak, including setup, how to use ``flatpak-builder`` and a quick tutorial.
+This section includes documentation on how to build apps with Flatpak. It covers runtimes and SDKs in more detail, followed by details on how use ``flatpak-builder``.
 
 .. toctree::
    :maxdepth: 2
