@@ -1,12 +1,9 @@
 Building your first Flatpak
 ===========================
 
-This tutorial provides a quick introduction to Flatpak. In it, you will learn
-how to create a basic Flatpak application, which can be installed and run.
+This tutorial provides a quick introduction to building Flatpaks. In it, you will learn how to create a basic Flatpak application, which can be installed and run.
 
-To complete this tutorial, you should have installed Flatpak by following
-`the setup guide <https://flatpak.org/getting.html>`_. You will also need to
-haves the ``flatpak-builder`` tool, which is generally available as a package.
+The :doc:`setup` page should be followed before doing this tutorial.
 
 1. Install a runtime and the matching SDK
 -----------------------------------------
@@ -14,35 +11,27 @@ haves the ``flatpak-builder`` tool, which is generally available as a package.
 Flatpak requires every app to specify a runtime that it uses for its basic
 dependencies. Each runtime has a matching SDK (Software Development Kit), which
 contains all the things that are in the runtime, plus headers and development
-tools (similar to what is typically found in -devel/-dev packages in Linux
-distributions). This SDK is required to build apps for the runtime.
+tools. This SDK is required to build apps for the runtime.
 
-In this tutorial we will use the Freedesktop runtime version 1.6. This runtime
-is provided by the Flathub repository. To add this, run::
-
-  $ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-Then, to install the runtime and the SDK, run::
+In this tutorial we will use the Freedesktop 1.6 runtime and SDK. To install these, run::
 
   $ flatpak install flathub org.freedesktop.Platform//1.6 org.freedesktop.Sdk//1.6
 
 2. Create the app
 -----------------
 
-The app that is going to be created for this tutorial is a a simple script. To
-create it, copy the following to an empty file and save it as `hello.sh`::
+The app that is going to be created for this tutorial is a simple script. To
+create it, copy the following::
 
   #!/bin/sh
   echo "Hello world, from a sandbox"
 
+Now paste this into an empty file and save it as `hello.sh`.
+
 3. Add a manifest
 -----------------
 
-Most Flatpaks are built using the `flatpak-builder` tool. This reads a manifest
-file which describes the key properties of the application and how it is to be
-built.
-
-To add a manifest to the hello world app, add the following to an empty file:
+Each Flatpak is built using a manifest file which provides basic information about the application and instructions for how it is to be built. To add a manifest to the hello world app, add the following to an empty file:
 
 .. code-block:: json
 
@@ -80,7 +69,7 @@ runtime.
 ------------------------
 
 Now that the app has a manifest, `flatpak-builder` can be used to build it.
-This is done by specifying the the manifest file and a target directory::
+This is done by specifying the manifest file and a target directory::
 
   $ flatpak-builder app-dir org.flatpak.Hello.json
 
@@ -90,7 +79,7 @@ it to the `/app` subdirectory, inside the `app-dir` directory.
 5. Test the build
 -----------------
 
-To verify that the build was successful, the following can be run::
+To verify that the build was successful, run the following::
 
   $ flatpak-builder --run app-dir org.flatpak.Hello.json hello.sh
 
