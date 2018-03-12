@@ -1,0 +1,222 @@
+# Documentation Flatpak
+# Copyright (C) 2017, Flatpak Team
+# This file is distributed under the same license as the Flatpak package.
+# Baptiste Mille-Mathias <baptiste.millemathias@gmail.com>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-28 16:16+0100\n"
+"PO-Revision-Date: 2018-03-06 13:56+0900\n"
+"Last-Translator: Baptiste Mille-Mathias\n"
+"Language-Team: ohpato <ohpato@hanmail.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko_KR\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: ../../available-runtimes.rst:2
+msgid "Available Runtimes"
+msgstr "사용 가능한 런타임들"
+
+#: ../../available-runtimes.rst:4
+msgid "This page provides information about available Flatpak runtimes. It is primarily intended as information for application developers and distributors."
+msgstr "이 페이지에서는 응용프로그램 개발자 및 배포자에게 유용한, 설치가능 플랫팩 런타임들에 관한 정보를 소개한다."
+
+#: ../../available-runtimes.rst:6
+msgid "There are currently three main runtimes available: Freedesktop, GNOME and KDE. These are all hosted on `Flathub <https://flathub.org/>`_."
+msgstr "현재 세 개의 사용 가능한 주요 런타임들 - Freedesktop, GNOME, 그리고 KDE 가 있다. 모두 `Flathub <https://flathub.org/>`_에서 호스팅하고 있다."
+
+#: ../../available-runtimes.rst:9
+msgid "Freedesktop"
+msgstr "Freedesktop"
+
+#: ../../available-runtimes.rst:11
+msgid "The Freedesktop runtime is the standard runtime that can be used for any application and contains a set of essential libraries and services, including D-Bus, GLib, PulseAudio, X11 and Wayland."
+msgstr "Freedesktop 런타임은 어떤 응용프로그램을 위해서도 사용할 수 있는 표준 런타임으로서, D-Bus, GLib, PulseAudio, X11, Wayland 등 핵심 라이브러리 및 서비스들을 포함한다."
+
+#: ../../available-runtimes.rst:13
+msgid "Available Freedesktop runtimes:"
+msgstr "사용 가능한 Freedesktop 런타임들:"
+
+#: ../../available-runtimes.rst:16 ../../available-runtimes.rst:46
+#: ../../available-runtimes.rst:64
+msgid "ID"
+msgstr "ID"
+
+#: ../../available-runtimes.rst:16 ../../available-runtimes.rst:46
+#: ../../available-runtimes.rst:64
+msgid "Description"
+msgstr "설명"
+
+#: ../../available-runtimes.rst:18
+msgid "org.freedesktop.Platform"
+msgstr "org.freedesktop.Platform"
+
+#: ../../available-runtimes.rst:18 ../../available-runtimes.rst:48
+#: ../../available-runtimes.rst:66
+msgid "Runtime"
+msgstr "Runtime"
+
+#: ../../available-runtimes.rst:19
+msgid "org.freedesktop.Platform.Locale"
+msgstr "org.freedesktop.Platform.Locale"
+
+#: ../../available-runtimes.rst:19 ../../available-runtimes.rst:49
+#: ../../available-runtimes.rst:67
+msgid "Runtime translations (extension)"
+msgstr "런타임 다국어 번역 (확장)"
+
+#: ../../available-runtimes.rst:20
+msgid "org.freedesktop.Sdk"
+msgstr "org.freedesktop.Sdk"
+
+#: ../../available-runtimes.rst:20 ../../available-runtimes.rst:50
+#: ../../available-runtimes.rst:68
+msgid "SDK"
+msgstr "SDK"
+
+#: ../../available-runtimes.rst:21
+msgid "org.freedesktop.Sdk.Debug"
+msgstr "org.freedesktop.Sdk.Debug"
+
+#: ../../available-runtimes.rst:21 ../../available-runtimes.rst:51
+#: ../../available-runtimes.rst:69
+msgid "SDK debug information (extension)"
+msgstr "SDK 디버그 정보 (확장)"
+
+#: ../../available-runtimes.rst:22
+msgid "org.freedesktop.Sdk.Locale"
+msgstr "org.freedesktop.Sdk.Locale"
+
+#: ../../available-runtimes.rst:22 ../../available-runtimes.rst:52
+#: ../../available-runtimes.rst:70
+msgid "SDK translations (extension)"
+msgstr "SDK 다국어 번역 (확장)"
+
+#: ../../available-runtimes.rst:23
+msgid "org.freedesktop.Sdk.Docs"
+msgstr "org.freedesktop.Sdk.Docs"
+
+#: ../../available-runtimes.rst:23 ../../available-runtimes.rst:53
+#: ../../available-runtimes.rst:71
+msgid "SDK documentation (extension)"
+msgstr "SDK 문서 (확장)"
+
+#: ../../available-runtimes.rst:27
+msgid "GNOME"
+msgstr "GNOME"
+
+#: ../../available-runtimes.rst:29
+msgid "The GNOME runtime is appropriate for any application that uses the GNOME platform. It is based on the Freedesktop runtime and adds the GNOME platform, including:"
+msgstr "GNOME 런타임은 GNOME 플랫폼을 사용하는 응용프로그램들을 위해 적합한 런타임으로서, Freedesktop 런타임을 기초로 GNOME 플랫폼을 더한 것이며, 다음을 포함한다:"
+
+#: ../../available-runtimes.rst:31
+msgid "Clutter"
+msgstr "Clutter"
+
+#: ../../available-runtimes.rst:32
+msgid "Gjs"
+msgstr "Gjs"
+
+#: ../../available-runtimes.rst:33
+msgid "GObject Introspection"
+msgstr "GObject Introspection"
+
+#: ../../available-runtimes.rst:34
+msgid "GStreamer"
+msgstr "GStreamer"
+
+#: ../../available-runtimes.rst:35
+msgid "GVFS"
+msgstr "GVFS"
+
+#: ../../available-runtimes.rst:36
+msgid "Libnotify"
+msgstr "Libnotify"
+
+#: ../../available-runtimes.rst:37
+msgid "Libsecret"
+msgstr "Libsecret"
+
+#: ../../available-runtimes.rst:38
+msgid "LibSoup"
+msgstr "LibSoup"
+
+#: ../../available-runtimes.rst:39
+msgid "PyGObject"
+msgstr "PyGObject"
+
+#: ../../available-runtimes.rst:40
+msgid "Vala"
+msgstr "Vala"
+
+#: ../../available-runtimes.rst:41
+msgid "WebKitGTK"
+msgstr "WebKitGTK"
+
+#: ../../available-runtimes.rst:43
+msgid "Available GNOME runtimes:"
+msgstr "사용 가능한 GNOME 런타임들:"
+
+#: ../../available-runtimes.rst:48
+msgid "org.gnome.Platform"
+msgstr "org.gnome.Platform"
+
+#: ../../available-runtimes.rst:49
+msgid "org.gnome.Platform.Locale"
+msgstr "org.gnome.Platform.Locale"
+
+#: ../../available-runtimes.rst:50
+msgid "org.gnome.Sdk"
+msgstr "org.gnome.Sdk"
+
+#: ../../available-runtimes.rst:51
+msgid "org.gnome.Sdk.Debug"
+msgstr "org.gnome.Sdk.Debug"
+
+#: ../../available-runtimes.rst:52
+msgid "org.gnome.Sdk.Locale"
+msgstr "org.gnome.Sdk.Locale"
+
+#: ../../available-runtimes.rst:53
+msgid "org.gnome.Sdk.Docs"
+msgstr "org.gnome.Sdk.Docs"
+
+#: ../../available-runtimes.rst:57
+msgid "KDE"
+msgstr "KDE"
+
+#: ../../available-runtimes.rst:59
+msgid "The KDE runtime is also based on the Freedesktop runtime and adds Qt and KDE Frameworks. It is appropriate for any application that makes use of the KDE platform and most Qt-based applications."
+msgstr "KDE 런타임 또한 Freedesktop 런타임을 기초로 Qt와 KDE 프레임워크를 더한것이며, KDE 플랫폼을 사용하는 응용프로그램 및 Qt 기반 응용을 위해 적합하다."
+
+#: ../../available-runtimes.rst:61
+msgid "Available KDE runtimes:"
+msgstr "사용 가능한 KDE 런타임들 :"
+
+#: ../../available-runtimes.rst:66
+msgid "org.kde.Platform"
+msgstr "org.kde.Platform"
+
+#: ../../available-runtimes.rst:67
+msgid "org.kde.Platform.Locale"
+msgstr "org.kde.Platform.Locale"
+
+#: ../../available-runtimes.rst:68
+msgid "org.kde.Sdk"
+msgstr "org.kde.Sdk"
+
+#: ../../available-runtimes.rst:69
+msgid "org.kde.Sdk.Debug"
+msgstr "org.kde.Sdk.Debug"
+
+#: ../../available-runtimes.rst:70
+msgid "org.kde.Sdk.Locale"
+msgstr "org.kde.Sdk.Locale"
+
+#: ../../available-runtimes.rst:71
+msgid "org.kde.Sdk.Docs"
+msgstr "org.kde.Sdk.Docs"
