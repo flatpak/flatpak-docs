@@ -1,0 +1,235 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Flatpak Team. Licensed under Creative Commons Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-06 16:55+0900\n"
+"PO-Revision-Date: 2018-03-14 17:07+0900\n"
+"Last-Translator: ohpato <ohpato@hanmail.net>\n"
+"Language-Team: ohpato <ohpato@hanmail.net>\n"
+"Language: ko_KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../first-build.rst:2
+msgid "Building your first Flatpak"
+msgstr "첫번째 플랫팩 응용프로그램 빌드"
+
+#: ../../first-build.rst:4
+msgid ""
+"This tutorial provides a quick introduction to building Flatpaks. In it, you "
+"will learn how to create a basic Flatpak application, which can be installed "
+"and run."
+msgstr ""
+"이 튜토리얼은 플랫팩을 간략히 소개한다. 이를 통해 기본 플랫팩 응용프로그램을 "
+"생성하고, 설치 및 실행하는 방법을 배운다."
+
+#: ../../first-build.rst:6
+msgid "The :doc:`setup` page should be followed before doing this tutorial."
+msgstr ""
+"이 튜토리얼을 시작하기 전에 :doc:`setup` 페이지를 참고하여 필요한 설정을 완"
+"료 했는지 확인하기 바란다."
+
+#: ../../first-build.rst:9
+msgid "1. Install a runtime and the matching SDK"
+msgstr "1. 런타임과 SDK 쌍 설치"
+
+#: ../../first-build.rst:11
+msgid ""
+"Flatpak requires every app to specify a runtime that it uses for its basic "
+"dependencies. Each runtime has a matching SDK (Software Development Kit), "
+"which contains all the things that are in the runtime, plus headers and "
+"development tools. This SDK is required to build apps for the runtime."
+msgstr ""
+"플랫팩은 각 응용프로그램이 런타임을 지정하여 기본적인 의존성을 해결하도록 한"
+"다. 각 런타임에는 그와 짝을 이루는 SDK(Software Development Kit)가 존재하는"
+"데, 여기에는 실행시간에 필요한 모든 자원 및 헤더파일과 개발도구들이 담겨있"
+"다. SDK는 응용프로그램을 빌드할 때 사용된다."
+
+#: ../../first-build.rst:16
+msgid ""
+"In this tutorial we will use the Freedesktop 1.6 runtime and SDK. To install "
+"these, run::"
+msgstr ""
+"이 튜토리얼는 Freedesktop 런타임 버전 1.6을 사용할 예정이며, 해당 런타임은 플"
+"랫팩 저장소에서 제공한다. 저장소를 추가하려면 다음과 같이 입력한다:"
+
+#: ../../first-build.rst:21
+msgid "2. Create the app"
+msgstr "2. 응용프로그램 생성"
+
+#: ../../first-build.rst:23
+msgid ""
+"The app that is going to be created for this tutorial is a simple script. To "
+"create it, copy the following::"
+msgstr ""
+"튜토리얼을 통해 생성하는 응용프로그램은 간단한 스크립트이다. 빠른 생성을 위"
+"해 다음 내용을 빈 파일에 복사한다::"
+
+#: ../../first-build.rst:29
+msgid "Now paste this into an empty file and save it as `hello.sh`."
+msgstr "이제 새 파일에 붙여넣고 `hello.sh`라는 이름으로 저장한다."
+
+#: ../../first-build.rst:32
+msgid "3. Add a manifest"
+msgstr "3. manifest 추가"
+
+#: ../../first-build.rst:34
+msgid ""
+"Each Flatpak is built using a manifest file which provides basic information "
+"about the application and instructions for how it is to be built. To add a "
+"manifest to the hello world app, add the following to an empty file:"
+msgstr ""
+"각 플랫팩은 빌드 시, 응용프로그램에 대한 기본 정보와 빌드 방법을 기술하고 있"
+"는 manifest 파일을 사용한다. Hello world 응용을 위해 manifest를 추가하려면 "
+"빈 파일에 다음과 같은 내용을 추가한다:"
+
+#: ../../first-build.rst:61
+msgid ""
+"Now save the file alongside `hello.sh` and call it `org.flatpak.Hello.json`."
+msgstr ""
+"파일을 `hello.sh` 위치에 저장하고, `org.flatpak.Hello.json` 라고 명명한다."
+
+#: ../../first-build.rst:63
+msgid ""
+"In a more complex application, the manifest would list multiple modules. The "
+"last one would typically be the application itself, and the earlier ones "
+"would be dependencies that are bundled with the app because they are not "
+"part of the runtime."
+msgstr ""
+"보다 복잡한 응용프로그램의 경우 manifest는 여러개의 모듈로 구성될 수 있다. "
+"이 때, 일반적으로 마지막에 나열된 모듈이 응용프로그램 자신이고, 그보다 위의 "
+"모듈들은 응용프로그램이 의존하는 자원으로서, 런타임에 포함되지 않아 응용프로"
+"그램과 함께 묶여 배포된다."
+
+#: ../../first-build.rst:69
+msgid "4. Build the application"
+msgstr "4. 응용프로그램 빌드"
+
+#: ../../first-build.rst:71
+msgid ""
+"Now that the app has a manifest, `flatpak-builder` can be used to build it. "
+"This is done by specifying the manifest file and a target directory::"
+msgstr ""
+"응용프로그램의 manifest가 준비되면, 플랫팩 빌더(`flatpak-builder`)를 이용하"
+"여 빌드할 수 있다. 빌드 명령 시 manifest파일과 빌드된 결과물이 위치할 디렉토"
+"리를 지정할 수 있다::"
+
+#: ../../first-build.rst:76
+msgid ""
+"This command will build each module that is listed in the manifest and "
+"install it to the `/app` subdirectory, inside the `app-dir` directory."
+msgstr ""
+"위 명령을 입력하면 manifest에 열거된 각 모듈이 빌드되고, `app-dir` 디렉토리"
+"를 기준으로 하여 `/app` 아래에 빌드된 결과물을 설치한다."
+
+#: ../../first-build.rst:80
+msgid "5. Test the build"
+msgstr "5. 빌드 테스트"
+
+#: ../../first-build.rst:82
+msgid "To verify that the build was successful, run the following::"
+msgstr "빌드가 성공적이었는지 확인하려면 다음과 같이 실행 해 본다::"
+
+#: ../../first-build.rst:86
+msgid "Congratulations, you've made an app!"
+msgstr "응용프로그램이 성공적으로 빌드되었다."
+
+#: ../../first-build.rst:89
+msgid "6. Put the app in a repository"
+msgstr "6. 저장소에 응용프로그램 추가"
+
+#: ../../first-build.rst:91
+msgid ""
+"Before you can install and run the app, it first needs to be put in a "
+"repository. This is done by passing the `--repo` argument to `flatpak-"
+"builder`::"
+msgstr ""
+"빌드한 응용프로그램을 내려받아 설치하고 실행하고자 한다면, 빌드 결과물을 저장"
+"소로 내보내야 한다(export). 이를 위해 플랫팩 빌더의 실행 명령에 `—repo` 옵션"
+"을 주어 실행한다.::"
+
+#: ../../first-build.rst:96
+msgid ""
+"This does the build again, and at the end exports the result to a local "
+"directory called `repo`. Note that `flatpak-builder` keeps a cache of "
+"previous builds in the `.flatpak-builder` subdirectory, so doing a second "
+"build like this is very fast."
+msgstr ""
+"위와 같이 실행하면 응용프로그램을 다시 한 번 빌드하고, 결과물을 `repo`라는 로"
+"컬 디렉토리로 보낸다(export). 플랫팩 빌더는 `.flatpak-builder` 디렉토리에 이"
+"전에 빌드한 결과물을 캐시하고 있음을 알아두자. 두 번째 빌드부터는 더욱 빠르"
+"게 수행된다."
+
+#: ../../first-build.rst:101
+msgid ""
+"This second time we passed in `--force-clean`, which means that the "
+"previously created `app-dir` directory was deleted before the new build was "
+"started."
+msgstr ""
+"위에서 명령행 매개변수로 `—force-clean` 옵션을 주었는데, 기존에 생성한 `app-"
+"dir` 디렉토리가 발견될 경우 강제로 삭제하고 새로 시작하라는 뜻이다."
+
+#: ../../first-build.rst:105
+msgid "7. Install the app"
+msgstr "7. 응용프로그램 설치"
+
+#: ../../first-build.rst:107
+msgid ""
+"Now we're ready to add the repository that was just created and install the "
+"app. This is done with two commands::"
+msgstr ""
+"이제 막 생성된 저장소를 추가하고 응용프로그램을 설치할 준비가 되었다. 다음 "
+"두 명령어를 입력 해 보자::"
+
+#: ../../first-build.rst:113
+msgid ""
+"The first command adds the repository that was created in the previous step. "
+"The second command installs the app from the repository."
+msgstr ""
+"첫번째 명령은 위에서 막 생성한 저장소를 추가하는 명령이다. 두번째 명령은 저장"
+"소로부터 응용프로그램을 받아 설치하는 명령이다."
+
+#: ../../first-build.rst:116
+msgid ""
+"Both these commands use the `--user` argument, which means that the "
+"repository and the app are added per-user rather than system-wide. This is "
+"useful for testing."
+msgstr ""
+"두 명령 모두 `—user` 매개변수를 사용한다. 이는 해당 저장소와 응용프로그램이 "
+"모두 시스템 전역적으로 추가(system-wide)된 것이 아닌, 사용자별로(per-user) 추"
+"가되었음을 의미한다. 테스팅을 위해서는 사용자별 추가 방식이 유용하다."
+
+#: ../../first-build.rst:119
+msgid ""
+"Note that the repository was added with `--no-gpg-verify`, since a GPG key "
+"wasn't specified when the app was built. This is fine for testing, but for "
+"official repositories you should sign them with a private GPG key."
+msgstr ""
+"저장소 추가 시 `—no-gpg-verify` 옵션을 사용하였다. 응용프로그램을 빌드할 때 "
+"GPG 키를 지정하지 않았기 때문이다. 테스팅 시에는 무방하나, 공식 저장소에 올려"
+"둘 때에는 개인 GPG 키로 응용프로그램에 서명 해야 한다."
+
+#: ../../first-build.rst:124
+msgid "8. Run the app"
+msgstr "8. 응용프로그램 실행"
+
+#: ../../first-build.rst:126
+msgid ""
+"All that's left is to try the app. This can be done with the following "
+"command::"
+msgstr ""
+"이제 남은 작업은 응용프로그램을 실행하는 것 뿐이다. 다음과 같이 실행할 수 있"
+"다. ::"
+
+#: ../../first-build.rst:130
+msgid "This runs the app, so that it prints `Hello world, from a sandbox`."
+msgstr ""
+"성공적으로 실행되면 `Hello world, from a sandbox` 라는 메시지가 출력된다."
