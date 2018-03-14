@@ -8,16 +8,20 @@ msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-06 16:55+0900\n"
-"PO-Revision-Date: 2018-03-14 17:07+0900\n"
-"Last-Translator: ohpato <ohpato@hanmail.net>\n"
+"PO-Revision-Date: 2018-03-13 17:18+0900\n"
 "Language-Team: ohpato <ohpato@hanmail.net>\n"
-"Language: ko_KR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.6\n"
+"Last-Translator: ohpato <ohpato@hanmail.net>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"Language: ko_KR\n"
 
-#: ../../flatpak-builder-command-reference.rst:2
-msgid "Flatpak Builder Command Reference"
-msgstr "플랫팩 빌더 명령어 레퍼런스"
+#: ../../reference.rst:2
+msgid "Reference Documentation"
+msgstr "레퍼런스 문서"
+
+#: ../../reference.rst:4
+msgid "Reference documentation for flatpak and flatpak-builder."
+msgstr "플랫팩과 플랫팩 빌더에 관한 레퍼런스 문서."
