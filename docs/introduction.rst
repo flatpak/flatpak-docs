@@ -66,8 +66,6 @@ The flatpak command
 
 ``flatpak`` is the command that is used to find, install and remove applications. ``flatpak --help`` provides a full list of available commands.
 
-Most flatpak commands are performed system-wide by default. To perform a command for the current user only, use the ``--user`` option. This allows runtimes and application bundles to be installed per-user, for instance.
-
 For more information on flatpak commands, see the :doc:`flatpak-command-reference`
 
 Identifiers
@@ -93,6 +91,19 @@ Typically it is sufficient to refer to objects using their reverse DNS identifie
 Flatpak allows architectures and versions to be specified using an object's identifier triple. This takes the form of ``name/architecture/branch``, such as ``com.company.App/i386/stable``. (Branch is the term used to refer to versions of the same object.) The first part of the triple is the reverse DNS name, the second part is the architecture, and the third part is the branch.
 
 The Flatpak CLI will provide feedback if an identifier triple is required, instead of the standard object ID.
+
+System versus user
+------------------
+
+Flatpak commands can be run either system-wide or per-user. Applications and runtimes that are installed system-wide are available to and shared between all users on the system. Applications and runtimes that are installed per-user are only available to the user that installed them.
+
+The same principle applies to repositories - repositories that have been added system-wide are available to all users, whereas per-user repositories can only be used by a particular user.
+
+Flatpak commands are run system-wide by default, since it reduces redundancy. If you are installing applications for day-to-day usage, it is recommended to stick with this default behavior.
+
+However, running commands per-user can be useful for testing and development purposes, since objects that are installed in this way won't be available to other users on the system. To do this, use the ``--user`` option, which can be used in combination with most ``flatpak`` commands.
+
+Commands behave in exactly the same way if they are run per-user rather than system-wide.
 
 Under the hood
 --------------
