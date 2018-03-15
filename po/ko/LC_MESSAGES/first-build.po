@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-06 16:55+0900\n"
-"PO-Revision-Date: 2018-03-14 17:07+0900\n"
+"PO-Revision-Date: 2018-03-15 06:50+0900\n"
 "Last-Translator: ohpato <ohpato@hanmail.net>\n"
 "Language-Team: ohpato <ohpato@hanmail.net>\n"
 "Language: ko_KR\n"
@@ -34,8 +34,8 @@ msgstr ""
 #: ../../first-build.rst:6
 msgid "The :doc:`setup` page should be followed before doing this tutorial."
 msgstr ""
-"이 튜토리얼을 시작하기 전에 :doc:`setup` 페이지를 참고하여 필요한 설정을 완"
-"료 했는지 확인하기 바란다."
+"이 튜토리얼을 시작하기 전에 :doc:`설정하기` 페이지를 참고하여 필요한 설정을 "
+"완료 했는지 확인하기 바란다."
 
 #: ../../first-build.rst:9
 msgid "1. Install a runtime and the matching SDK"
@@ -140,7 +140,7 @@ msgstr "빌드가 성공적이었는지 확인하려면 다음과 같이 실행 
 
 #: ../../first-build.rst:86
 msgid "Congratulations, you've made an app!"
-msgstr "응용프로그램이 성공적으로 빌드되었다."
+msgstr "응용프로그램이 성공적으로 빌드되었다!"
 
 #: ../../first-build.rst:89
 msgid "6. Put the app in a repository"
