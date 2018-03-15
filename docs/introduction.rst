@@ -5,13 +5,13 @@ Flatpak is a technology for building, distributing, installing and running appli
 
 Flatpak has been designed and implemented with a number of goals:
 
-* Allow applications to be installed on any Linux distribution.
+* Allow the same application build to be installed on any Linux distribution.
 * Provide consistent environments for applications, to facilitate testing and reduce bugs.
-* Decouple applications from the operating system, so that applications don't depend on specific versions of each distribution.
-* Allow applications to bundle their own dependencies, so that they can use libraries that aren't provided by a Linux distribution, and so they can depend on specific versions or even patched versions of a library.
+* Ensure forward compatibility of applications, by allowing multiple versions of runtimes to be simultaneously installed.
+* Allow applications to easily use libraries that aren't available in Linux distributions (or aren't consistently available).
 * Increase the security of Linux desktops, by isolating applications in sandboxes.
 
-More information about Flatpak can be found on `flatpak.org <http://flatpak.org/>`_.
+General information about Flatpak can be found on `flatpak.org <http://flatpak.org/>`_.
 
 How it works
 ------------
@@ -23,50 +23,53 @@ Flatpak can be understood through a small number of key concepts. These also hel
 Runtimes
 ^^^^^^^^
 
-Runtimes provide the basic dependencies that are used by applications. Various runtimes are available, from more minimal (but more stable) Freedesktop runtimes, to larger runtimes produced by desktops like GNOME or KDE. (See :doc:`available-runtimes` for an overview of the runtimes that are currently available.)
+Runtimes provide the basic dependencies that are used by applications. Each application must be built against a runtime, and this runtime must be installed on a host system in order for the application to run (runtimes are usually automatically installed as required). Multiple different runtimes can be installed at the same time, including different versions of the same runtime.
 
-Each application must be built against a runtime, and this runtime must be installed on a host system in order for the application to run. Users can install multiple different runtimes at the same time, including different versions of the same runtime.
+A small number of runtimes are available, including the minimal and stable Freedesktop runtimes, as well as runtimes which contain the GNOME and KDE stacks. (See :doc:`available-runtimes` for an overview of the runtimes that are currently available.)
 
-.. tip::
-  Each runtime can be thought of as a ``/usr`` filesystem. Indeed, when an application is run, its runtime is mounted at ``/usr``.
+Runtimes are distribution agnostic and do not depend on particular distribution versions. This means that they provide a stable, cross-distribution base for applications, and allow applications to continue to work irrespective of operating system updates.
 
 Bundled libraries
 ^^^^^^^^^^^^^^^^^
 
-If an application requires any dependencies that aren't in its runtime, they can be bundled along with the application itself. This allows applications to use dependencies that aren't available in a distribution, or to use a different version of a dependency from the one that's installed on the host.
+If an application requires any dependencies that aren't in its runtime, they can be bundled as part of the application. This gives application developers flexibility regarding the dependencies that they use, including using:
+
+- libraries that aren't available in a distribution or runtime
+- different versions of libraries from the ones that are in a distribution or runtime
+- patched versions of libraries
 
 Sandboxes
 ^^^^^^^^^
 
-With Flatpak, each app is built and run in an isolated environment. By default, the application can only 'see' itself and its runtime. Access to user files, network, graphics sockets, subsystems on the bus and devices have to be explicitly granted. (As will be described later, Flatpak provides several ways to do this.) Access to other things, such as other processes, is deliberately not possible.
+With Flatpak, each application is built and run in an isolated environment, which is called the 'sandbox'. Each sandbox contains an application and its runtime. By default, the application can only access the contents of its sandbox. Access to user files, network, graphics sockets, subsystems on the bus and devices have to be explicitly granted. Access to other things, such as other processes, is deliberately not possible.
 
-By necessity, some resources that are inside the sandbox need to be exposed outside, to be used by the host system. These are known as "exports", since they are files that are exported out of the sandbox, and include things like the application's ``.desktop`` file and icon.
+By necessity, some resources that are inside the sandbox need to be exposed outside, to be used by the host system. These are known as 'exports', since they are files that are exported out of the sandbox, and include things like the application's ``.desktop`` file and icon.
 
 Portals
 ^^^^^^^
 
-Portals are a mechanism through which applications can interact with the host environment from within a sandbox. In this way, they give additional abilities to interact with data, files and services without the need to add sandbox permissions.
-
-Interface toolkits can implement transparent support for portals. If an application uses one of these toolkits, there is no additional work required to access them.
+Portals are a mechanism through which applications can interact with the host environment from within a sandbox. They give the ability to interact with data, files and services without the need to add sandbox permissions.
 
 Examples of capabilities that can be accessed through portals include:
 
-* Inhibit the user session from ending, suspending, idling or getting switched away
-* Network status information
-* Notifications
-* Open a URI
-* Open files with a native file chooser dialog
+* Opening files with a native file chooser dialog
+* Opening URIs
 * Printing
-* Screenshots
+* Showing notifications
+* Taking screenshots
+* Inhibiting the user session from ending, suspending, idling or getting switched away
+* Getting network status information
 
-Applications that aren't using a toolkit with support for portals can refer to the `xdg-desktop-portal API documentation <http://flatpak.org/xdg-desktop-portal/portal-docs.html>`_ for information on how to access them.
+Interface toolkits can implement transparent support for portals. If an application uses one of these toolkits, there is no additional work required to access them.
+
+Applications that aren't using a toolkit with support for portals can refer to the `xdg-desktop-portal API documentation <https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for information on how to access them.
 
 The flatpak command
 --------------------
 
-``flatpak`` is the command that is used to find, install and remove applications. ``flatpak --help`` provides a full list of available commands.
+``flatpak`` is the primary Flatpak command, and can be used to find, install and remove applications. Specific commands are appended to ``flatpak``. For example, the command to install something is ``flatpak install``.
 
-For more information on flatpak commands, see the :doc:`flatpak-command-reference`
+``flatpak --help`` provides the full list of available commands, as does the :doc:`flatpak-command-reference`.
 
 Identifiers
 -----------
