@@ -20,18 +20,24 @@ Then run ``make html`` in the ``docs`` directory.
 Audience
 --------
 
-Desktop application developers are primary audience for the Flatpak docs, particularly the authors of existing popular and sought after applications.
+Desktop application developers are the primary audience for the Flatpak docs, particularly the authors of existing applications, including those from non-Linux platforms.
 
-The docs should reflect popular practice amongst this audience wherever possible, such as using Git for version control. Where specific tools and languages need to be featured, the most popular ones ought to be covered first.
+The docs should reflect popular practice amongst this audience wherever possible and not assume that applications are coming from the Linux desktop space. In practical terms, this means that we should expect:
 
-The goal is to attract application developers who are not traditionally associated with the Linux desktop. Therefore, traditional Linux desktop conventions shoud not be assumed.
+- Git for version control
+- GitHub for hosting
+- Freedesktop runtimes
+- No prior knowledge of Linux desktop conventions, such as ``.desktop`` files, AppStream and D-Bus
+
+Outside of these basic defaults, special separate attention should be paid to popular cross-platform technologies such as Electron and Qt.
 
 Guidelines
 ----------
 
 Guidelines for those who want to contribute to the docs:
 
-- Explain basic Flatpak concepts and standard application developer workflows
+- Explain basic Flatpak concepts
+- Focus on standard application developer workflows
 - Use the docs to explain the benefits of Flatpak and why a developer might use it
 - Only cover what's essential for application developers - don't include details of Flatpak internals unless absolutely necessary
 - Provide a developer experience that's as smooth and frictionless as possible
