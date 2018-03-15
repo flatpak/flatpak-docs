@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-06 16:55+0900\n"
-"PO-Revision-Date: 2018-03-14 17:14+0900\n"
+"PO-Revision-Date: 2018-03-15 06:53+0900\n"
 "Language-Team: ohpato <ohpato@hanmail.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../hosting-a-repository.rst:2
 msgid "Hosting a repository"
-msgstr "저장소 운영(hosting)"
+msgstr "저장소 운영하기"
 
 #: ../../hosting-a-repository.rst:4
 msgid ""
@@ -28,7 +28,7 @@ msgid ""
 "repositories. The resulting OSTree repository can be hosted on a web server "
 "for consumption by users."
 msgstr ""
-":doc:`flatpak-builder` 섹션은 저장소를 생성하는 방법을 설명한다. 그 결과물인 "
+":doc:`플랫팩 빌더` 섹션은 저장소를 생성하는 방법을 설명한다. 그 결과물인 "
 "OSTree 저장소를 웹 서버 상에서 호스팅하여 다른 사용자들이 접근하여 사용토록 "
 "할 수 있다."
 
