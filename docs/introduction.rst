@@ -73,12 +73,13 @@ For more information on flatpak commands, see the :doc:`flatpak-command-referenc
 Identifiers
 -----------
 
-Flatpak identifies each application, runtime and SDK using a unique name, which is sometimes used as part of a name/arch/branch triple.
+Flatpak identifies each application and runtime using a unique identifier, which takes the form of an inverse DNS address, such as ``com.company.App``. The final segment of this address is the object's name, and the preceding part is the domain that it belongs to.
 
-Naming
-^^^^^^
+.. note::
 
-Flatpak names take the form of an inverse DNS address, such as ``com.company.App``. The final segment of this address is the object's name, and the preceding part is the domain that it belongs to. In order to prevent name conflicts, this domain should correspond to a DNS registered address. This means using a domain from a website, either for an application or an organization. For instance, if application ``App`` has its own website at ``app.com``, its Flatpak name would be ``com.app.App``. Multiple applications can belong to the same domain, such as ``org.organization.App1`` and ``org.organization.App2``.
+  Flatpak's reverse DNS identifiers prevent naming conflicts. They also correspond to the identifiers used by D-Bus.
+
+In order to ensure uniqueness, the domain part of each identifier should correspond to a registered DNS address. This means using a domain from a website, either for an application or an organization. For instance, the developers of ``com.company.App`` would be expected to have registered the ``company.com`` web domain.  Multiple applications can belong to the same domain, such as ``com.company.App1`` and ``com.company.App2``.
 
 If you do not have a registered domain for your application, it is easy to use a third party website to get one. For example, Github allows the creation of personal pages that can be used for this purpose. Here, a personal namespace of ``name.github.io`` could be used as the basis of application identifier ``io.github.name.App``.
 
@@ -87,7 +88,11 @@ If an application provides a D-Bus service, the D-Bus service name is expected t
 Identifier triples
 ^^^^^^^^^^^^^^^^^^
 
-Many flatpak commands only require the name of an application, runtime or SDK. However, in some circumstances it is also necessary to specify the architecture and branch (branches allow a particular version to be specified). This is done using a name/arch/branch triple. For example: ``org.gnome.Sdk/x86_64/3.14`` or ``org.gnome.Builder/i386/master``.
+Typically it is sufficient to refer to objects using their reverse DNS identifier. However, in some situations it is necessary to refer to a specific version of an object, or to a specific architecture. For example, some applications might be available as a stable and a testing version, in which case it is necessary to specify which one you want to install.
+
+Flatpak allows architectures and versions to be specified using an object's identifier triple. This takes the form of ``name/architecture/branch``, such as ``com.company.App/i386/stable``. (Branch is the term used to refer to versions of the same object.) The first part of the triple is the reverse DNS name, the second part is the architecture, and the third part is the branch.
+
+The Flatpak CLI will provide feedback if an identifier triple is required, instead of the standard object ID.
 
 Under the hood
 --------------
