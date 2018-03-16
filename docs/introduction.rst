@@ -64,6 +64,15 @@ Interface toolkits can implement transparent support for portals. If an applicat
 
 Applications that aren't using a toolkit with support for portals can refer to the `xdg-desktop-portal API documentation <https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for information on how to access them.
 
+Repositories
+^^^^^^^^^^^^
+
+Flatpak applications and runtimes are typically stored and published using repositories, which behave very similarly to Git repositories. A Flatpak repository can contain a single object or multiple objects, and each object is versioned, which allows upgrading and even downgrading.
+
+Each system which is using Flatpak can be configured to access any number of remote repositories. Once a system has been configured to access a 'remote', the remote repository's content can be inspected and searched, and it can be used as the source of applications and runtimes.
+
+When an update is performed, new versions of installed applications and runtimes are downloaded from the relevant remotes. Like with Git, only the difference between versions is downloaded, which makes the process very efficient.
+
 Under the hood
 --------------
 
