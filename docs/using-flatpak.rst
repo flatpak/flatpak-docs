@@ -1,15 +1,54 @@
 Using Flatpak
 =============
 
-This page provides an introduction to the most common commands needed to use Flatpak. It is not intended to be exhaustive or to cover all the options for each command (a full list of all the commands and their options can be found in the :doc:`flatpak-command-reference`.
+This page provides an introduction to the ``flatpak`` command line tool, including the most common commands needed to use Flatpak.
+
+The flatpak command
+--------------------
+
+``flatpak`` is the primary Flatpak command, to which specific commands are appended. For example, the command to install something is ``flatpak install`` and the command to uninstall is ``flatpak uninstall``.
+
+Identifiers
+-----------
+
+Flatpak identifies each application and runtime using a unique identifier, which takes the form of an inverse DNS address, such as ``com.company.App``. The final segment of this address is the object's name, and the preceding part is the domain that it belongs to, which should belong to the developer. Multiple applications can belong to the same domain, such as ``com.company.App1`` and ``com.company.App2``.
+
+Flatpak's reverse DNS identifiers prevent naming conflicts. They also correspond to the identifiers used by D-Bus.
 
 .. note::
-  Flatpak commands can be run either per-user or system-wide. All the examples on this page use the default system-wide behavior, which is generally the right option to use.
 
-Remotes
--------
+  Developers ought to ensure that the domain part of their application ID corresponds to a registered DNS address. This means using a domain from a website, either for an application or an organization. For instance, the developers of ``com.company.App`` would be expected to have registered the ``company.com`` web domain.
 
-Remotes are the repositories from which applications and runtimes can be installed.
+  If you do not have a registered domain for your application, it is easy to use a third party website to get one. For example, Github allows the creation of personal pages that can be used for this purpose. Here, a personal namespace of ``name.github.io`` could be used as the basis of application identifier ``io.github.name.App``.
+
+  If an application provides a D-Bus service, the D-Bus service name is expected to be the same as the application name.
+
+Identifier triples
+``````````````````
+
+Typically it is sufficient to refer to objects using their reverse DNS identifier. However, in some situations it is necessary to refer to a specific version of an object, or to a specific architecture. For example, some applications might be available as a stable and a testing version, in which case it is necessary to specify which one you want to install.
+
+Flatpak allows architectures and versions to be specified using an object's identifier triple. This takes the form of ``name/architecture/branch``, such as ``com.company.App/i386/stable``. (Branch is the term used to refer to versions of the same object.) The first part of the triple is the reverse DNS name, the second part is the architecture, and the third part is the branch.
+
+The Flatpak CLI provides feedback if an identifier triple is required, instead of the standard object ID.
+
+System versus user
+------------------
+
+Flatpak commands can be run either system-wide or per-user. Applications and runtimes that are installed system-wide are available to all users on the system. Applications and runtimes that are installed per-user are only available to the users that installed them.
+
+The same principle applies to repositories - repositories that have been added system-wide are available to all users, whereas per-user repositories can only be used by a particular user.
+
+Flatpak commands are run system-wide by default. If you are installing applications for day-to-day usage, it is recommended to stick with this default behavior.
+
+However, running commands per-user can be useful for testing and development purposes, since objects that are installed in this way won't be available to other users on the system. To do this, use the ``--user`` option, which can be used in combination with most ``flatpak`` commands.
+
+Commands behave in exactly the same way if they are run per-user rather than system-wide.
+
+Basic commands
+--------------
+
+This section covers basic commands needed to install, run and manage Flatpak applications. For the full list of Flatpak commands, run ``flatpak --help`` or see the :doc:`flatpak-command-reference`.
 
 List remotes
 ````````````
@@ -23,7 +62,7 @@ This gives a list of the existing remotes that have been added. The list indicat
 Add a remote
 ````````````
 
-Adding a remote allows you to search and list its contents, and to install applications from it. The most convenient way to add a remote is by using a ``.flatpakrepo`` file, which includes both the details of the remote and its GPG key::
+The most convenient way to add a remote is by using a ``.flatpakrepo`` file, which includes both the details of the remote and its GPG key::
 
  $ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
@@ -37,9 +76,6 @@ To remove a remote, run::
  $ flatpak remote-delete flathub
 
 In this case, ``flathub`` is the remote's local name.
-
-Installing applications
------------------------
 
 Search
 ``````
@@ -76,9 +112,6 @@ Running applications
 Once an application has been installed, it can be launched using the ``run`` command and its application ID::
 
  $ flatpak run org.gimp.GIMP
-
-Managing your applications
---------------------------
 
 Updating
 ````````

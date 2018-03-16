@@ -13,17 +13,17 @@ Flatpak has been designed and implemented with a number of goals:
 
 General information about Flatpak can be found on `flatpak.org <http://flatpak.org/>`_.
 
-How it works
-------------
+Basic concepts
+--------------
 
-Flatpak can be understood through a small number of key concepts. These also help to explain how it differs from traditional software packages.
+Flatpak can be understood through a small number of key concepts.
 
 .. image:: ../images/diagram.svg
 
 Runtimes
 ^^^^^^^^
 
-Runtimes provide the basic dependencies that are used by applications. Each application must be built against a runtime, and this runtime must be installed on a host system in order for the application to run (runtimes are usually automatically installed as required). Multiple different runtimes can be installed at the same time, including different versions of the same runtime.
+Runtimes provide the basic dependencies that are used by applications. Each application must be built against a runtime, and this runtime must be installed on a host system in order for the application to run (Flatpak can automatically install the runtime required by an application). Multiple different runtimes can be installed at the same time, including different versions of the same runtime.
 
 A small number of runtimes are available, including the minimal and stable Freedesktop runtimes, as well as runtimes which contain the GNOME and KDE stacks. (See :doc:`available-runtimes` for an overview of the runtimes that are currently available.)
 
@@ -63,50 +63,6 @@ Examples of capabilities that can be accessed through portals include:
 Interface toolkits can implement transparent support for portals. If an application uses one of these toolkits, there is no additional work required to access them.
 
 Applications that aren't using a toolkit with support for portals can refer to the `xdg-desktop-portal API documentation <https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for information on how to access them.
-
-The flatpak command
---------------------
-
-``flatpak`` is the primary Flatpak command, and can be used to find, install and remove applications. Specific commands are appended to ``flatpak``. For example, the command to install something is ``flatpak install``.
-
-``flatpak --help`` provides the full list of available commands, as does the :doc:`flatpak-command-reference`.
-
-Identifiers
------------
-
-Flatpak identifies each application and runtime using a unique identifier, which takes the form of an inverse DNS address, such as ``com.company.App``. The final segment of this address is the object's name, and the preceding part is the domain that it belongs to.
-
-.. note::
-
-  Flatpak's reverse DNS identifiers prevent naming conflicts. They also correspond to the identifiers used by D-Bus.
-
-In order to ensure uniqueness, the domain part of each identifier should correspond to a registered DNS address. This means using a domain from a website, either for an application or an organization. For instance, the developers of ``com.company.App`` would be expected to have registered the ``company.com`` web domain.  Multiple applications can belong to the same domain, such as ``com.company.App1`` and ``com.company.App2``.
-
-If you do not have a registered domain for your application, it is easy to use a third party website to get one. For example, Github allows the creation of personal pages that can be used for this purpose. Here, a personal namespace of ``name.github.io`` could be used as the basis of application identifier ``io.github.name.App``.
-
-If an application provides a D-Bus service, the D-Bus service name is expected to be the same as the application name.
-
-Identifier triples
-^^^^^^^^^^^^^^^^^^
-
-Typically it is sufficient to refer to objects using their reverse DNS identifier. However, in some situations it is necessary to refer to a specific version of an object, or to a specific architecture. For example, some applications might be available as a stable and a testing version, in which case it is necessary to specify which one you want to install.
-
-Flatpak allows architectures and versions to be specified using an object's identifier triple. This takes the form of ``name/architecture/branch``, such as ``com.company.App/i386/stable``. (Branch is the term used to refer to versions of the same object.) The first part of the triple is the reverse DNS name, the second part is the architecture, and the third part is the branch.
-
-The Flatpak CLI will provide feedback if an identifier triple is required, instead of the standard object ID.
-
-System versus user
-------------------
-
-Flatpak commands can be run either system-wide or per-user. Applications and runtimes that are installed system-wide are available to and shared between all users on the system. Applications and runtimes that are installed per-user are only available to the user that installed them.
-
-The same principle applies to repositories - repositories that have been added system-wide are available to all users, whereas per-user repositories can only be used by a particular user.
-
-Flatpak commands are run system-wide by default, since it reduces redundancy. If you are installing applications for day-to-day usage, it is recommended to stick with this default behavior.
-
-However, running commands per-user can be useful for testing and development purposes, since objects that are installed in this way won't be available to other users on the system. To do this, use the ``--user`` option, which can be used in combination with most ``flatpak`` commands.
-
-Commands behave in exactly the same way if they are run per-user rather than system-wide.
 
 Under the hood
 --------------
