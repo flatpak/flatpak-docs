@@ -5,16 +5,15 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg2"
    version="1.1"
-   height="433"
-   width="731"
+   height="450"
+   width="580"
    viewbox="0 0 800 500"
-   sodipodi:docname="graph.svg"
-   inkscape:version="0.92pre3 r"
+   sodipodi:docname="diagram.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    inkscape:export-filename="/home/aday/checkout/flatpak-docs-rest/img/graph.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
@@ -28,11 +27,11 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1016"
+     inkscape:window-height="1136"
      id="namedview110"
-     showgrid="true"
-     inkscape:snap-nodes="false"
-     inkscape:snap-bbox="true"
+     showgrid="false"
+     inkscape:snap-nodes="true"
+     inkscape:snap-bbox="false"
      inkscape:bbox-paths="true"
      inkscape:bbox-nodes="true"
      inkscape:pagecheckerboard="false"
@@ -42,13 +41,14 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:showpageshadow="false"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="320.81091"
-     inkscape:cy="195.774"
+     inkscape:zoom="1"
+     inkscape:cx="349.34733"
+     inkscape:cy="214.09601"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg2">
+     inkscape:current-layer="svg2"
+     inkscape:snap-global="true">
     <inkscape:grid
        type="xygrid"
        id="grid4574"
@@ -69,695 +69,932 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <g
-     id="g4375"
-     transform="matrix(0,-0.89606175,0.81724167,0,333.19053,950.64727)">
-    <path
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.2;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6.11814213;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       d="m 395,497.13255 c -8.31,0 -15,6.69 -15,15 V 1115.459 c 0,8.31 6.69,15 15,15 h 74 c 8.31,0 15,-6.69 15,-15 V 938.92383 c -7.94067,-0.77208 -13.99824,-7.44571 -14,-15.42383 0.008,-7.97363 6.06379,-14.64047 14,-15.41211 V 799.92383 c -7.94067,-0.77208 -13.99824,-7.44571 -14,-15.42383 0.008,-7.97363 6.06379,-14.64047 14,-15.41211 V 660.92383 c -7.94067,-0.77208 -13.99824,-7.44571 -14,-15.42383 0.008,-7.97363 6.06379,-14.64047 14,-15.41211 V 512.13255 c 0,-8.31 -6.69,-15 -15,-15 z"
-       transform="matrix(0.91203704,0,0,1,233.90741,-650.63783)"
-       id="path7618"
-       inkscape:connector-curvature="0" />
-    <path
-       id="path4377"
-       transform="matrix(0.91203704,0,0,1,233.90741,-650.63783)"
-       d="m 395,497.13255 c -8.31,0 -15,6.69 -15,15 V 1115.459 c 0,8.31 6.69,15 15,15 h 74 c 8.31,0 15,-6.69 15,-15 V 938.92383 c -7.94067,-0.77208 -13.99824,-7.44571 -14,-15.42383 0.008,-7.97363 6.06379,-14.64047 14,-15.41211 V 799.92383 c -7.94067,-0.77208 -13.99824,-7.44571 -14,-15.42383 0.008,-7.97363 6.06379,-14.64047 14,-15.41211 V 660.92383 c -7.94067,-0.77208 -13.99824,-7.44571 -14,-15.42383 0.008,-7.97363 6.06379,-14.64047 14,-15.41211 V 512.13255 c 0,-8.31 -6.69,-15 -15,-15 z"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       inkscape:connector-curvature="0" />
-  </g>
-  <path
-     id="rect4283-3"
-     d="m 256.99485,5.7204863 c -2.00115,0 -2.25761,0.256156 -2.25761,2.254898 V 23.306924 c 0,0.967285 0.38381,1.839118 1.00005,2.485673 h -29.95744 c -9.50545,0 -17.15785,7.643197 -17.15785,17.137216 V 283.33184 c 0,9.49402 7.6524,17.13721 17.15785,17.13721 h 124.08746 c 9.50545,0 17.15785,-7.64319 17.15785,-17.13721 V 42.929813 c 0,-9.494017 -7.6524,-17.137214 -17.15785,-17.137214 h -29.95744 c 0.61624,-0.646556 1.00006,-1.518389 1.00006,-2.485673 V 7.9753853 c 0,-1.998742 -0.70799,-2.254898 -2.70914,-2.254898 z M 407.1444,25.792597 c -9.50544,0 -17.15784,7.643197 -17.15784,17.137216 V 283.33184 c 0,9.49402 7.6524,17.13721 17.15784,17.13721 h 124.08572 c 9.50543,0 17.15784,-7.64319 17.15784,-17.13721 V 42.929813 c 0,-9.494017 -7.65241,-17.137214 -17.15784,-17.137214 z m 177.12017,0 c -9.50545,0 -17.15785,7.643197 -17.15785,17.137216 V 283.33184 c 0,9.49402 7.6524,17.13721 17.15785,17.13721 h 124.08746 c 9.50545,0 17.15785,-7.64319 17.15785,-17.13721 V 42.929813 c 0,-9.494017 -7.6524,-17.137214 -17.15785,-17.137214 z"
-     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.2;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-     inkscape:connector-curvature="0" />
   <rect
-     ry="19"
-     rx="19"
+     y="38.536682"
+     x="410.52747"
+     height="210.99998"
+     width="160.99998"
+     id="rect2212"
      style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-     id="rect7719"
-     width="158.40256"
-     height="274.67703"
-     x="208.6219"
-     y="25.792133" />
-  <a
-     transform="matrix(0.73800547,0,0,0.73711845,-7.009971,-154.4659)"
-     class="page-scroll"
-     href="#bundledlibraries"
-     xlink:title="Dependencies shipped with the app itself."
-     xlink:href="#bundledlibraries"
-     id="a7817">
-    <g
-       id="g7793"
-       transform="translate(0,-78)">
-      <rect
-         y="476.36218"
-         x="308"
-         height="56"
-         width="56"
-         id="rect7725"
-         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-         rx="8.130022"
-         ry="8.1398058" />
-      <text
-         id="text7456-8"
-         y="508.0072"
-         x="336.2616"
-         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
-         xml:space="preserve"><tspan
-           y="508.0072"
-           x="336.2616"
-           id="tspan7458-5"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff">LIBRARY</tspan></text>
-      <rect
-         ry="8.1398058"
-         rx="8.130022"
-         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-         id="rect7552"
-         width="56"
-         height="56"
-         x="371"
-         y="476.36218" />
-      <text
-         xml:space="preserve"
-         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
-         x="399.2616"
-         y="508.0072"
-         id="text7554"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
-           id="tspan7556"
-           x="399.2616"
-           y="508.0072">LIBRARY</tspan></text>
-      <rect
-         y="476.36218"
-         x="434"
-         height="56"
-         width="56"
-         id="rect7558"
-         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-         rx="8.130022"
-         ry="8.1398058" />
-      <text
-         id="text7560"
-         y="508.0072"
-         x="462.2616"
-         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
-         xml:space="preserve"><tspan
-           y="508.0072"
-           x="462.2616"
-           id="tspan7562"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff">LIBRARY</tspan></text>
-    </g>
-    <g
-       transform="matrix(2,0,0,2,-1288.0004,983.3622)"
-       id="g6936"
-       style="display:inline;fill:#4a90d9;fill-opacity:1;enable-background:new" />
-    <g
-       style="display:inline;fill:#4a90d9;fill-opacity:1;enable-background:new"
-       id="g10628"
-       transform="matrix(2,0,0,2,-1224.0004,983.3622)" />
-    <g
-       transform="matrix(2,0,0,2,-1163.0004,983.3622)"
-       id="g10632"
-       style="display:inline;fill:#4a90d9;fill-opacity:1;enable-background:new" />
-  </a>
-  <a
-     transform="matrix(0.73800547,0,0,0.73711845,-165.96941,-359.38482)"
-     class="page-scroll"
-     href="#sandboxes"
-     xlink:title="Sandbox provides an isolated environment for the app to run."
-     xlink:href="#sandboxes"
-     id="a7991">
-    <rect
-       ry="5.4265356"
-       rx="5.420013"
-       y="492.56232"
-       x="567"
-       height="31.505127"
-       width="95.781128"
-       id="rect10794"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:6, 6;stroke-dashoffset:6;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
-    <text
-       id="text7456-89"
-       y="512.83972"
-       x="614.22186"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.22637558px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
-       xml:space="preserve"><tspan
-         y="512.83972"
-         x="614.22186"
-         id="tspan7458-9">SANDBOX</tspan></text>
-  </a>
+     rx="9.999999"
+     ry="10" />
+  <rect
+     ry="6.0000005"
+     rx="6.0000005"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect2214"
+     width="42"
+     height="42"
+     x="420.02747"
+     y="148.03662" />
+  <rect
+     y="148.03662"
+     x="470.02747"
+     height="42"
+     width="42"
+     id="rect2216"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     rx="6.0000005"
+     ry="6.0000005" />
+  <rect
+     y="148.03662"
+     x="520.02747"
+     height="42"
+     width="42"
+     id="rect2218"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     rx="6.0000005"
+     ry="6.0000005" />
+  <text
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="440.82434"
+     y="171.62201"
+     id="text2222"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266"
+       id="tspan2220"
+       x="440.82434"
+       y="171.62201">LIBRARY</tspan></text>
+  <text
+     id="text2226"
+     y="171.62201"
+     x="490.82434"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"><tspan
+       y="171.62201"
+       x="490.82434"
+       id="tspan2224"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266">LIBRARY</tspan></text>
+  <text
+     id="text2230"
+     y="171.62201"
+     x="540.82434"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"><tspan
+       y="171.62201"
+       x="540.82434"
+       id="tspan2228"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266">LIBRARY</tspan></text>
+  <rect
+     y="98.036621"
+     x="420.02747"
+     height="42"
+     width="142"
+     id="rect2232"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     rx="6.0000005"
+     ry="6.0000005" />
+  <text
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="490.82434"
+     y="121.62201"
+     id="text2236"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266"
+       id="tspan2234"
+       x="490.82434"
+       y="121.62201">CODE</tspan></text>
+  <rect
+     ry="6.0000005"
+     rx="6.0000005"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect2238"
+     width="142"
+     height="42"
+     x="420.02747"
+     y="48.036652" />
+  <text
+     id="text2242"
+     y="71.622009"
+     x="490.82434"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"><tspan
+       y="71.622009"
+       x="490.82434"
+       id="tspan2240"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266">DATA</tspan></text>
+  <rect
+     ry="6.0000005"
+     rx="6.0000005"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect2244"
+     width="142"
+     height="42"
+     x="420.02747"
+     y="198.03662" />
+  <rect
+     ry="10"
+     rx="9.999999"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect1874"
+     width="160.99998"
+     height="210.99998"
+     x="8.5274506"
+     y="38.536682" />
+  <rect
+     y="148.03662"
+     x="18.027451"
+     height="42"
+     width="42"
+     id="rect1876"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     rx="6.0000005"
+     ry="6.0000005" />
+  <rect
+     ry="6.0000005"
+     rx="6.0000005"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect1878"
+     width="42"
+     height="42"
+     x="68.027473"
+     y="148.03662" />
+  <rect
+     ry="6.0000005"
+     rx="6.0000005"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect1880"
+     width="42"
+     height="42"
+     x="118.02747"
+     y="148.03662" />
+  <text
+     id="text1884"
+     y="171.62201"
+     x="38.824371"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"><tspan
+       y="171.62201"
+       x="38.824371"
+       id="tspan1882"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266">LIBRARY</tspan></text>
+  <text
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="88.824371"
+     y="171.62201"
+     id="text1888"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266"
+       id="tspan1886"
+       x="88.824371"
+       y="171.62201">LIBRARY</tspan></text>
+  <text
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="138.82437"
+     y="171.62201"
+     id="text1892"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266"
+       id="tspan1890"
+       x="138.82437"
+       y="171.62201">LIBRARY</tspan></text>
+  <rect
+     ry="6.0000005"
+     rx="6.0000005"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect1894"
+     width="142"
+     height="42"
+     x="18.027451"
+     y="98.036621" />
+  <text
+     id="text1898"
+     y="121.62201"
+     x="88.824371"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"><tspan
+       y="121.62201"
+       x="88.824371"
+       id="tspan1896"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266">CODE</tspan></text>
+  <rect
+     y="48.036652"
+     x="18.027451"
+     height="42"
+     width="142"
+     id="rect1900"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     rx="6.0000005"
+     ry="6.0000005" />
+  <text
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="88.824371"
+     y="71.622009"
+     id="text1904"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266"
+       id="tspan1902"
+       x="88.824371"
+       y="71.622009">DATA</tspan></text>
+  <rect
+     y="198.03662"
+     x="18.027451"
+     height="42"
+     width="142"
+     id="rect2138"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     rx="6.0000005"
+     ry="6.0000005" />
   <g
      style="display:inline;fill:#ffffff"
      id="g10657"
-     transform="matrix(2,0,0,2,-810.97255,-668.16341)" />
+     transform="matrix(2,0,0,2,-810.97255,-651.16341)" />
   <g
-     transform="matrix(2,0,0,2,-810.97255,-769.16337)"
+     transform="matrix(2,0,0,2,-810.97255,-752.16337)"
      id="g10661"
      style="display:inline;fill:#ffffff" />
-  <text
-     id="text7456"
-     y="374.82928"
-     x="309.66144"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.99190617px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:start;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
-     xml:space="preserve"><tspan
-       y="374.82928"
-       x="309.66144"
-       id="tspan7458"
-       style="fill:#ffffff">PORTAL</tspan></text>
-  <text
-     class="splashlabel"
-     id="text7825-0"
-     y="392.76385"
-     x="129.63255"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
-     xml:space="preserve"><tspan
-       y="392.76385"
-       x="129.63255"
-       id="tspan7827-5"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end">OPERATING SYSTEM</tspan></text>
   <rect
      style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
      id="rect7550"
      width="800"
      height="500"
      x="-71.472549"
-     y="-36.170437" />
+     y="-19.170441" />
+  <text
+     id="text7634"
+     y="-179.72754"
+     x="404.68484"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.66666698px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"><tspan
+       y="-179.72754"
+       x="404.68484"
+       id="tspan7636"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.66666698px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end">RUNTIME</tspan></text>
+  <text
+     id="text7456-8"
+     y="179.60831"
+     x="241.00797"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.73756182;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"
+     transform="scale(1.0006015,0.99939886)"><tspan
+       y="179.60831"
+       x="241.00797"
+       id="tspan7458-5"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.73756182" /></text>
+  <text
+     y="179.60831"
+     x="241.00797"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.73756182;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"
+     id="text917"
+     transform="scale(1.0006015,0.99939886)"><tspan
+       y="179.60831"
+       x="241.00797"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.73756182"
+       id="tspan919" /></text>
+  <path
+     style="fill:none;stroke:#4a90d9;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5, 10;stroke-dashoffset:0;stroke-opacity:1"
+     d="M 206.02744,-197.46336 H 544.02743"
+     id="path1216"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <path
+     sodipodi:nodetypes="cssssc"
+     inkscape:connector-curvature="0"
+     id="path1218"
+     d="m 388.52745,-200.46334 v -173 c 0,-6.648 5.352,-12 12,-12 h 131 c 6.648,0 12,5.352 12,12 v 173"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+  <rect
+     ry="6.000001"
+     rx="6.000001"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999964;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect1220"
+     width="41.328308"
+     height="41.278633"
+     x="400.29572"
+     y="-251.82581" />
+  <text
+     transform="scale(1.0006015,0.99939886)"
+     id="text1224"
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.73756182;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="420.89975"
+     y="-228.74405"><tspan
+       id="tspan1222"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.73756182"
+       x="420.89975"
+       y="-228.74405">LIBRARY</tspan></text>
+  <rect
+     y="-251.82581"
+     x="446.79007"
+     height="41.278633"
+     width="41.328308"
+     id="rect1226"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999964;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     rx="6.000001"
+     ry="6.000001" />
+  <rect
+     ry="6.000001"
+     rx="6.000001"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999964;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect1228"
+     width="41.328308"
+     height="41.278633"
+     x="493.28439"
+     y="-251.82581" />
+  <text
+     transform="scale(1.0006015,0.99939886)"
+     y="-228.74405"
+     x="466.87213"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.73756182;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"
+     id="text1232"><tspan
+       y="-228.74405"
+       x="466.87213"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.73756182"
+       id="tspan1230">LIBRARY</tspan></text>
+  <text
+     transform="scale(1.0006015,0.99939886)"
+     id="text1236"
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.73756182;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="512.84454"
+     y="-228.74405"><tspan
+       id="tspan1234"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.73756182"
+       x="512.84454"
+       y="-228.74405">LIBRARY</tspan></text>
+  <rect
+     y="-352.92719"
+     x="400.29572"
+     height="41.510963"
+     width="135.05504"
+     id="rect1238"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999869;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     rx="6.0000005"
+     ry="6.000001" />
+  <text
+     id="text1242"
+     y="-329.08444"
+     x="466.44949"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.01770973px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"
+     transform="scale(1.0006015,0.99939886)"><tspan
+       style="fill:#ffffff"
+       y="-329.08444"
+       x="466.44949"
+       id="tspan1240">DATA</tspan></text>
   <rect
      ry="6.000001"
      rx="6.0000005"
      style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999869;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-     id="rect7564"
+     id="rect1244"
      width="135.05504"
      height="41.510963"
-     x="220.29573"
-     y="38.0728" />
+     x="400.29572"
+     y="-302.80316" />
+  <text
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.01770973px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="466.44949"
+     y="-278.93484"
+     id="text1248"
+     transform="scale(1.0006015,0.99939886)"><tspan
+       id="tspan1246"
+       x="466.44949"
+       y="-278.93484"
+       style="fill:#ffffff">CODE</tspan></text>
+  <path
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     d="m 560.52745,-200.46334 v -173 c 0,-6.648 5.352,-12 12,-12 h 131 c 6.648,0 12,5.352 12,12 v 173"
+     id="path1250"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cssssc" />
+  <rect
+     y="-251.82581"
+     x="572.29572"
+     height="41.278633"
+     width="41.328308"
+     id="rect1252"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999964;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     rx="6.000001"
+     ry="6.000001" />
+  <text
+     y="-228.74405"
+     x="592.79626"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.73756182;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"
+     id="text1256"
+     transform="scale(1.0006015,0.99939886)"><tspan
+       y="-228.74405"
+       x="592.79626"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.73756182"
+       id="tspan1254">LIBRARY</tspan></text>
+  <rect
+     ry="6.000001"
+     rx="6.000001"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999964;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect1258"
+     width="41.328308"
+     height="41.278633"
+     x="618.79004"
+     y="-251.82581" />
+  <rect
+     y="-251.82581"
+     x="665.28442"
+     height="41.278633"
+     width="41.328308"
+     id="rect1260"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999964;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     rx="6.000001"
+     ry="6.000001" />
+  <text
+     id="text1264"
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.73756182;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="638.76862"
+     y="-228.74405"
+     transform="scale(1.0006015,0.99939886)"><tspan
+       id="tspan1262"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.73756182"
+       x="638.76862"
+       y="-228.74405">LIBRARY</tspan></text>
+  <text
+     y="-228.74405"
+     x="684.74103"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.73756182;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"
+     id="text1268"
+     transform="scale(1.0006015,0.99939886)"><tspan
+       y="-228.74405"
+       x="684.74103"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.73756182"
+       id="tspan1266">LIBRARY</tspan></text>
+  <rect
+     ry="6.000001"
+     rx="6.0000005"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999869;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect1270"
+     width="135.05504"
+     height="41.510963"
+     x="572.29572"
+     y="-352.92719" />
   <text
      transform="scale(1.0006015,0.99939886)"
      xml:space="preserve"
      style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.01770973px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
-     x="286.55771"
-     y="62.150692"
-     id="text7566"><tspan
-       id="tspan7568"
-       x="286.55771"
-       y="62.150692"
+     x="638.34601"
+     y="-329.08444"
+     id="text1274"><tspan
+       id="tspan1272"
+       x="638.34601"
+       y="-329.08444"
        style="fill:#ffffff">DATA</tspan></text>
   <rect
-     y="88.196854"
-     x="220.29573"
+     y="-302.80316"
+     x="572.29572"
      height="41.510963"
      width="135.05504"
-     id="rect7570"
+     id="rect1276"
      style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999869;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
      rx="6.0000005"
      ry="6.000001" />
   <text
      transform="scale(1.0006015,0.99939886)"
-     id="text7572"
-     y="112.30034"
-     x="286.55771"
+     id="text1280"
+     y="-278.93484"
+     x="638.34601"
      style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.01770973px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
      xml:space="preserve"><tspan
        style="fill:#ffffff"
-       y="112.30034"
-       x="286.55771"
-       id="tspan7574">CODE</tspan></text>
-  <path
-     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:3.00000024;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 6.00000007;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-     d="M 208.57319,189.79198 H 365.03032"
-     id="path7576"
-     inkscape:connector-curvature="0" />
-  <text
-     class="splashlabel"
-     id="text7638"
-     y="100.16881"
-     x="129.63255"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
-     xml:space="preserve"><tspan
-       y="100.16881"
-       x="129.63255"
-       id="tspan7640"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end">APPLICATION</tspan></text>
-  <a
-     transform="translate(-42.679654,-95.963333)"
-     id="a8460"
-     xlink:href="#runtimes"
-     xlink:title="Runtimes"
-     href="#runtimes"
-     class="page-scroll">
-    <g
-       transform="matrix(0.90386263,0,0,0.90386263,73.318984,37.429146)"
-       id="g8437">
-      <rect
-         ry="6.6381774"
-         rx="6.6381774"
-         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.21272445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-         id="rect7582"
-         width="45.765545"
-         height="45.765545"
-         x="208.94687"
-         y="282.92535" />
-      <text
-         xml:space="preserve"
-         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.17241383px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
-         x="232.04343"
-         y="308.78668"
-         id="text7584"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.17241383px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1"
-           id="tspan7586"
-           x="232.04343"
-           y="308.78668">LIBRARY</tspan></text>
-      <rect
-         y="282.92535"
-         x="260.43311"
-         height="45.765545"
-         width="45.765545"
-         id="rect7588"
-         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.21272445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-         rx="6.6381774"
-         ry="6.6381774" />
-      <text
-         id="text7590"
-         y="308.78668"
-         x="283.52966"
-         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.17241383px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
-         xml:space="preserve"><tspan
-           y="308.78668"
-           x="283.52966"
-           id="tspan7592"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.17241383px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1">LIBRARY</tspan></text>
-      <rect
-         ry="6.6381774"
-         rx="6.6381774"
-         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.21272445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-         id="rect7594"
-         width="45.765545"
-         height="45.765545"
-         x="311.91937"
-         y="282.92535" />
-      <text
-         xml:space="preserve"
-         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.17241383px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
-         x="335.01593"
-         y="308.78668"
-         id="text7596"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.17241383px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1"
-           id="tspan7598"
-           x="335.01593"
-           y="308.78668">LIBRARY</tspan></text>
-      <rect
-         y="336.86304"
-         x="208.94687"
-         height="45.765545"
-         width="45.765545"
-         id="rect7610"
-         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.21272445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-         rx="6.6381774"
-         ry="6.6381774" />
-      <text
-         id="text7612"
-         y="362.72476"
-         x="232.04343"
-         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.17241383px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
-         xml:space="preserve"><tspan
-           y="362.72476"
-           x="232.04343"
-           id="tspan7614"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.17241383px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1">LIBRARY</tspan></text>
-      <rect
-         ry="6.6381774"
-         rx="6.6381774"
-         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.21272445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-         id="rect7616"
-         width="45.765545"
-         height="45.765545"
-         x="260.43311"
-         y="336.86304" />
-      <text
-         xml:space="preserve"
-         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.17241383px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
-         x="283.52966"
-         y="362.72476"
-         id="text7618"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.17241383px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1"
-           id="tspan7620"
-           x="283.52966"
-           y="362.72476">LIBRARY</tspan></text>
-      <rect
-         y="336.86304"
-         x="311.91937"
-         height="45.765545"
-         width="45.765545"
-         id="rect7622"
-         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.21272445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-         rx="6.6381774"
-         ry="6.6381774" />
-      <text
-         id="text7624"
-         y="362.72476"
-         x="335.01593"
-         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.17241383px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
-         xml:space="preserve"><tspan
-           y="362.72476"
-           x="335.01593"
-           id="tspan7626"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.17241383px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1">LIBRARY</tspan></text>
-      <rect
-         ry="0"
-         rx="0"
-         y="279.00226"
-         x="-7.5413771"
-         height="110.32756"
-         width="770.18945"
-         id="rect7378"
-         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 3;stroke-dashoffset:1.79999995;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
-    </g>
-    <g
-       class="splashlabel"
-       id="g7586">
-      <text
-         id="text7634"
-         y="343.23581"
-         x="172.31221"
-         style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
-         xml:space="preserve"><tspan
-           y="343.23581"
-           x="172.31221"
-           id="tspan7636"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end">RUNTIME</tspan></text>
-      <text
-         xml:space="preserve"
-         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.17241383px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
-         x="142.61211"
-         y="353.64676"
-         id="text7612-9"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.17241383px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1"
-           id="tspan7614-6"
-           x="142.61211"
-           y="353.64676">(SHARED)</tspan></text>
-    </g>
-  </a>
-  <rect
-     y="25.792133"
-     x="389.9859"
-     height="274.67703"
-     width="158.40256"
-     id="rect4204"
-     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.553;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-     rx="19"
-     ry="19" />
-  <g
-     id="g4278"
-     style="opacity:0.553"
-     transform="matrix(0.73800547,0,0,0.73711845,-39.66764,-8.1019562)">
-    <rect
-       y="199.79987"
-       x="598"
-       height="56"
-       width="56"
-       id="rect4210"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       rx="8.130022"
-       ry="8.1398058" />
-    <rect
-       ry="8.1398058"
-       rx="8.130022"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       id="rect4216"
-       width="56"
-       height="56"
-       x="661"
-       y="199.79987" />
-    <rect
-       y="199.79987"
-       x="724"
-       height="56"
-       width="56"
-       id="rect4222"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       rx="8.130022"
-       ry="8.1398058" />
-  </g>
-  <rect
-     y="38.0728"
-     x="401.65964"
-     height="41.510963"
-     width="135.05504"
-     id="rect4242"
-     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.553;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999869;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-     rx="6.0000005"
-     ry="6.000001" />
-  <rect
-     ry="6.000001"
-     rx="6.0000005"
-     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.553;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999869;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-     id="rect4248"
-     width="135.05504"
-     height="41.510963"
-     x="401.65964"
-     y="88.196854" />
-  <path
-     id="path4254"
-     d="M 389.93724,189.79198 H 546.39429"
-     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.553;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:3.00000024;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 6.00000007;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-     inkscape:connector-curvature="0" />
-  <rect
-     ry="19"
-     rx="19"
-     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.553;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-     id="rect4283"
-     width="158.40256"
-     height="274.67703"
-     x="567.10748"
-     y="25.792133" />
-  <g
-     id="g4285"
-     transform="matrix(0.73800547,0,0,0.73711845,137.45363,-8.1019562)"
-     style="opacity:0.553">
-    <rect
-       ry="8.1398058"
-       rx="8.130022"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       id="rect4287"
-       width="56"
-       height="56"
-       x="598"
-       y="199.79987" />
-    <rect
-       y="199.79987"
-       x="661"
-       height="56"
-       width="56"
-       id="rect4289"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       rx="8.130022"
-       ry="8.1398058" />
-    <rect
-       ry="8.1398058"
-       rx="8.130022"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       id="rect4291"
-       width="56"
-       height="56"
-       x="724"
-       y="199.79987" />
-  </g>
-  <rect
-     ry="6.000001"
-     rx="6.0000005"
-     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.553;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999869;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-     id="rect4293"
-     width="135.05504"
-     height="41.510963"
-     x="578.78094"
-     y="38.0728" />
-  <rect
-     y="88.196854"
-     x="578.78094"
-     height="41.510963"
-     width="135.05504"
-     id="rect4295"
-     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.553;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999869;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-     rx="6.0000005"
-     ry="6.000001" />
-  <path
-     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.553;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:3.00000024;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 6.00000007;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-     d="m 567.05852,189.79198 h 156.4571"
-     id="path4297"
-     inkscape:connector-curvature="0" />
-  <g
-     id="g4353"
-     transform="matrix(0.73800547,0,0,0.73711845,137.45363,-8.1019562)"
-     style="opacity:0.553">
-    <rect
-       ry="8.1398058"
-       rx="8.130022"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       id="rect4341"
-       width="56"
-       height="56"
-       x="358"
-       y="279.79987" />
-    <rect
-       y="279.79987"
-       x="421"
-       height="56"
-       width="56"
-       id="rect4343"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       rx="8.130022"
-       ry="8.1398058" />
-    <rect
-       ry="8.1398058"
-       rx="8.130022"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       id="rect4345"
-       width="56"
-       height="56"
-       x="484"
-       y="279.79987" />
-    <rect
-       y="345.79987"
-       x="358"
-       height="56"
-       width="56"
-       id="rect4347"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       rx="8.130022"
-       ry="8.1398058" />
-    <rect
-       ry="8.1398058"
-       rx="8.130022"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       id="rect4349"
-       width="56"
-       height="56"
-       x="421"
-       y="345.79987" />
-    <rect
-       y="345.79987"
-       x="484"
-       height="56"
-       width="56"
-       id="rect4351"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       rx="8.130022"
-       ry="8.1398058" />
-  </g>
-  <g
-     transform="matrix(0.73800547,0,0,0.73711845,314.57485,-8.1019562)"
-     id="g4361"
-     style="opacity:0.553">
-    <rect
-       y="279.79987"
-       x="358"
-       height="56"
-       width="56"
-       id="rect4363"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       rx="8.130022"
-       ry="8.1398058" />
-    <rect
-       ry="8.1398058"
-       rx="8.130022"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       id="rect4365"
-       width="56"
-       height="56"
-       x="421"
-       y="279.79987" />
-    <rect
-       y="279.79987"
-       x="484"
-       height="56"
-       width="56"
-       id="rect4367"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       rx="8.130022"
-       ry="8.1398058" />
-    <rect
-       ry="8.1398058"
-       rx="8.130022"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       id="rect4369"
-       width="56"
-       height="56"
-       x="358"
-       y="345.79987" />
-    <rect
-       y="345.79987"
-       x="421"
-       height="56"
-       width="56"
-       id="rect4371"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       rx="8.130022"
-       ry="8.1398058" />
-    <rect
-       ry="8.1398058"
-       rx="8.130022"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:2.71163654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       id="rect4373"
-       width="56"
-       height="56"
-       x="484"
-       y="345.79987" />
-  </g>
+       y="-278.93484"
+       x="638.34601"
+       id="tspan1278">CODE</tspan></text>
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.99190617px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:start;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
-     x="424.07541"
-     y="374.82928"
-     id="text4379"><tspan
-       style="fill:#ffffff"
-       id="tspan4381"
-       x="424.07541"
-       y="374.82928">PORTAL</tspan></text>
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.66666698px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="666.68488"
+     y="-179.72754"
+     id="text1286"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.66666698px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end"
+       id="tspan1284"
+       x="666.68488"
+       y="-179.72754">RUNTIME</tspan></text>
   <text
-     id="text4383"
-     y="374.82928"
-     x="538.48871"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.99190617px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:start;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.66666698px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="508.39642"
+     y="-364.12024"
+     id="text1208"
+     class="splashlabel"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.66666698px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end"
+       id="tspan1206"
+       x="508.39642"
+       y="-364.12024">APPLICATION</tspan></text>
+  <text
+     class="splashlabel"
+     id="text1212"
+     y="-364.12024"
+     x="688.39642"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.66666698px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
      xml:space="preserve"><tspan
-       y="374.82928"
-       x="538.48871"
-       id="tspan4385"
-       style="fill:#ffffff">PORTAL</tspan></text>
+       y="-364.12024"
+       x="688.39642"
+       id="tspan1210"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.66666698px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end">APPLICATION</tspan></text>
+  <text
+     class="splashlabel"
+     id="text1908"
+     y="21.61322"
+     x="243.70476"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"><tspan
+       y="21.61322"
+       x="289.14105"
+       id="tspan1906"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle">APPLICATION</tspan></text>
+  <rect
+     ry="10"
+     rx="10"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:4.99999952;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect1834"
+     width="470"
+     height="61"
+     x="56.027451"
+     y="382.53662" />
+  <text
+     class="splashlabel"
+     id="text1916"
+     y="417.61322"
+     x="353.39709"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"><tspan
+       y="417.61322"
+       x="353.39709"
+       id="tspan1914"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#ffffff">OPERATING SYSTEM</tspan></text>
+  <rect
+     y="282.53668"
+     x="56.027451"
+     height="85.499954"
+     width="470"
+     id="rect1832"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:5.00000048;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     rx="10"
+     ry="9.999999" />
+  <rect
+     y="316.03662"
+     x="68.027473"
+     height="42"
+     width="42"
+     id="rect2034"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     rx="6.0000005"
+     ry="6.0000005" />
+  <text
+     id="text2038"
+     y="339.62201"
+     x="88.824371"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"><tspan
+       y="339.62201"
+       x="88.824371"
+       id="tspan2036"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.90386266">LIBRARY</tspan></text>
+  <rect
+     ry="6.0000005"
+     rx="6.0000005"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect2040"
+     width="42"
+     height="42"
+     x="118.02747"
+     y="316.03662" />
+  <text
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="138.82437"
+     y="339.62201"
+     id="text2044"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.90386266"
+       id="tspan2042"
+       x="138.82437"
+       y="339.62201">LIBRARY</tspan></text>
+  <rect
+     ry="6.0000005"
+     rx="6.0000005"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect2046"
+     width="42"
+     height="42"
+     x="168.02747"
+     y="316.03662" />
+  <text
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="188.82437"
+     y="339.62201"
+     id="text2050"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.90386266"
+       id="tspan2048"
+       x="188.82437"
+       y="339.62201">LIBRARY</tspan></text>
+  <rect
+     y="316.03662"
+     x="218.02747"
+     height="42"
+     width="42"
+     id="rect2054"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     rx="6.0000005"
+     ry="6.0000005" />
+  <text
+     id="text2058"
+     y="339.62201"
+     x="238.82437"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"><tspan
+       y="339.62201"
+       x="238.82437"
+       id="tspan2056"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.90386266">LIBRARY</tspan></text>
+  <rect
+     y="316.03662"
+     x="268.02747"
+     height="42"
+     width="42"
+     id="rect2060"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     rx="6.0000005"
+     ry="6.0000005" />
+  <text
+     id="text2064"
+     y="339.62201"
+     x="288.82437"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"><tspan
+       y="339.62201"
+       x="288.82437"
+       id="tspan2062"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.90386266">LIBRARY</tspan></text>
+  <rect
+     ry="6.0000005"
+     rx="6.0000005"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect2066"
+     width="42"
+     height="42"
+     x="318.02747"
+     y="316.03662" />
+  <text
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="338.82434"
+     y="339.62201"
+     id="text2070"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.90386266"
+       id="tspan2068"
+       x="338.82434"
+       y="339.62201">LIBRARY</tspan></text>
+  <rect
+     y="38.536682"
+     x="208.52747"
+     height="210.99998"
+     width="160.99998"
+     id="rect2246"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     rx="9.999999"
+     ry="10" />
+  <rect
+     ry="6.0000005"
+     rx="6.0000005"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect2248"
+     width="42"
+     height="42"
+     x="218.02747"
+     y="148.03662" />
+  <rect
+     y="148.03662"
+     x="268.02747"
+     height="42"
+     width="42"
+     id="rect2250"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     rx="6.0000005"
+     ry="6.0000005" />
+  <rect
+     y="148.03662"
+     x="318.02747"
+     height="42"
+     width="42"
+     id="rect2252"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     rx="6.0000005"
+     ry="6.0000005" />
+  <text
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="238.82437"
+     y="171.62201"
+     id="text2256"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266"
+       id="tspan2254"
+       x="238.82437"
+       y="171.62201">LIBRARY</tspan></text>
+  <text
+     id="text2260"
+     y="171.62201"
+     x="288.82437"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"><tspan
+       y="171.62201"
+       x="288.82437"
+       id="tspan2258"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266">LIBRARY</tspan></text>
+  <text
+     id="text2264"
+     y="171.62201"
+     x="338.82437"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"><tspan
+       y="171.62201"
+       x="338.82437"
+       id="tspan2262"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266">LIBRARY</tspan></text>
+  <rect
+     y="98.036621"
+     x="218.02747"
+     height="42"
+     width="142"
+     id="rect2266"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     rx="6.0000005"
+     ry="6.0000005" />
+  <text
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="288.82437"
+     y="121.62201"
+     id="text2270"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266"
+       id="tspan2268"
+       x="288.82437"
+       y="121.62201">CODE</tspan></text>
+  <rect
+     ry="6.0000005"
+     rx="6.0000005"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect2272"
+     width="142"
+     height="42"
+     x="218.02747"
+     y="48.036652" />
+  <text
+     id="text2276"
+     y="71.622009"
+     x="288.82437"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"><tspan
+       y="71.622009"
+       x="288.82437"
+       id="tspan2274"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266">DATA</tspan></text>
+  <rect
+     ry="6.0000005"
+     rx="6.0000005"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect2278"
+     width="142"
+     height="42"
+     x="218.02747"
+     y="198.03662" />
+  <text
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="318.68488"
+     y="304.88007"
+     id="text1912"
+     class="splashlabel"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#ffffff"
+       id="tspan1910"
+       x="318.68488"
+       y="304.88007">RUNTIME</tspan></text>
   <path
-     id="path4393"
-     d="m 249.99996,302.57677 v 1.08009 c 0,14.33966 7.40787,13.98376 18.47079,13.98376 h 151.36539 c 3.21838,0 6.40148,0.78961 9.3425,2.14594 m 10.29873,8.33302 c 2.59776,3.47406 4.17392,7.44454 4.17392,11.31371 v 0.54218"
-     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:none;fill-opacity:0.54509804;fill-rule:nonzero;stroke:#4a90d9;stroke-width:3.00000024;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.99999998, 2.99999998;stroke-dashoffset:1.79999995;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-     class="moving"
+     inkscape:connector-curvature="0"
+     id="path2282"
+     d="m 289.02746,228.03667 v 51.65131"
+     style="fill:none;stroke:#ffffff;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  <path
+     style="opacity:1;fill:#4a90d9;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 289.02745,215.03666 12.00001,15 h -24 z"
+     id="rect2366"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cccc" />
+  <path
+     style="fill:none;stroke:#4a90d9;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 289.02746,228.03666 v 52.99998"
+     id="path2280"
      inkscape:connector-curvature="0" />
   <path
-     class="moving"
-     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:none;fill-opacity:0.54509804;fill-rule:nonzero;stroke:#4a90d9;stroke-width:3.00000024;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.99999998, 2.99999998;stroke-dashoffset:1.79999995;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-     d="m 442.86893,302.57677 v 1.08009 c 0,14.33966 7.40788,13.98376 18.47079,13.98376 h 71.39121 c 3.40261,0 6.76577,0.88258 9.84512,2.38434 m 9.73769,8.01668 c 2.63259,3.49255 4.23244,7.49351 4.23244,11.39165 v 0.54218"
-     id="path4409"
+     style="fill:none;stroke:#ffffff;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 89.02746,228.03667 v 51.65131"
+     id="path2383"
      inkscape:connector-curvature="0" />
   <path
-     class="moving"
-     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:none;fill-opacity:0.54509804;fill-rule:nonzero;stroke:#4a90d9;stroke-width:3.00000024;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.99999998, 2.99999998;stroke-dashoffset:1.79999995;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-     d="m 639.78928,302.57677 v 5.33009 c 0,8.83966 -5.90789,16.27168 -15.72079,16.27168 H 347.0013 c -9.90938,0 -17.27716,6.23299 -17.27716,15.25475 v 0.54218"
-     id="path4411"
+     sodipodi:nodetypes="cccc"
+     inkscape:connector-curvature="0"
+     id="path2385"
+     d="m 89.02745,215.03666 12.00001,15 h -24 z"
+     style="opacity:1;fill:#4a90d9;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path2387"
+     d="m 89.02746,228.03666 v 52.99998"
+     style="fill:none;stroke:#4a90d9;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path2389"
+     d="m 489.02746,228.03667 v 51.65131"
+     style="fill:none;stroke:#ffffff;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  <path
+     style="opacity:1;fill:#4a90d9;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 489.02745,215.03666 12.00001,15 h -24 z"
+     id="path2391"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cccc" />
+  <path
+     style="fill:none;stroke:#4a90d9;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 489.02746,228.03666 v 52.99998"
+     id="path2393"
      inkscape:connector-curvature="0" />
   <rect
-     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-     id="rect7359"
-     width="21.453516"
-     height="21.453516"
-     x="449.62476"
-     y="77.685371"
-     rx="3.0151393"
-     ry="3.0151393"
-     transform="rotate(45)" />
-  <g
-     id="g7381"
-     transform="translate(269.97226,396.01784)">
-    <path
-       id="cog"
-       d="m -0.0336736,-14.055059 c -0.4413,0 -0.88162,0.0226 -1.3125,0.0624 l -0.8125,4.1875 c -0.66892,0.1466 -1.3261,0.35178 -1.9375,0.625 l -3.0625,-2.9375 c -0.77726,0.46022 -1.4539,1.02816 -2.1250004,1.625 l 1.8125004,3.8125004 c -0.44484,0.49798 -0.8485,1.045 -1.1875,1.625 l -4.1875004,-0.5625 c -0.35544,0.81754 -0.61744,1.67274 -0.8125,2.5625 l 3.6875,2.0000001 c -0.0342,0.33618 -0.0624,0.6548 -0.0624,1 0,0.3452 0.0284,0.6638199 0.0624,0.9999999 l -3.6875,2 c 0.195,0.88976 0.45706,1.74496 0.8125,2.5625 l 4.1875004,-0.5625 c 0.339,0.58 0.74266,1.12702 1.1875,1.625 L -9.283674,10.382341 c 0.6711004,0.59684 1.3477404,1.16478 2.1250004,1.625 l 3.0625,-2.9375 c 0.6114,0.27322 1.26858,0.47832 1.9375,0.625 l 0.8125,4.1875 c 0.43088,0.04 0.8712,0.0624 1.3125,0.0624 0.4413,0 0.88162,-0.0226 1.3125,-0.0624 l 0.8125,-4.1875 c 0.66892,-0.1466 1.3261,-0.35178 1.9375,-0.625 l 3.0625,2.9375 c 0.8193807,-0.451715 1.5684089,-0.960417 2.1249996,-1.625 L 7.4038264,6.5698414 c 0.44484,-0.49798 0.8485,-1.045 1.1875,-1.625 l 4.1874996,0.5625 c 0.35544,-0.81754 0.61744,-1.67274 0.8125,-2.5625 l -3.6875,-2 c 0.0342,-0.33618 0.0624,-0.6547999 0.0624,-0.9999999 0,-0.3452 -0.0284,-0.66382 -0.0624,-1 l 3.6875,-2.0000001 c -0.195,-0.88976 -0.45706,-1.74496 -0.8125,-2.5625 l -4.1874996,0.5625 c -0.339,-0.58 -0.74266,-1.12702 -1.1875,-1.625 L 9.216326,-10.492659 c -0.6710996,-0.59684 -1.3477396,-1.16478 -2.1249996,-1.625 l -3.0625,2.9375 c -0.6114,-0.27322 -1.26858,-0.47832 -1.9375,-0.625 l -0.8125,-4.1875 c -0.43088,-0.04 -0.8712,-0.0624 -1.3125,-0.0624 z m 0,8.0000004 c 3.3137,0 6,2.6863 6,6.0000001 0,3.3136999 -2.6863,5.9999999 -6,5.9999999 -3.3137,0 -6,-2.6863 -6,-5.9999999 0,-3.3137001 2.6863,-6.0000001 6,-6.0000001 z"
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;enable-background:accumulate"
-       inkscape:connector-curvature="0" />
-  </g>
+     ry="6.0000005"
+     rx="6.0000005"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect2395"
+     width="42"
+     height="42"
+     x="368.02747"
+     y="316.03662" />
+  <text
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="388.82434"
+     y="339.62201"
+     id="text2399"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.90386266"
+       id="tspan2397"
+       x="388.82434"
+       y="339.62201">LIBRARY</tspan></text>
+  <rect
+     ry="6.0000005"
+     rx="6.0000005"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="rect2401"
+     width="42"
+     height="42"
+     x="418.02747"
+     y="316.03662" />
+  <text
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="438.82434"
+     y="339.62201"
+     id="text2405"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.90386266"
+       id="tspan2403"
+       x="438.82434"
+       y="339.62201">LIBRARY</tspan></text>
+  <rect
+     y="316.03662"
+     x="468.02747"
+     height="42"
+     width="42"
+     id="rect2407"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#4a90d9;stroke-width:1.99999893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     rx="6.0000005"
+     ry="6.0000005" />
+  <text
+     id="text2411"
+     y="339.62201"
+     x="488.82434"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     xml:space="preserve"><tspan
+       y="339.62201"
+       x="488.82434"
+       id="tspan2409"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.90386266">LIBRARY</tspan></text>
+  <text
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="43.910492"
+     y="21.61322"
+     id="text3226"
+     class="splashlabel"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+       id="tspan3224"
+       x="89.346786"
+       y="21.61322">APPLICATION</tspan></text>
+  <text
+     xml:space="preserve"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     x="445.91052"
+     y="21.61322"
+     id="text3230"
+     class="splashlabel"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+       id="tspan3228"
+       x="491.3468"
+       y="21.61322">APPLICATION</tspan></text>
 </svg>
