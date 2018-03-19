@@ -11,24 +11,16 @@ The flatpak command
 Identifiers
 -----------
 
-Flatpak identifies each application and runtime using a unique identifier, which takes the form of an inverse DNS address, such as ``com.company.App``. The final segment of this address is the object's name, and the preceding part is the domain that it belongs to, which should belong to the developer. Multiple applications can belong to the same domain, such as ``com.company.App1`` and ``com.company.App2``.
+Flatpak identifies each application and runtime using a unique three-part identifier, such as ``com.company.App``. The final segment of this address is the object's name, and the preceding part identifies the developer, so that the same developer can have multiple applications, like ``com.company.App1`` and ``com.company.App2``.
 
-Flatpak's reverse DNS identifiers prevent naming conflicts. They also correspond to the identifiers used by D-Bus.
-
-.. note::
-
-  Developers ought to ensure that the domain part of their application ID corresponds to a registered DNS address. This means using a domain from a website, either for an application or an organization. For instance, the developers of ``com.company.App`` would be expected to have registered the ``company.com`` web domain.
-
-  If you do not have a registered domain for your application, it is easy to use a third party website to get one. For example, Github allows the creation of personal pages that can be used for this purpose. Here, a personal namespace of ``name.github.io`` could be used as the basis of application identifier ``io.github.name.App``.
-
-  If an application provides a D-Bus service, the D-Bus service name is expected to be the same as the application name.
+Developers should follow the standard `D-Bus naming conventions <https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names>`_ when creating their own IDs. If an application provides a D-Bus service, the D-Bus service name is expected to be the same as the application ID.
 
 Identifier triples
 ``````````````````
 
-Typically it is sufficient to refer to objects using their reverse DNS identifier. However, in some situations it is necessary to refer to a specific version of an object, or to a specific architecture. For example, some applications might be available as a stable and a testing version, in which case it is necessary to specify which one you want to install.
+Typically it is sufficient to refer to objects using their ID. However, in some situations it is necessary to refer to a specific version of an object, or to a specific architecture. For example, some applications might be available as a stable and a testing version, in which case it is necessary to specify which one you want to install.
 
-Flatpak allows architectures and versions to be specified using an object's identifier triple. This takes the form of ``name/architecture/branch``, such as ``com.company.App/i386/stable``. (Branch is the term used to refer to versions of the same object.) The first part of the triple is the reverse DNS name, the second part is the architecture, and the third part is the branch.
+Flatpak allows architectures and versions to be specified using an object's identifier triple. This takes the form of ``name/architecture/branch``, such as ``com.company.App/i386/stable``. (Branch is the term used to refer to versions of the same object.) The first part of the triple is the ID, the second part is the architecture, and the third part is the branch.
 
 The Flatpak CLI provides feedback if an identifier triple is required, instead of the standard object ID.
 
