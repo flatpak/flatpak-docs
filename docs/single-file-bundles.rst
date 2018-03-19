@@ -15,3 +15,7 @@ For example, to create a bundle named `dictionary.flatpak` containing the GNOME 
 To import the bundle into a repository on another machine, run::
 
   $ flatpak build-import-bundle ~/my-apps dictionary.flatpak
+
+Alternatively, bundles can also be installed directly without importing them::
+
+  $ flatpak install dictionary.flatpak
