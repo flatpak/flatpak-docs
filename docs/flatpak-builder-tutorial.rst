@@ -21,7 +21,7 @@ This will:
 * Download and verify the Dictionary source code
 * Build and install the source code, using the SDK rather than the host system
 * Finish the build, by setting permissions (in this case giving access to X11 and the network)
-* Create a new repository called repo (if it doesn't exist) and export the resulting build into it
+* Create a new repository called tutorial-repo (if it doesn't exist) and export the resulting build into it
 
 ``flatpak-builder`` will also do some other useful things, like creating a separately installable debug runtime (called ``org.gnome.Dictionary.Debug`` in this case) and a separately installable translation runtime (called ``org.gnome.Dictionary.Locale``).
 
