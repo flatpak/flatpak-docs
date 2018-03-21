@@ -1,12 +1,13 @@
 Building
 ========
 
-This section includes documentation on how to build apps with Flatpak. It covers runtimes and SDKs in more detail, followed by details on how use ``flatpak-builder``.
+This section contains detailed information on how to build applications as Flatpaks, including information on concepts, guidance on key decisions, detailed information on how to use ``flatpak-builder``, and how to write manifest files.
+
+If you haven't already, it is recommended to run through :doc:`first-build` before reading this section.
 
 .. toctree::
    :maxdepth: 2
 
-   runtimes-sdks
+   building-basics
    flatpak-builder
    manifests
-   flatpak-builder-tutorial
