@@ -3,7 +3,7 @@ Building your first Flatpak
 
 This tutorial provides a quick introduction to building Flatpaks. In it, you will learn how to create a basic Flatpak application, which can be installed and run.
 
-The :doc:`setup` page should be followed before doing this tutorial.
+Please follow the :doc:`setup` page before doing this tutorial.
 
 1. Install a runtime and the matching SDK
 -----------------------------------------
