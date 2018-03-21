@@ -1,7 +1,7 @@
 Tutorial
 ========
 
-This tutorial provides a sample set of step that you can use to try ``flatpak-builder`` yourself. In it, you will learn how to use ``flatpak-builder`` to build the GNOME Dictionary applicaiton.
+This tutorial provides a sample set of step that you can use to try ``flatpak-builder`` yourself. In it, you will learn how to use ``flatpak-builder`` to build the GNOME Dictionary application.
 
 1. Create a manifest
 --------------------
