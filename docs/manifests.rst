@@ -39,8 +39,8 @@ Each of the properties that can be specified in a manifest file are listed in th
 
   Add a section on specifying the list of modules. There has to be something to say here...
 
-finish-args
------------
+Finishing
+---------
 
 Flatpaks have extremely limited access to the host environment by default. However, most applications require access to resources outside of their sandbox in order to be useful. This can be achieved with the ``finish-args`` manifest section, which allows sandbox permissions to be configured.
 
