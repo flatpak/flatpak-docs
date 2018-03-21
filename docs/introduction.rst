@@ -7,9 +7,11 @@ Flatpak has been designed and implemented with a number of goals:
 
 * Allow the same application build to be installed on any Linux distribution.
 * Provide consistent environments for applications, to facilitate testing and reduce bugs.
+* Full integration of applications in the desktop.
 * Ensure forward compatibility of applications, by allowing multiple versions of runtimes to be simultaneously installed.
 * Allow applications to easily use libraries that aren't available in Linux distributions (or aren't consistently available).
 * Increase the security of Linux desktops, by isolating applications in sandboxes.
+* Decentralized infrastructure without a single, privileged repository.
 
 General information about Flatpak can be found on `flatpak.org <http://flatpak.org/>`_.
 
