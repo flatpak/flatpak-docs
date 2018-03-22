@@ -22,7 +22,9 @@ Typically it is sufficient to refer to objects using their ID. However, in some 
 
 Flatpak allows architectures and versions to be specified using an object's identifier triple. This takes the form of ``name/architecture/branch``, such as ``com.company.App/i386/stable``. (Branch is the term used to refer to versions of the same object.) The first part of the triple is the ID, the second part is the architecture, and the third part is the branch.
 
-The Flatpak CLI provides feedback if an identifier triple is required, instead of the standard object ID.
+Identifier triples can also be used to specify just the architecture or the branch, by leaving part of the triple blank. For example, ``com.company.App//stable`` would just specify the branch, and ``com.company.App/i386//`` just specifies the architecture.
+
+The Flatpak CLI provides feedback if the architecture or branch of an object needs to be specified.
 
 System versus user
 ------------------
