@@ -1,7 +1,10 @@
 Using Flatpak
 =============
 
-This page provides an introduction to the ``flatpak`` command line tool, including the most common commands needed to use Flatpak.
+This page provides an introduction to the ``flatpak`` command line interface, and explains essential technical conventions as well as the most common commands.
+
+End users shouldn't generally need to use this page or the Flatpak command line interface, since Flatpak can be easily used through graphical software management tools, though they are of course free to use the command line if they prefer!
+
 
 The flatpak command
 --------------------
