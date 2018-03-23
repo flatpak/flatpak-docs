@@ -1,40 +1,102 @@
 Sandbox Permissions
 ===================
 
-Sandbox permissions can be configured from an application manifest (see :doc:`manifests`). They can also be set with the ``build-finish``, ``run`` and ``override`` commands.
+One of Flatpak's main goals is to increase the security of desktop systems by isolating applications from one another. This is achieved using sandboxing and means that, by default, Flatpak applications have extremely limited access to the host environment. This includes:
 
-Permission options
-------------------
+- No access to any host files except the runtime, the app and ``~/.var/app/$APPID``. Only the last of these is writable.
+- No access to the network.
+- No access to any device nodes (apart from ``/dev/null``, etc).
+- No access to processes outside the sandbox.
+- Limited syscalls.  For instance, apps can't use nonstandard network socket types or ptrace other processes.
+- Limited access to the session D-Bus instance - an app can only own its own name on the bus.
+- No access to host services like X11, system D-Bus, or PulseAudio.
 
-The following list includes some of the most useful permission options. The full list can be viewed using ``flatpak build-finish --help``
+Most applications will need access to some of these resources in order to be useful. This is primarily done during the finishing build stage, which can be configured through the ``finish-args`` section of the manifest file (see :doc:`manifests`).
 
-===================================================  ===========================================
-``--filesystem=host``                                Access all files
-``--filesystem=home``                                Access the home directory
-``--filesystem=home:ro``                             Access the home directory, read-only
-``--filesystem=/some/dir --filesystem=~/other/dir``  Access paths
-``--filesystem=xdg-download``                        Access the XDG download directory
-``--nofilesystem=...``                               Undo some of the above
-``--socket=x11 --share=ipc``                         Show windows using X11 [#f1]_
-``--device=dri``                                     OpenGL rendering
-``--socket=wayland``                                 Show windows using Wayland
-``--socket=pulseaudio``                              Play sounds using PulseAudio
-``--share=network``                                  Access the network [#f2]_
-``--talk-name=org.freedesktop.secrets``              Talk to a named service on the session bus
-``--system-talk-name=org.freedesktop.GeoClue2``      Talk to a named service on the system bus
-``--socket=system-bus``                              Unlimited access to all of D-Bus
-===================================================  ===========================================
+Portals
+-------
 
-.. note::
-  Until a sandbox-compatible backend is available, access to dconf needs to be enabled using the following options::
+Portals have already been mentioned in the :doc:`introduction`. They are a framework for providing access to resources outside of the sandbox, including:
 
-    --filesystem=xdg-run/dconf
-    --filesystem=~/.config/dconf:ro
-    --talk-name=ca.desrt.dconf
-    --env=DCONF_USER_CONFIG_DIR=.config/dconf
+- Opening files with a native file chooser dialog
+- Opening URIs
+- Printing
+- Showing notifications
+- Taking screenshots
+- Inhibiting the user session from ending, suspending, idling or getting switched away
+- Getting network status information
 
-.. rubric:: Footnotes
+In many cases, portals use a system component to implicitly ask the user for permission before granting access to a particular resource. For example, in the case of opening a file, the user's selection of a file using the file chooser dialog is interpreted as implicitly granting the application access to whatever file is chosen.
 
-.. [#f1] ``--share=ipc`` means that the sandbox shares IPC namespace with the host. This is not necessarily required, but without it the X shared memory extension will not work, which is very bad for X performance.
-.. [#f2] Giving network access also grants access to all host services listening on abstract Unix sockets (due to how network namespaces work), and these have no permission checks. This unfortunately affects e.g. the X server and the session bus which listens to abstract sockets by default. A secure distribution should disable these and just use regular sockets.
+This approach enables applications to avoid having to configure blanket access to large amounts of data or services and gives users control over what their applications have access to.
 
+Interface toolkits like GTK3 and Qt5 implement transparent support for portals, meaning that applications don't need to any additional work to use them (it is worth checking which portals each toolkit supports). Applications that aren't using a toolkit with support for portals can refer to the `xdg-desktop-portal API documentation <https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for information on how to use them.
+
+Permissions guidelines
+----------------------
+
+While application developers have control over the sandbox permissions they wish to configure, good practice is encouraged and can be enforced. For example, the Flathub hosting service places requirements on which permissions can be used, and software on the host may warn users if certain permissions are used.
+
+The following guidelines describe which some permissions can be freely used, which can be used on an as-needed basis, and which should be avoided.
+
+Standard permissions
+````````````````````
+
+The following permissions provide access to basic resources that applications commonly require, and can therefore be freely used:
+
+- ``--share=network`` - access the network
+- ``--socket=x11`` - show windows using X11
+- ``--share=ipc`` - share IPC namespace with the host (necessary for X11)
+- ``--socket=wayland`` - show windows with Wayland
+- ``--device=dri`` - OpenGL rendering
+- ``--socket=pulseaudio`` - play sound with PulseAudio
+
+D-Bus access
+````````````
+
+Access to the entire bus with ``--socket=system-bus`` or ``--socket=session-bus`` should be avoided, unless the application is a development tool.
+
+**Ownership**
+
+Applications are automatically granted access to their own namespace. Ownership beyond this is typically unnecessary, although there are a small number of exceptions, such as using `MPRIS to provide media controls <https://www.freedesktop.org/wiki/Specifications/mpris-spec/>`_.
+
+**Talk**
+
+Talk permissions can be freely used, although it is recommended to use the minumum required.
+
+Filesystem access
+`````````````````
+
+It is common for applications to require access to different parts of the host filesystem, and Flatpak provides a flexible set of options for this. Some examples include:
+
+- ``--filesystem=host`` - access all files on the host
+- ``--filesystem=home`` - access the user's home directory
+- ``--filesystem=/path/path`` - access specific paths
+- ``--filesystem=xdg-download`` - access a specific XDG folder
+
+As a general rule, Filesystem access should be limited as much as possible. This includes using:
+
+- Using portals as an alternative to blanket filesystem access, wherever possible.
+- Using read-only access wherever possible, using the ``:ro`` option.
+- If some home directory access is absolutely required, using XDG directory access only.
+
+The full list the available filesystem options can be found in the :doc:`sandbox-permissions-reference`. Other filesystem access guidelines include:
+
+- The ``--persist=~/path`` option can be used to map paths from the user's home directory into the sandbox filesystem. This makes it possible to avoid configuring access to the entire home directory, and can be useful for applications that hardcode file paths in ``~/``.
+- If an application uses ``$TMPDIR`` to contain lock files or shared files with other processes, it is recommended to create a wrapper script that sets it to ``$XDG_CACHE_HOME``.
+- Retaining and sharing configuration with non-Flatpak installations is to be avoided.
+
+Device access
+`````````````
+
+While not ideal, ``--device=all`` can be used to access devices like controllers or webcams.
+
+dconf access
+````````````
+
+Until a sandbox-compatible backend is available, applications that require access to dconf can do so with the following options::
+
+  --filesystem=xdg-run/dconf
+  --filesystem=~/.config/dconf:ro
+  --talk-name=ca.desrt.dconf
+  --env=DCONF_USER_CONFIG_DIR=.config/dconf

@@ -52,19 +52,9 @@ Portals
 
 Portals are a mechanism through which applications can interact with the host environment from within a sandbox. They give the ability to interact with data, files and services without the need to add sandbox permissions.
 
-Examples of capabilities that can be accessed through portals include:
+Examples of capabilities that can be accessed through portals include opening files through a file chooser dialog, or printing. Interface toolkits can implement transparent support for portals, so access to resources outside of the sandbox will work securely and out of the box.
 
-* Opening files with a native file chooser dialog
-* Opening URIs
-* Printing
-* Showing notifications
-* Taking screenshots
-* Inhibiting the user session from ending, suspending, idling or getting switched away
-* Getting network status information
-
-Interface toolkits can implement transparent support for portals. If an application uses one of these toolkits, there is no additional work required to access them.
-
-Applications that aren't using a toolkit with support for portals can refer to the `xdg-desktop-portal API documentation <https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for information on how to access them.
+More information about portals can be found in :doc:`sandbox-permissions`.
 
 Repositories
 ^^^^^^^^^^^^

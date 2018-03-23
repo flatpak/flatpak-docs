@@ -9,4 +9,4 @@ Reference documentation for flatpak and flatpak-builder.
    flatpak-command-reference
    flatpak-builder-command-reference
    available-runtimes
-   sandbox-permissions
+   sandbox-permissions-reference
