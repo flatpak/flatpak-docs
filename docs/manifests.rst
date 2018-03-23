@@ -7,7 +7,7 @@ This page provides information and guidance on how to use manifests, including a
 
 Manifest files should be named using the application ID. For example, the manifest file for GNOME Dictionary is named ``org.gnome.Dictionary.json``. This page uses this manifest file, which was introduced in :doc:`first-build`, for all its examples.
 
-A complete list of all the properties that can be specified in manifest files can be found in the :doc:`flatpak-builder-command-reference`, as well as the ``flatpak-builder`` man page.
+A complete list of all the properties that can be specified in manifest files can be found in the :doc:`flatpak-builder-command-reference#flatpak-manifest`, as well as the ``flatpak-builder`` man page.
 
 Basic properties
 ----------------
@@ -55,11 +55,7 @@ The finishing manifest section uses the ``finish-args`` property, which can be s
        "--share=network"
     ],
 
-As was explained in :doc:`first-build`, these two finishing properties give the application access to the X11 display server and to the network.
-
-While there are no restrictions on which sandbox permissions an application can use, as good practice, it is recommended to use the minimum number of as permissions possible. Certain permissions, such as blanket access to the system bus (using the ``--socket=system-bus`` option) are strongly discouraged.
-
-A list of ``finish-args`` options can be found in :doc:`sandbox-permissions`.
+As was explained in :doc:`first-build`, these two finishing properties give the application access to the X11 display server and to the network. Guidance on which permissions to use can be found in :doc:`sandbox-permissions`, and a full list of ``finish-args`` options can be found in :doc:`sandbox-permissions-reference`.
 
 Cleanup
 -------
