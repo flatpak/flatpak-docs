@@ -1,21 +1,13 @@
-Building python modules
------------------------
+Python
+======
 
-Python applications that use supported buildsystems such as meson,
-cmake, or autotools can be built in the same way as regular c
-applications. However, many python apps and dependencies use custom
-install scripts or are expected to be installed through setuptools and
-pip.
+Python applications that use supported build systems like Meson, CMake, or Autotools can be built using the standard method. However, many Python applications use custom install scripts or are expected to be installed through Setuptools and ``pip``.
 
-For these cases, ``flatpak-builder`` provides the ``simple``
-buildsystem. Rather than trying to automate the process like the other
-buildsystems, ``simple`` takes a ``build-commands`` array of strings and
-only executes the commands given there.
+For these cases, ``flatpak-builder`` provides the ``simple`` buildsystem. Rather than automating the build process, ``simple`` accepts a ``build-commands`` array of strings, which are executed in sequence.
 
-For example, this makes building the popular requests module rather
-straightforward:
+For example, the following JSON makes building the popular requests module rather straightforward:
 
-::
+.. code-block:: json
 
     {
       "name": "requests",
@@ -32,49 +24,27 @@ straightforward:
       ]
     }
 
-``name`` is the name of the module, in practice this also means the name
-folder in which your module will be built.
+Here, ``build-commands`` is an array containing the commands required to build and install the module. As can be seen, in this case ``pip`` is run to do this. Here, the ``--prefix=/app`` option is important, because otherwise ``pip`` would try to install the module under ``/usr/`` which, because
+``/usr/`` is mounted read-only inside the sandbox, would fail.
 
-``build-commands`` is an array with the commands you need to build and
-install your module. In this case we are running pip to do it, but the
-parameters are important. ``--prefix=/app`` is necessary, because
-otherwise pip would try to install it under ``/usr/`` and (because
-``/usr/`` is mounted read-only inside the sandbox) it would fail.
-
-``--no-deps`` is also relevant, flatpak-builder downloads all
-``sources`` before it starts building, and doesn't allow network access
-during once a build starts. This means that any attempts to download any
-further dependencies past that point would fail. It is used here for
-illustrative purposes, but it can be detrimental because it will make
-pip quiet about real errors. If you must install multiple dependencies,
-it is better to do it in one go using the method in the next section.
+Note that ``--no-deps`` is only used for the purpose of the example - since the requests module has its own dependencies, the build would fail. If multiple dependencies are required, it is better to install them using the method in the next section, instead.
 
 Building multiple python dependencies
 -------------------------------------
 
-You'll notice that, even though it installs fine, it doesn't actually
-work. This is because requests has a number of dependencies that we've
-neglected to install:
+Even though the example above installs, it won't actually work. This is because the requests module has a number of dependencies that haven't been installed:
 
 -  certifi
 -  chardet
 -  idna
 -  urllib3
 
-Four dependencies aren't too much work, we could install all these using
-the same method and it would work just fine. However, anything more
-complex than this would quickly become tedious.
+Four dependencies aren't very many, and could be installed these using the ``simple`` method described above. However, anything more complex than this would quickly become tedious.
 
-For these cases, we can use
-`flatpak-pip-generator <https://github.com/flatpak/flatpak-builder-tools/tree/master/pip>`_,
-this is a python script that takes a package name and uses pip to track
-its dependencies, tarball urls and hashes.
+For these cases, `flatpak-pip-generator <https://github.com/flatpak/flatpak-builder-tools/tree/master/pip>`_ can be used to generate the necessary manifest JSON. This is a Python script that takes a package name and uses ``pip`` to identify its dependencies, along with their tarball URLs and hashes.
 
-Using it is as simple as:
-
-::
+Using ``flatpak-pip-generator`` is as simple as running::
 
     $ python3 flatpak-pip-generator requests
 
-This will output a file called ``python3-requests.json`` containing json
-data that can be directly included among your manifest's modules.
+This will output a file called ``python3-requests.json``, containing the necessary manifest JSON, which can then be included in your application's manifest file.
