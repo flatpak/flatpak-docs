@@ -30,6 +30,15 @@ Applications must be built with the SDK that corresponds to their runtime, so th
 Like runtimes, SDKs will sometimes be automatically installed for you, but if you do need to manually install them, they are installed in the same was as applications and runtimes, such as::
 
  $ flatpak install flathub org.gnome.Sdk//3.26
+ 
+Base apps
+--------
+
+Base apps are flatpaks that are used as a starting point when building other applications. They are useful whenever a piece of code must be built and reused several times, but not enough as to merit including it in a runtime.
+
+In order to use a baseapp for building it must be included in your manifest using ``"base":`` and its appid, any application can serve as a base for another.
+
+Unlike with runtimes, users will not need to install the base app in order to run your application.
 
 Bundling
 --------
