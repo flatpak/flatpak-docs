@@ -36,7 +36,7 @@ Base apps
 
 Base apps are flatpaks that are used as a starting point when building other applications. They are useful whenever a piece of code must be built and reused several times, but not enough as to merit including it in a runtime.
 
-In order to use a baseapp for building it must be included in your manifest using ``"base":`` and its appid, any application can serve as a base for another.
+In order to use a baseapp for building it must be included in your manifest using ``"base":`` and its appid, any application can serve as a base for another. ``flatpak-builder`` will then start building your application inside the base's sandbox, you will have access to everything already built in the base and it will be bundled into your final application when finished.
 
 Unlike with runtimes, users will not need to install the base app in order to run your application.
 
