@@ -39,3 +39,12 @@ One of the key advantages of Flatpak is that it allows application authors to bu
 While bundling is very powerful and flexible, it also places a greater maintenance burden on the application developer. Therefore, while it is possible to bundle as much as you would like, it is generally recommended to try and keep the number of bundled modules as low as possible. If a dependency is available as part of a runtime, it is generally better to use the version from the runtime rather than bundle it yourself.
 
 The specifics of how to bundle libraries is covered in the :doc:`manifests` section.
+
+Base apps
+---------
+
+Flatpak allows almost any module to be bundled as part of an application, even other applications. Typically, this is done with special-purpose applications that have been created in order to be bundled. These applications, called *base apps*, contain dependencies or frameworks that can be used by other applications, in order to share dependencies.
+
+Base apps don't get rebuilt as part of the build process, which makes building faster (particularly when bundling large dependences). And because each base app is only built once, it is guaranteed to be identical wherever it is used, so it will only be saved once on disk.
+
+A number of base apps are available and, unlike runtimes, they can be built and published as required.
