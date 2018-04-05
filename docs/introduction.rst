@@ -1,85 +1,29 @@
 Introduction to Flatpak
 =======================
 
-Flatpak is a technology for building, distributing, installing and running applications. It is primarily targeted at the Linux desktop, although it can also be used as the basis for application distribution in other contexts, such as embedded systems.
+Flatpak is a framework for distributing desktop applications on Linux. It has been created by developers who have a long history of working on the Linux desktop, and is run as an independent open source project.
 
-Flatpak has been designed and implemented with a number of goals:
+Target audience
+---------------
 
-* Allow the same application build to be installed on any Linux distribution.
-* Provide consistent environments for applications, to facilitate testing and reduce bugs.
-* Full integration of applications in the desktop.
-* Ensure forward compatibility of applications, by allowing multiple versions of runtimes to be simultaneously installed.
-* Allow applications to easily use libraries that aren't available in Linux distributions (or aren't consistently available).
-* Increase the security of Linux desktops, by isolating applications in sandboxes.
-* Decentralized infrastructure without a single, privileged repository.
+Flatpak can be used by all kinds of desktop applications, and aims to be as agnostic as possible regarding how applications are built. There are no requirements regarding which programming languages, build tools or other technologies are used.
 
-General information about Flatpak can be found on `flatpak.org <http://flatpak.org/>`_.
+It can be used by applications that target multiple platforms, or by those which are Linux-specific. Applications can be open source or proprietary (although some distribution services, like `Flathub <https://flathub.org/>`_, have restrictions in this respect).
 
-Basic concepts
---------------
+The only technical requirements made by Flatpak are that applications follow a small number of Freedesktop standards, in order to enable desktop integration.
 
-Flatpak can be understood through a small number of key concepts.
+Reasons to use Flatpak
+----------------------
 
-.. image:: ../images/diagram.svg
+Flatpak has some major advantages over other approaches to distributing applications on Linux. First and foremost, Flatpak allows a single application build to be installed and run on virtually any Linux distribution. `Flathub <https://flathub.org/>`_ provides a centralized service for distributing Flatpaks on all distributions, which makes it possible for application developers to target the entire Linux desktop market from one place.
 
-Runtimes
-^^^^^^^^
+Flatpak also offers native integration for the main Linux desktops, so that users can easily browse, install, run and use Flatpak applications through their existing desktop environment and tools.
 
-Runtimes provide the basic dependencies that are used by applications. Each application must be built against a runtime, and this runtime must be installed on a host system in order for the application to run (Flatpak can automatically install the runtime required by an application). Multiple different runtimes can be installed at the same time, including different versions of the same runtime.
+Other benefits for developers include:
 
-A small number of runtimes are available, including the minimal and stable Freedesktop runtimes, as well as runtimes which contain the GNOME and KDE stacks. (See :doc:`available-runtimes` for an overview of the runtimes that are currently available.)
+- **Forward-compatibility**. This means that the same Flatpak will run on different versions of the same distribution, including versions that haven't been released yet. This doesn't require any changes or management by application developers.
+- **Stable, maintained, platforms, called runtimes**. These contain collections of dependencies, which can be used by applications, and which can take a lot of the work out of application development.
+- **Bundling**, which allows application developers to ship almost any dependency or library as part of their application. This gives complete control over which software is used to build applications.
+- **Consistent runtime environments**, which are the same across devices. This ensures that applications perform as intended. It also makes it easier to identify bugs and to do testing.
 
-Runtimes are distribution agnostic and do not depend on particular distribution versions. This means that they provide a stable, cross-distribution base for applications, and allow applications to continue to work irrespective of operating system updates.
-
-Bundled libraries
-^^^^^^^^^^^^^^^^^
-
-If an application requires any dependencies that aren't in its runtime, they can be bundled as part of the application. This gives application developers flexibility regarding the dependencies that they use, including using:
-
-- libraries that aren't available in a distribution or runtime
-- different versions of libraries from the ones that are in a distribution or runtime
-- patched versions of libraries
-
-Sandboxes
-^^^^^^^^^
-
-With Flatpak, each application is built and run in an isolated environment, which is called the 'sandbox'. Each sandbox contains an application and its runtime. By default, the application can only access the contents of its sandbox. Access to user files, network, graphics sockets, subsystems on the bus and devices have to be explicitly granted. Access to other things, such as other processes, is deliberately not possible.
-
-By necessity, some resources that are inside the sandbox need to be exposed outside, to be used by the host system. These are known as 'exports', since they are files that are exported out of the sandbox, and include things like the application's ``.desktop`` file and icon.
-
-Portals
-^^^^^^^
-
-Portals are a mechanism through which applications can interact with the host environment from within a sandbox. They give the ability to interact with data, files and services without the need to add sandbox permissions.
-
-Examples of capabilities that can be accessed through portals include opening files through a file chooser dialog, or printing. Interface toolkits can implement transparent support for portals, so access to resources outside of the sandbox will work securely and out of the box.
-
-More information about portals can be found in :doc:`sandbox-permissions`.
-
-Repositories
-^^^^^^^^^^^^
-
-Flatpak applications and runtimes are typically stored and published using repositories, which behave very similarly to Git repositories. A Flatpak repository can contain a single object or multiple objects, and each object is versioned, which allows upgrading and even downgrading.
-
-Each system which is using Flatpak can be configured to access any number of remote repositories. Once a system has been configured to access a 'remote', the remote repository's content can be inspected and searched, and it can be used as the source of applications and runtimes.
-
-When an update is performed, new versions of installed applications and runtimes are downloaded from the relevant remotes. Like with Git, only the difference between versions is downloaded, which makes the process very efficient.
-
-Under the hood
---------------
-
-Flatpak uses a number of pre-existing technologies. It generally isn't necessary to be familiar with these in order to use Flatpak, although in some cases it might be useful. They include:
-
-* The `bubblewrap <https://github.com/projectatomic/bubblewrap>`_ utility from `Project Atomic <http://www.projectatomic.io/>`_, which lets unprivileged users set up and run containers, using kernel features such as:
-
-  * Cgroups
-  * Namespaces
-  * Bind mounts
-  * Seccomp rules
-
-* `systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_ to set up cgroups for sandboxes
-* `D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_, a well-established way to provide high-level APIs to applications
-* The OCI format from the `Open Container Initiative <https://www.opencontainers.org/>`_, as a convenient transport format for single-file bundles
-* The `OSTree <https://ostree.readthedocs.io/en/latest/>`_ system for versioning and distributing filesystem trees
-* `Appstream <https://www.freedesktop.org/software/appstream/docs/>`_ metadata, to allow Flatpak applications to show up nicely in software-center applications
-
+Finally, while Flatpak does provide a centralized service for distributing applications, it also allows decentralized hosting and distribution, so that application developers or downstreams can host their own applications and application repositories.

@@ -8,6 +8,7 @@ If you haven't already, it is recommended to run through :doc:`first-build` befo
 .. toctree::
    :maxdepth: 2
 
+
    building-basics
    flatpak-builder
    manifests

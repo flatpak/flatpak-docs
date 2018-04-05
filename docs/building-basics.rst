@@ -1,12 +1,12 @@
 Building Concepts and Setup
 ===========================
 
-The :doc:`introduction` and page on :doc:`first-build` have already shown how applications get built as Flatpaks, and have introduced many of the core ideas. This page describes some of these ideas and concepts in more detail. In doing so, it provides guidance on picking a runtime, getting setup to build applications, and when to bundle dependencies yourself.
+The :doc:`basic-concepts` and :doc:`first-build` guides have already shown how applications get built as Flatpaks, and have introduced many of the core ideas. This page describes some of these ideas and concepts in more detail. In doing so, it provides guidance on picking a runtime, getting setup to build applications, and when to bundle dependencies yourself.
 
 Runtimes
 --------
 
-As was described in the :doc:`introduction`, runtimes provide basic dependencies that can be used by applications. They also provide the environment that applications run in.
+As was described in the :doc:`basic-concepts`, runtimes provide basic dependencies that can be used by applications. They also provide the environment that applications run in.
 
 Flatpak requires each application to specify a runtime, and this runtime must be present on a system for it to run. Therefore, one of the first decisions you need to make when building an application with Flatpak, is which runtime it will use.
 
