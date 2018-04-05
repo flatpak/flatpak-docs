@@ -3,7 +3,7 @@ Requirements & Conventions
 
 Flatpak deliberately makes as few requirements of applications as possible. However, some adherence to some conventions are necessary to enable integration with Linux desktops and app centers.
 
-Applications that have previously targetted the Linux desktop will typically be familiar with these conventions.
+Those who have previously targeted the Linux desktop will typically be familiar with these conventions.
 
 Application icons
 -----------------
@@ -49,3 +49,37 @@ AppData files should be named with the application ID and the ``.appdata.xml`` f
   /app/share/metainfo/org.gnome.Dictionary.appdata.xml
 
 The ``appstream-util validate-relax`` command tool can be used to check AppData files for errors.
+
+XDG base directories
+--------------------
+
+XDG base directories are `a Freedesktop standard <https://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html>`_, which defines standard locations where user-specific application data and configuration should be stored.
+
+By default, Flatpak sets three XDG base directories that should be used by applications for user-specific storage. These are:
+
+===============  =================================  ======================
+Base directory   Usage                              Default location
+===============  =================================  ======================
+XDG_CONFIG_HOME  User-specific configuration files  ~/.var/<app-id>/config
+XDG_DATA_HOME    User-specific data                 ~/.var/<app-id>/data
+XDG_CACHE_HOME   Non-essential user-specific data   ~/.var/<app-id>/cache
+===============  =================================  ======================
+
+For example, GNOME Dictionary should store user-specific data in::
+
+  ~/.var/org.gnome.Dictionary/data
+
+Note that applications can be configured to use non-default base directory locations (see :doc:`sandbox-permissions`).
+
+Filesystem layout
+-----------------
+
+Each application sandbox contains the filesystem of the application's runtime, which follows `standard Linux filesystem conventions <https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>`_. For example:
+
+- ``/bin`` - binaries
+- ``/dev`` - device files
+- ``/lib`` - libraries
+- ``/opt`` - application software packages
+- ``/usr`` - multi-user utilities and applications
+
+In addition to this, each sandbox contains a top-level ``/app`` directory, which is where the application's own files are located.
