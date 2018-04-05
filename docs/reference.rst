@@ -10,3 +10,4 @@ Reference documentation for flatpak and flatpak-builder.
    flatpak-builder-command-reference
    available-runtimes
    sandbox-permissions-reference
+   under-the-hood
