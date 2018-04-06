@@ -5,6 +5,11 @@ Flatpak deliberately makes as few requirements of applications as possible. Howe
 
 Those who have previously targeted the Linux desktop will typically be familiar with these conventions.
 
+Application IDs
+---------------
+
+As described in :doc:`using-flatpak`, Flatpak requires each application to have a unique identifier, which has a three part form such as ``org.gnome.Dictionary``. Developers should follow the standard `D-Bus naming conventions <https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names>`_ when creating their own IDs.
+
 Application icons
 -----------------
 
@@ -83,3 +88,10 @@ Each application sandbox contains the filesystem of the application's runtime, w
 - ``/usr`` - multi-user utilities and applications
 
 In addition to this, each sandbox contains a top-level ``/app`` directory, which is where the application's own files are located.
+
+D-Bus
+-----
+
+`D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_ is the standard framework for interprocess communication on Linux desktops. Applications do not always need to use it, and often portals will be a better choice. However, there are a few cases where D-Bus is required, such as when integrating with system-provided media controls, through the `MPRIS specification <https://specifications.freedesktop.org/mpris-spec/latest/>`_.
+
+If an application provides a D-Bus service, the D-Bus service name is expected to be the same as the application ID.

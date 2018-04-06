@@ -16,8 +16,6 @@ Identifiers
 
 Flatpak identifies each application and runtime using a unique three-part identifier, such as ``com.company.App``. The final segment of this address is the object's name, and the preceding part identifies the developer, so that the same developer can have multiple applications, like ``com.company.App1`` and ``com.company.App2``.
 
-Developers should follow the standard `D-Bus naming conventions <https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names>`_ when creating their own IDs. If an application provides a D-Bus service, the D-Bus service name is expected to be the same as the application ID.
-
 Identifier triples
 ``````````````````
 
