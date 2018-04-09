@@ -90,13 +90,16 @@ Other filesystem access guidelines include:
   it is recommended to create a wrapper script that sets it to ``$XDG_CACHE_HOME``.
 - Retaining and sharing configuration with non-Flatpak installations is to be avoided.
 
-As mentioned above the ``host`` option does not and can not actually provide complete access to the
+As mentioned above the ``host`` option does not actually provide complete access to the
 host filesystem. The main rules are:
   
 - These directories are blacklisted: ``/lib``, ``/lib32``, ``/lib64``, ``/bin``, ``/sbin``, ``/usr``, ``/boot``, ``/root``,
   ``/tmp``, ``/etc``, ``/app``, ``/run``, ``/proc``, ``/sys``, ``/dev``, ``/var``
 - Exceptions from the blacklist: ``/run/media``
 - These directories are mounted under ``/var/run/host``: ``/etc``, ``/usr``
+
+The reason many of the directories are blacklisted is because they already exist in the sandbox such as ``/usr``
+or are not usable in the sandbox.
 
 Device access
 `````````````
