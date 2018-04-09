@@ -67,9 +67,10 @@ Talk permissions can be freely used, although it is recommended to use the minum
 Filesystem access
 `````````````````
 
-It is common for applications to require access to different parts of the host filesystem, and Flatpak provides a flexible set of options for this. Some examples include:
+It is common for applications to require access to different parts of the host filesystem,and
+Flatpak provides a flexible set of options for this. Some examples include:
 
-- ``--filesystem=host`` - access all files on the host
+- ``--filesystem=host`` - access normal files on the host, not including host os or system internals described below
 - ``--filesystem=home`` - access the user's home directory
 - ``--filesystem=/path/path`` - access specific paths
 - ``--filesystem=xdg-download`` - access a specific XDG folder
@@ -80,11 +81,22 @@ As a general rule, Filesystem access should be limited as much as possible. This
 - Using read-only access wherever possible, using the ``:ro`` option.
 - If some home directory access is absolutely required, using XDG directory access only.
 
-The full list the available filesystem options can be found in the :doc:`sandbox-permissions-reference`. Other filesystem access guidelines include:
+The full list the available filesystem options can be found in the :doc:`sandbox-permissions-reference`.
+Other filesystem access guidelines include:
 
-- The ``--persist=path`` option can be used to map paths from the user's home directory into the sandbox filesystem. This makes it possible to avoid configuring access to the entire home directory, and can be useful for applications that hardcode file paths in ``~/``.
-- If an application uses ``$TMPDIR`` to contain lock files or shared files with other processes, it is recommended to create a wrapper script that sets it to ``$XDG_CACHE_HOME``.
+- The ``--persist=path`` option can be used to map paths from the user's home directory into the sandbox filesystem.
+  This makes it possible to avoid configuring access to the entire home directory, and can be useful for applications that hardcode file paths in ``~/``.
+- If an application uses ``$TMPDIR`` to contain lock files or shared files with other processes,
+  it is recommended to create a wrapper script that sets it to ``$XDG_CACHE_HOME``.
 - Retaining and sharing configuration with non-Flatpak installations is to be avoided.
+
+As mentioned above the ``host`` option does not and can not actually provide complete access to the
+host filesystem. The main rules are:
+  
+- These directories are blacklisted: ``/lib``, ``/lib32``, ``/lib64``, ``/bin``, ``/sbin``, ``/usr``, ``/boot``, ``/root``,
+  ``/tmp``, ``/etc``, ``/app``, ``/run``, ``/proc``, ``/sys``, ``/dev``, ``/var``
+- Exceptions from the blacklist: ``/run/media``
+- These directories are mounted under ``/var/run/host``: ``/etc``, ``/usr``
 
 Device access
 `````````````
