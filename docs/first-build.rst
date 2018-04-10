@@ -1,14 +1,14 @@
 Building Your First Flatpak
 ===========================
 
-This tutorial provides a quick, step-by-step example of how to build a simple application as a Flatpak. It also takes the opportunity to explain a few key concepts.
+This tutorial provides a quick, step-by-step example of how to build a simple application as a Flatpak.
 
 In order to complete this tutorial, you should have followed the `setup guide on flatpak.org <http://flatpak.org/setup/>`_. You also need to have installed ``flatpak-builder``, which is usually available from the same repository as the ``flatpak`` package.
 
 1. Create a manifest
 --------------------
 
-The input to ``flatpak-builder`` is a JSON file that describes the parameters for building the application. This is called the manifest. The following example is the manifest for the GNOME Dictionary application:
+``flatpak-builder`` is the primary tool for building Flatpaks. The input to ``flatpak-builder`` is a JSON file that describes the parameters for building the application. This is called the manifest. The following example is the manifest for the GNOME Dictionary application:
 
 .. code-block:: json
 

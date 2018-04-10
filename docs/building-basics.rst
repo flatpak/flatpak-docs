@@ -1,7 +1,7 @@
 Building Concepts and Setup
 ===========================
 
-The :doc:`basic-concepts` and :doc:`first-build` guides have already shown how applications get built as Flatpaks, and have introduced many of the core ideas. This page describes some of these ideas and concepts in more detail. In doing so, it provides guidance on picking a runtime, getting setup to build applications, and when to bundle dependencies yourself.
+Flatpak's key elements have already been introduced in :doc:`basic-concepts`, and :doc:`first-build` has shown how applications get built as Flatpaks. This page covers these topics in more detail. In doing so, it provides guidance on picking a runtime, getting setup to build applications, and when to bundle dependencies yourself.
 
 Runtimes
 --------

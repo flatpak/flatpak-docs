@@ -1,7 +1,7 @@
 Basic concepts
 ==============
 
-Flatpak can be understood through a small number of key concepts. It is useful to be familiar with these before learning about how to use Flatpak from the command line, or how to build applications.
+Flatpak can be understood through a small number of key concepts. It is useful to be familiar with these before learning about how to use Flatpak from the command line, or using it to build applications.
 
 .. image:: ../images/diagram.svg
 

@@ -1,7 +1,7 @@
 Welcome to Flatpak's documentation!
 ===================================
 
-These docs cover everything you need to know to build and distribute applications as Flatpaks. They contain a high-level introduction to Flatpak, tutorials and essential information on how to develop, build and distribute applications.
+These docs cover everything you need to know to build and distribute applications as Flatpaks. They begin with a basic introduction to Flatpak, background information on basic concepts, and a guide to the Flatpak command line interface. Later sections provide detailed information on building and distributing applications.
 
 The docs are primarily intended for application developers and distributors. Their content is also relevant to those who have a general interest in Flatpak.
 
@@ -17,4 +17,4 @@ Contents
    getting-started
    building
    publishing
-   reference
+   reference  
