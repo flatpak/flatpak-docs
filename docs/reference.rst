@@ -10,4 +10,5 @@ Reference documentation for flatpak and flatpak-builder.
    flatpak-builder-command-reference
    available-runtimes
    sandbox-permissions-reference
+   freedesktop-quick-reference
    under-the-hood

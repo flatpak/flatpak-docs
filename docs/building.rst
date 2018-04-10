@@ -9,6 +9,7 @@ If you haven't already, it is recommended to run through :doc:`first-build` befo
    :maxdepth: 2
 
 
+   conventions
    building-basics
    flatpak-builder
    manifests
