@@ -60,13 +60,13 @@ XDG base directories
 
 By default, Flatpak sets three XDG base directories that should be used by applications for user-specific storage. These are:
 
-===============  =================================  ======================
+===============  =================================  ==========================
 Base directory   Usage                              Default location
-===============  =================================  ======================
-XDG_CONFIG_HOME  User-specific configuration files  ~/.var/<app-id>/config
-XDG_DATA_HOME    User-specific data                 ~/.var/<app-id>/data
-XDG_CACHE_HOME   Non-essential user-specific data   ~/.var/<app-id>/cache
-===============  =================================  ======================
+===============  =================================  ==========================
+XDG_CONFIG_HOME  User-specific configuration files  ~/.var/app/<app-id>/config
+XDG_DATA_HOME    User-specific data                 ~/.var/app/<app-id>/data
+XDG_CACHE_HOME   Non-essential user-specific data   ~/.var/app/<app-id>/cache
+===============  =================================  ==========================
 
 For example, GNOME Dictionary should store user-specific data in::
 
