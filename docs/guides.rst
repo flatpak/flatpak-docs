@@ -7,3 +7,4 @@ Flatpak provides a range of options and helper tools, which allow building appli
    :maxdepth: 1
 
    python
+   electron
