@@ -56,7 +56,7 @@ The ``appstream-util validate-relax`` command can be used to check AppData files
 XDG base directories
 --------------------
 
-`XDG base directories <https://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html>`_ are a Freedesktop standard which defines standard locations where user-specific application data and configuration should be stored.
+`XDG base directories <https://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html>`_ are a Freedesktop standard which defines standard locations where user-specific application data and configuration should be stored. If your application already respects these nothing must be changed.
 
 By default, Flatpak sets three XDG base directories that should be used by applications for user-specific storage. These are:
 
@@ -68,9 +68,9 @@ XDG_DATA_HOME    User-specific data                 ~/.var/app/<app-id>/data
 XDG_CACHE_HOME   Non-essential user-specific data   ~/.var/app/<app-id>/cache
 ===============  =================================  ==========================
 
-For example, GNOME Dictionary should store user-specific data in::
+For example, GNOME Dictionary will store user-specific data in::
 
-  ~/.var/org.gnome.Dictionary/data
+  ~/.var/org.gnome.Dictionary/data/gnome-dictionary
 
 Note that applications can be configured to use non-default base directory locations (see :doc:`sandbox-permissions`).
 
