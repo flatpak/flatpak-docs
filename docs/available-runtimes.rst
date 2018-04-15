@@ -8,7 +8,7 @@ There are currently three main runtimes available: Freedesktop, GNOME and KDE. T
 Freedesktop
 -----------
 
-The Freedesktop runtime is the standard runtime that can be used for any application and contains a set of essential libraries and services, including D-Bus, GLib, PulseAudio, X11 and Wayland.
+The Freedesktop runtime is the standard runtime that can be used for any application and contains a set of essential libraries and services, including D-Bus, GLib, Gtk3, PulseAudio, X11 and Wayland.
 
 Available Freedesktop runtimes:
 
