@@ -76,6 +76,9 @@ The standard guidelines on sandbox permissions apply to Electron applications. H
 Build options
 -------------
 
+These build options aren't strictly necessary, but can be useful if something goes wrong.
+``env`` allows setting an array of environment variables, in this case we set ``NPM_CONFIG_LOGLEVEL`` to ``info`` so that ``npm`` gives us more detailed error messages.
+
 .. code-block:: json
 
   "build-options" : {
