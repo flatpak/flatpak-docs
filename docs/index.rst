@@ -16,5 +16,6 @@ Contents
    introduction
    getting-started
    building
+   debugging
    publishing
    reference
