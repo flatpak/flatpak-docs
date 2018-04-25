@@ -1,7 +1,7 @@
 Sandbox Permissions
 ===================
 
-One of Flatpak's main goals is to increase the security of desktop systems by isolating applications from one another. This is achieved using sandboxing and means that, by default, Flatpak applications have extremely limited access to the host environment. This includes:
+One of Flatpak's main goals is to increase the security of desktop systems by isolating applications from one another. This is achieved using sandboxing and means that, by default, applications that are run with Flatpak have extremely limited access to the host environment. This includes:
 
 - No access to any host files except the runtime, the app and ``~/.var/app/$APPID``. Only the last of these is writable.
 - No access to the network.
@@ -37,7 +37,7 @@ Permissions guidelines
 
 While application developers have control over the sandbox permissions they wish to configure, good practice is encouraged and can be enforced. For example, the Flathub hosting service places requirements on which permissions can be used, and software on the host may warn users if certain permissions are used.
 
-The following guidelines describe which some permissions can be freely used, which can be used on an as-needed basis, and which should be avoided.
+The following guidelines describe which permissions can be freely used, which can be used on an as-needed basis, and which should be avoided.
 
 Standard permissions
 ````````````````````

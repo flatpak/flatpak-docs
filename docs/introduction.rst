@@ -15,7 +15,7 @@ The only technical requirements made by Flatpak are that applications follow a s
 Reasons to use Flatpak
 ----------------------
 
-Flatpak has some major advantages over other approaches to distributing applications on Linux. First and foremost, Flatpak allows a single application build to be installed and run on virtually any Linux distribution. It can also be used in combination with `Flathub <https://flathub.org/>`_, a centralized service for distributing Flatpaks on all distributions. This makes it possible for application developers to target the entire Linux desktop market from one place.
+Flatpak has some major advantages over other approaches to distributing applications on Linux. First and foremost, Flatpak allows a single application build to be installed and run on virtually any Linux distribution. It can also be used in combination with `Flathub <https://flathub.org/>`_, a centralized service for distributing applications on all distributions. This makes it possible for application developers to target the entire Linux desktop market from one place.
 
 Flatpak also offers native integration for the main Linux desktops, so that users can easily browse, install, run and use Flatpak applications through their existing desktop environment and tools.
 

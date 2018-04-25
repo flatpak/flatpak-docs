@@ -1,7 +1,7 @@
-Building Your First Flatpak
-===========================
+Your First Build
+================
 
-This tutorial provides a quick, step-by-step example of how to build a simple application as a Flatpak.
+This tutorial provides a quick, step-by-step example of how to build a simple application using Flatpak.
 
 In order to complete this tutorial, you should have followed the `setup guide on flatpak.org <http://flatpak.org/setup/>`_. You also need to have installed ``flatpak-builder``, which is usually available from the same repository as the ``flatpak`` package.
 
