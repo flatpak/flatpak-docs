@@ -6,7 +6,7 @@ This page provides an overview of how Flatpak works internally. While it isn't n
 "Git for apps"
 --------------
 
-Flatpak is built on top of a technology called OSTree, which is influenced by and very similar to the Git version control system. Like Git, OSTree allows versioned data to be tracked and to be distributed between different repositories. However, where Git is designed to track source files, OSTree is designed to track binary files and other large data.
+Flatpak is built on top of a technology called `OSTree <https://ostree.readthedocs.io/en/latest/manual/introduction/>`_, which is influenced by and very similar to the Git version control system. Like Git, OSTree allows versioned data to be tracked and to be distributed between different repositories. However, where Git is designed to track source files, OSTree is designed to track binary files and other large data.
 
 Internally, Flatpak therefore works in a similar way to Git, and many Flatpak concepts are analagous to Git concepts. Like Git, Flatpak uses repositories to store data, and it tracks the differences between versions.
 
@@ -15,6 +15,8 @@ With Flatpak, each application, runtime and extension is a branch in a repositor
 When an application is installed with Flatpak, it is pulled from the remote into a new branch in a local repository. Links are then generated which point from the right places in the filesystem to the application's files in the repository (these are `hard links <https://en.wikipedia.org/wiki/Hard_link>`_, which are fast to resolve and disk space efficient). In other words, every application that is installed is stored in a local version control repository, and is then mapped into the local filesystem.
 
 Version tracking is therefore a core part of Flatpak's architecture, and this makes updating software to the latest version very efficient. Versioning also makes rollbacks possible, so it's easy to go back to a previous version, should that be required.
+
+Storing applications in a local OSTree repository has other advantages. For example, it allows files that are stored on disk to be deduplicated, so the same file that belongs to multiple applications (or runtimes) is only stored once.
 
 Underlying technologies
 -----------------------
