@@ -44,7 +44,7 @@ Each of these properties accepts the name of the source file to be renamed. ``fl
 Finishing
 ---------
 
-Flatpaks have extremely limited access to the host environment by default, but applications require access to resources outside of their sandbox in order to be useful. Finishing is the build stage where the application's sandbox permissions are specified, in order to give access to these resources.
+Applications that are run with Flatpak have extremely limited access to the host environment by default, but applications require access to resources outside of their sandbox in order to be useful. Finishing is the build stage where the application's sandbox permissions are specified, in order to give access to these resources.
 
 The finishing manifest section uses the ``finish-args`` property, which can be seen in the Dictionary manifest file:
 
