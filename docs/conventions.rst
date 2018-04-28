@@ -8,7 +8,7 @@ Applications that have previously targeted the Linux desktop will typically need
 Application IDs
 ---------------
 
-As described in :doc:`using-flatpak`, Flatpak requires each application to have a unique identifier, which has a three-part form such as ``org.gnome.Dictionary``. As will be seen below and in future sections, this ID is expected to be used in a number of places. Developers should follow the standard `D-Bus naming conventions <https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names>`_ when creating their own IDs.
+As described in :doc:`using-flatpak`, Flatpak requires each application to have a unique identifier, which has a three-part form such as ``org.gnome.Dictionary``. As will be seen below and in future sections, this ID is expected to be used in a number of places. Developers should follow the standard `D-Bus naming conventions <https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names>`_ when creating their own IDs. This format is already recommended by the `Desktop File specification  <https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html#file-naming>`_ and `Appstream specification  <https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#sect-Metadata-GenericComponent>`_ also.
 
 Application icons
 -----------------
