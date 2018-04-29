@@ -142,8 +142,8 @@ The next part of the manifest describes how the application should be built. The
   "sources": [
     {
         "type": "archive",
-        "url": "https://github.com/flathub/electron-sample-app/archive/1.0.0.tar.gz",
-        "sha256": "221582f14afbe9d723ee1b1737800dcce843a776ebfe8edb5c1e7a1d0d36e7f5",
+        "url": "https://github.com/flathub/electron-sample-app/archive/1.0.1.tar.gz",
+        "sha256": "a2feb3f1cf002a2e4e8900f718cc5c54db4ad174e48bfcfbddcd588c7b716d5b",
         "dest": "main"
     },
 
