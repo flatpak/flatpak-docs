@@ -1,14 +1,14 @@
-Building Concepts and Setup
-===========================
+Setup & Preparation
+===================
 
-Flatpak's key elements have already been introduced in :doc:`basic-concepts`, and :doc:`first-build` has shown how applications get built as Flatpaks. This page covers these topics in more detail. In doing so, it provides guidance on picking a runtime, getting setup to build applications, and when to bundle dependencies yourself.
+This page provides information on how to get setup in order to build an application. It also provides guidance on some of the key questions that developers have to answer when setting out to build an application with Flatpak for the first time.
 
-Runtimes
---------
+Along the way, this page introduces two new concepts: Software Development Kits (SDKs) and base apps.
 
-As was described in the :doc:`basic-concepts`, runtimes provide basic dependencies that can be used by applications. They also provide the environment that applications run in.
+Deciding on a runtime
+---------------------
 
-Flatpak requires each application to specify a runtime, and this runtime must be present on a system for it to run. Therefore, one of the first decisions you need to make when building an application with Flatpak, is which runtime it will use.
+As was described in the :doc:`basic-concepts`, runtimes provide basic dependencies that can be used by applications. They also provide the environment that applications run in. Flatpak requires each application to specify a runtime. Therefore, one of the first decisions you need to make when building an application with Flatpak, is which runtime it will use.
 
 An overview of the runtimes that are available can be found in the :doc:`available-runtimes` page. There are deliberately only a small number of runtimes to choose from. Typically, runtimes are picked on the basis of which dependencies an application requires. If a runtime exists that provides libraries that you plan on using, this is usually the correct runtime to use!
 
@@ -34,17 +34,28 @@ Like runtimes, SDKs will sometimes be automatically installed for you, but if yo
 Bundling
 --------
 
-One of the key advantages of Flatpak is that it allows application authors to bundle whatever libraries or dependencies that they want. This means that developers aren't constrained by which libraries are available through Linux distributions. It also provides flexibility, allowing particular versions of libraries to be used, or the use of libraries that have been patched.
+One of the key advantages of Flatpak is that it allows application authors to bundle whatever libraries or dependencies that they want. This means that developers aren't constrained by which libraries are available through Linux distributions.
 
-While bundling is very powerful and flexible, it also places a greater maintenance burden on the application developer. Therefore, while it is possible to bundle as much as you would like, it is generally recommended to try and keep the number of bundled modules as low as possible. If a dependency is available as part of a runtime, it is generally better to use the version from the runtime rather than bundle it yourself.
+When it comes to building an application for the first time, you will need to decide which dependencies to bundle. This can include:
+
+- libraries that aren't in your chosen runtime
+- different versions of libraries that are in your chosen runtime
+- patched versions of libraries
+- data or other resources that form part of the application
+
+As will be seen, bundled dependencies can be automatically downloaded as part of the build process. It is also possible to apply patches and perform other transformations.
+
+While bundling is very powerful and flexible, it also places a greater maintenance burden on the application developer. Therefore, while it is possible to bundle as much as you would like, it is generally recommended to try and keep the number of bundled modules as low as possible. If a dependency is available as part of a runtime, it is generally better to use that version rather than bundle it yourself.
 
 The specifics of how to bundle libraries is covered in the :doc:`manifests` section.
 
 Base apps
 ---------
 
-Flatpak allows almost any module to be bundled as part of an application, even other applications. Typically, this is done with special-purpose applications that have been created in order to be bundled. These applications, called *base apps*, contain dependencies or frameworks that can be used by other applications, in order to share dependencies.
+Runtimes and bundling are the two main ways that dependencies are handled with Flatpak. They allow applications to rely on stable collections of dependencies on the one hand, and to have flexibility and control on the other.
 
-Base apps don't get rebuilt as part of the build process, which makes building faster (particularly when bundling large dependences). And because each base app is only built once, it is guaranteed to be identical wherever it is used, so it will only be saved once on disk.
+However, in some cases, dependencies come as part of a bigger framework or toolkit, which doesn't fit into a runtime but which is also cumbersome to manually bundle as a series of individual modules. This is where *base apps* come in.
 
-A number of base apps are available and, unlike runtimes, they can be built and published as required.
+Base apps contain collections of bundled dependencies which can then be bundled as part of an applicatio. They don't get rebuilt as part of the build process, which makes building faster (particularly when bundling large dependences). And because each base app is only built once, it is guaranteed to be identical wherever it is used, so it will only be saved once on disk.
+
+Base apps are a relatively specialized concept and only some applications need to use them. The most common base app is used for `Electron applications <https://github.com/flathub/io.atom.electron.BaseApp>`_. If your application uses a large, complex or specialized framework, it is a good idea to check for available base apps before you start building.
