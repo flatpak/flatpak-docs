@@ -1,98 +1,131 @@
-Your First Build
-================
+Building your first Flatpak
+===========================
 
-This tutorial provides a quick, step-by-step example of how to build a simple application using Flatpak.
+This tutorial provides a quick introduction to building Flatpaks. In it, you will learn how to create a basic Flatpak application, which can be installed and run.
 
 In order to complete this tutorial, you should have followed the `setup guide on flatpak.org <http://flatpak.org/setup/>`_. You also need to have installed ``flatpak-builder``, which is usually available from the same repository as the ``flatpak`` package.
 
-1. Create a manifest
---------------------
+1. Install a runtime and the matching SDK
+-----------------------------------------
 
-``flatpak-builder`` is the primary tool for building Flatpaks. The input to ``flatpak-builder`` is a JSON file that describes the parameters for building the application. This is called the manifest. The following example is the manifest for the GNOME Dictionary application:
+Flatpak requires every app to specify a runtime that it uses for its basic
+dependencies. Each runtime has a matching SDK (Software Development Kit), which
+contains all the things that are in the runtime, plus headers and development
+tools. This SDK is required to build apps for the runtime.
+
+In this tutorial we will use the Freedesktop 1.6 runtime and SDK. To install these, run::
+
+  $ flatpak install flathub org.freedesktop.Platform//1.6 org.freedesktop.Sdk//1.6
+
+2. Create the app
+-----------------
+
+The app that is going to be created for this tutorial is a simple script. To
+create it, copy the following::
+
+  #!/bin/sh
+  echo "Hello world, from a sandbox"
+
+Now paste this into an empty file and save it as ``hello.sh``.
+
+3. Add a manifest
+-----------------
+
+Each Flatpak is built using a manifest file which provides basic information about the application and instructions for how it is to be built. To add a manifest to the hello world app, add the following to an empty file:
 
 .. code-block:: json
 
   {
-    "app-id": "org.gnome.Dictionary",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "3.26",
-    "sdk": "org.gnome.Sdk",
-    "command": "gnome-dictionary",
-    "finish-args": [
-       "--socket=x11",
-       "--share=network"
-    ],
-    "modules": [
-      {
-        "name": "gnome-dictionary",
-        "sources": [
+      "app-id": "org.flatpak.Hello",
+      "runtime": "org.freedesktop.Platform",
+      "runtime-version": "1.6",
+      "sdk": "org.freedesktop.Sdk",
+      "command": "hello.sh",
+      "modules": [
           {
-            "type": "archive",
-            "url": "https://download.gnome.org/sources/gnome-dictionary/3.26/gnome-dictionary-3.26.0.tar.xz",
-            "sha256": "387ff8fbb8091448453fd26dcf0b10053601c662e59581097bc0b54ced52e9ef"
+              "name": "hello",
+              "buildsystem": "simple",
+              "build-commands": [
+                  "install -D hello.sh /app/bin/hello.sh"
+              ],
+              "sources": [
+                  {
+                      "type": "file",
+                      "path": "hello.sh"
+                  }
+              ]
           }
-        ]
-      }
-    ]
+      ]
   }
 
-As can be seen, this manifest includes basic information about the application, including:
+Now save the file alongside ``hello.sh`` and call it ``org.flatpak.Hello.json``.
 
-- ``app-id`` - the application ID
-- ``runtime`` - the runtime, which provides the environment that the application will run in, as well as basic dependencies it can use
-- ``sdk`` - the Software Development Kit, which is a version of the runtime with development files and headers; this is required to build the app
-- ``command`` - the command that is used to run the application
-- ``finish-args`` - configuration options which give the application access to resources outside of its sandbox; in this case, the application is being given network access and access to the X11 display server
+In a more complex application, the manifest would list multiple modules. The
+last one would typically be the application itself, and the earlier ones would
+be dependencies that are bundled with the app because they are not part of the
+runtime.
 
-The next part of the manifest is the ``modules`` list. This describes each of the modules that are to be built as part of the build process. One of these modules is always the application. Others can be libraries and other resources that are bundled as part of the application.
+4. Build the application
+------------------------
 
-Module sources can be of several types, including ``.tar`` or ``.zip`` archives, Git or Bzr repositories. In this case, there is only one module, which is a ``.tar`` file which will be downloaded and built.
+Now that the app has a manifest, ``flatpak-builder`` can be used to build it.
+This is done by specifying the manifest file and a target directory::
 
-The modules section of the Dictionary manifest is short, because only one module is built: the application itself.
+  $ flatpak-builder build-dir org.flatpak.Hello.json
 
-To create a manifest for the Dictionary, create a file called ``org.gnome.Dictionary.json`` and paste the JSON from above into it.
+This command will build each module that is listed in the manifest and install
+it to the ``/app`` subdirectory, inside the ``build-dir`` directory.
 
-2. Run the build
-----------------
+5. Test the build
+-----------------
 
-To use the manifest to build the Dictionary application, run the following command::
+To verify that the build was successful, run the following::
 
-  $ flatpak-builder --repo=tutorial-repo dictionary org.gnome.Dictionary.json
+  $ flatpak-builder --run build-dir org.flatpak.Hello.json hello.sh
 
-This will:
+Congratulations, you've made an app!
 
-* Create a new directory called dictionary
-* Download and verify the Dictionary source code
-* Build and install the source code, inside the SDK rather than the host system
-* Finish the build, by setting permissions (in this case giving access to X11 and the network)
-* Create a new repository called repo (if it doesn't exist) and export the resulting build into it
+6. Put the app in a repository
+------------------------------
 
-``flatpak-builder`` will also do some other useful things, like creating a separately installable debug runtime (called ``org.gnome.Dictionary.Debug`` in this case) and a separately installable translation runtime (called ``org.gnome.Dictionary.Locale``).
+Before you can install and run the app, it first needs to be put in a
+repository. This is done by passing the ``--repo`` argument to ``flatpak-builder``::
 
-3. Add the new repository
--------------------------
+ $ flatpak-builder --repo=repo --force-clean build-dir org.flatpak.Hello.json
 
-To test the application that has been built, you need to add the new repository that has been created::
+This does the build again, and at the end exports the result to a local
+directory called ``repo``. Note that ``flatpak-builder`` keeps a cache of previous
+builds in the ``.flatpak-builder`` subdirectory, so doing a second build like
+this is very fast.
 
-  $ flatpak --user remote-add --no-gpg-verify --if-not-exists tutorial-repo tutorial-repo
+This second time we passed in ``--force-clean``, which means that the previously
+created ``build-dir`` directory was deleted before the new build was started.
 
-4. Install the application
---------------------------
+7. Install the app
+------------------
 
-The next step is to install the Dictionary application from the repository. To do this, run::
+Now we're ready to add the repository that was just created and install the
+app. This is done with two commands::
 
-  $ flatpak --user install tutorial-repo org.gnome.Dictionary
+  $ flatpak --user remote-add --no-gpg-verify tutorial-repo repo
+  $ flatpak --user install tutorial-repo org.flatpak.Hello
 
-To check that the application has been successfully installed, you can compare the sha256 commit of the installed app with the commit ID that was printed by ``flatpak-builder``::
+The first command adds the repository that was created in the previous step.
+The second command installs the app from the repository.
 
-  $ flatpak info org.gnome.Dictionary
-  $ flatpak info org.gnome.Dictionary.Locale
+Both these commands use the ``--user`` argument, which means that the repository
+and the app are added per-user rather than system-wide. This is useful for testing.
 
-5. Run the application
-----------------------
+Note that the repository was added with ``--no-gpg-verify``, since a GPG key
+wasn't specified when the app was built. This is fine for testing, but for
+official repositories you should sign them with a private GPG key.
 
-Finally, you can run the application that you've built::
+8. Run the app
+--------------
 
-  $ flatpak run org.gnome.Dictionary
+All that's left is to try the app. This can be done with the following command::
 
-The rest of the documentation provides a complete guide to using ``flatpak-builder``. If you are new to Flatpak, it is recommended to start with the :doc:`introduction`.
+  $ flatpak run org.flatpak.Hello
+
+This runs the app, so that it prints 'Hello world, from a sandbox'.
+

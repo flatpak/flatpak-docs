@@ -1,14 +1,14 @@
-Setup & Preparation
-===================
+Dependencies
+============
 
-This page provides information on how to get setup in order to build an application. It also provides guidance on some of the key questions that developers have to answer when setting out to build an application with Flatpak for the first time.
+Flatpak provides a number of different options for how applications can depend on other software. When setting out to build an application with Flatpak for the first time, it is therefore necessary to decide how application dependencies will be organized.
 
-Along the way, this page introduces two new concepts: Software Development Kits (SDKs) and base apps.
+This page outlines what the options are, and provides guidance on when to use each one.
 
-Deciding on a runtime
----------------------
+Runtimes
+--------
 
-As was described in the :doc:`basic-concepts`, runtimes provide basic dependencies that can be used by applications. They also provide the environment that applications run in. Flatpak requires each application to specify a runtime. Therefore, one of the first decisions you need to make when building an application with Flatpak, is which runtime it will use.
+As was described in :doc:`basic-concepts`, runtimes provide basic dependencies that can be used by applications. They also provide the environment that applications run in. Flatpak requires each application to specify a runtime. Therefore, one of the first decisions you need to make when building an application with Flatpak, is which runtime it will use.
 
 An overview of the runtimes that are available can be found in the :doc:`available-runtimes` page. There are deliberately only a small number of runtimes to choose from. Typically, runtimes are picked on the basis of which dependencies an application requires. If a runtime exists that provides libraries that you plan on using, this is usually the correct runtime to use!
 
@@ -19,17 +19,6 @@ An overview of the runtimes that are available can be found in the :doc:`availab
 Runtimes are automatically installed for users when they install an application, and build tools can also automatically install them for you (``flatpak-builder``'s ``--install-deps-from`` option is useful for this). However, if you do need to manually install your chosen runtime, this can be done in the same way as installing an application, with the ``flatpak install`` command. For example, the command to install the GNOME 3.26 runtime is::
 
   $ flatpak install flathub org.gnome.Platform//3.26
-
-Software Development Kits (SDKs)
---------------------------------
-
-Each runtime is paired with an SDK (Software Develpment Kit). For example, the GNOME 3.26 runtime is accompanied by the GNOME 3.26 SDK. The SDK includes the same things as the regular runtime, but also includes all the development resources and tools that are required to build an application, such as build and packaging tools, header files, compilers and debuggers.
-
-Applications must be built with the SDK that corresponds to their runtime, so that applications that use the GNOME 3.26 runtime must be built with the GNOME 3.26 SDK.
-
-Like runtimes, SDKs will sometimes be automatically installed for you, but if you do need to manually install them, they are installed in the same was as applications and runtimes, such as::
-
- $ flatpak install flathub org.gnome.Sdk//3.26
 
 Bundling
 --------
@@ -56,6 +45,6 @@ Runtimes and bundling are the two main ways that dependencies are handled with F
 
 However, in some cases, dependencies come as part of a bigger framework or toolkit, which doesn't fit into a runtime but which is also cumbersome to manually bundle as a series of individual modules. This is where *base apps* come in.
 
-Base apps contain collections of bundled dependencies which can then be bundled as part of an applicatio. They don't get rebuilt as part of the build process, which makes building faster (particularly when bundling large dependences). And because each base app is only built once, it is guaranteed to be identical wherever it is used, so it will only be saved once on disk.
+Base apps contain collections of bundled dependencies which can then be bundled as part of an application. They don't get rebuilt as part of the build process, which makes building faster (particularly when bundling large dependences). And because each base app is only built once, it is guaranteed to be identical wherever it is used, so it will only be saved once on disk.
 
-Base apps are a relatively specialized concept and only some applications need to use them. The most common base app is used for `Electron applications <https://github.com/flathub/io.atom.electron.BaseApp>`_. If your application uses a large, complex or specialized framework, it is a good idea to check for available base apps before you start building.
+Base apps are a relatively specialized concept and only some applications need to use them (the most common base app is used for `Electron applications <https://github.com/flathub/io.atom.electron.BaseApp>`_). However, if your application uses a large, complex or specialized framework, it is a good idea to check for available base apps before you start building.
