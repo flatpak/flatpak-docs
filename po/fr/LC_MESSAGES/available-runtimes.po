@@ -7,46 +7,63 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-28 16:16+0100\n"
+"POT-Creation-Date: 2018-05-20 10:17-0400\n"
 "PO-Revision-Date: 2018-01-28 16:16+0100\n"
 "Last-Translator: Baptiste Mille-Mathias\n"
 "Language-Team: fr_FR <traduc@traduc.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
 
 #: ../../available-runtimes.rst:2
 msgid "Available Runtimes"
 msgstr "Runtimes disponibles"
 
 #: ../../available-runtimes.rst:4
-msgid "This page provides information about available Flatpak runtimes. It is primarily intended as information for application developers and distributors."
-msgstr "Cette page fournit les information à propos des runtimes Flathub disponibles. Elle est destinée en priorité pour tout développeur ou distributeur d'applications."
+msgid ""
+"This page provides information about available Flatpak runtimes. It is "
+"primarily intended as information for application developers and "
+"distributors."
+msgstr ""
+"Cette page fournit les information à propos des runtimes Flathub "
+"disponibles. Elle est destinée en priorité pour tout développeur ou "
+"distributeur d'applications."
 
 #: ../../available-runtimes.rst:6
-msgid "There are currently three main runtimes available: Freedesktop, GNOME and KDE. These are all hosted on `Flathub <https://flathub.org/>`_."
-msgstr "Il y a actuellement trois principaux runtimes disponibles : Freedesktop, GNOME et KDE. Ils sont tous hébergés sur `Flathub <https://flathub.org/>`_."
+msgid ""
+"There are currently three main runtimes available: Freedesktop, GNOME and"
+" KDE. These are all hosted on `Flathub <https://flathub.org/>`_."
+msgstr ""
+"Il y a actuellement trois principaux runtimes disponibles : Freedesktop, "
+"GNOME et KDE. Ils sont tous hébergés sur `Flathub "
+"<https://flathub.org/>`_."
 
 #: ../../available-runtimes.rst:9
 msgid "Freedesktop"
 msgstr "Freedesktop"
 
 #: ../../available-runtimes.rst:11
-msgid "The Freedesktop runtime is the standard runtime that can be used for any application and contains a set of essential libraries and services, including D-Bus, GLib, PulseAudio, X11 and Wayland."
-msgstr "Le runtime Freedesktop est un runtime standard qui peut être utilise pour n'importe quelle application et contient un ensemble de bibliothèques et services essentiels, dont D-Bus, GLib, PulseAudio, X11 et Wayland."
+#, fuzzy
+msgid ""
+"The Freedesktop runtime is the standard runtime that can be used for any "
+"application and contains a set of essential libraries and services, "
+"including D-Bus, GLib, Gtk3, PulseAudio, X11 and Wayland."
+msgstr ""
+"Le runtime Freedesktop est un runtime standard qui peut être utilise pour"
+" n'importe quelle application et contient un ensemble de bibliothèques et"
+" services essentiels, dont D-Bus, GLib, PulseAudio, X11 et Wayland."
 
 #: ../../available-runtimes.rst:13
 msgid "Available Freedesktop runtimes:"
 msgstr "Runtimes Freedesktop disponibles:"
 
-#: ../../available-runtimes.rst:16
-#: ../../available-runtimes.rst:46
+#: ../../available-runtimes.rst:16 ../../available-runtimes.rst:46
 #: ../../available-runtimes.rst:64
 msgid "ID"
 msgstr "ID"
 
-#: ../../available-runtimes.rst:16
-#: ../../available-runtimes.rst:46
+#: ../../available-runtimes.rst:16 ../../available-runtimes.rst:46
 #: ../../available-runtimes.rst:64
 msgid "Description"
 msgstr "Description"
@@ -55,8 +72,7 @@ msgstr "Description"
 msgid "org.freedesktop.Platform"
 msgstr "org.freedesktop.Platform"
 
-#: ../../available-runtimes.rst:18
-#: ../../available-runtimes.rst:48
+#: ../../available-runtimes.rst:18 ../../available-runtimes.rst:48
 #: ../../available-runtimes.rst:66
 msgid "Runtime"
 msgstr "Runtime"
@@ -65,8 +81,7 @@ msgstr "Runtime"
 msgid "org.freedesktop.Platform.Locale"
 msgstr "org.freedesktop.Platform.Locale"
 
-#: ../../available-runtimes.rst:19
-#: ../../available-runtimes.rst:49
+#: ../../available-runtimes.rst:19 ../../available-runtimes.rst:49
 #: ../../available-runtimes.rst:67
 msgid "Runtime translations (extension)"
 msgstr "Traduction du runtimes (extension)"
@@ -75,8 +90,7 @@ msgstr "Traduction du runtimes (extension)"
 msgid "org.freedesktop.Sdk"
 msgstr "org.freedesktop.Sdk"
 
-#: ../../available-runtimes.rst:20
-#: ../../available-runtimes.rst:50
+#: ../../available-runtimes.rst:20 ../../available-runtimes.rst:50
 #: ../../available-runtimes.rst:68
 msgid "SDK"
 msgstr "SDK"
@@ -85,8 +99,7 @@ msgstr "SDK"
 msgid "org.freedesktop.Sdk.Debug"
 msgstr "org.freedesktop.Sdk.Debug"
 
-#: ../../available-runtimes.rst:21
-#: ../../available-runtimes.rst:51
+#: ../../available-runtimes.rst:21 ../../available-runtimes.rst:51
 #: ../../available-runtimes.rst:69
 msgid "SDK debug information (extension)"
 msgstr "Information de debogage du SDK (extension)"
@@ -95,8 +108,7 @@ msgstr "Information de debogage du SDK (extension)"
 msgid "org.freedesktop.Sdk.Locale"
 msgstr "org.freedesktop.Sdk.Locale"
 
-#: ../../available-runtimes.rst:22
-#: ../../available-runtimes.rst:52
+#: ../../available-runtimes.rst:22 ../../available-runtimes.rst:52
 #: ../../available-runtimes.rst:70
 msgid "SDK translations (extension)"
 msgstr "Traduction du SDK (extension)"
@@ -105,8 +117,7 @@ msgstr "Traduction du SDK (extension)"
 msgid "org.freedesktop.Sdk.Docs"
 msgstr "org.freedesktop.Sdk.Docs"
 
-#: ../../available-runtimes.rst:23
-#: ../../available-runtimes.rst:53
+#: ../../available-runtimes.rst:23 ../../available-runtimes.rst:53
 #: ../../available-runtimes.rst:71
 msgid "SDK documentation (extension)"
 msgstr "Documentation du SDK (extension)"
@@ -116,8 +127,14 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: ../../available-runtimes.rst:29
-msgid "The GNOME runtime is appropriate for any application that uses the GNOME platform. It is based on the Freedesktop runtime and adds the GNOME platform, including:"
-msgstr "Le runtime GNOME est approprié pour toute application qui utilise la plateforme GNOME. Il est basé sur le runtime Freedesktop et ajoute la plateforme GNOME, dont:"
+msgid ""
+"The GNOME runtime is appropriate for any application that uses the GNOME "
+"platform. It is based on the Freedesktop runtime and adds the GNOME "
+"platform, including:"
+msgstr ""
+"Le runtime GNOME est approprié pour toute application qui utilise la "
+"plateforme GNOME. Il est basé sur le runtime Freedesktop et ajoute la "
+"plateforme GNOME, dont:"
 
 #: ../../available-runtimes.rst:31
 msgid "Clutter"
@@ -196,8 +213,14 @@ msgid "KDE"
 msgstr "KDE"
 
 #: ../../available-runtimes.rst:59
-msgid "The KDE runtime is also based on the Freedesktop runtime and adds Qt and KDE Frameworks. It is appropriate for any application that makes use of the KDE platform and most Qt-based applications."
-msgstr "Le runtime KDE est également basé sur le runtime Freedesktop et ajoute les frameworks QT et KDE. Il est approprié pour toute application qui utilise la plateforme KDE et la plupart des applications basées sur QT."
+msgid ""
+"The KDE runtime is also based on the Freedesktop runtime and adds Qt and "
+"KDE Frameworks. It is appropriate for any application that makes use of "
+"the KDE platform and most Qt-based applications."
+msgstr ""
+"Le runtime KDE est également basé sur le runtime Freedesktop et ajoute "
+"les frameworks QT et KDE. Il est approprié pour toute application qui "
+"utilise la plateforme KDE et la plupart des applications basées sur QT."
 
 #: ../../available-runtimes.rst:61
 msgid "Available KDE runtimes:"

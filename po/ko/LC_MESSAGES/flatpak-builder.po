@@ -1,22 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, Flatpak Team. Licensed under Creative Commons Attribution 4.0 International License.
+# Copyright (C) 2017, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-06 16:55+0900\n"
+"POT-Creation-Date: 2018-05-20 10:17-0400\n"
 "PO-Revision-Date: 2018-03-14 17:13+0900\n"
 "Last-Translator: ohpato <ohpato@hanmail.net>\n"
-"Language-Team: ohpato <ohpato@hanmail.net>\n"
 "Language: ko_KR\n"
+"Language-Team: ohpato <ohpato@hanmail.net>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.5.1\n"
 
 #: ../../flatpak-builder.rst:2
 msgid "Flatpak Builder"
@@ -24,106 +25,146 @@ msgstr "플랫팩 빌더(Flatpak Builder)"
 
 #: ../../flatpak-builder.rst:4
 msgid ""
-"Flatpaks are built using the ``flatpak-builder`` tool. This allows a series "
-"of modules to be built into a single application bundle. These modules can "
-"include libraries and dependencies in addition to the application itself."
+"``flatpak-builder`` has already been introduced in :doc:`first-build` and"
+" :doc:`building-introduction`. This page provides additional detail on "
+"how to use ``flatpak-builder``, including the various command options "
+"that are available."
 msgstr ""
-"플랫팩은 플랫팩 빌더를 이용하여 빌드한다. 여러 모듈들을 하나의 응용프로그램 "
-"번들로 빌드할 수도 있는데, 이러한 모듈들은 응용프로그램 자신과, 참조하는 라이"
-"브러리들 및 그 외 의존자원들(dependencies)을 포함한다."
 
-#: ../../flatpak-builder.rst:6
-msgid ""
-"Modules can be built with a variety of build systems, including `autotools "
-"<https://www.gnu.org/software/automake/manual/html_node/Autotools-"
-"Introduction.html>`_, `cmake <https://cmake.org/>`_, `cmake-ninja <https://"
-"cmake.org/cmake/help/v3.0/generator/Ninja.html>`_, `meson <http://mesonbuild."
-"com/>`_, and the so called `Build API <https://github.com/cgwalters/build-"
-"api/>`_. A \"simple\" build method is also available, which allows a series "
-"of commands to be specified."
-msgstr ""
-"모듈들은 `autotools <https://www.gnu.org/software/automake/manual/html_node/"
-"Autotools-Introduction.html>`_, `cmake <https://cmake.org/>`_, `cmake-ninja "
-"<https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_, `meson <http://"
-"mesonbuild.com/>`_, `Build API <https://github.com/cgwalters/build-api/>`_ "
-"등 다양한 빌드시스템을 이용하여 빌드할 수 있다. 또한 빌드를 위해 실행할 일련"
-"의 명령을 지정할 수 있는 “simple” 빌드 방식도 지원한다."
-
-#: ../../flatpak-builder.rst:9
+#: ../../flatpak-builder.rst:7
 msgid "Exporting"
 msgstr "내보내기(exporting)"
 
-#: ../../flatpak-builder.rst:11
+#: ../../flatpak-builder.rst:9
 msgid ""
-"The result of the build process can be exported to a repository or "
-"automatically installed locally."
+"``flatpak-builder`` provides two options for exporting an application in "
+"order to run it. The first is to export to a repository, from which the "
+"application can be run. The second is to automatically install locally."
 msgstr ""
-"빌드 결과물은 로컬 시스템에 자동으로 설치되거나 저장소로 내보낼 수 있다."
 
-#: ../../flatpak-builder.rst:14
+#: ../../flatpak-builder.rst:12
 msgid "Exporting to a repository"
 msgstr "저장소로 내보내기"
 
-#: ../../flatpak-builder.rst:16
+#: ../../flatpak-builder.rst:14
+#, fuzzy
 msgid ""
-"The ``--repo`` option allows a repository to be specified, which the "
-"resulting application will be added to. This takes the format::"
-msgstr ""
-"``—repo`` 옵션은 결과물 응용프로그램이 지정된 저장소에 추가될 수 있도록 한"
-"다. 다음과 같은 형식을 따른다::"
+"The ``--repo`` option allows a repository to be specified, for the "
+"application to be exported to. This takes the format::"
+msgstr "``—repo`` 옵션은 결과물 응용프로그램이 지정된 저장소에 추가될 수 있도록 한다. 다음과 같은 형식을 따른다::"
 
-#: ../../flatpak-builder.rst:23
+#: ../../flatpak-builder.rst:18
 msgid ""
-"By default, flatpak-builder splits off translations and debug information "
-"into separate `.Locale` and `.Debug` extensions. These extensions are "
-"automatically exported into a repository along with the application."
+"Here, ``<repo>`` is a path to a repository. If no repository exists at "
+"the specified location, the repository will be created. If the "
+"application is already in the specified repository, ``flatpak-builder`` "
+"will add the build as a new version of the existing application."
 msgstr ""
-"플랫팩 빌더는 기본적으로 다국어 번역 정보와 디버그 정보를 별도의 확장자 `."
-"Locale` 과 `.Debug`를 붙여 관리한다. 이러한 확장자는 응용프로그램을 저장소로 "
-"내보낼 때 자동으로 부여된다."
 
-#: ../../flatpak-builder.rst:27
+#: ../../flatpak-builder.rst:22
+#, fuzzy
+msgid ""
+"By default, ``flatpak-builder`` splits off translations and debug "
+"information into separate `.Locale` and `.Debug` extensions. These "
+"extensions are automatically exported into a repository along with the "
+"application."
+msgstr ""
+"플랫팩 빌더는 기본적으로 다국어 번역 정보와 디버그 정보를 별도의 확장자 `.Locale` 과 `.Debug`를 붙여 관리한다. "
+"이러한 확장자는 응용프로그램을 저장소로 내보낼 때 자동으로 부여된다."
+
+#: ../../flatpak-builder.rst:26
 msgid "Installing builds directly"
 msgstr "빌드 결과물의 직접 설치"
 
-#: ../../flatpak-builder.rst:29
+#: ../../flatpak-builder.rst:28
+#, fuzzy
 msgid ""
-"Instead of exporting to a repository, the application bundle that is "
-"produced by ``flatpak-builder`` can be automatically installed locally::"
-msgstr ""
-"플랫팩 빌더로 빌드한 응용프로그램 번들을 저장소로 내보내는 대신 자동으로 로"
-"컬 시스템에 설치할 수도 있다::"
+"Instead of exporting to a repository, the Flatpak that is produced by "
+"``flatpak-builder`` can be automatically installed locally, using the "
+"``--install`` option::"
+msgstr "플랫팩 빌더로 빌드한 응용프로그램 번들을 저장소로 내보내는 대신 자동으로 로컬 시스템에 설치할 수도 있다::"
 
-#: ../../flatpak-builder.rst:34
+#: ../../flatpak-builder.rst:32
+msgid ""
+"This approach has the advantage of skipping the separate install step "
+"that is needed when exporting to a repository."
+msgstr ""
+
+#: ../../flatpak-builder.rst:35
 msgid "Signing"
 msgstr "서명"
 
-#: ../../flatpak-builder.rst:36
+#: ../../flatpak-builder.rst:37
 msgid ""
-"Every commit to a Flatpak repository should be signed with a GPG signature. "
-"If ``flatpak-builder`` is being used to modify or create a repository, a GPG "
-"key should therefore be passed to it. This can be done with the ``--gpg-"
-"sign`` option, such as::"
+"Every commit to a Flatpak repository should be signed with a GPG "
+"signature. If ``flatpak-builder`` is being used to modify or create a "
+"repository, a GPG key should therefore be passed to it. This can be done "
+"with the ``--gpg-sign`` option, such as::"
 msgstr ""
-"플랫팩 저장소로 커밋(commit)한 내역들은 GPG 서명되어야 한다. 저장소를 생성 "
-"및 변경 하는 데에 플랫팩 빌더를 사용할 경우, 서명을 위해 매개변수로 GPG 키를 "
-"넘겨준다. 이 때, 다음과 같이 ``—gpg-sign`` 옵션을 사용한다::"
+"플랫팩 저장소로 커밋(commit)한 내역들은 GPG 서명되어야 한다. 저장소를 생성 및 변경 하는 데에 플랫팩 빌더를 사용할 "
+"경우, 서명을 위해 매개변수로 GPG 키를 넘겨준다. 이 때, 다음과 같이 ``—gpg-sign`` 옵션을 사용한다::"
 
-#: ../../flatpak-builder.rst:40
+#: ../../flatpak-builder.rst:41
+#, fuzzy
 msgid ""
-"The ``--gpg-homedir`` option can also be used to specify the home directory "
-"of the key that is being used."
-msgstr ""
-"서명 키의 홈디렉토리 지정을 위해 ``—gpg-hümedir`` 옵션을 사용할 수도 있다."
+"Here, ``<key>`` is the ID of the GPG key that is to be used. The ``--gpg-"
+"homedir`` option can also be used to specify the home directory of the "
+"key that is being used."
+msgstr "서명 키의 홈디렉토리 지정을 위해 ``—gpg-hümedir`` 옵션을 사용할 수도 있다."
 
-#: ../../flatpak-builder.rst:42
+#: ../../flatpak-builder.rst:43
 msgid ""
 "Though it generally isn't recommended, it is possible not to use GPG "
-"verification. In this case, the ``--no-gpg-verify`` option should be used "
-"when adding the repository. Note that it is necessary to become root in "
+"verification. In this case, the ``--no-gpg-verify`` option should be used"
+" when adding the repository. Note that it is necessary to become root in "
 "order to update a repository that does not have GPG verification enabled."
 msgstr ""
-"일반적으로 추천하는 사항은 아니지만, 저장소를 추가할 때 ``—no-gpg-verify`` 옵"
-"션을 사용하면 GPG 검증을 건너뛰는 것도 가능하다. 단, GPG 검증을 활성화 하지 "
-"않은 저장소를 업데이트할 때에는 관리자 계정(root)을 필요로 하게 된다는 점을 "
+"일반적으로 추천하는 사항은 아니지만, 저장소를 추가할 때 ``—no-gpg-verify`` 옵션을 사용하면 GPG 검증을 건너뛰는 "
+"것도 가능하다. 단, GPG 검증을 활성화 하지 않은 저장소를 업데이트할 때에는 관리자 계정(root)을 필요로 하게 된다는 점을 "
 "유의하자."
+
+#~ msgid ""
+#~ "Flatpaks are built using the "
+#~ "``flatpak-builder`` tool. This allows a "
+#~ "series of modules to be built into"
+#~ " a single application bundle. These "
+#~ "modules can include libraries and "
+#~ "dependencies in addition to the "
+#~ "application itself."
+#~ msgstr ""
+#~ "플랫팩은 플랫팩 빌더를 이용하여 빌드한다. 여러 모듈들을"
+#~ " 하나의 응용프로그램 번들로 빌드할 수도 있는데, 이러한"
+#~ " 모듈들은 응용프로그램 자신과, 참조하는 라이브러리들 및 "
+#~ "그 외 의존자원들(dependencies)을 포함한다."
+
+#~ msgid ""
+#~ "Modules can be built with a "
+#~ "variety of build systems, including "
+#~ "`autotools "
+#~ "<https://www.gnu.org/software/automake/manual/html_node/Autotools-"
+#~ "Introduction.html>`_, `cmake <https://cmake.org/>`_, "
+#~ "`cmake-ninja "
+#~ "<https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_, "
+#~ "`meson <http://mesonbuild.com/>`_, and the so"
+#~ " called `Build API <https://github.com/cgwalters"
+#~ "/build-api/>`_. A \"simple\" build method"
+#~ " is also available, which allows a"
+#~ " series of commands to be specified."
+#~ msgstr ""
+#~ "모듈들은 `autotools "
+#~ "<https://www.gnu.org/software/automake/manual/html_node/Autotools-"
+#~ "Introduction.html>`_, `cmake <https://cmake.org/>`_, "
+#~ "`cmake-ninja "
+#~ "<https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_, "
+#~ "`meson <http://mesonbuild.com/>`_, `Build API "
+#~ "<https://github.com/cgwalters/build-api/>`_ 등 다양한"
+#~ " 빌드시스템을 이용하여 빌드할 수 있다. 또한 빌드를"
+#~ " 위해 실행할 일련의 명령을 지정할 수 있는 "
+#~ "“simple” 빌드 방식도 지원한다."
+
+#~ msgid ""
+#~ "The result of the build process "
+#~ "can be exported to a repository or"
+#~ " automatically installed locally."
+#~ msgstr "빌드 결과물은 로컬 시스템에 자동으로 설치되거나 저장소로 내보낼 수 있다."
+

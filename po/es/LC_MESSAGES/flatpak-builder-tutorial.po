@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-04 20:32-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../../flatpak-builder-tutorial.rst:2
+msgid "Tutorial"
+msgstr ""
+
+#: ../../flatpak-builder-tutorial.rst:4
+msgid ""
+"This tutorial provides a sample set of step that you can use to try "
+"``flatpak-builder`` yourself. In it, you will learn how to use ``flatpak-"
+"builder`` to build the GNOME Dictionary applicaiton."
+msgstr ""
+
+#: ../../flatpak-builder-tutorial.rst:7
+msgid "1. Create a manifest"
+msgstr ""
+
+#: ../../flatpak-builder-tutorial.rst:9
+msgid ""
+"To create a manifest for the application, create a file called "
+"``org.gnome.Dictionary.json`` and paste the Dictionary manifest JSON from"
+" :doc:`manifests` into it."
+msgstr ""
+
+#: ../../flatpak-builder-tutorial.rst:12
+msgid "2. Run the build"
+msgstr ""
+
+#: ../../flatpak-builder-tutorial.rst:14
+msgid ""
+"To use the manifest to build the Dictionary application, run the "
+"following command::"
+msgstr ""
+
+#: ../../flatpak-builder-tutorial.rst:18
+msgid "This will:"
+msgstr ""
+
+#: ../../flatpak-builder-tutorial.rst:20
+msgid "Create a new directory called dictionary"
+msgstr ""
+
+#: ../../flatpak-builder-tutorial.rst:21
+msgid "Download and verify the Dictionary source code"
+msgstr ""
+
+#: ../../flatpak-builder-tutorial.rst:22
+msgid ""
+"Build and install the source code, using the SDK rather than the host "
+"system"
+msgstr ""
+
+#: ../../flatpak-builder-tutorial.rst:23
+msgid ""
+"Finish the build, by setting permissions (in this case giving access to "
+"X11 and the network)"
+msgstr ""
+
+#: ../../flatpak-builder-tutorial.rst:24
+msgid ""
+"Create a new repository called repo (if it doesn't exist) and export the "
+"resulting build into it"
+msgstr ""
+
+#: ../../flatpak-builder-tutorial.rst:26
+msgid ""
+"``flatpak-builder`` will also do some other useful things, like creating "
+"a separately installable debug runtime (called "
+"``org.gnome.Dictionary.Debug`` in this case) and a separately installable"
+" translation runtime (called ``org.gnome.Dictionary.Locale``)."
+msgstr ""
+
+#: ../../flatpak-builder-tutorial.rst:29
+msgid "3. Add the new repository"
+msgstr ""
+
+#: ../../flatpak-builder-tutorial.rst:31
+msgid ""
+"To test the application that has been built, you need to add the new "
+"repository that has been created::"
+msgstr ""
+
+#: ../../flatpak-builder-tutorial.rst:36
+msgid "4. Install the application"
+msgstr ""
+
+#: ../../flatpak-builder-tutorial.rst:38
+msgid ""
+"The next step is to install the Dictionary application from the "
+"repository. To do this, run::"
+msgstr ""
+
+#: ../../flatpak-builder-tutorial.rst:42
+msgid ""
+"To check that the application has been successfully installed, you can "
+"compare the sha256 commit of the installed app with the commit ID that "
+"was printed by ``flatpak-builder``::"
+msgstr ""
+
+#: ../../flatpak-builder-tutorial.rst:48
+msgid "5. Run the application"
+msgstr ""
+
+#: ../../flatpak-builder-tutorial.rst:50
+msgid "Finally, you can run the application that you've built::"
+msgstr ""
+

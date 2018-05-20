@@ -1,22 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, Flatpak Team. Licensed under Creative Commons Attribution 4.0 International License.
+# Copyright (C) 2017, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-06 16:55+0900\n"
+"POT-Creation-Date: 2018-05-20 10:17-0400\n"
 "PO-Revision-Date: 2018-03-14 17:06+0900\n"
 "Last-Translator: ohpato <ohpato@hanmail.net>\n"
-"Language-Team: ohpato <ohpato@hanmail.net>\n"
 "Language: ko_KR\n"
+"Language-Team: ohpato <ohpato@hanmail.net>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.5.1\n"
 
 #: ../../building.rst:2
 msgid "Building"
@@ -24,10 +25,28 @@ msgstr "빌드"
 
 #: ../../building.rst:4
 msgid ""
-"This section includes documentation on how to build apps with Flatpak. It "
-"covers runtimes and SDKs in more detail, followed by details on how use "
-"``flatpak-builder``."
+"This section contains detailed information on how to build applications "
+"as Flatpaks. It starts with an overview of the build process, before "
+"diving into requirements for applications, guidance on key decisions, "
+"information on how to use ``flatpak-builder``, and how to write manifest "
+"files."
 msgstr ""
-"이 장에서는 플랫팩을 이용하여 응용프로그램을 빌드하는 방법에 대하여 설명한"
-"다. 런타임과 SDK, 그리고 플랫팩 빌더 (``flatpak-builder``)의 사용법을 보"
-"다 자세히 설명한다. "
+
+#: ../../building.rst:6
+msgid ""
+"If you haven't already, it is recommended to run through :doc:`first-"
+"build` before reading this section."
+msgstr ""
+
+#~ msgid ""
+#~ "This section includes documentation on "
+#~ "how to build apps with Flatpak. It"
+#~ " covers runtimes and SDKs in more "
+#~ "detail, followed by details on how "
+#~ "use ``flatpak-builder``."
+#~ msgstr ""
+#~ "이 장에서는 플랫팩을 이용하여 응용프로그램을 빌드하는 방법에"
+#~ " 대하여 설명한다. 런타임과 SDK, 그리고 플랫팩 빌더"
+#~ " (``flatpak-builder``)의 사용법을 보다 자세히 "
+#~ "설명한다. "
+
