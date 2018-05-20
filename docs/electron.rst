@@ -50,6 +50,8 @@ Next, the manifest specifies that the Electron base app should be used, by speci
 
 Base apps are described in :doc:`building-basics`.  Using the Electron base app is much faster and more convenient than manually building Electron and its dependencies. It also has the advantage of reducing the amount of duplication on users' machines, since it means that Electron is only saved once on disk.
 
+Note that this base app is for projects using Electron 1.x.x, the most common version at the time of writing. Electron 2.x.x applications should use ``org.electronjs.Electron2.BaseApp`` instead.
+
 Command
 -------
 
