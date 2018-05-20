@@ -20,7 +20,7 @@ Then run ``make html`` in the ``docs`` directory.
 Translations
 ------------
 
-Translations are handled on [Zanata](https://translate.zanata.org/project/view/flatpak-docs).
+Translations are handled on `Zanata <https://translate.zanata.org/project/view/flatpak-docs>`_.
 
 You can open an issue requesting a new language added.
 
