@@ -17,6 +17,16 @@ On Fedora this can be with::
 
 Then run ``make html`` in the ``docs`` directory.
 
+Translations
+------------
+
+Translations are handled on [Zanata](https://translate.zanata.org/project/view/flatpak-docs).
+
+You can open an issue requesting a new language added.
+
+For maintainers run ``make gettext`` in the ``docs`` directory to generate ``.pot`` files.
+To update ``.po`` files run ``sphinx-intl update -p _build/gettext``
+
 Audience
 --------
 

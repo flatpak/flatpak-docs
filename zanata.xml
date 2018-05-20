@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config xmlns="http://zanata.org/namespace/config/">
+  <url>https://translate.zanata.org/</url>
+  <project>flatpak-docs</project>
+  <project-version>master</project-version>
+  <project-type>gettext</project-type>
+  <src-dir>docs/_build/gettext</src-dir>
+  <trans-dir>po</trans-dir>
+  <rules>
+    <rule pattern="*.pot">{locale}/LC_MESSAGES/{filename}.po</rule>
+  </rules>
+  <locales>
+    <locale>de</locale>
+    <locale>es</locale>
+    <locale>fr</locale>
+    <locale>ko</locale>
+  </locales>
+</config>
