@@ -14,3 +14,4 @@ If you haven't already, it is recommended to run through :doc:`first-build` befo
    flatpak-builder
    manifests
    sandbox-permissions
+   guides
