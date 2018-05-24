@@ -1,7 +1,7 @@
 Building Introduction
 =====================
 
-:doc:`first-build` has already provided a quick demonstration of how applications get built with with Flatpak. This page provides an additional general overview of what's involved.
+:doc:`first-build` has already provided a quick demonstration of how applications get built with Flatpak. This page provides an additional general overview of what's involved.
 
 flatpak-builder
 ---------------
@@ -14,7 +14,7 @@ The basic format used to invoke ``flatpak-builder`` is::
 
  $ flatpak-builder <build-dir> <manifest>
 
-Where ``<build-dir>`` is the path to the directory that the application will be built into, and ``<manifest>`` is the path to a manifest file. The contents of ``<directory>`` can be useful for testing and debugging purposes, but is generally treated as an artifact of the build process.
+Where ``<build-dir>`` is the path to the directory that the application will be built into, and ``<manifest>`` is the path to a manifest file. The contents of ``<build-dir>`` can be useful for testing and debugging purposes, but is generally treated as an artifact of the build process.
 
 When ``flatpak-builder`` is run:
 
