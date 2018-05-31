@@ -18,4 +18,5 @@ Contents
    building
    debugging
    publishing
+   desktop-integration
    reference  
