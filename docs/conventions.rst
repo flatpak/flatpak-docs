@@ -47,13 +47,14 @@ Desktop files should be named with the application's ID, followed by the ``.desk
 
   /app/share/applications/org.gnome.Dictionary.desktop
 
-A minimal desktop file should contain at least the application's *name*, *exec* command, *type* and *icon* name::
+A minimal desktop file should contain at least the application's *name*, *exec* command, *type*, *icon* name and *categories*::
 
   [Desktop Entry]
   Name=Gnome Dictionary
   Exec=org.gnome.Dictionary
   Type=Application
   Icon=org.gnome.Dictionary
+  Categories=GNOME;GTK;Office;Dictionary;
 
 The ``desktop-file-validate`` command can be used to check for errors in desktop files.
 
