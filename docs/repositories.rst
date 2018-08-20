@@ -47,6 +47,6 @@ Or, if the same file has been downloaded::
 Publishing updates
 ------------------
 
-Flatpak repositories are similar a Git repositories, in that they store every version of an application by keeping a record of the difference between each version. This makes updating efficient, since only the difference (or "delta") between two versions needs to be downloaded when an update is performed.
+Flatpak repositories are similar to Git repositories, in that they store every version of an application by keeping a record of the difference between each version. This makes updating efficient, since only the difference (or "delta") between two versions needs to be downloaded when an update is performed.
 
 When a new version of an application is added to a repository, it immediately becomes available to users. Software centers are able to automatically check for and install new versions. Those who are using the command line have to manually run ``flatpak update`` to check for and install new versions of any applications they have installed.
