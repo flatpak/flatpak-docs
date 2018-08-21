@@ -61,7 +61,7 @@ The ``desktop-file-validate`` command can be used to check for errors in desktop
 Technical conventions
 ---------------------
 
-The following are standard technical conventions used by Flatpak and Linux desktops. Those with Linux experience likely already be aware of them. However, developers who are new to Linux might find some of this information useful.
+The following are standard technical conventions used by Flatpak and Linux desktops. Those with Linux experience will likely already be aware of them. However, developers who are new to Linux might find some of this information useful.
 
 D-Bus
 `````
