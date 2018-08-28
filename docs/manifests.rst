@@ -98,8 +98,9 @@ As can be seen, each listed module has a ``name`` (which can be freely assigned)
  - ``git`` - Git repositories
  - ``bzr`` - Bazaar repositories
  - ``file`` - local file (these are copied into the source directory)
+ - ``dir`` - local directory (these are copied into the source directory)
  - ``script`` - an array of shell commands (these are put in a shellscript file)
- - ``shell`` -an array of shell commands that are run during source extraction
+ - ``shell`` - an array of shell commands that are run during source extraction
  - ``patch`` - a patch (are applied to the source directory)
  - ``extra-data`` - data that can be downloaded at install time; this can include archive or package files
 
