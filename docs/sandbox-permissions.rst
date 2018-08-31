@@ -46,6 +46,7 @@ The following permissions provide access to basic resources that applications co
 
 - ``--share=network`` - access the network
 - ``--socket=x11`` - show windows using X11
+- ``--socket=fallback-x11`` - show windows using X11, if Wayland is not available
 - ``--share=ipc`` - share IPC namespace with the host (necessary for X11)
 - ``--socket=wayland`` - show windows with Wayland
 - ``--device=dri`` - OpenGL rendering
