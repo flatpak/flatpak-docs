@@ -12,6 +12,10 @@ For example, to create a bundle named `dictionary.flatpak` containing the GNOME 
 
   $ flatpak build-bundle ~/repositories/apps dictionary.flatpak org.gnome.Dictionary
 
+You can also set a runtime repo in the bundle::
+
+  $ flatpak build-bundle ~/repositories/apps dictionary.flatpak org.gnome.Dictionary --runtime-repo=https://flathub.org/repo/flathub.flatpakrepo
+
 To import the bundle into a repository on another machine, run::
 
   $ flatpak build-import-bundle ~/my-apps dictionary.flatpak
