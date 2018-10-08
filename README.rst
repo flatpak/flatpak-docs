@@ -15,6 +15,10 @@ On Fedora this can be with::
 
   sudo dnf install python3-sphinx python3-sphinx_rtd_theme
 
+On Deepin this can be with::
+
+  sudo apt install python3-sphinx python3-sphinx-rtd-theme
+
 Then run ``make html`` in the ``docs`` directory.
 
 Translations

@@ -14,5 +14,6 @@
     <locale>es</locale>
     <locale>fr</locale>
     <locale>ko</locale>
+    <locale>zh_CN</locale>
   </locales>
 </config>

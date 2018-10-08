@@ -1,0 +1,36 @@
+# PikachuHy <pikachuhy@163.com>, 2018. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-11 18:07-0400\n"
+"PO-Revision-Date: 2018-10-06 06:34+0000\n"
+"Last-Translator: PikachuHy <pikachuhy@163.com>\n"
+"Language-Team: Chinese (Simplified, China)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_Hans_CN\n"
+"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: ../../publishing.rst:2
+msgid "Publishing"
+msgstr "发布"
+
+#: ../../publishing.rst:4
+msgid ""
+"Flatpak provides several ways to distribute applications to users. For many "
+"applications, the most convenient and effective method is to use `Flathub "
+"<https://flathub.org>`_, which provides a large centralized repository of "
+"Flatpak applications."
+msgstr ""
+"Flatpak提供了多种方式分发应用给用户。对大多数应用来说，最方便最高效的方法是使用`Flathub <https://flathub."
+"org>`，它为Flatpak应用提供了一个大型中心仓库。"
+
+#: ../../publishing.rst:6
+msgid ""
+"Alternatively, it is possible to host a repository yourself, or to "
+"distribute Flatpaks as single file bundles."
+msgstr "除此以外，也可以自己托管仓库或者使用单文件分发Flatpak应用。"
+

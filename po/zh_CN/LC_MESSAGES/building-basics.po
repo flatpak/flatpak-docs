@@ -1,0 +1,176 @@
+# ZiqiangXu <ziqiang_xu@yeah.net>, 2018. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-11 18:07-0400\n"
+"PO-Revision-Date: 2018-10-05 04:52+0000\n"
+"Last-Translator: ZiqiangXu <ziqiang_xu@yeah.net>\n"
+"Language-Team: Chinese (Simplified, China)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_Hans_CN\n"
+"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: ../../building-basics.rst:2
+#, fuzzy
+msgid "Building Concepts and Setup"
+msgstr "构建概念和setup"
+
+#: ../../building-basics.rst:4
+msgid ""
+"The :doc:`basic-concepts` and :doc:`first-build` guides have already shown "
+"how applications get built as Flatpaks, and have introduced many of the core "
+"ideas. This page describes some of these ideas and concepts in more detail. "
+"In doing so, it provides guidance on picking a runtime, getting setup to "
+"build applications, and when to bundle dependencies yourself."
+msgstr ""
+":doc:`basic-concepts` 和 :doc:`first-build` "
+"手册已经表述了如何构建一个flatpak应用了，同时介绍了许多核心思想。这个页面将更加详细地描述这些思想和概念。在此过程中，提供了一个指南：关于选择runtime、开始构建应用以及何时绑定依赖项。"
+
+#: ../../building-basics.rst:7
+msgid "Runtimes"
+msgstr "runtime"
+
+#: ../../building-basics.rst:9
+msgid ""
+"As was described in the :doc:`basic-concepts`, runtimes provide basic "
+"dependencies that can be used by applications. They also provide the "
+"environment that applications run in."
+msgstr "如:doc:`basic-concepts`中所述，runtime提供应用使用的基本依赖。他们也提供应用运行的环境。"
+
+#: ../../building-basics.rst:11
+msgid ""
+"Flatpak requires each application to specify a runtime, and this runtime "
+"must be present on a system for it to run. Therefore, one of the first "
+"decisions you need to make when building an application with Flatpak, is "
+"which runtime it will use."
+msgstr ""
+"flatpak要求每个应用指定一个runtime，而且这个runtime必须在主机上被安装才能运行。因此，构建一个flatpak应用的首要任务就是确定一个应用要使用的runtime。"
+
+#: ../../building-basics.rst:13
+msgid ""
+"An overview of the runtimes that are available can be found in the :doc:"
+"`available-runtimes` page. There are deliberately only a small number of "
+"runtimes to choose from. Typically, runtimes are picked on the basis of "
+"which dependencies an application requires. If a runtime exists that "
+"provides libraries that you plan on using, this is usually the correct "
+"runtime to use!"
+msgstr ""
+"一个可用runtime的概览可以在:doc:`available-"
+"runtimes`页面被找到。故意的只有少量的runtime可以选择。通常，runtime依据应用依赖来进行选择。如果一个runtime提供了你想要使用的库，通常那就是正确的runtime（译者注：好啰嗦）"
+
+#: ../../building-basics.rst:17
+msgid ""
+"Runtimes require regular maintenance, and application developers should "
+"generally not consider creating their own."
+msgstr "runtime需要定期维护，应用开发者通常不需要考虑自己创建。"
+
+#: ../../building-basics.rst:19
+msgid ""
+"Runtimes are automatically installed for users when they install an "
+"application, and build tools can also automatically install them for you "
+"(``flatpak-builder``'s ``--install-deps-from`` option is useful for this). "
+"However, if you do need to manually install your chosen runtime, this can be "
+"done in the same way as installing an application, with the ``flatpak "
+"install`` command. For example, the command to install the GNOME 3.26 "
+"runtime is::"
+msgstr ""
+"runtime会在安装应用的时候自动为用户安装，构建工具也会自动安装（需要加上``flatpak-builder``的``--install-deps-"
+"from``选项）。尽管如此，如果你确实想要自己手动安装你选择的runtime，你也可以像安装一个应用一样，使用``flatpak "
+"install``命令。举个例子：安装GNOME 3.26 runtime的命令是::"
+
+#: ../../building-basics.rst:24
+msgid "Software Development Kits (SDKs)"
+msgstr "软件开发套件 (SDKs)"
+
+#: ../../building-basics.rst:26
+msgid ""
+"Each runtime is paired with an SDK (Software Develpment Kit). For example, "
+"the GNOME 3.26 runtime is accompanied by the GNOME 3.26 SDK. The SDK "
+"includes the same things as the regular runtime, but also includes all the "
+"development resources and tools that are required to build an application, "
+"such as build and packaging tools, header files, compilers and debuggers."
+msgstr ""
+"每个runtime是和SDK配套的。举个例子，GNOME 3.26 runtime和GNOME 3.26 "
+"SDK配套。SDK包含的东西和普通的runtime一样，同时还包括构建应用需要的开发资源和工具，例如构建和打包工具、头文件、编译器和调试器。"
+
+#: ../../building-basics.rst:28
+msgid ""
+"Applications must be built with the SDK that corresponds to their runtime, "
+"so that applications that use the GNOME 3.26 runtime must be built with the "
+"GNOME 3.26 SDK."
+msgstr ""
+"应用必须用和其runtime对应的SDK来构建，所以使用GNOME 3.26 runtime的应用必须用GNOME 3.26 SDK来进行构建。"
+
+#: ../../building-basics.rst:30
+msgid ""
+"Like runtimes, SDKs will sometimes be automatically installed for you, but "
+"if you do need to manually install them, they are installed in the same was "
+"as applications and runtimes, such as::"
+msgstr "和runtime类似，SDK有时会自动安装，但是如果你真的需要手动安装他们，跟安装应用和runtime一样，例如::"
+
+#: ../../building-basics.rst:35
+msgid "Bundling"
+msgstr "构建"
+
+#: ../../building-basics.rst:37
+msgid ""
+"One of the key advantages of Flatpak is that it allows application authors "
+"to bundle whatever libraries or dependencies that they want. This means that "
+"developers aren't constrained by which libraries are available through Linux "
+"distributions. It also provides flexibility, allowing particular versions of "
+"libraries to be used, or the use of libraries that have been patched."
+msgstr ""
+"flatpak的一个关键优点是允许应用作者绑定任何他们想要的库或依赖。这意味着开发者无需考虑某个库在某个Linux发行版上是否可用。它还提供了灵活性，允许使用库的特定版本，或者打过补丁的库。"
+
+#: ../../building-basics.rst:39
+msgid ""
+"While bundling is very powerful and flexible, it also places a greater "
+"maintenance burden on the application developer. Therefore, while it is "
+"possible to bundle as much as you would like, it is generally recommended to "
+"try and keep the number of bundled modules as low as possible. If a "
+"dependency is available as part of a runtime, it is generally better to use "
+"the version from the runtime rather than bundle it yourself."
+msgstr ""
+"尽管绑定是非常强大和灵活的，它也给应用开发者带来了巨大的维护负担。因此，尽管可以绑定任意多的模块，还是建议尽量使用尽可能少的绑定。如果某个依赖在某个runtime可用，通常直接使用这个版本比自己绑定一个要好。"
+
+#: ../../building-basics.rst:41
+msgid ""
+"The specifics of how to bundle libraries is covered in the :doc:`manifests` "
+"section."
+msgstr "如何捆绑库的细节在:doc:`manifests`部分有阐述。"
+
+#: ../../building-basics.rst:44
+msgid "Base apps"
+msgstr "Base apps"
+
+#: ../../building-basics.rst:46
+msgid ""
+"Flatpak allows almost any module to be bundled as part of an application, "
+"even other applications. Typically, this is done with special-purpose "
+"applications that have been created in order to be bundled. These "
+"applications, called *base apps*, contain dependencies or frameworks that "
+"can be used by other applications, in order to share dependencies."
+msgstr ""
+"flatpak允许任何模块，甚至是其他的应用，作为应用的一部分被绑定。通常，这用于为绑定而创建的特殊应用。这些应用被称作*base "
+"apps*，包含被其它应用使用的依赖或框架，为了共享依赖。"
+
+#: ../../building-basics.rst:48
+msgid ""
+"Base apps don't get rebuilt as part of the build process, which makes "
+"building faster (particularly when bundling large dependences). And because "
+"each base app is only built once, it is guaranteed to be identical wherever "
+"it is used, so it will only be saved once on disk."
+msgstr ""
+"base app在构建过程中不需要重新构建，使得构建更加快速（尤其是在绑定和依赖很多的时候）。因为每个base "
+"app只构建一次，可以保证使用它的任何时候都是一致的，所以它只用在磁盘中保存一次。"
+
+#: ../../building-basics.rst:50
+msgid ""
+"A number of base apps are available and, unlike runtimes, they can be built "
+"and published as required."
+msgstr "大量的base app是可用的，不像runtime，他们可以按需要来构建和发布。"
+

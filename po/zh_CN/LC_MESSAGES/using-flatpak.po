@@ -1,0 +1,309 @@
+# PikachuHy <pikachuhy@163.com>, 2018. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"PO-Revision-Date: 2018-10-07 03:01+0000\n"
+"Last-Translator: PikachuHy <pikachuhy@163.com>\n"
+"Language-Team: Chinese (Simplified, China)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_Hans_CN\n"
+"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: ../../using-flatpak.rst:2
+msgid "Using Flatpak"
+msgstr "使用Flatpak"
+
+#: ../../using-flatpak.rst:4
+msgid ""
+"This page provides an introduction to the ``flatpak`` command line "
+"interface, and explains essential technical conventions as well as the most "
+"common commands."
+msgstr "这个页面介绍flatpak CLI，解释必要的技术约定和常用的命令。"
+
+#: ../../using-flatpak.rst:6
+msgid ""
+"End users shouldn't generally need to use this page or the Flatpak command "
+"line interface, since Flatpak can be easily used through graphical software "
+"management tools, though they are of course free to use the command line if "
+"they prefer!"
+msgstr ""
+"最终用户不应该使用Flatpak "
+"CLI，因为Flatpak在有图形界面的软件管理器中非常容易使用。当然咯，如果他们更喜欢使用命令行的话，也可以使用Flatpak CLI。"
+
+#: ../../using-flatpak.rst:10
+msgid "The flatpak command"
+msgstr "flatpak命令"
+
+#: ../../using-flatpak.rst:12
+msgid ""
+"``flatpak`` is the primary Flatpak command, to which specific commands are "
+"appended. For example, the command to install something is ``flatpak "
+"install`` and the command to uninstall is ``flatpak uninstall``."
+msgstr "``flatpak``"
+
+#: ../../using-flatpak.rst:15
+msgid "Identifiers"
+msgstr "标识符"
+
+#: ../../using-flatpak.rst:17
+msgid ""
+"Flatpak identifies each application and runtime using a unique three-part "
+"identifier, such as ``com.company.App``. The final segment of this address "
+"is the object's name, and the preceding part identifies the developer, so "
+"that the same developer can have multiple applications, like ``com.company."
+"App1`` and ``com.company.App2``."
+msgstr ""
+"Flatpak通过唯一的三元组标识应用和运行时，如``com.company."
+"App``。地址的最后一段是对象名，前面的部分标识了开发者，所以同一个开发者可以开发多个应用，如``com.company.App1`` 和 ``com."
+"company.App2``。"
+
+#: ../../using-flatpak.rst:20
+msgid "Identifier triples"
+msgstr "标识符三元组"
+
+#: ../../using-flatpak.rst:22
+msgid ""
+"Typically it is sufficient to refer to objects using their ID. However, in "
+"some situations it is necessary to refer to a specific version of an object, "
+"or to a specific architecture. For example, some applications might be "
+"available as a stable and a testing version, in which case it is necessary "
+"to specify which one you want to install."
+msgstr ""
+"一般来说，使用ID来引用一个对象是高效的。然而，有时候，我们需要指定对象的版本或者架构。例如，有些应用可能会提供稳定版和测试版，这种情况下，指定版本是很必要的。"
+
+#: ../../using-flatpak.rst:24
+msgid ""
+"Flatpak allows architectures and versions to be specified using an object's "
+"identifier triple. This takes the form of ``name/architecture/branch``, such "
+"as ``com.company.App/i386/stable``. (Branch is the term used to refer to "
+"versions of the same object.) The first part of the triple is the ID, the "
+"second part is the architecture, and the third part is the branch."
+msgstr ""
+"Flatpak可以使用对象标识符三元组来指定架构和版本。格式是``name/architecture/branch``，如``com.company."
+"App/i386/stable``。（分支是指向同一个版本的术语。这里也可以参考git里的概念）三元组的第一部分是ID，第二部分是架构，第三部分是分支。"
+
+#: ../../using-flatpak.rst:26
+msgid ""
+"Identifier triples can also be used to specify just the architecture or the "
+"branch, by leaving part of the triple blank. For example, ``com.company.App//"
+"stable`` would just specify the branch, and ``com.company.App/i386//`` just "
+"specifies the architecture."
+msgstr ""
+"标识符三元组也可以通过使用空白来仅指定架构或分支。如``com.company.App//stable``仅指定了分支，``com.company."
+"App/i386//``仅指定了架构。"
+
+#: ../../using-flatpak.rst:28
+msgid ""
+"The Flatpak CLI provides feedback if the architecture or branch of an object "
+"needs to be specified."
+msgstr "如果架构或者分支需要指定，Flatpak CLI会有相应的反馈的。"
+
+#: ../../using-flatpak.rst:31
+msgid "System versus user"
+msgstr "System vs user"
+
+#: ../../using-flatpak.rst:33
+msgid ""
+"Flatpak commands can be run either system-wide or per-user. Applications and "
+"runtimes that are installed system-wide are available to all users on the "
+"system. Applications and runtimes that are installed per-user are only "
+"available to the users that installed them."
+msgstr ""
+"Flatpak命令既可以在系统级运行，也可以在用户级运行。安装在系统级的应用和运行时可以给当前系统的所有用户使用。安装在用户级的应用和运行时仅安装的用户可以使用。"
+
+#: ../../using-flatpak.rst:35
+msgid ""
+"The same principle applies to repositories - repositories that have been "
+"added system-wide are available to all users, whereas per-user repositories "
+"can only be used by a particular user."
+msgstr "上述原则也可以用于仓库。系统级的仓库可以给所有的用户使用，用户级仓库仅给安装的用户使用。"
+
+#: ../../using-flatpak.rst:37
+msgid ""
+"Flatpak commands are run system-wide by default. If you are installing "
+"applications for day-to-day usage, it is recommended to stick with this "
+"default behavior."
+msgstr "Flatpak命令默认运行在系统级。如果你安装应用是为了日常使用，我们推荐坚持默认行为。"
+
+#: ../../using-flatpak.rst:39
+msgid ""
+"However, running commands per-user can be useful for testing and development "
+"purposes, since objects that are installed in this way won't be available to "
+"other users on the system. To do this, use the ``--user`` option, which can "
+"be used in combination with most ``flatpak`` commands."
+msgstr ""
+"然而，运行用户级命令对测试和开发很有用，因为用户级安装的对象不会给系统上其他的用户使用。如果使用用户级命令，可以使用``--"
+"user``选项，这个选项可以和大多数``flatpak``命令组合使用。"
+
+#: ../../using-flatpak.rst:41
+msgid ""
+"Commands behave in exactly the same way if they are run per-user rather than "
+"system-wide."
+msgstr "用户级运行命令和系统级运行命令行为一致。"
+
+#: ../../using-flatpak.rst:44
+msgid "Basic commands"
+msgstr "基本命令"
+
+#: ../../using-flatpak.rst:46
+msgid ""
+"This section covers basic commands needed to install, run and manage Flatpak "
+"applications. For the full list of Flatpak commands, run ``flatpak --help`` "
+"or see the :doc:`flatpak-command-reference`."
+msgstr ""
+"这本部分涵盖了安装，运行和管理Flatpak应用的基本命令。运行``flatpak --help``查看所有的Flatpak命令，或者参阅:doc:"
+"`flatpak-command-reference`。"
+
+#: ../../using-flatpak.rst:49
+msgid "List remotes"
+msgstr "列出远程仓库"
+
+#: ../../using-flatpak.rst:51
+msgid "To list the remotes that you have configured on your system, run::"
+msgstr "运行下面的命令，列出在系统中已经配置好远程仓库："
+
+#: ../../using-flatpak.rst:55
+msgid ""
+"This gives a list of the existing remotes that have been added. The list "
+"indicates whether each remote has been added per-user or system-wide."
+msgstr "列出已经添加了的远程仓库。列表表明每一个远程仓库是用户级的还是系统级的。"
+
+#: ../../using-flatpak.rst:58
+msgid "Add a remote"
+msgstr "添加远程仓库"
+
+#: ../../using-flatpak.rst:60
+msgid ""
+"The most convenient way to add a remote is by using a ``.flatpakrepo`` file, "
+"which includes both the details of the remote and its GPG key::"
+msgstr "最方便的方式添加远程仓库是使用``.flatpakrepo`` 文件，它包含远程仓库的信息和GPG秘钥："
+
+#: ../../using-flatpak.rst:64
+msgid ""
+"Here, ``flathub`` is the local name that is given to the remote. The URL "
+"points to the remote's ``.flatpakrepo`` file. ``--if-not-exists`` stops the "
+"command from producing an error if the remote already exists."
+msgstr ""
+"``flathub``是给远程仓库的本地名称(可以参考git仓库的概念)。URL指向远程仓库的``."
+"flatpakrepo``文件。如果远程仓库已经存在，使用``--if-not-exists``选项就不会产生错误。"
+
+#: ../../using-flatpak.rst:67
+msgid "Remove a remote"
+msgstr "移除远程仓库"
+
+#: ../../using-flatpak.rst:69
+msgid "To remove a remote, run::"
+msgstr "运行下面的命令以移除远程仓库："
+
+#: ../../using-flatpak.rst:73
+msgid "In this case, ``flathub`` is the remote's local name."
+msgstr "``flathub``是远程仓库的本地名称。"
+
+#: ../../using-flatpak.rst:76
+msgid "Search"
+msgstr "搜索"
+
+#: ../../using-flatpak.rst:78
+msgid ""
+"Applications can be found in any of your remotes using the ``search`` "
+"command. For example::"
+msgstr "使用``search``命令查找远程仓库中的应用。如："
+
+#: ../../using-flatpak.rst:82
+msgid ""
+"Search will return any applications matching the search terms. Each search "
+"result includes the application ID and the remote that the application is in."
+" In this example, the search term is ``gimp``."
+msgstr "搜索会返回匹配搜索词的应用。每一个搜索结果包含应用ID和应用所在的仓库。在这个例子中，搜索词是``gimp``。"
+
+#: ../../using-flatpak.rst:85
+msgid ""
+"Prior to Flatpak 0.11.1, it was necessary to manually update the metadata "
+"for your remotes before search will work. This can be done by either running "
+"``flatpak update`` or ``flatpak update --appstream``."
+msgstr ""
+"Flatpak 0.11.1以前，在搜索之前需要手动更新远程仓库的元数据。可以通过运行``flatpak update`` 或 ``flatpak "
+"update --appstream``完成。"
+
+#: ../../using-flatpak.rst:88
+msgid "Install applications"
+msgstr "安装应用"
+
+#: ../../using-flatpak.rst:90
+msgid "To install an application, run::"
+msgstr "运行下面的明明安装应用："
+
+#: ../../using-flatpak.rst:94
+msgid ""
+"Here, ``flathub`` is the name of the remote the application is to be "
+"installed from, and ``org.gimp.GIMP`` is the ID of the application."
+msgstr "``flathub`` 是将要安装应用所在的远程仓库的名称。``org.gimp.GIMP``是应用ID。"
+
+#: ../../using-flatpak.rst:96
+msgid ""
+"Sometimes, an application will require a particular runtime, and this will "
+"be installed prior to the application."
+msgstr "有时，应用需要特定的运行时，运行时需要在安装应用前安装。"
+
+#: ../../using-flatpak.rst:98
+msgid ""
+"The details of the application to be installed can also be provided by a ``."
+"flatpakref`` file, which can be either remote or local. To specify a ``."
+"flatpakref`` instead of manually providing the remote and application ID, "
+"run::"
+msgstr ""
+"将要安装的应用的详细信息可以由``.flatpakref``文件提供，``."
+"flatpakref``文件可以是本地的，也可以是远程的。运行下面的命令指定``.flatpakref``，而不是手动指定远程仓库和应用ID。"
+
+#: ../../using-flatpak.rst:102
+msgid ""
+"If the ``.flatpakref`` file specifies that the application is to be "
+"installed from a remote that hasn't already been added, you will be asked "
+"whether to add it before the application is installed."
+msgstr "如果``.flatpakref``文件指定从远程仓库中安装的应用已经添加过，在应用安装前，将会被问到，哪一个应用应该添加。"
+
+#: ../../using-flatpak.rst:105
+msgid "Running applications"
+msgstr "运行应用"
+
+#: ../../using-flatpak.rst:107
+msgid ""
+"Once an application has been installed, it can be launched using the ``run`` "
+"command and its application ID::"
+msgstr "应用安装后，可以使用``run``命令和应用ID运行应用："
+
+#: ../../using-flatpak.rst:112
+msgid "Updating"
+msgstr "更新"
+
+#: ../../using-flatpak.rst:114
+msgid ""
+"To update all your installed applications and runtimes to the latest "
+"version, run::"
+msgstr "运行下面的命令更新所有的应用和运行时到最新版本："
+
+#: ../../using-flatpak.rst:119
+msgid "List installed applications"
+msgstr "列出安装的应用"
+
+#: ../../using-flatpak.rst:121
+msgid "To list the applications and runtimes you have installed, run::"
+msgstr "运行下面的命令，列出安装的应用和运行时："
+
+#: ../../using-flatpak.rst:125
+msgid "Alternatively, to just list installed applications, run::"
+msgstr "运行下面的命令仅列出安装的应用："
+
+#: ../../using-flatpak.rst:130
+msgid "Remove an application"
+msgstr "移除应用"
+
+#: ../../using-flatpak.rst:132
+msgid "To remove an application, run::"
+msgstr "运行下面的命令移除应用："
+

@@ -1,0 +1,36 @@
+# ZiqiangXu <ziqiang_xu@yeah.net>, 2018. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"PO-Revision-Date: 2018-10-05 03:55+0000\n"
+"Last-Translator: ZiqiangXu <ziqiang_xu@yeah.net>\n"
+"Language-Team: Chinese (Simplified, China)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_Hans_CN\n"
+"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: ../../building.rst:2
+msgid "Building"
+msgstr "构建"
+
+#: ../../building.rst:4
+msgid ""
+"This section contains detailed information on how to build applications as "
+"Flatpaks. It starts with an overview of the build process, before diving "
+"into requirements for applications, guidance on key decisions, information "
+"on how to use ``flatpak-builder``, and how to write manifest files."
+msgstr ""
+"这个章节包含了如何构建一个flatpak应用的详细信息。它在深入依赖之前，从构建过程的概览开始，到如何使用``flatpak-"
+"builder``、书写清单文件的关键的指南和信息。"
+
+#: ../../building.rst:6
+msgid ""
+"If you haven't already, it is recommended to run through :doc:`first-build` "
+"before reading this section."
+msgstr "如果你还没有准备好，推荐在阅读本章节的之前先浏览:doc:`first-build`。"
+
