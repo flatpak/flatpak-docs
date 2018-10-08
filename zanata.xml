@@ -14,6 +14,6 @@
     <locale>es</locale>
     <locale>fr</locale>
     <locale>ko</locale>
-    <locale>zh-Hans-CN</locale>
+    <locale>zh_CN</locale>
   </locales>
 </config>
