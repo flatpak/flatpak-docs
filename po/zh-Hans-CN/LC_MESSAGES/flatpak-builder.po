@@ -1,0 +1,119 @@
+# PikachuHy <pikachuhy@163.com>, 2018. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"PO-Revision-Date: 2018-10-08 03:36+0000\n"
+"Last-Translator: PikachuHy <pikachuhy@163.com>\n"
+"Language-Team: Chinese (Simplified, China)\n"
+"Language: zh_Hans_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"X-Generator: Zanata 4.6.2\n"
+
+#: ../../flatpak-builder.rst:2
+msgid "Flatpak Builder"
+msgstr "Flatpak Builder"
+
+#: ../../flatpak-builder.rst:4
+msgid ""
+"``flatpak-builder`` has already been introduced in :doc:`first-build` and "
+":doc:`building-introduction`. This page provides additional detail on how to"
+" use ``flatpak-builder``, including the various command options that are "
+"available."
+msgstr ""
+"  `` flatpak-builder ``  在  :doc:`first-build`  和   :doc:`building-"
+"introduction` 有过介绍。这个页面提供了更为详尽的  `` flatpak-builder ``  命令使用方法，如可用的命令行选项。"
+
+#: ../../flatpak-builder.rst:7
+msgid "Exporting"
+msgstr "导出"
+
+#: ../../flatpak-builder.rst:9
+msgid ""
+"``flatpak-builder`` provides two options for exporting an application in "
+"order to run it. The first is to export to a repository, from which the "
+"application can be run. The second is to automatically install locally."
+msgstr "  `` flatpak-builder ``  为导出应用提供了两个选项来运行。一个是导出仓库，然后从仓库运行。另一个是自动在本地安装。"
+
+#: ../../flatpak-builder.rst:12
+msgid "Exporting to a repository"
+msgstr "导出到仓库"
+
+#: ../../flatpak-builder.rst:14
+msgid ""
+"The ``--repo`` option allows a repository to be specified, for the "
+"application to be exported to. This takes the format::"
+msgstr "  `` --repo ``  选项指定应用导出的仓库。格式为："
+
+#: ../../flatpak-builder.rst:18
+msgid ""
+"Here, ``<repo>`` is a path to a repository. If no repository exists at the "
+"specified location, the repository will be created. If the application is "
+"already in the specified repository, ``flatpak-builder`` will add the build "
+"as a new version of the existing application."
+msgstr ""
+"  `` <repo> ``  是仓库路径。如果仓库不存在，将创建一个新的仓库。如果应用在指定的仓库中已经存在， `` flatpak-builder "
+"`` 将会把当前构建作为已存在应用的一个新的版本。"
+
+#: ../../flatpak-builder.rst:22
+msgid ""
+"By default, ``flatpak-builder`` splits off translations and debug "
+"information into separate `.Locale` and `.Debug` extensions. These "
+"extensions are automatically exported into a repository along with the "
+"application."
+msgstr ""
+"默认情况下，  `` flatpak-builder ``   把翻译和调试信息分隔到 `.Locale`  和  `.Debug`  扩展中。"
+
+#: ../../flatpak-builder.rst:26
+msgid "Installing builds directly"
+msgstr "直接安装当前构建"
+
+#: ../../flatpak-builder.rst:28
+msgid ""
+"Instead of exporting to a repository, the Flatpak that is produced by "
+"``flatpak-builder`` can be automatically installed locally, using the "
+"``--install`` option::"
+msgstr ""
+"使用  `` --install ``  选项，由  `` flatpak-builder ``  "
+"产生的Flatpak应用将自动安装到本地，而不是导出到仓库中。"
+
+#: ../../flatpak-builder.rst:32
+msgid ""
+"This approach has the advantage of skipping the separate install step that "
+"is needed when exporting to a repository."
+msgstr "这个方式的优点是跳过了导出到仓库中必需的分隔安装步骤。"
+
+#: ../../flatpak-builder.rst:35
+msgid "Signing"
+msgstr "签名"
+
+#: ../../flatpak-builder.rst:37
+msgid ""
+"Every commit to a Flatpak repository should be signed with a GPG signature. "
+"If ``flatpak-builder`` is being used to modify or create a repository, a GPG"
+" key should therefore be passed to it. This can be done with the ``--gpg-"
+"sign`` option, such as::"
+msgstr ""
+"往Flatpak仓库中的每一次提交都需要使用GPG签名。如果用  `` flatpak-builder ``  "
+"修改或创建仓库，需要传一个GPG秘钥作为参数。使用方式是用  `` --gpg-sign ``  选项，如："
+
+#: ../../flatpak-builder.rst:41
+msgid ""
+"Here, ``<key>`` is the ID of the GPG key that is to be used. The ``--gpg-"
+"homedir`` option can also be used to specify the home directory of the key "
+"that is being used."
+msgstr "  `` <key> ``  是使用的GPG秘钥的ID。也可以使用  `` --gpg-homedir ``  指定使用的秘钥的家目录。"
+
+#: ../../flatpak-builder.rst:43
+msgid ""
+"Though it generally isn't recommended, it is possible not to use GPG "
+"verification. In this case, the ``--no-gpg-verify`` option should be used "
+"when adding the repository. Note that it is necessary to become root in "
+"order to update a repository that does not have GPG verification enabled."
+msgstr ""
+"尽管不推荐，但不使用GPG验证也是可以的。这种情况下，当添加仓库时，使用  `` --no-gpg-verify ``   "
+"选项。注意，为了更新没有启用GPG验证的仓库，有必要切换到root用户。"

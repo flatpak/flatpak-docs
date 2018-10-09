@@ -1,0 +1,91 @@
+# PikachuHy <pikachuhy@163.com>, 2018. #zanata
+# ZiqiangXu <ziqiang_xu@yeah.net>, 2018. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-04 20:32-0500\n"
+"PO-Revision-Date: 2018-10-08 03:36+0000\n"
+"Last-Translator: PikachuHy <pikachuhy@163.com>\n"
+"Language-Team: Chinese (Simplified, China)\n"
+"Language: zh_Hans_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"X-Generator: Zanata 4.6.2\n"
+
+#: ../../runtimes-sdks.rst:2
+msgid "Runtimes and SDKs"
+msgstr "Runtime 和 SDK"
+
+#: ../../runtimes-sdks.rst:4
+msgid ""
+"Each Flatpak app is required to have a runtime. This provides the "
+"environment that the app runs in, and includes a set of libraries that it "
+"can access. The app's runtime must be present on a system for it to run."
+msgstr ""
+"每个flatpak应用要求有一个runtime。runtime提供了app的运行环境和供app访问的一系列库。runtime必须在系统上部署app才可以运行。"
+
+#: ../../runtimes-sdks.rst:6
+msgid ""
+"Each runtime is paired with an SDK (Software Develpment Kit). For example, "
+"for the Freedesktop 1.6 runtime, there is also a Freedesktop 1.6 SDK. The "
+"SDK includes the same things as the regular runtime, but also includes all "
+"the additional development resources and tools that are required to build an"
+" app, such as build and packaging tools, header files, compilers and "
+"debuggers."
+msgstr ""
+"每个runtime是和SDK配套的。举个例子，Freedesktop 1.6 runtime 对应 Freedesktop 1.6 "
+"SDK。SDK包含的东西和普通的runtime一样，同时还包括构建应用需要的开发资源和工具，例如构建和打包工具、头文件、编译器和调试器。"
+
+#: ../../runtimes-sdks.rst:8
+msgid ""
+"Applications must be built with the SDK that corresponds to their runtime. "
+"For example, an application that uses the Freedesktop 1.6 runtime in order "
+"to run must be built with the Freedesktop 1.6 SDK."
+msgstr ""
+"应用必须用和其runtime对应的SDK来构建。举个例子，使用Freedesktop 1.6 runtime的应用必须用Freedesktop 1.6 "
+"SDK来进行构建。"
+
+#: ../../runtimes-sdks.rst:14
+msgid "Choosing a runtime"
+msgstr "选择一个runtime"
+
+#: ../../runtimes-sdks.rst:16
+msgid ""
+"When you come to build a Flatpak app, you will need to decide which runtime "
+"it will use. An overview of the runtimes that are available can be found in "
+"the :doc:`available-runtimes` page. There are deliberately only a small "
+"number of runtimes to choose from."
+msgstr ""
+"当你开始构建一个flatpak应用时，你需要觉得它使用哪一个runtime。在 :doc:`available-"
+"runtimes`页面可以找到关于runtime的概述。故意的只有少量的runtime供选择。"
+
+#: ../../runtimes-sdks.rst:18
+msgid ""
+"Runtimes require regular maintenance, and application developers should "
+"generally not consider creating their own."
+msgstr "runtime需要定期维护，应用开发者通常不需要考虑自己创建一个runtime。"
+
+#: ../../runtimes-sdks.rst:25
+msgid "Installing a runtime and SDK"
+msgstr "安装runtime和SDK"
+
+#: ../../runtimes-sdks.rst:27
+msgid ""
+"Once you have chosen a runtime for your application, it is necessary to "
+"install it as well as the matching SDK. (Runtimes and SDKs are installed in "
+"exactly the same way.)"
+msgstr "一旦为你的应用选择了一个runtime，也必须安装一个配套的SDK。（runtime和SDK使用相同的安装方法。）"
+
+#: ../../runtimes-sdks.rst:29
+msgid ""
+"For example, the command to install the GNOME 3.25 runtime and SDK is::"
+msgstr "举个例子，安装GNOME 3.25 runtime和SDK的命令是::"
+
+#: ../../runtimes-sdks.rst:33
+msgid ""
+"A number of the examples in these docs use this runtime and SDK, so it is a "
+"good idea to try this command yourself."
+msgstr "这些文档里大量的例子使用这个runtime和SDK，所以自行尝试执行这个命令是极好的。"

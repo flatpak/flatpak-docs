@@ -3,20 +3,22 @@
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
-#, fuzzy
+# TingPing <tingping@tingping.se>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak \n"
+"Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2018-05-20 10:36+0000\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "Generated-By: Babel 2.5.1\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: ../../conventions.rst:2
 msgid "Conventions & Requirements"
@@ -24,17 +26,16 @@ msgstr ""
 
 #: ../../conventions.rst:4
 msgid ""
-"Flatpak deliberately makes as few requirements of applications as "
-"possible. However, a small number of standard Linux desktop conventions "
-"are expected, primarily to ensure that applications integrate with Linux "
-"desktops and app centers. These are listed below."
+"Flatpak deliberately makes as few requirements of applications as possible. "
+"However, a small number of standard Linux desktop conventions are expected, "
+"primarily to ensure that applications integrate with Linux desktops and app "
+"centers. These are listed below."
 msgstr ""
 
 #: ../../conventions.rst:6
 msgid ""
-"Applications that have previously targeted the Linux desktop will "
-"typically need to make very few (if any) changes to conform with these "
-"standards."
+"Applications that have previously targeted the Linux desktop will typically "
+"need to make very few (if any) changes to conform with these standards."
 msgstr ""
 
 #: ../../conventions.rst:9
@@ -43,14 +44,13 @@ msgstr ""
 
 #: ../../conventions.rst:11
 msgid ""
-"As described in :doc:`using-flatpak`, Flatpak requires each application "
-"to have a unique identifier, which has a three-part form such as "
-"``org.gnome.Dictionary``. As will be seen below and in future sections, "
-"this ID is expected to be used in a number of places. Developers should "
-"follow the standard `D-Bus naming conventions "
-"<https://dbus.freedesktop.org/doc/dbus-specification.html#message-"
-"protocol-names>`_ when creating their own IDs. This format is already "
-"recommended by the `Desktop File specification  "
+"As described in :doc:`using-flatpak`, Flatpak requires each application to "
+"have a unique identifier, which has a three-part form such as "
+"``org.gnome.Dictionary``. As will be seen below and in future sections, this"
+" ID is expected to be used in a number of places. Developers should follow "
+"the standard `D-Bus naming conventions <https://dbus.freedesktop.org/doc"
+"/dbus-specification.html#message-protocol-names>`_ when creating their own "
+"IDs. This format is already recommended by the `Desktop File specification  "
 "<https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-"
 "spec-latest.html#file-naming>`_ and `Appstream specification  "
 "<https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html"
@@ -63,11 +63,10 @@ msgstr ""
 
 #: ../../conventions.rst:16
 msgid ""
-"Applications are expected to provide an application icon, which is used "
-"for their application launcher. These icons should be provided in "
-"accordance with the `Freedesktop icon specification "
-"<https://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-"
-"latest.html>`_."
+"Applications are expected to provide an application icon, which is used for "
+"their application launcher. These icons should be provided in accordance "
+"with the `Freedesktop icon specification <https://standards.freedesktop.org"
+"/icon-theme-spec/icon-theme-spec-latest.html>`_."
 msgstr ""
 
 #: ../../conventions.rst:18
@@ -78,8 +77,8 @@ msgstr ""
 
 #: ../../conventions.rst:22
 msgid ""
-"For example, the path to the 128✕128px version of GNOME Dictionary's icon"
-" is::"
+"For example, the path to the 128✕128px version of GNOME Dictionary's icon "
+"is::"
 msgstr ""
 
 #: ../../conventions.rst:27
@@ -88,11 +87,11 @@ msgstr ""
 
 #: ../../conventions.rst:29
 msgid ""
-"Desktop files are another Freedesktop standard, which is used to provide "
-"the desktop environment with information about each application. The "
-"`Freedesktop specification <https://standards.freedesktop.org/desktop-"
-"entry-spec/latest/>`_ provides a complete reference for writing desktop "
-"files, and `additional information about them "
+"Desktop files are another Freedesktop standard, which is used to provide the"
+" desktop environment with information about each application. The "
+"`Freedesktop specification <https://standards.freedesktop.org/desktop-entry-"
+"spec/latest/>`_ provides a complete reference for writing desktop files, and"
+" `additional information about them "
 "<https://wiki.archlinux.org/index.php/desktop_entries>`_ is available "
 "online."
 msgstr ""
@@ -123,10 +122,10 @@ msgstr ""
 #: ../../conventions.rst:48
 msgid ""
 "AppData files provide metadata about applications, which is used by "
-"application stores (such as Flathub, GNOME Software and KDE Discover). "
-"The `Freedesktop AppStream specification "
-"<https://www.freedesktop.org/software/appstream/docs/>`_ provides a "
-"complete reference for providing AppData."
+"application stores (such as Flathub, GNOME Software and KDE Discover). The "
+"`Freedesktop AppStream specification "
+"<https://www.freedesktop.org/software/appstream/docs/>`_ provides a complete"
+" reference for providing AppData."
 msgstr ""
 
 #: ../../conventions.rst:50
@@ -138,8 +137,8 @@ msgstr ""
 
 #: ../../conventions.rst:54
 msgid ""
-"The ``appstream-util validate-relax`` command can be used to check "
-"AppData files for errors."
+"The ``appstream-util validate-relax`` command can be used to check AppData "
+"files for errors."
 msgstr ""
 
 #: ../../conventions.rst:57
@@ -150,15 +149,15 @@ msgstr ""
 msgid ""
 "`XDG base directories <https://standards.freedesktop.org/basedir-spec"
 "/basedir-spec-latest.html>`_ are a Freedesktop standard which defines "
-"standard locations where user-specific application data and configuration"
-" should be stored. If your application already respects these nothing "
-"must be changed."
+"standard locations where user-specific application data and configuration "
+"should be stored. If your application already respects these nothing must be"
+" changed."
 msgstr ""
 
 #: ../../conventions.rst:61
 msgid ""
-"By default, Flatpak sets three XDG base directories that should be used "
-"by applications for user-specific storage. These are:"
+"By default, Flatpak sets three XDG base directories that should be used by "
+"applications for user-specific storage. These are:"
 msgstr ""
 
 #: ../../conventions.rst:64
@@ -215,8 +214,8 @@ msgstr ""
 
 #: ../../conventions.rst:75
 msgid ""
-"Note that applications can be configured to use non-default base "
-"directory locations (see :doc:`sandbox-permissions`)."
+"Note that applications can be configured to use non-default base directory "
+"locations (see :doc:`sandbox-permissions`)."
 msgstr ""
 
 #: ../../conventions.rst:78
@@ -225,8 +224,8 @@ msgstr ""
 
 #: ../../conventions.rst:80
 msgid ""
-"Each Flatpak sandbox, which is the environment in which an application is"
-" run, contains the filesystem of the application's runtime. This follows "
+"Each Flatpak sandbox, which is the environment in which an application is "
+"run, contains the filesystem of the application's runtime. This follows "
 "`standard Linux filesystem conventions "
 "<https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>`_."
 msgstr ""
@@ -234,10 +233,9 @@ msgstr ""
 #: ../../conventions.rst:82
 msgid ""
 "For example, the root of the sandbox contains the ``/etc`` directory for "
-"configuration files and ``/usr`` for multi-user utilities and "
-"applications. In addition to this, each sandbox contains a top-level "
-"``/app`` directory, which is where the application's own files are "
-"located."
+"configuration files and ``/usr`` for multi-user utilities and applications. "
+"In addition to this, each sandbox contains a top-level ``/app`` directory, "
+"which is where the application's own files are located."
 msgstr ""
 
 #: ../../conventions.rst:85
@@ -246,12 +244,10 @@ msgstr ""
 
 #: ../../conventions.rst:87
 msgid ""
-"Flatpak supports `D-Bus "
-"<https://www.freedesktop.org/wiki/Software/dbus/>`_, the standard "
-"framework for inter-process communication on Linux desktops. This can be "
-"used for application launching and communicating with some system "
-"services. Applications can also provide their own D-Bus services (when "
-"doing this, the D-Bus service name is expected to be the same as the "
+"Flatpak supports `D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_,"
+" the standard framework for inter-process communication on Linux desktops. "
+"This can be used for application launching and communicating with some "
+"system services. Applications can also provide their own D-Bus services "
+"(when doing this, the D-Bus service name is expected to be the same as the "
 "application ID)."
 msgstr ""
-

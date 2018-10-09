@@ -1,0 +1,284 @@
+# PikachuHy <pikachuhy@163.com>, 2018. #zanata
+# ZiqiangXu <ziqiang_xu@yeah.net>, 2018. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"PO-Revision-Date: 2018-10-08 03:36+0000\n"
+"Last-Translator: PikachuHy <pikachuhy@163.com>\n"
+"Language-Team: Chinese (Simplified, China)\n"
+"Language: zh_Hans_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"X-Generator: Zanata 4.6.2\n"
+
+#: ../../conventions.rst:2
+msgid "Conventions & Requirements"
+msgstr "约定与要求"
+
+#: ../../conventions.rst:4
+msgid ""
+"Flatpak deliberately makes as few requirements of applications as possible. "
+"However, a small number of standard Linux desktop conventions are expected, "
+"primarily to ensure that applications integrate with Linux desktops and app "
+"centers. These are listed below."
+msgstr ""
+"Flatpak故意尽量降低对应用程序的要求。但是，会有少量标准的Linux桌面约定是需要的，主要是为了确保应用程序与Linux桌面和应用程序中心集成。下面列出了这些："
+
+#: ../../conventions.rst:6
+msgid ""
+"Applications that have previously targeted the Linux desktop will typically "
+"need to make very few (if any) changes to conform with these standards."
+msgstr "以前以Linux桌面为目标平台的应用程序通常只需要做很少的(如果有的话)修改来符合这些标准"
+
+#: ../../conventions.rst:9
+msgid "Application IDs"
+msgstr "应用ID"
+
+#: ../../conventions.rst:11
+msgid ""
+"As described in :doc:`using-flatpak`, Flatpak requires each application to "
+"have a unique identifier, which has a three-part form such as "
+"``org.gnome.Dictionary``. As will be seen below and in future sections, this"
+" ID is expected to be used in a number of places. Developers should follow "
+"the standard `D-Bus naming conventions <https://dbus.freedesktop.org/doc"
+"/dbus-specification.html#message-protocol-names>`_ when creating their own "
+"IDs. This format is already recommended by the `Desktop File specification  "
+"<https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-"
+"spec-latest.html#file-naming>`_ and `Appstream specification  "
+"<https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html"
+"#sect-Metadata-GenericComponent>`_ also."
+msgstr ""
+"如   :doc:`using-flatpak` 所述，Flatpak要求每个应用都有一个独立的标识符，由三部分构成，例如  `` "
+"org.gnome.Dictionary ``  。我们在下面和后面的章节也会看到，ID在许多地方会用到。开发者在创建他们自己的ID的时候应该遵守 "
+"`D-Bus naming conventions <https://dbus.freedesktop.org/doc/dbus-"
+"specification.html#message-protocol-names>`_ （D-Bus命名约定，译者注）标准。这种格式也被 "
+"`Desktop File specification  <https://specifications.freedesktop.org"
+"/desktop-entry-spec/desktop-entry-spec-latest.html#file-naming>`_  "
+"（Desktop文件规范，译者注）和  `Appstream specification  "
+"<https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html"
+"#sect-Metadata-GenericComponent>`_ （AppStream规范，译者注）所推荐。"
+
+#: ../../conventions.rst:14
+msgid "Application icons"
+msgstr "应用图标"
+
+#: ../../conventions.rst:16
+msgid ""
+"Applications are expected to provide an application icon, which is used for "
+"their application launcher. These icons should be provided in accordance "
+"with the `Freedesktop icon specification <https://standards.freedesktop.org"
+"/icon-theme-spec/icon-theme-spec-latest.html>`_."
+msgstr ""
+"应用需要提供一个图标，用于应用启动器。这些图标应当与 `Freedesktop icon specification "
+"<https://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-"
+"latest.html>`_（Freedesktop图标规范）一致。"
+
+#: ../../conventions.rst:18
+msgid ""
+"Icons should be named with the application's ID, be in either PNG or SVG "
+"format, and must be placed in the standard location::"
+msgstr "图标应该以应用ID命名，以PNG或者SVG格式，而且必须放在标准的位置::"
+
+#: ../../conventions.rst:22
+msgid ""
+"For example, the path to the 128✕128px version of GNOME Dictionary's icon "
+"is::"
+msgstr "举个例子，128x128px版本的GNOME Dictionary的图标的路径应该是："
+
+#: ../../conventions.rst:27
+msgid "Desktop files"
+msgstr "desktop文件"
+
+#: ../../conventions.rst:29
+msgid ""
+"Desktop files are another Freedesktop standard, which is used to provide the"
+" desktop environment with information about each application. The "
+"`Freedesktop specification <https://standards.freedesktop.org/desktop-entry-"
+"spec/latest/>`_ provides a complete reference for writing desktop files, and"
+" `additional information about them "
+"<https://wiki.archlinux.org/index.php/desktop_entries>`_ is available "
+"online."
+msgstr ""
+"desktop文件是另外一种Freedesktop标准，用于向桌面环境提供每个应用的信息。 `Freedesktop specification "
+"<https://standards.freedesktop.org/desktop-entry-spec/latest/>`_  "
+"提供了一个如何编写desktop文件的完整参考。而且 `additional information about them "
+"<https://wiki.archlinux.org/index.php/desktop_entries>`_  线可以在线获取。"
+
+#: ../../conventions.rst:31
+msgid ""
+"Desktop files should be named with the application's ID, followed by the "
+"``.desktop`` file extension, and should be placed in "
+"``/app/share/applications/``. For example::"
+msgstr ""
+"desktop文件应该以应用的ID命名，以  `` .desktop ``  为文件扩展名，而且应该放在  `` "
+"/app/share/applications/ ``  。举个例子::"
+
+#: ../../conventions.rst:35
+msgid ""
+"A minimal desktop file should contain at least the application's *name*, "
+"*exec* command, *type* and *icon* name::"
+msgstr "一个最精简的desktop文件至少应该包含应用的*name*，*exec* 命令，*type* 和 *icon* 名字::"
+
+#: ../../conventions.rst:43
+msgid ""
+"The ``desktop-file-validate`` command can be used to check for errors in "
+"desktop files."
+msgstr "  `` desktop-file-validate ``  命令可以用来检测desktop文件的错误。"
+
+#: ../../conventions.rst:46
+msgid "AppData files"
+msgstr "AppData文件"
+
+#: ../../conventions.rst:48
+msgid ""
+"AppData files provide metadata about applications, which is used by "
+"application stores (such as Flathub, GNOME Software and KDE Discover). The "
+"`Freedesktop AppStream specification "
+"<https://www.freedesktop.org/software/appstream/docs/>`_ provides a complete"
+" reference for providing AppData."
+msgstr ""
+"APPData文件提供了应用的元数据，可以被应用商店使用（例如Flathub、GNOME Software和KDE Discover）。 "
+"`Freedesktop AppStream specification "
+"<https://www.freedesktop.org/software/appstream/docs/>`_ "
+"（APPStream规范）提供了一个AppData的完整参考。"
+
+#: ../../conventions.rst:50
+msgid ""
+"AppData files should be named with the application ID and the "
+"``.appdata.xml`` file extension, and should be placed in "
+"``/app/share/metainfo/``. For example::"
+msgstr ""
+"AppData文件应该以应用的ID命名，并以  `` .appdata.xml ``  为文件扩展名，应该放在  `` "
+"/app/share/metainfo/ ``  。举个例子::"
+
+#: ../../conventions.rst:54
+msgid ""
+"The ``appstream-util validate-relax`` command can be used to check AppData "
+"files for errors."
+msgstr "  `` appstream-util vlidate-relax ``  命令可以用于检查AppData文件的错误"
+
+#: ../../conventions.rst:57
+msgid "XDG base directories"
+msgstr "XDG基本目录"
+
+#: ../../conventions.rst:59
+msgid ""
+"`XDG base directories <https://standards.freedesktop.org/basedir-spec"
+"/basedir-spec-latest.html>`_ are a Freedesktop standard which defines "
+"standard locations where user-specific application data and configuration "
+"should be stored. If your application already respects these nothing must be"
+" changed."
+msgstr ""
+" `XDG base directories <https://standards.freedesktop.org/basedir-spec"
+"/basedir-spec-latest.html>`_ "
+"是一个Freedesktop标准，它定义了存储具体用户应用数据和应用配置的标准位置。如果您的应用已经遵守这些，那么就不需要更改任何内容。"
+
+#: ../../conventions.rst:61
+msgid ""
+"By default, Flatpak sets three XDG base directories that should be used by "
+"applications for user-specific storage. These are:"
+msgstr "默认地，Flatpak设置了三个XDG基本目录，用于程序存储具体用户应用数据。它们是："
+
+#: ../../conventions.rst:64
+msgid "Base directory"
+msgstr "基本目录"
+
+#: ../../conventions.rst:64
+msgid "Usage"
+msgstr "用途"
+
+#: ../../conventions.rst:64
+msgid "Default location"
+msgstr "默认位置"
+
+#: ../../conventions.rst:66
+msgid "XDG_CONFIG_HOME"
+msgstr "XDG_CONFIG_HOME"
+
+#: ../../conventions.rst:66
+msgid "User-specific configuration files"
+msgstr "具体用户配置文件"
+
+#: ../../conventions.rst:66
+msgid "~/.var/app/<app-id>/config"
+msgstr "~/.var/app/<app-id>/config"
+
+#: ../../conventions.rst:67
+msgid "XDG_DATA_HOME"
+msgstr "XDG_DATA_HOME"
+
+#: ../../conventions.rst:67
+msgid "User-specific data"
+msgstr "具体用户数据"
+
+#: ../../conventions.rst:67
+msgid "~/.var/app/<app-id>/data"
+msgstr "~/.var/app/<app-id>/data"
+
+#: ../../conventions.rst:68
+msgid "XDG_CACHE_HOME"
+msgstr "XDG_CACHE_HOME"
+
+#: ../../conventions.rst:68
+msgid "Non-essential user-specific data"
+msgstr "Non-essential user-specific data（非基本具体用户数据，译者注）"
+
+#: ../../conventions.rst:68
+msgid "~/.var/app/<app-id>/cache"
+msgstr "~/.var/app/<app-id>/cache"
+
+#: ../../conventions.rst:71
+msgid "For example, GNOME Dictionary will store user-specific data in::"
+msgstr "举个例子，GNOME Dictionary会把具体用户数据存放在::"
+
+#: ../../conventions.rst:75
+msgid ""
+"Note that applications can be configured to use non-default base directory "
+"locations (see :doc:`sandbox-permissions`)."
+msgstr "注意应用可以被配置成使用非默认基本目录（见 :doc:`sandbox-permissions`)。"
+
+#: ../../conventions.rst:78
+msgid "Filesystem layout"
+msgstr "Filesystem layout（文件系统布局，译者注）"
+
+#: ../../conventions.rst:80
+msgid ""
+"Each Flatpak sandbox, which is the environment in which an application is "
+"run, contains the filesystem of the application's runtime. This follows "
+"`standard Linux filesystem conventions "
+"<https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>`_."
+msgstr ""
+"每个Flatpak沙箱，一个应用运行的环境，包含这个应用的运行时的文件系统。这个准守  `standard Linux filesystem "
+"conventions <https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>`_ "
+"（标准Linux文件系统约定，译者注）。"
+
+#: ../../conventions.rst:82
+msgid ""
+"For example, the root of the sandbox contains the ``/etc`` directory for "
+"configuration files and ``/usr`` for multi-user utilities and applications. "
+"In addition to this, each sandbox contains a top-level ``/app`` directory, "
+"which is where the application's own files are located."
+msgstr ""
+"举个例子，沙箱根目录包含  `` /etc ``  用于配置文件和  `` /usr ``  "
+"用于多用户utilities和应用。除此之外，每个沙箱包含一个顶级  `` /app/ ``  目录，用于应用自己文件的存放。"
+
+#: ../../conventions.rst:85
+msgid "D-Bus"
+msgstr "D-Bus"
+
+#: ../../conventions.rst:87
+msgid ""
+"Flatpak supports `D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_,"
+" the standard framework for inter-process communication on Linux desktops. "
+"This can be used for application launching and communicating with some "
+"system services. Applications can also provide their own D-Bus services "
+"(when doing this, the D-Bus service name is expected to be the same as the "
+"application ID)."
+msgstr ""
+"Flatpak支持 `D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_ "
+"，Linux桌面内部进程通信标准框架。可以用于应用启动和与系统服务通信。应用也可以提供他们的D-"
+"Bus服务（如果这么做，D-Bus名称需要和应用ID一样）。"

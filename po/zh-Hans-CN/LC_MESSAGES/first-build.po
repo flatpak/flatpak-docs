@@ -1,0 +1,201 @@
+# PikachuHy <pikachuhy@163.com>, 2018. #zanata
+# ZiqiangXu <ziqiang_xu@yeah.net>, 2018. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"PO-Revision-Date: 2018-10-08 03:35+0000\n"
+"Last-Translator: PikachuHy <pikachuhy@163.com>\n"
+"Language-Team: Chinese (Simplified, China)\n"
+"Language: zh_Hans_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"X-Generator: Zanata 4.6.2\n"
+
+#: ../../first-build.rst:2
+msgid "Building your first Flatpak"
+msgstr "构建你的第一个flatpak应用"
+
+#: ../../first-build.rst:4
+msgid ""
+"This tutorial provides a quick introduction to building Flatpaks. In it, you"
+" will learn how to create a basic Flatpak application, which can be "
+"installed and run."
+msgstr "这个教程提供了一个构建flatpak的简单介绍。你可以从它学习到如何创建一个基础的可以被安装和运行的flatpak应用。"
+
+#: ../../first-build.rst:6
+msgid ""
+"In order to complete this tutorial, you should have followed the `setup "
+"guide on flatpak.org <http://flatpak.org/setup/>`_. You also need to have "
+"installed ``flatpak-builder``, which is usually available from the same "
+"repository as the ``flatpak`` package."
+msgstr ""
+"为了完成这个教程，你应该阅读 `flatpak.org上的安装指南<http://flatpak.org/setup/>`_ 。同时需要安装  `` "
+"flatpak-builder ``  ，它通常可以在  `` flatpak ``  包所在的仓库找到。"
+
+#: ../../first-build.rst:9
+msgid "1. Install a runtime and the matching SDK"
+msgstr "1. 安装一个runtime和匹配的SDK"
+
+#: ../../first-build.rst:11
+msgid ""
+"Flatpak requires every app to specify a runtime that it uses for its basic "
+"dependencies. Each runtime has a matching SDK (Software Development Kit), "
+"which contains all the things that are in the runtime, plus headers and "
+"development tools. This SDK is required to build apps for the runtime."
+msgstr ""
+"flatpak要求每个应用指明一个runtime，作为它的基本依赖。每个runtime有一个匹配的SDK（软件开发套件），包含了runtime里面的所有东西，加上头文件和开发工具。构建应用的时候需要这个SDK。"
+
+#: ../../first-build.rst:16
+msgid ""
+"In this tutorial we will use the Freedesktop 1.6 runtime and SDK. To install"
+" these, run::"
+msgstr "在这个教程中，我们将使用Freedesktop 1.6 runtime和SDK。安装这些，运行::"
+
+#: ../../first-build.rst:21
+msgid "2. Create the app"
+msgstr "2. 创建应用"
+
+#: ../../first-build.rst:23
+msgid ""
+"The app that is going to be created for this tutorial is a simple script. To"
+" create it, copy the following::"
+msgstr "这个教程要创建的个应用是一个简单的脚本。为了创建它，复制下面的内容::"
+
+#: ../../first-build.rst:29
+msgid "Now paste this into an empty file and save it as ``hello.sh``."
+msgstr "现在粘贴它到一个空文件然后保存为  `` hello.sh ``  。"
+
+#: ../../first-build.rst:32
+msgid "3. Add a manifest"
+msgstr "3. 添加一个清单文件"
+
+#: ../../first-build.rst:34
+msgid ""
+"Each Flatpak is built using a manifest file which provides basic information"
+" about the application and instructions for how it is to be built. To add a "
+"manifest to the hello world app, add the following to an empty file:"
+msgstr ""
+"每个flatpak都用一个清单文件来构建，它提供了这个应用的基本信息和如何构建它的指令。为hello "
+"world应用添加一个清单文件，添加如下内容到一个空文件："
+
+#: ../../first-build.rst:61
+msgid ""
+"Now save the file alongside ``hello.sh`` and call it "
+"``org.flatpak.Hello.json``."
+msgstr "现在保存这个文件到  `` hello.sh ``  旁边，命名为  `` org.flatpak.Hello.json ``  。"
+
+#: ../../first-build.rst:63
+msgid ""
+"In a more complex application, the manifest would list multiple modules. The"
+" last one would typically be the application itself, and the earlier ones "
+"would be dependencies that are bundled with the app because they are not "
+"part of the runtime."
+msgstr ""
+"在一个更加复杂的应用中，这个清单文件会列出多个模块。通常最后一个是应用本身，前面的是要和应用绑定的依赖，因为他们不是runtime的一部分。"
+
+#: ../../first-build.rst:69
+msgid "4. Build the application"
+msgstr "4. 构建应用"
+
+#: ../../first-build.rst:71
+msgid ""
+"Now that the app has a manifest, ``flatpak-builder`` can be used to build "
+"it. This is done by specifying the manifest file and a target directory::"
+msgstr "现在这个应用有一个清单文件，  `` flatpak-builder ``  可以用来构建它。通过指明一个清单文件和一个目标目录::"
+
+#: ../../first-build.rst:76
+msgid ""
+"This command will build each module that is listed in the manifest and "
+"install it to the ``/app`` subdirectory, inside the ``build-dir`` directory."
+msgstr "这个命令会构建每个列在清单文件里的模块，然后将它安装到  `` build-dir ``  的  `` /app ``  子目录。"
+
+#: ../../first-build.rst:80
+msgid "5. Test the build"
+msgstr "5. 测试构建"
+
+#: ../../first-build.rst:82
+msgid "To verify that the build was successful, run the following::"
+msgstr "为了确认构建成功，运行::"
+
+#: ../../first-build.rst:86
+msgid "Congratulations, you've made an app!"
+msgstr "恭喜，你已经创建了一个应用！"
+
+#: ../../first-build.rst:89
+msgid "6. Put the app in a repository"
+msgstr "6. 将应用放到仓库"
+
+#: ../../first-build.rst:91
+msgid ""
+"Before you can install and run the app, it first needs to be put in a "
+"repository. This is done by passing the ``--repo`` argument to ``flatpak-"
+"builder``::"
+msgstr ""
+"在你运行和安装这个应用之前，它首先需要被放到一个仓库里。通过传递 `` --repo `` 参数给 `` flatpak-builder `` ::"
+
+#: ../../first-build.rst:96
+msgid ""
+"This does the build again, and at the end exports the result to a local "
+"directory called ``repo``. Note that ``flatpak-builder`` keeps a cache of "
+"previous builds in the ``.flatpak-builder`` subdirectory, so doing a second "
+"build like this is very fast."
+msgstr ""
+"这将再次进行构建，最后将结果导出到名为 `` repo  `` 的本地目录。注意， `` flatpak-builder `` 在 `` "
+".flatpak-builder `` 子目录下保存了先前构建的缓存，所以像这样进行二次构建非常快。"
+
+#: ../../first-build.rst:101
+msgid ""
+"This second time we passed in ``--force-clean``, which means that the "
+"previously created ``build-dir`` directory was deleted before the new build "
+"was started."
+msgstr "第二次我们通过 `` --force-clean `` ，会在新的构建开始之前删除先前创建的 `` build-dir `` 目录。"
+
+#: ../../first-build.rst:105
+msgid "7. Install the app"
+msgstr "7. 安装应用"
+
+#: ../../first-build.rst:107
+msgid ""
+"Now we're ready to add the repository that was just created and install the "
+"app. This is done with two commands::"
+msgstr "现在我们准备好添加创建的仓库并安装应用。通过两个命令来完成::"
+
+#: ../../first-build.rst:113
+msgid ""
+"The first command adds the repository that was created in the previous step."
+" The second command installs the app from the repository."
+msgstr "第一个命令添加先前步骤创建的的仓库。第二个命令从仓库安装应用。"
+
+#: ../../first-build.rst:116
+msgid ""
+"Both these commands use the ``--user`` argument, which means that the "
+"repository and the app are added per-user rather than system-wide. This is "
+"useful for testing."
+msgstr "两个命令都使用  `` --user ``  参数，表明仓库和应用是按照用户来添加而不是系统范围的。这在测试的时候很管用。"
+
+#: ../../first-build.rst:119
+msgid ""
+"Note that the repository was added with ``--no-gpg-verify``, since a GPG key"
+" wasn't specified when the app was built. This is fine for testing, but for "
+"official repositories you should sign them with a private GPG key."
+msgstr ""
+"注意创建仓库添加了  `` --no-gpg-verify ``  "
+"参数，因为应用创建的时候没有指明GPG密钥。测试的时候这样做完全没有问题，但是官方的仓库必须使用一个私有的GPG秘钥签名。"
+
+#: ../../first-build.rst:124
+msgid "8. Run the app"
+msgstr "8. 运行应用"
+
+#: ../../first-build.rst:126
+msgid ""
+"All that's left is to try the app. This can be done with the following "
+"command::"
+msgstr "剩下的就是试用应用。通过执行如下命令::"
+
+#: ../../first-build.rst:130
+msgid "This runs the app, so that it prints 'Hello world, from a sandbox'."
+msgstr "这运行了应用，使它打印“Hello world, from a sandbox”。"

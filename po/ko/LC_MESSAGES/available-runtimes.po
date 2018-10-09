@@ -3,21 +3,22 @@
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
+# TingPing <tingping@tingping.se>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version:  Flatpak\n"
+"Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-03-15 06:48+0900\n"
-"Last-Translator: ohpato <ohpato@hanmail.net>\n"
-"Language: ko_KR\n"
+"PO-Revision-Date: 2018-05-20 10:37+0000\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: ohpato <ohpato@hanmail.net>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "Generated-By: Babel 2.5.1\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: ../../available-runtimes.rst:2
 msgid "Available Runtimes"
@@ -32,11 +33,11 @@ msgstr "이 페이지에서는 응용프로그램 개발자 및 배포자에게 
 
 #: ../../available-runtimes.rst:6
 msgid ""
-"There are currently three main runtimes available: Freedesktop, GNOME and"
-" KDE. These are all hosted on `Flathub <https://flathub.org/>`_."
+"There are currently three main runtimes available: Freedesktop, GNOME and "
+"KDE. These are all hosted on `Flathub <https://flathub.org/>`_."
 msgstr ""
-"현재 세 개의 사용 가능한 주요 런타임들 - Freedesktop, GNOME, 그리고 KDE 가 있다. 모두 "
-"`플랫허브(Flathub) <https://flathub.org/>`_에서 호스팅하고 있다."
+"현재 세 개의 사용 가능한 주요 런타임들 - Freedesktop, GNOME, 그리고 KDE 가 있다. 모두 `플랫허브(Flathub)"
+" <https://flathub.org/>`_에서 호스팅하고 있다."
 
 #: ../../available-runtimes.rst:9
 msgid "Freedesktop"
@@ -211,12 +212,12 @@ msgstr "KDE"
 
 #: ../../available-runtimes.rst:59
 msgid ""
-"The KDE runtime is also based on the Freedesktop runtime and adds Qt and "
-"KDE Frameworks. It is appropriate for any application that makes use of "
-"the KDE platform and most Qt-based applications."
+"The KDE runtime is also based on the Freedesktop runtime and adds Qt and KDE"
+" Frameworks. It is appropriate for any application that makes use of the KDE"
+" platform and most Qt-based applications."
 msgstr ""
-"KDE 런타임 또한 Freedesktop 런타임을 기초로 Qt와 KDE 프레임워크를 더한것이며, KDE 플랫폼을 사용하는 "
-"응용프로그램 및 Qt 기반 응용을 위해 적합하다."
+"KDE 런타임 또한 Freedesktop 런타임을 기초로 Qt와 KDE 프레임워크를 더한것이며, KDE 플랫폼을 사용하는 응용프로그램 및"
+" Qt 기반 응용을 위해 적합하다."
 
 #: ../../available-runtimes.rst:61
 msgid "Available KDE runtimes:"
@@ -245,4 +246,3 @@ msgstr "org.kde.Sdk.Locale"
 #: ../../available-runtimes.rst:71
 msgid "org.kde.Sdk.Docs"
 msgstr "org.kde.Sdk.Docs"
-

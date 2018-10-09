@@ -3,21 +3,22 @@
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
+# TingPing <tingping@tingping.se>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version:  Flatpak\n"
+"Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-03-13 21:20+0900\n"
-"Last-Translator: ohpato <ohpato@hanmail.net>\n"
-"Language: ko_KR\n"
+"PO-Revision-Date: 2018-05-20 10:37+0000\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: ohpato <ohpato@hanmail.net>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "Generated-By: Babel 2.5.1\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: ../../sandbox-permissions.rst:2
 msgid "Sandbox Permissions"
@@ -25,10 +26,10 @@ msgstr "샌드박스 권한"
 
 #: ../../sandbox-permissions.rst:4
 msgid ""
-"One of Flatpak's main goals is to increase the security of desktop "
-"systems by isolating applications from one another. This is achieved "
-"using sandboxing and means that, by default, applications that are run "
-"with Flatpak have extremely limited access to the host environment. This "
+"One of Flatpak's main goals is to increase the security of desktop systems "
+"by isolating applications from one another. This is achieved using "
+"sandboxing and means that, by default, applications that are run with "
+"Flatpak have extremely limited access to the host environment. This "
 "includes:"
 msgstr ""
 
@@ -53,14 +54,14 @@ msgstr ""
 
 #: ../../sandbox-permissions.rst:10
 msgid ""
-"Limited syscalls.  For instance, apps can't use nonstandard network "
-"socket types or ptrace other processes."
+"Limited syscalls.  For instance, apps can't use nonstandard network socket "
+"types or ptrace other processes."
 msgstr ""
 
 #: ../../sandbox-permissions.rst:11
 msgid ""
-"Limited access to the session D-Bus instance - an app can only own its "
-"own name on the bus."
+"Limited access to the session D-Bus instance - an app can only own its own "
+"name on the bus."
 msgstr ""
 
 #: ../../sandbox-permissions.rst:12
@@ -69,10 +70,10 @@ msgstr ""
 
 #: ../../sandbox-permissions.rst:14
 msgid ""
-"Most applications will need access to some of these resources in order to"
-" be useful. This is primarily done during the finishing build stage, "
-"which can be configured through the ``finish-args`` section of the "
-"manifest file (see :doc:`manifests`)."
+"Most applications will need access to some of these resources in order to be"
+" useful. This is primarily done during the finishing build stage, which can "
+"be configured through the ``finish-args`` section of the manifest file (see "
+":doc:`manifests`)."
 msgstr ""
 
 #: ../../sandbox-permissions.rst:17
@@ -81,8 +82,8 @@ msgstr ""
 
 #: ../../sandbox-permissions.rst:19
 msgid ""
-"Portals have already been mentioned in the :doc:`introduction`. They are "
-"a framework for providing access to resources outside of the sandbox, "
+"Portals have already been mentioned in the :doc:`introduction`. They are a "
+"framework for providing access to resources outside of the sandbox, "
 "including:"
 msgstr ""
 
@@ -118,11 +119,11 @@ msgstr ""
 
 #: ../../sandbox-permissions.rst:29
 msgid ""
-"In many cases, portals use a system component to implicitly ask the user "
-"for permission before granting access to a particular resource. For "
-"example, in the case of opening a file, the user's selection of a file "
-"using the file chooser dialog is interpreted as implicitly granting the "
-"application access to whatever file is chosen."
+"In many cases, portals use a system component to implicitly ask the user for"
+" permission before granting access to a particular resource. For example, in"
+" the case of opening a file, the user's selection of a file using the file "
+"chooser dialog is interpreted as implicitly granting the application access "
+"to whatever file is chosen."
 msgstr ""
 
 #: ../../sandbox-permissions.rst:31
@@ -135,12 +136,11 @@ msgstr ""
 #: ../../sandbox-permissions.rst:33
 msgid ""
 "Interface toolkits like GTK3 and Qt5 implement transparent support for "
-"portals, meaning that applications don't need to any additional work to "
-"use them (it is worth checking which portals each toolkit supports). "
-"Applications that aren't using a toolkit with support for portals can "
-"refer to the `xdg-desktop-portal API documentation "
-"<https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for "
-"information on how to use them."
+"portals, meaning that applications don't need to any additional work to use "
+"them (it is worth checking which portals each toolkit supports). "
+"Applications that aren't using a toolkit with support for portals can refer "
+"to the `xdg-desktop-portal API documentation <https://flatpak.github.io/xdg-"
+"desktop-portal/portal-docs.html>`_ for information on how to use them."
 msgstr ""
 
 #: ../../sandbox-permissions.rst:36
@@ -150,11 +150,11 @@ msgstr "권한 옵션"
 
 #: ../../sandbox-permissions.rst:38
 msgid ""
-"While application developers have control over the sandbox permissions "
-"they wish to configure, good practice is encouraged and can be enforced. "
-"For example, the Flathub hosting service places requirements on which "
-"permissions can be used, and software on the host may warn users if "
-"certain permissions are used."
+"While application developers have control over the sandbox permissions they "
+"wish to configure, good practice is encouraged and can be enforced. For "
+"example, the Flathub hosting service places requirements on which "
+"permissions can be used, and software on the host may warn users if certain "
+"permissions are used."
 msgstr ""
 
 #: ../../sandbox-permissions.rst:40
@@ -184,7 +184,8 @@ msgid "``--socket=x11`` - show windows using X11"
 msgstr ""
 
 #: ../../sandbox-permissions.rst:49
-msgid "``--share=ipc`` - share IPC namespace with the host (necessary for X11)"
+msgid ""
+"``--share=ipc`` - share IPC namespace with the host (necessary for X11)"
 msgstr ""
 
 #: ../../sandbox-permissions.rst:50
@@ -207,9 +208,8 @@ msgstr ""
 
 #: ../../sandbox-permissions.rst:57
 msgid ""
-"Access to the entire bus with ``--socket=system-bus`` or ``--socket"
-"=session-bus`` should be avoided, unless the application is a development"
-" tool."
+"Access to the entire bus with ``--socket=system-bus`` or ``--socket=session-"
+"bus`` should be avoided, unless the application is a development tool."
 msgstr ""
 
 #: ../../sandbox-permissions.rst:59
@@ -219,9 +219,9 @@ msgstr ""
 #: ../../sandbox-permissions.rst:61
 msgid ""
 "Applications are automatically granted access to their own namespace. "
-"Ownership beyond this is typically unnecessary, although there are a "
-"small number of exceptions, such as using `MPRIS to provide media "
-"controls <https://www.freedesktop.org/wiki/Specifications/mpris-spec/>`_."
+"Ownership beyond this is typically unnecessary, although there are a small "
+"number of exceptions, such as using `MPRIS to provide media controls "
+"<https://www.freedesktop.org/wiki/Specifications/mpris-spec/>`_."
 msgstr ""
 
 #: ../../sandbox-permissions.rst:63
@@ -230,8 +230,8 @@ msgstr ""
 
 #: ../../sandbox-permissions.rst:65
 msgid ""
-"Talk permissions can be freely used, although it is recommended to use "
-"the minumum required."
+"Talk permissions can be freely used, although it is recommended to use the "
+"minumum required."
 msgstr ""
 
 #: ../../sandbox-permissions.rst:68
@@ -240,15 +240,15 @@ msgstr ""
 
 #: ../../sandbox-permissions.rst:70
 msgid ""
-"It is common for applications to require access to different parts of the"
-" host filesystem,and Flatpak provides a flexible set of options for this."
-" Some examples include:"
+"It is common for applications to require access to different parts of the "
+"host filesystem,and Flatpak provides a flexible set of options for this. "
+"Some examples include:"
 msgstr ""
 
 #: ../../sandbox-permissions.rst:73
 msgid ""
-"``--filesystem=host`` - access normal files on the host, not including "
-"host os or system internals described below"
+"``--filesystem=host`` - access normal files on the host, not including host "
+"os or system internals described below"
 msgstr ""
 
 #: ../../sandbox-permissions.rst:74
@@ -266,8 +266,8 @@ msgstr "``—filesystem=xdg-download``"
 
 #: ../../sandbox-permissions.rst:78
 msgid ""
-"As a general rule, Filesystem access should be limited as much as "
-"possible. This includes using:"
+"As a general rule, Filesystem access should be limited as much as possible. "
+"This includes using:"
 msgstr ""
 
 #: ../../sandbox-permissions.rst:80
@@ -282,8 +282,8 @@ msgstr ""
 
 #: ../../sandbox-permissions.rst:82
 msgid ""
-"If some home directory access is absolutely required, using XDG directory"
-" access only."
+"If some home directory access is absolutely required, using XDG directory "
+"access only."
 msgstr ""
 
 #: ../../sandbox-permissions.rst:84
@@ -295,29 +295,29 @@ msgstr ""
 
 #: ../../sandbox-permissions.rst:87
 msgid ""
-"The ``--persist=path`` option can be used to map paths from the user's "
-"home directory into the sandbox filesystem. This makes it possible to "
-"avoid configuring access to the entire home directory, and can be useful "
-"for applications that hardcode file paths in ``~/``."
+"The ``--persist=path`` option can be used to map paths from the user's home "
+"directory into the sandbox filesystem. This makes it possible to avoid "
+"configuring access to the entire home directory, and can be useful for "
+"applications that hardcode file paths in ``~/``."
 msgstr ""
 
 #: ../../sandbox-permissions.rst:89
 msgid ""
 "If an application uses ``$TMPDIR`` to contain lock files or shared files "
-"with other processes, it is recommended to create a wrapper script that "
-"sets it to ``$XDG_CACHE_HOME``."
+"with other processes, it is recommended to create a wrapper script that sets"
+" it to ``$XDG_CACHE_HOME``."
 msgstr ""
 
 #: ../../sandbox-permissions.rst:91
 msgid ""
-"Retaining and sharing configuration with non-Flatpak installations is to "
-"be avoided."
+"Retaining and sharing configuration with non-Flatpak installations is to be "
+"avoided."
 msgstr ""
 
 #: ../../sandbox-permissions.rst:93
 msgid ""
-"As mentioned above the ``host`` option does not actually provide complete"
-" access to the host filesystem. The main rules are:"
+"As mentioned above the ``host`` option does not actually provide complete "
+"access to the host filesystem. The main rules are:"
 msgstr ""
 
 #: ../../sandbox-permissions.rst:96
@@ -332,14 +332,14 @@ msgid "Exceptions from the blacklist: ``/run/media``"
 msgstr ""
 
 #: ../../sandbox-permissions.rst:99
-msgid "These directories are mounted under ``/var/run/host``: ``/etc``, ``/usr``"
+msgid ""
+"These directories are mounted under ``/var/run/host``: ``/etc``, ``/usr``"
 msgstr ""
 
 #: ../../sandbox-permissions.rst:101
 msgid ""
-"The reason many of the directories are blacklisted is because they "
-"already exist in the sandbox such as ``/usr`` or are not usable in the "
-"sandbox."
+"The reason many of the directories are blacklisted is because they already "
+"exist in the sandbox such as ``/usr`` or are not usable in the sandbox."
 msgstr ""
 
 #: ../../sandbox-permissions.rst:105
@@ -359,136 +359,7 @@ msgstr ""
 #: ../../sandbox-permissions.rst:112
 #, fuzzy
 msgid ""
-"Until a sandbox-compatible backend is available, applications that "
-"require access to dconf can do so with the following options::"
-msgstr "다음과 같은 옵션을 통해, 샌드박스 호환가능한 백엔드(backend)가 지원될 때까지 dconf에 대한 접근을 활성화할 수 있다::"
-
-#~ msgid ""
-#~ "Sandbox permissions can be configured "
-#~ "from an application manifest (see "
-#~ ":doc:`manifests`). They can also be set"
-#~ " with the ``build-finish``, ``run`` "
-#~ "and ``override`` commands."
-#~ msgstr ""
-#~ "샌드박스 권한은 응용프로그램의 manifest파일에서 설정할 수 "
-#~ "있다(:doc:`manifests` 참조). 또한 ``build-finish``,"
-#~ " ``run``, ``override``명령을 이용하여 설정할 수 "
-#~ "있다."
-
-#~ msgid ""
-#~ "The following list includes some of "
-#~ "the most useful permission options. The"
-#~ " full list can be viewed using "
-#~ "``flatpak build-finish --help``"
-#~ msgstr ""
-#~ "유용한 권한 설정 옵션을 다음 목록에 열거하였다. "
-#~ "전체 목록은 ``flatpak build-finish —help``"
-#~ " 명령을 통해 볼 수 있다."
-
-#~ msgid "``--filesystem=host``"
-#~ msgstr "``—filesystem=host``"
-
-#~ msgid "Access all files"
-#~ msgstr "모든 파일에 접근"
-
-#~ msgid "``--filesystem=home``"
-#~ msgstr "``—filesystem=home``"
-
-#~ msgid "Access the home directory"
-#~ msgstr "홈 디렉토리 접근"
-
-#~ msgid "``--filesystem=home:ro``"
-#~ msgstr "``—filesystem=home:ro``"
-
-#~ msgid "Access the home directory, read-only"
-#~ msgstr "홈 디렉토리 읽기 접근"
-
-#~ msgid "``--filesystem=/some/dir --filesystem=~/other/dir``"
-#~ msgstr "``—filesystem=/some/dir —filesystem=~/other/dir``"
-
-#~ msgid "Access paths"
-#~ msgstr "디렉토리 경로 접근"
-
-#~ msgid "Access the XDG download directory"
-#~ msgstr "XDG 다운로드 디렉토리 접근"
-
-#~ msgid "``--nofilesystem=...``"
-#~ msgstr "``—nofilesystem=…``"
-
-#~ msgid "Undo some of the above"
-#~ msgstr "위 옵션 중 일부를 철회"
-
-#~ msgid "``--socket=x11 --share=ipc``"
-#~ msgstr "``—socket=x11 —share=ipc``"
-
-#~ msgid "Show windows using X11 [#f1]_"
-#~ msgstr "X11 [#f1]_ 을 이용하여 윈도우 표시"
-
-#~ msgid "OpenGL rendering"
-#~ msgstr "OpenGL 렌더링"
-
-#~ msgid "``--socket=wayland``"
-#~ msgstr "``—socket=wayland``"
-
-#~ msgid "Show windows using Wayland"
-#~ msgstr "Wayland를 이용하여 윈도우 표시"
-
-#~ msgid "Play sounds using PulseAudio"
-#~ msgstr "PulseAudio를 이용하여 소리 재생"
-
-#~ msgid "``--talk-name=org.freedesktop.secrets``"
-#~ msgstr "``—talk-name=org.freedesktop.secrets``"
-
-#~ msgid "Talk to a named service on the session bus"
-#~ msgstr "세션 버스 상에서 이름으로 지정 가능한 (네임드, named) 서비스와 통신"
-
-#~ msgid "``--system-talk-name=org.freedesktop.GeoClue2``"
-#~ msgstr "``—system-talk-name=org.freedesktop.GeoClue2``"
-
-#~ msgid "Talk to a named service on the system bus"
-#~ msgstr "시스템 버스 상의 네임드 서비스와 통신"
-
-#~ msgid "``--socket=system-bus``"
-#~ msgstr "``—socket=system-bus``"
-
-#~ msgid "Unlimited access to all of D-Bus"
-#~ msgstr "모든 D-Bus에 대한 자유로운 접근"
-
-#~ msgid "Footnotes"
-#~ msgstr "각주"
-
-#~ msgid ""
-#~ "``--share=ipc`` means that the sandbox "
-#~ "shares IPC namespace with the host. "
-#~ "This is not necessarily required, but"
-#~ " without it the X shared memory "
-#~ "extension will not work, which is "
-#~ "very bad for X performance."
-#~ msgstr ""
-#~ "``—share=ipc`` 는 샌드박스가 호스트와 IPC 네임스페이스를"
-#~ " 공유하도록 한다. 필수적이지는 않지만, 공유를 허용하지 "
-#~ "않을 경우 X 공유메모리 확장이 제대로 동작하지 "
-#~ "않아 성능이 저하될 수 있다."
-
-#~ msgid ""
-#~ "Giving network access also grants access"
-#~ " to all host services listening on"
-#~ " abstract Unix sockets (due to how"
-#~ " network namespaces work), and these "
-#~ "have no permission checks. This "
-#~ "unfortunately affects e.g. the X server"
-#~ " and the session bus which listens"
-#~ " to abstract sockets by default. A"
-#~ " secure distribution should disable these"
-#~ " and just use regular sockets."
-#~ msgstr ""
-#~ "네트워크 접근을 허용하면 (네트워크 namespaces의 동작 "
-#~ "원리 상) 추상 유닉스 소켓(abstract Unix "
-#~ "socket)을 사용하여 대기 중인 호스트 서비스로의 접근을"
-#~ " 모두 허용하게 되고, 이러한 접근 시 권한을 "
-#~ "검사하지 않게된다. 이 결과, 불행하게도, 기본적으로 추상"
-#~ " 소켓을 열어 대기하는 X 서버와 세션 버스에 "
-#~ "영향을 준다. 보안에 민감한 경우, 이들을 "
-#~ "비활성화(disable)하고 일반 소켓을 사용하도록 할 필요가 "
-#~ "있다."
-
+"Until a sandbox-compatible backend is available, applications that require "
+"access to dconf can do so with the following options::"
+msgstr ""
+"다음과 같은 옵션을 통해, 샌드박스 호환가능한 백엔드(backend)가 지원될 때까지 dconf에 대한 접근을 활성화할 수 있다::"

@@ -9,10 +9,4 @@
   <rules>
     <rule pattern="*.pot">{locale}/LC_MESSAGES/{filename}.po</rule>
   </rules>
-  <locales>
-    <locale>de</locale>
-    <locale>es</locale>
-    <locale>fr</locale>
-    <locale>ko</locale>
-  </locales>
 </config>

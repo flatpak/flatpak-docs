@@ -3,24 +3,27 @@
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
-#, fuzzy
+# Baptiste Mille-Mathias <baptiste.millemathias@gmail.com>, 2018. #zanata
+# TingPing <tingping@tingping.se>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak \n"
+"Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-04 20:32-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2018-05-21 04:36+0000\n"
+"Last-Translator: Baptiste Mille-Mathias <baptiste.millemathias@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "Generated-By: Babel 2.5.1\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: ../../flatpak-builder-tutorial.rst:2
 msgid "Tutorial"
-msgstr ""
+msgstr "Tutoriel"
 
 #: ../../flatpak-builder-tutorial.rst:4
 msgid ""
@@ -31,23 +34,23 @@ msgstr ""
 
 #: ../../flatpak-builder-tutorial.rst:7
 msgid "1. Create a manifest"
-msgstr ""
+msgstr "1. Créer un manifeste"
 
 #: ../../flatpak-builder-tutorial.rst:9
 msgid ""
 "To create a manifest for the application, create a file called "
-"``org.gnome.Dictionary.json`` and paste the Dictionary manifest JSON from"
-" :doc:`manifests` into it."
+"``org.gnome.Dictionary.json`` and paste the Dictionary manifest JSON from "
+":doc:`manifests` into it."
 msgstr ""
 
 #: ../../flatpak-builder-tutorial.rst:12
 msgid "2. Run the build"
-msgstr ""
+msgstr "2. Lancer la construction"
 
 #: ../../flatpak-builder-tutorial.rst:14
 msgid ""
-"To use the manifest to build the Dictionary application, run the "
-"following command::"
+"To use the manifest to build the Dictionary application, run the following "
+"command::"
 msgstr ""
 
 #: ../../flatpak-builder-tutorial.rst:18
@@ -64,14 +67,13 @@ msgstr ""
 
 #: ../../flatpak-builder-tutorial.rst:22
 msgid ""
-"Build and install the source code, using the SDK rather than the host "
-"system"
+"Build and install the source code, using the SDK rather than the host system"
 msgstr ""
 
 #: ../../flatpak-builder-tutorial.rst:23
 msgid ""
-"Finish the build, by setting permissions (in this case giving access to "
-"X11 and the network)"
+"Finish the build, by setting permissions (in this case giving access to X11 "
+"and the network)"
 msgstr ""
 
 #: ../../flatpak-builder-tutorial.rst:24
@@ -82,10 +84,10 @@ msgstr ""
 
 #: ../../flatpak-builder-tutorial.rst:26
 msgid ""
-"``flatpak-builder`` will also do some other useful things, like creating "
-"a separately installable debug runtime (called "
-"``org.gnome.Dictionary.Debug`` in this case) and a separately installable"
-" translation runtime (called ``org.gnome.Dictionary.Locale``)."
+"``flatpak-builder`` will also do some other useful things, like creating a "
+"separately installable debug runtime (called ``org.gnome.Dictionary.Debug`` "
+"in this case) and a separately installable translation runtime (called "
+"``org.gnome.Dictionary.Locale``)."
 msgstr ""
 
 #: ../../flatpak-builder-tutorial.rst:29
@@ -104,15 +106,15 @@ msgstr ""
 
 #: ../../flatpak-builder-tutorial.rst:38
 msgid ""
-"The next step is to install the Dictionary application from the "
-"repository. To do this, run::"
+"The next step is to install the Dictionary application from the repository. "
+"To do this, run::"
 msgstr ""
 
 #: ../../flatpak-builder-tutorial.rst:42
 msgid ""
 "To check that the application has been successfully installed, you can "
-"compare the sha256 commit of the installed app with the commit ID that "
-"was printed by ``flatpak-builder``::"
+"compare the sha256 commit of the installed app with the commit ID that was "
+"printed by ``flatpak-builder``::"
 msgstr ""
 
 #: ../../flatpak-builder-tutorial.rst:48
@@ -122,4 +124,3 @@ msgstr ""
 #: ../../flatpak-builder-tutorial.rst:50
 msgid "Finally, you can run the application that you've built::"
 msgstr ""
-

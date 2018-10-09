@@ -2,19 +2,23 @@
 # Copyright (C) 2017, Flatpak Team
 # This file is distributed under the same license as the Flatpak package.
 # Baptiste Mille-Mathias <baptiste.millemathias@gmail.com>, 2018.
-#
+# Baptiste Mille-Mathias <baptiste.millemathias@gmail.com>, 2018. #zanata
+# TingPing <tingping@tingping.se>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak \n"
+"Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-01-28 16:16+0100\n"
-"Last-Translator: Baptiste Mille-Mathias\n"
+"PO-Revision-Date: 2018-05-20 02:11+0000\n"
+"Last-Translator: Baptiste Mille-Mathias <baptiste.millemathias@gmail.com>\n"
 "Language-Team: fr_FR <traduc@traduc.org>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "Generated-By: Babel 2.5.1\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: ../../available-runtimes.rst:2
 msgid "Available Runtimes"
@@ -26,33 +30,31 @@ msgid ""
 "primarily intended as information for application developers and "
 "distributors."
 msgstr ""
-"Cette page fournit les information à propos des runtimes Flathub "
+"Cette page fournit les informations à propos des runtimes Flathub "
 "disponibles. Elle est destinée en priorité pour tout développeur ou "
 "distributeur d'applications."
 
 #: ../../available-runtimes.rst:6
 msgid ""
-"There are currently three main runtimes available: Freedesktop, GNOME and"
-" KDE. These are all hosted on `Flathub <https://flathub.org/>`_."
+"There are currently three main runtimes available: Freedesktop, GNOME and "
+"KDE. These are all hosted on `Flathub <https://flathub.org/>`_."
 msgstr ""
 "Il y a actuellement trois principaux runtimes disponibles : Freedesktop, "
-"GNOME et KDE. Ils sont tous hébergés sur `Flathub "
-"<https://flathub.org/>`_."
+"GNOME et KDE. Ils sont tous hébergés sur `Flathub <https://flathub.org/>`_."
 
 #: ../../available-runtimes.rst:9
 msgid "Freedesktop"
 msgstr "Freedesktop"
 
 #: ../../available-runtimes.rst:11
-#, fuzzy
 msgid ""
 "The Freedesktop runtime is the standard runtime that can be used for any "
 "application and contains a set of essential libraries and services, "
 "including D-Bus, GLib, Gtk3, PulseAudio, X11 and Wayland."
 msgstr ""
-"Le runtime Freedesktop est un runtime standard qui peut être utilise pour"
-" n'importe quelle application et contient un ensemble de bibliothèques et"
-" services essentiels, dont D-Bus, GLib, PulseAudio, X11 et Wayland."
+"Le runtime Freedesktop est un runtime standard qui peut être utilisé pour "
+"n'importe quelle application et contient un ensemble de bibliothèques et "
+"services essentiels, dont D-Bus, GLib, PulseAudio, X11 et Wayland."
 
 #: ../../available-runtimes.rst:13
 msgid "Available Freedesktop runtimes:"
@@ -214,13 +216,13 @@ msgstr "KDE"
 
 #: ../../available-runtimes.rst:59
 msgid ""
-"The KDE runtime is also based on the Freedesktop runtime and adds Qt and "
-"KDE Frameworks. It is appropriate for any application that makes use of "
-"the KDE platform and most Qt-based applications."
+"The KDE runtime is also based on the Freedesktop runtime and adds Qt and KDE"
+" Frameworks. It is appropriate for any application that makes use of the KDE"
+" platform and most Qt-based applications."
 msgstr ""
-"Le runtime KDE est également basé sur le runtime Freedesktop et ajoute "
-"les frameworks QT et KDE. Il est approprié pour toute application qui "
-"utilise la plateforme KDE et la plupart des applications basées sur QT."
+"Le runtime KDE est également basé sur le runtime Freedesktop et ajoute les "
+"frameworks QT et KDE. Il est approprié pour toute application qui utilise la"
+" plateforme KDE et la plupart des applications basées sur QT."
 
 #: ../../available-runtimes.rst:61
 msgid "Available KDE runtimes:"
@@ -249,4 +251,3 @@ msgstr "org.kde.Sdk.Locale"
 #: ../../available-runtimes.rst:71
 msgid "org.kde.Sdk.Docs"
 msgstr "org.kde.Sdk.Docs"
-

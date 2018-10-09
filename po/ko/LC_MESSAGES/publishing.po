@@ -3,21 +3,22 @@
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
+# TingPing <tingping@tingping.se>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version:  Flatpak\n"
+"Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-11 18:07-0400\n"
-"PO-Revision-Date: 2018-03-15 06:52+0900\n"
-"Last-Translator: ohpato <ohpato@hanmail.net>\n"
-"Language: ko_KR\n"
+"PO-Revision-Date: 2018-05-20 10:37+0000\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: ohpato <ohpato@hanmail.net>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "Generated-By: Babel 2.5.1\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: ../../publishing.rst:2
 msgid "Publishing"
@@ -26,18 +27,16 @@ msgstr "발행"
 #: ../../publishing.rst:4
 #, fuzzy
 msgid ""
-"Flatpak provides several ways to distribute applications to users. For "
-"many applications, the most convenient and effective method is to use "
-"`Flathub <https://flathub.org>`_, which provides a large centralized "
-"repository of Flatpak applications."
+"Flatpak provides several ways to distribute applications to users. For many "
+"applications, the most convenient and effective method is to use `Flathub "
+"<https://flathub.org>`_, which provides a large centralized repository of "
+"Flatpak applications."
 msgstr ""
-"플랫팩은 응용프로그램 배포를 위한 여러 방법을 제공한다. 많은 응용프로그램의 경우 가장 편리하고 효과적인 방법은, 플랫팩 "
-"응용프로그램들의 대규모 중앙 저장소를 제공하는 `플랫허브(Flathub) <https://flathub.com>`_을 이용하는 "
-"것이다."
+"플랫팩은 응용프로그램 배포를 위한 여러 방법을 제공한다. 많은 응용프로그램의 경우 가장 편리하고 효과적인 방법은, 플랫팩 응용프로그램들의"
+" 대규모 중앙 저장소를 제공하는 `플랫허브(Flathub) <https://flathub.com>`_을 이용하는 것이다."
 
 #: ../../publishing.rst:6
 msgid ""
 "Alternatively, it is possible to host a repository yourself, or to "
 "distribute Flatpaks as single file bundles."
 msgstr "또는, 스스로 저장소를 운영(hosting)하거나 하나의 파일 번들로 배포하는 것도 가능하다."
-

@@ -1,0 +1,131 @@
+# PikachuHy <pikachuhy@163.com>, 2018. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"PO-Revision-Date: 2018-10-08 03:36+0000\n"
+"Last-Translator: PikachuHy <pikachuhy@163.com>\n"
+"Language-Team: Chinese (Simplified, China)\n"
+"Language: zh_Hans_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"X-Generator: Zanata 4.6.2\n"
+
+#: ../../introduction.rst:2
+msgid "Introduction to Flatpak"
+msgstr "Flatpak简介"
+
+#: ../../introduction.rst:4
+msgid ""
+"Flatpak is a framework for distributing desktop applications on Linux. It "
+"has been created by developers who have a long history of working on the "
+"Linux desktop, and is run as an independent open source project."
+msgstr "Flatpak是一个用于在Linux上分发桌面应用程序的框架。 它由具有长期工作在Linux桌面的开发人员创建，并作为独立的开源项目运行。"
+
+#: ../../introduction.rst:7
+msgid "Target audience"
+msgstr "目标受众"
+
+#: ../../introduction.rst:9
+msgid ""
+"Flatpak can be used by all kinds of desktop applications, and aims to be as "
+"agnostic as possible regarding how applications are built. There are no "
+"requirements regarding which programming languages, build tools, toolkits or"
+" frameworks can be used."
+msgstr "Flatpak可以被各种桌面应用程序使用，旨在尽可能与应用程序的构建方式无关。 也对编程语言，构建工具，工具包或框架不作要求。"
+
+#: ../../introduction.rst:11
+msgid ""
+"While Flatpak only runs on Linux, it can be used by applications that target"
+" other operating systems, as well as those that are Linux-specific. "
+"Applications can be open source or proprietary (although some distribution "
+"services, like `Flathub <https://flathub.org/>`_, can have restrictions in "
+"this respect)."
+msgstr ""
+"虽然Flatpak只能在Linux上运行，但它可以被针对其他操作系统的应用程序以及特定于Linux的应用程序使用。 "
+"应用程序可以是开源的或专有的（尽管某些分发服务，如  `Flathub <https://flathub.org/>`_  ，在这方面可能有限制）。"
+
+#: ../../introduction.rst:13
+msgid ""
+"The only technical requirements made by Flatpak are that applications follow"
+" a small number of Freedesktop standards, in order to enable desktop "
+"integration (see :doc:`conventions`)."
+msgstr ""
+"Flatpak提出的唯一技术要求是应用程序遵循少量的Freedesktop标准，以实现桌面集成（参考  :doc:`conventions`）。"
+
+#: ../../introduction.rst:16
+msgid "Reasons to use Flatpak"
+msgstr "使用Flatpak的理由"
+
+#: ../../introduction.rst:18
+msgid ""
+"Flatpak has some major advantages over other approaches to distributing "
+"applications on Linux. First and foremost, Flatpak allows a single "
+"application build to be installed and run on virtually any Linux "
+"distribution. It can also be used in combination with `Flathub "
+"<https://flathub.org/>`_, a centralized service for distributing "
+"applications on all distributions. This makes it possible for application "
+"developers to target the entire Linux desktop market from one place."
+msgstr ""
+"与其他在Linux上分发应用程序的方法相比，Flatpak具有一些主要优势。 "
+"首先，Flatpak允许在几乎任何Linux发行版上安装和运行单个应用程序构建。 它还可以与 `Flathub "
+"<https://flathub.org/>`_  结合使用，Flathub是一种中心化服务，用于在所有发行版上分发应用程序。 "
+"这使得应用开发者可以从一个地方瞄准整个Linux桌面市场。"
+
+#: ../../introduction.rst:20
+msgid ""
+"Flatpak also offers native integration for the main Linux desktops, so that "
+"users can easily browse, install, run and use Flatpak applications through "
+"their existing desktop environment and tools."
+msgstr "Flatpak还为主要Linux桌面提供本机集成，以便用户可以通过现有的桌面环境和工具轻松浏览，安装，运行和使用Flatpak应用程序。"
+
+#: ../../introduction.rst:22
+msgid "Other benefits for developers include:"
+msgstr "其他开发者可以得益的地方："
+
+#: ../../introduction.rst:24
+msgid ""
+"**Forward-compatibility:** the same Flatpak can be run on different versions"
+" of the same distribution, including versions that haven't been released "
+"yet. This doesn't require any changes or management by application "
+"developers."
+msgstr "**向前兼容**：相同的Flatpak可以在同一发行版的不同版本上运行，包括尚未发布的版本。 这不需要应用程序开发人员进行任何更改或管理。"
+
+#: ../../introduction.rst:25
+msgid ""
+"**Maintained platforms:** called runtimes, these contain collections of "
+"dependencies, which can be used by applications, and which can take a lot of"
+" the work out of application development."
+msgstr "**维护平台**：称为运行时，它们包含依赖项集合，可供应用程序使用，并且可以从应用程序开发中完成大量工作。"
+
+#: ../../introduction.rst:26
+msgid ""
+"**Bundling:** this allows application developers to ship almost any "
+"dependency or library as part of their application. This gives complete "
+"control over which software is used to build applications."
+msgstr "**捆绑**：这允许应用程序开发人员将几乎任何依赖项或库作为其应用程序的一部分。 这样可以完全控制用于构建应用程序的软件。"
+
+#: ../../introduction.rst:27
+msgid ""
+"**Consistent application environments:** because these are are the same "
+"across devices, applications perform as intended. This also makes it easier "
+"to identify bugs and to do testing."
+msgstr ""
+"**一致的应用程序环境**：因为在不同设备之间是应用程序的环境是相同的，所以应用程序按预期执行。 这也使得开发者识别错误和进行测试变得更容易。"
+
+#: ../../introduction.rst:29
+msgid ""
+"Finally, while Flatpak does provide a centralized service for distributing "
+"applications, it also allows decentralized hosting and distribution, so that"
+" application developers or downstreams can host their own applications and "
+"application repositories."
+msgstr ""
+"最后，虽然Flatpak确实为分发应用程序提供了中心化服务，但它还允许分布式托管和分发，以便应用开发者或下游可以托管他们自己的应用和应用仓库。"
+
+#: ../../introduction.rst:31
+msgid ""
+"Information about Flatpak's internals can be found in :doc:`under-the-hood`."
+msgstr "关于Flatpak的更多信息可以参考  :doc:`under-the-hood`。"

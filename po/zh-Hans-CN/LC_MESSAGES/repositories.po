@@ -1,0 +1,142 @@
+# PikachuHy <pikachuhy@163.com>, 2018. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-11 18:07-0400\n"
+"PO-Revision-Date: 2018-10-08 03:36+0000\n"
+"Last-Translator: PikachuHy <pikachuhy@163.com>\n"
+"Language-Team: Chinese (Simplified, China)\n"
+"Language: zh_Hans_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"X-Generator: Zanata 4.6.2\n"
+
+#: ../../repositories.rst:2
+msgid "Repositories"
+msgstr "仓库"
+
+#: ../../repositories.rst:4
+msgid ""
+"Flatpak repositories are the primary mechanism for publishing applications, "
+"so that they can be installed by users."
+msgstr "Flatpak存储库是发布应用程序的主要机制，因此可以由用户安装。"
+
+#: ../../repositories.rst:6
+msgid ""
+"Some aspects of repositories are addressed by other sections of the "
+"documentation. Basic commands for adding, removing and inspecting "
+"repositories can be found in the :doc:`using-flatpak` section. Additionally,"
+" the section on :doc:`flatpak-builder` covers the most common method for "
+"adding applications to repositories."
+msgstr ""
+"存储库的某些方面由文档的其他部分解决。 可以在  :doc:`using-flatpak` 部分中找到用于添加，删除和检查存储库的基本命令。 此外， "
+":doc:`flatpak-builder` 上的部分介绍了将应用程序添加到存储库的最常用方法。"
+
+#: ../../repositories.rst:8
+msgid ""
+"To use a repository to publish an application, it is possible to either host"
+" your own (covered in the next section, :doc:`hosting-a-repository`) or use "
+"`Flathub <http://flathub.org>`_, the primary publishing and hosting service "
+"for Flatpak applications."
+msgstr ""
+"要使用存储库发布应用程序，可以托管您自己的（在下一节中介绍， :doc:`hosting-a-repository`）或使用 `Flathub "
+"<http://flathub.org>` ，它是Flatpak应用程序的主要发布和托管服务。"
+
+#: ../../repositories.rst:10
+msgid ""
+"Software center applications like GNOME Software or KDE Discover allow "
+"browsing repositories, and can also dynamically promote new or popular "
+"applications. If you use Flathub, the repository will typically have already"
+" been added by users, so adding an application to the repository is "
+"sufficient to make it available to them."
+msgstr ""
+"GNOME软件或KDE Discover等软件中心应用程序允许浏览存储库，还可以动态地推广新的或流行的应用程序。 "
+"如果使用Flathub，则用户通常已添加存储库，因此向存储库添加应用程序足以使其可用。"
+
+#: ../../repositories.rst:13
+msgid ".flatpakref files"
+msgstr ".flatpakref 文件"
+
+#: ../../repositories.rst:15
+msgid ""
+"``.flatpakref`` files can be used in combination with repositories to "
+"provide an additional, easy way for users to install an application, often "
+"by clicking on the file or a download link."
+msgstr " `` .flatpakref `` 文件可以与存储库结合使用，为用户安装应用程序提供额外的简便方法，通常是通过单击文件或下载链接。"
+
+#: ../../repositories.rst:17
+msgid ""
+"Internally, ``.flatpakref`` files are simple description files that include "
+"information about a Flatpak application. An example::"
+msgstr "在内部， `` .flatpakref ``  文件是简单的描述文件，其中包含有关Flatpak应用程序的信息。一个例子："
+
+#: ../../repositories.rst:28
+msgid ""
+"As can be seen, the file includes the ID of the application and the location"
+" of the repository that contains it, as well a link to information about the"
+" repository that provides the application's runtime. ``.flatpakref`` files "
+"therefore contain all the information needed to install an application."
+msgstr ""
+"如你所见，该文件包括应用程序的ID以及包含它的存储库的位置，以及指向提供应用程序运行时存储库信息的链接。 `` .flatpakref `` "
+"文件包含安装应用程序所需的所有信息。"
+
+#: ../../repositories.rst:32
+msgid ""
+"``.flatpakref`` files should include the base64-encoded version of the GPG "
+"key that was used to sign the repository. This can be obtained with the "
+"following command::"
+msgstr " `` .flatpakref `` 文件应包含用于对存储库进行签名的GPG密钥的base64编码版本。 这可以使用以下命令获得："
+
+#: ../../repositories.rst:36
+msgid ""
+"One advantage of ``.flatpakref`` files is that they can be used to install "
+"applications even if their repository hasn't been added by the user. In this"
+" case the repository that contains the application will either be "
+"automatically installed, or the user will be prompted to install it. This "
+"will also happen if the necessary runtime isn't present."
+msgstr ""
+" `` .flatpakref ``  文件的一个优点是，即使用户尚未添加其存储库，它们也可用于安装应用程序。 "
+"在这种情况下，将自动安装包含应用程序的存储库，或者将提示用户安装它。 如果不存在必要的运行时，也会发生这种情况。"
+
+#: ../../repositories.rst:38
+msgid ""
+"``.flatpakref`` can be used to install applications from the command line as"
+" well as with graphical software installers. This is done with the standard "
+"``flatpak install`` command, which accepts both local and remote "
+"``.flatpakref`` files. For example::"
+msgstr ""
+" `` .flatpakref `` 可用于从命令行以及图形软件安装程序安装应用程序。 这是通过标准的 `` flatpak install `` "
+"命令完成的，该命令接受本地和远程 `` .flatpakref `` 文件。 例如："
+
+#: ../../repositories.rst:42
+msgid "Or, if the same file has been downloaded::"
+msgstr "或者是下载好的文件："
+
+#: ../../repositories.rst:48
+msgid "Publishing updates"
+msgstr "发布更新"
+
+#: ../../repositories.rst:50
+msgid ""
+"Flatpak repositories are similar a Git repositories, in that they store "
+"every version of an application by keeping a record of the difference "
+"between each version. This makes updating efficient, since only the "
+"difference (or \"delta\") between two versions needs to be downloaded when "
+"an update is performed."
+msgstr ""
+"Flatpak存储库类似于Git存储库，因为它们通过记录每个版本之间的差异来存储应用程序的每个版本。 "
+"这使得更新有效，因为在执行更新时仅需要下载两个版本之间的差异（或“增量”）。"
+
+#: ../../repositories.rst:52
+msgid ""
+"When a new version of an application is added to a repository, it "
+"immediately becomes available to users. Software centers are able to "
+"automatically check for and install new versions. Those who are using the "
+"command line have to manually run ``flatpak update`` to check for and "
+"install new versions of any applications they have installed."
+msgstr ""
+"将新版本的应用程序添加到存储库时，它立即可供用户使用。 软件中心能够自动检查并安装新版本。 那些使用命令行的人必须手动运行flatpak "
+"update来检查并安装他们已安装的任何应用程序的新版本。"
