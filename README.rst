@@ -15,7 +15,17 @@ On Fedora this can be with::
 
   sudo dnf install python3-sphinx python3-sphinx_rtd_theme
 
+On Debian this can be with::
+
+  sudo apt install python3-sphinx python3-sphinx-rtd-theme
+
 Then run ``make html`` in the ``docs`` directory.
+
+By default, the document being built is in English. If you want to build documents in other languages, such as Chinese, you can use the following command::
+
+  sphinx-build -b html -D language=zh_CN . _build/html/zh_CN
+
+Then you will see the Chinese documentation in the directory  ``_build/html/zh_CN`` .
 
 Translations
 ------------
