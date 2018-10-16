@@ -13,9 +13,9 @@ dependencies. Each runtime has a matching SDK (Software Development Kit), which
 contains all the things that are in the runtime, plus headers and development
 tools. This SDK is required to build apps for the runtime.
 
-In this tutorial we will use the Freedesktop 1.6 runtime and SDK. To install these, run::
+In this tutorial we will use the Freedesktop 18.08 runtime and SDK. To install these, run::
 
-  $ flatpak install flathub org.freedesktop.Platform//1.6 org.freedesktop.Sdk//1.6
+  $ flatpak install flathub org.freedesktop.Platform//18.08 org.freedesktop.Sdk//18.08
 
 2. Create the app
 -----------------
