@@ -38,7 +38,7 @@ Each Flatpak is built using a manifest file which provides basic information abo
   {
       "app-id": "org.flatpak.Hello",
       "runtime": "org.freedesktop.Platform",
-      "runtime-version": "1.6",
+      "runtime-version": "18.08",
       "sdk": "org.freedesktop.Sdk",
       "command": "hello.sh",
       "modules": [
