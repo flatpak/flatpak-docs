@@ -87,8 +87,9 @@ Other filesystem access guidelines include:
 
 - The ``--persist=path`` option can be used to map paths from the user's home directory into the sandbox filesystem.
   This makes it possible to avoid configuring access to the entire home directory, and can be useful for applications that hardcode file paths in ``~/``.
-- If an application uses ``$TMPDIR`` to contain lock files or shared files with other processes,
-  you may want to add ``--env=TMPDIR=/var/tmp``.
+- If an application uses ``$TMPDIR`` to contain lock files you may want to add ``--env=TMPDIR=/var/tmp``
+  or if it uses ``$TMPDIR`` to share with processes outside the sandbox you will want a wrapper script
+  that sets it to ``$XDG_CACHE_HOME``.
 - Retaining and sharing configuration with non-Flatpak installations is to be avoided.
 
 As mentioned above the ``host`` option does not actually provide complete access to the
