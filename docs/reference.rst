@@ -1,7 +1,7 @@
 Reference Documentation
 =======================
 
-Reference documentation for flatpak and flatpak-builder.
+Reference documentation for flatpak, flatpak-builder and libflatpak.
 
 .. toctree::
    :maxdepth: 2
@@ -12,3 +12,4 @@ Reference documentation for flatpak and flatpak-builder.
    sandbox-permissions-reference
    freedesktop-quick-reference
    under-the-hood
+   libflatpak-api-reference
