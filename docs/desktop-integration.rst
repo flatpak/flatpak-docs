@@ -31,7 +31,7 @@ Toolkits like GTK and Qt provide transparent support for portals. If you are not
 Notifications
 -------------
 
-A number of toolkits and frameworks provide transparent support for Linux desktop notificatoions. This includes Electron, GTK, KDE and QML. Applications not using one of these can either use the `libnotify <https://developer.gnome.org/libnotify/>`_ library or portals. Of these, portals has the benefit that it can easily be used from within an application sandbox.
+A number of toolkits and frameworks provide transparent support for Linux desktop notificatoions. This includes Electron, GTK, KDE and QML.
 
 Status icons
 ------------
