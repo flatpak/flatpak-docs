@@ -220,71 +220,75 @@ msgid "``file`` - local file (these are copied into the source directory)"
 msgstr ""
 
 #: ../../manifests.rst:101
+msgid "``dir`` - local directory (these are copied into the source directory)"
+msgstr ""
+
+#: ../../manifests.rst:102
 msgid ""
 "``script`` - an array of shell commands (these are put in a shellscript "
 "file)"
 msgstr ""
 
-#: ../../manifests.rst:102
-msgid ""
-"``shell`` -an array of shell commands that are run during source extraction"
-msgstr ""
-
 #: ../../manifests.rst:103
-msgid "``patch`` - a patch (are applied to the source directory)"
+msgid ""
+"``shell`` - an array of shell commands that are run during source extraction"
 msgstr ""
 
 #: ../../manifests.rst:104
+msgid "``patch`` - a patch (are applied to the source directory)"
+msgstr ""
+
+#: ../../manifests.rst:105
 msgid ""
 "``extra-data`` - data that can be downloaded at install time; this can "
 "include archive or package files"
 msgstr ""
 
-#: ../../manifests.rst:106
+#: ../../manifests.rst:107
 msgid ""
 "Different properties are available for each source type, which are listed in"
 " the :doc:`flatpak-builder-command-reference`."
 msgstr ""
 
-#: ../../manifests.rst:109
+#: ../../manifests.rst:110
 msgid "Supported build systems"
 msgstr ""
 
-#: ../../manifests.rst:111
+#: ../../manifests.rst:112
 msgid "Modules can be built with a variety of build systems, including:"
 msgstr ""
 
-#: ../../manifests.rst:113
+#: ../../manifests.rst:114
 msgid ""
 "`autotools <https://www.gnu.org/software/automake/manual/html_node"
 "/Autotools-Introduction.html>`_"
 msgstr ""
 
-#: ../../manifests.rst:114
+#: ../../manifests.rst:115
 msgid "`cmake <https://cmake.org/>`_"
 msgstr ""
 
-#: ../../manifests.rst:115
+#: ../../manifests.rst:116
 msgid ""
 "`cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_, "
 "`meson <http://mesonbuild.com/>`_"
 msgstr ""
 
-#: ../../manifests.rst:116
+#: ../../manifests.rst:117
 msgid "the \"`Build API <https://github.com/cgwalters/build-api/>`_\""
 msgstr ""
 
-#: ../../manifests.rst:118
+#: ../../manifests.rst:119
 msgid ""
 "A \"simple\" build method is also available, which allows a series of "
 "commands to be specified."
 msgstr ""
 
-#: ../../manifests.rst:121
+#: ../../manifests.rst:122
 msgid "Example manifests"
 msgstr ""
 
-#: ../../manifests.rst:123
+#: ../../manifests.rst:124
 msgid ""
 "A `complete manifest for GNOME Dictionary built from Git "
 "<https://github.com/flathub/org.gnome.Dictionary/blob/master/org.gnome.Dictionary.json>`_."

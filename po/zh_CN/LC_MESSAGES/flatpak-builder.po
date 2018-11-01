@@ -1,10 +1,10 @@
-# PikachuHy <pikachuhy@163.com>, 2018. #zanata
+# WTZ <zwpwjwtz@126.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-10-08 03:36+0000\n"
+"PO-Revision-Date: 2018-10-18 02:18+0000\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language-Team: Chinese (Simplified, China)\n"
 "Language: zh_Hans_CN\n"
@@ -37,7 +37,7 @@ msgid ""
 "``flatpak-builder`` provides two options for exporting an application in "
 "order to run it. The first is to export to a repository, from which the "
 "application can be run. The second is to automatically install locally."
-msgstr "  `` flatpak-builder ``  为导出应用提供了两个选项来运行。一个是导出仓库，然后从仓库运行。另一个是自动在本地安装。"
+msgstr "  `` flatpak-builder ``  为导出应用提供了两个选项。一个是导出仓库，然后从仓库运行。另一个是自动在本地安装。"
 
 #: ../../flatpak-builder.rst:12
 msgid "Exporting to a repository"
@@ -85,7 +85,7 @@ msgstr ""
 msgid ""
 "This approach has the advantage of skipping the separate install step that "
 "is needed when exporting to a repository."
-msgstr "这个方式的优点是跳过了导出到仓库中必需的分隔安装步骤。"
+msgstr "这个方式的优点是跳过了导出到仓库中必需的安装步骤。"
 
 #: ../../flatpak-builder.rst:35
 msgid "Signing"

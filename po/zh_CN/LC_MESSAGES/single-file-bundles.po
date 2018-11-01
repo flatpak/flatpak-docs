@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-11 18:07-0400\n"
+"POT-Creation-Date: 2018-10-09 20:19-0400\n"
 "PO-Revision-Date: 2018-10-08 03:35+0000\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language-Team: Chinese (Simplified, China)\n"
@@ -44,10 +44,14 @@ msgid ""
 msgstr "例如：从仓库~/repositories/apps中创建一个含有GNOME字典应用名为`dictionary.flatpak`单文件包。"
 
 #: ../../single-file-bundles.rst:15
+msgid "You can also set a runtime repo in the bundle::"
+msgstr ""
+
+#: ../../single-file-bundles.rst:19
 msgid "To import the bundle into a repository on another machine, run::"
 msgstr "运行下面的命令，将单文件包导入到另外一个机器的仓库中："
 
-#: ../../single-file-bundles.rst:19
+#: ../../single-file-bundles.rst:23
 msgid ""
 "Alternatively, bundles can also be installed directly without importing "
 "them::"

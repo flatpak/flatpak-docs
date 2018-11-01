@@ -115,7 +115,7 @@ msgstr ""
 
 #: ../../repositories.rst:50
 msgid ""
-"Flatpak repositories are similar a Git repositories, in that they store "
+"Flatpak repositories are similar to Git repositories, in that they store "
 "every version of an application by keeping a record of the difference "
 "between each version. This makes updating efficient, since only the "
 "difference (or \"delta\") between two versions needs to be downloaded when "

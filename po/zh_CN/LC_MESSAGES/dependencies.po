@@ -1,12 +1,13 @@
 # PikachuHy <pikachuhy@163.com>, 2018. #zanata
+# WTZ <zwpwjwtz@126.com>, 2018. #zanata
 # ZiqiangXu <ziqiang_xu@yeah.net>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-10-08 03:36+0000\n"
-"Last-Translator: PikachuHy <pikachuhy@163.com>\n"
+"PO-Revision-Date: 2018-10-12 05:26+0000\n"
+"Last-Translator: ZiqiangXu <ziqiang_xu@yeah.net>\n"
 "Language-Team: Chinese (Simplified, China)\n"
 "Language: zh_Hans_CN\n"
 "MIME-Version: 1.0\n"
@@ -116,12 +117,11 @@ msgid "data or other resources that form part of the application"
 msgstr "作为应用一部分的数据或者资源"
 
 #: ../../dependencies.rst:35
-#, fuzzy
 msgid ""
 "As will be seen, bundled dependencies can be automatically downloaded as "
 "part of the build process. It is also possible to apply patches and perform "
 "other transformations."
-msgstr "可以看到，作为构建过程的一部分，捆绑的依赖关系可以自动下载。"
+msgstr "可以看到，作为构建过程的一部分，捆绑的依赖关系可以自动下载。开发者也可以对他们打补丁，或者作其他的更改。"
 
 #: ../../dependencies.rst:37
 msgid ""
@@ -142,7 +142,7 @@ msgstr "如何捆绑库的细节在  :doc:`mainifests` 可以找到。"
 
 #: ../../dependencies.rst:42
 msgid "Base apps"
-msgstr "base apps"
+msgstr "框架应用"
 
 #: ../../dependencies.rst:44
 msgid ""

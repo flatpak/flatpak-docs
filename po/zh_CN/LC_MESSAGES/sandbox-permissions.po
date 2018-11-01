@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"POT-Creation-Date: 2018-10-09 20:19-0400\n"
 "PO-Revision-Date: 2018-10-08 03:36+0000\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language-Team: Chinese (Simplified, China)\n"
@@ -187,26 +187,32 @@ msgstr " `` --socket=x11 ``  - 用X11显示窗口"
 
 #: ../../sandbox-permissions.rst:49
 msgid ""
+"``--socket=fallback-x11`` - show windows using X11, if Wayland is not "
+"available"
+msgstr ""
+
+#: ../../sandbox-permissions.rst:50
+msgid ""
 "``--share=ipc`` - share IPC namespace with the host (necessary for X11)"
 msgstr " `` --share=ipc ``  - 和主机共享IPC命名空间 (对于X11是必要的)"
 
-#: ../../sandbox-permissions.rst:50
+#: ../../sandbox-permissions.rst:51
 msgid "``--socket=wayland`` - show windows with Wayland"
 msgstr " `` --socket=wayland ``  - 使用Wayland显示窗口"
 
-#: ../../sandbox-permissions.rst:51
+#: ../../sandbox-permissions.rst:52
 msgid "``--device=dri`` - OpenGL rendering"
 msgstr " `` --device=dri ``  - OpenGL 渲染"
 
-#: ../../sandbox-permissions.rst:52
+#: ../../sandbox-permissions.rst:53
 msgid "``--socket=pulseaudio`` - play sound with PulseAudio"
 msgstr " `` --socket=pulseaudio ``  - 使用PulseAudio播放音频"
 
-#: ../../sandbox-permissions.rst:55
+#: ../../sandbox-permissions.rst:56
 msgid "D-Bus access"
 msgstr "D-Bus访问"
 
-#: ../../sandbox-permissions.rst:57
+#: ../../sandbox-permissions.rst:58
 msgid ""
 "Access to the entire bus with ``--socket=system-bus`` or ``--socket=session-"
 "bus`` should be avoided, unless the application is a development tool."
@@ -214,11 +220,11 @@ msgstr ""
 "避免使用 `` --socket=system-bus `` 或 `` --socket=session-bus ``  "
 "访问整个总线，除非应用是一个开发工具。"
 
-#: ../../sandbox-permissions.rst:59
+#: ../../sandbox-permissions.rst:60
 msgid "**Ownership**"
 msgstr "**Ownership**"
 
-#: ../../sandbox-permissions.rst:61
+#: ../../sandbox-permissions.rst:62
 msgid ""
 "Applications are automatically granted access to their own namespace. "
 "Ownership beyond this is typically unnecessary, although there are a small "
@@ -228,75 +234,75 @@ msgstr ""
 "应用会自动为他们自己命名空间授予访问权限，通常不需要有所有权，尽管如此还是有少量的例外，例如使用`MPRIS来提供媒体控制`<https://www.freedesktop.org/wiki/Specifications"
 "/mpris-spec/>`_。"
 
-#: ../../sandbox-permissions.rst:63
+#: ../../sandbox-permissions.rst:64
 msgid "**Talk**"
 msgstr "**Talk**"
 
-#: ../../sandbox-permissions.rst:65
+#: ../../sandbox-permissions.rst:66
 msgid ""
 "Talk permissions can be freely used, although it is recommended to use the "
 "minumum required."
 msgstr "Talk权限可以自由使用，尽管如此还是推荐使用应用所需的最小权限。"
 
-#: ../../sandbox-permissions.rst:68
+#: ../../sandbox-permissions.rst:69
 msgid "Filesystem access"
 msgstr "文件系统访问"
 
-#: ../../sandbox-permissions.rst:70
+#: ../../sandbox-permissions.rst:71
 msgid ""
 "It is common for applications to require access to different parts of the "
 "host filesystem,and Flatpak provides a flexible set of options for this. "
 "Some examples include:"
 msgstr "应用要求范围主机文件系统的不同部分是很正常的，flatpak为此提供了一套灵活的选项。下面是一些例子："
 
-#: ../../sandbox-permissions.rst:73
+#: ../../sandbox-permissions.rst:74
 msgid ""
 "``--filesystem=host`` - access normal files on the host, not including host "
 "os or system internals described below"
 msgstr " `` --filesystem=host ``  - 访问主机的常规文件，不包含一下提到的主机操作系统或者系统内部"
 
-#: ../../sandbox-permissions.rst:74
+#: ../../sandbox-permissions.rst:75
 msgid "``--filesystem=home`` - access the user's home directory"
 msgstr " `` --filesystem=home ``  - 访问用户home目录"
 
-#: ../../sandbox-permissions.rst:75
+#: ../../sandbox-permissions.rst:76
 msgid "``--filesystem=/path/path`` - access specific paths"
 msgstr " `` --filesystem=/path/path ``  - 访问特定路径"
 
-#: ../../sandbox-permissions.rst:76
+#: ../../sandbox-permissions.rst:77
 msgid "``--filesystem=xdg-download`` - access a specific XDG folder"
 msgstr " `` --filesystem=xdg-download ``  - 访问特定的XDG文件夹"
 
-#: ../../sandbox-permissions.rst:78
+#: ../../sandbox-permissions.rst:79
 msgid ""
 "As a general rule, Filesystem access should be limited as much as possible. "
 "This includes using:"
 msgstr "作为一个通用规则，对文件系统的访问应该尽可能地进行限制。这包括："
 
-#: ../../sandbox-permissions.rst:80
+#: ../../sandbox-permissions.rst:81
 msgid ""
 "Using portals as an alternative to blanket filesystem access, wherever "
 "possible."
 msgstr "尽量使用门户来代替文件系统访问。"
 
-#: ../../sandbox-permissions.rst:81
+#: ../../sandbox-permissions.rst:82
 msgid "Using read-only access wherever possible, using the ``:ro`` option."
 msgstr "尽量使用读取权限来访问，使用 `` :ro `` 选项。"
 
-#: ../../sandbox-permissions.rst:82
+#: ../../sandbox-permissions.rst:83
 msgid ""
 "If some home directory access is absolutely required, using XDG directory "
 "access only."
 msgstr "如果一定要访问home目录，只使用XDG目录访问。"
 
-#: ../../sandbox-permissions.rst:84
+#: ../../sandbox-permissions.rst:85
 msgid ""
 "The full list the available filesystem options can be found in the :doc"
 ":`sandbox-permissions-reference`. Other filesystem access guidelines "
 "include:"
 msgstr "完整的文件系统可用选项列表可以在 :doc:`sandbox-reference`找到。其它文件系统访问指南包含："
 
-#: ../../sandbox-permissions.rst:87
+#: ../../sandbox-permissions.rst:88
 msgid ""
 "The ``--persist=path`` option can be used to map paths from the user's home "
 "directory into the sandbox filesystem. This makes it possible to avoid "
@@ -306,28 +312,25 @@ msgstr ""
 " `` --persist=path `` 选项可以用来将用户目录映射到沙箱的文件系统。这可以避免配置整个home目录访问权限。并且对于在硬编码使用 "
 "`` ~/ `` 文件路径的应用程序非常有用。"
 
-#: ../../sandbox-permissions.rst:89
+#: ../../sandbox-permissions.rst:90
 msgid ""
 "If an application uses ``$TMPDIR`` to contain lock files or shared files "
-"with other processes, it is recommended to create a wrapper script that sets"
-" it to ``$XDG_CACHE_HOME``."
+"with other processes, you may want to add ``--env=TMPDIR=/var/tmp``."
 msgstr ""
-"如果一个应用使用 `` $TMPDIR `` 来存放和其它进程的lock文件或共享文件，推荐创建一个包装器脚本来将它设置为 `` "
-"$XDG_CACHE_HOME `` ."
 
-#: ../../sandbox-permissions.rst:91
+#: ../../sandbox-permissions.rst:92
 msgid ""
 "Retaining and sharing configuration with non-Flatpak installations is to be "
 "avoided."
 msgstr "应该避免与非flatpak安装的应用共享配置。"
 
-#: ../../sandbox-permissions.rst:93
+#: ../../sandbox-permissions.rst:94
 msgid ""
 "As mentioned above the ``host`` option does not actually provide complete "
 "access to the host filesystem. The main rules are:"
 msgstr "如上所述， `` host `` 选项实际上没有提供主机文件系统的完整访问。主要的规则是："
 
-#: ../../sandbox-permissions.rst:96
+#: ../../sandbox-permissions.rst:97
 msgid ""
 "These directories are blacklisted: ``/lib``, ``/lib32``, ``/lib64``, "
 "``/bin``, ``/sbin``, ``/usr``, ``/boot``, ``/root``, ``/tmp``, ``/etc``, "
@@ -338,36 +341,36 @@ msgstr ""
 "/etc `` ,  `` /app `` ,  `` /run `` ,  `` /proc `` ,  `` /sys `` ,  `` /dev "
 "`` ,  `` /var `` "
 
-#: ../../sandbox-permissions.rst:98
+#: ../../sandbox-permissions.rst:99
 msgid "Exceptions from the blacklist: ``/run/media``"
 msgstr " `` /run/media `` 例外"
 
-#: ../../sandbox-permissions.rst:99
+#: ../../sandbox-permissions.rst:100
 msgid ""
 "These directories are mounted under ``/var/run/host``: ``/etc``, ``/usr``"
 msgstr "这些目录被挂载到 `` /var/run/host `` : `` /etc `` ， `` /usr `` "
 
-#: ../../sandbox-permissions.rst:101
+#: ../../sandbox-permissions.rst:102
 msgid ""
 "The reason many of the directories are blacklisted is because they already "
 "exist in the sandbox such as ``/usr`` or are not usable in the sandbox."
 msgstr "许多目录被屏蔽的原因是他们已经在沙箱里存在了：例如 `` /usr `` 或者是一些在沙箱中不可用的目录。"
 
-#: ../../sandbox-permissions.rst:105
+#: ../../sandbox-permissions.rst:106
 msgid "Device access"
 msgstr "设备访问"
 
-#: ../../sandbox-permissions.rst:107
+#: ../../sandbox-permissions.rst:108
 msgid ""
 "While not ideal, ``--device=all`` can be used to access devices like "
 "controllers or webcams."
 msgstr "尽管不理想， `` --device=all ``  可以用来访问控制器和网络摄像头之类的设备。"
 
-#: ../../sandbox-permissions.rst:110
+#: ../../sandbox-permissions.rst:111
 msgid "dconf access"
 msgstr "dconf访问"
 
-#: ../../sandbox-permissions.rst:112
+#: ../../sandbox-permissions.rst:113
 #, fuzzy
 msgid ""
 "Until a sandbox-compatible backend is available, applications that require "

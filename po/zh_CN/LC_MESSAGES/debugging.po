@@ -1,10 +1,11 @@
 # PikachuHy <pikachuhy@163.com>, 2018. #zanata
+# WTZ <zwpwjwtz@126.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-10-08 03:35+0000\n"
+"PO-Revision-Date: 2018-10-10 08:15+0000\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language-Team: Chinese (Simplified, China)\n"
 "Language: zh_Hans_CN\n"
@@ -71,7 +72,7 @@ msgid ""
 "application and the runtime it is using. Flatpak splits this information off"
 " into debug extensions, which you should install before debugging an "
 "application::"
-msgstr "当有权限调试应用和使用的运行时时， `` gdb `` 是很有用的。Flatpak分离调试信息到扩展中，你在调试前需要安装这些扩展："
+msgstr "当有权限调试应用和使用的运行时时， `` gdb `` 是很有用的。Flatpak会把调试信息分离到扩展中，你在调试前需要安装这些扩展："
 
 #: ../../debugging.rst:31
 msgid ""
@@ -128,4 +129,4 @@ msgstr "当调试的时候，使用额外的权限有时是很有用的。这可
 msgid ""
 "This command runs a shell in the sandbox for the given application, granting"
 " it system bus access to the bus name owned by logind."
-msgstr "此命令在给定应用程序的沙箱中运行shell，授予它对logind拥有的总线名称的系统总线访问权限。"
+msgstr "此命令在给定应用程序的沙箱中运行shell，授予它访问logind对应的D-Bus服务的权限。"

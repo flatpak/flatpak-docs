@@ -1,12 +1,13 @@
 # PikachuHy <pikachuhy@163.com>, 2018. #zanata
+# WTZ <zwpwjwtz@126.com>, 2018. #zanata
 # ZiqiangXu <ziqiang_xu@yeah.net>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-10-08 03:36+0000\n"
-"Last-Translator: PikachuHy <pikachuhy@163.com>\n"
+"POT-Creation-Date: 2018-10-09 20:19-0400\n"
+"PO-Revision-Date: 2018-10-10 07:46+0000\n"
+"Last-Translator: ZiqiangXu <ziqiang_xu@yeah.net>\n"
 "Language-Team: Chinese (Simplified, China)\n"
 "Language: zh_Hans_CN\n"
 "MIME-Version: 1.0\n"
@@ -22,9 +23,10 @@ msgstr "构建介绍"
 #: ../../building-introduction.rst:4
 msgid ""
 ":doc:`first-build` has already provided a quick demonstration of how "
-"applications get built with with Flatpak. This page provides an additional "
+"applications get built with Flatpak. This page provides an additional "
 "general overview of what's involved."
-msgstr " :doc:`first-build` 提供了一个如何用Flatpak构建应用的例子。 这个页面提供了一个额外的相关的概览"
+msgstr ""
+"我们已在 :doc:`first-build` 一节中展示了如何使用Flatpak构建应用的简单案例。在本节中，我们将概述讨论构建过程涉及到的其他要素。"
 
 #: ../../building-introduction.rst:7
 msgid "flatpak-builder"
@@ -61,11 +63,11 @@ msgstr "调用  `` flatpak-builder ``  的基本格式是:"
 msgid ""
 "Where ``<build-dir>`` is the path to the directory that the application will"
 " be built into, and ``<manifest>`` is the path to a manifest file. The "
-"contents of ``<directory>`` can be useful for testing and debugging "
+"contents of ``<build-dir>`` can be useful for testing and debugging "
 "purposes, but is generally treated as an artifact of the build process."
 msgstr ""
-"其中  `` <build-dir> ``  是应用要构建到的路径，  `` <manifest> ``  是清单文件的路径。  `` "
-"<directory> ``  的内容可以用于测试和调试，但是通常被试做构建过程中的一个工件（神器，译者注）。"
+"其中 ``<build-dir>`` 是构建应用程序的目标文件夹，``<manifest>`` 是清单文件的路径。``<build-dir>`` "
+"中的内容可以被用来调试和测试应用程序，不过大多数情况下它只是构建过程的中间产物。"
 
 #: ../../building-introduction.rst:19
 msgid "When ``flatpak-builder`` is run:"
@@ -85,7 +87,7 @@ msgstr "构建和安装每个模块的源代码"
 
 #: ../../building-introduction.rst:24
 msgid "The build is finished, by setting sandbox permissions"
-msgstr "通过设置沙箱的权限来完成构建"
+msgstr "设置沙箱的权限并完成构建"
 
 #: ../../building-introduction.rst:25
 msgid ""
@@ -105,7 +107,7 @@ msgstr "软件开发套件（SDKs）"
 msgid ""
 "Instead of being built using the host environment, Flatpak applications are "
 "built inside a separate environment, called an SDK."
-msgstr "Flatpak应用是构建在一个称作SDK的隔离环境中的，而不是用主机的环境构建。"
+msgstr "Flatpak应用是在一个称作SDK的隔离环境中，而不是宿主的环境中构建的。"
 
 #: ../../building-introduction.rst:34
 msgid ""

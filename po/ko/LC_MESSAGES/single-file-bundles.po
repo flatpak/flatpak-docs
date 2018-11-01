@@ -54,10 +54,14 @@ msgstr ""
 "`dictionary.flatpak` 이름의 번들을 생성하려면, 다음과 같이 실행한다::"
 
 #: ../../single-file-bundles.rst:15
+msgid "You can also set a runtime repo in the bundle::"
+msgstr ""
+
+#: ../../single-file-bundles.rst:19
 msgid "To import the bundle into a repository on another machine, run::"
 msgstr "다른 머신 상의 저장소로 번들을 읽어들이려면(Import), 다음과 같이 실행한다::"
 
-#: ../../single-file-bundles.rst:19
+#: ../../single-file-bundles.rst:23
 msgid ""
 "Alternatively, bundles can also be installed directly without importing "
 "them::"

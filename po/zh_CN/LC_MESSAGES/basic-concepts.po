@@ -1,12 +1,12 @@
-# PikachuHy <pikachuhy@163.com>, 2018. #zanata
+# WTZ <zwpwjwtz@126.com>, 2018. #zanata
 # ZiqiangXu <ziqiang_xu@yeah.net>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-10-08 03:36+0000\n"
-"Last-Translator: PikachuHy <pikachuhy@163.com>\n"
+"PO-Revision-Date: 2018-10-28 10:55+0000\n"
+"Last-Translator: ZiqiangXu <ziqiang_xu@yeah.net>\n"
 "Language-Team: Chinese (Simplified, China)\n"
 "Language: zh_Hans_CN\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr "可以通过很少的关键概念来理解Flatpak，在学习如何使�
 
 #: ../../basic-concepts.rst:9
 msgid "Runtimes"
-msgstr "运行时"
+msgstr "运行时（runtime）"
 
 #: ../../basic-concepts.rst:11
 msgid ""
@@ -99,7 +99,7 @@ msgid ""
 "they are files that are exported out of the sandbox, and include things like"
 " the application's ``.desktop`` file and icon."
 msgstr ""
-"一些沙箱的内部资源需要对外暴露，被主机操作系统使用。这些被称为“导出”，因为它们是从沙箱中导出的文件，包括应用程序的“.desktop”文件和图标"
+"一些沙箱的内部资源需要对外暴露，被宿主操作系统使用。这些被称为“导出”，因为它们是从沙箱中导出的文件，包括应用程序的“.desktop”文件和图标"
 
 #: ../../basic-concepts.rst:32
 msgid "Portals"
@@ -110,23 +110,21 @@ msgid ""
 "Portals are a mechanism through which applications can interact with the "
 "host environment from within a sandbox. They give the ability to interact "
 "with data, files and services without the need to add sandbox permissions."
-msgstr "门户是一种机制，通过它，应用程序可以在沙箱中与主机环境进行交互。它们提供了与数据、文件和服务交互的能力，这不需要添加沙箱权限"
+msgstr "门户是一种机制，通过它，应用程序可以在沙箱中与宿主环境进行交互。它们提供了与数据、文件和服务交互的能力，这不需要添加沙箱权限"
 
 #: ../../basic-concepts.rst:36
-#, fuzzy
 msgid ""
 "Examples of capabilities that can be accessed through portals include "
 "opening files through a file chooser dialog, or printing. Interface toolkits"
 " can implement transparent support for portals, so access to resources "
 "outside of the sandbox will work securely and out of the box."
 msgstr ""
-"可以通过门户访问的功能示例包括通过文件选择器对话框打开文件或打印。接口工具包可以实现对门户的直接支持，so access to resources "
-"outside of the sandbox will work securely and out of the box."
+"可以通过门户访问的功能示例包括通过文件选择器对话框打开文件或打印。接口工具包可以实现对门户的直接支持，从而实现对沙箱外资源的安全、便捷的访问。"
 
 #: ../../basic-concepts.rst:38
 msgid ""
 "More information about portals can be found in :doc:`sandbox-permissions`."
-msgstr "更多关于门户的学习可以在  :doc:`sandbox-permissions` 找到"
+msgstr "更多关于门户的学习资源可以在  :doc:`sandbox-permissions` 找到"
 
 #: ../../basic-concepts.rst:41
 msgid "Repositories"
@@ -156,4 +154,4 @@ msgid ""
 "runtimes are downloaded from the relevant remotes. Like with Git, only the "
 "difference between versions is downloaded, which makes the process very "
 "efficient."
-msgstr ""
+msgstr "执行更新时，应用和runtime会从相关的远程下载。和git一样，只有不同的部分会下载，使得升级过程十分高效。"

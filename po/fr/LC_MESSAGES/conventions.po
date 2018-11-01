@@ -22,7 +22,7 @@ msgstr ""
 "X-Generator: Zanata 4.6.2\n"
 
 #: ../../conventions.rst:2
-msgid "Conventions & Requirements"
+msgid "Requirements & Conventions"
 msgstr ""
 
 #: ../../conventions.rst:4
@@ -30,20 +30,32 @@ msgid ""
 "Flatpak deliberately makes as few requirements of applications as possible. "
 "However, a small number of standard Linux desktop conventions are expected, "
 "primarily to ensure that applications integrate with Linux desktops and app "
-"centers. These are listed below."
+"centers. Developers might also encounter a small number of Linux technical "
+"conventions."
 msgstr ""
 
 #: ../../conventions.rst:6
 msgid ""
-"Applications that have previously targeted the Linux desktop will typically "
-"need to make very few (if any) changes to conform with these standards."
+"Information on further desktop integration options can be found in :doc"
+":`desktop-integration`."
 msgstr ""
 
 #: ../../conventions.rst:9
-msgid "Application IDs"
+msgid "Expected Standards"
 msgstr ""
 
 #: ../../conventions.rst:11
+msgid ""
+"Applications that use Flatpak are generally expected to comply with the "
+"following standards. Applications that have previously targeted the Linux "
+"desktop will typically need to make very few (if any) changes to do this."
+msgstr ""
+
+#: ../../conventions.rst:14
+msgid "Application IDs"
+msgstr ""
+
+#: ../../conventions.rst:16
 msgid ""
 "As described in :doc:`using-flatpak`, Flatpak requires each application to "
 "have a unique identifier, which has a three-part form such as "
@@ -58,69 +70,11 @@ msgid ""
 "#sect-Metadata-GenericComponent>`_ also."
 msgstr ""
 
-#: ../../conventions.rst:14
-msgid "Application icons"
-msgstr ""
-
-#: ../../conventions.rst:16
-msgid ""
-"Applications are expected to provide an application icon, which is used for "
-"their application launcher. These icons should be provided in accordance "
-"with the `Freedesktop icon specification <https://standards.freedesktop.org"
-"/icon-theme-spec/icon-theme-spec-latest.html>`_."
-msgstr ""
-
-#: ../../conventions.rst:18
-msgid ""
-"Icons should be named with the application's ID, be in either PNG or SVG "
-"format, and must be placed in the standard location::"
-msgstr ""
-
-#: ../../conventions.rst:22
-msgid ""
-"For example, the path to the 128✕128px version of GNOME Dictionary's icon "
-"is::"
-msgstr ""
-
-#: ../../conventions.rst:27
-msgid "Desktop files"
-msgstr ""
-
-#: ../../conventions.rst:29
-msgid ""
-"Desktop files are another Freedesktop standard, which is used to provide the"
-" desktop environment with information about each application. The "
-"`Freedesktop specification <https://standards.freedesktop.org/desktop-entry-"
-"spec/latest/>`_ provides a complete reference for writing desktop files, and"
-" `additional information about them "
-"<https://wiki.archlinux.org/index.php/desktop_entries>`_ is available "
-"online."
-msgstr ""
-
-#: ../../conventions.rst:31
-msgid ""
-"Desktop files should be named with the application's ID, followed by the "
-"``.desktop`` file extension, and should be placed in "
-"``/app/share/applications/``. For example::"
-msgstr ""
-
-#: ../../conventions.rst:35
-msgid ""
-"A minimal desktop file should contain at least the application's *name*, "
-"*exec* command, *type* and *icon* name::"
-msgstr ""
-
-#: ../../conventions.rst:43
-msgid ""
-"The ``desktop-file-validate`` command can be used to check for errors in "
-"desktop files."
-msgstr ""
-
-#: ../../conventions.rst:46
+#: ../../conventions.rst:19
 msgid "AppData files"
 msgstr ""
 
-#: ../../conventions.rst:48
+#: ../../conventions.rst:20
 msgid ""
 "AppData files provide metadata about applications, which is used by "
 "application stores (such as Flathub, GNOME Software and KDE Discover). The "
@@ -129,101 +83,112 @@ msgid ""
 " reference for providing AppData."
 msgstr ""
 
-#: ../../conventions.rst:50
+#: ../../conventions.rst:22
 msgid ""
 "AppData files should be named with the application ID and the "
 "``.appdata.xml`` file extension, and should be placed in "
 "``/app/share/metainfo/``. For example::"
 msgstr ""
 
-#: ../../conventions.rst:54
+#: ../../conventions.rst:26
 msgid ""
 "The ``appstream-util validate-relax`` command can be used to check AppData "
 "files for errors."
 msgstr ""
 
-#: ../../conventions.rst:57
-msgid "XDG base directories"
+#: ../../conventions.rst:29
+msgid "Application icons"
+msgstr ""
+
+#: ../../conventions.rst:31
+msgid ""
+"Applications are expected to provide an application icon, which is used for "
+"their application launcher. These icons should be provided in accordance "
+"with the `Freedesktop icon specification <https://standards.freedesktop.org"
+"/icon-theme-spec/icon-theme-spec-latest.html>`_."
+msgstr ""
+
+#: ../../conventions.rst:33
+msgid ""
+"Icons should be named with the application's ID, be in either PNG or SVG "
+"format, and must be placed in the standard location::"
+msgstr ""
+
+#: ../../conventions.rst:37
+msgid ""
+"For example, the path to the 128✕128px version of GNOME Dictionary's icon "
+"is::"
+msgstr ""
+
+#: ../../conventions.rst:42
+msgid "Desktop files"
+msgstr ""
+
+#: ../../conventions.rst:44
+msgid ""
+"Desktop files are used to provide the desktop environment with information "
+"about each application. The `Freedesktop specification "
+"<https://standards.freedesktop.org/desktop-entry-spec/latest/>`_ provides a "
+"complete reference for writing desktop files, and `additional information "
+"about them <https://wiki.archlinux.org/index.php/desktop_entries>`_ is "
+"available online."
+msgstr ""
+
+#: ../../conventions.rst:46
+msgid ""
+"Desktop files should be named with the application's ID, followed by the "
+"``.desktop`` file extension, and should be placed in "
+"``/app/share/applications/``. For example::"
+msgstr ""
+
+#: ../../conventions.rst:50
+msgid ""
+"A minimal desktop file should contain at least the application's *name*, "
+"*exec* command, *type*, *icon* name and *categories*::"
 msgstr ""
 
 #: ../../conventions.rst:59
 msgid ""
-"`XDG base directories <https://standards.freedesktop.org/basedir-spec"
-"/basedir-spec-latest.html>`_ are a Freedesktop standard which defines "
-"standard locations where user-specific application data and configuration "
-"should be stored. If your application already respects these nothing must be"
-" changed."
+"The ``desktop-file-validate`` command can be used to check for errors in "
+"desktop files."
 msgstr ""
 
-#: ../../conventions.rst:61
+#: ../../conventions.rst:62
+msgid "Technical conventions"
+msgstr ""
+
+#: ../../conventions.rst:64
 msgid ""
-"By default, Flatpak sets three XDG base directories that should be used by "
-"applications for user-specific storage. These are:"
-msgstr ""
-
-#: ../../conventions.rst:64
-msgid "Base directory"
-msgstr ""
-
-#: ../../conventions.rst:64
-msgid "Usage"
-msgstr ""
-
-#: ../../conventions.rst:64
-msgid "Default location"
-msgstr ""
-
-#: ../../conventions.rst:66
-msgid "XDG_CONFIG_HOME"
-msgstr "XDG_CONFIG_HOME"
-
-#: ../../conventions.rst:66
-msgid "User-specific configuration files"
-msgstr ""
-
-#: ../../conventions.rst:66
-msgid "~/.var/app/<app-id>/config"
-msgstr "~/.var/app/<app-id>/config"
-
-#: ../../conventions.rst:67
-msgid "XDG_DATA_HOME"
-msgstr "XDG_DATA_HOME"
-
-#: ../../conventions.rst:67
-msgid "User-specific data"
+"The following are standard technical conventions used by Flatpak and Linux "
+"desktops. Those with Linux experience will likely already be aware of them. "
+"However, developers who are new to Linux might find some of this information"
+" useful."
 msgstr ""
 
 #: ../../conventions.rst:67
-msgid "~/.var/app/<app-id>/data"
-msgstr "~/.var/app/<app-id>/data"
+msgid "D-Bus"
+msgstr "D-Bus"
 
-#: ../../conventions.rst:68
-msgid "XDG_CACHE_HOME"
-msgstr "XDG_CACHE_HOME"
-
-#: ../../conventions.rst:68
-msgid "Non-essential user-specific data"
+#: ../../conventions.rst:69
+msgid ""
+"D-Bus is the standard IPC framework used on Linux desktops. A lot of "
+"applications won't need to use it, but it is supported by Flatpak should it "
+"be required."
 msgstr ""
-
-#: ../../conventions.rst:68
-msgid "~/.var/app/<app-id>/cache"
-msgstr "~/.var/app/<app-id>/cache"
 
 #: ../../conventions.rst:71
-msgid "For example, GNOME Dictionary will store user-specific data in::"
-msgstr ""
-
-#: ../../conventions.rst:75
 msgid ""
-"Note that applications can be configured to use non-default base directory "
-"locations (see :doc:`sandbox-permissions`)."
+"D-Bus can be used for application launching and communicating with some "
+"system services. Applications can also provide their own D-Bus services "
+"(when doing this, the D-Bus service name is expected to be the same as the "
+"application ID)."
 msgstr ""
 
-#: ../../conventions.rst:78
+#: ../../conventions.rst:74
 msgid "Filesystem layout"
 msgstr ""
 
-#: ../../conventions.rst:80
+#: ../../conventions.rst:76
 msgid ""
 "Each Flatpak sandbox, which is the environment in which an application is "
 "run, contains the filesystem of the application's runtime. This follows "
@@ -231,7 +196,7 @@ msgid ""
 "<https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>`_."
 msgstr ""
 
-#: ../../conventions.rst:82
+#: ../../conventions.rst:78
 msgid ""
 "For example, the root of the sandbox contains the ``/etc`` directory for "
 "configuration files and ``/usr`` for multi-user utilities and applications. "
@@ -239,16 +204,95 @@ msgid ""
 "which is where the application's own files are located."
 msgstr ""
 
+#: ../../conventions.rst:81
+msgid "XDG base directories"
+msgstr ""
+
+#: ../../conventions.rst:83
+msgid ""
+"`XDG base directories <https://standards.freedesktop.org/basedir-spec"
+"/basedir-spec-latest.html>`_ are standard locations for user-specific "
+"application data. Popular toolkits provide convenience functions for "
+"accessing XDG base directories. These include:"
+msgstr ""
+
 #: ../../conventions.rst:85
-msgid "D-Bus"
-msgstr "D-Bus"
+msgid "Electron: XDG base directories can be accessed with ``app.getPath``"
+msgstr ""
+
+#: ../../conventions.rst:86
+msgid ""
+"Glib: provides access to the XDG base directories through the "
+"``g_get_user_cache_dir ()``, ``g_get_user_data_dir ()``, "
+"``g_get_user_config_dir ()`` functions"
+msgstr ""
 
 #: ../../conventions.rst:87
 msgid ""
-"Flatpak supports `D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_,"
-" the standard framework for inter-process communication on Linux desktops. "
-"This can be used for application launching and communicating with some "
-"system services. Applications can also provide their own D-Bus services "
-"(when doing this, the D-Bus service name is expected to be the same as the "
-"application ID)."
+"Qt: provides access to XDG base directories with the the `QStandardPaths "
+"Class <http://doc.qt.io/qt-5/qstandardpaths.html>`_"
+msgstr ""
+
+#: ../../conventions.rst:89
+msgid ""
+"However, applications that aren't using one of these toolkits can expect to "
+"find their XDG base directories in the following locations:"
+msgstr ""
+
+#: ../../conventions.rst:92
+msgid "Base directory"
+msgstr ""
+
+#: ../../conventions.rst:92
+msgid "Usage"
+msgstr ""
+
+#: ../../conventions.rst:92
+msgid "Default location"
+msgstr ""
+
+#: ../../conventions.rst:94
+msgid "XDG_CONFIG_HOME"
+msgstr "XDG_CONFIG_HOME"
+
+#: ../../conventions.rst:94
+msgid "User-specific configuration files"
+msgstr ""
+
+#: ../../conventions.rst:94
+msgid "~/.var/app/<app-id>/config"
+msgstr "~/.var/app/<app-id>/config"
+
+#: ../../conventions.rst:95
+msgid "XDG_DATA_HOME"
+msgstr "XDG_DATA_HOME"
+
+#: ../../conventions.rst:95
+msgid "User-specific data"
+msgstr ""
+
+#: ../../conventions.rst:95
+msgid "~/.var/app/<app-id>/data"
+msgstr "~/.var/app/<app-id>/data"
+
+#: ../../conventions.rst:96
+msgid "XDG_CACHE_HOME"
+msgstr "XDG_CACHE_HOME"
+
+#: ../../conventions.rst:96
+msgid "Non-essential user-specific data"
+msgstr ""
+
+#: ../../conventions.rst:96
+msgid "~/.var/app/<app-id>/cache"
+msgstr "~/.var/app/<app-id>/cache"
+
+#: ../../conventions.rst:99
+msgid "For example, GNOME Dictionary will store user-specific data in::"
+msgstr ""
+
+#: ../../conventions.rst:103
+msgid ""
+"Note that applications can be configured to use non-default base directory "
+"locations (see :doc:`sandbox-permissions`)."
 msgstr ""

@@ -133,15 +133,12 @@ msgstr "발행 내역 갱신 (publishing updates)"
 
 #: ../../repositories.rst:50
 msgid ""
-"Flatpak repositories are similar a Git repositories, in that they store "
+"Flatpak repositories are similar to Git repositories, in that they store "
 "every version of an application by keeping a record of the difference "
 "between each version. This makes updating efficient, since only the "
 "difference (or \"delta\") between two versions needs to be downloaded when "
 "an update is performed."
 msgstr ""
-"플랫팩 저장소는 응용프로그램의 버전 간 차이를 저장 해 둠으로써, 해당 소프트웨어의 모든 버전을 제공할 수 있다는 점에서 Git 저장소와"
-" 유사하다. 응용프로그램을 업데이트 할 때, 버전 간의 차이 (즉 델타, “delta”) 만 다운로드하면 되므로, 업데이트가 매우 "
-"효율적으로 이루어진다."
 
 #: ../../repositories.rst:52
 msgid ""

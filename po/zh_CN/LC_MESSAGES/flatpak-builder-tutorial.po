@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-04 20:32-0500\n"
-"PO-Revision-Date: 2018-10-08 03:36+0000\n"
-"Last-Translator: PikachuHy <pikachuhy@163.com>\n"
+"PO-Revision-Date: 2018-10-28 12:03+0000\n"
+"Last-Translator: ZiqiangXu <ziqiang_xu@yeah.net>\n"
 "Language-Team: Chinese (Simplified, China)\n"
 "Language: zh_Hans_CN\n"
 "MIME-Version: 1.0\n"
@@ -97,11 +97,10 @@ msgid "3. Add the new repository"
 msgstr "3. 添加新的仓库"
 
 #: ../../flatpak-builder-tutorial.rst:31
-#, fuzzy
 msgid ""
 "To test the application that has been built, you need to add the new "
 "repository that has been created::"
-msgstr "为了测试构建好的应用，你需要将其添加到已经创建的仓库中。"
+msgstr "为了测试构建好的应用，你需要将其添加到刚创建的新仓库中::"
 
 #: ../../flatpak-builder-tutorial.rst:36
 msgid "4. Install the application"

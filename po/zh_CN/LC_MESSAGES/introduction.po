@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"POT-Creation-Date: 2018-10-09 20:19-0400\n"
 "PO-Revision-Date: 2018-10-08 03:36+0000\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language-Team: Chinese (Simplified, China)\n"
@@ -110,11 +110,10 @@ msgstr "**捆绑**：这允许应用程序开发人员将几乎任何依赖项�
 
 #: ../../introduction.rst:27
 msgid ""
-"**Consistent application environments:** because these are are the same "
-"across devices, applications perform as intended. This also makes it easier "
-"to identify bugs and to do testing."
+"**Consistent application environments:** because these are the same across "
+"devices, applications perform as intended. This also makes it easier to "
+"identify bugs and to do testing."
 msgstr ""
-"**一致的应用程序环境**：因为在不同设备之间是应用程序的环境是相同的，所以应用程序按预期执行。 这也使得开发者识别错误和进行测试变得更容易。"
 
 #: ../../introduction.rst:29
 msgid ""

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"POT-Creation-Date: 2018-10-09 20:19-0400\n"
 "PO-Revision-Date: 2018-10-08 03:38+0000\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language-Team: Chinese (Simplified, China)\n"
@@ -238,42 +238,46 @@ msgid "``file`` - local file (these are copied into the source directory)"
 msgstr " `` file ``  - 本地文件（这些复制到源码目录）"
 
 #: ../../manifests.rst:101
+msgid "``dir`` - local directory (these are copied into the source directory)"
+msgstr ""
+
+#: ../../manifests.rst:102
 msgid ""
 "``script`` - an array of shell commands (these are put in a shellscript "
 "file)"
 msgstr " `` script ``  - 一个shell命令数组（这些都被放在shell脚本文件里）"
 
-#: ../../manifests.rst:102
-msgid ""
-"``shell`` -an array of shell commands that are run during source extraction"
-msgstr " `` shell ``  -一个shell命令数组，在解压源代码的时候执行"
-
 #: ../../manifests.rst:103
+msgid ""
+"``shell`` - an array of shell commands that are run during source extraction"
+msgstr ""
+
+#: ../../manifests.rst:104
 msgid "``patch`` - a patch (are applied to the source directory)"
 msgstr " `` patch ``  - 补丁（用于源代码目录）"
 
-#: ../../manifests.rst:104
+#: ../../manifests.rst:105
 #, fuzzy
 msgid ""
 "``extra-data`` - data that can be downloaded at install time; this can "
 "include archive or package files"
 msgstr " `` extra-data ``  - 在安装时下载的数据；可以包含归档文件或者package文件"
 
-#: ../../manifests.rst:106
+#: ../../manifests.rst:107
 msgid ""
 "Different properties are available for each source type, which are listed in"
 " the :doc:`flatpak-builder-command-reference`."
 msgstr "每种source类型有不同的属性，在 :doc:`flatpak-builder-command-reference`列出了。"
 
-#: ../../manifests.rst:109
+#: ../../manifests.rst:110
 msgid "Supported build systems"
 msgstr "受支持的构建系统"
 
-#: ../../manifests.rst:111
+#: ../../manifests.rst:112
 msgid "Modules can be built with a variety of build systems, including:"
 msgstr "模块可以用多种构建系统构建，包含："
 
-#: ../../manifests.rst:113
+#: ../../manifests.rst:114
 msgid ""
 "`autotools <https://www.gnu.org/software/automake/manual/html_node"
 "/Autotools-Introduction.html>`_"
@@ -281,11 +285,11 @@ msgstr ""
 "`autotools <https://www.gnu.org/software/automake/manual/html_node"
 "/Autotools-Introduction.html>`_"
 
-#: ../../manifests.rst:114
+#: ../../manifests.rst:115
 msgid "`cmake <https://cmake.org/>`_"
 msgstr "`cmake <https://cmake.org/>`_"
 
-#: ../../manifests.rst:115
+#: ../../manifests.rst:116
 msgid ""
 "`cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_, "
 "`meson <http://mesonbuild.com/>`_"
@@ -293,21 +297,21 @@ msgstr ""
 " `cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_  ,"
 "  `meson <http://mesonbuild.com/>`_ "
 
-#: ../../manifests.rst:116
+#: ../../manifests.rst:117
 msgid "the \"`Build API <https://github.com/cgwalters/build-api/>`_\""
 msgstr "\" `Build API <https://github.com/cgwalters/build-api/>`_ \""
 
-#: ../../manifests.rst:118
+#: ../../manifests.rst:119
 msgid ""
 "A \"simple\" build method is also available, which allows a series of "
 "commands to be specified."
 msgstr "一个“简单的”构建方法，需要指定一系列命令。"
 
-#: ../../manifests.rst:121
+#: ../../manifests.rst:122
 msgid "Example manifests"
 msgstr "实例清单文件"
 
-#: ../../manifests.rst:123
+#: ../../manifests.rst:124
 msgid ""
 "A `complete manifest for GNOME Dictionary built from Git "
 "<https://github.com/flathub/org.gnome.Dictionary/blob/master/org.gnome.Dictionary.json>`_."

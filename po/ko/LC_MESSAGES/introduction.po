@@ -109,9 +109,9 @@ msgstr ""
 
 #: ../../introduction.rst:27
 msgid ""
-"**Consistent application environments:** because these are are the same "
-"across devices, applications perform as intended. This also makes it easier "
-"to identify bugs and to do testing."
+"**Consistent application environments:** because these are the same across "
+"devices, applications perform as intended. This also makes it easier to "
+"identify bugs and to do testing."
 msgstr ""
 
 #: ../../introduction.rst:29

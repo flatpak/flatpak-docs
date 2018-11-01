@@ -1,11 +1,12 @@
 # PikachuHy <pikachuhy@163.com>, 2018. #zanata
+# WTZ <zwpwjwtz@126.com>, 2018. #zanata
 # ZiqiangXu <ziqiang_xu@yeah.net>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-11 18:07-0400\n"
-"PO-Revision-Date: 2018-10-08 03:36+0000\n"
+"PO-Revision-Date: 2018-10-10 07:35+0000\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language-Team: Chinese (Simplified, China)\n"
 "Language: zh_Hans_CN\n"
@@ -16,9 +17,8 @@ msgstr ""
 "X-Generator: Zanata 4.6.2\n"
 
 #: ../../building-basics.rst:2
-#, fuzzy
 msgid "Building Concepts and Setup"
-msgstr "构建概念和setup"
+msgstr "与构建有关的概念及准备工作"
 
 #: ../../building-basics.rst:4
 msgid ""
