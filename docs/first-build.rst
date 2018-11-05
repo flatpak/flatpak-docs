@@ -1,9 +1,14 @@
 Building your first Flatpak
 ===========================
 
-This tutorial provides a quick introduction to building Flatpaks. In it, you will learn how to create a basic Flatpak application, which can be installed and run.
+This tutorial provides a quick introduction to building Flatpaks. In it, you
+will learn how to create a basic Flatpak application, which can be installed
+and run.
 
-In order to complete this tutorial, you should have followed the `setup guide on flatpak.org <http://flatpak.org/setup/>`_. You also need to have installed ``flatpak-builder``, which is usually available from the same repository as the ``flatpak`` package.
+In order to complete this tutorial, you should have followed the `setup guide
+on flatpak.org <http://flatpak.org/setup/>`_. You also need to have installed
+``flatpak-builder``, which is usually available from the same repository as the
+``flatpak`` package.
 
 1. Install a runtime and the matching SDK
 -----------------------------------------
@@ -13,7 +18,8 @@ dependencies. Each runtime has a matching SDK (Software Development Kit), which
 contains all the things that are in the runtime, plus headers and development
 tools. This SDK is required to build apps for the runtime.
 
-In this tutorial we will use the Freedesktop 18.08 runtime and SDK. To install these, run::
+In this tutorial we will use the Freedesktop 18.08 runtime and SDK. To install
+these, run::
 
   $ flatpak install flathub org.freedesktop.Platform//18.08 org.freedesktop.Sdk//18.08
 
@@ -31,7 +37,9 @@ Now paste this into an empty file and save it as ``hello.sh``.
 3. Add a manifest
 -----------------
 
-Each Flatpak is built using a manifest file which provides basic information about the application and instructions for how it is to be built. To add a manifest to the hello world app, add the following to an empty file:
+Each Flatpak is built using a manifest file which provides basic information
+about the application and instructions for how it is to be built. To add a
+manifest to the hello world app, add the following to an empty file:
 
 .. code-block:: json
 
@@ -58,7 +66,8 @@ Each Flatpak is built using a manifest file which provides basic information abo
       ]
   }
 
-Now save the file alongside ``hello.sh`` and call it ``org.flatpak.Hello.json``.
+Now save the file alongside ``hello.sh`` and call it
+``org.flatpak.Hello.json``.
 
 In a more complex application, the manifest would list multiple modules. The
 last one would typically be the application itself, and the earlier ones would
@@ -85,23 +94,27 @@ To verify that the build was successful, run the following::
 
 Congratulations, you've made an app!
 
-Keep in mind that using ``--run`` won't result in a sandbox with the same permissions as the final app, as such it shouldn't be relied upon beyond basic testing.
+Keep in mind that using ``--run`` won't result in a sandbox with the same
+permissions as the final app, as such it shouldn't be relied upon beyond basic
+testing.
 
 6. Put the app in a repository
 ------------------------------
 
 Before you can install and run the app, it first needs to be put in a
-repository. This is done by passing the ``--repo`` argument to ``flatpak-builder``::
+repository. This is done by passing the ``--repo`` argument to
+``flatpak-builder``::
 
  $ flatpak-builder --repo=repo --force-clean build-dir org.flatpak.Hello.json
 
 This does the build again, and at the end exports the result to a local
-directory called ``repo``. Note that ``flatpak-builder`` keeps a cache of previous
-builds in the ``.flatpak-builder`` subdirectory, so doing a second build like
-this is very fast.
+directory called ``repo``. Note that ``flatpak-builder`` keeps a cache of
+previous builds in the ``.flatpak-builder`` subdirectory, so doing a second
+build like this is very fast.
 
-This second time we passed in ``--force-clean``, which means that the previously
-created ``build-dir`` directory was deleted before the new build was started.
+This second time we passed in ``--force-clean``, which means that the
+previously created ``build-dir`` directory was deleted before the new build was
+started.
 
 7. Install the app
 ------------------
@@ -115,8 +128,9 @@ app. This is done with two commands::
 The first command adds the repository that was created in the previous step.
 The second command installs the app from the repository.
 
-Both these commands use the ``--user`` argument, which means that the repository
-and the app are added per-user rather than system-wide. This is useful for testing.
+Both these commands use the ``--user`` argument, which means that the
+repository and the app are added per-user rather than system-wide. This is
+useful for testing.
 
 Note that the repository was added with ``--no-gpg-verify``, since a GPG key
 wasn't specified when the app was built. This is fine for testing, but for
@@ -125,9 +139,9 @@ official repositories you should sign them with a private GPG key.
 8. Run the app
 --------------
 
-All that's left is to try the app. This can be done with the following command::
+All that's left is to try the app. This can be done with the following
+command::
 
   $ flatpak run org.flatpak.Hello
 
 This runs the app, so that it prints 'Hello world, from a sandbox'.
-

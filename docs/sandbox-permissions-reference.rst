@@ -1,9 +1,12 @@
 Sandbox Permissions
 ===================
 
-Sandbox permissions can be configured from an application manifest file (see :doc:`manifests`). They can also be set with the ``build-finish``, ``run`` and ``override`` commands.
+Sandbox permissions can be configured from an application manifest file (see
+:doc:`manifests`). They can also be set with the ``build-finish``, ``run`` and
+``override`` commands.
 
-The following list includes many of the most useful permission options. A complete list can be viewed using ``flatpak build-finish --help``.
+The following list includes many of the most useful permission options. A
+complete list can be viewed using ``flatpak build-finish --help``.
 
 ===================================================  ===========================================
 ``--socket=x11``                                     Show windows using X11
@@ -20,7 +23,8 @@ The following list includes many of the most useful permission options. A comple
 Filesystem permissions
 ----------------------
 
-Each of the following permissions configure filesystem access, and should be added to ``--filesystem=``:
+Each of the following permissions configure filesystem access, and should be
+added to ``--filesystem=``:
 
 ====================  ===========================================
 ``host``              Access all files
@@ -37,7 +41,9 @@ Each of the following permissions configure filesystem access, and should be add
 ``xdg-templates``     Access the XDG templates directory
 ====================  ===========================================
 
-Paths can be added to all the above filesystem options. For example, ``--filesystem=xdg-documents/path``. The following permission options can also be added:
+Paths can be added to all the above filesystem options. For example,
+``--filesystem=xdg-documents/path``. The following permission options can also
+be added:
 
 - ``:ro`` - read-only access
 - ``:rw`` - read/write access (this is the default)
