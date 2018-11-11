@@ -35,6 +35,6 @@ SDKs are like the regular runtime that applications run in. The difference is th
 
 Each runtime has an accompanying SDK. For example, there is both a GNOME 3.26 runtime and a GNOME 3.26 SDK. Applications that use the runtime are built with the matching SDK.
 
-Like runtimes, SDKs will sometimes be automatically installed for you, but if you do need to manually install them, they are installed in the same was as applications and runtimes, such as::
+Like runtimes, SDKs will sometimes be automatically installed for you, but if you do need to manually install them, they are installed in the same way as applications and runtimes, such as::
 
  $ flatpak install flathub org.gnome.Sdk//3.26
