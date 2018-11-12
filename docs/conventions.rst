@@ -98,6 +98,6 @@ XDG_CACHE_HOME   Non-essential user-specific data   ~/.var/app/<app-id>/cache
 
 For example, GNOME Dictionary will store user-specific data in::
 
-  ~/.var/org.gnome.Dictionary/data/gnome-dictionary
+  ~/.var/app/org.gnome.Dictionary/data/gnome-dictionary
 
 Note that applications can be configured to use non-default base directory locations (see :doc:`sandbox-permissions`).
