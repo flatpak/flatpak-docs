@@ -60,7 +60,9 @@ As was explained in :doc:`first-build`, these two finishing properties give the 
 Cleanup
 -------
 
-The cleanup property can be used to remove files that are produced by the build process but which aren't wanted as part of the application, such as headers or developer documentation. Two properties in the manifest file are used for this. First, a list of filename patterns can be included::
+The cleanup property can be used to remove files produced by the build process that are not wanted as part of the application, such as headers or developer documentation. Two properties in the manifest file are used for this.
+
+First, a list of filename patterns can be included::
 
   "cleanup": [ "/include", "/bin/foo-*", "*.a" ]
 
