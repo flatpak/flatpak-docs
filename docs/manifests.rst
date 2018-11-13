@@ -55,7 +55,7 @@ The finishing manifest section uses the ``finish-args`` property, which can be s
        "--share=network"
     ],
 
-As was explained in :doc:`first-build`, these two finishing properties give the application access to the X11 display server and to the network. Guidance on which permissions to use can be found in :doc:`sandbox-permissions`, and a full list of ``finish-args`` options can be found in :doc:`sandbox-permissions-reference`.
+As was explained in :doc:`first-build`, these two finishing properties give the application access to the X11 display server and to the network. Guidance on which permissions to use can be found in :doc:`sandbox-permissions`, and a full list of ``finish-args`` options can be found in :doc:`sandbox-permissions-reference`. <--- this should say "sandbox-permissions-reference" but when you are on the site it only says "sandbox-permissions". Not sure how to fix.
 
 Cleanup
 -------
