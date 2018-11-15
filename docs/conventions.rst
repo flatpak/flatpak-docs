@@ -58,6 +58,19 @@ A minimal desktop file should contain at least the application's *name*, *exec* 
 
 The ``desktop-file-validate`` command can be used to check for errors in desktop files.
 
+Exporting through extra-data
+----------------------------
+
+Files downloaded through ``extra-data`` are only downloaded when installing, as such they aren't yet available for ``flatpak-builder`` to automatically export during the build process.
+
+When using ``extra-data``, place any files that must be exported under this location::
+
+  /app/extra/export/share/
+
+For example, if GNOME Dictionary used ``extra-data`` to download a 96x96 icon this would be its path::
+
+  /app/extra/export/share/icons/hicolor/96x96/apps/org.gnome.Dictionary.png
+
 Technical conventions
 ---------------------
 
