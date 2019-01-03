@@ -68,7 +68,7 @@ Talk permissions can be freely used, although it is recommended to use the minum
 Filesystem access
 `````````````````
 
-It is common for applications to require access to different parts of the host filesystem,and
+It is common for applications to require access to different parts of the host filesystem, and
 Flatpak provides a flexible set of options for this. Some examples include:
 
 - ``--filesystem=host`` - access normal files on the host, not including host os or system internals described below
