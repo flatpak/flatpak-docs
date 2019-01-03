@@ -57,3 +57,28 @@ This can be achieved using the various sandbox options that are accepted by the 
 
 This command runs a shell in the sandbox for the given application, granting it system bus access
 to the bus name owned by logind.
+
+Inspecting portal permissions
+-----------------------------
+
+Flatpak has a number of commands that allow to manage portal permissions for applications.
+
+To see all portal permissions of an application, use::
+
+ $ flatpak permission-show <application-id>
+
+To reset all portal permissions of an application, use::
+
+ $ flatpak permission-reset <application-id>
+
+
+Interacting with running sandboxes
+----------------------------------
+
+You can see all the apps that are currently running in Flatpak sandboxes (since 1.2)::
+
+ $ flatpak ps
+
+And, if you need to, you can terminate one by force (since 1.2)::
+
+ $ flatpak kill <application-id>
