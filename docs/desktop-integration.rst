@@ -31,7 +31,7 @@ Toolkits like GTK and Qt provide transparent support for portals. If you are not
 Notifications
 -------------
 
-A number of toolkits and frameworks provide transparent support for Linux desktop notificatoions. This includes Electron, GTK, KDE and QML.
+A number of toolkits and frameworks provide transparent support for Linux desktop notifications. This includes Electron, GTK, KDE and QML.
 
 Status icons
 ------------
