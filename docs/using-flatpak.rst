@@ -81,9 +81,6 @@ Applications can be found in any of your remotes using the ``search`` command. F
 
 Search will return any applications matching the search terms. Each search result includes the application ID and the remote that the application is in. In this example, the search term is ``gimp``.
 
-.. note::
-  Prior to Flatpak 0.11.1, it was necessary to manually update the metadata for your remotes before search will work. This can be done by either running ``flatpak update`` or ``flatpak update --appstream``.
-
 Install applications
 ````````````````````
 
