@@ -8,6 +8,7 @@ The following list includes many of the most useful permission options. A comple
 ===================================================  ===========================================
 ``--socket=x11``                                     Show windows using X11
 ``--share=ipc``                                      Share IPC namespace with the host [#f1]_
+``--allow=bluetooth``                                Allow access to Bluetooth
 ``--device=dri``                                     OpenGL rendering
 ``--socket=wayland``                                 Show windows using Wayland
 ``--socket=pulseaudio``                              Play sounds using PulseAudio
