@@ -101,6 +101,12 @@ The details of the application to be installed can also be provided by a ``.flat
 
 If the ``.flatpakref`` file specifies that the application is to be installed from a remote that hasn't already been added, you will be asked whether to add it before the application is installed.
 
+Since Flatpak 1.2, the ``install`` command can search for applications. A simple::
+
+ $ flatpak install gimp
+
+will confirm the remote and application and proceed to install.
+
 Running applications
 ````````````````````
 
