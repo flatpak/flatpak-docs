@@ -138,3 +138,27 @@ Remove an application
 To remove an application, run::
 
  $ flatpak uninstall org.gimp.GIMP
+
+Troubleshooting
+```````````````
+
+Flatpak has a few commands that can help you to get things working again when
+something goes wrong.
+
+To remove runtimes and extensions that are not used by installed applications, use::
+
+ $ flatpak uninstall --unused
+
+To fix inconsistencies with your local installation, use::
+
+ $ flatpak repair
+
+Flatpak also has a number of commands to manage the portal permissions of installed
+apps. To reset all portal permissions for an app, use ``flatpak permission-reset``::
+
+ $ flatpak permission-reset org.gimp.GIMP
+
+To find out what changes have been made to your Flatpak installation over time,
+you can take a look at the logs (since 1.2)::
+
+ $ flatpak history
