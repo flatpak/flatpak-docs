@@ -13,3 +13,4 @@ Reference documentation for flatpak, flatpak-builder and libflatpak.
    freedesktop-quick-reference
    under-the-hood
    libflatpak-api-reference
+   portal-api-reference
