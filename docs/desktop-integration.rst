@@ -26,7 +26,7 @@ Portals are the framework for securely accessing resources from outside an appli
 - Showing notifications
 - Taking screenshots and screencasts
 
-Toolkits like GTK and Qt provide transparent support for portals. See :doc:`portals-gtk` for detailed information about GTK and portals. If you are not using one of these toolkits, it is possible to access the portals API directly. See the `portals API documentation <https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for more information.  
+Toolkits like GTK and Qt provide transparent support for portals. See :doc:`portals-gtk` or :doc:`portals-qt` for detailed information about GTK and portals. If you are not using one of these toolkits, it is possible to access the portals API directly. See the `portals API documentation <https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for more information.
 
 Notifications
 -------------
