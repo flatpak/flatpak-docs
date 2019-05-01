@@ -17,8 +17,8 @@ Bundled libraries
 
 If an application requires any dependencies that aren't in its runtime, they can be bundled as part of the application. This gives application developers flexibility regarding the dependencies that they use, including using:
 
-- libraries that aren't available in a distribution or runtime
-- different versions of libraries from the ones that are in a distribution or runtime
+- libraries that aren't available in a runtime
+- different versions of libraries from the ones that are in a runtime
 - patched versions of libraries
 
 Sandboxes
