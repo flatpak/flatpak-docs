@@ -8,7 +8,7 @@ Important details
 
 Flatpak repositories use archive-z2, meaning that they contain a single file for each file in the application. This means that pull operations involve a lot of HTTP requests. Since new requests can be slow, it is important to enable HTTP keep-alive on the web server that is hosting your repository.
 
-Flatpak supports something called static deltas. These are single files that contain all the data needed to go between two revisions (or from nothing to a revision). Creating such deltas will take up more space on the server, but will make downloads much faster. This can be done with the ``build-update-repo --generate-static-deltas`` option.
+Flatpak supports something called static deltas. These are single files that contain all the data needed to go between two revisions (or from nothing to a revision). Creating such deltas will take up more space on the server, but will make downloads much faster. This can be done with the ``flatpak build-update-repo --generate-static-deltas`` option.
 
 .flatpakrepo files
 ------------------
