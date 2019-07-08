@@ -23,7 +23,7 @@ Then you can run the build::
 
 Finally, the application can be run with::
 
-  $ flatpak run org.flatpak.electron-sample-app
+  $ flatpak run org.flathub.electron-sample-app
 
 Basic configuration
 -------------------
