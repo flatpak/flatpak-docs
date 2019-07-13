@@ -111,9 +111,18 @@ While not ideal, ``--device=all`` can be used to access devices like controllers
 dconf access
 ````````````
 
-Until a sandbox-compatible backend is available, applications that require access to dconf can do so with the following options::
+As of xdg-desktop-portal 1.1.0 and glib 2.60.5 (in the runtime) you do not need direct DConf access in most cases.
+
+As of now this glib version is included in ``org.freedesktop.Platform//19.08`` and ``org.gnome.Platform//master``.
+
+If an application existed prior to these runtimes you can tell Flatpak (>= 1.3.4) to migrate the DConf settings on the
+host into the sandbox by adding ``--metadata=X-DConf=migrate-path=/org/example/foo/`` to ``finish-args``. The path must be similar to your app-id or it will not be allowed (case is ignored and ``_`` and ``-`` are treated equal).
+
+If you are targeting older runtimes or require direct DConf access for other reasons you can use these permissions::
 
   --filesystem=xdg-run/dconf
   --filesystem=~/.config/dconf:ro
   --talk-name=ca.desrt.dconf
   --env=DCONF_USER_CONFIG_DIR=.config/dconf
+  # If you are on a new runtime but still need DConf
+  --env=GSETTINGS_BACKEND=dconf
