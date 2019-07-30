@@ -30,7 +30,7 @@ In many cases, portals use a system component to implicitly ask the user for per
 
 This approach enables applications to avoid having to configure blanket access to large amounts of data or services and gives users control over what their applications have access to.
 
-Interface toolkits like GTK3 and Qt5 implement transparent support for portals, meaning that applications don't need to any additional work to use them (it is worth checking which portals each toolkit supports). Applications that aren't using a toolkit with support for portals can refer to the `xdg-desktop-portal API documentation <https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for information on how to use them.
+Interface toolkits like GTK3 and Qt5 implement transparent support for portals, meaning that applications don't need to do any additional work to use them (it is worth checking which portals each toolkit supports). Applications that aren't using a toolkit with support for portals can refer to the `xdg-desktop-portal API documentation <https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for information on how to use them.
 
 Permissions guidelines
 ----------------------
