@@ -91,6 +91,7 @@ html_theme = 'sphinx_rtd_theme'
 html_context = {
     'css_files': [
         '_static/theme_overrides.css', #GNOME specific overrides
+        'https://fonts.googleapis.com/css?family=Overpass:400,600,700|Source+Sans+Pro:400,400i,700,700i&display=swap&subset=latin-ext', # Web fonts
         ],
     }
 
