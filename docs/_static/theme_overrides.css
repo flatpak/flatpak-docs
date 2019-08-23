@@ -1,13 +1,4 @@
-/* Original Stylesheet */
-@import url("https://media.readthedocs.org/css/sphinx_rtd_theme.css");
-
 /* GNOME Overrides */
-
-/* Overpass for headings */
-@import url("http://overpass-30e2.kxcdn.com/overpass.css");
-
-/* Source Sans for text */
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,700i,400,400i&amp;subset=latin-ext");
 
 body {
   font-family: "Source Sans Pro", sans-serif;
