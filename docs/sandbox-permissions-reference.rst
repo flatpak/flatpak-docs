@@ -36,6 +36,10 @@ Each of the following permissions configure filesystem access, and should be add
 ``xdg-public-share``  Access the XDG public directory
 ``xdg-videos``        Access the XDG videos directory
 ``xdg-templates``     Access the XDG templates directory
+``xdg-config``        Access the XDG config directory
+``xdg-cache``         Access the XDG cache directory
+``xdg-data``          Access the XDG data directory
+``xdg-run/path``      Access subdirectories of the XDG runtime directory (where path is any subdirectory)
 ====================  ===========================================
 
 Paths can be added to all the above filesystem options. For example, ``--filesystem=xdg-documents/path``. The following permission options can also be added:
