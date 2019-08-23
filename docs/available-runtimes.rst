@@ -1,14 +1,18 @@
 Available Runtimes
 ==================
 
-This page provides information about available Flatpak runtimes. It is primarily intended as information for application developers and distributors.
+This page provides information about available Flatpak runtimes. It is
+primarily intended as information for application developers and distributors.
 
-There are currently three main runtimes available: Freedesktop, GNOME and KDE. These are all hosted on `Flathub <https://flathub.org/>`_.
+There are currently three main runtimes available: Freedesktop, GNOME and
+KDE. These are all hosted on `Flathub <https://flathub.org/>`_.
 
 Freedesktop
 -----------
 
-The Freedesktop runtime is the standard runtime that can be used for any application and contains a set of essential libraries and services, including D-Bus, GLib, Gtk3, PulseAudio, X11 and Wayland.
+The Freedesktop runtime is the standard runtime that can be used for any
+application and contains a set of essential libraries and services, including
+D-Bus, GLib, Gtk3, PulseAudio, X11 and Wayland.
 
 Available Freedesktop runtimes:
 
@@ -26,7 +30,9 @@ org.freedesktop.Sdk.Docs         SDK documentation (extension)
 GNOME
 -----
 
-The GNOME runtime is appropriate for any application that uses the GNOME platform. It is based on the Freedesktop runtime and adds the GNOME platform, including:
+The GNOME runtime is appropriate for any application that uses the GNOME
+platform. It is based on the Freedesktop runtime and adds the GNOME platform,
+including:
 
 * Clutter
 * Gjs
@@ -56,7 +62,9 @@ org.gnome.Sdk.Docs         SDK documentation (extension)
 KDE
 ---
 
-The KDE runtime is also based on the Freedesktop runtime and adds Qt and KDE Frameworks. It is appropriate for any application that makes use of the KDE platform and most Qt-based applications.
+The KDE runtime is also based on the Freedesktop runtime and adds Qt and KDE
+Frameworks. It is appropriate for any application that makes use of the KDE
+platform and most Qt-based applications.
 
 Available KDE runtimes:
 

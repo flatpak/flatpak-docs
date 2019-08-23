@@ -1,9 +1,12 @@
 Sandbox Permissions
 ===================
 
-Sandbox permissions can be configured from an application manifest file (see :doc:`manifests`). They can also be set with the ``build-finish``, ``run`` and ``override`` commands.
+Sandbox permissions can be configured from an application manifest file
+(see :doc:`manifests`). They can also be set with the ``build-finish``,
+``run`` and ``override`` commands.
 
-The following list includes many of the most useful permission options. A complete list can be viewed using ``flatpak build-finish --help``.
+The following list includes many of the most useful permission options. A
+complete list can be viewed using ``flatpak build-finish --help``.
 
 ===================================================  ===========================================
 ``--socket=x11``                                     Show windows using X11
@@ -21,7 +24,8 @@ The following list includes many of the most useful permission options. A comple
 Filesystem permissions
 ----------------------
 
-Each of the following permissions configure filesystem access, and should be added to ``--filesystem=``:
+Each of the following permissions configure filesystem access, and should
+be added to ``--filesystem=``:
 
 ====================  ===========================================
 ``host``              Access all files
@@ -42,7 +46,9 @@ Each of the following permissions configure filesystem access, and should be add
 ``xdg-run/path``      Access subdirectories of the XDG runtime directory (where path is any subdirectory)
 ====================  ===========================================
 
-Paths can be added to all the above filesystem options. For example, ``--filesystem=xdg-documents/path``. The following permission options can also be added:
+Paths can be added to all the above filesystem options. For example,
+``--filesystem=xdg-documents/path``. The following permission options can
+also be added:
 
 - ``:ro`` - read-only access
 - ``:rw`` - read/write access (this is the default)
@@ -50,6 +56,11 @@ Paths can be added to all the above filesystem options. For example, ``--filesys
 
 .. rubric:: Footnotes
 
-.. [#f1] This is not necessarily required, but without it the X11 shared memory extension will not work, which is very bad for X11 performance.
-.. [#f2] Giving network access also grants access to all host services listening on abstract Unix sockets (due to how network namespaces work), and these have no permission checks. This unfortunately affects e.g. the X server and the session bus which listens to abstract sockets by default. A secure distribution should disable these and just use regular sockets.
+.. [#f1] This is not necessarily required, but without it the X11 shared
+memory extension will not work, which is very bad for X11 performance.
+.. [#f2] Giving network access also grants access to all host services
+listening on abstract Unix sockets (due to how network namespaces work),
+and these have no permission checks. This unfortunately affects e.g. the X
+server and the session bus which listens to abstract sockets by default. A
+secure distribution should disable these and just use regular sockets.
 

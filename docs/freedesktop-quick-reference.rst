@@ -19,7 +19,8 @@ Example:
     /app/share/icons/hicolor/128x128/apps/org.gnome.Dictionary.png
 
 If interested, you can read the full spec
-`here <https://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html>`__
+`here
+<https://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html>`__
 
 Desktop files
 -------------
