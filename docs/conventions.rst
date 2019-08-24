@@ -140,7 +140,7 @@ convenience functions for accessing XDG base directories. These include:
 - Glib: provides access to the XDG base directories through
   the ``g_get_user_cache_dir ()``, ``g_get_user_data_dir ()``,
   ``g_get_user_config_dir ()`` functions
-- Qt: provides access to XDG base directories with the the `QStandardPaths
+- Qt: provides access to XDG base directories with the `QStandardPaths
   Class <http://doc.qt.io/qt-5/qstandardpaths.html>`_
 
 However, applications that aren't using one of these toolkits can expect to
