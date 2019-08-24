@@ -148,11 +148,11 @@ types include:
  - ``file`` - local file (these are copied into the source directory)
  - ``dir`` - local directory (these are copied into the source directory)
  - ``script`` - an array of shell commands (these are put in a shellscript
- file)
+   file)
  - ``shell`` - an array of shell commands that are run during source extraction
  - ``patch`` - a patch (are applied to the source directory)
  - ``extra-data`` - data that can be downloaded at install time; this can
- include archive or package files
+   include archive or package files
 
 Different properties are available for each source type, which are listed
 in the :doc:`flatpak-builder-command-reference`.
@@ -162,8 +162,7 @@ Supported build systems
 
 Modules can be built with a variety of build systems, including:
 
-- `autotools
-<https://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html>`_
+- `autotools <https://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html>`_
 - `cmake <https://cmake.org/>`_
 - `cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_
 - `meson <http://mesonbuild.com/>`_

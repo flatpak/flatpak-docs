@@ -106,9 +106,9 @@ The following desktop integration options are no longer in use and can be
 safely ignored:
 
 - Application menus - these are specific to the GNOME desktop. However,
-they are being phased out in GNOME 3.32. Applications are expected to show
-menus as part of their application window.
+  they are being phased out in GNOME 3.32. Applications are expected to show
+  menus as part of their application window.
 - Global menu bar - this was a feature similar to Mac's menu bar, which was
-part of Ubuntu's Unity desktop. This has been retired. All Linux desktops and
-distributions expect a menu bar to be shown as part of the application window,
-should one be provided (rather than relying on a global menu bar, as on Mac).
+  part of Ubuntu's Unity desktop. This has been retired. All Linux desktops and
+  distributions expect a menu bar to be shown as part of the application window,
+  should one be provided (rather than relying on a global menu bar, as on Mac).

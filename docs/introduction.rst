@@ -40,17 +40,17 @@ their existing desktop environment and tools.
 Other benefits for developers include:
 
 - **Forward-compatibility:** the same Flatpak can be run on different versions
-of the same distribution, including versions that haven't been released
-yet. This doesn't require any changes or management by application developers.
+  of the same distribution, including versions that haven't been released
+  yet. This doesn't require any changes or management by application developers.
 - **Maintained platforms:** called runtimes, these contain collections of
-dependencies, which can be used by applications, and which can take a lot
-of the work out of application development.
+  dependencies, which can be used by applications, and which can take a lot
+  of the work out of application development.
 - **Bundling:** this allows application developers to ship almost any
-dependency or library as part of their application. This gives complete
-control over which software is used to build applications.
+  dependency or library as part of their application. This gives complete
+  control over which software is used to build applications.
 - **Consistent application environments:** because these are the same across
-devices, applications perform as intended. This also makes it easier to
-identify bugs and to do testing.
+  devices, applications perform as intended. This also makes it easier to
+  identify bugs and to do testing.
 
 Finally, while Flatpak does provide a centralized service for distributing
 applications, it also allows decentralized hosting and distribution, so that
