@@ -95,9 +95,9 @@ To verify that the build was successful, run the following::
 
 Congratulations, you've made an app!
 
-Keep in mind that using ``--run`` won't result in a sandbox with the same
-permissions as the final app, as such it shouldn't be relied upon beyond
-basic testing.
+Using ``--run`` results in a sandbox with mostly the same permissions as the
+final app, with the exception of filesystem permissions. As such it shouldn't
+be relied upon beyond basic testing.
 
 6. Put the app in a repository
 ------------------------------
