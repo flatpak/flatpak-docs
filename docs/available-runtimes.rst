@@ -7,6 +7,11 @@ primarily intended as information for application developers and distributors.
 There are currently three main runtimes available: Freedesktop, GNOME and
 KDE. These are all hosted on `Flathub <https://flathub.org/>`_.
 
+What is mentioned here is just a high level look at the contents. To have up
+to date information simply install the runtime and open a shell inside of it
+(``flatpak run org.freedesktop.Sdk//18.08``) from there you can look around or use tools like
+``pkg-config --list-all``.
+
 Freedesktop
 -----------
 
