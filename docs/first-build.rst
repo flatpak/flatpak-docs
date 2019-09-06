@@ -117,6 +117,10 @@ This second time we passed in ``--force-clean``, which means that the
 previously created ``build-dir`` directory was deleted before the new build was
 started.
 
+In order for your appclication to show up in application stores you might have
+to run ``flatpak build-update-repo repo``.
+For more information how to publish to application stores see `Appdata files <http://docs.flatpak.org/en/latest/freedesktop-quick-reference.html#appdata-files>`_.
+
 7. Install the app
 ------------------
 
