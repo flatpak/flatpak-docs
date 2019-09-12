@@ -18,7 +18,7 @@ You can also use a completely different runtime (but same version number)::
  $ flatpak run --runtime=org.gnome.Sdk org.gnome.gedit
 
 Note: If you just want to use the sdk instead of the platform like the above, a
-better approach is to use `-d`.
+better approach is to use ``-d``.
 
 
 Downgrading
