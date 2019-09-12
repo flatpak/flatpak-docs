@@ -28,7 +28,8 @@ You can also use a completely different runtime (but same version number)::
 Downgrading
 -----------
 
-It is possible to install an older build of an application (or runtime).
+It is possible to downgrade an installed application (or runtime) to an older
+build.
 
 First you look for the commit you are interested in::
 
