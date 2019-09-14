@@ -65,6 +65,10 @@ in a supplementary manner, and not to rely on them as the only mechanism for
 providing status information or access to particular features. This includes
 "minimize to tray" (or equivalent) functionality.
 
+XEmbed style icons will function with the ``x11`` permission but all other
+status icon interfaces require extra permissions to escape the sandbox and
+these services are not designed to be robust against untrusted software.
+
 System search
 -------------
 
