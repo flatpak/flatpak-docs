@@ -50,8 +50,8 @@ Underlying technologies
 Flatpak utilises a number of pre-existing technologies. These include:
 
 * The `bubblewrap <https://github.com/projectatomic/bubblewrap>`_ utility from
-`Project Atomic <http://www.projectatomic.io/>`_, which lets unprivileged
-users set up and run containers, using kernel features such as:
+  `Project Atomic <http://www.projectatomic.io/>`_, which lets unprivileged
+  users set up and run containers, using kernel features such as:
 
   * Cgroups
   * Namespaces
@@ -59,13 +59,13 @@ users set up and run containers, using kernel features such as:
   * Seccomp rules
 
 * `systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_ to set up
-cgroups for sandboxes
+  cgroups for sandboxes
 * `D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_, a
-well-established way to provide high-level APIs to applications
+  well-established way to provide high-level APIs to applications
 * The OCI format from the `Open Container Initiative
-<https://www.opencontainers.org/>`_, as a convenient transport format for
-single-file bundles
+  <https://www.opencontainers.org/>`_, as a convenient transport format for
+  single-file bundles
 * The `OSTree <https://ostree.readthedocs.io/en/latest/>`_ system for
-versioning and distributing filesystem trees
+  versioning and distributing filesystem trees
 * `Appstream <https://www.freedesktop.org/software/appstream/docs/>`_ metadata,
-to allow Flatpak applications to show up nicely in software center applications
+  to allow Flatpak applications to show up nicely in software center applications
