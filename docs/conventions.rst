@@ -21,10 +21,12 @@ Application IDs
 ```````````````
 
 As described in :doc:`using-flatpak`, Flatpak requires each
-application to have a unique identifier, which has a three-part
-form such as ``org.gnome.Dictionary``. As will be seen below and
-in future sections, this ID is expected to be used in a number of
-places. Developers should follow the standard `D-Bus naming conventions
+application to have a unique identifier, which has a
+form such as ``org.gnome.Dictionary``. The format is in reverse-DNS style
+so the first section is a domain controlled by the project and the trailing
+section represents the specific project. As will be seen below and in future sections,
+this ID is expected to be used in a number of places.
+Developers must follow the standard `D-Bus naming conventions
 <https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names>`_
 when creating their own IDs. This format is
 already recommended by the `Desktop File specification
@@ -32,6 +34,29 @@ already recommended by the `Desktop File specification
 and `Appstream specification
 <https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#sect-Metadata-GenericComponent>`_
 also.
+
+For some practical examples of bad IDs
+
+  - ``org.example.desktop``
+
+    This is a bad ID because the Appstream standard for legacy reasons treats ``.desktop`` ending
+    ID's special causing inconsistenency.
+ 
+  - ``io.github.Foo``
+ 
+    This is problematic because while ``foo.github.io`` may be unique to your project it does not
+    include a project specific identifier. This may cause issues if another project creates
+    ``io.github.Foo-Bar`` which should be its own namespace but areas of ``flatpak`` may treat them
+    similar. A better ID would be ``io.github.foo.Foo`` even if its redundant.
+
+  - ``org.example-site.Foo``
+  
+    This ID is not valid according to the DBus specification. You can use ``org.example_site.Foo`` instead.
+
+  - ``com.github.Foo``
+ 
+    While a project may be hosted on GitHub it does not have any control over the ``github.com`` domain. Instead
+    you should use ``io.github`` as shown above.
 
 AppData files
 `````````````
