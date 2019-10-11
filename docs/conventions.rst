@@ -53,7 +53,7 @@ For some practical examples of bad IDs
   
   This ID is not valid according to the DBus specification. You can use ``org.example_site.Foo`` instead.
 
-- ``com.github.Foo``
+- ``com.github.foo.Bar``
  
   While a project may be hosted on GitHub it does not have any control over the ``github.com`` domain. Instead
   you should use ``io.github`` as shown above.
