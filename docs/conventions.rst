@@ -37,26 +37,26 @@ also.
 
 For some practical examples of bad IDs
 
-  - ``org.example.desktop``
+- ``org.example.desktop``
 
-    This is a bad ID because the Appstream standard for legacy reasons treats ``.desktop`` ending
-    ID's special causing inconsistenency.
+  This is a bad ID because the Appstream standard for legacy reasons treats ``.desktop`` ending
+  ID's special causing inconsistenency.
  
-  - ``io.github.Foo``
+- ``io.github.Foo``
  
-    This is problematic because while ``foo.github.io`` may be unique to your project it does not
-    include a project specific identifier. This may cause issues if another project creates
-    ``io.github.Foo-Bar`` which should be its own namespace but areas of ``flatpak`` may treat them
-    similar. A better ID would be ``io.github.foo.Foo`` even if its redundant.
+  This is problematic because while ``foo.github.io`` may be unique to your project it does not
+  include a project specific identifier. This may cause issues if another project creates
+  ``io.github.Foo-Bar`` which should be its own namespace but areas of ``flatpak`` may treat them
+  similar. A better ID would be ``io.github.foo.Foo`` even if its redundant.
 
-  - ``org.example-site.Foo``
+- ``org.example-site.Foo``
   
-    This ID is not valid according to the DBus specification. You can use ``org.example_site.Foo`` instead.
+  This ID is not valid according to the DBus specification. You can use ``org.example_site.Foo`` instead.
 
-  - ``com.github.Foo``
+- ``com.github.Foo``
  
-    While a project may be hosted on GitHub it does not have any control over the ``github.com`` domain. Instead
-    you should use ``io.github`` as shown above.
+  While a project may be hosted on GitHub it does not have any control over the ``github.com`` domain. Instead
+  you should use ``io.github`` as shown above.
 
 AppData files
 `````````````
