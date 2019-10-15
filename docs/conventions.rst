@@ -40,7 +40,9 @@ For some practical examples of bad IDs
 - ``org.example.desktop``
 
   This is a bad ID because the Appstream standard for legacy reasons treats IDs ending with
-  ``.desktop`` as a special case causing inconsistency.
+  ``.desktop`` as a special case causing inconsistency. For this same reason, ``.Desktop`` suffixes
+  should not be used for newly named applications. Don't hesitate to repeat the application name
+  even if it already is part of the domain name section of the identifier (eg. ``org.example.Example``).
  
 - ``io.github.Foo``
  
