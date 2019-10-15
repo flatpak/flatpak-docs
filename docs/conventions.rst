@@ -39,8 +39,8 @@ For some practical examples of bad IDs
 
 - ``org.example.desktop``
 
-  This is a bad ID because the Appstream standard for legacy reasons treats ``.desktop`` ending
-  ID's special causing inconsistenency.
+  This is a bad ID because the Appstream standard for legacy reasons treats IDs ending with
+  ``.desktop`` as a special case causing inconsistency.
  
 - ``io.github.Foo``
  
