@@ -99,7 +99,7 @@ number of exceptions, such as using `MPRIS to provide media controls
 **Talk**
 
 Talk permissions can be freely used, although it is recommended to use the
-minumum required.
+minimum required.
 
 Filesystem access
 `````````````````

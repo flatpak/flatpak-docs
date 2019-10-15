@@ -107,4 +107,4 @@ Global menus
 ------------
 
 If your application uses the built in ``GtkApplication:menu-bar`` or the Qt 5
-equivilent they will work as expected from within a sandboxed application.
+equivalent they will work as expected from within a sandboxed application.

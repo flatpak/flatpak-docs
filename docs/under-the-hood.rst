@@ -18,7 +18,7 @@ different repositories. However, where Git is designed to track source files,
 OSTree is designed to track binary files and other large data.
 
 Internally, Flatpak therefore works in a similar way to Git, and many Flatpak
-concepts are analagous to Git concepts. Like Git, Flatpak uses repositories
+concepts are analogous to Git concepts. Like Git, Flatpak uses repositories
 to store data, and it tracks the differences between versions.
 
 With Flatpak, each application, runtime and extension is a branch in a
