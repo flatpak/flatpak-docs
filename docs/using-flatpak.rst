@@ -169,7 +169,7 @@ Updating
 To update all your installed applications and runtimes to the latest version,
 run::
 
- $ flatpak update
+ # flatpak update
 
 List installed applications
 ```````````````````````````
