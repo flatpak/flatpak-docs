@@ -41,7 +41,9 @@ Then you deploy the commit::
    --commit=ec07ad6c54e803d1428e5580426a41315e50a14376af033458e7a65bfb2b64f0 \
    org.gnome.Recipes
 
-Note that currently it's not possible to pin an app to a commit, so if your
-flatpaks are updated either manually or automatically, the downgraded app will
-be included in the updates. See https://github.com/flatpak/flatpak/issues/3078
+If you have Flatpak 1.5.0 or later, you can also prevent the app from being
+included in updates (either manual or automatic)::
+
+ $ flatpak mask org.gnome.Recipes
+
 
