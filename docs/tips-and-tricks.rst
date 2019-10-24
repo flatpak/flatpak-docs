@@ -54,8 +54,9 @@ In case the newest builds of an application introduce regressions, you can use
 ``flatpak-bisect`` to discover which commit introduced the regression. It works
 just like ``git bisect``.
 
-In case your distribution doesn't install the ``flatpak-bisect`` utility, you can
-find it distributed alongside the Flatpak source code, in https://github.com/flatpak/flatpak/blob/master/scripts/flatpak-bisect
+In case your distribution doesn't install the ``flatpak-bisect`` utility, you
+can find it distributed alongside the Flatpak source code, in
+https://github.com/flatpak/flatpak/blob/master/scripts/flatpak-bisect
 
 First you update the application and get its history::
 
