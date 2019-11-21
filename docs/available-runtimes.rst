@@ -9,7 +9,7 @@ KDE. These are all hosted on `Flathub <https://flathub.org/>`_.
 
 What is mentioned here is just a high level look at the contents. To have up
 to date information simply install the runtime and open a shell inside of it
-(``flatpak run org.freedesktop.Sdk//18.08``) from there you can look around or
+(``flatpak run org.freedesktop.Sdk//19.08``) from there you can look around or
 use tools like ``pkg-config --list-all``. In the runtime shell you can also
 inspect ``/usr/manifest.json``, which lists the sources used to build it.
 
@@ -22,16 +22,23 @@ D-Bus, GLib, Gtk3, PulseAudio, X11 and Wayland.
 
 Available Freedesktop runtimes:
 
-===============================  =================================
-ID                               Description
-===============================  =================================
-org.freedesktop.Platform         Runtime
-org.freedesktop.Platform.Locale  Runtime translations (extension)
-org.freedesktop.Sdk              SDK
-org.freedesktop.Sdk.Debug        SDK debug information (extension)
-org.freedesktop.Sdk.Locale       SDK translations (extension)
-org.freedesktop.Sdk.Docs         SDK documentation (extension)
-===============================  =================================
+==================================================== =====================================
+ID                                                   Description
+==================================================== =====================================
+org.freedesktop.Platform                             Runtime
+org.freedesktop.Platform.Locale                      Runtime translations (extension)
+org.freedesktop.Platform.VAAPI.Intel{,.i386}         Intel vaapi drivers (extension)
+org.freedesktop.Platform.ffmpeg-full                 All ffmpeg codecs (extension)
+org.freedesktop.Platform.Compat.{architecture}       32 bits compatible extension
+org.freedesktop.Platform.Compat.{architecture}.debug 32 bits compatible extension (debug)
+org.freedesktop.Platform.GL{,32}.default             Mesa drivers (extension)
+org.freedesktop.Platform.GL{,32}.mesa-aco            Mesa-ACO variant drivers (extension)
+org.freedesktop.Sdk                                  SDK
+org.freedesktop.Sdk.Debug                            SDK debug information (extension)
+org.freedesktop.Sdk.Locale                           SDK translations (extension)
+org.freedesktop.Sdk.Docs                             SDK documentation (extension)
+org.freedesktop.Sdk.Extension.rust-stable            SDK Rust language support (extension)
+==================================================== =====================================
 
 GNOME
 -----
