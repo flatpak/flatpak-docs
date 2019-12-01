@@ -1,5 +1,5 @@
-Sandbox Permissions
-===================
+Sandbox Permissions Reference
+=============================
 
 Sandbox permissions can be configured from an application manifest file
 (see :doc:`manifests`). They can also be set with the ``build-finish``,
