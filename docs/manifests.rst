@@ -31,11 +31,13 @@ For example, the GNOME Dictionary manifest includes:
 
 .. code-block:: json
 
-  "app-id": "org.gnome.Dictionary",
-  "runtime": "org.gnome.Platform",
-  "runtime-version": "3.26",
-  "sdk": "org.gnome.Sdk",
-  "command": "gnome-dictionary",
+  {
+    "app-id": "org.gnome.Dictionary",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "3.26",
+    "sdk": "org.gnome.Sdk",
+    "command": "gnome-dictionary",
+  }
 
 Specifying a runtime and runtime version allows that the runtime that is
 needed by your application to be automatically installed on users' systems.
@@ -80,10 +82,12 @@ be seen in the Dictionary manifest file:
 
 .. code-block:: json
 
+  {
     "finish-args": [
        "--socket=x11",
        "--share=network"
     ],
+  }
 
 As was explained in :doc:`first-build`, these two finishing
 properties give the application access to the X11 display server and
@@ -125,18 +129,20 @@ application itself, and looks like:
 
 .. code-block:: json
 
-  "modules": [
-    {
-      "name": "gnome-dictionary",
-      "sources": [
+  {
+    "modules": [
         {
-          "type": "archive",
-          "url": "https://download.gnome.org/sources/gnome-dictionary/3.26/gnome-dictionary-3.26.0.tar.xz",
-          "sha256": "387ff8fbb8091448453fd26dcf0b10053601c662e59581097bc0b54ced52e9ef"
+            "name": "gnome-dictionary",
+            "sources": [
+                {
+                "type": "archive",
+                "url": "https://download.gnome.org/sources/gnome-dictionary/3.26/gnome-dictionary-3.26.0.tar.xz",
+                "sha256": "387ff8fbb8091448453fd26dcf0b10053601c662e59581097bc0b54ced52e9ef"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
+  }
 
 As can be seen, each listed module has a ``name`` (which can be freely
 assigned) and a list of ``sources``. Each source has a ``type``, and available
