@@ -65,7 +65,7 @@ Flatpak utilises a number of pre-existing technologies. These include:
 * The OCI format from the `Open Container Initiative
   <https://www.opencontainers.org/>`_, as a convenient transport format for
   single-file bundles
-* The `OSTree <https://ostree.readthedocs.io/en/latest/>`_ system for
+* The `OSTree <https://ostree.readthedocs.io/en/latest/>`__ system for
   versioning and distributing filesystem trees
 * `Appstream <https://www.freedesktop.org/software/appstream/docs/>`_ metadata,
   to allow Flatpak applications to show up nicely in software center applications
