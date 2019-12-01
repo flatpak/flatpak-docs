@@ -45,11 +45,13 @@ ID. It also configures the runtime and SDK:
 
 .. code-block:: json
 
-    "app-id": "org.flathub.electron-sample-app",
-    "runtime": "org.freedesktop.Platform",
-    "runtime-version": "1.6",
-    "branch": "stable",
-    "sdk": "org.freedesktop.Sdk",
+    {
+      "app-id": "org.flathub.electron-sample-app",
+      "runtime": "org.freedesktop.Platform",
+      "runtime-version": "1.6",
+      "branch": "stable",
+      "sdk": "org.freedesktop.Sdk",
+    }
 
 The Freedesktop runtime is generally the best runtime to use with Electron
 applications, since it is the most minimal runtime, and other dependencies
@@ -83,7 +85,9 @@ later.
 
 .. code-block:: json
 
-  "command": "run.sh",
+  {
+    "command": "run.sh",
+  }
 
 Sandbox permissions
 -------------------
@@ -95,12 +99,14 @@ pulseaudio for sound and enables network access:
 
 .. code-block:: json
 
-  "finish-args": [
-      "--share=ipc",
-      "--socket=x11",
-      "--socket=pulseaudio",
-      "--share=network"
-  ],
+  {
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=pulseaudio",
+        "--share=network"
+    ],
+  }
 
 Build options
 -------------
@@ -113,13 +119,15 @@ error messages.
 
 .. code-block:: json
 
-  "build-options" : {
-      "cflags": "-O2 -g",
-      "cxxflags": "-O2 -g",
-      "env": {
-          "NPM_CONFIG_LOGLEVEL": "info"
-      }
-  },
+  {
+    "build-options" : {
+        "cflags": "-O2 -g",
+        "cxxflags": "-O2 -g",
+        "env": {
+            "NPM_CONFIG_LOGLEVEL": "info"
+        }
+    },
+  }
 
 Building Node.js
 ----------------
@@ -164,12 +172,14 @@ can be found.
 
 .. code-block:: json
 
-  "name": "electron-sample-app",
-  "build-options" : {
-      "env": {
-          "electron_config_cache": "/run/build/electron-sample-app/npm-cache"
-      }
-  },
+  {
+    "name": "electron-sample-app",
+    "build-options" : {
+         "env": {
+            "electron_config_cache": "/run/build/electron-sample-app/npm-cache"
+        }
+    },
+  }
 
 By default, ``flatpak-builder`` doesn't allow build tools to access the
 network. This means that tools which rely on downloading sources will not
@@ -184,14 +194,17 @@ and hash of the application are also specified.
 
 .. code-block:: json
 
-  "buildsystem": "simple",
-  "sources": [
-    {
-        "type": "archive",
-        "url": "https://github.com/flathub/electron-sample-app/archive/1.0.1.tar.gz",
-        "sha256": "a2feb3f1cf002a2e4e8900f718cc5c54db4ad174e48bfcfbddcd588c7b716d5b",
-        "dest": "main"
-    },
+  {
+    "buildsystem": "simple",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://github.com/flathub/electron-sample-app/archive/1.0.1.tar.gz",
+            "sha256": "a2feb3f1cf002a2e4e8900f718cc5c54db4ad174e48bfcfbddcd588c7b716d5b",
+            "dest": "main"
+        },
+    ],
+  }
 
 Bundling NPM packages
 ---------------------
@@ -200,7 +213,9 @@ The next line is how NPM modules get bundled as part of Flatpaks:
 
 .. code-block:: json
 
-  "generated-sources.json",
+  {
+    "generated-sources.json",
+  }
 
 Since even simple Node.js applications depend on dozens of packages, it would
 be impractical to specify all of them as part of a manifest file. A `Python
@@ -227,11 +242,11 @@ Launching the app
 -----------------
 
 The Electron app is run through a simple script. This can be given any name
-but must be specified in the manifest's ``"command":`` property.
+but must be specified in the manifest's ``"command":`` property. See below
+a sample wrapper for launching app:
 
 .. code-block:: json
 
-  /* Wrapper to launch the app */
   {
     "type": "script",
     "dest-filename": "run.sh",
@@ -243,19 +258,17 @@ Build commands
 
 Last but not least, since the simple build option is being used, a list of
 build commands must be provided. As can be seen, ``npm`` is run with the
-``--offline`` option, using packages that have already been cached. These
-are copied to ``/app/main/``. Finally the ``run.sh`` script is installed to
-``/app/bin/`` so that it will be on ``$PATH``:
+``--offline`` option, installing dependencies from packages that have already
+been cached. These are copied to ``/app/main/``. Finally the ``run.sh`` script
+is installed to ``/app/bin/`` so that it will be on ``$PATH``:
 
 .. code-block:: json
 
-  "build-commands": [
-      /* Install npm dependencies */
-      "npm install --prefix=main --offline --cache=/run/build/electron-sample-app/npm-cache/",
-      /* Bundle app and dependencies */
-      "mkdir -p /app/main /app/bin",
-      "cp -ra main/* /app/main/",
-      /* Install app wrapper */
-      "install run.sh /app/bin/"
-  ]
-
+  {
+    "build-commands": [
+        "npm install --prefix=main --offline --cache=/run/build/electron-sample-app/npm-cache/",
+        "mkdir -p /app/main /app/bin",
+        "cp -ra main/* /app/main/",
+        "install run.sh /app/bin/"
+    ]
+  }
