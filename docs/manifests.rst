@@ -45,9 +45,8 @@ needed by your application to be automatically installed on users' systems.
 File renaming
 -------------
 
-As was described in the :doc:`introduction`, exports are application files
-that are made available to the host, and include things like the application's
-``.desktop`` file and icon.
+Exports are application files that are made available to the host, and include
+things like the application's ``.desktop`` file and icon.
 
 The names of files that are exported by a Flatpak must prefixed using the
 application ID, such as ``org.gnome.Dictionary.desktop``. The best way to
