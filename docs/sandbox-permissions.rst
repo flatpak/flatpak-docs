@@ -118,10 +118,10 @@ As a general rule, Filesystem access should be limited as much as
 possible. This includes using:
 
 - Using portals as an alternative to blanket filesystem access, wherever
-possible.
+  possible.
 - Using read-only access wherever possible, using the ``:ro`` option.
 - If some home directory access is absolutely required, using XDG directory
-access only.
+  access only.
 
 The full list the available filesystem options can be found in the
 :doc:`sandbox-permissions-reference`.

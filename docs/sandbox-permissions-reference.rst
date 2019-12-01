@@ -57,10 +57,10 @@ also be added:
 .. rubric:: Footnotes
 
 .. [#f1] This is not necessarily required, but without it the X11 shared
-memory extension will not work, which is very bad for X11 performance.
+   memory extension will not work, which is very bad for X11 performance.
 .. [#f2] Giving network access also grants access to all host services
-listening on abstract Unix sockets (due to how network namespaces work),
-and these have no permission checks. This unfortunately affects e.g. the X
-server and the session bus which listens to abstract sockets by default. A
-secure distribution should disable these and just use regular sockets.
+   listening on abstract Unix sockets (due to how network namespaces work),
+   and these have no permission checks. This unfortunately affects e.g. the X
+   server and the session bus which listens to abstract sockets by default. A
+   secure distribution should disable these and just use regular sockets.
 
