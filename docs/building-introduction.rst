@@ -35,7 +35,7 @@ When ``flatpak-builder`` is run:
 - The build directory is created, if it doesn't already exist
 - The source code for each module is downloaded and verified
 - The source code for each module is built and installed
-- The build is finished, by setting sandbox permissions
+- The build is finished by setting sandbox permissions
 - The build result is exported to a repository (which will be created if it
   doesn't exist already)
 
