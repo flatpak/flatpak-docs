@@ -67,7 +67,7 @@ manifest::
   "base": "io.atom.electron.BaseApp",
   "base-version": "stable",
 
-Base apps are described in :doc:`building-basics`.  Using the Electron base
+Base apps are described in :doc:`dependencies`.  Using the Electron base
 app is much faster and more convenient than manually building Electron and its
 dependencies. It also has the advantage of reducing the amount of duplication
 on users' machines, since it means that Electron is only saved once on disk.
