@@ -89,11 +89,10 @@ be seen in the Dictionary manifest file:
     ],
   }
 
-As was explained in :doc:`first-build`, these two finishing
-properties give the application access to the X11 display server and
-to the network. Guidance on which permissions to use can be found in
-:doc:`sandbox-permissions`, and a full list of ``finish-args`` options can
-be found in :doc:`sandbox-permissions-reference`.
+These two finishing properties give the application access to the X11 display
+server and to the network. Guidance on which permissions to use can be found in
+:doc:`sandbox-permissions`, and a full list of ``finish-args`` options can be
+found in :doc:`sandbox-permissions-reference`.
 
 Cleanup
 -------
