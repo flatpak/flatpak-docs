@@ -88,3 +88,54 @@ Or::
   $ flatpak-bisect org.gnome.gedit bad
 
 ``flatpak-bisect`` will inform you when the first bad commit is found.
+
+Adding a custom installation
+----------------------------
+
+By default Flatpak installs apps system-wide, and can also be made to install
+per-user with the ``--user`` option accepted by most commands. A third option
+is to set up a custom installation, which could be stored on an external hard
+drive.
+
+First ensure that the config directory exists::
+
+  $ sudo mkdir -p /etc/flatpak/installations.d
+
+Then open a file in that directory as root::
+
+  $ sudoedit /etc/flatpak/installations.d/extra.conf
+
+And write something like this::
+
+  [Installation "extra"]
+  Path=/run/media/mwleeds/ext4_4tb/flatpak/
+  DisplayName=Extra Installation
+  StorageType=harddisk
+
+See `flatpak-installation(5)
+<http://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-installation>`_
+for the full format specification. Replace the path with the actual path you
+want to use. You can use ``df`` to see mounted file systems and ``mkdir`` to
+create a ``flatpak`` directory so the path specified by ``Path=`` exists.
+
+Then you can add a remote using a command like::
+
+  $ flatpak --installation=extra remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
+
+And install to it with::
+
+  $ flatpak --installation=extra install flathub org.inkscape.Inkscape
+
+.. note::
+
+  If your custom installation is the only one with the remote you're installing
+  from, ``--installation`` can be omitted.
+
+And run apps from it with::
+
+  $ flatpak --installation=extra run org.inkscape.Inkscape
+
+.. note::
+
+  If your custom installation is the only one with the app you're running,
+  ``--installation`` can be omitted.
