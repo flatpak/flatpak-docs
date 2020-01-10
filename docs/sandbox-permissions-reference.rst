@@ -28,7 +28,7 @@ Each of the following permissions configure filesystem access, and should
 be added to ``--filesystem=``:
 
 ====================  ===========================================
-``host``              Access all files
+``host``              Access all files [#f3]_
 ``home``              Access the home directory
 ``/some/dir``         Access an arbitrary path
 ``~/some/dir``        Access an arbitrary path relative to the home directory
@@ -63,4 +63,5 @@ also be added:
    and these have no permission checks. This unfortunately affects e.g. the X
    server and the session bus which listens to abstract sockets by default. A
    secure distribution should disable these and just use regular sockets.
+.. [#f3] Except for the blacklisted paths mentioned in :doc:`sandbox-permissions`.
 
