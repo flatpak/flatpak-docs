@@ -133,10 +133,7 @@ Other filesystem access guidelines include:
   directory, and can be useful for applications that hardcode file paths in
   ``~/``.
 - If an application uses ``$TMPDIR`` to contain lock files you may want to
-  add ``--env=TMPDIR=/var/tmp``
-  or if it uses ``$TMPDIR`` to share with processes outside the sandbox you
-  will want a wrapper script
-  that sets it to ``$XDG_CACHE_HOME``.
+  add a wrapper script that sets it to ``$XDG_RUNTIME_DIR/app/$FLATPAK_ID``.
 - Retaining and sharing configuration with non-Flatpak installations is to
   be avoided.
 
