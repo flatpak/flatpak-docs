@@ -20,6 +20,10 @@ The Freedesktop runtime is the standard runtime that can be used for any
 application and contains a set of essential libraries and services, including
 D-Bus, GLib, Gtk3, PulseAudio, X11 and Wayland.
 
+The Freedesktop runtime is maintained `here
+<https://gitlab.com/freedesktop-sdk/freedesktop-sdk/>`_ and has a website
+`here <https://freedesktop-sdk.io/>`_.
+
 Available Freedesktop runtimes:
 
 ==================================================== =====================================
@@ -59,6 +63,9 @@ including:
 * Vala
 * WebKitGTK
 
+The GNOME runtime is maintained `here
+<https://gitlab.gnome.org/GNOME/gnome-build-meta>`_.
+
 Available GNOME runtimes:
 
 =========================  =================================
@@ -78,6 +85,9 @@ KDE
 The KDE runtime is also based on the Freedesktop runtime and adds Qt and KDE
 Frameworks. It is appropriate for any application that makes use of the KDE
 platform and most Qt-based applications.
+
+The KDE runtime is maintained `here
+<https://invent.kde.org/kde/flatpak-kde-runtime>`_.
 
 Available KDE runtimes:
 
