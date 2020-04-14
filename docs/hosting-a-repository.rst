@@ -1,6 +1,11 @@
 Hosting a repository
 ====================
 
+.. note::
+
+  Flathub uses flat-manager to host its Flatpak repository. See
+  https://github.com/flatpak/flat-manager
+
 The section on :doc:`flatpak-builder` describes how to generate
 repositories. The resulting repository can be hosted on a web server for
 consumption by users.
