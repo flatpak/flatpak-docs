@@ -72,7 +72,7 @@ section.
 Base apps
 ---------
 
-Runtimes and bundling are the two main ways that dependencies are handled
+Runtimes and bundling are the two main ways in which dependencies are handled
 with Flatpak. They allow applications to rely on stable collections of
 dependencies on the one hand, and to have flexibility and control on the other.
 
@@ -84,7 +84,7 @@ come in.
 Base apps contain collections of bundled dependencies which can then be
 bundled as part of an application. They don't get rebuilt as part of the
 build process, which makes building faster (particularly when bundling large
-dependences). And because each base app is only built once, it is guaranteed
+dependencies). And because each base app is only built once, it is guaranteed
 to be identical wherever it is used, so it will only be saved once on disk.
 
 Base apps are a relatively specialized concept and only some applications
