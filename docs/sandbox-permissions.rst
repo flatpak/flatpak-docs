@@ -116,7 +116,7 @@ Flatpak provides a flexible set of options for this. Some examples include:
 - ``--filesystem=xdg-download`` - access a specific XDG folder
 
 As a general rule, Filesystem access should be limited as much as
-possible. This includes using:
+possible. This includes:
 
 - Using portals as an alternative to blanket filesystem access, wherever
   possible.
@@ -124,7 +124,7 @@ possible. This includes using:
 - If some home directory access is absolutely required, using XDG directory
   access only.
 
-The full list the available filesystem options can be found in the
+The full list of available filesystem options can be found in the
 :doc:`sandbox-permissions-reference`.
 Other filesystem access guidelines include:
 
