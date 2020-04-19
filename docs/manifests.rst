@@ -12,8 +12,7 @@ this section, and to be familiar with :doc:`flatpak-builder`.
 
 Manifest files should be named using the application ID. For example, the
 manifest file for GNOME Dictionary is named ``org.gnome.Dictionary.json``. This
-page uses this manifest file, which was introduced in :doc:`first-build`,
-for all its examples.
+page uses this manifest file for all its examples.
 
 A complete list of all the properties that can be specified in manifest files
 can be found in the :doc:`flatpak-builder-command-reference`, as well as the
@@ -48,7 +47,7 @@ File renaming
 Exports are application files that are made available to the host, and include
 things like the application's ``.desktop`` file and icon.
 
-The names of files that are exported by a Flatpak must prefixed using the
+The names of files that are exported by a Flatpak must be prefixed using the
 application ID, such as ``org.gnome.Dictionary.desktop``. The best way to
 do this is to rename these files directly in the application's source.
 
@@ -90,7 +89,7 @@ be seen in the Dictionary manifest file:
 
 These two finishing properties give the application access to the X11 display
 server and to the network. Guidance on which permissions to use can be found in
-:doc:`sandbox-permissions`, and a full list of ``finish-args`` options can be
+the :doc:`sandbox-permissions`, and a full list of ``finish-args`` options can be
 found in :doc:`sandbox-permissions-reference`.
 
 Cleanup
