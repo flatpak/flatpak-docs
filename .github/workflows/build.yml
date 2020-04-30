@@ -1,0 +1,33 @@
+name: Build docs
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Build documentation
+    runs-on: ubuntu-latest
+    env:
+      SPHINXOPTS: --color -q -E --keep-going -W
+    
+    steps:
+      - uses: actions/cache@v1
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      - name: Install dependencies
+        run: |
+          python3 -m pip install -U pip
+          pip install -U -r requirements.txt
+      - run: make -C docs/ html SPHINXOPTS="${SPHINXOPTS}"
+      - name: Upload docs as artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: translated-docs
+          path: docs/_build/**/html
