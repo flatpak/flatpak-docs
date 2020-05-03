@@ -9,8 +9,7 @@ applications should do to benefit from this.
   ``g_get_user_data_dir()`` to find the right place to store configuration
   and data
 - Use ``GtkFileChooserNative`` (or ``GtkFileChooserButton``) to open
-  files. Note that portals cannot currently give access to directories on the
-  host filesystem
+  files. As of `xdg-desktop-portal-gtk` 1.7.1 it can also open directories.
 - Use ``GtkPrintOperation`` for printing
 - Use ``gtk_show_uri_on_window()`` or ``g_app_info_launch_default_for_uri()``
   to open URIs
