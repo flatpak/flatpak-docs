@@ -26,6 +26,9 @@ specified location, the repository will be created. If the application is
 already in the specified repository, ``flatpak-builder`` will add the build
 as a new version of the existing application.
 
+You can put more than one application in the same repository by using the same
+``--repo`` path for multiple invocations of ``flatpak-builder``.
+
 .. note::
 
   By default, ``flatpak-builder`` splits off translations and debug information
