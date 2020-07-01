@@ -21,8 +21,8 @@ application and contains a set of essential libraries and services, including
 D-Bus, GLib, Gtk3, PulseAudio, X11 and Wayland.
 
 The Freedesktop runtime is maintained `here
-<https://gitlab.com/freedesktop-sdk/freedesktop-sdk/>`_ and has a website
-`here <https://freedesktop-sdk.io/>`_.
+<https://gitlab.com/freedesktop-sdk/freedesktop-sdk/>`__ and has a website
+`here <https://freedesktop-sdk.io/>`__.
 
 Available Freedesktop runtimes:
 
@@ -64,7 +64,7 @@ including:
 * WebKitGTK
 
 The GNOME runtime is maintained `here
-<https://gitlab.gnome.org/GNOME/gnome-build-meta>`_.
+<https://gitlab.gnome.org/GNOME/gnome-build-meta>`__.
 
 Available GNOME runtimes:
 
@@ -87,7 +87,7 @@ Frameworks. It is appropriate for any application that makes use of the KDE
 platform and most Qt-based applications.
 
 The KDE runtime is maintained `here
-<https://invent.kde.org/kde/flatpak-kde-runtime>`_.
+<https://invent.kde.org/kde/flatpak-kde-runtime>`__.
 
 Available KDE runtimes:
 
