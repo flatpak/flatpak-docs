@@ -7,6 +7,12 @@ it can be appropriate to use a single-file bundle. These can be used to
 provide a direct download of the application, to distribute applications
 using removable media, or to send them as email attachments.
 
+.. warning::
+
+   Since single-file bundles don't include dependencies or AppStream data, the
+   preferred way of distributing applications offline is with the create-usb
+   command; see :doc:`usb-drives`.
+
 Flatpak allows single file bundles to be created with the ``build-bundle`` and
 ``build-import-bundle`` commands, which allow an application in a repository
 to be converted into a bundle and back again::

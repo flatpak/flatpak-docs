@@ -15,3 +15,4 @@ Flatpaks as single file bundles.
    repositories
    hosting-a-repository
    single-file-bundles
+   usb-drives
