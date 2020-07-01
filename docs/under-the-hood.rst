@@ -62,10 +62,12 @@ Flatpak utilises a number of pre-existing technologies. These include:
   cgroups for sandboxes
 * `D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_, a
   well-established way to provide high-level APIs to applications
-* The OCI format from the `Open Container Initiative
-  <https://www.opencontainers.org/>`_, as a convenient transport format for
-  single-file bundles
 * The `OSTree <https://ostree.readthedocs.io/en/latest/>`__ system for
   versioning and distributing filesystem trees
+* The OCI format from the `Open Container Initiative
+  <https://www.opencontainers.org/>`_, as an alternative to OSTree used by the
+  `Fedora infrastructure
+  <https://blog.fishsoup.net/2018/12/04/flatpaks-in-fedora-now-live/>`__
+* Flatpak can use either OSTree or OCI for single-file bundles.
 * `Appstream <https://www.freedesktop.org/software/appstream/docs/>`_ metadata,
   to allow Flatpak applications to show up nicely in software center applications
