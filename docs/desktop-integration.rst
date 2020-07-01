@@ -38,10 +38,16 @@ including:
 - Showing notifications
 - Taking screenshots and screencasts
 
-Toolkits like GTK and Qt provide transparent support for portals. See
-:doc:`portals-gtk` or :doc:`portals-qt` for detailed information for each
-toolkit. If you are not using one of these toolkits, it is possible to access
-the portals API directly. See the `portals API documentation
+Toolkits like GTK and Qt provide transparent support for portals:
+
+.. toctree::
+   :maxdepth: 2
+
+   portals-gtk
+   portals-qt
+
+If you are not using one of these toolkits, it is possible to access
+the portals API directly. See the `Portals API documentation
 <https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for more
 information.
 
