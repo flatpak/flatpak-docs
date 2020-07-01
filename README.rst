@@ -24,6 +24,9 @@ On Debian this can be with::
 
 Then run ``make html`` in the ``docs`` directory.
 
+You can then execute ``cd _build/html && python3 -m http.server`` and follow
+the HTTP link printed by Python to view the docs in your browser.
+
 By default, the document being built is in English. If you want to build
 documents in other languages, such as Chinese, you can use the following
 command::
