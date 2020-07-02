@@ -169,6 +169,7 @@ Modules can be built with a variety of build systems, including:
 - `cmake <https://cmake.org/>`_
 - `cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_
 - `meson <http://mesonbuild.com/>`_
+- `qmake <https://doc.qt.io/qt-5/qmake-overview.html>`_
 - the "`Build API <https://github.com/cgwalters/build-api/>`_"
 
 A "simple" build method is also available, which allows a series of commands
