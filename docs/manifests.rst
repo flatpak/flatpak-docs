@@ -28,15 +28,13 @@ at the beginning of the file.
 
 For example, the GNOME Dictionary manifest includes:
 
-.. code-block:: json
+.. code-block:: yaml
 
-  {
-    "app-id": "org.gnome.Dictionary",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "3.26",
-    "sdk": "org.gnome.Sdk",
-    "command": "gnome-dictionary",
-  }
+  app-id: org.gnome.Dictionary
+  runtime: org.gnome.Platform
+  runtime-version: '3.36'
+  sdk: org.gnome.Sdk
+  command: gnome-dictionary
 
 Specifying a runtime and runtime version allows that the runtime that is
 needed by your application to be automatically installed on users' systems.
@@ -78,19 +76,26 @@ access to these resources.
 The finishing manifest section uses the ``finish-args`` property, which can
 be seen in the Dictionary manifest file:
 
-.. code-block:: json
+.. code-block:: yaml
 
-  {
-    "finish-args": [
-       "--socket=x11",
-       "--share=network"
-    ],
-  }
+  finish-args:
+    # X11 + XShm access
+    - --share=ipc
+    - --socket=x11
+    # Wayland access
+    - --socket=wayland
+    # Needs to talk to the network:
+    - --share=network
+    # Needs to save files locally
+    - --filesystem=xdg-documents
+    - --metadata=X-DConf=migrate-path=/org/gnome/dictionary/
 
-These two finishing properties give the application access to the X11 display
-server and to the network. Guidance on which permissions to use can be found in
-the :doc:`sandbox-permissions`, and a full list of ``finish-args`` options can be
+Guidance on which permissions to use can be found in the
+:doc:`sandbox-permissions`, and a full list of ``finish-args`` options can be
 found in :doc:`sandbox-permissions-reference`.
+
+If you're wondering about the last finish arg, see `this blog post
+<https://blogs.gnome.org/mclasen/2019/07/12/settings-in-a-sandbox-world/>`__.
 
 Cleanup
 -------
@@ -101,12 +106,16 @@ documentation. Two properties in the manifest file are used for this.
 
 First, a list of filename patterns can be included::
 
-  "cleanup": [ "/include", "/bin/foo-*", "*.a" ]
+  cleanup:
+    - '/include'
+    - '/bin/foo-*'
+    - '*.a'
 
 The second cleanup property is a list of commands that are run during the
 cleanup phase::
 
-  "cleanup-commands": [ "sed s/foo/bar/ /bin/app.sh" ]
+  cleanup-commands:
+    - 'sed s/foo/bar/ /bin/app.sh'
 
 Cleanup properties can be set on a per-module basis, in which case only
 filenames that were created by that particular module will be matched.
@@ -124,22 +133,19 @@ numerous modules and therefore have lengthy modules sections.
 GNOME Dictionary's modules section is short, since it just contains the
 application itself, and looks like:
 
-.. code-block:: json
+.. code-block:: yaml
 
-  {
-    "modules": [
-        {
-            "name": "gnome-dictionary",
-            "sources": [
-                {
-                "type": "archive",
-                "url": "https://download.gnome.org/sources/gnome-dictionary/3.26/gnome-dictionary-3.26.0.tar.xz",
-                "sha256": "387ff8fbb8091448453fd26dcf0b10053601c662e59581097bc0b54ced52e9ef"
-                }
-            ]
-        }
-    ]
-  }
+  modules:
+    - name: gnome-dictionary
+      buildsystem: meson
+      config-opts:
+        - -Dbuild_man=false
+      sources:
+        - type: archive
+          url: https://download.gnome.org/sources/gnome-dictionary/3.26/gnome-dictionary-3.26.1.tar.xz
+          sha256: 16b8bc248dcf68987826d5e39234b1bb7fd24a2607fcdbf4258fde88f012f300
+        - type: patch
+          path: appdata_oars.patch
 
 As can be seen, each listed module has a ``name`` (which can be freely
 assigned) and a list of ``sources``. Each source has a ``type``, and available
@@ -179,6 +185,6 @@ Example manifests
 -----------------
 
 A `complete manifest for GNOME Dictionary built from Git
-<https://github.com/flathub/org.gnome.Dictionary/blob/master/org.gnome.Dictionary.json>`_.
+<https://github.com/flathub/org.gnome.Dictionary/blob/master/org.gnome.Dictionary.yml>`_.
 It is also possible to browse `all the manifests hosted by Flathub
 <https://github.com/flathub>`_.

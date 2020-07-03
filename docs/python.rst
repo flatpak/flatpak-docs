@@ -10,25 +10,19 @@ For these cases, ``flatpak-builder`` provides the ``simple``
 buildsystem. Rather than automating the build process, ``simple`` accepts a
 ``build-commands`` array of strings, which are executed in sequence.
 
-For example, the following JSON makes building the popular requests module
+For example, the following YAML makes building the popular requests module
 rather straightforward:
 
-.. code-block:: json
+.. code-block:: yaml
 
-    {
-      "name": "requests",
-      "buildsystem": "simple",
-      "build-commands": [
-        "pip3 install --prefix=/app --no-deps ."
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://files.pythonhosted.org/packages/source/r/requests/requests-2.18.4.tar.gz",
-          "sha256": "9c443e7324ba5b85070c4a818ade28bfabedf16ea10206da1132edaa6dda237e"
-        }
-      ]
-    }
+  name: requests
+  buildsystem: simple
+  build-commands:
+    - pip3 install --prefix=/app --no-deps .
+  sources:
+    - type: archive
+      url: https://files.pythonhosted.org/packages/source/r/requests/requests-2.18.4.tar.gz
+      sha256: 9c443e7324ba5b85070c4a818ade28bfabedf16ea10206da1132edaa6dda237e
 
 Here, ``build-commands`` is an array containing the commands required to
 build and install the module. As can be seen, in this case ``pip`` is run to
@@ -73,4 +67,10 @@ listed package::
 
 This will output a file called ``python3-requests.json``, containing the
 necessary manifest JSON, which can then be included in your application's
-manifest file.
+manifest file. Even if your manifest uses YAML, you can still include JSON
+like this::
+
+  modules:
+    - python3-requests.json
+    # (other modules go here)
+

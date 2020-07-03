@@ -42,33 +42,24 @@ Each Flatpak is built using a manifest file which provides basic information
 about the application and instructions for how it is to be built. To add a
 manifest to the hello world app, add the following to an empty file:
 
-.. code-block:: json
+.. code-block:: yaml
 
-  {
-      "app-id": "org.flatpak.Hello",
-      "runtime": "org.freedesktop.Platform",
-      "runtime-version": "19.08",
-      "sdk": "org.freedesktop.Sdk",
-      "command": "hello.sh",
-      "modules": [
-          {
-              "name": "hello",
-              "buildsystem": "simple",
-              "build-commands": [
-                  "install -D hello.sh /app/bin/hello.sh"
-              ],
-              "sources": [
-                  {
-                      "type": "file",
-                      "path": "hello.sh"
-                  }
-              ]
-          }
-      ]
-  }
+  app-id: org.flatpak.Hello
+  runtime: org.freedesktop.Platform
+  runtime-version: '19.08'
+  sdk: org.freedesktop.Sdk
+  command: hello.sh
+  modules:
+    - name: hello
+      buildsystem: simple
+      build-commands:
+        - install -D hello.sh /app/bin/hello.sh
+      sources:
+        - type: file
+          path: hello.sh
 
 Now save the file alongside ``hello.sh`` and call it
-``org.flatpak.Hello.json``.
+``org.flatpak.Hello.yml``.
 
 In a more complex application, the manifest would list multiple modules. The
 last one would typically be the application itself, and the earlier ones would
@@ -81,7 +72,7 @@ runtime.
 Now that the app has a manifest, ``flatpak-builder`` can be used to build it.
 This is done by specifying the manifest file and a target directory::
 
-  $ flatpak-builder build-dir org.flatpak.Hello.json
+  $ flatpak-builder build-dir org.flatpak.Hello.yml
 
 This command will build each module that is listed in the manifest and install
 it to the ``/app`` subdirectory, inside the ``build-dir`` directory.
@@ -91,7 +82,7 @@ it to the ``/app`` subdirectory, inside the ``build-dir`` directory.
 
 To verify that the build was successful, run the following::
 
-  $ flatpak-builder --run build-dir org.flatpak.Hello.json hello.sh
+  $ flatpak-builder --run build-dir org.flatpak.Hello.yml hello.sh
 
 Congratulations, you've made an app!
 
@@ -106,7 +97,7 @@ Before you can install and run the app, it first needs to be put in a
 repository. This is done by passing the ``--repo`` argument to
 ``flatpak-builder``::
 
- $ flatpak-builder --repo=repo --force-clean build-dir org.flatpak.Hello.json
+ $ flatpak-builder --repo=repo --force-clean build-dir org.flatpak.Hello.yml
 
 This does the build again, and at the end exports the result to a local
 directory called ``repo``. Note that ``flatpak-builder`` keeps a cache of
