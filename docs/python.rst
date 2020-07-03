@@ -52,7 +52,7 @@ the requests module has a number of dependencies that haven't been installed:
 -  idna
 -  urllib3
 
-Four dependencies aren't very many, and could be installed these using the
+Four dependencies aren't very many, and could be installed using the
 ``simple`` method described above. However, anything more complex than this
 would quickly become tedious.
 
@@ -65,6 +65,11 @@ along with their tarball URLs and hashes.
 Using ``flatpak-pip-generator`` is as simple as running::
 
     $ python3 flatpak-pip-generator requests
+
+Or if you have a ``requirements.txt`` file you can generate modules for every
+listed package::
+
+    $ python3 flatpak-pip-generator --requirements-file=requirements.txt
 
 This will output a file called ``python3-requests.json``, containing the
 necessary manifest JSON, which can then be included in your application's
