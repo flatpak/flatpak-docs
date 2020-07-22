@@ -82,18 +82,15 @@ it to the ``/app`` subdirectory, inside the ``build-dir`` directory.
 
 To verify that the build was successful, run the following::
 
-  $ flatpak-builder --run build-dir org.flatpak.Hello.yml hello.sh
+  $ flatpak-builder --user --install build-dir org.flatpak.Hello.yml
+  $ flatpak run org.flatpak.Hello
 
 Congratulations, you've made an app!
-
-Using ``--run`` results in a sandbox with mostly the same permissions as the
-final app, with the exception of filesystem permissions. As such it shouldn't
-be relied upon beyond basic testing.
 
 6. Put the app in a repository
 ------------------------------
 
-Before you can install and run the app, it first needs to be put in a
+If you want to share the application you can put it in a
 repository. This is done by passing the ``--repo`` argument to
 ``flatpak-builder``::
 
