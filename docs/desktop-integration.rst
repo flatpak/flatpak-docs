@@ -114,3 +114,52 @@ Global menus
 
 If your application uses the built in ``GtkApplication:menu-bar`` or the Qt 5
 equivalent they will work as expected from within a sandboxed application.
+
+Theming
+-------
+
+Flatpak applications cannot directly use the system theme. This happens because flatpaks do not have the ability to use data files or libraries in ``/usr`` (where system themes are typically located). The solution to this was to package themes as Flatpaks, as relying upon the host to have the correct version for every flatpak defeats the portability benefits it provides. These themes are provided as `extensions <https://github.com/flatpak/flatpak/wiki/Extensions>`_, to the Freedesktop runtime when the extension point is Gtk, and to the KDE runtime when the extension point is Qt.
+
+The theming system requires Flatpak 0.8.4+ and applications using up to date ``org.gnome.Platform`` 3.24+, or ``org.freedesktop.Platform`` 1.6+, or ``org.kde.Platform`` 5.9+.
+
+Installing themes
+^^^^^^^^^^^^^^^^^
+
+Instructions for Gtk
+````````````````````
+
+The current Gtk themes are packaged in the `flathub <https://flathub.org/>`_ repository which you can add (if it's not already added) by running::
+
+  $ flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
+
+To see a list of currently packaged themes you can use the command ``flatpak search gtk3theme`` (available since Flatpak version 0.10.1). In case you use an older version of Flatpak than that, you can use the command ``flatpak remote-ls flathub | grep org.gtk.Gtk3theme``. The difference in output between these two commands is that the first prints the application ID, the remote from which the theme comes and the theme's description, while the second prints only the full name of the theme's flatpak package.
+
+You can install themes with the command ``flatpak install flathub org.gtk.Gtk3theme.Foo``, replacing ``Foo`` with the name of the desired theme.
+
+Instructions for Qt
+```````````````````
+
+For the Qt theming to work, the flatpak packages kstyle and platformtheme must be installed. These are packed in the kdeapps repository which you can add by running::
+
+  $ flatpak remote-add kdeapps https://distribute.kde.org/kdeapps.flatpakrepo
+
+Afterwards the two packages can be installed with the following commands::
+  
+  $ flatpak install kdeapps org.kde.KStyle.Adwaita//5.9
+  $ flatpak install kdeapps org.kde.PlatformTheme.QGnomePlatform//5.9
+
+Applying themes
+^^^^^^^^^^^^^^^
+
+There is no ideal way to specify the theme Flatpak applications use. The applications will try to match the system theme currently being used, if it corresponds to any of the Flatpak themes installed, and will fall back to Adwaita (if they use Gtk2 or Gtk3) or the default Qt theme (if they use Qt) if a corresponding theme isn't detected.
+
+As of Flatpak 0.10.1, the Flatpak system can detect whether the system themes available correspond to any Flatpak themes available in the repositories, and, if so, will automatically install found themes at update time based upon the ``gtk-theme`` Dconf key. This key however can contain only one value, the one of the currently being used theme, which means that the Flatpak versions of matching themes that aren't currently being used aren't installed until those themes are enabled. If none of the corresponding system themes are currently being used, the applications will fall back to Adwaita or the default Qt theme.
+
+On X11, Gtk3 picks up the themes via XSettings. Specifically, the GNOME XSettings daemon ``gsd-xsettings`` reads the DConf values and converts them into the XSettings values. For this to work, you need an xsettings daemon that is correctly configured. Gtk3 on Wayland picks up themes directly via Dconf. For this to work, you can either use KDE (with ``kde-gtk-config`` > 5.11.95), GNOME, which works out of the box, or manually configure the dconf keys under ``/org/gnome/desktop/interface/``. For the DConf option to work on Wayland the application must also be configured to have DConf access.
+
+Other notes on theming
+^^^^^^^^^^^^^^^^^^^^^^
+
+In regards to icon themes, since Flatpak 0.8.8 the host icons are exposed to the guest, so that there is usually no need for the presence of Flatpak icon themes.
+
+If you use the *Global Dark Theme* option (removed in GNOME-Tweaks 3.28)  in ``gnome-tweak-tool`` it will not work as that simply writes to ``settings.ini`` which isn’t available in the sandbox. Use dark versions of themes instead if they exist.
