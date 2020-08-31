@@ -26,7 +26,7 @@ can be configured through the ``finish-args`` section of the manifest file
 Portals
 -------
 
-Portals have already been mentioned in the :doc:`introduction`. They are a
+Portals have already been mentioned in :doc:`basic-concepts`. They are a
 framework for providing access to resources outside of the sandbox, including:
 
 - Opening files with a native file chooser dialog
