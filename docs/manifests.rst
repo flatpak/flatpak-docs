@@ -11,7 +11,7 @@ recommended to have followed the :doc:`first-build` tutorial before reading
 this section, and to be familiar with :doc:`flatpak-builder`.
 
 Manifest files should be named using the application ID. For example, the
-manifest file for GNOME Dictionary is named ``org.gnome.Dictionary.json``. This
+manifest file for GNOME Dictionary is named ``org.gnome.Dictionary.yml``. This
 page uses this manifest file for all its examples.
 
 A complete list of all the properties that can be specified in manifest files
