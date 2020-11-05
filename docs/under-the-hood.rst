@@ -11,7 +11,7 @@ from a user and application developer perspective.
 --------------
 
 Flatpak is built on top of a technology called `OSTree
-<https://ostree.readthedocs.io/en/latest/manual/introduction/>`_, which is
+<https://ostreedev.github.io/ostree/introduction/>`_, which is
 influenced by and very similar to the Git version control system. Like Git,
 OSTree allows versioned data to be tracked and to be distributed between
 different repositories. However, where Git is designed to track source files,
