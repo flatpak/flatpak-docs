@@ -74,3 +74,52 @@ like this::
     - python3-requests.json
     # (other modules go here)
 
+Installing dependencies without flatpak-pip-generator using setuptools or pipenv
+--------------------------------------------------------------------------------
+
+As an alternative to flatpak-pip-generator a slightly more pythonic approach would
+be using setup.py or requirements.txt directly.
+To do this with ``setuptools`` you can do so as follows:
+
+.. code-block:: yaml
+
+  app-id: org.flatpak.PackagingDemo
+  runtime: org.freedesktop.Platform
+  runtime-version: '1.6'
+  sdk: org.freedesktop.Sdk
+  command: app.py
+  finish-args:
+  - "--share=network"
+  modules:
+  - name: cpython
+    sources:
+    - type: archive
+      url: https://www.python.org/ftp/python/3.8.3/Python-3.8.3.tar.xz
+      sha256: dfab5ec723c218082fe3d5d7ae17ecbdebffa9a1aea4d64aa3a2ecdd2e795864
+  - name: app-install
+    buildsystem: simple
+    build-options:
+      build-args:
+      - "--share=network"
+    build-commands:
+    - python3 setup.py install --prefix=/app
+    - cp -r bin/* /app/bin/
+    sources:
+    - type: dir
+      path: "."
+    - type: dir
+      path: bin/
+
+This will do a regular ``setup.py install`` into the app folder and copy the
+``bin`` folder which normally contains runable Python scripts into the app.
+In the above example the script the package will try to run is called ``app.py``
+
+If you are using a ``requirements.txt`` you can do so by changing the build-command
+and adding::
+
+    $ pip3 install -r requirements.txt --prefix /app
+
+Or Pipenv::
+
+    $ pipenv lock -r > requirements.txt
+    $ pip3 install -r requirements.txt --prefix /app
