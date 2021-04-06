@@ -1,8 +1,8 @@
 Introduction to Flatpak
 =======================
 
-Flatpak is a framework for distributing desktop applications on Linux. It
-has been created by developers who have a long history of working on the
+Flatpak is a framework for distributing desktop applications across various Linux
+distributions. It has been created by developers who have a long history of working on the
 Linux desktop, and is run as an independent open source project.
 
 Terminology
