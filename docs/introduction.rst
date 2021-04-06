@@ -22,6 +22,37 @@ The only technical requirements made by Flatpak are that applications follow a
 small number of Freedesktop standards, in order to enable desktop integration
 (see :doc:`conventions`).
 
+Issues of current model of packaging
+------------------------------------
+
+It is important to understand the problems of the current model
+of packaging applications to understand the existence of Flatpak:
+
+- **Duplicated work packaging apps**: many Linux distributions come with their own package
+  manager, package format and repository. This requires a lot of maintainers to package the
+  same application in various distributions, or the application developer to learn the
+  language of each format and then package the application in those distributions, or
+  ignore most distributions and package and support a couple of distributions. This makes
+  the Linux desktop a difficult platform for software vendors to target.
+- **Limited to apps that are packaged**: not all applications are natively available
+  in every Linux distribution. If an application is not available in a specific
+  distribution, the user will have to rely on manually downloading the archive
+  of the application, extracting it and hoping the application will launch.
+- **Limited to distributions that have the apps**: the user is limited to the
+  number of distributions that have the needed applications for them
+  to properly setup their workflow. This reduces the amount of distributions
+  that can be suitable for a user.
+- **Hard to innovate in OS space**: the maintainers of the distributions have to spend a lot of
+  time packaging applications to make the distribution suitable for the end user, instead of focusing
+  on their end goals. This delays the progress of each distribution.
+- **Old and outdated packages**: LTS distributions often have very old versions of applications
+  packaged natively. Bug reproducibility is hindered by the different environments that applications
+  are run in, and application developers often have little control over how their application is
+  packaged by distributions.
+
+Flatpak strives to fix the issues listed above, by conveniently enabling developers to distribute
+applications from one source and to target the entire Linux desktop.
+
 Reasons to use Flatpak
 ----------------------
 
