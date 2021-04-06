@@ -95,7 +95,7 @@ applications on Linux:
   users can easily browse, install, run and use Flatpak applications through
   their existing desktop environment and tools.
 - **Space efficiency**: Flatpak deduplicates libraries and other files used by multiple
-  applications to save to save megabytes or even gigabytes worth of storage depending on
+  applications to save megabytes or even gigabytes worth of storage depending on
   the amount of applications installed.
 - **Delta updates**: only changed files are downloaded for updates.
 
