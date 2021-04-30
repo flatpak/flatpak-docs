@@ -87,7 +87,7 @@ Frameworks. It is appropriate for any application that makes use of the KDE
 platform and most Qt-based applications.
 
 The KDE runtime is maintained `here
-<https://invent.kde.org/kde/flatpak-kde-runtime>`__.
+<https://invent.kde.org/packaging/flatpak-kde-runtime>`__.
 
 Available KDE runtimes:
 
