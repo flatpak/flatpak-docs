@@ -31,7 +31,7 @@ install the Electron base app::
 
 Then you can run the build::
 
-  $ flatpak-builder build org.flathub.electron-sample-app.yml --install
+  $ flatpak-builder build org.flathub.electron-sample-app.yml --install --force-clean --user
 
 Finally, the application can be run with::
 
