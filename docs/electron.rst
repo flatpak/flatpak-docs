@@ -25,9 +25,10 @@ the sample application yourself.
 
 To get setup for the build, download or clone the sample app from GitHub,
 and navigate to the ``/flatpak`` directory in the terminal. You must also
-install the Electron base app::
+install the Electron base app and the Node.js SDK extension::
 
   $ flatpak install flathub org.electronjs.Electron2.BaseApp//20.08
+  $ flatpak install flathub org.freedesktop.Sdk.Extension.node14//20.08
 
 Then you can run the build::
 
@@ -59,7 +60,7 @@ The Electron base app
 
 Next, the manifest specifies that the Electron base app should be used, by
 specifying the ``base`` and ``base-version`` properties in the application
-manifest::
+manifest:
 
 .. code-block:: yaml
 
@@ -70,6 +71,28 @@ Base apps are described in :doc:`dependencies`.  Using the Electron base
 app is much faster and more convenient than manually building Electron
 dependencies. It also has the advantage of reducing the amount of duplication
 on users' machines, since it means that Electron is only saved once on disk.
+
+The Node.js SDK extension
+-------------------------
+
+In order to build Electron-based apps, you need Node.js available at build time.
+Flathub provides Node.js LTS versions as extensions for the SDK, so you can
+install one of them and add it in your apps' manifest::
+
+.. code-block:: yaml
+
+  sdk-extensions:
+    - org.freedesktop.Sdk.Extension.node14
+
+Enable the extension by adding it to ``PATH``:
+
+.. code-block:: yaml
+
+  build-options:
+    append-path: /usr/lib/sdk/node14/bin
+
+Note that the extension name (last portion of reverse-dns notation, ``node14``
+in this example) must be the same in ``sdk-extensions`` and ``append-path``.
 
 Command
 -------
@@ -115,33 +138,6 @@ error messages.
     env:
       NPM_CONFIG_LOGLEVEL: info
 
-Building Node.js
-----------------
-
-The next part of the manifest is the modules list. The Electron base app
-does not include Node.js, so it is necessary to build Node.js as a module.
-This tutorial builds Node.js 8.11.1, as this version works with most projects
-at the time of writing, but make sure to use whichever version is best for
-your project.
-
-.. code-block:: yaml
-
-  - name: nodejs
-    cleanup:
-      - /include
-      - /share
-      - /app/lib/node_modules/npm/changelogs
-      - /app/lib/node_modules/npm/doc
-      - /app/lib/node_modules/npm/html
-      - /app/lib/node_modules/npm/man
-      - /app/lib/node_modules/npm/scripts
-    sources:
-      - type: archive
-        url: https://nodejs.org/dist/v8.11.2/node-v8.11.2.tar.xz
-        sha256: 539946c0381809576bed07424a35fc1740d52f4bd56305d6278d9e76c88f4979
-
-Here, the cleanup step isn't strictly necessary. However, removing
-documentation helps to reduce final disk size of the bundle.
 
 The application module
 ----------------------
