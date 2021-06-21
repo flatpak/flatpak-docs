@@ -27,7 +27,7 @@ To get setup for the build, download or clone the sample app from GitHub,
 and navigate to the ``/flatpak`` directory in the terminal. You must also
 install the Electron base app::
 
-  $ flatpak install flathub io.atom.electron.BaseApp//stable
+  $ flatpak install flathub org.electronjs.Electron2.BaseApp//20.08
 
 Then you can run the build::
 
@@ -47,8 +47,7 @@ ID. It also configures the runtime and SDK:
 
   app-id: org.flathub.electron-sample-app
   runtime: org.freedesktop.Platform
-  runtime-version: '1.6'
-  branch: stable
+  runtime-version: '20.08'
   sdk: org.freedesktop.Sdk
 
 The Freedesktop runtime is generally the best runtime to use with Electron
@@ -62,17 +61,15 @@ Next, the manifest specifies that the Electron base app should be used, by
 specifying the ``base`` and ``base-version`` properties in the application
 manifest::
 
-  base: io.atom.electron.BaseApp
-  base-version: stable
+.. code-block:: yaml
+
+  base: org.electronjs.Electron2.BaseApp
+  base-version: '20.08'
 
 Base apps are described in :doc:`dependencies`.  Using the Electron base
-app is much faster and more convenient than manually building Electron and its
+app is much faster and more convenient than manually building Electron
 dependencies. It also has the advantage of reducing the amount of duplication
 on users' machines, since it means that Electron is only saved once on disk.
-
-Note that this base app is for projects using Electron 1.x.x, the most
-common version at the time of writing. Electron 2.x.x applications should use
-``org.electronjs.Electron2.BaseApp`` instead.
 
 Command
 -------
