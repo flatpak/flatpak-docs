@@ -77,7 +77,7 @@ The Node.js SDK extension
 
 In order to build Electron-based apps, you need Node.js available at build time.
 Flathub provides Node.js LTS versions as extensions for the SDK, so you can
-install one of them and add it in your apps' manifest::
+install one of them and add it in your apps' manifest:
 
 .. code-block:: yaml
 
