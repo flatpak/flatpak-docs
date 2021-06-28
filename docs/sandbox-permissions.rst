@@ -77,7 +77,8 @@ commonly require, and can therefore be freely used:
 - ``--share=network`` - access the network
 - ``--socket=x11`` - show windows using X11
 - ``--socket=fallback-x11`` - show windows using X11, if Wayland is not
-  available, overrides ``x11`` socket permission
+  available, overrides ``x11`` socket permission. Note that you must 
+  still use ``--socket=wayland`` for wayland permission
 - ``--share=ipc`` - share IPC namespace with the host (necessary for X11)
 - ``--socket=wayland`` - show windows with Wayland
 - ``--device=dri`` - OpenGL rendering
