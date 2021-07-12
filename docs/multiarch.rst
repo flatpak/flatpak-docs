@@ -60,7 +60,7 @@ in general, you'll also need 32-bit GL drivers. Add an extension point for it:
       download-if: active-gl-driver
       enable-if: active-gl-driver
 
-Note that the ``versions`` property here must contain both ``1.4`` and the same 
+Note that the ``versions`` property here must contain both ``1.4`` and the same
 value as in ``runtime-version``.
 
 Make sure to create directories where the extensions will be mounted (the mount
@@ -71,7 +71,7 @@ Finally, you need to make the dynamic library loader know the paths to 32-bit
 libraries. In order to do this, you can install a ``/app/etc/ld.so.conf`` file
 with contents like this:
 
-.. code-block::
+.. code-block:: text
 
   /app/lib32
   /app/lib/i386-linux-gnu
