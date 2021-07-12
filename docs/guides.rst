@@ -12,3 +12,4 @@ standard guidance provided elsewhere in the Flatpak documentation.
    python
    electron
    qt
+   multiarch
