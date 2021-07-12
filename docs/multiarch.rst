@@ -39,7 +39,7 @@ app, define an extension point for it in the app manifest:
 
 For GNOME runtime, use ``org.gnome.Platform.Compat.i386`` instead.
 
-Note that this extension ``version`` must match the ``runtime-version`` of the 
+Note that this extension ``version`` must match the ``runtime-version`` of the
 application.
 
 If the 32-bit programs make use of GPU acceleration, or have some graphical UI
@@ -95,3 +95,77 @@ You can combine the above two steps in a special module, e.g.
         - type: file
           dest-filename: ld.so.conf
           url: data:/app/lib32%0A/app/lib/i386-linux-gnu%0A
+
+Building 32-bit modules
+-----------------------
+
+The section above describes how to run 32-bit programs that are already built.
+This section will describe the process of building 32-bit components yourself to
+ship them with the application. It assumes that you are already familiar with
+building (single-arch) flatpaks. If not, please refer to :doc:`flatpak-builder`
+guide first.
+
+First of all, you'll need to enable some SDK extensions at build time:
+
+.. code-block:: yaml
+
+  sdk-extensions:
+    - org.freedesktop.Sdk.Compat.i386
+    - org.freedesktop.Sdk.Extension.toolchain-i386
+
+The first one is the 32-bit portion of the SDK, containing 32-bit libraries and
+development files.
+
+The second one is a cross-compiler. Usually ``gcc -m32`` is used for multilib
+builds, but the flatpak SDK comes with gcc without multilib support. Thus, you
+will need a cross-compiler for building x86 on x86_64 just as you would need it
+for any foreign architecture like aarch64.
+
+In order to build a 32-bit module, some global build options needs to be
+overridden. Examples here assume that 32-bit libraries are installed in
+``/app/lib32`` directory:
+
+.. code-block:: yaml
+
+  modules:
+    - name: some-lib-32bit
+      build-options: &compat-i386-build-options
+        # Make sure 32-bit dependencies are first on pkg-config search path
+        prepend-pkg-config-path: /app/lib32/pkgconfig:/usr/lib/i386-linux-gnu/pkgconfig
+        # Add /app/lib32 to linker search path for modules without pkg-config
+        ldflags: -L/app/lib32
+        # Add the cross-compiler to PATH
+        prepend-path: /usr/lib/sdk/toolchain-i386/bin
+        # Tell the build systems to use the cross-compiler for compilation
+        env:
+          CC: i686-unknown-linux-gnu-gcc
+          CXX: i686-unknown-linux-gnu-g++
+        # Tell the build systems to install libraries to /app/lib32
+        libdir: /app/lib32
+
+These ``build-options`` need to be set for each 32-bit module. If your app
+manifest is in YAML format, the YAML anchors can come in handy and save you from
+copy-pasting the same snippet. You can define the 32-bit ``build-options``
+object somewhere in the manifest, add an anchor to it, and then point each
+32-bit modules' ``build-options`` to that anchor:
+
+.. code-block:: yaml
+
+  x-compat-i386-build-options: &compat-i386-build-options
+    prepend-pkg-config-path: /app/lib32/pkgconfig:/usr/lib/i386-linux-gnu/pkgconfig
+    ldflags: -L/app/lib32
+    prepend-path: /usr/lib/sdk/toolchain-i386/bin
+    env:
+      CC: i686-unknown-linux-gnu-gcc
+      CXX: i686-unknown-linux-gnu-g++
+    libdir: /app/lib32
+
+  modules:
+    - name: some-lib-32bit
+      build-options: *compat-i386-build-options
+
+    - name: some-other-lib-32bit
+      build-options: *compat-i386-build-options
+
+Of course, in order to actually use 32-bit modules you've build, you'll also
+need all the same setup from the previous section.
