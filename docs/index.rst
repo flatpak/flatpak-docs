@@ -26,5 +26,6 @@ Contents
    debugging
    publishing
    desktop-integration
+   end-user-documentation
    tips-and-tricks
    reference
