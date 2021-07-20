@@ -215,6 +215,7 @@ a sample wrapper for launching app:
   - type: script
     dest-filename: run.sh
     commands:
+      - export TMPDIR=$XDG_RUNTIME_DIR/app/$FLATPAK_ID
       - zypak-wrapper.sh /app/main/electron-sample-app "$@"
 
 Build commands
