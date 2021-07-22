@@ -1,0 +1,156 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"PO-Revision-Date: 2021-07-23 01:56+0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+
+#: ../../debugging.rst:2
+msgid "Debugging"
+msgstr "Отладка"
+
+#: ../../debugging.rst:4
+msgid "This section includes documentation on how to debug Flatpak apps."
+msgstr "Этот раздел включает документацию по отладке приложений Flatpak."
+
+#: ../../debugging.rst:7
+msgid "Running debugging tools"
+msgstr "Запуск инструментов отладки"
+
+#: ../../debugging.rst:9
+msgid ""
+"Because Flatpak runs each application inside a sandbox, debugging tools "
+"can't be used in the usual way, and must instead be run from inside the "
+"sandbox. To get a shell inside an application's sandbox, it can be run with "
+"the ``--command`` option::"
+msgstr ""
+"Поскольку Flatpak запускает каждое приложение в песочнице, инструменты "
+"отладки нельзя использовать обычным способом, и вместо этого их нужно "
+"запускать из песочницы. Чтобы поместить оболочку в песочницу приложения, ее "
+"можно запустить с параметром ``--command``::"
+
+#: ../../debugging.rst:13
+msgid ""
+"This creates a sandbox for the application with the given ID and, instead of "
+"running the application, runs a shell inside the sandbox. From the shell "
+"prompt, it is then possible to run the application. This can also be done "
+"using any debugging tools that you want to use. For example, to run the "
+"application with ``gdb``::"
+msgstr ""
+"Это создает песочницу для приложения с заданным идентификатором и вместо "
+"запуска приложения запускает оболочку внутри песочницы. Затем из командной "
+"строки можно запустить приложение. Это также можно сделать с помощью любых "
+"инструментов отладки, которые вы хотите использовать. Например, чтобы "
+"запустить приложение с ``gdb``::"
+
+#: ../../debugging.rst:17
+msgid ""
+"This works because the ``--devel`` option tells Flatpak to use the SDK as "
+"the runtime, which includes debugging tools like ``gdb``. The ``--devel`` "
+"option also adjusts the sandbox setup to enable debugging."
+msgstr ""
+"Это работает, потому что опция ``--devel`` указывает Flatpak использовать "
+"SDK в качестве среды выполнения, которая включает инструменты отладки, такие "
+"как ``gdb``. Параметр ``--devel`` также регулирует настройку песочницы для "
+"включения отладки."
+
+#: ../../debugging.rst:23
+msgid ""
+"The Freedesktop SDK (on which many others are based), includes a range of "
+"debugging tools, such as ``gdb``, ``strace``, ``nm``, ``dbus-send``, "
+"``dconf``, and many others."
+msgstr ""
+"Freedesktop SDK (на котором основаны многие другие) включает ряд "
+"инструментов отладки, таких как ``gdb``, ``strace``, ``nm``, ``dbus-send``, "
+"``dconf`` и многие другие."
+
+#: ../../debugging.rst:25
+msgid ""
+"``gdb`` is much more useful when it has access to debug information for the "
+"application and the runtime it is using. Flatpak splits this information off "
+"into debug extensions, which you should install before debugging an "
+"application::"
+msgstr ""
+"``gdb`` гораздо более полезен, когда у него есть доступ к отладочной "
+"информации для приложения и используемой среды выполнения. Flatpak разделяет "
+"эту информацию на отладочные расширения, которые вы должны установить перед "
+"отладкой приложения::"
+
+#: ../../debugging.rst:31
+msgid ""
+"When the ``--devel`` option is used, Flatpak will automatically use any "
+"matching debug extensions that it finds."
+msgstr ""
+"Когда используется параметр ``--devel``, Flatpak автоматически использует "
+"любые подходящие расширения отладки, которые он находит."
+
+#: ../../debugging.rst:34
+msgid ""
+"It is also possible to get a shell inside an application sandbox without "
+"having to install it. This is done using ``flatpak-builder``'s ``--run`` "
+"option::"
+msgstr ""
+"Также возможно получить оболочку внутри песочницы приложения без ее "
+"установки. Это делается с помощью параметра ``flatpak-builder``'s ``--run``::"
+
+#: ../../debugging.rst:38
+msgid ""
+"This sets up a sandbox that is populated with the build results found in the "
+"build directory, and runs a shell inside it."
+msgstr ""
+"Это устанавливает песочницу, которая заполняется результатами сборки, "
+"найденными в каталоге сборки, и запускает оболочку внутри нее."
+
+#: ../../debugging.rst:42
+msgid "Creating a .Debug extension"
+msgstr "Создание расширения .Debug"
+
+#: ../../debugging.rst:44
+msgid ""
+"Like many other packaging systems, Flatpak separates bulky debug information "
+"from regular content and ships it separately, in what is called a ``.Debug`` "
+"extension."
+msgstr ""
+"Как и многие другие системы упаковки, Flatpak отделяет объемную отладочную "
+"информацию от обычного контента и отправляет ее отдельно в так называемом "
+"расширении .Debug."
+
+#: ../../debugging.rst:46
+msgid ""
+"When an application is built, ``flatpak-builder`` automatically creates a ``."
+"Debug`` extension. This can be disabled with the ``no-debuginfo`` option."
+msgstr ""
+"Когда приложение построено, ``flatpak-builder`` автоматически создает "
+"расширение ``.Debug``. Это можно отключить с помощью опции ``no-debuginfo``."
+
+#: ../../debugging.rst:51
+msgid "Overriding sandbox permissions"
+msgstr "Переопределение разрешений песочницы"
+
+#: ../../debugging.rst:53
+msgid ""
+"It is sometimes useful to have extra permissions in a sandbox when "
+"debugging. This can be achieved using the various sandbox options that are "
+"accepted by the run command. For example::"
+msgstr ""
+"Иногда бывает полезно иметь дополнительные разрешения в песочнице при "
+"отладке. Этого можно добиться с помощью различных параметров песочницы, "
+"которые принимает команда запуска. Например::"
+
+#: ../../debugging.rst:58
+msgid ""
+"This command runs a shell in the sandbox for the given application, granting "
+"it system bus access to the bus name owned by logind."
+msgstr ""
+"Эта команда запускает оболочку в изолированной программной среде для данного "
+"приложения, предоставляя ему доступ к системной шине с именем шины, "
+"принадлежащим logind."
