@@ -1,0 +1,203 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"PO-Revision-Date: 2021-07-22 22:02+0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+
+#: ../../basic-concepts.rst:2
+msgid "Basic concepts"
+msgstr "Основные понятия"
+
+#: ../../basic-concepts.rst:4
+msgid ""
+"Flatpak can be understood through a small number of key concepts. It is "
+"useful to be familiar with these before learning about how to use Flatpak "
+"from the command line, or using it to build applications."
+msgstr ""
+"Как использовать Flatpak можно понять с помощью небольшого количества "
+"ключевых терминов. Полезно ознакомиться с ними, прежде чем узнавать, как "
+"использовать Flatpak из командной строки или использовать его для создания "
+"приложений."
+
+#: ../../basic-concepts.rst:9
+msgid "Runtimes"
+msgstr "Среда выполнения"
+
+#: ../../basic-concepts.rst:11
+msgid ""
+"Runtimes provide the basic dependencies that are used by applications. Each "
+"application must be built against a runtime, and this runtime must be "
+"installed on a host system in order for the application to run (Flatpak can "
+"automatically install the runtime required by an application). Multiple "
+"different runtimes can be installed at the same time, including different "
+"versions of the same runtime."
+msgstr ""
+"Среды выполнения предоставляют основные зависимости, которые используются "
+"приложениями. Каждое приложение должно быть построено на основе среды "
+"выполнения, и эта среда выполнения должна быть установлена в хост-системе, "
+"чтобы приложение могло работать (Flatpak может автоматически установить "
+"среду выполнения, требуемую приложением). Одновременно можно установить "
+"несколько разных сред выполнения, включая разные версии одной и той же среды "
+"выполнения."
+
+#: ../../basic-concepts.rst:13
+msgid ""
+"Runtimes are distribution agnostic and do not depend on particular "
+"distribution versions. This means that they provide a stable, cross-"
+"distribution base for applications, and allow applications to continue to "
+"work irrespective of operating system updates."
+msgstr ""
+"Среда выполнения не зависит от дистрибутива и не зависит от конкретной "
+"версии дистрибутива. Это означает, что они обеспечивают стабильную базу для "
+"перекрестного распространения приложений и позволяют приложениям продолжать "
+"работать независимо от обновлений операционной системы."
+
+#: ../../basic-concepts.rst:16
+msgid "Bundled libraries"
+msgstr "Связанные библиотеки"
+
+#: ../../basic-concepts.rst:18
+msgid ""
+"If an application requires any dependencies that aren't in its runtime, they "
+"can be bundled as part of the application. This gives application developers "
+"flexibility regarding the dependencies that they use, including using:"
+msgstr ""
+"Если приложению требуются какие-либо зависимости, которых нет во время "
+"выполнения, они могут быть объединены как часть приложения. Это дает "
+"разработчикам приложений гибкость в отношении используемых ими зависимостей, "
+"включая использование:"
+
+#: ../../basic-concepts.rst:20
+msgid "libraries that aren't available in a distribution or runtime"
+msgstr "библиотеки, которые недоступны в дистрибутиве или в среде выполнения"
+
+#: ../../basic-concepts.rst:21
+msgid ""
+"different versions of libraries from the ones that are in a distribution or "
+"runtime"
+msgstr ""
+"версии библиотек, отличные от тех, что находятся в дистрибутиве или в среде "
+"выполнения"
+
+#: ../../basic-concepts.rst:22
+msgid "patched versions of libraries"
+msgstr "пропатченные версии библиотек"
+
+#: ../../basic-concepts.rst:25
+msgid "Sandboxes"
+msgstr "Песочницы"
+
+#: ../../basic-concepts.rst:27
+msgid ""
+"With Flatpak, each application is built and run in an isolated environment, "
+"which is called the 'sandbox'. Each sandbox contains an application and its "
+"runtime. By default, the application can only access the contents of its "
+"sandbox. Access to user files, network, graphics sockets, subsystems on the "
+"bus and devices have to be explicitly granted. Access to other things, such "
+"as other processes, is deliberately not possible."
+msgstr ""
+"В Flatpak каждое приложение создается и запускается в изолированной среде, "
+"которая называется «песочницей». Каждая песочница содержит приложение и его "
+"среду выполнения. По умолчанию приложение может получить доступ только к "
+"содержимому своей песочницы. Доступ к пользовательским файлам, сети, "
+"графическим сокетам, подсистемам на шине и устройствам должен быть явно "
+"разрешен. Доступ к другим вещам, например, к другим процессам, намеренно "
+"невозможен."
+
+#: ../../basic-concepts.rst:29
+msgid ""
+"By necessity, some resources that are inside the sandbox need to be exposed "
+"outside, to be used by the host system. These are known as 'exports', since "
+"they are files that are exported out of the sandbox, and include things like "
+"the application's ``.desktop`` file and icon."
+msgstr ""
+"По необходимости, некоторые ресурсы, находящиеся внутри песочницы, должны "
+"быть открыты снаружи, чтобы их могла использовать хост-система. Они известны "
+"как «экспорт», поскольку представляют собой файлы, которые экспортируются из "
+"песочницы и включают такие вещи, как файл и значок приложения ``.desktop``."
+
+#: ../../basic-concepts.rst:32
+msgid "Portals"
+msgstr "Порталы"
+
+#: ../../basic-concepts.rst:34
+msgid ""
+"Portals are a mechanism through which applications can interact with the "
+"host environment from within a sandbox. They give the ability to interact "
+"with data, files and services without the need to add sandbox permissions."
+msgstr ""
+"Порталы - это механизм, с помощью которого приложения могут "
+"взаимодействовать с хост-средой из песочницы. Они дают возможность "
+"взаимодействовать с данными, файлами и службами без необходимости добавлять "
+"разрешения песочницы."
+
+#: ../../basic-concepts.rst:36
+msgid ""
+"Examples of capabilities that can be accessed through portals include "
+"opening files through a file chooser dialog, or printing. Interface toolkits "
+"can implement transparent support for portals, so access to resources "
+"outside of the sandbox will work securely and out of the box."
+msgstr ""
+"Примеры возможностей, к которым можно получить доступ через порталы, "
+"включают открытие файлов через диалоговое окно выбора файлов или печать. "
+"Наборы инструментов интерфейса могут реализовать прозрачную поддержку "
+"порталов, поэтому доступ к ресурсам за пределами песочницы будет работать "
+"безопасно и из коробки."
+
+#: ../../basic-concepts.rst:38
+msgid ""
+"More information about portals can be found in :doc:`sandbox-permissions`."
+msgstr ""
+"Более подробную информацию о порталах можно найти в: doc:`sandbox-"
+"permissions`."
+
+#: ../../basic-concepts.rst:41
+msgid "Repositories"
+msgstr "Репозитории"
+
+#: ../../basic-concepts.rst:43
+msgid ""
+"Flatpak applications and runtimes are typically stored and published using "
+"repositories, which behave very similarly to Git repositories. A Flatpak "
+"repository can contain a single object or multiple objects, and each object "
+"is versioned, which allows upgrading and even downgrading."
+msgstr ""
+"Приложения и среды выполнения Flatpak обычно хранятся и публикуются с "
+"помощью репозиториев, которые очень похожи на репозитории Git. Репозиторий "
+"Flatpak может содержать один объект или несколько объектов, и каждый объект "
+"имеет версии, что позволяет обновлять и даже понижать версию."
+
+#: ../../basic-concepts.rst:45
+msgid ""
+"Each system which is using Flatpak can be configured to access any number of "
+"remote repositories. Once a system has been configured to access a 'remote', "
+"the remote repository's content can be inspected and searched, and it can be "
+"used as the source of applications and runtimes."
+msgstr ""
+"Каждую систему, использующую Flatpak, можно настроить для доступа к любому "
+"количеству удаленных репозиториев. После того, как система настроена для "
+"доступа к «удаленному», содержимое удаленного репозитория можно проверять и "
+"искать, и его можно использовать в качестве источника приложений и сред "
+"выполнения."
+
+#: ../../basic-concepts.rst:47
+msgid ""
+"When an update is performed, new versions of installed applications and "
+"runtimes are downloaded from the relevant remotes. Like with Git, only the "
+"difference between versions is downloaded, which makes the process very "
+"efficient."
+msgstr ""
+"При выполнении обновления новые версии установленных приложений и сред "
+"выполнения загружаются с соответствующих удалённых. Как и в случае с Git, "
+"загружается только разница между версиями, что делает процесс очень "
+"эффективным."
