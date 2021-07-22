@@ -16,7 +16,7 @@ msgstr ""
 
 #: ../../available-runtimes.rst:2
 msgid "Available Runtimes"
-msgstr "Доступные среды выполненя"
+msgstr "Доступные среды выполнения"
 
 #: ../../available-runtimes.rst:4
 msgid ""
