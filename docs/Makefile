@@ -19,3 +19,4 @@ help:
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 sphinx-build -b html -D language=ru_RU . _build/html/ru_RU
+make gettext
