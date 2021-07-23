@@ -16,7 +16,7 @@ msgstr ""
 
 #: ../../getting-started.rst:2
 msgid "Getting Started"
-msgstr "Начло работы"
+msgstr "Начало работы"
 
 #: ../../getting-started.rst:4
 msgid ""
