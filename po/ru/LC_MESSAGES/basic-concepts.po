@@ -158,7 +158,7 @@ msgstr ""
 msgid ""
 "More information about portals can be found in :doc:`sandbox-permissions`."
 msgstr ""
-"Более подробную информацию о порталах можно найти в: doc:`sandbox-"
+"Более подробную информацию о порталах можно найти в :doc:`sandbox-"
 "permissions`."
 
 #: ../../basic-concepts.rst:41
