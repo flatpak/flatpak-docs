@@ -26,7 +26,7 @@ msgid ""
 "In doing so, it provides guidance on picking a runtime, getting setup to "
 "build applications, and when to bundle dependencies yourself."
 msgstr ""
-"Руководства :doc: `basic-concepts` и :doc:`first-build` уже показали, как "
+"Руководства :doc:`basic-concepts` и :doc:`first-build` уже показали, как "
 "приложения создаются как Flatpaks, и представили многие из основных идей. На "
 "этой странице более подробно описаны некоторые из этих идей и концепций. При "
 "этом он предоставляет руководство по выбору среды выполнения, настройке для "
@@ -103,7 +103,7 @@ msgstr ""
 
 #: ../../building-basics.rst:24
 msgid "Software Development Kits (SDKs)"
-msgstr "Комплекты для разработки программного обеспечения (SDK)"
+msgstr "Наборы для разработки программного обеспечения (SDK)"
 
 #: ../../building-basics.rst:26
 msgid ""
@@ -126,7 +126,7 @@ msgid ""
 "GNOME 3.26 SDK."
 msgstr ""
 "Приложения должны быть созданы с использованием SDK, соответствующего их "
-"времени выполнения, поэтому приложения, использующие среду выполнения GNOME "
+"среде выполнения, поэтому приложения, использующие среду выполнения GNOME "
 "3.26, должны быть созданы с использованием GNOME 3.26 SDK."
 
 #: ../../building-basics.rst:30
