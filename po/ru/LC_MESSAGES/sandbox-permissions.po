@@ -261,7 +261,7 @@ msgstr ""
 
 #: ../../sandbox-permissions.rst:60
 msgid "**Ownership**"
-msgstr "**Право собственности**"
+msgstr "**Ownership**"
 
 #: ../../sandbox-permissions.rst:62
 msgid ""
@@ -278,7 +278,7 @@ msgstr ""
 
 #: ../../sandbox-permissions.rst:64
 msgid "**Talk**"
-msgstr "**Разговор**"
+msgstr "**Talk**"
 
 #: ../../sandbox-permissions.rst:66
 msgid ""
