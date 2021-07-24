@@ -107,7 +107,7 @@ msgstr "org.freedesktop.Sdk.Locale"
 #: ../../available-runtimes.rst:22 ../../available-runtimes.rst:52
 #: ../../available-runtimes.rst:70
 msgid "SDK translations (extension)"
-msgstr "Переводы SDK (расширение)"
+msgstr "Переносы SDK (расширение)"
 
 #: ../../available-runtimes.rst:23
 msgid "org.freedesktop.Sdk.Docs"
