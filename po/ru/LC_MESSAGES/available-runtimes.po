@@ -71,7 +71,7 @@ msgstr "org.freedesktop.Platform"
 #: ../../available-runtimes.rst:18 ../../available-runtimes.rst:48
 #: ../../available-runtimes.rst:66
 msgid "Runtime"
-msgstr "Время выполнения"
+msgstr "Среда выполнения"
 
 #: ../../available-runtimes.rst:19
 msgid "org.freedesktop.Platform.Locale"
@@ -80,7 +80,7 @@ msgstr "org.freedesktop.Platform.Locale"
 #: ../../available-runtimes.rst:19 ../../available-runtimes.rst:49
 #: ../../available-runtimes.rst:67
 msgid "Runtime translations (extension)"
-msgstr "Переносы времени выполнения (расширение)"
+msgstr "Переносы среды выполнения (расширение)"
 
 #: ../../available-runtimes.rst:20
 msgid "org.freedesktop.Sdk"
