@@ -81,7 +81,7 @@ msgstr ""
 
 #: ../../manifests.rst:17
 msgid "For example, the GNOME Dictionary manifest includes:"
-msgstr "Например, манифест словаря GNOME включает:"
+msgstr "Например, манифест GNOME Dictionary включает:"
 
 #: ../../manifests.rst:27
 msgid ""
@@ -131,7 +131,7 @@ msgstr ""
 
 #: ../../manifests.rst:38
 msgid "``rename-icon`` - rename the application icon"
-msgstr "``rename-icon`` - переименовать иконку приложения"
+msgstr "``rename-icon`` - переименовать значок приложения"
 
 #: ../../manifests.rst:39
 msgid "``rename-desktop-file`` - rename the ``.desktop`` filename"
@@ -189,7 +189,7 @@ msgid ""
 "permissions`, and a full list of ``finish-args`` options can be found in :"
 "doc:`sandbox-permissions-reference`."
 msgstr ""
-"Как было объяснено в: doc:`first-build`, эти два свойства окончательной "
+"Как было объяснено в :doc:`first-build`, эти два свойства окончательной "
 "обработки предоставляют приложению доступ к серверу отображения X11 и к "
 "сети. Руководство по использованию разрешений можно найти в :doc:`sandbox-"
 "permissions`, а полный список параметров ``finish-args`` можно найти в :doc:"
