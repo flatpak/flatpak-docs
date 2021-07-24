@@ -285,7 +285,7 @@ msgid ""
 "Talk permissions can be freely used, although it is recommended to use the "
 "minumum required."
 msgstr ""
-"Разрешения на разговор можно использовать свободно, хотя им рекомендуется "
+"Разрешения на Talk можно использовать свободно, хотя им рекомендуется "
 "пользоваться минимально."
 
 #: ../../sandbox-permissions.rst:69
