@@ -242,3 +242,18 @@ on ``$PATH``:
       # Install app wrapper
       - install -Dm755 -t /app/bin/ ../run.sh
 
+Note that if the application you are trying to package contains a ``build`` block in ``package.json`` with instructions for Linux, this can cause ``electron-builder`` to try to fetch additional binaries at build-time (Even if `--dir` option is used). The following example shows a configuration that will try to download AppImage binaries:
+
+.. code-block:: json
+
+  "build": {
+    "linux": {
+      "target": "AppImage",
+    }
+  }
+
+The preferred way of fixing this, is not a patch, but a build-time edit using ``jq``. The following command will replace ``"target": "AppImage"`` with ``"target": "dir"``:
+
+.. code-block:: bash
+
+  jq '.build.linux.target="dir"' <<<$(<package.json) > package.json
