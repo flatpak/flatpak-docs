@@ -166,7 +166,7 @@ As of xdg-desktop-portal 1.1.0 and glib 2.60.5 (in the runtime) you do not
 need direct DConf access in most cases.
 
 As of now this glib version is included in ``org.freedesktop.Platform//19.08``
-and ``org.gnome.Platform//3.34``.
+and ``org.gnome.Platform//3.34`` and newer.
 
 If an application existed prior to these runtimes you can tell Flatpak (>=
 1.3.4) to migrate the DConf settings on the
