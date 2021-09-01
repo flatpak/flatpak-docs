@@ -29,12 +29,12 @@ app, define an extension point for it in the app manifest:
   add-extensions:
     org.freedesktop.Platform.Compat.i386:
       directory: lib/i386-linux-gnu
-      version: '20.08'
+      version: '21.08'
 
     # This is not strictly required, but needed for debugging 32-bit programs
     org.freedesktop.Platform.Compat.i386.Debug:
       directory: lib/debug/lib/i386-linux-gnu
-      version: '20.08'
+      version: '21.08'
       no-autodownload: true
 
 For GNOME runtime, use ``org.gnome.Platform.Compat.i386`` instead.
@@ -51,7 +51,7 @@ in general, you'll also need 32-bit GL drivers. Add an extension point for it:
     org.freedesktop.Platform.GL32:
       directory: lib/i386-linux-gnu/GL
       version: '1.4'
-      versions: 20.08;1.4
+      versions: 21.08;1.4
       subdirectories: true
       no-autodownload: true
       autodelete: false
