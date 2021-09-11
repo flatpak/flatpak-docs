@@ -9,7 +9,7 @@ KDE. These are all hosted on `Flathub <https://flathub.org/>`_.
 
 What is mentioned here is just a high level look at the contents. To have up
 to date information simply install the runtime and open a shell inside of it
-(``flatpak run org.freedesktop.Sdk//20.08``) from there you can look around or
+(``flatpak run org.freedesktop.Sdk//21.08``) from there you can look around or
 use tools like ``pkg-config --list-all``. In the runtime shell you can also
 inspect ``/usr/manifest.json``, which lists the sources used to build it.
 
@@ -41,7 +41,6 @@ org.freedesktop.Sdk                                    SDK
 org.freedesktop.Sdk.Debug                              SDK debug information (extension)
 org.freedesktop.Sdk.Locale                             SDK translations (extension)
 org.freedesktop.Sdk.Docs                               SDK documentation (extension)
-org.freedesktop.Sdk.Extension.rust-stable              SDK Rust language support (extension)
 org.freedesktop.Sdk.Extension.toolchain-{architecture} SDK cross compilers (extension)
 ====================================================== =====================================
 

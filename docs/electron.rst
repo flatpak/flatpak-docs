@@ -27,8 +27,8 @@ To get setup for the build, download or clone the sample app from GitHub,
 and navigate to the ``/flatpak`` directory in the terminal. You must also
 install the Electron base app and the Node.js SDK extension::
 
-  $ flatpak install flathub org.electronjs.Electron2.BaseApp//20.08
-  $ flatpak install flathub org.freedesktop.Sdk.Extension.node14//20.08
+  $ flatpak install flathub org.electronjs.Electron2.BaseApp//21.08
+  $ flatpak install flathub org.freedesktop.Sdk.Extension.node14//21.08
 
 Then you can run the build::
 
@@ -48,7 +48,7 @@ ID. It also configures the runtime and SDK:
 
   app-id: org.flathub.electron-sample-app
   runtime: org.freedesktop.Platform
-  runtime-version: '20.08'
+  runtime-version: '21.08'
   sdk: org.freedesktop.Sdk
 
 The Freedesktop runtime is generally the best runtime to use with Electron
@@ -65,7 +65,7 @@ manifest:
 .. code-block:: yaml
 
   base: org.electronjs.Electron2.BaseApp
-  base-version: '20.08'
+  base-version: '21.08'
 
 Base apps are described in :doc:`dependencies`.  Using the Electron base
 app is much faster and more convenient than manually building Electron
@@ -242,3 +242,18 @@ on ``$PATH``:
       # Install app wrapper
       - install -Dm755 -t /app/bin/ ../run.sh
 
+Note that if the application you are trying to package contains a ``build`` block in ``package.json`` with instructions for Linux, this can cause ``electron-builder`` to try to fetch additional binaries at build-time (Even if `--dir` option is used). The following example shows a configuration that will try to download AppImage binaries:
+
+.. code-block:: json
+
+  "build": {
+    "linux": {
+      "target": "AppImage",
+    }
+  }
+
+The preferred way of fixing this, is not a patch, but a build-time edit using ``jq``. The following command will replace ``"target": "AppImage"`` with ``"target": "dir"``:
+
+.. code-block:: bash
+
+  jq '.build.linux.target="dir"' <<<$(<package.json) > package.json
