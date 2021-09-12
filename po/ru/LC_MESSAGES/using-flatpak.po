@@ -199,11 +199,11 @@ msgstr ""
 
 #: ../../using-flatpak.rst:49
 msgid "List remotes"
-msgstr "Список удалённых"
+msgstr "Список удалённых компьютеров"
 
 #: ../../using-flatpak.rst:51
 msgid "To list the remotes that you have configured on your system, run::"
-msgstr "Чтобы вывести список удалённых, которые вы настроили в своей системе, запустите::"
+msgstr "Чтобы вывести список удалённых компьютеров, которые вы настроили в своей системе, запустите::"
 
 #: ../../using-flatpak.rst:55
 msgid ""
@@ -211,18 +211,18 @@ msgid ""
 "indicates whether each remote has been added per-user or system-wide."
 msgstr ""
 "Это дает список существующих удалённых, которые были добавлены. Список "
-"Список указывает, был ли добавлен каждый удалённый для каждого пользователя или в масштабе всей системы."
+"Список указывает, был ли добавлен каждый удалённый компьютер для каждого пользователя или в масштабе всей системы."
 
 #: ../../using-flatpak.rst:58
 msgid "Add a remote"
-msgstr "Добавить удалённый"
+msgstr "Добавить удалённый компьютер"
 
 #: ../../using-flatpak.rst:60
 msgid ""
 "The most convenient way to add a remote is by using a ``.flatpakrepo`` file,"
 " which includes both the details of the remote and its GPG key::"
 msgstr ""
-"Самый удобный способ добавить пульт - использовать файл ``.flatpakrepo``,"
+"Самый удобный способ добавить удалённый компьютер - использовать файл ``.flatpakrepo``,"
 "который включает в себя как сведения о удалённом, так и его ключ GPG.
 
 #: ../../using-flatpak.rst:64
@@ -233,19 +233,19 @@ msgid ""
 msgstr ""
 "Здесь ``flathub`` - это локальное имя, присвоенное удаленному устройству.  URL-адрес "
 "указывает на удаленный файл ``.flatpakrepo`` ``--if-not-exists`` останавливает команду от выдачи "
-"ошибки, если удалённый уже существует
+"ошибки, если удалённый компьютер уже существует
 
 #: ../../using-flatpak.rst:67
 msgid "Remove a remote"
-msgstr "Удалить удалённый"
+msgstr "Удалить удалённый компьютер"
 
 #: ../../using-flatpak.rst:69
 msgid "To remove a remote, run::"
-msgstr "Чтобы удалить удалённый, запустите::"
+msgstr "Чтобы удалить удалённый компьютер, запустите::"
 
 #: ../../using-flatpak.rst:73
 msgid "In this case, ``flathub`` is the remote's local name."
-msgstr "В этом случае flathub - это локальное имя удалённого."
+msgstr "В этом случае flathub - это локальное имя удалённого компьютера."
 
 #: ../../using-flatpak.rst:76
 msgid "Search"
@@ -256,7 +256,7 @@ msgid ""
 "Applications can be found in any of your remotes using the ``search`` "
 "command. For example::"
 msgstr ""
-"Приложения можно найти в любом из ваших пультов с помощью команды ``search``"
+"Приложения можно найти в любом из ваших удалённых компьютеров с помощью команды ``search``"
 "Например::"
 
 #: ../../using-flatpak.rst:82
@@ -266,7 +266,7 @@ msgid ""
 "in. In this example, the search term is ``gimp``."
 msgstr ""
 "Поиск вернет все приложения, соответствующие условиям поиска. Каждый результат поиска "
-"включает идентификатор приложения и удалённый, на котором находится приложение. В "
+"включает идентификатор приложения и удалённый компьютер, на котором находится приложение. В "
 "этом примере поисковым запросом является ``gimp``."
 
 #: ../../using-flatpak.rst:85
@@ -276,7 +276,7 @@ msgid ""
 " ``flatpak update`` or ``flatpak update --appstream``."
 msgstr ""
 "До версии Flatpak 0.11.1 необходимо было вручную обновить метаданные "
-"для ваших удалённых, прежде чем поиск будет работать. Это можно сделать, запустив"
+"для ваших удалённых компьютеров, прежде чем поиск будет работать. Это можно сделать, запустив"
 "``flatpak update`` или ``flatpak update --appstream``."
 
 #: ../../using-flatpak.rst:88
