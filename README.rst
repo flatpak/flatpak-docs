@@ -39,10 +39,7 @@ Then you will see the Chinese documentation in the directory
 Translations
 ------------
 
-Translations are handled on `Zanata
-<https://translate.zanata.org/project/view/flatpak-docs>`_.
-
-You can open an issue requesting a new language added.
+You can open a pull request adding a new language.
 
 For maintainers run ``make gettext`` in the ``docs`` directory to generate
 ``.pot`` files.
