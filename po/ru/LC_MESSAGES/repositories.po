@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-09 20:19-0400\n"
+"PO-Revision-Date: 2021-07-24 04:05+0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+
+#: ../../repositories.rst:2
+msgid "Repositories"
+msgstr "Репозитории"
+
+#: ../../repositories.rst:4
+msgid ""
+"Flatpak repositories are the primary mechanism for publishing applications, "
+"so that they can be installed by users."
+msgstr ""
+"Репозитории Flatpak - это основной механизм публикации приложений, "
+"реализуемый так, чтобы они могли быть установлены пользователями."
+
+#: ../../repositories.rst:6
+msgid ""
+"Some aspects of repositories are addressed by other sections of the "
+"documentation. Basic commands for adding, removing and inspecting "
+"repositories can be found in the :doc:`using-flatpak` section. Additionally, "
+"the section on :doc:`flatpak-builder` covers the most common method for "
+"adding applications to repositories."
+msgstr ""
+"Некоторые аспекты репозиториев рассматриваются в других разделах "
+"документации. Основные команды для добавления, удаления и проверки "
+"репозиториев можно найти в разделе :doc:`using-flatpak`. Кроме того, в "
+"разделе :doc:`flatpak-builder` описывается наиболее распространенный метод "
+"добавления приложений в репозитории."
+
+#: ../../repositories.rst:8
+msgid ""
+"To use a repository to publish an application, it is possible to either host "
+"your own (covered in the next section, :doc:`hosting-a-repository`) or use "
+"`Flathub <http://flathub.org>`_, the primary publishing and hosting service "
+"for Flatpak applications."
+msgstr ""
+"Чтобы использовать репозиторий для публикации приложения, можно либо "
+"разместить свой собственный (описанный в следующем разделе :doc:`hosting-a-"
+"repository`), либо использовать `Flathub <http://flathub.org>`_, основная "
+"служба публикации и хостинга для приложений Flatpak."
+
+#: ../../repositories.rst:10
+msgid ""
+"Software center applications like GNOME Software or KDE Discover allow "
+"browsing repositories, and can also dynamically promote new or popular "
+"applications. If you use Flathub, the repository will typically have already "
+"been added by users, so adding an application to the repository is "
+"sufficient to make it available to them."
+msgstr ""
+"Приложения центра программного обеспечения, такие как GNOME Software или KDE "
+"Discover, позволяют просматривать репозитории, а также могут динамически "
+"продвигать новые или популярные приложения. Если вы используете Flathub, "
+"репозиторий, как правило, уже был добавлен пользователями, поэтому "
+"добавления приложения в репозиторий достаточно, чтобы сделать его доступным "
+"для них."
+
+#: ../../repositories.rst:13
+msgid ".flatpakref files"
+msgstr "Файлы .flatpakref"
+
+#: ../../repositories.rst:15
+msgid ""
+"``.flatpakref`` files can be used in combination with repositories to "
+"provide an additional, easy way for users to install an application, often "
+"by clicking on the file or a download link."
+msgstr ""
+"Файлы ``.flatpakref`` могут использоваться в сочетании с репозиториями, "
+"чтобы предоставить пользователям дополнительный, простой способ установки "
+"приложения, часто путем нажатия на файл или ссылку для загрузки."
+
+#: ../../repositories.rst:17
+msgid ""
+"Internally, ``.flatpakref`` files are simple description files that include "
+"information about a Flatpak application. An example::"
+msgstr ""
+"Внутри файлы .flatpakref представляют собой простые файлы описания, которые "
+"включают информацию о приложении Flatpak. Пример::"
+
+#: ../../repositories.rst:28
+msgid ""
+"As can be seen, the file includes the ID of the application and the location "
+"of the repository that contains it, as well a link to information about the "
+"repository that provides the application's runtime. ``.flatpakref`` files "
+"therefore contain all the information needed to install an application."
+msgstr ""
+"Как видно, файл включает в себя идентификатор приложения и расположение "
+"репозитория, который его содержит, а также ссылку на информацию о "
+"репозитории, который обеспечивает среду выполнения приложения. Таким "
+"образом, файлы ``.flatpakref`` содержат всю информацию, необходимую для "
+"установки приложения."
+
+#: ../../repositories.rst:32
+msgid ""
+"``.flatpakref`` files should include the base64-encoded version of the GPG "
+"key that was used to sign the repository. This can be obtained with the "
+"following command::"
+msgstr ""
+"Файлы ``.flatpakref`` должны включать в себя версию ключа GPG в кодировке "
+"base64, который использовался для подписи репозитория. Это можно получить с "
+"помощью следующей команды::"
+
+#: ../../repositories.rst:36
+msgid ""
+"One advantage of ``.flatpakref`` files is that they can be used to install "
+"applications even if their repository hasn't been added by the user. In this "
+"case the repository that contains the application will either be "
+"automatically installed, or the user will be prompted to install it. This "
+"will also happen if the necessary runtime isn't present."
+msgstr ""
+"Одним из преимуществ файлов ``.flatpakref`` является то, что их можно "
+"использовать для установки приложений, даже если их репозиторий не был "
+"добавлен пользователем. В этом случае репозиторий, содержащий приложение, "
+"либо будет установлен автоматически, либо пользователю будет предложено "
+"установить его. Это также произойдет, если необходимая среда выполнения "
+"отсутствует."
+
+#: ../../repositories.rst:38
+msgid ""
+"``.flatpakref`` can be used to install applications from the command line as "
+"well as with graphical software installers. This is done with the standard "
+"``flatpak install`` command, which accepts both local and remote ``."
+"flatpakref`` files. For example::"
+msgstr ""
+"``.flatpakref`` можно использовать для установки приложений из командной "
+"строки, а также с помощью графических установщиков программного обеспечения. "
+"Это делается с помощью стандартной команды ``flatpak install``, которая "
+"принимает как локальные, так и удаленные файлы ``.flatpakref``. Например::"
+
+#: ../../repositories.rst:42
+msgid "Or, if the same file has been downloaded::"
+msgstr "Или, если был загружен тот же файл::"
+
+#: ../../repositories.rst:48
+msgid "Publishing updates"
+msgstr "Публикация обновлений"
+
+#: ../../repositories.rst:50
+msgid ""
+"Flatpak repositories are similar to Git repositories, in that they store "
+"every version of an application by keeping a record of the difference "
+"between each version. This makes updating efficient, since only the "
+"difference (or \"delta\") between two versions needs to be downloaded when "
+"an update is performed."
+msgstr ""
+"Репозитории Flatpak похожи на репозитории Git в том, что они хранят каждую "
+"версию приложения, записывая разницу между каждой версией. Это делает "
+"обновление эффективным, поскольку при выполнении обновления необходимо "
+"загружать только разницу (или «дельту») между двумя версиями."
+
+#: ../../repositories.rst:52
+msgid ""
+"When a new version of an application is added to a repository, it "
+"immediately becomes available to users. Software centers are able to "
+"automatically check for and install new versions. Those who are using the "
+"command line have to manually run ``flatpak update`` to check for and "
+"install new versions of any applications they have installed."
+msgstr ""
+"Когда новая версия приложения добавляется в репозиторий, она сразу "
+"становится доступной для пользователей. Центры программного обеспечения "
+"могут автоматически проверять и устанавливать новые версии. Те, кто "
+"использует командную строку, должны вручную запустить ``flatpak update``, "
+"чтобы проверить и установить новые версии любых приложений, которые они "
+"установили."

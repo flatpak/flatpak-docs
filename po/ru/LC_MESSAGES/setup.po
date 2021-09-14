@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-04 20:32-0500\n"
+"PO-Revision-Date: 2021-07-24 04:35+0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+
+#: ../../setup.rst:2
+msgid "Setup"
+msgstr "Настройка"
+
+#: ../../setup.rst:5
+msgid "Install flatpak and flatpak-builder"
+msgstr "Установите Flatpak и Flatpak-builder"
+
+#: ../../setup.rst:7
+msgid ""
+"First, it is necessary to have the ``flatpak`` and ``flatpak-builder`` "
+"packages installed on your system. The Flatpak website provides `details on "
+"how to install flatpak <http://flatpak.org/getting.html>`_. ``flatpak-"
+"builder`` is typically found as a package from the same source as "
+"``flatpak`` itself."
+msgstr ""
+"Во-первых, в вашей системе должны быть установлены пакеты «flatpak» и "
+"«flatpak-builder». На веб-сайте Flatpak можно найти `подробную информацию о "
+"том, как установить flatpak <http://flatpak.org/getting.html>`_. «flatpak-"
+"builder» обычно находится в виде пакета из того же источника, что и сам "
+"«flatpak»."
+
+#: ../../setup.rst:10
+msgid "Add the flathub repository"
+msgstr "Добавить репозиторий flathub"
+
+#: ../../setup.rst:12
+msgid ""
+"Flathub is the main Flatpak repository and contains the runtimes and SDKs "
+"that will be needed to run and build apps. If you haven't added it already, "
+"it can be setup with the following command::"
+msgstr ""
+"Flathub - это основной репозиторий Flatpak, который содержит среды "
+"выполнения и SDK, которые потребуются для запуска и создания приложений. "
+"Если вы еще не добавили его, его можно настроить с помощью следующей "
+"команды::"

@@ -1,0 +1,290 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-09 20:19-0400\n"
+"PO-Revision-Date: 2021-07-23 03:06+0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+
+#: ../../desktop-integration.rst:2
+msgid "Desktop Integration"
+msgstr "Интеграция с рабочим столом"
+
+#: ../../desktop-integration.rst:4
+msgid ""
+":doc:`conventions` covers the essential aspects of Linux desktop "
+"integration. This page provides further information on optional desktop "
+"integration features. It also provides guidance on how applications can "
+"ensure that their user interfaces fit into the whole range of Linux desktops "
+"and distributions."
+msgstr ""
+":doc:`conventions` охватывает основные аспекты интеграции рабочего стола "
+"Linux. На этой странице представлена дополнительная информация о "
+"дополнительных функциях интеграции с рабочим столом. Он также предоставляет "
+"руководство о том, как приложения могут гарантировать, что их "
+"пользовательские интерфейсы подходят для всего диапазона настольных "
+"компьютеров и дистрибутивов Linux."
+
+#: ../../desktop-integration.rst:6
+msgid ""
+"This information is primarily intended for developers who are new to Linux. "
+"However it is also relevant to desktop-specific Linux applications who wish "
+"to target a broader range of Linux environments."
+msgstr ""
+"Эта информация в первую очередь предназначена для разработчиков, которые "
+"плохо знакомы с Linux. Однако это также актуально для настольных приложений "
+"Linux, которые хотят ориентироваться на более широкий спектр сред Linux."
+
+#: ../../desktop-integration.rst:8
+msgid ""
+"While targeting the Linux desktop ecosystem might seem challenging, the "
+"existence of common standards, in combination with these guidelines, means "
+"that supporting the full range of Linux environments needn't be difficult."
+msgstr ""
+"Хотя нацеливание на экосистему настольных компьютеров Linux может показаться "
+"сложной задачей, наличие общих стандартов в сочетании с этими рекомендациями "
+"означает, что поддержка всего диапазона сред Linux не должна быть сложной."
+
+#: ../../desktop-integration.rst:11
+msgid "Locale detection"
+msgstr "Определение локали"
+
+#: ../../desktop-integration.rst:13
+msgid ""
+"Application toolkits, such as Electron, GTK and Qt, provide built-in support "
+"for detecting which locale to use. Otherwise, the ``setlocale`` function can "
+"be used."
+msgstr ""
+"Наборы прикладных инструментов, такие как Electron, GTK и Qt, предоставляют "
+"встроенную поддержку для определения того, какой языковой стандарт "
+"использовать. В противном случае можно использовать функцию ``setlocale``."
+
+#: ../../desktop-integration.rst:16
+msgid "Portals"
+msgstr "Порталы"
+
+#: ../../desktop-integration.rst:18
+msgid ""
+"Portals are the framework for securely accessing resources from outside an "
+"application sandbox. They provide a range of common features to "
+"applications, including:"
+msgstr ""
+"Порталы - это платформа для безопасного доступа к ресурсам за пределами "
+"изолированной программной среды приложения. Они предоставляют приложениям "
+"ряд общих функций, в том числе: "
+
+#: ../../desktop-integration.rst:20
+msgid "Determining network status"
+msgstr "Определение статуса сети"
+
+#: ../../desktop-integration.rst:21
+msgid "Opening a file with a file chooser"
+msgstr "Открытие файла с помощью средства выбора файла"
+
+#: ../../desktop-integration.rst:22
+msgid "Opening URIs"
+msgstr "Открытие URIs"
+
+#: ../../desktop-integration.rst:23
+msgid "Preventing the device from suspend/sleep/powering off"
+msgstr "Предотвращение перехода устройства в режим ожидания/сна/выключения"
+
+#: ../../desktop-integration.rst:24
+msgid "Printing"
+msgstr "Печать"
+
+#: ../../desktop-integration.rst:25
+msgid "Sending email"
+msgstr "Отправка электронной почты"
+
+#: ../../desktop-integration.rst:26
+msgid "Showing notifications"
+msgstr "Отображение уведомлений"
+
+#: ../../desktop-integration.rst:27
+msgid "Taking screenshots and screencasts"
+msgstr "Создание скриншотов и скринкастов"
+
+#: ../../desktop-integration.rst:29
+msgid ""
+"Toolkits like GTK and Qt provide transparent support for portals. If you are "
+"not using one of these toolkits, it is possible to access the portals API "
+"directly. See the `portals API documentation <https://flatpak.github.io/xdg-"
+"desktop-portal/portal-docs.html>`_ for more information."
+msgstr ""
+"Такие инструменты, как GTK и Qt, обеспечивают прозрачную поддержку порталов. "
+"Если вы не используете один из этих наборов инструментов, можно получить "
+"прямой доступ к API порталов. Дополнительную информацию см. В документации "
+"API порталов <https://flatpak.github.io/xdg-desktop-portal/portal-docs."
+"html>`_ for more information."
+
+#: ../../desktop-integration.rst:32
+msgid "Notifications"
+msgstr "Уведомления"
+
+#: ../../desktop-integration.rst:34
+msgid ""
+"A number of toolkits and frameworks provide transparent support for Linux "
+"desktop notificatoions. This includes Electron, GTK, KDE and QML. "
+"Applications not using one of these can either use the `libnotify <https://"
+"developer.gnome.org/libnotify/>`_ library or portals. Of these, portals has "
+"the benefit that it can easily be used from within an application sandbox."
+msgstr ""
+"Ряд наборов инструментов и фреймворков обеспечивает прозрачную поддержку "
+"уведомлений рабочего стола Linux. Сюда входят Electron, GTK, KDE и QML. "
+"Приложения, не использующие один из них, могут использовать либо библиотеку "
+"`libnotify <https://developer.gnome.org/libnotify/>`_, либо порталы. "
+"Преимущество порталов состоит в том, что их можно легко использовать из "
+"изолированной программной среды приложения. "
+
+#: ../../desktop-integration.rst:37
+msgid "Status icons"
+msgstr "Значки состояния"
+
+#: ../../desktop-integration.rst:39
+msgid ""
+"Status icons are the same concept as the system tray or the taskbar on "
+"Windows, or menu bar icons on Mac. These are supported on most Linux "
+"distributions, through libappindicator."
+msgstr ""
+"Значки состояния аналогичны значкам на панели задач или панели задач в "
+"Windows или значкам строки меню на Mac. Они поддерживаются в большинстве "
+"дистрибутивов Linux через libappindicator."
+
+#: ../../desktop-integration.rst:41
+msgid ""
+"A number of Linux distributions don't show status icons. It is still "
+"possible to provide a status icon, and it will be shown in some "
+"distributions. However, in order to ensure compatibility, it is recommended "
+"to only use status icons in a supplementary manner, and not to rely on them "
+"as the only mechanism for providing status information or access to "
+"particular features. This includes \"minimize to tray\" (or equivalent) "
+"functionality."
+msgstr ""
+"В некоторых дистрибутивах Linux не отображаются значки состояния. По-"
+"прежнему можно указать значок состояния, и он будет отображаться в некоторых "
+"дистрибутивах. Однако для обеспечения совместимости рекомендуется "
+"использовать значки состояния только в качестве дополнительных средств и не "
+"полагаться на них как на единственный механизм для предоставления информации "
+"о состоянии или доступа к определенным функциям. Это включает в себя функцию "
+"«свернуть в трей» (или аналогичную)."
+
+#: ../../desktop-integration.rst:44
+msgid "System search"
+msgstr "Системный поиск"
+
+#: ../../desktop-integration.rst:46
+msgid ""
+"GNOME-based distributions, like CentOS, Fedora, Red Hat Enterprise Linux and "
+"Ubuntu, provide the option to integrate with system search, by providing a "
+"`search provider <https://developer.gnome.org/SearchProvider/>`_. This "
+"allows application-provided search results to appear in the Activities "
+"Overview."
+msgstr ""
+"Дистрибутивы на основе GNOME, такие как CentOS, Fedora, Red Hat Enterprise "
+"Linux и Ubuntu, предоставляют возможность интеграции с системным поиском, "
+"предоставляя `поставщика поиска <https://developer.gnome.org/SearchProvider/"
+">`_. Это позволяет отображать результаты поиска, предоставляемые "
+"приложением, в обзоре действий."
+
+#: ../../desktop-integration.rst:49
+msgid "Window controls"
+msgstr "Окно управления"
+
+#: ../../desktop-integration.rst:51
+msgid ""
+"Window controls are the buttons used to close, maximize and minimize "
+"windows. These do vary across Linux desktops, particularly in terms of which "
+"controls are shown. Whether applications attempt to follow these variations "
+"is up to their discretion. Providing the exact same controls as used by a "
+"particular desktop environment should not be seen as a hard requirement."
+msgstr ""
+"Оконные элементы управления - это кнопки, используемые для закрытия, "
+"развертывания и минимизации окон. Они действительно различаются для разных "
+"рабочих столов Linux, особенно в том, какие элементы управления "
+"отображаются. Пытаются ли приложения следовать этим вариантам, остается на "
+"их усмотрение. Предоставление тех же элементов управления, которые "
+"используются в конкретной среде рабочего стола, не следует рассматривать как "
+"жесткое требование."
+
+#: ../../desktop-integration.rst:53
+msgid ""
+"From a user experience perspective, it is important to ensure that window "
+"controls appear on the same side of the window as other desktops. On Linux "
+"this is the right side of the window (like Windows)."
+msgstr ""
+"С точки зрения взаимодействия с пользователем важно убедиться, что элементы "
+"управления окнами отображаются на той же стороне окна, что и другие рабочие "
+"столы. В Linux это правая часть окна (как в Windows)."
+
+#: ../../desktop-integration.rst:55
+msgid ""
+"Applications can rely on system-provided titlebars on Linux, if they don't "
+"want to draw their own window controls."
+msgstr ""
+"Приложения могут полагаться на предоставляемые системой заголовки в Linux, "
+"если они отказываются рисовать свои собственные элементы управления окнами."
+
+#: ../../desktop-integration.rst:58
+msgid "Window decorations"
+msgstr "Оконные украшения"
+
+#: ../../desktop-integration.rst:60
+msgid ""
+"If your application uses a dark visual style as well as system-provided "
+"window decorations, the ``GTK_THEME_VARIANT=dark`` X11 window property "
+"should be used, to ensure that window decorations match the rest of the "
+"application window. This can be done by running::"
+msgstr ""
+"Если ваше приложение использует темный визуальный стиль, а также "
+"предоставляемые системой декорации окна, следует использовать свойство окна "
+"X11 ``GTK_THEME_VARIANT=dark``, чтобы гарантировать, что оформление окна "
+"соответствует остальной части окна приложения. Это можно сделать, запустив::"
+
+#: ../../desktop-integration.rst:65
+msgid "Defunct integration options"
+msgstr "Несуществующие варианты интеграции"
+
+#: ../../desktop-integration.rst:67
+msgid ""
+"The following desktop integration options are no longer in use and can be "
+"safely ignored:"
+msgstr ""
+"Следующие параметры интеграции с рабочим столом больше не используются, и их "
+"можно игнорировать:"
+
+#: ../../desktop-integration.rst:69
+msgid ""
+"Application menus - these are specific to the GNOME desktop. However, they "
+"are likely to be phased out in the future."
+msgstr ""
+"Меню приложений - они характерны для рабочего стола GNOME. Однако в будущем "
+"они, вероятно, будут прекращены."
+
+#: ../../desktop-integration.rst:70
+msgid ""
+"Global menu bar - this was a feature similar to Mac's menu bar, which was "
+"part of Ubuntu's Unity desktop. This has been retired. All Linux desktops "
+"and distributions expect a menu bar to be shown as part of the application "
+"window, should one be provided (rather than relying on a global menu bar, as "
+"on Mac)."
+msgstr ""
+"Глобальная строка меню - это была функция, аналогичная строке меню Mac, "
+"которая была частью рабочего стола Unity Ubuntu. Это было удалено. Все "
+"рабочие столы и дистрибутивы Linux ожидают, что строка меню будет "
+"отображаться как часть окна приложения, если оно есть (вместо того, чтобы "
+"полагаться на глобальную строку меню, как на Mac). "

@@ -1,0 +1,46 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"PO-Revision-Date: 2021-07-22 22:13+0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+
+#: ../../building.rst:2
+msgid "Building"
+msgstr "Cтроение"
+
+#: ../../building.rst:4
+msgid ""
+"This section contains detailed information on how to build applications as "
+"Flatpaks. It starts with an overview of the build process, before diving "
+"into requirements for applications, guidance on key decisions, information "
+"on how to use ``flatpak-builder``, and how to write manifest files."
+msgstr ""
+"В этом разделе содержится подробная информация о том, как создавать "
+"приложения как Flatpaks. Он начинается с обзора процесса сборки, прежде чем "
+"погружаться в требования к приложениям, руководство по ключевым решениям, "
+"информацию о том, как использовать flatpak-builder и как писать файлы "
+"манифеста."
+
+#: ../../building.rst:6
+msgid ""
+"If you haven't already, it is recommended to run through :doc:`first-build` "
+"before reading this section."
+msgstr ""
+"Если вы еще этого не сделали, рекомендуется просмотреть: doc:`first-build` "
+"перед чтением этого раздела."

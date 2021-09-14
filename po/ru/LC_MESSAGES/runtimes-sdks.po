@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-04 20:32-0500\n"
+"PO-Revision-Date: 2021-07-24 04:22+0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+
+#: ../../runtimes-sdks.rst:2
+msgid "Runtimes and SDKs"
+msgstr "Среды выполнения и SDKs"
+
+#: ../../runtimes-sdks.rst:4
+msgid ""
+"Each Flatpak app is required to have a runtime. This provides the "
+"environment that the app runs in, and includes a set of libraries that it "
+"can access. The app's runtime must be present on a system for it to run."
+msgstr ""
+"У каждого приложения Flatpak должна быть среда выполнения. Это обеспечивает "
+"среду, в которой работает приложение, и включает набор библиотек, к которым "
+"у него есть доступ. Среда выполнения приложения должна присутствовать в "
+"системе для его запуска."
+
+#: ../../runtimes-sdks.rst:6
+msgid ""
+"Each runtime is paired with an SDK (Software Develpment Kit). For example, "
+"for the Freedesktop 1.6 runtime, there is also a Freedesktop 1.6 SDK. The "
+"SDK includes the same things as the regular runtime, but also includes all "
+"the additional development resources and tools that are required to build an "
+"app, such as build and packaging tools, header files, compilers and "
+"debuggers."
+msgstr ""
+"Каждая среда выполнения связана с SDK (Software Develpment Kit). Например, "
+"для среды выполнения Freedesktop 1.6 также есть Freedesktop 1.6 SDK. SDK "
+"включает в себя то же, что и обычная среда выполнения, но также включает все "
+"дополнительные ресурсы и инструменты разработки, необходимые для создания "
+"приложения, такие как инструменты сборки и упаковки, файлы заголовков, "
+"компиляторы и отладчики."
+
+#: ../../runtimes-sdks.rst:8
+msgid ""
+"Applications must be built with the SDK that corresponds to their runtime. "
+"For example, an application that uses the Freedesktop 1.6 runtime in order "
+"to run must be built with the Freedesktop 1.6 SDK."
+msgstr ""
+"Приложения должны быть созданы с использованием SDK, соответствующего их "
+"среде выполнения. Например, приложение, которое для запуска использует "
+"среду выполнения Freedesktop 1.6, должно быть создано с помощью Freedesktop "
+"1.6 SDK."
+
+#: ../../runtimes-sdks.rst:14
+msgid "Choosing a runtime"
+msgstr "Выбор среды выполнения"
+
+#: ../../runtimes-sdks.rst:16
+msgid ""
+"When you come to build a Flatpak app, you will need to decide which runtime "
+"it will use. An overview of the runtimes that are available can be found in "
+"the :doc:`available-runtimes` page. There are deliberately only a small "
+"number of runtimes to choose from."
+msgstr ""
+"Когда вы приступите к созданию приложения Flatpak, вам нужно будет решить, "
+"какую среду выполнения оно будет использовать. Обзор доступных сред "
+"выполнения можно найти на странице :doc:`available-runtimes`. Намеренно есть "
+"только небольшое количество сред выполнения на выбор."
+
+#: ../../runtimes-sdks.rst:18
+msgid ""
+"Runtimes require regular maintenance, and application developers should "
+"generally not consider creating their own."
+msgstr ""
+"Среды выполнения требуют регулярного обслуживания, и разработчикам "
+"приложений, как правило, не следует создавать собственные."
+
+#: ../../runtimes-sdks.rst:25
+msgid "Installing a runtime and SDK"
+msgstr "Установка среды выполнения и SDK"
+
+#: ../../runtimes-sdks.rst:27
+msgid ""
+"Once you have chosen a runtime for your application, it is necessary to "
+"install it as well as the matching SDK. (Runtimes and SDKs are installed in "
+"exactly the same way.)"
+msgstr ""
+"После того, как вы выбрали среду выполнения для своего приложения, "
+"необходимо установить ее, а также соответствующий SDK. (Среды выполнения и "
+"SDK устанавливаются точно так же.)"
+
+#: ../../runtimes-sdks.rst:29
+msgid "For example, the command to install the GNOME 3.25 runtime and SDK is::"
+msgstr "Для примера, команда для установки среды выполнения GNOME 3.25 и SDK::"
+
+#: ../../runtimes-sdks.rst:33
+msgid ""
+"A number of the examples in these docs use this runtime and SDK, so it is a "
+"good idea to try this command yourself."
+msgstr ""
+"В ряде примеров в этих документах используется эта среда выполнения и SDK, "
+"поэтому рекомендуется попробовать эту команду самостоятельно."

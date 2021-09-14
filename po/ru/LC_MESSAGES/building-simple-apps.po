@@ -1,0 +1,184 @@
+# Flatpak docs
+# Copyright (C) 2021, Flatpak Team
+# This file is distributed under the same license as the Flatpak package.
+# Markus Richter <semanticdesign@mailbox.org>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-01 18:01+0200\n"
+"PO-Revision-Date: 2021-09-12 02:11+0700\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Language-Team: ru_RU <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+
+#: ../../building-simple-apps.rst:2
+msgid "Building Simple Apps"
+msgstr "Создание простых приложений"
+
+#: ../../building-simple-apps.rst:4
+msgid ""
+"The ``flatpak`` utility provides a simple set of commands for building and "
+"distributing applications. These allow creating new Flatpaks, into which new "
+"or existing applications can be built."
+msgstr ""
+"Утилита «flatpak» предоставляет простой набор команд для создания и "
+"Распространения приложений. Она позволяет создавать новые Flatpaks, в которые могут быть встроены новые "
+"или существующие приложения"
+
+#: ../../building-simple-apps.rst:6
+msgid ""
+"This section describes how to build a simple application which doesn't "
+"require any additional dependencies outside of the runtime it is built "
+"against. In order to complete the examples, you should have completed the "
+"steps in `Getting Setup <getting-setup.html>`_ first. "
+msgstr ""
+"В этом разделе описывается, как создать простое приложение, которое не "
+"не требует каких-либо дополнительных зависимостей вне среды выполнения, для которой оно построено. "
+"Для того, чтобы завершить примеры, вы должны выполнить "
+"шаги из `Getting Setup <getting-setup.html>`_ "
+
+#: ../../building-simple-apps.rst:9
+msgid "Creating an app"
+msgstr "Создание приложения"
+
+#: ../../building-simple-apps.rst:11
+msgid ""
+"To create an application, the first step is to use the ``build-init`` "
+"command. This creates a directory into which an application can be built, "
+"which contains the correct directory structure and a metadata file which "
+"contains information about the app. The format for build-init is::"
+msgstr ""
+"Чтобы создать приложение, первым делом нужно использовать команду ``build-init``. "
+"Это создает каталог, в котором может быть создано приложение, "
+"которое содержит правильную структуру каталогов и файл метаданных, содержащий "
+"информацию о приложении. Формат build-init::"
+
+#: ../../building-simple-apps.rst:15
+msgid ""
+"DIRECTORY is the name of the directory that will be created to contain the "
+"application"
+msgstr ""
+"DIRECTORY - это имя каталога, который будет создан, для размещения "
+"приложения "
+
+#: ../../building-simple-apps.rst:16
+msgid "APPNAME is the D-Bus name of the application"
+msgstr "APPNAME - это имя приложения на D-Bus"
+
+#: ../../building-simple-apps.rst:17
+msgid "SDK is the name of the SDK that will be used to build the application"
+msgstr "SDK - это имя SDK, который будет использоваться для сборки приложения."
+
+#: ../../building-simple-apps.rst:18
+msgid ""
+"RUNTIME is the name of the runtime that will be required by the application"
+msgstr ""
+"RUNTIME - это имя среды выполнения, которая потребуется приложению"
+
+#: ../../building-simple-apps.rst:19
+msgid ""
+"BRANCH is typically the version of the SDK and runtime that will be used"
+msgstr ""
+"BRANCH - это обычно используемая версия SDK и среда выполнения"
+
+#: ../../building-simple-apps.rst:21
+msgid ""
+"For example, to build the GNOME Dictionary application using the GNOME 3.22 "
+"SDK, the command would look like::"
+msgstr ""
+"Например, для создания приложения GNOME Dictionary с использованием GNOME 3.22"
+"SDK команда будет выглядеть так:::"
+
+#: ../../building-simple-apps.rst:25
+msgid ""
+"You can try this command now. In the next step we will build an application "
+"inside the resulting dictionary directory."
+msgstr ""
+"Вы можете попробовать эту команду сейчас. На следующем шаге мы создадим приложение "
+"в итоговом каталоге словарей." 
+
+#: ../../building-simple-apps.rst:28
+msgid "Building"
+msgstr "Создание приложения"
+
+#: ../../building-simple-apps.rst:30
+msgid ""
+"``flatpak build`` is used to build an application using an SDK. This command "
+"is used to provide access to a sandbox. For example, the following will "
+"create a file inside the appdir sandbox (in the files directory)::"
+msgstr ""
+"``flatpak build`` используется для создания приложения с использованием SDK. Эта команда "
+"используется для предоставления доступа к песочнице. Например, следующий код "
+"создаст файл в изолированной программной среде appdir (в каталоге файлов)::"
+
+#: ../../building-simple-apps.rst:34
+msgid "(It is best to remove this file before continuing.)"
+msgstr "(Перед продолжением лучше удалить этот файл.)"
+
+#: ../../building-simple-apps.rst:36
+msgid ""
+"The build command allows existing applications that have been made using the "
+"traditional configure, make, make install routine to be built inside a "
+"flatpak. You can try this using GNOME Dictionary. First, download the source "
+"files, extract them and switch to the resulting directory::"
+msgstr ""
+"Команда ``build`` позволяет существующим приложениям, созданным с использованием "
+"традиционных процедур configure, make, make install, внутри файла "
+"flatpak. Вы можете попробовать это с помощью словаря GNOME. Сначала загрузите исходные "
+"файлы, распакуйте их и перейдите в полученный каталог::"
+
+#: ../../building-simple-apps.rst:42
+msgid ""
+"Then you can use the build command to build and install the source inside "
+"the dictionary directory that was previously made::"
+msgstr ""
+"Затем вы можете использовать команду build для сборки и установки исходного кода внутри "
+"каталога словаря, который был ранее создан::"
+
+#: ../../building-simple-apps.rst:49
+msgid ""
+"Since these are run in a sandbox, the compiler and other tools from the SDK "
+"are used to build and install, rather than those on the host system."
+msgstr ""
+"Поскольку они выполняются в изолированной программной среде, для сборки и установки используются компилятор и другие инструменты из SDK,
+"а не в хост-системе. "
+
+#: ../../building-simple-apps.rst:52
+msgid "Completing the build"
+msgstr "Завершение сборки"
+
+#: ../../building-simple-apps.rst:54
+msgid ""
+"Once an application has been built, the ``build-finish`` command needs to be "
+"used to specify access to different parts of the host, such as networking "
+"and graphics sockets. This command is also used to specify the command that "
+"is used to run the app (done by modifying the metadata file), and to create "
+"the application's exports directory. For example::"
+msgstr "
+"После того, как приложение было построено, необходимо выполнить команду ``build-finish`` "
+"для указания доступа к различным частям хоста, таким как сетевые "
+"и графические сокеты. Эта команда также используется для указания команды, 
+"используемой для запуска приложения "
+"(выполняется путем изменения файла метаданных) и для создания каталога экспорта приложения. Например::"
+
+#: ../../building-simple-apps.rst:58
+msgid ""
+"At this point you have successfully built a flatpak and prepared it to be "
+"run. To test the app, you need to export the Dictionary to a repository, add "
+"that repository and then install and run the app::"
+msgstr "На этом этапе вы успешно создали flatpak и подготовили его 
+"к запуску. Чтобы протестировать приложение, вам необходимо экспортировать словарь в репозиторий, "
+"добавить этот репозиторий, а затем установить и запустить приложение::"
+
+#: ../../building-simple-apps.rst:65
+msgid ""
+"This exports the app, creates a repository called tutorial-repo, installs "
+"the Dictionary application in the per-user installation area and runs it."
+msgstr ""
+"Это экспортирует приложение, создает репозиторий под названием tutorial-repo, устанавливает "
+"приложение "Словарь" в области установки для каждого пользователя и запускает его."

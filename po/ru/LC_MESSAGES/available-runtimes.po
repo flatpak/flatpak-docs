@@ -1,0 +1,253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"PO-Revision-Date: 2021-07-22 21:12+0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+
+#: ../../available-runtimes.rst:2
+msgid "Available Runtimes"
+msgstr "Доступные среды выполнения"
+
+#: ../../available-runtimes.rst:4
+msgid ""
+"This page provides information about available Flatpak runtimes. It is "
+"primarily intended as information for application developers and "
+"distributors."
+msgstr ""
+"На этой странице представлена информация о доступных средах выполнения "
+"Flatpak. Она, в первую очередь, имеет  информационное значение для "
+"разработчиков и распространителей приложений."
+
+#: ../../available-runtimes.rst:6
+msgid ""
+"There are currently three main runtimes available: Freedesktop, GNOME and "
+"KDE. These are all hosted on `Flathub <https://flathub.org/>`_."
+msgstr ""
+"В настоящее время доступны три основных среды выполнения: Freedesktop, GNOME "
+"и KDE. Все они размещены на `Flathub <https://flathub.org/>`_."
+
+#: ../../available-runtimes.rst:9
+msgid "Freedesktop"
+msgstr "Freedesktop"
+
+#: ../../available-runtimes.rst:11
+msgid ""
+"The Freedesktop runtime is the standard runtime that can be used for any "
+"application and contains a set of essential libraries and services, "
+"including D-Bus, GLib, Gtk3, PulseAudio, X11 and Wayland."
+msgstr ""
+"Среда выполнения Freedesktop - это стандартная среда выполнения, которая "
+"может использоваться для любого приложения и содержит набор основных "
+"библиотек и служб, включая D-Bus, GLib, Gtk3, PulseAudio, X11 и Wayland."
+
+#: ../../available-runtimes.rst:13
+msgid "Available Freedesktop runtimes:"
+msgstr "Доступные среды выполнения Freedesktop:"
+
+#: ../../available-runtimes.rst:16 ../../available-runtimes.rst:46
+#: ../../available-runtimes.rst:64
+msgid "ID"
+msgstr "ID"
+
+#: ../../available-runtimes.rst:16 ../../available-runtimes.rst:46
+#: ../../available-runtimes.rst:64
+msgid "Description"
+msgstr "Описание"
+
+#: ../../available-runtimes.rst:18
+msgid "org.freedesktop.Platform"
+msgstr "org.freedesktop.Platform"
+
+#: ../../available-runtimes.rst:18 ../../available-runtimes.rst:48
+#: ../../available-runtimes.rst:66
+msgid "Runtime"
+msgstr "Среда выполнения"
+
+#: ../../available-runtimes.rst:19
+msgid "org.freedesktop.Platform.Locale"
+msgstr "org.freedesktop.Platform.Locale"
+
+#: ../../available-runtimes.rst:19 ../../available-runtimes.rst:49
+#: ../../available-runtimes.rst:67
+msgid "Runtime translations (extension)"
+msgstr "Переносы среды выполнения (расширение)"
+
+#: ../../available-runtimes.rst:20
+msgid "org.freedesktop.Sdk"
+msgstr "org.freedesktop.Sdk"
+
+#: ../../available-runtimes.rst:20 ../../available-runtimes.rst:50
+#: ../../available-runtimes.rst:68
+msgid "SDK"
+msgstr "SDK"
+
+#: ../../available-runtimes.rst:21
+msgid "org.freedesktop.Sdk.Debug"
+msgstr "org.freedesktop.Sdk.Debug"
+
+#: ../../available-runtimes.rst:21 ../../available-runtimes.rst:51
+#: ../../available-runtimes.rst:69
+msgid "SDK debug information (extension)"
+msgstr "Информация об отладке SDK (расширение)"
+
+#: ../../available-runtimes.rst:22
+msgid "org.freedesktop.Sdk.Locale"
+msgstr "org.freedesktop.Sdk.Locale"
+
+#: ../../available-runtimes.rst:22 ../../available-runtimes.rst:52
+#: ../../available-runtimes.rst:70
+msgid "SDK translations (extension)"
+msgstr "Переносы SDK (расширение)"
+
+#: ../../available-runtimes.rst:23
+msgid "org.freedesktop.Sdk.Docs"
+msgstr "org.freedesktop.Sdk.Docs"
+
+#: ../../available-runtimes.rst:23 ../../available-runtimes.rst:53
+#: ../../available-runtimes.rst:71
+msgid "SDK documentation (extension)"
+msgstr "Документация SDK (расширение)"
+
+#: ../../available-runtimes.rst:27
+msgid "GNOME"
+msgstr "GNOME"
+
+#: ../../available-runtimes.rst:29
+msgid ""
+"The GNOME runtime is appropriate for any application that uses the GNOME "
+"platform. It is based on the Freedesktop runtime and adds the GNOME "
+"platform, including:"
+msgstr ""
+"Среда выполнения GNOME подходит для любого приложения, использующего "
+"платформу GNOME. Она основана на среде выполнения Freedesktop и добавляет "
+"платформу GNOME, в том числе:"
+
+#: ../../available-runtimes.rst:31
+msgid "Clutter"
+msgstr "Clutter"
+
+#: ../../available-runtimes.rst:32
+msgid "Gjs"
+msgstr "Gjs"
+
+#: ../../available-runtimes.rst:33
+msgid "GObject Introspection"
+msgstr "Cамоанализ GObject"
+
+#: ../../available-runtimes.rst:34
+msgid "GStreamer"
+msgstr "GStreamer"
+
+#: ../../available-runtimes.rst:35
+msgid "GVFS"
+msgstr "GVFS"
+
+#: ../../available-runtimes.rst:36
+msgid "Libnotify"
+msgstr "Libnotify"
+
+#: ../../available-runtimes.rst:37
+msgid "Libsecret"
+msgstr "Libsecret"
+
+#: ../../available-runtimes.rst:38
+msgid "LibSoup"
+msgstr "LibSoup"
+
+#: ../../available-runtimes.rst:39
+msgid "PyGObject"
+msgstr "PyGObject"
+
+#: ../../available-runtimes.rst:40
+msgid "Vala"
+msgstr "Vala"
+
+#: ../../available-runtimes.rst:41
+msgid "WebKitGTK"
+msgstr "WebKitGTK"
+
+#: ../../available-runtimes.rst:43
+msgid "Available GNOME runtimes:"
+msgstr "Доступные среды выполнения GNOME:"
+
+#: ../../available-runtimes.rst:48
+msgid "org.gnome.Platform"
+msgstr "org.gnome.Platform"
+
+#: ../../available-runtimes.rst:49
+msgid "org.gnome.Platform.Locale"
+msgstr "org.gnome.Platform.Locale"
+
+#: ../../available-runtimes.rst:50
+msgid "org.gnome.Sdk"
+msgstr "org.gnome.Sdk"
+
+#: ../../available-runtimes.rst:51
+msgid "org.gnome.Sdk.Debug"
+msgstr "org.gnome.Sdk.Debug"
+
+#: ../../available-runtimes.rst:52
+msgid "org.gnome.Sdk.Locale"
+msgstr "org.gnome.Sdk.Locale"
+
+#: ../../available-runtimes.rst:53
+msgid "org.gnome.Sdk.Docs"
+msgstr "org.gnome.Sdk.Docs"
+
+#: ../../available-runtimes.rst:57
+msgid "KDE"
+msgstr "KDE"
+
+#: ../../available-runtimes.rst:59
+msgid ""
+"The KDE runtime is also based on the Freedesktop runtime and adds Qt and KDE "
+"Frameworks. It is appropriate for any application that makes use of the KDE "
+"platform and most Qt-based applications."
+msgstr ""
+"Среда выполнения KDE также основана на среде выполнения Freedesktop и "
+"добавляет фреймворки Qt и KDE. Она подходит для любого приложения, "
+"использующего платформу KDE и большинство приложений на основе Qt. "
+
+#: ../../available-runtimes.rst:61
+msgid "Available KDE runtimes:"
+msgstr "Доступные среды выполнения KDE:"
+
+#: ../../available-runtimes.rst:66
+msgid "org.kde.Platform"
+msgstr "org.kde.Platform"
+
+#: ../../available-runtimes.rst:67
+msgid "org.kde.Platform.Locale"
+msgstr "org.kde.Platform.Locale"
+
+#: ../../available-runtimes.rst:68
+msgid "org.kde.Sdk"
+msgstr "org.kde.Sdk"
+
+#: ../../available-runtimes.rst:69
+msgid "org.kde.Sdk.Debug"
+msgstr "org.kde.Sdk.Debug"
+
+#: ../../available-runtimes.rst:70
+msgid "org.kde.Sdk.Locale"
+msgstr "org.kde.Sdk.Locale"
+
+#: ../../available-runtimes.rst:71
+msgid "org.kde.Sdk.Docs"
+msgstr "org.kde.Sdk.Docs"

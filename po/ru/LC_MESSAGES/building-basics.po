@@ -1,0 +1,226 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-11 18:07-0400\n"
+"PO-Revision-Date: 2021-07-22 23:00+0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+
+#: ../../building-basics.rst:2
+msgid "Building Concepts and Setup"
+msgstr "Принципы построения и установка"
+
+#: ../../building-basics.rst:4
+msgid ""
+"The :doc:`basic-concepts` and :doc:`first-build` guides have already shown "
+"how applications get built as Flatpaks, and have introduced many of the core "
+"ideas. This page describes some of these ideas and concepts in more detail. "
+"In doing so, it provides guidance on picking a runtime, getting setup to "
+"build applications, and when to bundle dependencies yourself."
+msgstr ""
+"Руководства :doc:`basic-concepts` и :doc:`first-build` уже показали, как "
+"приложения создаются как Flatpaks, и представили многие из основных идей. На "
+"этой странице более подробно описаны некоторые из этих идей и концепций. При "
+"этом он предоставляет руководство по выбору среды выполнения, настройке для "
+"создания приложений и о том, когда самостоятельно связывать зависимости."
+
+#: ../../building-basics.rst:7
+msgid "Runtimes"
+msgstr "Среда выполнения"
+
+#: ../../building-basics.rst:9
+msgid ""
+"As was described in the :doc:`basic-concepts`, runtimes provide basic "
+"dependencies that can be used by applications. They also provide the "
+"environment that applications run in."
+msgstr ""
+"Как было описано в :doc:`basic-concepts`, среды выполнения предоставляют "
+"базовые зависимости, которые могут использоваться приложениями. Они также "
+"обеспечивают среду, в которой работают приложения."
+
+#: ../../building-basics.rst:11
+msgid ""
+"Flatpak requires each application to specify a runtime, and this runtime "
+"must be present on a system for it to run. Therefore, one of the first "
+"decisions you need to make when building an application with Flatpak, is "
+"which runtime it will use."
+msgstr ""
+"Flatpak требует, чтобы каждое приложение указывало среду выполнения, и эта "
+"среда выполнения должна присутствовать в системе для ее запуска. "
+"Следовательно, одно из первых решений, которое вам необходимо принять при "
+"создании приложения с помощью Flatpak, - это то, какую среду выполнения оно "
+"будет использовать."
+
+#: ../../building-basics.rst:13
+msgid ""
+"An overview of the runtimes that are available can be found in the :doc:"
+"`available-runtimes` page. There are deliberately only a small number of "
+"runtimes to choose from. Typically, runtimes are picked on the basis of "
+"which dependencies an application requires. If a runtime exists that "
+"provides libraries that you plan on using, this is usually the correct "
+"runtime to use!"
+msgstr ""
+"Обзор доступных сред выполнения можно найти на странице :doc:`available-"
+"runtimes`. Намеренно присутствует только небольшое количество сред "
+"выполнения на выбор. Обычно среды выполнения выбираются на основе того, "
+"какие зависимости требуются приложению. Если существует среда выполнения, "
+"которая предоставляет библиотеки, которые вы планируете использовать, обычно "
+"это правильная среда выполнения!"
+
+#: ../../building-basics.rst:17
+msgid ""
+"Runtimes require regular maintenance, and application developers should "
+"generally not consider creating their own."
+msgstr ""
+"Среды выполнения требуют регулярного обслуживания, и разработчикам "
+"приложений, как правило, не следует создавать собственные."
+
+#: ../../building-basics.rst:19
+msgid ""
+"Runtimes are automatically installed for users when they install an "
+"application, and build tools can also automatically install them for you "
+"(``flatpak-builder``'s ``--install-deps-from`` option is useful for this). "
+"However, if you do need to manually install your chosen runtime, this can be "
+"done in the same way as installing an application, with the ``flatpak "
+"install`` command. For example, the command to install the GNOME 3.26 "
+"runtime is::"
+msgstr ""
+"Среды выполнения автоматически устанавливаются для пользователей, когда они "
+"устанавливают приложение, и инструменты сборки также могут автоматически "
+"устанавливать их для вас (для этого полезна опция ``--install-deps-from'' в "
+"``flatpak-builder''). Однако, если вам действительно нужно вручную "
+"установить выбранную среду выполнения, это можно сделать так же, как и "
+"установку приложения, с помощью команды flatpak install. Например, команда "
+"для установки среды выполнения GNOME 3.26::"
+
+#: ../../building-basics.rst:24
+msgid "Software Development Kits (SDKs)"
+msgstr "Наборы для разработки программного обеспечения (SDK)"
+
+#: ../../building-basics.rst:26
+msgid ""
+"Each runtime is paired with an SDK (Software Develpment Kit). For example, "
+"the GNOME 3.26 runtime is accompanied by the GNOME 3.26 SDK. The SDK "
+"includes the same things as the regular runtime, but also includes all the "
+"development resources and tools that are required to build an application, "
+"such as build and packaging tools, header files, compilers and debuggers."
+msgstr ""
+"Каждая среда выполнения связана с SDK (Software Develpment Kit). Например, "
+"среда выполнения GNOME 3.26 сопровождается GNOME 3.26 SDK. SDK включает в "
+"себя то же, что и обычная среда выполнения, но также включает все ресурсы и "
+"инструменты разработки, необходимые для создания приложения, такие как "
+"инструменты сборки и упаковки, файлы заголовков, компиляторы и отладчики."
+
+#: ../../building-basics.rst:28
+msgid ""
+"Applications must be built with the SDK that corresponds to their runtime, "
+"so that applications that use the GNOME 3.26 runtime must be built with the "
+"GNOME 3.26 SDK."
+msgstr ""
+"Приложения должны быть созданы с использованием SDK, соответствующего их "
+"среде выполнения, поэтому приложения, использующие среду выполнения GNOME "
+"3.26, должны быть созданы с использованием GNOME 3.26 SDK."
+
+#: ../../building-basics.rst:30
+msgid ""
+"Like runtimes, SDKs will sometimes be automatically installed for you, but "
+"if you do need to manually install them, they are installed in the same was "
+"as applications and runtimes, such as::"
+msgstr ""
+"Как и среды выполнения, SDK иногда устанавливаются автоматически для вас, но "
+"если вам нужно установить их вручную, они устанавливаются так же, как "
+"приложения и среды выполнения, например::"
+
+#: ../../building-basics.rst:35
+msgid "Bundling"
+msgstr "Объединение"
+
+#: ../../building-basics.rst:37
+msgid ""
+"One of the key advantages of Flatpak is that it allows application authors "
+"to bundle whatever libraries or dependencies that they want. This means that "
+"developers aren't constrained by which libraries are available through Linux "
+"distributions. It also provides flexibility, allowing particular versions of "
+"libraries to be used, or the use of libraries that have been patched."
+msgstr ""
+"Одним из ключевых преимуществ Flatpak является то, что он позволяет авторам "
+"приложений объединять любые библиотеки или зависимости, которые они хотят. "
+"Это означает, что разработчики не ограничены тем, какие библиотеки доступны "
+"в дистрибутивах Linux. Он также обеспечивает гибкость, позволяя использовать "
+"определенные версии библиотек или библиотеки, в которые были внесены "
+"исправления."
+
+#: ../../building-basics.rst:39
+msgid ""
+"While bundling is very powerful and flexible, it also places a greater "
+"maintenance burden on the application developer. Therefore, while it is "
+"possible to bundle as much as you would like, it is generally recommended to "
+"try and keep the number of bundled modules as low as possible. If a "
+"dependency is available as part of a runtime, it is generally better to use "
+"the version from the runtime rather than bundle it yourself."
+msgstr ""
+"Несмотря на то, что объединение является очень мощным и гибким, оно также "
+"возлагает большую нагрузку на разработчика приложения. Поэтому, хотя можно "
+"объединить столько модулей, сколько захотите, обычно рекомендуется стараться "
+"поддерживать как можно меньшее количество связанных модулей. Если "
+"зависимость доступна как часть среды выполнения, обычно лучше использовать "
+"версию из среды выполнения, чем выполнять объединение самостоятельно."
+
+#: ../../building-basics.rst:41
+msgid ""
+"The specifics of how to bundle libraries is covered in the :doc:`manifests` "
+"section."
+msgstr "Специфика объединения библиотек описана в разделе :doc:`manifest`."
+
+#: ../../building-basics.rst:44
+msgid "Base apps"
+msgstr "Базовые приложения"
+
+#: ../../building-basics.rst:46
+msgid ""
+"Flatpak allows almost any module to be bundled as part of an application, "
+"even other applications. Typically, this is done with special-purpose "
+"applications that have been created in order to be bundled. These "
+"applications, called *base apps*, contain dependencies or frameworks that "
+"can be used by other applications, in order to share dependencies."
+msgstr ""
+"Flatpak позволяет объединить практически любой модуль как часть приложения, "
+"даже другие приложения. Обычно это делается с помощью специальных "
+"приложений, которые были созданы для объединения. Эти приложения, называемые "
+"*базовыми приложениями*, содержат зависимости или фреймворки, которые могут "
+"использоваться другими приложениями для обмена зависимостями."
+
+#: ../../building-basics.rst:48
+msgid ""
+"Base apps don't get rebuilt as part of the build process, which makes "
+"building faster (particularly when bundling large dependences). And because "
+"each base app is only built once, it is guaranteed to be identical wherever "
+"it is used, so it will only be saved once on disk."
+msgstr ""
+"Базовые приложения не перестраиваются в процессе сборки, что ускоряет её "
+"(особенно при объединении больших зависимостей). А поскольку каждое базовое "
+"приложение создается только один раз, оно гарантированно будет идентичным, "
+"где бы оно ни использовалось, поэтому оно будет сохранено на диске только "
+"один раз."
+
+#: ../../building-basics.rst:50
+msgid ""
+"A number of base apps are available and, unlike runtimes, they can be built "
+"and published as required."
+msgstr ""
+"Доступен ряд базовых приложений, и, в отличие от сред выполнения, их можно "
+"создавать и публиковать по мере необходимости."

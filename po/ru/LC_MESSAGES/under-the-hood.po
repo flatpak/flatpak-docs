@@ -1,0 +1,204 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"PO-Revision-Date: 2021-07-24 19:30+0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+
+#: ../../under-the-hood.rst:2
+msgid "Under the Hood"
+msgstr "Скрытое содержимое Flatpak"
+
+#: ../../under-the-hood.rst:4
+msgid ""
+"This page provides an overview of how Flatpak works internally. While it "
+"isn't necessary to be familiar with this in order to use Flatpak, some "
+"people might find it interesting. Knowing about Flatpak's architecture also "
+"helps to get a better understanding of how and why it works the way it does, "
+"from a user and application developer perspective."
+msgstr ""
+"На этой странице представлен обзор внутренней работы Flatpak. Хотя не "
+"обязательно знать это, чтобы использовать Flatpak, некоторым это может "
+"показаться интересным. Знание об архитектуре Flatpak также помогает лучше "
+"понять, как и почему она работает именно так, с точки зрения пользователя и "
+"разработчика приложений."
+
+#: ../../under-the-hood.rst:7
+msgid "\"Git for apps\""
+msgstr "\"Git for apps\""
+
+#: ../../under-the-hood.rst:9
+msgid ""
+"Flatpak is built on top of a technology called `OSTree <https://ostree."
+"readthedocs.io/en/latest/manual/introduction/>`_, which is influenced by and "
+"very similar to the Git version control system. Like Git, OSTree allows "
+"versioned data to be tracked and to be distributed between different "
+"repositories. However, where Git is designed to track source files, OSTree "
+"is designed to track binary files and other large data."
+msgstr ""
+"Flatpak построен на основе технологии под названием `OSTree <https://ostree."
+"readthedocs.io/en/latest/manual/introduction/>`_, которая находится под "
+"влиянием системы контроля версий Git и очень похожа на нее. Как и Git, "
+"OSTree позволяет отслеживать версионные данные и распределять их между "
+"различными репозиториями. Однако там, где Git предназначен для отслеживания "
+"исходных файлов, OSTree предназначен для отслеживания двоичных файлов и "
+"других больших данных."
+
+#: ../../under-the-hood.rst:11
+msgid ""
+"Internally, Flatpak therefore works in a similar way to Git, and many "
+"Flatpak concepts are analagous to Git concepts. Like Git, Flatpak uses "
+"repositories to store data, and it tracks the differences between versions."
+msgstr ""
+"Таким образом, внутри Flatpak работает аналогично Git, и многие концепции "
+"Flatpak аналогичны концепциям Git. Как и Git, Flatpak использует репозитории "
+"для хранения данных и отслеживает различия между версиями."
+
+#: ../../under-the-hood.rst:13
+msgid ""
+"With Flatpak, each application, runtime and extension is a branch in a "
+"repository. An identifier triple, such as ``com.company.App/i386/stable`` is "
+"a reference to that branch. The output of a Flatpak build process is a "
+"directory of files which is committed to one of these branches."
+msgstr ""
+"В Flatpak каждое приложение, среда выполнения и расширение - это ветка в "
+"репозитории. Тройная идентификация, например ``com.company.App/i386/"
+"stable``, является ссылкой на эту ветку. Результатом процесса сборки Flatpak "
+"является каталог файлов, который привязан к одной из этих веток."
+
+#: ../../under-the-hood.rst:15
+msgid ""
+"When an application is installed with Flatpak, it is pulled from the remote "
+"into a new branch in a local repository. Links are then generated which "
+"point from the right places in the filesystem to the application's files in "
+"the repository (these are `hard links <https://en.wikipedia.org/wiki/"
+"Hard_link>`_, which are fast to resolve and disk space efficient). In other "
+"words, every application that is installed is stored in a local version "
+"control repository, and is then mapped into the local filesystem."
+msgstr ""
+"Когда приложение устанавливается с помощью Flatpak, оно переносится с "
+"удалённой в новую ветку в локальном репозитории. Затем генерируются ссылки, "
+"которые указывают из нужных мест в файловой системе на файлы приложения в "
+"репозитории (это `жесткие ссылки <https://en.wikipedia.org/wiki/"
+"Hard_link>`_, которые быстро разрешаются и освобождают дисковое "
+"пространство, занимая мало места на диске). Другими словами, каждое "
+"установленное приложение хранится в локальном репозитории управления "
+"версиями, а затем сопоставляется с локальной файловой системой."
+
+#: ../../under-the-hood.rst:17
+msgid ""
+"Version tracking is therefore a core part of Flatpak's architecture, and "
+"this makes updating software to the latest version very efficient. "
+"Versioning also makes rollbacks possible, so it's easy to go back to a "
+"previous version, should that be required."
+msgstr ""
+"Таким образом, отслеживание версий является основной частью архитектуры "
+"Flatpak, и это делает обновление программного обеспечения до последней "
+"версии очень эффективным. Управление версиями также делает возможными "
+"откаты, поэтому при необходимости легко вернуться к предыдущей версии."
+
+#: ../../under-the-hood.rst:19
+msgid ""
+"Storing applications in a local OSTree repository has other advantages. For "
+"example, it allows files that are stored on disk to be deduplicated, so the "
+"same file that belongs to multiple applications (or runtimes) is only stored "
+"once."
+msgstr ""
+"Хранение приложений в локальном репозитории OSTree имеет и другие "
+"преимущества. Например, он позволяет удалять дубликаты файлов, хранящихся на "
+"диске, поэтому один и тот же файл, принадлежащий нескольким приложениям (или "
+"средам выполнения), сохраняется только один раз."
+
+#: ../../under-the-hood.rst:22
+msgid "Underlying technologies"
+msgstr "Базовые технологии"
+
+#: ../../under-the-hood.rst:24
+msgid "Flatpak utilises a number of pre-existing technologies. These include:"
+msgstr "Flatpak использует ряд уже существующих технологий. К ним относятся:"
+
+#: ../../under-the-hood.rst:26
+msgid ""
+"The `bubblewrap <https://github.com/projectatomic/bubblewrap>`_ utility from "
+"`Project Atomic <http://www.projectatomic.io/>`_, which lets unprivileged "
+"users set up and run containers, using kernel features such as:"
+msgstr ""
+"Утилита `bubblewrap <https://github.com/projectatomic/bubblewrap>`_ из "
+"`Project Atomic <http://www.projectatomic.io/>`_, которая позволяет "
+"непривилегированным пользователям настраивать и запускать контейнеры, "
+"используя такие функции ядра, как:"
+
+#: ../../under-the-hood.rst:28
+msgid "Cgroups"
+msgstr "Cgroups"
+
+#: ../../under-the-hood.rst:29
+msgid "Namespaces"
+msgstr "Namespaces"
+
+#: ../../under-the-hood.rst:30
+msgid "Bind mounts"
+msgstr "Bind mounts"
+
+#: ../../under-the-hood.rst:31
+msgid "Seccomp rules"
+msgstr "Seccomp rules"
+
+#: ../../under-the-hood.rst:33
+msgid ""
+"`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_ to set up "
+"cgroups for sandboxes"
+msgstr ""
+"`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_ для "
+"настройки контрольных групп для песочниц"
+
+#: ../../under-the-hood.rst:34
+msgid ""
+"`D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_, a well-"
+"established way to provide high-level APIs to applications"
+msgstr ""
+"`D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_, - хорошо "
+"зарекомендовавший себя способ предоставления высокоуровневых API для "
+"приложений"
+
+#: ../../under-the-hood.rst:35
+msgid ""
+"The OCI format from the `Open Container Initiative <https://www."
+"opencontainers.org/>`_, as a convenient transport format for single-file "
+"bundles"
+msgstr ""
+"Формат OCI из `Open Container Initiative <https://www.opencontainers.org/"
+">`_, как удобный формат транспортирования для однофайловых пакетов"
+
+#: ../../under-the-hood.rst:36
+msgid ""
+"The `OSTree <https://ostree.readthedocs.io/en/latest/>`_ system for "
+"versioning and distributing filesystem trees"
+msgstr ""
+"Система `OSTree <https://ostree.readthedocs.io/en/latest/>`_ для управления "
+"версиями и распространения различных файловых систем"
+
+#: ../../under-the-hood.rst:37
+msgid ""
+"`Appstream <https://www.freedesktop.org/software/appstream/docs/>`_ "
+"metadata, to allow Flatpak applications to show up nicely in software center "
+"applications"
+msgstr ""
+"`Appstream <https://www.freedesktop.org/software/appstream/docs/>`_ - "
+"метаданные, предназначенные для того, чтобы приложения Flatpak хорошо "
+"отображались в приложениях центра программ"

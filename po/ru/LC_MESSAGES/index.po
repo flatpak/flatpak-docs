@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"PO-Revision-Date: 2021-07-24 01:30+0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+
+#: ../../index.rst:2
+msgid "Welcome to Flatpak's documentation!"
+msgstr "Добро пожаловать в документацию Flatpak!"
+
+#: ../../index.rst:4
+msgid ""
+"These docs cover everything you need to know to build and distribute "
+"applications using Flatpak. They begin with a basic introduction to Flatpak, "
+"background information on basic concepts, and a guide to the Flatpak command "
+"line interface. Later sections provide detailed information on building and "
+"distributing applications."
+msgstr ""
+"Эти документы охватывают все, что вам нужно знать для создания и "
+"распространения приложений с помощью Flatpak. Они начинаются с базового "
+"введения в Flatpak, справочной информации об основных концепциях и "
+"руководства по интерфейсу командной строки Flatpak. В последующих разделах "
+"представлена подробная информация о создании и распространении приложений."
+
+#: ../../index.rst:6
+msgid ""
+"The docs are primarily intended for application developers and distributors. "
+"Their content is also relevant to those who have a general interest in "
+"Flatpak."
+msgstr ""
+"Документы в первую очередь предназначены для разработчиков и "
+"распространителей приложений. Их содержание также актуально для тех, кто в "
+"целом интересуется Flatpak."
+
+#: ../../index.rst:8
+msgid ""
+"If you are looking for information about how to use Flatpak to install and "
+"run applications, please refer to `the Flatpak website <http://flatpak."
+"org>`_."
+msgstr ""
+"Если вы ищете информацию о том, как использовать Flatpak для установки и "
+"запуска приложений, посетите `веб-сайт Flatpak <http://flatpak.org>`_."
+
+#: ../../index.rst:11
+msgid "Contents"
+msgstr "Содержание"

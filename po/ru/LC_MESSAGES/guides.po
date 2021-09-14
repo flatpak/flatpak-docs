@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-09 20:19-0400\n"
+"PO-Revision-Date: 2021-07-24 01:03+0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+
+#: ../../guides.rst:2
+msgid "Guides"
+msgstr "Руководство"
+
+#: ../../guides.rst:4
+msgid ""
+"Flatpak provides a range of options and helper tools, which allow building "
+"applications using the most common languages and development platforms. "
+"These pages provide information on these, and are intended to supplement the "
+"standard guidance provided elsewhere in the Flatpak documentation."
+msgstr ""
+"Flatpak предоставляет ряд опций и вспомогательных инструментов, которые "
+"позволяют создавать приложения с использованием наиболее распространенных "
+"языков и платформ разработки. Эти страницы предоставляют информацию об этом "
+"и предназначены для дополнения стандартного руководства, приведенного в "
+"других разделах документации Flatpak."

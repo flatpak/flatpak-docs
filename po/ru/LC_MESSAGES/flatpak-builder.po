@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"PO-Revision-Date: 2021-07-24 00:05+0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+
+#: ../../flatpak-builder.rst:2
+msgid "Flatpak Builder"
+msgstr "Flatpak Builder"
+
+#: ../../flatpak-builder.rst:4
+msgid ""
+"``flatpak-builder`` has already been introduced in :doc:`first-build` and :"
+"doc:`building-introduction`. This page provides additional detail on how to "
+"use ``flatpak-builder``, including the various command options that are "
+"available."
+msgstr ""
+"``flatpak-builder`` уже был представлен в :doc:`first-build` и :doc:"
+"`building-Introduction`. На этой странице представлены дополнительные "
+"сведения о том, как использовать ``flatpak-builder``, включая различные "
+"доступные параметры команд."
+
+#: ../../flatpak-builder.rst:7
+msgid "Exporting"
+msgstr "Экспорт"
+
+#: ../../flatpak-builder.rst:9
+msgid ""
+"``flatpak-builder`` provides two options for exporting an application in "
+"order to run it. The first is to export to a repository, from which the "
+"application can be run. The second is to automatically install locally."
+msgstr ""
+"``Flatpak-builder`` предоставляет два варианта экспорта приложения для его "
+"запуска. Первый - это экспорт в репозиторий, из которого можно запустить "
+"приложение. Второй -  локальная автоматическая установка."
+
+#: ../../flatpak-builder.rst:12
+msgid "Exporting to a repository"
+msgstr "Экспорт в репозиторий"
+
+#: ../../flatpak-builder.rst:14
+msgid ""
+"The ``--repo`` option allows a repository to be specified, for the "
+"application to be exported to. This takes the format::"
+msgstr ""
+"Параметр ``--repo`` позволяет указать репозиторий для экспорта приложения. "
+"Это принимает формат::"
+
+#: ../../flatpak-builder.rst:18
+msgid ""
+"Here, ``<repo>`` is a path to a repository. If no repository exists at the "
+"specified location, the repository will be created. If the application is "
+"already in the specified repository, ``flatpak-builder`` will add the build "
+"as a new version of the existing application."
+msgstr ""
+"Здесь ``<repo>`` - это путь к репозиторию. Если в указанном месте нет "
+"репозитория, он будет создан. Если приложение уже находится в указанном "
+"репозитории, ``flatpak-builder`` добавит сборку как новую версию "
+"существующего приложения."
+
+#: ../../flatpak-builder.rst:22
+msgid ""
+"By default, ``flatpak-builder`` splits off translations and debug "
+"information into separate `.Locale` and `.Debug` extensions. These "
+"extensions are automatically exported into a repository along with the "
+"application."
+msgstr ""
+"По умолчанию ``flatpak-builder`` разделяет переводы и отладочную информацию "
+"на отдельные расширения `.Locale` и `.Debug`. Эти расширения автоматически "
+"экспортируются в репозиторий вместе с приложением."
+
+#: ../../flatpak-builder.rst:26
+msgid "Installing builds directly"
+msgstr "Установка сборок напрямую"
+
+#: ../../flatpak-builder.rst:28
+msgid ""
+"Instead of exporting to a repository, the Flatpak that is produced by "
+"``flatpak-builder`` can be automatically installed locally, using the ``--"
+"install`` option::"
+msgstr ""
+"Вместо экспорта в репозиторий Flatpak, созданный с помощью ``flatpak-"
+"builder``, можно автоматически установить локально с помощью параметра ``--"
+"install``::"
+
+#: ../../flatpak-builder.rst:32
+msgid ""
+"This approach has the advantage of skipping the separate install step that "
+"is needed when exporting to a repository."
+msgstr ""
+"Преимущество этого подхода в том, что он пропускает отдельный этап "
+"установки, необходимый при экспорте в репозиторий."
+
+#: ../../flatpak-builder.rst:35
+msgid "Signing"
+msgstr "Подписывание"
+
+#: ../../flatpak-builder.rst:37
+msgid ""
+"Every commit to a Flatpak repository should be signed with a GPG signature. "
+"If ``flatpak-builder`` is being used to modify or create a repository, a GPG "
+"key should therefore be passed to it. This can be done with the ``--gpg-"
+"sign`` option, such as::"
+msgstr ""
+"Каждый коммит в репозиторий Flatpak должен быть подписан подписью GPG. Если "
+"для изменения или создания репозитория используется ``flatpak-builder``, ему "
+"следует передать ключ GPG. Это можно сделать с помощью параметра ``--gpg-"
+"sign``, например::"
+
+#: ../../flatpak-builder.rst:41
+msgid ""
+"Here, ``<key>`` is the ID of the GPG key that is to be used. The ``--gpg-"
+"homedir`` option can also be used to specify the home directory of the key "
+"that is being used."
+msgstr ""
+"Здесь <key> - это идентификатор ключа GPG, который будет использоваться. "
+"Параметр ``--gpg-homedir`` также можно использовать для указания домашнего "
+"каталога используемого ключа."
+
+#: ../../flatpak-builder.rst:43
+msgid ""
+"Though it generally isn't recommended, it is possible not to use GPG "
+"verification. In this case, the ``--no-gpg-verify`` option should be used "
+"when adding the repository. Note that it is necessary to become root in "
+"order to update a repository that does not have GPG verification enabled."
+msgstr ""
+"Хотя обычно это не рекомендуется, можно не использовать проверку GPG. В этом "
+"случае при добавлении репозитория следует использовать параметр ``--no-gpg-"
+"verify``. Обратите внимание, что необходимо стать пользователем root, чтобы "
+"обновить репозиторий, в котором не включена проверка GPG."
