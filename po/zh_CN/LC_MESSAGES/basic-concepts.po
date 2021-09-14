@@ -2,18 +2,18 @@
 # ZiqiangXu <ziqiang_xu@yeah.net>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-10-28 10:55+0000\n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2018-10-28 10:55-0400\n"
 "Last-Translator: ZiqiangXu <ziqiang_xu@yeah.net>\n"
-"Language-Team: Chinese (Simplified, China)\n"
 "Language: zh_Hans_CN\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Chinese (Simplified, China)\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 4.6.2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../basic-concepts.rst:2
 msgid "Basic concepts"
@@ -22,136 +22,130 @@ msgstr "基本概念"
 #: ../../basic-concepts.rst:4
 msgid ""
 "Flatpak can be understood through a small number of key concepts. It is "
-"useful to be familiar with these before learning about how to use Flatpak "
-"from the command line, or using it to build applications."
+"useful to be familiar with these before learning about how to use Flatpak"
+" from the command line, or using it to build applications."
 msgstr "可以通过很少的关键概念来理解Flatpak，在学习如何使用Flatpak的命令行或者用它构建应用之前熟悉他们是很有用的。"
 
-#: ../../basic-concepts.rst:9
+#: ../../basic-concepts.rst:11
 msgid "Runtimes"
 msgstr "运行时（runtime）"
 
-#: ../../basic-concepts.rst:11
-msgid ""
-"Runtimes provide the basic dependencies that are used by applications. Each "
-"application must be built against a runtime, and this runtime must be "
-"installed on a host system in order for the application to run (Flatpak can "
-"automatically install the runtime required by an application). Multiple "
-"different runtimes can be installed at the same time, including different "
-"versions of the same runtime."
-msgstr ""
-"运行时提供应用程序使用的基本依赖项。每个应用程序都必须针对运行时构建，并且这个运行时必须安装在主机系统上，以便应用程序运行(Flatpak可以自动安装应用程序所需的运行时)。可以同时安装多个不同的运行时以及同一运行时的不同版本。"
-
 #: ../../basic-concepts.rst:13
+msgid ""
+"Runtimes provide the basic dependencies that are used by applications. "
+"Each application must be built against a runtime, and this runtime must "
+"be installed on a host system in order for the application to run "
+"(Flatpak can automatically install the runtime required by an "
+"application). Multiple different runtimes can be installed at the same "
+"time, including different versions of the same runtime."
+msgstr "运行时提供应用程序使用的基本依赖项。每个应用程序都必须针对运行时构建，并且这个运行时必须安装在主机系统上，以便应用程序运行(Flatpak可以自动安装应用程序所需的运行时)。可以同时安装多个不同的运行时以及同一运行时的不同版本。"
+
+#: ../../basic-concepts.rst:20
 msgid ""
 "Runtimes are distribution agnostic and do not depend on particular "
 "distribution versions. This means that they provide a stable, cross-"
-"distribution base for applications, and allow applications to continue to "
-"work irrespective of operating system updates."
-msgstr ""
-"运行时是发行版无关的，而且不依赖发行版的特定版本。这意味着他们为应用程序提供了一个稳定、跨发行版的基础，这使得应用程序可以不管操作系统的升级"
+"distribution base for applications, and allow applications to continue to"
+" work irrespective of operating system updates."
+msgstr "运行时是发行版无关的，而且不依赖发行版的特定版本。这意味着他们为应用程序提供了一个稳定、跨发行版的基础，这使得应用程序可以不管操作系统的升级"
 
-#: ../../basic-concepts.rst:16
+#: ../../basic-concepts.rst:26
 msgid "Bundled libraries"
 msgstr "捆绑库"
 
-#: ../../basic-concepts.rst:18
+#: ../../basic-concepts.rst:28
 msgid ""
-"If an application requires any dependencies that aren't in its runtime, they"
-" can be bundled as part of the application. This gives application "
-"developers flexibility regarding the dependencies that they use, including "
-"using:"
-msgstr ""
-"如果一个应用程序要求的依赖不在他的运行时里，这些依赖可以作为应用程序的一部分。这给了应用程序开发人员关于他们使用的依赖关系的灵活性，包括使用："
+"If an application requires any dependencies that aren't in its runtime, "
+"they can be bundled as part of the application. This gives application "
+"developers flexibility regarding the dependencies that they use, "
+"including using:"
+msgstr "如果一个应用程序要求的依赖不在他的运行时里，这些依赖可以作为应用程序的一部分。这给了应用程序开发人员关于他们使用的依赖关系的灵活性，包括使用："
 
-#: ../../basic-concepts.rst:20
-msgid "libraries that aren't available in a distribution or runtime"
+#: ../../basic-concepts.rst:32
+#, fuzzy
+msgid "libraries that aren't available in a runtime"
 msgstr "某个发行版或运行时不可用的库"
 
-#: ../../basic-concepts.rst:21
-msgid ""
-"different versions of libraries from the ones that are in a distribution or "
-"runtime"
+#: ../../basic-concepts.rst:33
+#, fuzzy
+msgid "different versions of libraries from the ones that are in a runtime"
 msgstr "某个发行版或运行时包含的库的另一版本"
 
-#: ../../basic-concepts.rst:22
+#: ../../basic-concepts.rst:34
 msgid "patched versions of libraries"
 msgstr "某个库的补丁版本"
 
-#: ../../basic-concepts.rst:25
+#: ../../basic-concepts.rst:37
 msgid "Sandboxes"
 msgstr "沙箱"
 
-#: ../../basic-concepts.rst:27
+#: ../../basic-concepts.rst:39
 msgid ""
-"With Flatpak, each application is built and run in an isolated environment, "
-"which is called the 'sandbox'. Each sandbox contains an application and its "
-"runtime. By default, the application can only access the contents of its "
-"sandbox. Access to user files, network, graphics sockets, subsystems on the "
-"bus and devices have to be explicitly granted. Access to other things, such "
-"as other processes, is deliberately not possible."
-msgstr ""
-"使用Flatpak，每个应用程序都构建和运行在被称为“沙箱”的独立环境。每个沙箱包含一个应用和它的运行时。默认的，这个应用只能访问沙箱里面的内容。要访问用户文件、网络、图形套接字、总线上的子系统和设备必须被显式地授权。访问其它的东西，比如其它进程，是故意被设计成不可能的"
+"With Flatpak, each application is built and run in an isolated "
+"environment, which is called the 'sandbox'. Each sandbox contains an "
+"application and its runtime. By default, the application can only access "
+"the contents of its sandbox. Access to user files, network, graphics "
+"sockets, subsystems on the bus and devices have to be explicitly granted."
+" Access to other things, such as other processes, is deliberately not "
+"possible."
+msgstr "使用Flatpak，每个应用程序都构建和运行在被称为“沙箱”的独立环境。每个沙箱包含一个应用和它的运行时。默认的，这个应用只能访问沙箱里面的内容。要访问用户文件、网络、图形套接字、总线上的子系统和设备必须被显式地授权。访问其它的东西，比如其它进程，是故意被设计成不可能的"
 
-#: ../../basic-concepts.rst:29
+#: ../../basic-concepts.rst:46
 msgid ""
-"By necessity, some resources that are inside the sandbox need to be exposed "
-"outside, to be used by the host system. These are known as 'exports', since "
-"they are files that are exported out of the sandbox, and include things like"
-" the application's ``.desktop`` file and icon."
-msgstr ""
-"一些沙箱的内部资源需要对外暴露，被宿主操作系统使用。这些被称为“导出”，因为它们是从沙箱中导出的文件，包括应用程序的“.desktop”文件和图标"
+"By necessity, some resources that are inside the sandbox need to be "
+"exposed outside, to be used by the host system. These are known as "
+"'exports', since they are files that are exported out of the sandbox, and"
+" include things like the application's ``.desktop`` file and icon."
+msgstr "一些沙箱的内部资源需要对外暴露，被宿主操作系统使用。这些被称为“导出”，因为它们是从沙箱中导出的文件，包括应用程序的“.desktop”文件和图标"
 
-#: ../../basic-concepts.rst:32
+#: ../../basic-concepts.rst:52
 msgid "Portals"
 msgstr "门户"
 
-#: ../../basic-concepts.rst:34
+#: ../../basic-concepts.rst:54
 msgid ""
 "Portals are a mechanism through which applications can interact with the "
-"host environment from within a sandbox. They give the ability to interact "
-"with data, files and services without the need to add sandbox permissions."
+"host environment from within a sandbox. They give the ability to interact"
+" with data, files and services without the need to add sandbox "
+"permissions."
 msgstr "门户是一种机制，通过它，应用程序可以在沙箱中与宿主环境进行交互。它们提供了与数据、文件和服务交互的能力，这不需要添加沙箱权限"
 
-#: ../../basic-concepts.rst:36
+#: ../../basic-concepts.rst:58
 msgid ""
 "Examples of capabilities that can be accessed through portals include "
-"opening files through a file chooser dialog, or printing. Interface toolkits"
-" can implement transparent support for portals, so access to resources "
-"outside of the sandbox will work securely and out of the box."
-msgstr ""
-"可以通过门户访问的功能示例包括通过文件选择器对话框打开文件或打印。接口工具包可以实现对门户的直接支持，从而实现对沙箱外资源的安全、便捷的访问。"
+"opening files through a file chooser dialog, or printing. Interface "
+"toolkits can implement transparent support for portals, so access to "
+"resources outside of the sandbox will work securely and out of the box."
+msgstr "可以通过门户访问的功能示例包括通过文件选择器对话框打开文件或打印。接口工具包可以实现对门户的直接支持，从而实现对沙箱外资源的安全、便捷的访问。"
 
-#: ../../basic-concepts.rst:38
-msgid ""
-"More information about portals can be found in :doc:`sandbox-permissions`."
+#: ../../basic-concepts.rst:63
+msgid "More information about portals can be found in :doc:`sandbox-permissions`."
 msgstr "更多关于门户的学习资源可以在  :doc:`sandbox-permissions` 找到"
 
-#: ../../basic-concepts.rst:41
+#: ../../basic-concepts.rst:66
 msgid "Repositories"
 msgstr "仓库"
 
-#: ../../basic-concepts.rst:43
+#: ../../basic-concepts.rst:68
 msgid ""
-"Flatpak applications and runtimes are typically stored and published using "
-"repositories, which behave very similarly to Git repositories. A Flatpak "
-"repository can contain a single object or multiple objects, and each object "
-"is versioned, which allows upgrading and even downgrading."
-msgstr ""
-"Flatpak应用和运行时通常使用仓库存储和发布，这个仓库和git仓库类似。一个Flatpak仓库可以包含单个或者多个对象，而且每个对象都是版本化的，可以升级和降级。"
+"Flatpak applications and runtimes are typically stored and published "
+"using repositories, which behave very similarly to Git repositories. A "
+"Flatpak repository can contain a single object or multiple objects, and "
+"each object is versioned, which allows upgrading and even downgrading."
+msgstr "Flatpak应用和运行时通常使用仓库存储和发布，这个仓库和git仓库类似。一个Flatpak仓库可以包含单个或者多个对象，而且每个对象都是版本化的，可以升级和降级。"
 
-#: ../../basic-concepts.rst:45
+#: ../../basic-concepts.rst:73
 msgid ""
-"Each system which is using Flatpak can be configured to access any number of"
-" remote repositories. Once a system has been configured to access a "
-"'remote', the remote repository's content can be inspected and searched, and"
-" it can be used as the source of applications and runtimes."
-msgstr ""
-"每个使用Flatpak的系统都可以配置多个远程仓库。一旦一个系统被配置成可以访问某个远程仓库，这个远程仓库的内容就可以被检测和搜索，它也可以被用作应用和运行时的源"
+"Each system which is using Flatpak can be configured to access any number"
+" of remote repositories. Once a system has been configured to access a "
+"'remote', the remote repository's content can be inspected and searched, "
+"and it can be used as the source of applications and runtimes."
+msgstr "每个使用Flatpak的系统都可以配置多个远程仓库。一旦一个系统被配置成可以访问某个远程仓库，这个远程仓库的内容就可以被检测和搜索，它也可以被用作应用和运行时的源"
 
-#: ../../basic-concepts.rst:47
+#: ../../basic-concepts.rst:78
 msgid ""
 "When an update is performed, new versions of installed applications and "
-"runtimes are downloaded from the relevant remotes. Like with Git, only the "
-"difference between versions is downloaded, which makes the process very "
-"efficient."
+"runtimes are downloaded from the relevant remotes. Like with Git, only "
+"the difference between versions is downloaded, which makes the process "
+"very efficient."
 msgstr "执行更新时，应用和runtime会从相关的远程下载。和git一样，只有不同的部分会下载，使得升级过程十分高效。"
+

@@ -3,193 +3,278 @@
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-# TingPing <tingping@tingping.se>, 2018. #zanata
+# Markus Richter <semanticdesign@pm.me>, 2019. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-05-20 10:36+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2019-06-26 12:05-0400\n"
+"Last-Translator: Markus Richter <semanticdesign@pm.me>\n"
 "Language: de\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: de <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"Generated-By: Babel 2.5.1\n"
-"X-Generator: Zanata 4.6.2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../first-build.rst:2
 msgid "Building your first Flatpak"
-msgstr ""
+msgstr "Erstellen des ersten Flatpaks"
 
 #: ../../first-build.rst:4
 msgid ""
-"This tutorial provides a quick introduction to building Flatpaks. In it, you"
-" will learn how to create a basic Flatpak application, which can be "
+"This tutorial provides a quick introduction to building Flatpaks. In it, "
+"you will learn how to create a basic Flatpak application, which can be "
 "installed and run."
 msgstr ""
+"Dieses Tutorial liefert eine schnelle Einführung in die Erstellung von "
+"Flatpaks. In diesem lernt man, wie man grundsätzlich eine einfache "
+"Flatpak-Anwendung erstellt, die dann installiert und gestartet werden "
+"kann."
 
-#: ../../first-build.rst:6
+#: ../../first-build.rst:8
+#, fuzzy
 msgid ""
 "In order to complete this tutorial, you should have followed the `setup "
-"guide on flatpak.org <http://flatpak.org/setup/>`_. You also need to have "
-"installed ``flatpak-builder``, which is usually available from the same "
-"repository as the ``flatpak`` package."
+"guide on flatpak.org <http://flatpak.org/setup/>`_. You also need to have"
+" installed ``flatpak-builder``, which is usually available from the same "
+"repository as the ``flatpak`` package (e.g. use ``apt`` or ``dnf``). You "
+"can also install it as a flatpak with ``flatpak install flathub "
+"org.flatpak.Builder``."
 msgstr ""
+"Um dieses Tutorial durchführen zu können, sollte das `Setup auf "
+"flatpak.org <http://flatpak.org/setup/>`_. durchgeführt worden sein. "
+"Ebenso muss das Paket ``flatpak-builder`` installiert sein, welches sich "
+"für gewöhnlich im gleichen Repository wie das ``flatpak``-Paket befindet."
 
-#: ../../first-build.rst:9
+#: ../../first-build.rst:15
 msgid "1. Install a runtime and the matching SDK"
-msgstr ""
+msgstr "1. Installieren einer Laufzeitumgebung und des zugehörigen SDK"
 
-#: ../../first-build.rst:11
+#: ../../first-build.rst:17
 msgid ""
-"Flatpak requires every app to specify a runtime that it uses for its basic "
-"dependencies. Each runtime has a matching SDK (Software Development Kit), "
-"which contains all the things that are in the runtime, plus headers and "
-"development tools. This SDK is required to build apps for the runtime."
+"Flatpak requires every app to specify a runtime that it uses for its "
+"basic dependencies. Each runtime has a matching SDK (Software Development"
+" Kit), which contains all the things that are in the runtime, plus "
+"headers and development tools. This SDK is required to build apps for the"
+" runtime."
 msgstr ""
+"Flatpak fordert von jeder Anwendung, eine Laufzeitumgebung zu "
+"spezifizieren, die für es für die Auflösung der grundsätzlichen "
+"Abhängigkeiten benötigt. Jede Laufzeitumgebung hat ein zugehöriges SDK "
+"(Software Development Kit), das alle Bestandteile der Laufzeitumgebung "
+"enthält, sowie Header-Dateien und Entwicklung-Tools. Das SDK wird "
+"benötigt, um Anwendungen für die Laufzeitumgebung zu erstellen."
 
-#: ../../first-build.rst:16
+#: ../../first-build.rst:22
+#, fuzzy
 msgid ""
-"In this tutorial we will use the Freedesktop 1.6 runtime and SDK. To install"
-" these, run::"
+"In this tutorial we will use the Freedesktop 21.08 runtime and SDK. To "
+"install these, run::"
 msgstr ""
+"In diesem Tutorial verwenden wir Laufzeitumgebung und SDK zu Freedesktop "
+"18.08. Um diese zu installieren, verwendet man:: "
 
-#: ../../first-build.rst:21
+#: ../../first-build.rst:28
 msgid "2. Create the app"
-msgstr ""
+msgstr "2. Erstellen der App"
 
-#: ../../first-build.rst:23
+#: ../../first-build.rst:30
 msgid ""
-"The app that is going to be created for this tutorial is a simple script. To"
-" create it, copy the following::"
+"The app that is going to be created for this tutorial is a simple script."
+" To create it, copy the following::"
 msgstr ""
+"Die Anwendung, die für dieses Tutorial erstellt wird, ist ein einfaches "
+"Skript. Um sie zu erstellen, kopiert man Folgendes::"
 
-#: ../../first-build.rst:29
+#: ../../first-build.rst:36
 msgid "Now paste this into an empty file and save it as ``hello.sh``."
-msgstr ""
+msgstr "Dies wird in eine leere Datei eingefügt und als ``hello.sh`` gespeichert."
 
-#: ../../first-build.rst:32
+#: ../../first-build.rst:39
 msgid "3. Add a manifest"
-msgstr ""
+msgstr "3. Hinzufügen eines Manifests"
 
-#: ../../first-build.rst:34
+#: ../../first-build.rst:41
 msgid ""
-"Each Flatpak is built using a manifest file which provides basic information"
-" about the application and instructions for how it is to be built. To add a "
-"manifest to the hello world app, add the following to an empty file:"
+"Each Flatpak is built using a manifest file which provides basic "
+"information about the application and instructions for how it is to be "
+"built. To add a manifest to the hello world app, add the following to an "
+"empty file:"
 msgstr ""
+"Jedes Flatpak wird unter Verwendung einer Manifest-Datei gebaut, dieses "
+"enthält grundlegende Informationen über die Anwendung und Instruktionen "
+"darüber, wie es gebaut werden soll. Um ein Manifest zu der ``hello "
+"world``-anwendung hinzuzufügen, fügt man das Folgende in eine leere Datei"
+" ein::"
 
 #: ../../first-build.rst:61
+#, fuzzy
 msgid ""
 "Now save the file alongside ``hello.sh`` and call it "
-"``org.flatpak.Hello.json``."
+"``org.flatpak.Hello.yml``."
 msgstr ""
+"Die Datei wird nun neben ``hello.sh`` gespeichert und "
+"``org.flatpak.Hello.json`` genannt."
 
-#: ../../first-build.rst:63
+#: ../../first-build.rst:64
 msgid ""
-"In a more complex application, the manifest would list multiple modules. The"
-" last one would typically be the application itself, and the earlier ones "
-"would be dependencies that are bundled with the app because they are not "
-"part of the runtime."
+"In a more complex application, the manifest would list multiple modules. "
+"The last one would typically be the application itself, and the earlier "
+"ones would be dependencies that are bundled with the app because they are"
+" not part of the runtime."
 msgstr ""
+"In einer komplexeren Anwendung würde das Manifest verschiedene Module "
+"auflisten. Das letzte Modul würde standardmäßig die Anwendung selbst sein"
+" und die davor aufgelisteten Module würden Abhängigkeiten sein, die mit "
+"der Anwendung gebündelt werden, da sie kein Bestandteil der "
+"Laufzeitumgebung sind."
 
-#: ../../first-build.rst:69
+#: ../../first-build.rst:70
 msgid "4. Build the application"
-msgstr ""
+msgstr "4. Erzeugen der Anwendung"
 
-#: ../../first-build.rst:71
+#: ../../first-build.rst:72
 msgid ""
-"Now that the app has a manifest, ``flatpak-builder`` can be used to build "
-"it. This is done by specifying the manifest file and a target directory::"
+"Now that the app has a manifest, ``flatpak-builder`` can be used to build"
+" it. This is done by specifying the manifest file and a target "
+"directory::"
 msgstr ""
+"Nachdem die Anwendung ein Manifest besitzt, kann ``flatpak-builder`` "
+"verwendet werden, um sie zu erzeugen. Durchgeführt wird dies, indem ein "
+"Zielverzeichnis und die Manifest-Datei angegeben wird::"
 
-#: ../../first-build.rst:76
+#: ../../first-build.rst:77
 msgid ""
 "This command will build each module that is listed in the manifest and "
-"install it to the ``/app`` subdirectory, inside the ``build-dir`` directory."
+"install it to the ``/app`` subdirectory, inside the ``build-dir`` "
+"directory."
 msgstr ""
+"Dieses Kommando erzeugt jedes Modul, das im Manifest gelistet ist und "
+"installiert es, innerhalb des ``build-dir``-Verzeichnisses, in das "
+"``/app``-Unterverzeichnis."
 
-#: ../../first-build.rst:80
+#: ../../first-build.rst:81
 msgid "5. Test the build"
-msgstr ""
+msgstr "5. Testen des Builds"
 
-#: ../../first-build.rst:82
+#: ../../first-build.rst:83
 msgid "To verify that the build was successful, run the following::"
 msgstr ""
+"Um zu testen, ob der Build erfolgreich war, verwendet man dieses "
+"Kommando::"
 
-#: ../../first-build.rst:86
+#: ../../first-build.rst:88
 msgid "Congratulations, you've made an app!"
-msgstr ""
-
-#: ../../first-build.rst:89
-msgid "6. Put the app in a repository"
-msgstr ""
+msgstr "Die erste Anwendung wurde damit erfolgreich erstellt."
 
 #: ../../first-build.rst:91
-msgid ""
-"Before you can install and run the app, it first needs to be put in a "
-"repository. This is done by passing the ``--repo`` argument to ``flatpak-"
-"builder``::"
-msgstr ""
+msgid "6. Put the app in a repository"
+msgstr "6. Die Anwendung in ein Repository legen"
 
-#: ../../first-build.rst:96
+#: ../../first-build.rst:93
+#, fuzzy
+msgid ""
+"If you want to share the application you can put it in a repository. This"
+" is done by passing the ``--repo`` argument to ``flatpak-builder``::"
+msgstr ""
+"Bevor die Anwendung installiert und gestartet werden kann, muss sie "
+"zuerst in ein Repository gelegt werden. Dies wird durchgeführt, indem das"
+" ``--repo``-Argument an ``flatpak-builder``weitergereicht wird::"
+
+#: ../../first-build.rst:99
 msgid ""
 "This does the build again, and at the end exports the result to a local "
-"directory called ``repo``. Note that ``flatpak-builder`` keeps a cache of "
-"previous builds in the ``.flatpak-builder`` subdirectory, so doing a second "
-"build like this is very fast."
+"directory called ``repo``. Note that ``flatpak-builder`` keeps a cache of"
+" previous builds in the ``.flatpak-builder`` subdirectory, so doing a "
+"second build like this is very fast."
 msgstr ""
+"Dies stößt den Build-Prozess erneut an und exportiert das Resultat am "
+"Ende in ein lokales Verzeichnis namens ``repo``. Zu beachten ist, dass "
+"``flatpak-builder`` einen Cache behält von vorherigen Builds im "
+"``flatpak-builder``-Unterverzeichnis, somit kann sehr schnell ein zweiter"
+" Build, wie dieser, erzeugt werden."
 
-#: ../../first-build.rst:101
+#: ../../first-build.rst:104
 msgid ""
 "This second time we passed in ``--force-clean``, which means that the "
-"previously created ``build-dir`` directory was deleted before the new build "
-"was started."
+"previously created ``build-dir`` directory was deleted before the new "
+"build was started."
 msgstr ""
+"Im zweiten Durchlauf haben wir ``--force-clean`` durchgereicht, was "
+"bedeutet, dass das zuvor erzeugte ``build-dir``-Verzeichnis gelöscht "
+"wurde, bevor der neue Build angestoßen wird."
 
-#: ../../first-build.rst:105
-msgid "7. Install the app"
-msgstr ""
-
-#: ../../first-build.rst:107
+#: ../../first-build.rst:108
 msgid ""
-"Now we're ready to add the repository that was just created and install the "
-"app. This is done with two commands::"
+"In order for your application to show up in application stores while "
+"testing with a local repository, you might have to run ``flatpak build-"
+"update-repo repo``. For more information how to publish to application "
+"stores see `Appdata files <http://docs.flatpak.org/en/latest/freedesktop-"
+"quick-reference.html#appdata-files>`_."
 msgstr ""
 
 #: ../../first-build.rst:113
-msgid ""
-"The first command adds the repository that was created in the previous step."
-" The second command installs the app from the repository."
-msgstr ""
+msgid "7. Install the app"
+msgstr "7. Installieren der Anwendung"
 
-#: ../../first-build.rst:116
+#: ../../first-build.rst:115
 msgid ""
-"Both these commands use the ``--user`` argument, which means that the "
-"repository and the app are added per-user rather than system-wide. This is "
-"useful for testing."
+"Now we're ready to add the repository that was just created and install "
+"the app. This is done with two commands::"
 msgstr ""
+"Nun ist alles so weit vorbereitet, um das Repository, das eben erstellt "
+"wurde, hinzuzufügen und die Anwendung zu installieren. Dies wird mit zwei"
+" Kommandos durchgeführt::"
 
-#: ../../first-build.rst:119
+#: ../../first-build.rst:121
 msgid ""
-"Note that the repository was added with ``--no-gpg-verify``, since a GPG key"
-" wasn't specified when the app was built. This is fine for testing, but for "
-"official repositories you should sign them with a private GPG key."
+"The first command adds the repository that was created in the previous "
+"step. The second command installs the app from the repository."
 msgstr ""
+"Das erste Kommando fügt das Repository hinzu, das im vorherigen Schritt "
+"erzeugt wurde. Das zweite Kommando installiert die Anwendung vom "
+"Repository."
 
 #: ../../first-build.rst:124
-msgid "8. Run the app"
+msgid ""
+"Both these commands use the ``--user`` argument, which means that the "
+"repository and the app are added per-user rather than system-wide. This "
+"is useful for testing."
 msgstr ""
+"Beide Kommandos verwenden das ``--user``-Argument, damit wird das "
+"Repository für den jeweiligen Benutzer hinzugefügt – und nicht "
+"systemweit. Dies ist sinnvoll für Testläufe."
 
-#: ../../first-build.rst:126
+#: ../../first-build.rst:128
+msgid ""
+"Note that the repository was added with ``--no-gpg-verify``, since a GPG "
+"key wasn't specified when the app was built. This is fine for testing, "
+"but for official repositories you should sign them with a private GPG "
+"key."
+msgstr ""
+"Hierbei ist zu beachten, dass das Repository mit ``--no-gpg-verify`` "
+"hinzugefügt wurde, da kein GPG-Schlüssel spezifiziert wurde, als die "
+"Anwendung erzeugt wurde. Dies ist gut zum Testen, aber für offizielle "
+"Repositorys sollten diese mit einem privaten GPG-Schlüssel signiert sein."
+
+#: ../../first-build.rst:133
+msgid "8. Run the app"
+msgstr "8. Starten der Anwendung"
+
+#: ../../first-build.rst:135
 msgid ""
 "All that's left is to try the app. This can be done with the following "
 "command::"
 msgstr ""
+"Zum Abschluss kann die Anwendung getestet werden. Um dies durchzuführen "
+"wird folgendes Kommando eingegeben::"
 
-#: ../../first-build.rst:130
+#: ../../first-build.rst:140
 msgid "This runs the app, so that it prints 'Hello world, from a sandbox'."
 msgstr ""
+"Das startet die Anwendung und gibt den Text 'Hello world, from a sandbox'"
+" aus."
+

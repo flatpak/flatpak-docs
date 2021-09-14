@@ -1,10 +1,11 @@
+# PikachuHy <pikachuhy@163.com>, 2018. #zanata
 # WTZ <zwpwjwtz@126.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-10-10 07:32+0000\n"
+"PO-Revision-Date: 2018-11-03 11:04-0400\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language-Team: Chinese (Simplified, China)\n"
 "Language: zh_Hans_CN\n"
@@ -25,8 +26,8 @@ msgid ""
 "into requirements for applications, guidance on key decisions, information "
 "on how to use ``flatpak-builder``, and how to write manifest files."
 msgstr ""
-"这个章节包含了如何构建一个Flatpak应用的详细信息。它介绍了构建过程的概况，如何解决应用程序依赖，如何使用  `` flatpak-builder "
-"`` ，以及书写清单文件的关键的指南和信息。"
+"这个章节包含了如何构建一个Flatpak应用的详细信息。它介绍了构建过程的概况，如何解决应用程序依赖，如何使用  ``flatpak-builder``"
+" ，以及书写清单文件的关键的指南和信息。"
 
 #: ../../building.rst:6
 msgid ""

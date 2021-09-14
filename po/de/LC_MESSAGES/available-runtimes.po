@@ -6,19 +6,18 @@
 # TingPing <tingping@tingping.se>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-05-20 10:36+0000\n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2018-05-20 10:36-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: de\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: de <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"Generated-By: Babel 2.5.1\n"
-"X-Generator: Zanata 4.6.2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../available-runtimes.rst:2
 msgid "Available Runtimes"
@@ -31,209 +30,295 @@ msgid ""
 "distributors."
 msgstr ""
 
-#: ../../available-runtimes.rst:6
+#: ../../available-runtimes.rst:7
 msgid ""
-"There are currently three main runtimes available: Freedesktop, GNOME and "
-"KDE. These are all hosted on `Flathub <https://flathub.org/>`_."
+"There are currently three main runtimes available: Freedesktop, GNOME and"
+" KDE. These are all hosted on `Flathub <https://flathub.org/>`_."
 msgstr ""
 
-#: ../../available-runtimes.rst:9
+#: ../../available-runtimes.rst:10
+msgid ""
+"What is mentioned here is just a high level look at the contents. To have"
+" up to date information simply install the runtime and open a shell "
+"inside of it (``flatpak run org.freedesktop.Sdk//21.08``) from there you "
+"can look around or use tools like ``pkg-config --list-all``. In the "
+"runtime shell you can also inspect ``/usr/manifest.json``, which lists "
+"the sources used to build it."
+msgstr ""
+
+#: ../../available-runtimes.rst:17
 msgid "Freedesktop"
 msgstr ""
 
-#: ../../available-runtimes.rst:11
+#: ../../available-runtimes.rst:19
 msgid ""
 "The Freedesktop runtime is the standard runtime that can be used for any "
 "application and contains a set of essential libraries and services, "
 "including D-Bus, GLib, Gtk3, PulseAudio, X11 and Wayland."
 msgstr ""
 
-#: ../../available-runtimes.rst:13
-msgid "Available Freedesktop runtimes:"
-msgstr ""
-
-#: ../../available-runtimes.rst:16 ../../available-runtimes.rst:46
-#: ../../available-runtimes.rst:64
-msgid "ID"
-msgstr ""
-
-#: ../../available-runtimes.rst:16 ../../available-runtimes.rst:46
-#: ../../available-runtimes.rst:64
-msgid "Description"
-msgstr ""
-
-#: ../../available-runtimes.rst:18
-msgid "org.freedesktop.Platform"
-msgstr ""
-
-#: ../../available-runtimes.rst:18 ../../available-runtimes.rst:48
-#: ../../available-runtimes.rst:66
-msgid "Runtime"
-msgstr ""
-
-#: ../../available-runtimes.rst:19
-msgid "org.freedesktop.Platform.Locale"
-msgstr ""
-
-#: ../../available-runtimes.rst:19 ../../available-runtimes.rst:49
-#: ../../available-runtimes.rst:67
-msgid "Runtime translations (extension)"
-msgstr ""
-
-#: ../../available-runtimes.rst:20
-msgid "org.freedesktop.Sdk"
-msgstr ""
-
-#: ../../available-runtimes.rst:20 ../../available-runtimes.rst:50
-#: ../../available-runtimes.rst:68
-msgid "SDK"
-msgstr ""
-
-#: ../../available-runtimes.rst:21
-msgid "org.freedesktop.Sdk.Debug"
-msgstr ""
-
-#: ../../available-runtimes.rst:21 ../../available-runtimes.rst:51
-#: ../../available-runtimes.rst:69
-msgid "SDK debug information (extension)"
-msgstr ""
-
-#: ../../available-runtimes.rst:22
-msgid "org.freedesktop.Sdk.Locale"
-msgstr ""
-
-#: ../../available-runtimes.rst:22 ../../available-runtimes.rst:52
-#: ../../available-runtimes.rst:70
-msgid "SDK translations (extension)"
-msgstr ""
-
 #: ../../available-runtimes.rst:23
-msgid "org.freedesktop.Sdk.Docs"
-msgstr ""
-
-#: ../../available-runtimes.rst:23 ../../available-runtimes.rst:53
-#: ../../available-runtimes.rst:71
-msgid "SDK documentation (extension)"
+msgid ""
+"The Freedesktop runtime is maintained `here <https://gitlab.com"
+"/freedesktop-sdk/freedesktop-sdk/>`__ and has a website `here <https"
+"://freedesktop-sdk.io/>`__."
 msgstr ""
 
 #: ../../available-runtimes.rst:27
+msgid "Available Freedesktop runtimes:"
+msgstr ""
+
+#: ../../available-runtimes.rst:30 ../../available-runtimes.rst:72
+#: ../../available-runtimes.rst:95
+msgid "ID"
+msgstr ""
+
+#: ../../available-runtimes.rst:30 ../../available-runtimes.rst:72
+#: ../../available-runtimes.rst:95
+msgid "Description"
+msgstr ""
+
+#: ../../available-runtimes.rst:32
+msgid "org.freedesktop.Platform"
+msgstr ""
+
+#: ../../available-runtimes.rst:32 ../../available-runtimes.rst:74
+#: ../../available-runtimes.rst:97
+msgid "Runtime"
+msgstr ""
+
+#: ../../available-runtimes.rst:33
+msgid "org.freedesktop.Platform.Locale"
+msgstr ""
+
+#: ../../available-runtimes.rst:33 ../../available-runtimes.rst:75
+#: ../../available-runtimes.rst:98
+msgid "Runtime translations (extension)"
+msgstr ""
+
+#: ../../available-runtimes.rst:34
+msgid "org.freedesktop.Platform.VAAPI.Intel{,.i386}"
+msgstr ""
+
+#: ../../available-runtimes.rst:34
+msgid "Intel vaapi drivers (extension)"
+msgstr ""
+
+#: ../../available-runtimes.rst:35
+msgid "org.freedesktop.Platform.ffmpeg-full"
+msgstr ""
+
+#: ../../available-runtimes.rst:35
+msgid "All ffmpeg codecs (extension)"
+msgstr ""
+
+#: ../../available-runtimes.rst:36
+msgid "org.freedesktop.Platform.Compat.{architecture}"
+msgstr ""
+
+#: ../../available-runtimes.rst:36
+msgid "32 bits compatible extension"
+msgstr ""
+
+#: ../../available-runtimes.rst:37
+msgid "org.freedesktop.Platform.Compat.{architecture}.debug"
+msgstr ""
+
+#: ../../available-runtimes.rst:37
+msgid "32 bits compatible extension (debug)"
+msgstr ""
+
+#: ../../available-runtimes.rst:38
+msgid "org.freedesktop.Platform.GL{,32}.default"
+msgstr ""
+
+#: ../../available-runtimes.rst:38
+msgid "Mesa drivers (extension)"
+msgstr ""
+
+#: ../../available-runtimes.rst:39
+msgid "org.freedesktop.Platform.GL{,32}.mesa-git"
+msgstr ""
+
+#: ../../available-runtimes.rst:39
+msgid "Mesa drivers, latest (extension)"
+msgstr ""
+
+#: ../../available-runtimes.rst:40
+msgid "org.freedesktop.Sdk"
+msgstr ""
+
+#: ../../available-runtimes.rst:40 ../../available-runtimes.rst:76
+#: ../../available-runtimes.rst:99
+msgid "SDK"
+msgstr ""
+
+#: ../../available-runtimes.rst:41
+msgid "org.freedesktop.Sdk.Debug"
+msgstr ""
+
+#: ../../available-runtimes.rst:41 ../../available-runtimes.rst:77
+#: ../../available-runtimes.rst:100
+msgid "SDK debug information (extension)"
+msgstr ""
+
+#: ../../available-runtimes.rst:42
+msgid "org.freedesktop.Sdk.Locale"
+msgstr ""
+
+#: ../../available-runtimes.rst:42 ../../available-runtimes.rst:78
+#: ../../available-runtimes.rst:101
+msgid "SDK translations (extension)"
+msgstr ""
+
+#: ../../available-runtimes.rst:43
+msgid "org.freedesktop.Sdk.Docs"
+msgstr ""
+
+#: ../../available-runtimes.rst:43 ../../available-runtimes.rst:79
+#: ../../available-runtimes.rst:102
+msgid "SDK documentation (extension)"
+msgstr ""
+
+#: ../../available-runtimes.rst:44
+msgid "org.freedesktop.Sdk.Extension.toolchain-{architecture}"
+msgstr ""
+
+#: ../../available-runtimes.rst:44
+msgid "SDK cross compilers (extension)"
+msgstr ""
+
+#: ../../available-runtimes.rst:48
 msgid "GNOME"
 msgstr ""
 
-#: ../../available-runtimes.rst:29
+#: ../../available-runtimes.rst:50
 msgid ""
 "The GNOME runtime is appropriate for any application that uses the GNOME "
 "platform. It is based on the Freedesktop runtime and adds the GNOME "
 "platform, including:"
 msgstr ""
 
-#: ../../available-runtimes.rst:31
+#: ../../available-runtimes.rst:54
 msgid "Clutter"
 msgstr ""
 
-#: ../../available-runtimes.rst:32
+#: ../../available-runtimes.rst:55
 msgid "Gjs"
 msgstr ""
 
-#: ../../available-runtimes.rst:33
+#: ../../available-runtimes.rst:56
 msgid "GObject Introspection"
 msgstr ""
 
-#: ../../available-runtimes.rst:34
+#: ../../available-runtimes.rst:57
 msgid "GStreamer"
 msgstr ""
 
-#: ../../available-runtimes.rst:35
+#: ../../available-runtimes.rst:58
 msgid "GVFS"
 msgstr ""
 
-#: ../../available-runtimes.rst:36
+#: ../../available-runtimes.rst:59
 msgid "Libnotify"
 msgstr ""
 
-#: ../../available-runtimes.rst:37
+#: ../../available-runtimes.rst:60
 msgid "Libsecret"
 msgstr ""
 
-#: ../../available-runtimes.rst:38
+#: ../../available-runtimes.rst:61
 msgid "LibSoup"
 msgstr ""
 
-#: ../../available-runtimes.rst:39
+#: ../../available-runtimes.rst:62
 msgid "PyGObject"
 msgstr ""
 
-#: ../../available-runtimes.rst:40
+#: ../../available-runtimes.rst:63
 msgid "Vala"
 msgstr ""
 
-#: ../../available-runtimes.rst:41
+#: ../../available-runtimes.rst:64
 msgid "WebKitGTK"
 msgstr ""
 
-#: ../../available-runtimes.rst:43
-msgid "Available GNOME runtimes:"
-msgstr ""
-
-#: ../../available-runtimes.rst:48
-msgid "org.gnome.Platform"
-msgstr ""
-
-#: ../../available-runtimes.rst:49
-msgid "org.gnome.Platform.Locale"
-msgstr ""
-
-#: ../../available-runtimes.rst:50
-msgid "org.gnome.Sdk"
-msgstr ""
-
-#: ../../available-runtimes.rst:51
-msgid "org.gnome.Sdk.Debug"
-msgstr ""
-
-#: ../../available-runtimes.rst:52
-msgid "org.gnome.Sdk.Locale"
-msgstr ""
-
-#: ../../available-runtimes.rst:53
-msgid "org.gnome.Sdk.Docs"
-msgstr ""
-
-#: ../../available-runtimes.rst:57
-msgid "KDE"
-msgstr ""
-
-#: ../../available-runtimes.rst:59
-msgid ""
-"The KDE runtime is also based on the Freedesktop runtime and adds Qt and KDE"
-" Frameworks. It is appropriate for any application that makes use of the KDE"
-" platform and most Qt-based applications."
-msgstr ""
-
-#: ../../available-runtimes.rst:61
-msgid "Available KDE runtimes:"
-msgstr ""
-
 #: ../../available-runtimes.rst:66
-msgid "org.kde.Platform"
-msgstr ""
-
-#: ../../available-runtimes.rst:67
-msgid "org.kde.Platform.Locale"
-msgstr ""
-
-#: ../../available-runtimes.rst:68
-msgid "org.kde.Sdk"
+msgid ""
+"The GNOME runtime is maintained `here <https://gitlab.gnome.org/GNOME"
+"/gnome-build-meta>`__."
 msgstr ""
 
 #: ../../available-runtimes.rst:69
+msgid "Available GNOME runtimes:"
+msgstr ""
+
+#: ../../available-runtimes.rst:74
+msgid "org.gnome.Platform"
+msgstr ""
+
+#: ../../available-runtimes.rst:75
+msgid "org.gnome.Platform.Locale"
+msgstr ""
+
+#: ../../available-runtimes.rst:76
+msgid "org.gnome.Sdk"
+msgstr ""
+
+#: ../../available-runtimes.rst:77
+msgid "org.gnome.Sdk.Debug"
+msgstr ""
+
+#: ../../available-runtimes.rst:78
+msgid "org.gnome.Sdk.Locale"
+msgstr ""
+
+#: ../../available-runtimes.rst:79
+msgid "org.gnome.Sdk.Docs"
+msgstr ""
+
+#: ../../available-runtimes.rst:83
+msgid "KDE"
+msgstr ""
+
+#: ../../available-runtimes.rst:85
+msgid ""
+"The KDE runtime is also based on the Freedesktop runtime and adds Qt and "
+"KDE Frameworks. It is appropriate for any application that makes use of "
+"the KDE platform and most Qt-based applications."
+msgstr ""
+
+#: ../../available-runtimes.rst:89
+msgid ""
+"The KDE runtime is maintained `here <https://invent.kde.org/packaging"
+"/flatpak-kde-runtime>`__."
+msgstr ""
+
+#: ../../available-runtimes.rst:92
+msgid "Available KDE runtimes:"
+msgstr ""
+
+#: ../../available-runtimes.rst:97
+msgid "org.kde.Platform"
+msgstr ""
+
+#: ../../available-runtimes.rst:98
+msgid "org.kde.Platform.Locale"
+msgstr ""
+
+#: ../../available-runtimes.rst:99
+msgid "org.kde.Sdk"
+msgstr ""
+
+#: ../../available-runtimes.rst:100
 msgid "org.kde.Sdk.Debug"
 msgstr ""
 
-#: ../../available-runtimes.rst:70
+#: ../../available-runtimes.rst:101
 msgid "org.kde.Sdk.Locale"
 msgstr ""
 
-#: ../../available-runtimes.rst:71
+#: ../../available-runtimes.rst:102
 msgid "org.kde.Sdk.Docs"
 msgstr ""
+

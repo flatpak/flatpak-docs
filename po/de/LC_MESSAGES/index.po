@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the Flatpak package.
 # Markus Richter <semanticdesign@mailbox.org>, 2017.
 # TingPing <tingping@tingping.se>, 2018. #zanata
+# Markus Richter <semanticdesign@pm.me>, 2019. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-05-20 10:36+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"PO-Revision-Date: 2019-06-25 02:52-0400\n"
+"Last-Translator: Markus Richter <semanticdesign@pm.me>\n"
 "Language-Team: de_DE <>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -31,6 +32,12 @@ msgid ""
 "command line interface. Later sections provide detailed information on "
 "building and distributing applications."
 msgstr ""
+"Diese Dokumentation deckt alles ab, was Sie wissen müssen, um Anwendungen, "
+"unter Verwendung von Flatpak, zu erstellen und zu verteilen. Sie beginnt mit"
+" einer grundlegenden Einführung zu Flatpak, Hintergrundinformationen zu "
+"grundsätzlichen Konzepten und einer Anleitung zu der "
+"Kommandozeilenschnittstelle von Flatpak. Spätere Abschnitte enthalten "
+"detaillierte Informationen, wie man Anwendungen erzeugt und verteilt."
 
 #: ../../index.rst:6
 msgid ""
@@ -38,19 +45,19 @@ msgid ""
 " Their content is also relevant to those who have a general interest in "
 "Flatpak."
 msgstr ""
-"Die Dokumente richten sich vorrangig an Applikationsentwickler und "
+"Die Dokumente richten sich vorrangig an Anwendungsentwickler und "
 "Distributoren. Der Inhalt ist aber auch ebenso wissenswert für diejenigen, "
 "die ein allgemeines Interesse an Flatpak haben."
 
 #: ../../index.rst:8
-#, fuzzy
 msgid ""
 "If you are looking for information about how to use Flatpak to install and "
 "run applications, please refer to `the Flatpak website "
 "<http://flatpak.org>`_."
 msgstr ""
-"Wenn Sie nach Informationen suchen, wie man Flatpak installiert und "
-"verwendet, finden Sie diese auf der `Flatpak Website <http://flatpak.org>`_."
+"Wenn Sie nach Informationen suchen, wie man Flatpak verwendet, um "
+"Applikationen zu installieren und zu starten, finden Sie diese auf der "
+"`Flatpak Website <http://flatpak.org>`_."
 
 #: ../../index.rst:11
 msgid "Contents"

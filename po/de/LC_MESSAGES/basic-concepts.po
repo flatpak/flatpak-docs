@@ -3,152 +3,215 @@
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-# TingPing <tingping@tingping.se>, 2018. #zanata
+# Markus Richter <semanticdesign@pm.me>, 2019. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-05-20 10:36+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2019-06-25 02:56-0400\n"
+"Last-Translator: Markus Richter <semanticdesign@pm.me>\n"
 "Language: de\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: de <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"Generated-By: Babel 2.5.1\n"
-"X-Generator: Zanata 4.6.2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../basic-concepts.rst:2
 msgid "Basic concepts"
-msgstr ""
+msgstr "Grundlegende Konzepte"
 
 #: ../../basic-concepts.rst:4
 msgid ""
 "Flatpak can be understood through a small number of key concepts. It is "
-"useful to be familiar with these before learning about how to use Flatpak "
-"from the command line, or using it to build applications."
+"useful to be familiar with these before learning about how to use Flatpak"
+" from the command line, or using it to build applications."
 msgstr ""
-
-#: ../../basic-concepts.rst:9
-msgid "Runtimes"
-msgstr ""
+"Flatpak wird verständlich durch eine kleine Zahl an Schlüsselkonzepten. "
+"Es ist sinnvoll, mit diesen vertraut zu sein, bevor man lernt Flatpak auf"
+" der Kommandozeile zu verwenden oder um Applikationen zu generieren."
 
 #: ../../basic-concepts.rst:11
-msgid ""
-"Runtimes provide the basic dependencies that are used by applications. Each "
-"application must be built against a runtime, and this runtime must be "
-"installed on a host system in order for the application to run (Flatpak can "
-"automatically install the runtime required by an application). Multiple "
-"different runtimes can be installed at the same time, including different "
-"versions of the same runtime."
-msgstr ""
+msgid "Runtimes"
+msgstr "Laufzeitumgebungen"
 
 #: ../../basic-concepts.rst:13
 msgid ""
-"Runtimes are distribution agnostic and do not depend on particular "
-"distribution versions. This means that they provide a stable, cross-"
-"distribution base for applications, and allow applications to continue to "
-"work irrespective of operating system updates."
+"Runtimes provide the basic dependencies that are used by applications. "
+"Each application must be built against a runtime, and this runtime must "
+"be installed on a host system in order for the application to run "
+"(Flatpak can automatically install the runtime required by an "
+"application). Multiple different runtimes can be installed at the same "
+"time, including different versions of the same runtime."
 msgstr ""
-
-#: ../../basic-concepts.rst:16
-msgid "Bundled libraries"
-msgstr ""
-
-#: ../../basic-concepts.rst:18
-msgid ""
-"If an application requires any dependencies that aren't in its runtime, they"
-" can be bundled as part of the application. This gives application "
-"developers flexibility regarding the dependencies that they use, including "
-"using:"
-msgstr ""
+"Laufzeitumgebungen beinhalten die grundlegenden Abhängigkeiten, die von "
+"den Anwendungen verwendet werden. Jede Anwendung muss gegen eine "
+"Laufzeitumgebung erzeugt werden und diese Laufzeitumgebung muss auf einem"
+" Gastsystem installiert sein, als Voraussetzung damit die Anwendung "
+"lauffähig ist (Flatpak kann die Laufzeitumgebung, die von einer "
+"Applikation benötigt wird, automatisch installieren). Es können mehrere "
+"unterschiedliche Laufzeitumgebungen zur gleichen Zeit installiert werden,"
+" dies beinhaltet auch verschiedene Versionen der gleichen "
+"Laufzeitumgebung."
 
 #: ../../basic-concepts.rst:20
-msgid "libraries that aren't available in a distribution or runtime"
-msgstr ""
-
-#: ../../basic-concepts.rst:21
 msgid ""
-"different versions of libraries from the ones that are in a distribution or "
-"runtime"
+"Runtimes are distribution agnostic and do not depend on particular "
+"distribution versions. This means that they provide a stable, cross-"
+"distribution base for applications, and allow applications to continue to"
+" work irrespective of operating system updates."
 msgstr ""
+"Laufzeitumgebungen sind unabhängig von Distributionen und sind auch nicht"
+" auf bestimmte Versionen dieser angewiesen. Das bedeutet, dass sie eine "
+"stabile und distributionsübergreifende Basis für Anwendungen darstellen "
+"und diesen erlauben weiterzuarbeiten – unabhängig von Aktualisierungen  "
+"des Betriebssystems. "
 
-#: ../../basic-concepts.rst:22
-msgid "patched versions of libraries"
-msgstr ""
+#: ../../basic-concepts.rst:26
+msgid "Bundled libraries"
+msgstr "Gebündelte Bibliotheken"
 
-#: ../../basic-concepts.rst:25
-msgid "Sandboxes"
-msgstr ""
-
-#: ../../basic-concepts.rst:27
+#: ../../basic-concepts.rst:28
 msgid ""
-"With Flatpak, each application is built and run in an isolated environment, "
-"which is called the 'sandbox'. Each sandbox contains an application and its "
-"runtime. By default, the application can only access the contents of its "
-"sandbox. Access to user files, network, graphics sockets, subsystems on the "
-"bus and devices have to be explicitly granted. Access to other things, such "
-"as other processes, is deliberately not possible."
+"If an application requires any dependencies that aren't in its runtime, "
+"they can be bundled as part of the application. This gives application "
+"developers flexibility regarding the dependencies that they use, "
+"including using:"
 msgstr ""
-
-#: ../../basic-concepts.rst:29
-msgid ""
-"By necessity, some resources that are inside the sandbox need to be exposed "
-"outside, to be used by the host system. These are known as 'exports', since "
-"they are files that are exported out of the sandbox, and include things like"
-" the application's ``.desktop`` file and icon."
-msgstr ""
+"Wenn eine Anwendung Abhängigkeiten benötigt, die nicht in seiner "
+"Laufzeitumgebung vorhanden sind, können diese gebündelt werden als Teil "
+"der Applikation. Dies gibt Anwendungsentwicklern Flexibilität im Hinblick"
+" auf die Abhängigkeiten, die sie verwenden. Dies beinhaltet die "
+"Verwendung von:"
 
 #: ../../basic-concepts.rst:32
-msgid "Portals"
+#, fuzzy
+msgid "libraries that aren't available in a runtime"
 msgstr ""
+"Bibliotheken, die nicht verfügbar sind in einer Distribution oder "
+"Laufzeitumgebung"
+
+#: ../../basic-concepts.rst:33
+#, fuzzy
+msgid "different versions of libraries from the ones that are in a runtime"
+msgstr ""
+"abweichende Versionen von Bibliotheken, von denen in einer Distribution "
+"oder Laufzeitumgebung"
 
 #: ../../basic-concepts.rst:34
+msgid "patched versions of libraries"
+msgstr "gepatchte Versionen von Bibliotheken"
+
+#: ../../basic-concepts.rst:37
+msgid "Sandboxes"
+msgstr "Sandboxen"
+
+#: ../../basic-concepts.rst:39
+msgid ""
+"With Flatpak, each application is built and run in an isolated "
+"environment, which is called the 'sandbox'. Each sandbox contains an "
+"application and its runtime. By default, the application can only access "
+"the contents of its sandbox. Access to user files, network, graphics "
+"sockets, subsystems on the bus and devices have to be explicitly granted."
+" Access to other things, such as other processes, is deliberately not "
+"possible."
+msgstr ""
+"Mit Flatpak wird jede Applikation in einer isolierten Umgebung erzeugt "
+"und gestartet, diese wird als »Sandbox« bezeichnet. Jede Sandbox "
+"beinhaltet eine Applikation und seine Laufzeitumgebung. Standardmäßig "
+"kann die Anwendung lediglich auf die Inhalte seiner Sandbox zugreifen. "
+"Zugriff auf Benutzerdateien, Netzwerk, Grafiksockets, Subsysteme auf dem "
+"Bus und Geräten muss ausdrücklich erteilt werden. Zugriff auf andere "
+"Dinge, so wie andere Prozesse, ist bewusst nicht möglich."
+
+#: ../../basic-concepts.rst:46
+msgid ""
+"By necessity, some resources that are inside the sandbox need to be "
+"exposed outside, to be used by the host system. These are known as "
+"'exports', since they are files that are exported out of the sandbox, and"
+" include things like the application's ``.desktop`` file and icon."
+msgstr ""
+"Einige Ressourcen, die innerhalb der Sandbox liegen, müssen bei Bedarf "
+"nach außen freigegeben werden, um vom Gastsystem verwendet zu werden. "
+"Diese sind bekannt als »Exports«, da dies Dateien sind, die aus der "
+"Sandbox heraus exportiert werden und Dinge enthalten wie die "
+"``.desktop``-Datei und Icon einer Anwendung."
+
+#: ../../basic-concepts.rst:52
+msgid "Portals"
+msgstr "Portale"
+
+#: ../../basic-concepts.rst:54
 msgid ""
 "Portals are a mechanism through which applications can interact with the "
-"host environment from within a sandbox. They give the ability to interact "
-"with data, files and services without the need to add sandbox permissions."
+"host environment from within a sandbox. They give the ability to interact"
+" with data, files and services without the need to add sandbox "
+"permissions."
 msgstr ""
+"Portale sind ein Mechanismus durch den Applikationen, aus einer Sandbox "
+"heraus,  mit der Gastumgebung interagieren können. Sie geben die "
+"Möglichkeit mit Daten, Dateien und Diensten zu interagieren, ohne die "
+"Notwendigkeit Sandbox-Berechtigungen hinzuzufügen."
 
-#: ../../basic-concepts.rst:36
+#: ../../basic-concepts.rst:58
 msgid ""
 "Examples of capabilities that can be accessed through portals include "
-"opening files through a file chooser dialog, or printing. Interface toolkits"
-" can implement transparent support for portals, so access to resources "
-"outside of the sandbox will work securely and out of the box."
+"opening files through a file chooser dialog, or printing. Interface "
+"toolkits can implement transparent support for portals, so access to "
+"resources outside of the sandbox will work securely and out of the box."
 msgstr ""
+"Beispiele für Ressourcen, auf die durch Portale zugegriffen werden kann, "
+"beinhalten das Öffnen von Dateien mittels eines Dateiauswahldialogs oder "
+"Drucken. Interface-Toolkits können eine transparente Unterstützung für "
+"Portale implementieren, sodass der Zugriff auf Ressourcen außerhalb der "
+"Sandbox sicher und out-of-the-box funktioniert."
 
-#: ../../basic-concepts.rst:38
-msgid ""
-"More information about portals can be found in :doc:`sandbox-permissions`."
+#: ../../basic-concepts.rst:63
+msgid "More information about portals can be found in :doc:`sandbox-permissions`."
 msgstr ""
+"Weitere Informationen zu Portalen können unter :doc:`sandbox-permissions`"
+" gefunden werden."
 
-#: ../../basic-concepts.rst:41
+#: ../../basic-concepts.rst:66
 msgid "Repositories"
-msgstr ""
+msgstr "Repositorys"
 
-#: ../../basic-concepts.rst:43
+#: ../../basic-concepts.rst:68
 msgid ""
-"Flatpak applications and runtimes are typically stored and published using "
-"repositories, which behave very similarly to Git repositories. A Flatpak "
-"repository can contain a single object or multiple objects, and each object "
-"is versioned, which allows upgrading and even downgrading."
+"Flatpak applications and runtimes are typically stored and published "
+"using repositories, which behave very similarly to Git repositories. A "
+"Flatpak repository can contain a single object or multiple objects, and "
+"each object is versioned, which allows upgrading and even downgrading."
 msgstr ""
+"Anwendungen und Laufzeitumgebungen von Flatpaks werden normalerweise "
+"gespeichert und veröffentlicht unter Verwendung von Repositorys, die sich"
+" sehr ähnlich zu Git-Repositorys verhalten. Ein Flatpak-Repository kann "
+"ein einziges Objekt oder mehrere enthalten, jedes Objekt ist dabei "
+"versioniert, was upgraden und sogar downgraden ermöglicht."
 
-#: ../../basic-concepts.rst:45
+#: ../../basic-concepts.rst:73
 msgid ""
-"Each system which is using Flatpak can be configured to access any number of"
-" remote repositories. Once a system has been configured to access a "
-"'remote', the remote repository's content can be inspected and searched, and"
-" it can be used as the source of applications and runtimes."
+"Each system which is using Flatpak can be configured to access any number"
+" of remote repositories. Once a system has been configured to access a "
+"'remote', the remote repository's content can be inspected and searched, "
+"and it can be used as the source of applications and runtimes."
 msgstr ""
+"Jedes System, das Flatpak verwendet, kann konfiguriert werden auf "
+"jegliche Anzahl von Repositorys zuzugreifen. Sobald ein System "
+"konfiguriert wurde auf ein »Remote« zuzugreifen, kann der Inhalt der "
+"Remote-Repositorys inspiziert und durchsucht werden."
 
-#: ../../basic-concepts.rst:47
+#: ../../basic-concepts.rst:78
 msgid ""
 "When an update is performed, new versions of installed applications and "
-"runtimes are downloaded from the relevant remotes. Like with Git, only the "
-"difference between versions is downloaded, which makes the process very "
-"efficient."
+"runtimes are downloaded from the relevant remotes. Like with Git, only "
+"the difference between versions is downloaded, which makes the process "
+"very efficient."
 msgstr ""
+"Wenn eine Aktualisierung durchgeführt wird, werden neue Versionen der "
+"installierten Anwendungen und Laufzeitumgebungen von dem relevanten "
+"Remote heruntergeladen. Wie mit Git, werden lediglich Unterschiede "
+"zwischen Versionen heruntergeladen, was den Prozess sehr effizient macht."
+

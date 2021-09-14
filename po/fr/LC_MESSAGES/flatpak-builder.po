@@ -6,19 +6,19 @@
 # TingPing <tingping@tingping.se>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-05-20 04:48+0000\n"
-"Last-Translator: Baptiste Mille-Mathias <baptiste.millemathias@gmail.com>\n"
-"Language-Team: fr_FR <traduc@traduc.org>\n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2018-05-20 04:48-0400\n"
+"Last-Translator: Baptiste Mille-Mathias <baptiste.millemathias@gmail.com>"
+"\n"
 "Language: fr\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: fr_FR <traduc@traduc.org>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
-"Generated-By: Babel 2.5.1\n"
-"X-Generator: Zanata 4.6.2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../flatpak-builder.rst:2
 msgid "Flatpak Builder"
@@ -26,42 +26,48 @@ msgstr "Flatpak Builder"
 
 #: ../../flatpak-builder.rst:4
 msgid ""
-"``flatpak-builder`` has already been introduced in :doc:`first-build` and "
-":doc:`building-introduction`. This page provides additional detail on how to"
-" use ``flatpak-builder``, including the various command options that are "
-"available."
+"``flatpak-builder`` has already been introduced in :doc:`first-build` and"
+" :doc:`building-introduction`. This page provides additional detail on "
+"how to use ``flatpak-builder``, including the various command options "
+"that are available."
 msgstr ""
 
-#: ../../flatpak-builder.rst:7
+#: ../../flatpak-builder.rst:10
 msgid "Exporting"
 msgstr ""
 
-#: ../../flatpak-builder.rst:9
+#: ../../flatpak-builder.rst:12
 msgid ""
 "``flatpak-builder`` provides two options for exporting an application in "
 "order to run it. The first is to export to a repository, from which the "
 "application can be run. The second is to automatically install locally."
 msgstr ""
 
-#: ../../flatpak-builder.rst:12
+#: ../../flatpak-builder.rst:17
 msgid "Exporting to a repository"
 msgstr ""
 
-#: ../../flatpak-builder.rst:14
+#: ../../flatpak-builder.rst:19
 msgid ""
 "The ``--repo`` option allows a repository to be specified, for the "
 "application to be exported to. This takes the format::"
 msgstr ""
 
-#: ../../flatpak-builder.rst:18
+#: ../../flatpak-builder.rst:24
 msgid ""
-"Here, ``<repo>`` is a path to a repository. If no repository exists at the "
-"specified location, the repository will be created. If the application is "
-"already in the specified repository, ``flatpak-builder`` will add the build "
-"as a new version of the existing application."
+"Here, ``<repo>`` is a path to a repository. If no repository exists at "
+"the specified location, the repository will be created. If the "
+"application is already in the specified repository, ``flatpak-builder`` "
+"will add the build as a new version of the existing application."
 msgstr ""
 
-#: ../../flatpak-builder.rst:22
+#: ../../flatpak-builder.rst:29
+msgid ""
+"You can put more than one application in the same repository by using the"
+" same ``--repo`` path for multiple invocations of ``flatpak-builder``."
+msgstr ""
+
+#: ../../flatpak-builder.rst:34
 msgid ""
 "By default, ``flatpak-builder`` splits off translations and debug "
 "information into separate `.Locale` and `.Debug` extensions. These "
@@ -69,46 +75,47 @@ msgid ""
 "application."
 msgstr ""
 
-#: ../../flatpak-builder.rst:26
+#: ../../flatpak-builder.rst:40
 msgid "Installing builds directly"
 msgstr ""
 
-#: ../../flatpak-builder.rst:28
+#: ../../flatpak-builder.rst:42
 msgid ""
 "Instead of exporting to a repository, the Flatpak that is produced by "
 "``flatpak-builder`` can be automatically installed locally, using the "
 "``--install`` option::"
 msgstr ""
 
-#: ../../flatpak-builder.rst:32
+#: ../../flatpak-builder.rst:48
 msgid ""
-"This approach has the advantage of skipping the separate install step that "
-"is needed when exporting to a repository."
+"This approach has the advantage of skipping the separate install step "
+"that is needed when exporting to a repository."
 msgstr ""
 
-#: ../../flatpak-builder.rst:35
+#: ../../flatpak-builder.rst:52
 msgid "Signing"
 msgstr ""
 
-#: ../../flatpak-builder.rst:37
+#: ../../flatpak-builder.rst:54
 msgid ""
-"Every commit to a Flatpak repository should be signed with a GPG signature. "
-"If ``flatpak-builder`` is being used to modify or create a repository, a GPG"
-" key should therefore be passed to it. This can be done with the ``--gpg-"
-"sign`` option, such as::"
+"Every commit to a Flatpak repository should be signed with a GPG "
+"signature. If ``flatpak-builder`` is being used to modify or create a "
+"repository, a GPG key should therefore be passed to it. This can be done "
+"with the ``--gpg-sign`` option, such as::"
 msgstr ""
 
-#: ../../flatpak-builder.rst:41
+#: ../../flatpak-builder.rst:61
 msgid ""
 "Here, ``<key>`` is the ID of the GPG key that is to be used. The ``--gpg-"
-"homedir`` option can also be used to specify the home directory of the key "
-"that is being used."
+"homedir`` option can also be used to specify the home directory of the "
+"key that is being used."
 msgstr ""
 
-#: ../../flatpak-builder.rst:43
+#: ../../flatpak-builder.rst:65
 msgid ""
 "Though it generally isn't recommended, it is possible not to use GPG "
-"verification. In this case, the ``--no-gpg-verify`` option should be used "
-"when adding the repository. Note that it is necessary to become root in "
+"verification. In this case, the ``--no-gpg-verify`` option should be used"
+" when adding the repository. Note that it is necessary to become root in "
 "order to update a repository that does not have GPG verification enabled."
 msgstr ""
+

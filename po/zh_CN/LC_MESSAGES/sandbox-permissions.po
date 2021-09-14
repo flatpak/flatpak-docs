@@ -2,18 +2,18 @@
 # ZiqiangXu <ziqiang_xu@yeah.net>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 20:19-0400\n"
-"PO-Revision-Date: 2018-10-08 03:36+0000\n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2018-11-03 02:03-0400\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
-"Language-Team: Chinese (Simplified, China)\n"
 "Language: zh_Hans_CN\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Chinese (Simplified, China)\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 4.6.2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../sandbox-permissions.rst:2
 msgid "Sandbox Permissions"
@@ -21,358 +21,406 @@ msgstr "沙箱权限"
 
 #: ../../sandbox-permissions.rst:4
 msgid ""
-"One of Flatpak's main goals is to increase the security of desktop systems "
-"by isolating applications from one another. This is achieved using "
-"sandboxing and means that, by default, applications that are run with "
-"Flatpak have extremely limited access to the host environment. This "
+"One of Flatpak's main goals is to increase the security of desktop "
+"systems by isolating applications from one another. This is achieved "
+"using sandboxing and means that, by default, applications that are run "
+"with Flatpak have extremely limited access to the host environment. This "
 "includes:"
-msgstr ""
-"flatpak的一个主要目标就是通过应用间的隔离来提高桌面系统的安全性。这通过使用沙箱来实现，默认地，应用运行的环境对主机的访问很有限。这包括："
+msgstr "flatpak的一个主要目标就是通过应用间的隔离来提高桌面系统的安全性。这通过使用沙箱来实现，默认地，应用运行的环境对主机的访问很有限。这包括："
 
-#: ../../sandbox-permissions.rst:6
+#: ../../sandbox-permissions.rst:9
+#, fuzzy
 msgid ""
-"No access to any host files except the runtime, the app and "
-"``~/.var/app/$APPID``. Only the last of these is writable."
+"No access to any host files except the runtime, the app, "
+"``~/.var/app/$FLATPAK_ID``, and ``$XDG_RUNTIME_DIR/app/$FLATPAK_ID``. "
+"Only the latter two being writable."
 msgstr ""
-"无法访问除runtime、app目录和 `` ~/.var/app/$APPID `` 目录以外的文件。而且只有最后一个目录（译者注：即 `` "
-"~/.var/app/$APPID `` 目录）有写权限。"
+"无法访问除runtime、app目录和 ``~/.var/app/$APPID`` 目录以外的文件。而且只有最后一个目录（译者注：即 "
+"``~/.var/app/$APPID`` 目录）有写权限。"
 
-#: ../../sandbox-permissions.rst:7
+#: ../../sandbox-permissions.rst:12
 msgid "No access to the network."
 msgstr "无法访问网络。"
 
-#: ../../sandbox-permissions.rst:8
+#: ../../sandbox-permissions.rst:13
 msgid "No access to any device nodes (apart from ``/dev/null``, etc)."
-msgstr "无法访问任何设备节点的（除了 `` /dev/null `` ，等等）。（译者注：可能有访问所有null设备的权限）"
+msgstr "无法访问任何设备节点的（除了 ``/dev/null`` ，等等）。（译者注：可能有访问所有null设备的权限）"
 
-#: ../../sandbox-permissions.rst:9
+#: ../../sandbox-permissions.rst:14
 msgid "No access to processes outside the sandbox."
 msgstr "无法访问沙箱之外进程"
 
-#: ../../sandbox-permissions.rst:10
+#: ../../sandbox-permissions.rst:15
 msgid ""
-"Limited syscalls.  For instance, apps can't use nonstandard network socket "
-"types or ptrace other processes."
+"Limited syscalls.  For instance, apps can't use nonstandard network "
+"socket types or ptrace other processes."
 msgstr "有限的系统调用。举个例子，应用无法使用非标准的网络socket或者ptrace其他进程。"
 
-#: ../../sandbox-permissions.rst:11
+#: ../../sandbox-permissions.rst:17
 msgid ""
-"Limited access to the session D-Bus instance - an app can only own its own "
-"name on the bus."
+"Limited access to the session D-Bus instance - an app can only own its "
+"own name on the bus."
 msgstr "有限地访问D-Bus实例的session——一个应用在总线上只能拥有它自己的名字。"
 
-#: ../../sandbox-permissions.rst:12
+#: ../../sandbox-permissions.rst:19
 msgid "No access to host services like X11, system D-Bus, or PulseAudio."
 msgstr "无法访问主机服务，像X11，system D-Bus或PulseAudio这些。"
 
-#: ../../sandbox-permissions.rst:14
+#: ../../sandbox-permissions.rst:21
 msgid ""
-"Most applications will need access to some of these resources in order to be"
-" useful. This is primarily done during the finishing build stage, which can "
-"be configured through the ``finish-args`` section of the manifest file (see "
-":doc:`manifests`)."
+"Most applications will need access to some of these resources in order to"
+" be useful. This is primarily done during the finishing build stage, "
+"which can be configured through the ``finish-args`` section of the "
+"manifest file (see :doc:`manifests`)."
 msgstr ""
-"大部分应用需要访问这些资源。这些主要是在finishing构建步骤完成的，通过清单文件（查看 :doc:`manifests`）的 `` finish-"
-"args `` 部分来配置。"
+"大部分应用需要访问这些资源。这些主要是在finishing构建步骤完成的，通过清单文件（查看 :doc:`manifests`）的 "
+"``finish-args`` 部分来配置。"
 
-#: ../../sandbox-permissions.rst:17
+#: ../../sandbox-permissions.rst:27
 msgid "Portals"
 msgstr "门户（译者注：英文portals）"
 
-#: ../../sandbox-permissions.rst:19
+#: ../../sandbox-permissions.rst:29
+#, fuzzy
 msgid ""
-"Portals have already been mentioned in the :doc:`introduction`. They are a "
+"Portals have already been mentioned in :doc:`basic-concepts`. They are a "
 "framework for providing access to resources outside of the sandbox, "
 "including:"
-msgstr "门户已经在 :doc:`introduction`提到过。他们是一个提供沙箱外资源访问的框架。包括这些资源："
+msgstr "门户已经在 :doc:`introduction` 提到过。他们是一个提供沙箱外资源访问的框架。包括这些资源："
 
-#: ../../sandbox-permissions.rst:21
+#: ../../sandbox-permissions.rst:32
 msgid "Opening files with a native file chooser dialog"
 msgstr "用一个本地的文件选择对话框打开文件"
 
-#: ../../sandbox-permissions.rst:22
+#: ../../sandbox-permissions.rst:33
 msgid "Opening URIs"
 msgstr "打开URL"
 
-#: ../../sandbox-permissions.rst:23
+#: ../../sandbox-permissions.rst:34
 msgid "Printing"
 msgstr "打印"
 
-#: ../../sandbox-permissions.rst:24
+#: ../../sandbox-permissions.rst:35
 msgid "Showing notifications"
 msgstr "显示通知"
 
-#: ../../sandbox-permissions.rst:25
+#: ../../sandbox-permissions.rst:36
 msgid "Taking screenshots"
 msgstr "截取屏幕"
 
-#: ../../sandbox-permissions.rst:26
+#: ../../sandbox-permissions.rst:37
 msgid ""
 "Inhibiting the user session from ending, suspending, idling or getting "
 "switched away"
 msgstr "禁止用户会话结束、暂停、空转或切换。"
 
-#: ../../sandbox-permissions.rst:27
+#: ../../sandbox-permissions.rst:39
 msgid "Getting network status information"
 msgstr "获取网络状态信息"
 
-#: ../../sandbox-permissions.rst:29
+#: ../../sandbox-permissions.rst:41
 msgid ""
-"In many cases, portals use a system component to implicitly ask the user for"
-" permission before granting access to a particular resource. For example, in"
-" the case of opening a file, the user's selection of a file using the file "
-"chooser dialog is interpreted as implicitly granting the application access "
-"to whatever file is chosen."
-msgstr ""
-"在许多情况下，门户通过使用系统组件在获取访问某些特定资源的权限之前隐式地向用户获得了许可。举个例子，在打开一个文件的时候，用户用文件选择对话框进行文件选择，可以理解为隐式地授予了应用对选中文件的访问。"
+"In many cases, portals use a system component to implicitly ask the user "
+"for permission before granting access to a particular resource. For "
+"example, in the case of opening a file, the user's selection of a file "
+"using the file chooser dialog is interpreted as implicitly granting the "
+"application access to whatever file is chosen."
+msgstr "在许多情况下，门户通过使用系统组件在获取访问某些特定资源的权限之前隐式地向用户获得了许可。举个例子，在打开一个文件的时候，用户用文件选择对话框进行文件选择，可以理解为隐式地授予了应用对选中文件的访问。"
 
-#: ../../sandbox-permissions.rst:31
-#, fuzzy
+#: ../../sandbox-permissions.rst:47
 msgid ""
 "This approach enables applications to avoid having to configure blanket "
 "access to large amounts of data or services and gives users control over "
 "what their applications have access to."
-msgstr "这种方式使得应用在需要访问大量数据或服务时避免重复配置，也让用户可以掌控（译者注：知悉，了解）他们的应用的访问权限。"
+msgstr "这种方式使得应用在需要访问大量数据或服务时避免重复配置， 也让用户可以掌控（译者注：知悉，了解）他们的应用的访问权限。"
 
-#: ../../sandbox-permissions.rst:33
+#: ../../sandbox-permissions.rst:51
+#, fuzzy
 msgid ""
 "Interface toolkits like GTK3 and Qt5 implement transparent support for "
-"portals, meaning that applications don't need to any additional work to use "
-"them (it is worth checking which portals each toolkit supports). "
-"Applications that aren't using a toolkit with support for portals can refer "
-"to the `xdg-desktop-portal API documentation <https://flatpak.github.io/xdg-"
-"desktop-portal/portal-docs.html>`_ for information on how to use them."
+"portals, meaning that applications don't need to do any additional work "
+"to use them (it is worth checking which portals each toolkit supports). "
+"Applications that aren't using a toolkit with support for portals can "
+"refer to the `xdg-desktop-portal API documentation "
+"<https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for "
+"information on how to use them."
 msgstr ""
 "像GTK3和Qt5这样的接口工具包实现了对门户的透明支持，这意味着应用程序不需要做任何额外的工作来使用它们(每个工具包支持哪些门户值得了解)。没有使用受支持工具包的应用可以参考"
-"`xdg-desktop-portal API 文档 <https://flatpak.github.io/xdg-desktop-portal"
-"/portal-docs.html>`_。"
+" `xdg-desktop-portal API 文档  <https://flatpak.github.io/xdg-desktop-"
+"portal/portal-docs.html>`_ 。"
 
-#: ../../sandbox-permissions.rst:36
+#: ../../sandbox-permissions.rst:60
 msgid "Permissions guidelines"
 msgstr "权限手册"
 
-#: ../../sandbox-permissions.rst:38
+#: ../../sandbox-permissions.rst:62
 msgid ""
-"While application developers have control over the sandbox permissions they "
-"wish to configure, good practice is encouraged and can be enforced. For "
-"example, the Flathub hosting service places requirements on which "
-"permissions can be used, and software on the host may warn users if certain "
-"permissions are used."
-msgstr ""
-"虽然应用程序开发人员可以控制他们想要配置的沙箱权限，但是鼓励进行良好的实践。举个例子，Flathub主机托管服务对权限的使用提出了要求，如果使用了某些权限，主机上的软件可能会警告用户。"
+"While application developers have control over the sandbox permissions "
+"they wish to configure, good practice is encouraged and can be enforced. "
+"For example, the Flathub hosting service places requirements on which "
+"permissions can be used, and software on the host may warn users if "
+"certain permissions are used."
+msgstr "虽然应用程序开发人员可以控制他们想要配置的沙箱权限，但是鼓励进行良好的实践。举个例子，Flathub主机托管服务对权限的使用提出了要求，如果使用了某些权限，主机上的软件可能会警告用户。"
 
-#: ../../sandbox-permissions.rst:40
+#: ../../sandbox-permissions.rst:68
 msgid ""
 "The following guidelines describe which permissions can be freely used, "
 "which can be used on an as-needed basis, and which should be avoided."
 msgstr "后面的手册描述了哪些权限可以任意使用，哪些可以根据需要使用，哪些应该避免使用。"
 
-#: ../../sandbox-permissions.rst:43
+#: ../../sandbox-permissions.rst:72
 msgid "Standard permissions"
 msgstr "标准权限"
 
-#: ../../sandbox-permissions.rst:45
+#: ../../sandbox-permissions.rst:74
 msgid ""
 "The following permissions provide access to basic resources that "
 "applications commonly require, and can therefore be freely used:"
 msgstr "以下权限提供了应用通常需要访问的基本资源，因此可以自由使用："
 
-#: ../../sandbox-permissions.rst:47
+#: ../../sandbox-permissions.rst:77
 msgid "``--share=network`` - access the network"
-msgstr " `` --share=network ``  - 访问网络"
+msgstr "``--share=network``  - 访问网络"
 
-#: ../../sandbox-permissions.rst:48
+#: ../../sandbox-permissions.rst:78
 msgid "``--socket=x11`` - show windows using X11"
-msgstr " `` --socket=x11 ``  - 用X11显示窗口"
+msgstr " ``--socket=x11``  - 用X11显示窗口"
 
-#: ../../sandbox-permissions.rst:49
+#: ../../sandbox-permissions.rst:79
+#, fuzzy
 msgid ""
 "``--socket=fallback-x11`` - show windows using X11, if Wayland is not "
-"available"
-msgstr ""
+"available, overrides ``x11`` socket permission"
+msgstr "``--socket=fallback-x11`` - 如果Wayland不可用，使用X11显示窗口"
 
-#: ../../sandbox-permissions.rst:50
-msgid ""
-"``--share=ipc`` - share IPC namespace with the host (necessary for X11)"
-msgstr " `` --share=ipc ``  - 和主机共享IPC命名空间 (对于X11是必要的)"
+#: ../../sandbox-permissions.rst:81
+msgid "``--share=ipc`` - share IPC namespace with the host (necessary for X11)"
+msgstr "``--share=ipc``  - 和主机共享IPC命名空间 (对于X11是必要的)"
 
-#: ../../sandbox-permissions.rst:51
+#: ../../sandbox-permissions.rst:82
 msgid "``--socket=wayland`` - show windows with Wayland"
-msgstr " `` --socket=wayland ``  - 使用Wayland显示窗口"
+msgstr "``--socket=wayland``  - 使用Wayland显示窗口"
 
-#: ../../sandbox-permissions.rst:52
+#: ../../sandbox-permissions.rst:83
 msgid "``--device=dri`` - OpenGL rendering"
-msgstr " `` --device=dri ``  - OpenGL 渲染"
+msgstr "``--device=dri``  - OpenGL 渲染"
 
-#: ../../sandbox-permissions.rst:53
+#: ../../sandbox-permissions.rst:84
 msgid "``--socket=pulseaudio`` - play sound with PulseAudio"
-msgstr " `` --socket=pulseaudio ``  - 使用PulseAudio播放音频"
+msgstr "``--socket=pulseaudio``  - 使用PulseAudio播放音频"
 
-#: ../../sandbox-permissions.rst:56
+#: ../../sandbox-permissions.rst:87
 msgid "D-Bus access"
 msgstr "D-Bus访问"
 
-#: ../../sandbox-permissions.rst:58
+#: ../../sandbox-permissions.rst:89
 msgid ""
-"Access to the entire bus with ``--socket=system-bus`` or ``--socket=session-"
-"bus`` should be avoided, unless the application is a development tool."
+"Access to the entire bus with ``--socket=system-bus`` or ``--socket"
+"=session-bus`` should be avoided, unless the application is a development"
+" tool."
 msgstr ""
-"避免使用 `` --socket=system-bus `` 或 `` --socket=session-bus ``  "
+"避免使用 ``--socket=system-bus`` 或 ``--socket=session-bus``  "
 "访问整个总线，除非应用是一个开发工具。"
 
-#: ../../sandbox-permissions.rst:60
+#: ../../sandbox-permissions.rst:93
 msgid "**Ownership**"
 msgstr "**Ownership**"
 
-#: ../../sandbox-permissions.rst:62
+#: ../../sandbox-permissions.rst:95
 msgid ""
 "Applications are automatically granted access to their own namespace. "
-"Ownership beyond this is typically unnecessary, although there are a small "
-"number of exceptions, such as using `MPRIS to provide media controls "
-"<https://www.freedesktop.org/wiki/Specifications/mpris-spec/>`_."
+"Ownership beyond this is typically unnecessary, although there are a "
+"small number of exceptions, such as using `MPRIS to provide media "
+"controls <https://www.freedesktop.org/wiki/Specifications/mpris-spec/>`_."
 msgstr ""
-"应用会自动为他们自己命名空间授予访问权限，通常不需要有所有权，尽管如此还是有少量的例外，例如使用`MPRIS来提供媒体控制`<https://www.freedesktop.org/wiki/Specifications"
-"/mpris-spec/>`_。"
+"应用会自动为他们自己命名空间授予访问权限，通常不需要有所有权，尽管如此还是有少量的例外，例如使用 `MPRIS来提供媒体控制 "
+"<https://www.freedesktop.org/wiki/Specifications/mpris-spec/>`_ 。"
 
-#: ../../sandbox-permissions.rst:64
+#: ../../sandbox-permissions.rst:100
 msgid "**Talk**"
 msgstr "**Talk**"
 
-#: ../../sandbox-permissions.rst:66
+#: ../../sandbox-permissions.rst:102
+#, fuzzy
 msgid ""
-"Talk permissions can be freely used, although it is recommended to use the "
-"minumum required."
+"Talk permissions can be freely used, although it is recommended to use "
+"the minimum required."
 msgstr "Talk权限可以自由使用，尽管如此还是推荐使用应用所需的最小权限。"
 
-#: ../../sandbox-permissions.rst:69
+#: ../../sandbox-permissions.rst:106
 msgid "Filesystem access"
 msgstr "文件系统访问"
 
-#: ../../sandbox-permissions.rst:71
+#: ../../sandbox-permissions.rst:108
+#, fuzzy
 msgid ""
-"It is common for applications to require access to different parts of the "
-"host filesystem,and Flatpak provides a flexible set of options for this. "
-"Some examples include:"
+"It is common for applications to require access to different parts of the"
+" host filesystem, and Flatpak provides a flexible set of options for "
+"this. Some examples include:"
 msgstr "应用要求范围主机文件系统的不同部分是很正常的，flatpak为此提供了一套灵活的选项。下面是一些例子："
 
-#: ../../sandbox-permissions.rst:74
+#: ../../sandbox-permissions.rst:112
 msgid ""
-"``--filesystem=host`` - access normal files on the host, not including host "
-"os or system internals described below"
-msgstr " `` --filesystem=host ``  - 访问主机的常规文件，不包含一下提到的主机操作系统或者系统内部"
+"``--filesystem=host`` - access normal files on the host, not including "
+"host os or system internals described below"
+msgstr "``--filesystem=host``  - 访问主机的常规文件，不包含一下提到的主机操作系统或者系统内部"
 
-#: ../../sandbox-permissions.rst:75
+#: ../../sandbox-permissions.rst:114
 msgid "``--filesystem=home`` - access the user's home directory"
-msgstr " `` --filesystem=home ``  - 访问用户home目录"
+msgstr "``--filesystem=home``  - 访问用户home目录"
 
-#: ../../sandbox-permissions.rst:76
+#: ../../sandbox-permissions.rst:115
 msgid "``--filesystem=/path/path`` - access specific paths"
-msgstr " `` --filesystem=/path/path ``  - 访问特定路径"
+msgstr "``--filesystem=/path/path``  - 访问特定路径"
 
-#: ../../sandbox-permissions.rst:77
+#: ../../sandbox-permissions.rst:116
 msgid "``--filesystem=xdg-download`` - access a specific XDG folder"
-msgstr " `` --filesystem=xdg-download ``  - 访问特定的XDG文件夹"
+msgstr "``--filesystem=xdg-download``  - 访问特定的XDG文件夹"
 
-#: ../../sandbox-permissions.rst:79
+#: ../../sandbox-permissions.rst:118
+#, fuzzy
 msgid ""
-"As a general rule, Filesystem access should be limited as much as possible. "
-"This includes using:"
+"As a general rule, Filesystem access should be limited as much as "
+"possible. This includes:"
 msgstr "作为一个通用规则，对文件系统的访问应该尽可能地进行限制。这包括："
 
-#: ../../sandbox-permissions.rst:81
+#: ../../sandbox-permissions.rst:121
 msgid ""
 "Using portals as an alternative to blanket filesystem access, wherever "
 "possible."
 msgstr "尽量使用门户来代替文件系统访问。"
 
-#: ../../sandbox-permissions.rst:82
+#: ../../sandbox-permissions.rst:123
 msgid "Using read-only access wherever possible, using the ``:ro`` option."
-msgstr "尽量使用读取权限来访问，使用 `` :ro `` 选项。"
+msgstr "尽量使用读取权限来访问，使用 ``:ro`` 选项。"
 
-#: ../../sandbox-permissions.rst:83
+#: ../../sandbox-permissions.rst:124
 msgid ""
-"If some home directory access is absolutely required, using XDG directory "
-"access only."
+"If some home directory access is absolutely required, using XDG directory"
+" access only."
 msgstr "如果一定要访问home目录，只使用XDG目录访问。"
 
-#: ../../sandbox-permissions.rst:85
+#: ../../sandbox-permissions.rst:127
+#, fuzzy
 msgid ""
-"The full list the available filesystem options can be found in the :doc"
+"The full list of available filesystem options can be found in the :doc"
 ":`sandbox-permissions-reference`. Other filesystem access guidelines "
 "include:"
-msgstr "完整的文件系统可用选项列表可以在 :doc:`sandbox-reference`找到。其它文件系统访问指南包含："
+msgstr "完整的文件系统可用选项列表可以在 :doc:`sandbox-permissions-reference` 找到。其它文件系统访问指南包含："
 
-#: ../../sandbox-permissions.rst:88
+#: ../../sandbox-permissions.rst:131
 msgid ""
-"The ``--persist=path`` option can be used to map paths from the user's home "
-"directory into the sandbox filesystem. This makes it possible to avoid "
-"configuring access to the entire home directory, and can be useful for "
-"applications that hardcode file paths in ``~/``."
+"The ``--persist=path`` option can be used to map paths from the user's "
+"home directory into the sandbox filesystem. This makes it possible to "
+"avoid configuring access to the entire home directory, and can be useful "
+"for applications that hardcode file paths in ``~/``."
 msgstr ""
-" `` --persist=path `` 选项可以用来将用户目录映射到沙箱的文件系统。这可以避免配置整个home目录访问权限。并且对于在硬编码使用 "
-"`` ~/ `` 文件路径的应用程序非常有用。"
+"``--persist=path`` 选项可以用来将用户目录映射到沙箱的文件系统。这可以避免配置整个home目录访问权限。并且对于在硬编码使用 "
+"``~/`` 文件路径的应用程序非常有用。"
 
-#: ../../sandbox-permissions.rst:90
+#: ../../sandbox-permissions.rst:136
 msgid ""
-"If an application uses ``$TMPDIR`` to contain lock files or shared files "
-"with other processes, you may want to add ``--env=TMPDIR=/var/tmp``."
+"If an application uses ``$TMPDIR`` to contain lock files you may want to "
+"add a wrapper script that sets it to "
+"``$XDG_RUNTIME_DIR/app/$FLATPAK_ID``."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:92
+#: ../../sandbox-permissions.rst:138
 msgid ""
-"Retaining and sharing configuration with non-Flatpak installations is to be "
-"avoided."
+"Retaining and sharing configuration with non-Flatpak installations is to "
+"be avoided."
 msgstr "应该避免与非flatpak安装的应用共享配置。"
 
-#: ../../sandbox-permissions.rst:94
+#: ../../sandbox-permissions.rst:141
 msgid ""
-"As mentioned above the ``host`` option does not actually provide complete "
-"access to the host filesystem. The main rules are:"
-msgstr "如上所述， `` host `` 选项实际上没有提供主机文件系统的完整访问。主要的规则是："
+"As mentioned above the ``host`` option does not actually provide complete"
+" access to the host filesystem. The main rules are:"
+msgstr "如上所述， ``host`` 选项实际上没有提供主机文件系统的完整访问。主要的规则是："
 
-#: ../../sandbox-permissions.rst:97
+#: ../../sandbox-permissions.rst:145
 msgid ""
 "These directories are blacklisted: ``/lib``, ``/lib32``, ``/lib64``, "
 "``/bin``, ``/sbin``, ``/usr``, ``/boot``, ``/root``, ``/tmp``, ``/etc``, "
 "``/app``, ``/run``, ``/proc``, ``/sys``, ``/dev``, ``/var``"
 msgstr ""
-"这些目录是屏蔽掉的： `` /lib `` ,  `` /lib32 `` ,  `` /lib64 `` ,  `` /bin `` ,  `` "
-"/sbin `` ,  `` /usr `` ,  `` /boot `` ,  `` /root `` ,  `` /tmp `` ,  `` "
-"/etc `` ,  `` /app `` ,  `` /run `` ,  `` /proc `` ,  `` /sys `` ,  `` /dev "
-"`` ,  `` /var `` "
+"这些目录是屏蔽掉的： ``/lib`` ,  ``/lib32`` ,  ``/lib64`` ,  ``/bin`` ,  ``/sbin`` "
+",  ``/usr`` ,  ``/boot`` ,  ``/root`` ,  ``/tmp`` ,  ``/etc`` ,  ``/app``"
+" ,  ``/run`` ,  ``/proc`` ,  ``/sys`` ,  ``/dev`` ,  ``/var`` "
 
-#: ../../sandbox-permissions.rst:99
+#: ../../sandbox-permissions.rst:149
 msgid "Exceptions from the blacklist: ``/run/media``"
-msgstr " `` /run/media `` 例外"
+msgstr "``/run/media`` 例外"
 
-#: ../../sandbox-permissions.rst:100
+#: ../../sandbox-permissions.rst:150
+msgid "These directories are mounted under ``/var/run/host``: ``/etc``, ``/usr``"
+msgstr "这些目录被挂载到 ``/var/run/host`` : ``/etc`` ， ``/usr`` "
+
+#: ../../sandbox-permissions.rst:152
 msgid ""
-"These directories are mounted under ``/var/run/host``: ``/etc``, ``/usr``"
-msgstr "这些目录被挂载到 `` /var/run/host `` : `` /etc `` ， `` /usr `` "
+"The reason many of the directories are blacklisted is because they "
+"already exist in the sandbox such as ``/usr`` or are not usable in the "
+"sandbox."
+msgstr "许多目录被屏蔽的原因是他们已经在沙箱里存在了：例如 ``/usr`` 或者是一些在沙箱中不可用的目录。"
 
-#: ../../sandbox-permissions.rst:102
-msgid ""
-"The reason many of the directories are blacklisted is because they already "
-"exist in the sandbox such as ``/usr`` or are not usable in the sandbox."
-msgstr "许多目录被屏蔽的原因是他们已经在沙箱里存在了：例如 `` /usr `` 或者是一些在沙箱中不可用的目录。"
-
-#: ../../sandbox-permissions.rst:106
+#: ../../sandbox-permissions.rst:157
 msgid "Device access"
 msgstr "设备访问"
 
-#: ../../sandbox-permissions.rst:108
+#: ../../sandbox-permissions.rst:159
 msgid ""
 "While not ideal, ``--device=all`` can be used to access devices like "
 "controllers or webcams."
-msgstr "尽管不理想， `` --device=all ``  可以用来访问控制器和网络摄像头之类的设备。"
+msgstr "尽管不理想， ``--device=all``  可以用来访问控制器和网络摄像头之类的设备。"
 
-#: ../../sandbox-permissions.rst:111
+#: ../../sandbox-permissions.rst:163
 msgid "dconf access"
 msgstr "dconf访问"
 
-#: ../../sandbox-permissions.rst:113
-#, fuzzy
+#: ../../sandbox-permissions.rst:165
 msgid ""
-"Until a sandbox-compatible backend is available, applications that require "
-"access to dconf can do so with the following options::"
-msgstr "在沙箱兼容后端可用之前，需要访问dconf的应用程序可以使用以下选项::"
+"As of xdg-desktop-portal 1.1.0 and glib 2.60.5 (in the runtime) you do "
+"not need direct DConf access in most cases."
+msgstr ""
+
+#: ../../sandbox-permissions.rst:168
+msgid ""
+"As of now this glib version is included in "
+"``org.freedesktop.Platform//19.08`` and ``org.gnome.Platform//3.34`` and "
+"newer."
+msgstr ""
+
+#: ../../sandbox-permissions.rst:171
+msgid ""
+"If an application existed prior to these runtimes you can tell Flatpak "
+"(>= 1.3.4) to migrate the DConf settings on the host into the sandbox by "
+"adding ``--metadata=X-DConf=migrate-path=/org/example/foo/`` to ``finish-"
+"args``. The path must be similar to your app-id or it will not be allowed"
+" (case is ignored and ``_`` and ``-`` are treated equal)."
+msgstr ""
+
+#: ../../sandbox-permissions.rst:178
+msgid ""
+"If you are targeting older runtimes or require direct DConf access for "
+"other reasons you can use these permissions::"
+msgstr ""
+
+#: ../../sandbox-permissions.rst:186
+msgid "With those permissions glib will continue using dconf directly."
+msgstr ""
+
+#~ msgid ""
+#~ "If an application uses ``$TMPDIR`` to"
+#~ " contain lock files or shared files"
+#~ " with other processes, you may want"
+#~ " to add ``--env=TMPDIR=/var/tmp``."
+#~ msgstr ""
+#~ "如果应用使用 ``$TMPDIR`` 包含一个锁文件或者与其他进程共享文件,  你需要添加 "
+#~ "``--env=TMPDIR=/var/tmp`` 。"
+
+#~ msgid ""
+#~ "Until a sandbox-compatible backend is"
+#~ " available, applications that require "
+#~ "access to dconf can do so with "
+#~ "the following options::"
+#~ msgstr "在沙箱兼容后端可用之前，需要访问dconf的应用程序可以使用以下选项:"
+

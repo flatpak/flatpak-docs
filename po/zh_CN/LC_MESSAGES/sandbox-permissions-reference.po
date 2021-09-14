@@ -2,256 +2,312 @@
 # ZiqiangXu <ziqiang_xu@yeah.net>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-11 18:07-0400\n"
-"PO-Revision-Date: 2018-10-08 03:36+0000\n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2018-10-08 03:36-0400\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
-"Language-Team: Chinese (Simplified, China)\n"
 "Language: zh_Hans_CN\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Chinese (Simplified, China)\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 4.6.2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../sandbox-permissions-reference.rst:2
-msgid "Sandbox Permissions"
+#, fuzzy
+msgid "Sandbox Permissions Reference"
 msgstr "沙盒权限"
 
 #: ../../sandbox-permissions-reference.rst:4
 msgid ""
-"Sandbox permissions can be configured from an application manifest file (see"
-" :doc:`manifests`). They can also be set with the ``build-finish``, ``run`` "
-"and ``override`` commands."
+"Sandbox permissions can be configured from an application manifest file "
+"(see :doc:`manifests`). They can also be set with the ``build-finish``, "
+"``run`` and ``override`` commands."
 msgstr ""
-"沙盒权限可以在应用清单文件中配置（参考  :doc:`manifests` ）。也可以通过 `` build-finish `` ,  `` run "
-"``  和  `` override `` 命令设置。"
+"沙盒权限可以在应用清单文件中配置（参考  :doc:`manifests` ）。也可以通过 `` build-finish `` ,  `` "
+"run ``  和  `` override `` 命令设置。"
 
-#: ../../sandbox-permissions-reference.rst:6
+#: ../../sandbox-permissions-reference.rst:8
 msgid ""
-"The following list includes many of the most useful permission options. A "
-"complete list can be viewed using ``flatpak build-finish --help``."
+"The following list includes many of the most useful permission options. A"
+" complete list can be viewed using ``flatpak build-finish --help``."
 msgstr "下述列表包含了大多树有用的权限选项。完整的列表可以通过 `` flatpak build-finish --help `` 命令查看。"
 
-#: ../../sandbox-permissions-reference.rst:9
+#: ../../sandbox-permissions-reference.rst:12
 msgid "``--socket=x11``"
 msgstr " `` --socket=x11 `` "
 
-#: ../../sandbox-permissions-reference.rst:9
+#: ../../sandbox-permissions-reference.rst:12
 msgid "Show windows using X11"
 msgstr "使用X11显示窗口"
 
-#: ../../sandbox-permissions-reference.rst:10
+#: ../../sandbox-permissions-reference.rst:13
 msgid "``--share=ipc``"
 msgstr " `` --share=ipc `` "
 
-#: ../../sandbox-permissions-reference.rst:10
+#: ../../sandbox-permissions-reference.rst:13
 msgid "Share IPC namespace with the host [#f1]_"
 msgstr "与主机共享IPC命名空间 [#f1]"
 
-#: ../../sandbox-permissions-reference.rst:11
+#: ../../sandbox-permissions-reference.rst:14
+msgid "``--allow=bluetooth``"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:14
+msgid "Allow access to Bluetooth"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:15
 msgid "``--device=dri``"
 msgstr " `` --device=dri `` "
 
-#: ../../sandbox-permissions-reference.rst:11
+#: ../../sandbox-permissions-reference.rst:15
 msgid "OpenGL rendering"
 msgstr "OpenGL渲染"
 
-#: ../../sandbox-permissions-reference.rst:12
+#: ../../sandbox-permissions-reference.rst:16
 msgid "``--socket=wayland``"
 msgstr " `` --socket=wayland `` "
 
-#: ../../sandbox-permissions-reference.rst:12
+#: ../../sandbox-permissions-reference.rst:16
 msgid "Show windows using Wayland"
 msgstr "通过Wayland显示窗口"
 
-#: ../../sandbox-permissions-reference.rst:13
+#: ../../sandbox-permissions-reference.rst:17
 msgid "``--socket=pulseaudio``"
 msgstr " `` --socket=pulseaudio `` "
 
-#: ../../sandbox-permissions-reference.rst:13
+#: ../../sandbox-permissions-reference.rst:17
 msgid "Play sounds using PulseAudio"
 msgstr "使用PulseAudio播放音频"
 
-#: ../../sandbox-permissions-reference.rst:14
+#: ../../sandbox-permissions-reference.rst:18
 msgid "``--share=network``"
 msgstr " `` --share=network `` "
 
-#: ../../sandbox-permissions-reference.rst:14
+#: ../../sandbox-permissions-reference.rst:18
 msgid "Access the network [#f2]_"
 msgstr "访问网络  [#f2]"
 
-#: ../../sandbox-permissions-reference.rst:15
+#: ../../sandbox-permissions-reference.rst:19
 msgid "``--talk-name=org.freedesktop.secrets``"
 msgstr " `` --talk-name=org.freedesktop.secrets `` "
 
-#: ../../sandbox-permissions-reference.rst:15
+#: ../../sandbox-permissions-reference.rst:19
 msgid "Talk to a named service on the session bus"
 msgstr "在会话总线中与命名服务通信"
 
-#: ../../sandbox-permissions-reference.rst:16
+#: ../../sandbox-permissions-reference.rst:20
 msgid "``--system-talk-name=org.freedesktop.GeoClue2``"
 msgstr " `` --system-talk-name=org.freedesktop.GeoClue2 `` "
 
-#: ../../sandbox-permissions-reference.rst:16
+#: ../../sandbox-permissions-reference.rst:20
 msgid "Talk to a named service on the system bus"
 msgstr "在系统总线中与命名服务通信"
 
-#: ../../sandbox-permissions-reference.rst:17
+#: ../../sandbox-permissions-reference.rst:21
 msgid "``--socket=system-bus``"
 msgstr " `` --socket=system-bus `` "
 
-#: ../../sandbox-permissions-reference.rst:17
+#: ../../sandbox-permissions-reference.rst:21
 msgid "Unlimited access to all of D-Bus"
 msgstr "对所有的D-Bus无限制访问"
 
-#: ../../sandbox-permissions-reference.rst:21
+#: ../../sandbox-permissions-reference.rst:25
 msgid "Filesystem permissions"
 msgstr "文件系统权限"
 
-#: ../../sandbox-permissions-reference.rst:23
+#: ../../sandbox-permissions-reference.rst:27
 msgid ""
-"Each of the following permissions configure filesystem access, and should be"
-" added to ``--filesystem=``:"
+"Each of the following permissions configure filesystem access, and should"
+" be added to ``--filesystem=``:"
 msgstr "下述的每一项配置文件系统的访问权限，并且应该添加到  `` --filesystem= `` ："
 
-#: ../../sandbox-permissions-reference.rst:26
+#: ../../sandbox-permissions-reference.rst:31
 msgid "``host``"
 msgstr " `` host `` "
 
-#: ../../sandbox-permissions-reference.rst:26
-msgid "Access all files"
+#: ../../sandbox-permissions-reference.rst:31
+#, fuzzy
+msgid "Access all files [#f3]_"
 msgstr "访问所有文件"
 
-#: ../../sandbox-permissions-reference.rst:27
+#: ../../sandbox-permissions-reference.rst:32
 msgid "``home``"
 msgstr " `` home `` "
 
-#: ../../sandbox-permissions-reference.rst:27
+#: ../../sandbox-permissions-reference.rst:32
 msgid "Access the home directory"
 msgstr "访问home目录"
 
-#: ../../sandbox-permissions-reference.rst:28
+#: ../../sandbox-permissions-reference.rst:33
 msgid "``/some/dir``"
 msgstr " `` /some/dir `` "
 
-#: ../../sandbox-permissions-reference.rst:28
+#: ../../sandbox-permissions-reference.rst:33
 msgid "Access an arbitrary path"
 msgstr "访问任意路径"
 
-#: ../../sandbox-permissions-reference.rst:29
+#: ../../sandbox-permissions-reference.rst:34
 msgid "``~/some/dir``"
 msgstr " `` ~/some/dir `` "
 
-#: ../../sandbox-permissions-reference.rst:29
+#: ../../sandbox-permissions-reference.rst:34
 msgid "Access an arbitrary path relative to the home directory"
 msgstr "访问任意相对home目录的路径"
 
-#: ../../sandbox-permissions-reference.rst:30
+#: ../../sandbox-permissions-reference.rst:35
 msgid "``xdg-desktop``"
 msgstr " `` xdg-desktop `` "
 
-#: ../../sandbox-permissions-reference.rst:30
+#: ../../sandbox-permissions-reference.rst:35
 msgid "Access the XDG desktop directory"
 msgstr "访问XDG桌面目录"
 
-#: ../../sandbox-permissions-reference.rst:31
+#: ../../sandbox-permissions-reference.rst:36
 msgid "``xdg-documents``"
 msgstr " `` xdg-documents `` "
 
-#: ../../sandbox-permissions-reference.rst:31
+#: ../../sandbox-permissions-reference.rst:36
 msgid "Access the XDG documents directory"
 msgstr "访问XDG文档目录"
 
-#: ../../sandbox-permissions-reference.rst:32
+#: ../../sandbox-permissions-reference.rst:37
 msgid "``xdg-download``"
 msgstr " `` xdg-download `` "
 
-#: ../../sandbox-permissions-reference.rst:32
+#: ../../sandbox-permissions-reference.rst:37
 msgid "Access the XDG download directory"
 msgstr "访问XDG下载目录"
 
-#: ../../sandbox-permissions-reference.rst:33
+#: ../../sandbox-permissions-reference.rst:38
 msgid "``xdg-music``"
 msgstr " `` xdg-music `` "
 
-#: ../../sandbox-permissions-reference.rst:33
+#: ../../sandbox-permissions-reference.rst:38
 msgid "Access the XDG music directory"
 msgstr "访问XDG音乐目录"
 
-#: ../../sandbox-permissions-reference.rst:34
+#: ../../sandbox-permissions-reference.rst:39
 msgid "``xdg-pictures``"
 msgstr " `` xdg-pictures `` "
 
-#: ../../sandbox-permissions-reference.rst:34
+#: ../../sandbox-permissions-reference.rst:39
 msgid "Access the XDG pictures directory"
 msgstr "访问XDG图片目录"
 
-#: ../../sandbox-permissions-reference.rst:35
+#: ../../sandbox-permissions-reference.rst:40
 msgid "``xdg-public-share``"
 msgstr " `` xdg-public-share `` "
 
-#: ../../sandbox-permissions-reference.rst:35
+#: ../../sandbox-permissions-reference.rst:40
 msgid "Access the XDG public directory"
 msgstr "访问XDG公共目录"
 
-#: ../../sandbox-permissions-reference.rst:36
+#: ../../sandbox-permissions-reference.rst:41
 msgid "``xdg-videos``"
 msgstr " `` xdg-videos `` "
 
-#: ../../sandbox-permissions-reference.rst:36
+#: ../../sandbox-permissions-reference.rst:41
 msgid "Access the XDG videos directory"
 msgstr "访问XDG视频目录"
 
-#: ../../sandbox-permissions-reference.rst:37
+#: ../../sandbox-permissions-reference.rst:42
 msgid "``xdg-templates``"
 msgstr " `` xdg-templates `` "
 
-#: ../../sandbox-permissions-reference.rst:37
+#: ../../sandbox-permissions-reference.rst:42
 msgid "Access the XDG templates directory"
 msgstr "访问XDG模板目录"
 
-#: ../../sandbox-permissions-reference.rst:40
+#: ../../sandbox-permissions-reference.rst:43
+#, fuzzy
+msgid "``xdg-config``"
+msgstr " `` xdg-music `` "
+
+#: ../../sandbox-permissions-reference.rst:43
+#, fuzzy
+msgid "Access the XDG config directory"
+msgstr "访问home目录"
+
+#: ../../sandbox-permissions-reference.rst:44
+#, fuzzy
+msgid "``xdg-cache``"
+msgstr " `` xdg-music `` "
+
+#: ../../sandbox-permissions-reference.rst:44
+#, fuzzy
+msgid "Access the XDG cache directory"
+msgstr "访问home目录"
+
+#: ../../sandbox-permissions-reference.rst:45
+#, fuzzy
+msgid "``xdg-data``"
+msgstr " `` xdg-desktop `` "
+
+#: ../../sandbox-permissions-reference.rst:45
+#, fuzzy
+msgid "Access the XDG data directory"
+msgstr "访问XDG桌面目录"
+
+#: ../../sandbox-permissions-reference.rst:46
+#, fuzzy
+msgid "``xdg-run/path``"
+msgstr " `` xdg-templates `` "
+
+#: ../../sandbox-permissions-reference.rst:46
+msgid ""
+"Access subdirectories of the XDG runtime directory (where path is any "
+"subdirectory)"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:49
 msgid ""
 "Paths can be added to all the above filesystem options. For example, "
-"``--filesystem=xdg-documents/path``. The following permission options can "
-"also be added:"
+"``--filesystem=xdg-documents/path``. The following permission options can"
+" also be added:"
 msgstr ""
 "路径都可以添加 `` filesystem`选项上。如 `` --filesystem=xdg-documents/path `` "
 "。下面的权限选项也可以添加上去："
 
-#: ../../sandbox-permissions-reference.rst:42
+#: ../../sandbox-permissions-reference.rst:53
 msgid "``:ro`` - read-only access"
 msgstr " `` :ro ``  - 只读访问"
 
-#: ../../sandbox-permissions-reference.rst:43
+#: ../../sandbox-permissions-reference.rst:54
 msgid "``:rw`` - read/write access (this is the default)"
 msgstr " `` :rw ``  - 读写访问 (默认)"
 
-#: ../../sandbox-permissions-reference.rst:44
+#: ../../sandbox-permissions-reference.rst:55
 msgid ""
 "``:create`` - read/write access, and create the directory if it doesn't "
 "exist"
 msgstr " `` :create ``  - 读写访问，如果目录不存在，创建目录"
 
-#: ../../sandbox-permissions-reference.rst:47
+#: ../../sandbox-permissions-reference.rst:58
 msgid "Footnotes"
 msgstr "脚注"
 
-#: ../../sandbox-permissions-reference.rst:48
+#: ../../sandbox-permissions-reference.rst:59
 msgid ""
 "This is not necessarily required, but without it the X11 shared memory "
 "extension will not work, which is very bad for X11 performance."
 msgstr "虽然不是必要，但是没有这个，X11共享内存扩展会失效，X11的性能非常差。"
 
-#: ../../sandbox-permissions-reference.rst:49
+#: ../../sandbox-permissions-reference.rst:61
 msgid ""
-"Giving network access also grants access to all host services listening on "
-"abstract Unix sockets (due to how network namespaces work), and these have "
-"no permission checks. This unfortunately affects e.g. the X server and the "
-"session bus which listens to abstract sockets by default. A secure "
-"distribution should disable these and just use regular sockets."
+"Giving network access also grants access to all host services listening "
+"on abstract Unix sockets (due to how network namespaces work), and these "
+"have no permission checks. This unfortunately affects e.g. the X server "
+"and the session bus which listens to abstract sockets by default. A "
+"secure distribution should disable these and just use regular sockets."
 msgstr ""
 "授予网络访问权限时，也会授予所有的主机服务监听Unix抽象套接字权限（原因请参考网络命名空间工作原理），并且没有权限检查。这会造成不好的影响。如：默认情况下监听Unix抽象套接字的X"
 " 服务器和会话总线。安全的发行版应该禁用，且使用普通的套接字。"
+
+#: ../../sandbox-permissions-reference.rst:66
+msgid "Except for the blacklisted paths mentioned in :doc:`sandbox-permissions`."
+msgstr ""
+

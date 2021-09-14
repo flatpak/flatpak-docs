@@ -3,18 +3,18 @@
 # ZiqiangXu <ziqiang_xu@yeah.net>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-10-12 05:26+0000\n"
-"Last-Translator: ZiqiangXu <ziqiang_xu@yeah.net>\n"
-"Language-Team: Chinese (Simplified, China)\n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2018-11-03 01:34-0400\n"
+"Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language: zh_Hans_CN\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Chinese (Simplified, China)\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 4.6.2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../dependencies.rst:2
 msgid "Dependencies"
@@ -26,147 +26,147 @@ msgid ""
 "depend on other software. When setting out to build an application with "
 "Flatpak for the first time, it is therefore necessary to decide how "
 "application dependencies will be organized."
-msgstr ""
-"Flatpak为应用程序如何依赖于其他软件提供了许多不同的选项。在首次开始使用Flatpak构建应用程序时，因此有必要决定如何组织应用程序依赖关系。"
-
-#: ../../dependencies.rst:6
-msgid ""
-"This page outlines what the options are, and provides guidance on when to "
-"use each one."
-msgstr "此页面概括了这些选项是什么和在何时使用他们。"
+msgstr "Flatpak为应用程序如何依赖于其他软件提供了许多不同的选项。在首次开始使用Flatpak构建应用程序时，因此有必要决定如何组织应用程序依赖关系。"
 
 #: ../../dependencies.rst:9
+msgid ""
+"This page outlines what the options are, and provides guidance on when to"
+" use each one."
+msgstr "此页面概括了这些选项是什么和在何时使用他们。"
+
+#: ../../dependencies.rst:13
 msgid "Runtimes"
 msgstr "运行时"
 
-#: ../../dependencies.rst:11
+#: ../../dependencies.rst:15
 msgid ""
 "As was described in :doc:`basic-concepts`, runtimes provide basic "
 "dependencies that can be used by applications. They also provide the "
-"environment that applications run in. Flatpak requires each application to "
-"specify a runtime. Therefore, one of the first decisions you need to make "
-"when building an application with Flatpak, is which runtime it will use."
+"environment that applications run in. Flatpak requires each application "
+"to specify a runtime. Therefore, one of the first decisions you need to "
+"make when building an application with Flatpak, is which runtime it will "
+"use."
 msgstr ""
-"如  :doc:`basic-"
-"concepts`中描述的，运行时提供了应用可以使用的基本依赖。他们提供了应用的运行环境。Flatpack要求每个应用需要指明一个运行时。因此，用Flatpack构建一个应用最先要确定的就是，应用要使用什么运行时。"
+"如  :doc:`basic-concepts` "
+"中描述的，运行时提供了应用可以使用的基本依赖。他们提供了应用的运行环境。Flatpack要求每个应用需要指明一个运行时。因此，用Flatpack构建一个应用最先要确定的就是，应用要使用什么运行时。"
 
-#: ../../dependencies.rst:13
+#: ../../dependencies.rst:21
 msgid ""
 "An overview of the runtimes that are available can be found in the :doc"
-":`available-runtimes` page. There are deliberately only a small number of "
-"runtimes to choose from. Typically, runtimes are picked on the basis of "
+":`available-runtimes` page. There are deliberately only a small number of"
+" runtimes to choose from. Typically, runtimes are picked on the basis of "
 "which dependencies an application requires. If a runtime exists that "
 "provides libraries that you plan on using, this is usually the correct "
 "runtime to use!"
 msgstr ""
-"我们可以在  :doc:`available-"
-"runtimes`页面找到可用运行时的概览。有意地，只有少量运行时可供选择。通常，运行时是根据应用程序所需的依赖项来选择的。如果存在一个提供您计划使用的库的运行时，这通常是正确的运行时!"
+"我们可以在  :doc:`available-runtimes` "
+"页面找到可用运行时的概览。有意地，只有少量运行时可供选择。通常，运行时是根据应用程序所需的依赖项来选择的。如果存在一个提供您计划使用的库的运行时，这通常是正确的运行时!"
 
-#: ../../dependencies.rst:17
+#: ../../dependencies.rst:29
 msgid ""
 "Runtimes require regular maintenance, and application developers should "
 "generally not consider creating their own."
 msgstr "运行时需要定期维护，应用程序开发人员通常不应该考虑创建自己的运行时。"
 
-#: ../../dependencies.rst:19
+#: ../../dependencies.rst:32
 msgid ""
 "Runtimes are automatically installed for users when they install an "
 "application, and build tools can also automatically install them for you "
-"(``flatpak-builder``'s ``--install-deps-from`` option is useful for this). "
-"However, if you do need to manually install your chosen runtime, this can be"
-" done in the same way as installing an application, with the ``flatpak "
-"install`` command. For example, the command to install the GNOME 3.26 "
-"runtime is::"
+"(``flatpak-builder``'s ``--install-deps-from`` option is useful for "
+"this). However, if you do need to manually install your chosen runtime, "
+"this can be done in the same way as installing an application, with the "
+"``flatpak install`` command. For example, the command to install the "
+"GNOME 3.26 runtime is::"
 msgstr ""
-"当用户安装应用程序时，运行时将自动为他们安装，构建工具也可以为您自动安装它们（使用  `` flatpak-builder ``  的  `` "
-"--install-deps-from ``  选项）。但是，如果你想要手动地选择你的运行时，和安装一个应用类似，使用  `` flatpack "
-"install ``  命令。举个例子，安装GNOME 3.26运行时的命令::"
+"当用户安装应用程序时，运行时将自动为他们安装，构建工具也可以为您自动安装它们（使用  ``flatpak-builder``  的  "
+"``--install-deps-from``  选项）。但是，如果你想要手动地选择你的运行时，和安装一个应用类似，使用  ``flatpack "
+"install``  命令。举个例子，安装GNOME 3.26运行时的命令::"
 
-#: ../../dependencies.rst:24
+#: ../../dependencies.rst:43
 msgid "Bundling"
 msgstr "构建"
 
-#: ../../dependencies.rst:26
+#: ../../dependencies.rst:45
 msgid ""
-"One of the key advantages of Flatpak is that it allows application authors "
-"to bundle whatever libraries or dependencies that they want. This means that"
-" developers aren't constrained by which libraries are available through "
-"Linux distributions."
+"One of the key advantages of Flatpak is that it allows application "
+"authors to bundle whatever libraries or dependencies that they want. This"
+" means that developers aren't constrained by which libraries are "
+"available through Linux distributions."
 msgstr "Flatpak的关键优势之一是它允许应用程序作者捆绑任何他们想要的库或依赖。这意味着开发人员不受某些库只在特定Linux发行版可用的约束。"
 
-#: ../../dependencies.rst:28
+#: ../../dependencies.rst:50
 msgid ""
-"When it comes to building an application for the first time, you will need "
-"to decide which dependencies to bundle. This can include:"
+"When it comes to building an application for the first time, you will "
+"need to decide which dependencies to bundle. This can include:"
 msgstr "当首次构建应用的时候，你需要确定绑定哪些依赖。这包括："
 
-#: ../../dependencies.rst:30
+#: ../../dependencies.rst:53
 msgid "libraries that aren't in your chosen runtime"
 msgstr "所选运行时不包含的库"
 
-#: ../../dependencies.rst:31
+#: ../../dependencies.rst:54
 msgid "different versions of libraries that are in your chosen runtime"
 msgstr "所选运行时库的另一版本"
 
-#: ../../dependencies.rst:32
+#: ../../dependencies.rst:55
 msgid "patched versions of libraries"
 msgstr "打了补丁的库"
 
-#: ../../dependencies.rst:33
+#: ../../dependencies.rst:56
 msgid "data or other resources that form part of the application"
 msgstr "作为应用一部分的数据或者资源"
 
-#: ../../dependencies.rst:35
+#: ../../dependencies.rst:58
 msgid ""
 "As will be seen, bundled dependencies can be automatically downloaded as "
-"part of the build process. It is also possible to apply patches and perform "
-"other transformations."
+"part of the build process. It is also possible to apply patches and "
+"perform other transformations."
 msgstr "可以看到，作为构建过程的一部分，捆绑的依赖关系可以自动下载。开发者也可以对他们打补丁，或者作其他的更改。"
 
-#: ../../dependencies.rst:37
+#: ../../dependencies.rst:62
 msgid ""
 "While bundling is very powerful and flexible, it also places a greater "
 "maintenance burden on the application developer. Therefore, while it is "
-"possible to bundle as much as you would like, it is generally recommended to"
-" try and keep the number of bundled modules as low as possible. If a "
-"dependency is available as part of a runtime, it is generally better to use "
-"that version rather than bundle it yourself."
-msgstr ""
-"虽然捆绑非常强大和灵活，但它也给应用程序开发人员带来了更大的维护负担。因此，尽管可以尽可能多地进行打包，但通常建议尽量减少打包模块的数量。如果依赖项作为运行时的一部分并是可用的，通常最好使用该版本，而不是自己打包。"
+"possible to bundle as much as you would like, it is generally recommended"
+" to try and keep the number of bundled modules as low as possible. If a "
+"dependency is available as part of a runtime, it is generally better to "
+"use that version rather than bundle it yourself."
+msgstr "虽然捆绑非常强大和灵活，但它也给应用程序开发人员带来了更大的维护负担。因此，尽管可以尽可能多地进行打包，但通常建议尽量减少打包模块的数量。如果依赖项作为运行时的一部分并是可用的，通常最好使用该版本，而不是自己打包。"
 
-#: ../../dependencies.rst:39
+#: ../../dependencies.rst:69
 msgid ""
-"The specifics of how to bundle libraries is covered in the :doc:`manifests` "
-"section."
+"The specifics of how to bundle libraries is covered in the "
+":doc:`manifests` section."
 msgstr "如何捆绑库的细节在  :doc:`mainifests` 可以找到。"
 
-#: ../../dependencies.rst:42
+#: ../../dependencies.rst:73
 msgid "Base apps"
 msgstr "框架应用"
 
-#: ../../dependencies.rst:44
+#: ../../dependencies.rst:75
+#, fuzzy
 msgid ""
-"Runtimes and bundling are the two main ways that dependencies are handled "
-"with Flatpak. They allow applications to rely on stable collections of "
-"dependencies on the one hand, and to have flexibility and control on the "
-"other."
+"Runtimes and bundling are the two main ways in which dependencies are "
+"handled with Flatpak. They allow applications to rely on stable "
+"collections of dependencies on the one hand, and to have flexibility and "
+"control on the other."
 msgstr "运行时和捆绑是Flatpack处理依赖的两条主要途径。他们一方面允许应用建立在稳定的依赖集合上，另一方面又不失灵活性和控制。"
 
-#: ../../dependencies.rst:46
+#: ../../dependencies.rst:79
 msgid ""
-"However, in some cases, dependencies come as part of a bigger framework or "
-"toolkit, which doesn't fit into a runtime but which is also cumbersome to "
-"manually bundle as a series of individual modules. This is where *base apps*"
-" come in."
-msgstr ""
-"可是，在某些情况下，依赖是一个更大的框架或者工具集，它不适合放进运行时，但手工捆绑成一系列单独的模块也很麻烦。所以有了*base apps*。"
+"However, in some cases, dependencies come as part of a bigger framework "
+"or toolkit, which doesn't fit into a runtime but which is also cumbersome"
+" to manually bundle as a series of individual modules. This is where "
+"*base apps* come in."
+msgstr "可是，在某些情况下，依赖是一个更大的框架或者工具集，它不适合放进运行时，但手工捆绑成一系列单独的模块也很麻烦。所以有了 *base apps* 。"
 
-#: ../../dependencies.rst:48
+#: ../../dependencies.rst:84
+#, fuzzy
 msgid ""
 "Base apps contain collections of bundled dependencies which can then be "
 "bundled as part of an application. They don't get rebuilt as part of the "
-"build process, which makes building faster (particularly when bundling large"
-" dependences). And because each base app is only built once, it is "
+"build process, which makes building faster (particularly when bundling "
+"large dependencies). And because each base app is only built once, it is "
 "guaranteed to be identical wherever it is used, so it will only be saved "
 "once on disk."
 msgstr ""
@@ -174,15 +174,16 @@ msgstr ""
 "apps包含了一个捆绑好的依赖的集合，这些依赖可以作为应用的一部分被捆绑。他们不会在构建过程中被重建，可以使得构建更快（特别是在构建大型的依赖时）。由于每个base"
 " app只构建一次，可以保证无论什么时候使用都是一样的，所以它只在磁盘保存一份。"
 
-#: ../../dependencies.rst:50
+#: ../../dependencies.rst:90
 msgid ""
-"Base apps are a relatively specialized concept and only some applications "
-"need to use them (the most common base app is used for `Electron "
+"Base apps are a relatively specialized concept and only some applications"
+" need to use them (the most common base app is used for `Electron "
 "applications <https://github.com/flathub/io.atom.electron.BaseApp>`_). "
-"However, if your application uses a large, complex or specialized framework,"
-" it is a good idea to check for available base apps before you start "
-"building."
+"However, if your application uses a large, complex or specialized "
+"framework, it is a good idea to check for available base apps before you "
+"start building."
 msgstr ""
 "base apps是一个相对专业的概念，只有一些应用需要使用他们（最常用的base app是用于 `Electron applications "
 "<https://github.com/flathub/io.atom.electron.BaseApp>`_ "
 "）。但是，如果你的应用使用一个巨大的，复杂的或者专用的框架，在开始构建的时候检查是否有可用的base apps是一个好主意。"
+

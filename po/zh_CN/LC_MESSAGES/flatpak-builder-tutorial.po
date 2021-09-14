@@ -1,11 +1,12 @@
 # PikachuHy <pikachuhy@163.com>, 2018. #zanata
 # ZiqiangXu <ziqiang_xu@yeah.net>, 2018. #zanata
+# ZiqiangXu <ziqiang_xu@yeah.net>, 2020. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-04 20:32-0500\n"
-"PO-Revision-Date: 2018-10-28 12:03+0000\n"
+"PO-Revision-Date: 2020-08-16 01:15-0400\n"
 "Last-Translator: ZiqiangXu <ziqiang_xu@yeah.net>\n"
 "Language-Team: Chinese (Simplified, China)\n"
 "Language: zh_Hans_CN\n"
@@ -113,14 +114,12 @@ msgid ""
 msgstr "下一步是从仓库安装Dictionary应用。通过运行::"
 
 #: ../../flatpak-builder-tutorial.rst:42
-#, fuzzy
 msgid ""
 "To check that the application has been successfully installed, you can "
 "compare the sha256 commit of the installed app with the commit ID that was "
 "printed by ``flatpak-builder``::"
 msgstr ""
-"为了检查应用是否成功安装，你可以比较已安装应用的 sha256 commit和 commit ID，commit ID用 `` flatpak-"
-"builder `` 命令打印::"
+"为了检查应用是否成功安装，你可以比较已安装应用的 sha256 ID 和 `` flatpak-builder `` 命令输出的提交 ID::"
 
 #: ../../flatpak-builder-tutorial.rst:48
 msgid "5. Run the application"

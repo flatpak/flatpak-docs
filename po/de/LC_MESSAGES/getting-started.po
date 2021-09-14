@@ -3,14 +3,14 @@
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-# TingPing <tingping@tingping.se>, 2018. #zanata
+# Markus Richter <semanticdesign@pm.me>, 2019. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-05-20 10:36+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"PO-Revision-Date: 2019-06-25 02:51-0400\n"
+"Last-Translator: Markus Richter <semanticdesign@pm.me>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../../getting-started.rst:2
 msgid "Getting Started"
-msgstr ""
+msgstr "Erste Schritte"
 
 #: ../../getting-started.rst:4
 msgid ""
@@ -30,6 +30,9 @@ msgid ""
 "how to use the Flatpak command line interface, and a tutorial for building a"
 " simple application."
 msgstr ""
+"Dieser Abschnitt beinhaltet eine Einführung zu grundlegenden Konzepten von "
+"Flatpak, einer Anleitung, wie das Kommondozeileninterface verwendet wird und"
+" einem Tutorial, um eine einfache Anwendung zu erzeugen."
 
 #: ../../getting-started.rst:6
 msgid ""
@@ -38,3 +41,7 @@ msgid ""
 "`instructions for how to do this with a range of distributions "
 "<https://flatpak.org/setup/>`_."
 msgstr ""
+"Um diesen Abschnitt durchzugehen, sollte Flatpak installiert und das "
+"Flathub-Repository aktiviert sein. Die Flatpak-Website stellt "
+"`Instruktionen, wie dies mit einer Reihe von Distributionen durchgeführt "
+"wird, zur Verfügung <https://flatpak.org/setup/>`_."

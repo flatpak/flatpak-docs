@@ -3,125 +3,359 @@
 # This file is distributed under the same license as the Flatpak package.
 # Markus Richter <semanticdesign@mailbox.org>, 2017.
 # TingPing <tingping@tingping.se>, 2018. #zanata
+# Markus Richter <semanticdesign@pm.me>, 2019. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-05-20 10:36+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: de_DE <>\n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2019-06-25 02:55-0400\n"
+"Last-Translator: Markus Richter <semanticdesign@pm.me>\n"
 "Language: de\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: de_DE <>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"Generated-By: Babel 2.5.1\n"
-"X-Generator: Zanata 4.6.2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../introduction.rst:2
 msgid "Introduction to Flatpak"
 msgstr "Einführung in Flatpak"
 
 #: ../../introduction.rst:4
+#, fuzzy
 msgid ""
-"Flatpak is a framework for distributing desktop applications on Linux. It "
-"has been created by developers who have a long history of working on the "
-"Linux desktop, and is run as an independent open source project."
+"Flatpak is a framework for distributing desktop applications across "
+"various Linux distributions. It has been created by developers who have a"
+" long history of working on the Linux desktop, and is run as an "
+"independent open source project."
 msgstr ""
-
-#: ../../introduction.rst:7
-msgid "Target audience"
-msgstr ""
+"Flatpak ist ein Framework zum Verteilen von Desktop-Anwendungen unter "
+"Linux. Es wurde von Entwicklern kreiert, die eine lange Historie in der "
+"Arbeit an dem Linux-Desktop  mitbringen und läuft als ein unabhängiges "
+"Open-Source-Projekt."
 
 #: ../../introduction.rst:9
-msgid ""
-"Flatpak can be used by all kinds of desktop applications, and aims to be as "
-"agnostic as possible regarding how applications are built. There are no "
-"requirements regarding which programming languages, build tools, toolkits or"
-" frameworks can be used."
+msgid "Terminology"
 msgstr ""
 
 #: ../../introduction.rst:11
 msgid ""
-"While Flatpak only runs on Linux, it can be used by applications that target"
-" other operating systems, as well as those that are Linux-specific. "
-"Applications can be open source or proprietary (although some distribution "
-"services, like `Flathub <https://flathub.org/>`_, can have restrictions in "
-"this respect)."
+"Flatpak: a system for building, distributing, and running sandboxed "
+"desktop applications on Linux."
 msgstr ""
 
-#: ../../introduction.rst:13
+#: ../../introduction.rst:12
 msgid ""
-"The only technical requirements made by Flatpak are that applications follow"
-" a small number of Freedesktop standards, in order to enable desktop "
-"integration (see :doc:`conventions`)."
+"Flatpak application: these are the applications the user installs via the"
+" ``flatpak`` command or via a different UI like GNOME Software or KDE "
+"Discover."
+msgstr ""
+
+#: ../../introduction.rst:14
+msgid ""
+"Runtime: also called platforms, these are integrated platforms to provide"
+" basic utilities needed for a Flatpak application to work."
 msgstr ""
 
 #: ../../introduction.rst:16
-msgid "Reasons to use Flatpak"
+msgid "BaseApp: these are integrated platforms for frameworks like Electron."
 msgstr ""
 
-#: ../../introduction.rst:18
+#: ../../introduction.rst:17
 msgid ""
-"Flatpak has some major advantages over other approaches to distributing "
-"applications on Linux. First and foremost, Flatpak allows a single "
-"application build to be installed and run on virtually any Linux "
-"distribution. It can also be used in combination with `Flathub "
-"<https://flathub.org/>`_, a centralized service for distributing "
-"applications on all distributions. This makes it possible for application "
-"developers to target the entire Linux desktop market from one place."
+"Flatpak bundle: a specific single-file export format which contains a "
+"Flatpak app or runtime."
 msgstr ""
 
 #: ../../introduction.rst:20
-msgid ""
-"Flatpak also offers native integration for the main Linux desktops, so that "
-"users can easily browse, install, run and use Flatpak applications through "
-"their existing desktop environment and tools."
-msgstr ""
+msgid "Target audience"
+msgstr "Zielgruppe"
 
 #: ../../introduction.rst:22
-msgid "Other benefits for developers include:"
-msgstr ""
-
-#: ../../introduction.rst:24
 msgid ""
-"**Forward-compatibility:** the same Flatpak can be run on different versions"
-" of the same distribution, including versions that haven't been released "
-"yet. This doesn't require any changes or management by application "
-"developers."
+"Flatpak can be used by all kinds of desktop applications, and aims to be "
+"as agnostic as possible regarding how applications are built. There are "
+"no requirements regarding which programming languages, build tools, "
+"toolkits or frameworks can be used."
 msgstr ""
-
-#: ../../introduction.rst:25
-msgid ""
-"**Maintained platforms:** called runtimes, these contain collections of "
-"dependencies, which can be used by applications, and which can take a lot of"
-" the work out of application development."
-msgstr ""
-
-#: ../../introduction.rst:26
-msgid ""
-"**Bundling:** this allows application developers to ship almost any "
-"dependency or library as part of their application. This gives complete "
-"control over which software is used to build applications."
-msgstr ""
+"Flatpak kann von allen Arten von Desktop-Anwendungen verwendet werden und"
+" verfolgt dabei das Ziel so flexibel wie möglich zu sein, wie Anwendungen"
+" erstellt werden. Es existieren keine Vorgaben, welche "
+"Programmiersprachen, Build-Tools, Toolkits oder Frameworks verwendet "
+"werden können."
 
 #: ../../introduction.rst:27
 msgid ""
-"**Consistent application environments:** because these are the same across "
-"devices, applications perform as intended. This also makes it easier to "
-"identify bugs and to do testing."
+"While Flatpak only runs on Linux, it can be used by applications that "
+"target other operating systems, as well as those that are Linux-specific."
+" Applications can be open source or proprietary (although some "
+"distribution services, like `Flathub <https://flathub.org/>`_, can have "
+"restrictions in this respect)."
+msgstr ""
+"Während Flatpak lediglich unter Linux lauffähig ist, kann es genauso von "
+"Anwendungen verwendet werden, die andere Betriebssysteme adressieren, als"
+"  auch Linux-spezifisch sind. Anwendungen können Open Source oder "
+"proprietär sein (auch wenn einige Distributions-Dienste, wie `Flathub "
+"<https://flathub.org/>`_, Restriktionen mitbringen im Hinblick auf diesen"
+" Aspekt)."
+
+#: ../../introduction.rst:32
+msgid ""
+"The only technical requirements made by Flatpak are that applications "
+"follow a small number of Freedesktop standards, in order to enable "
+"desktop integration (see :doc:`conventions`)."
+msgstr ""
+"Die einzige technische Vorgabe, die seitens Flatpak gegeben ist, lautet, "
+"dass Anwendungen einer kleinen Zahl von Freedesktop-Standards folgen, um "
+"eine Desktop-Integration zu ermöglichen (siehe :doc:`conventions`)."
+
+#: ../../introduction.rst:37
+msgid "Issues of current model of packaging"
 msgstr ""
 
-#: ../../introduction.rst:29
+#: ../../introduction.rst:39
 msgid ""
-"Finally, while Flatpak does provide a centralized service for distributing "
-"applications, it also allows decentralized hosting and distribution, so that"
-" application developers or downstreams can host their own applications and "
-"application repositories."
+"It is important to understand the problems of the current model of "
+"packaging applications to understand the existence of Flatpak:"
 msgstr ""
 
-#: ../../introduction.rst:31
+#: ../../introduction.rst:42
 msgid ""
-"Information about Flatpak's internals can be found in :doc:`under-the-hood`."
+"**Duplicated work packaging apps**: many Linux distributions come with "
+"their own package manager, package format and repository. This requires a"
+" lot of maintainers to package the same application in various "
+"distributions, or the application developer to learn the language of each"
+" format and then package the application in those distributions, or "
+"ignore most distributions and package and support a couple of "
+"distributions. This makes the Linux desktop a difficult platform for "
+"software vendors to target."
 msgstr ""
+
+#: ../../introduction.rst:48
+msgid ""
+"**Limited to apps that are packaged**: not all applications are natively "
+"available in every Linux distribution. If an application is not available"
+" in a specific distribution, the user will have to rely on manually "
+"downloading the archive of the application, extracting it and hoping the "
+"application will launch."
+msgstr ""
+
+#: ../../introduction.rst:52
+msgid ""
+"**Limited to distributions that have the apps**: the user is limited to "
+"the number of distributions that have the needed applications for them to"
+" properly setup their workflow. This reduces the amount of distributions "
+"that can be suitable for a user."
+msgstr ""
+
+#: ../../introduction.rst:56
+msgid ""
+"**Hard to innovate in OS space**: the maintainers of the distributions "
+"have to spend a lot of time packaging applications to make the "
+"distribution suitable for the end user, instead of focusing on their end "
+"goals. This delays the progress of each distribution."
+msgstr ""
+
+#: ../../introduction.rst:59
+msgid ""
+"**Old and outdated packages**: LTS distributions often have very old "
+"versions of applications packaged natively. Bug reproducibility is "
+"hindered by the different environments that applications are run in, and "
+"application developers often have little control over how their "
+"application is packaged by distributions."
+msgstr ""
+
+#: ../../introduction.rst:64
+msgid ""
+"Flatpak strives to fix the issues listed above, by conveniently enabling "
+"developers to distribute applications from one source and to target the "
+"entire Linux desktop."
+msgstr ""
+
+#: ../../introduction.rst:68
+msgid "Reasons to use Flatpak"
+msgstr "Gründe Flatpak zu verwenden"
+
+#: ../../introduction.rst:70
+msgid "Flatpak has some major advantages over most system package managers:"
+msgstr ""
+
+#: ../../introduction.rst:72
+msgid ""
+"**Universality**: Flatpak allows applications to be installed and run on "
+"virtually any Linux distribution. This includes non-GNU distributions, "
+"systemd-free distributions, distributions with a read-only operating "
+"system (OS), and various architectures without the developer needing the "
+"relevant hardware on hand."
+msgstr ""
+
+#: ../../introduction.rst:76
+msgid ""
+"**Space for innovations**: Flatpak facilitates distribution maintainers "
+"to focus on their goals to innovate their distribution."
+msgstr ""
+
+#: ../../introduction.rst:78
+msgid ""
+"**Stability**: breakage in a Flatpak application will not risk the system"
+" from breaking. This is because Flatpak applications and runtimes are "
+"contained to not interfere with the system altogether."
+msgstr ""
+
+#: ../../introduction.rst:81
+msgid ""
+"**Rootless install**: elevated privileges are not required when "
+"installing a Flatpak application or a runtime."
+msgstr ""
+
+#: ../../introduction.rst:83
+msgid ""
+"**Sandboxed applications**: one of Flatpak's main goals is to increase "
+"the security of desktop systems by isolating applications from one "
+"another. This is achieved using sandboxing and means that, by default, "
+"applications that are run with Flatpak have limited access to the host "
+"environment."
+msgstr ""
+
+#: ../../introduction.rst:87
+msgid ""
+"Flatpak has some major advantages over other universal approaches to "
+"distributing applications on Linux:"
+msgstr ""
+
+#: ../../introduction.rst:90
+#, fuzzy
+msgid ""
+"**Decentralized by design**: while Flatpak does provide a centralized "
+"service for distributing applications, it also allows decentralized "
+"hosting and distribution, so that application developers or downstreams "
+"can host their own applications and application repositories."
+msgstr ""
+"Während Flatpak einen zentralisierten Service bereithält, um Anwendungen "
+"zu vertreiben, erlaubt es ebenso dezentralisiertes Hosting und "
+"Verteilung, sodass Anwendungsentwickler oder Downstreams ihre eigenen "
+"Anwendungen und Anwendungs-Repositories hosten können"
+
+#: ../../introduction.rst:94
+#, fuzzy
+msgid ""
+"**Desktop integration**: Flatpak also offers native integration for the "
+"main Linux desktops, so that users can easily browse, install, run and "
+"use Flatpak applications through their existing desktop environment and "
+"tools."
+msgstr ""
+"Flatpak bietet zudem eine natürliche Integration in die wichtigsten "
+"Linux-Desktops, sodass Benutzer Flatpak-Anwendungen einfach suchen, "
+"installieren und verwenden können, mittels ihrer vorhandenen Desktop-"
+"Umgebungen und Werkzeuge."
+
+#: ../../introduction.rst:97
+msgid ""
+"**Space efficiency**: Flatpak deduplicates libraries and other files used"
+" by multiple applications to save megabytes or even gigabytes worth of "
+"storage depending on the amount of applications installed."
+msgstr ""
+
+#: ../../introduction.rst:100
+msgid "**Delta updates**: only changed files are downloaded for updates."
+msgstr ""
+
+#: ../../introduction.rst:102
+msgid "Other benefits for developers include:"
+msgstr "Andere Vorteile für Entwickler beinhalten:"
+
+#: ../../introduction.rst:104
+#, fuzzy
+msgid ""
+"**Forward-compatibility**: the same Flatpak application can be run on "
+"different versions of the same distribution, including versions that "
+"haven't been released yet. This doesn't require any changes or management"
+" by application developers."
+msgstr ""
+"**Aufwärtskompatibilität:** das gleiche Flatpak kann auf verschiedenen "
+"Versionen der gleichen Distribution laufen, dies beinhaltet Versionen, "
+"die bisher noch nicht veröffentlicht wurden. Dies erfordert keine "
+"Änderungen oder Verwaltung seitens der Anwendungsentwickler."
+
+#: ../../introduction.rst:107
+#, fuzzy
+msgid ""
+"**Bundling**: this allows application developers to ship almost any "
+"dependency or library as part of their application. This gives complete "
+"control over which software is used to build applications."
+msgstr ""
+"**Bundling:** dies erlaubt Applikationsentwicklern nahezu jede "
+"Abhängigkeit oder Bibliothek als Teil ihrer Anwendung mitzuliefern. Dies "
+"ermöglicht vollständige Kontrolle darüber, welche Software verwendet "
+"wird, um Anwendungen zu erstellen."
+
+#: ../../introduction.rst:110
+#, fuzzy
+msgid ""
+"**Consistent application environments**: because these are the same "
+"across devices, applications perform as intended. This also makes it "
+"easier to identify bugs and to do testing."
+msgstr ""
+"**Konsistente Anwendungsumgebungen:** da diese, über Geräte hinweg, "
+"gleich bleiben,  werden Anwendungen wie vorgesehen ausgeführt. Das macht "
+"es auch einfacher Bugs zu identifizieren und Tests durchzuführen."
+
+#: ../../introduction.rst:113
+msgid ""
+"**Branches**: this allows developers to ship applications from different "
+"branches, e.g. ``stable``, ``beta``, etc. while retaining the same name."
+msgstr ""
+
+#: ../../introduction.rst:115
+#, fuzzy
+msgid ""
+"**Maintained platforms**: called runtimes, these contain collections of "
+"dependencies, which can be used by applications, and which can take a lot"
+" of the work out of application development."
+msgstr ""
+"**Betreute Plattformen:** auch Laufzeitumgebungen genannt, beinhalten "
+"Sammlungen von Abhängigkeiten, die seitens der Anwendungen verwendet "
+"werden können und eine Menge Arbeit aus der Anwendungsentwicklung "
+"herausnehmen können."
+
+#: ../../introduction.rst:119
+msgid ""
+"Information about Flatpak's internals can be found in :doc:`under-the-"
+"hood`."
+msgstr ""
+"Informationen über die Interna von Flatpak können in :doc:`under-the-"
+"hood`gefunden werden."
+
+#~ msgid ""
+#~ "Flatpak has some major advantages over"
+#~ " other approaches to distributing "
+#~ "applications on Linux. First and "
+#~ "foremost, Flatpak allows a single "
+#~ "application build to be installed and"
+#~ " run on virtually any Linux "
+#~ "distribution. It can also be used "
+#~ "in combination with `Flathub "
+#~ "<https://flathub.org/>`_, a centralized service "
+#~ "for distributing applications on all "
+#~ "distributions. This makes it possible "
+#~ "for application developers to target the"
+#~ " entire Linux desktop market from one"
+#~ " place."
+#~ msgstr ""
+#~ "Flatpak hat einige wesentliche Vorteile "
+#~ "gegenüber anderen Ansätzen Anwendungen unter"
+#~ " Linux zu verteilen. Zuallererst, erlaubt"
+#~ " Flatpak einem einzigen Anwendungs-Build"
+#~ " unter nahezu jeder Linux-Distribution "
+#~ "installiert zu werden und zu laufen. "
+#~ "Es kann zudem verwendet werden in "
+#~ "Kombination mit `Flathub <https://flathub.org/>`_,"
+#~ " einem zentralisierten Dienst zum Verteilen"
+#~ " von Anwendungen für alle Distributionen."
+#~ " Dies macht es möglich, dass "
+#~ "Anwendungsentwickler den gesamten Linux-"
+#~ "Desktop-Markt von einem Ort aus "
+#~ "adressieren können. "
+

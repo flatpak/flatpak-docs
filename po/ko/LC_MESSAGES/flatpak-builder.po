@@ -6,19 +6,18 @@
 # TingPing <tingping@tingping.se>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-05-20 10:37+0000\n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2018-05-20 10:37-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: ohpato <ohpato@hanmail.net>\n"
 "Language: ko\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: ohpato <ohpato@hanmail.net>\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Generated-By: Babel 2.5.1\n"
-"X-Generator: Zanata 4.6.2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../flatpak-builder.rst:2
 msgid "Flatpak Builder"
@@ -26,43 +25,49 @@ msgstr "플랫팩 빌더(Flatpak Builder)"
 
 #: ../../flatpak-builder.rst:4
 msgid ""
-"``flatpak-builder`` has already been introduced in :doc:`first-build` and "
-":doc:`building-introduction`. This page provides additional detail on how to"
-" use ``flatpak-builder``, including the various command options that are "
-"available."
+"``flatpak-builder`` has already been introduced in :doc:`first-build` and"
+" :doc:`building-introduction`. This page provides additional detail on "
+"how to use ``flatpak-builder``, including the various command options "
+"that are available."
 msgstr ""
 
-#: ../../flatpak-builder.rst:7
+#: ../../flatpak-builder.rst:10
 msgid "Exporting"
 msgstr "내보내기(exporting)"
 
-#: ../../flatpak-builder.rst:9
+#: ../../flatpak-builder.rst:12
 msgid ""
 "``flatpak-builder`` provides two options for exporting an application in "
 "order to run it. The first is to export to a repository, from which the "
 "application can be run. The second is to automatically install locally."
 msgstr ""
 
-#: ../../flatpak-builder.rst:12
+#: ../../flatpak-builder.rst:17
 msgid "Exporting to a repository"
 msgstr "저장소로 내보내기"
 
-#: ../../flatpak-builder.rst:14
+#: ../../flatpak-builder.rst:19
 #, fuzzy
 msgid ""
 "The ``--repo`` option allows a repository to be specified, for the "
 "application to be exported to. This takes the format::"
 msgstr "``—repo`` 옵션은 결과물 응용프로그램이 지정된 저장소에 추가될 수 있도록 한다. 다음과 같은 형식을 따른다::"
 
-#: ../../flatpak-builder.rst:18
+#: ../../flatpak-builder.rst:24
 msgid ""
-"Here, ``<repo>`` is a path to a repository. If no repository exists at the "
-"specified location, the repository will be created. If the application is "
-"already in the specified repository, ``flatpak-builder`` will add the build "
-"as a new version of the existing application."
+"Here, ``<repo>`` is a path to a repository. If no repository exists at "
+"the specified location, the repository will be created. If the "
+"application is already in the specified repository, ``flatpak-builder`` "
+"will add the build as a new version of the existing application."
 msgstr ""
 
-#: ../../flatpak-builder.rst:22
+#: ../../flatpak-builder.rst:29
+msgid ""
+"You can put more than one application in the same repository by using the"
+" same ``--repo`` path for multiple invocations of ``flatpak-builder``."
+msgstr ""
+
+#: ../../flatpak-builder.rst:34
 #, fuzzy
 msgid ""
 "By default, ``flatpak-builder`` splits off translations and debug "
@@ -70,14 +75,14 @@ msgid ""
 "extensions are automatically exported into a repository along with the "
 "application."
 msgstr ""
-"플랫팩 빌더는 기본적으로 다국어 번역 정보와 디버그 정보를 별도의 확장자 `.Locale` 과 `.Debug`를 붙여 관리한다. 이러한 "
-"확장자는 응용프로그램을 저장소로 내보낼 때 자동으로 부여된다."
+"플랫팩 빌더는 기본적으로 다국어 번역 정보와 디버그 정보를 별도의 확장자 `.Locale` 과 `.Debug`를 붙여 관리한다. "
+"이러한 확장자는 응용프로그램을 저장소로 내보낼 때 자동으로 부여된다."
 
-#: ../../flatpak-builder.rst:26
+#: ../../flatpak-builder.rst:40
 msgid "Installing builds directly"
 msgstr "빌드 결과물의 직접 설치"
 
-#: ../../flatpak-builder.rst:28
+#: ../../flatpak-builder.rst:42
 #, fuzzy
 msgid ""
 "Instead of exporting to a repository, the Flatpak that is produced by "
@@ -85,40 +90,42 @@ msgid ""
 "``--install`` option::"
 msgstr "플랫팩 빌더로 빌드한 응용프로그램 번들을 저장소로 내보내는 대신 자동으로 로컬 시스템에 설치할 수도 있다::"
 
-#: ../../flatpak-builder.rst:32
+#: ../../flatpak-builder.rst:48
 msgid ""
-"This approach has the advantage of skipping the separate install step that "
-"is needed when exporting to a repository."
+"This approach has the advantage of skipping the separate install step "
+"that is needed when exporting to a repository."
 msgstr ""
 
-#: ../../flatpak-builder.rst:35
+#: ../../flatpak-builder.rst:52
 msgid "Signing"
 msgstr "서명"
 
-#: ../../flatpak-builder.rst:37
+#: ../../flatpak-builder.rst:54
 msgid ""
-"Every commit to a Flatpak repository should be signed with a GPG signature. "
-"If ``flatpak-builder`` is being used to modify or create a repository, a GPG"
-" key should therefore be passed to it. This can be done with the ``--gpg-"
-"sign`` option, such as::"
+"Every commit to a Flatpak repository should be signed with a GPG "
+"signature. If ``flatpak-builder`` is being used to modify or create a "
+"repository, a GPG key should therefore be passed to it. This can be done "
+"with the ``--gpg-sign`` option, such as::"
 msgstr ""
-"플랫팩 저장소로 커밋(commit)한 내역들은 GPG 서명되어야 한다. 저장소를 생성 및 변경 하는 데에 플랫팩 빌더를 사용할 경우, "
-"서명을 위해 매개변수로 GPG 키를 넘겨준다. 이 때, 다음과 같이 ``—gpg-sign`` 옵션을 사용한다::"
+"플랫팩 저장소로 커밋(commit)한 내역들은 GPG 서명되어야 한다. 저장소를 생성 및 변경 하는 데에 플랫팩 빌더를 사용할 "
+"경우, 서명을 위해 매개변수로 GPG 키를 넘겨준다. 이 때, 다음과 같이 ``—gpg-sign`` 옵션을 사용한다::"
 
-#: ../../flatpak-builder.rst:41
+#: ../../flatpak-builder.rst:61
 #, fuzzy
 msgid ""
 "Here, ``<key>`` is the ID of the GPG key that is to be used. The ``--gpg-"
-"homedir`` option can also be used to specify the home directory of the key "
-"that is being used."
+"homedir`` option can also be used to specify the home directory of the "
+"key that is being used."
 msgstr "서명 키의 홈디렉토리 지정을 위해 ``—gpg-hümedir`` 옵션을 사용할 수도 있다."
 
-#: ../../flatpak-builder.rst:43
+#: ../../flatpak-builder.rst:65
 msgid ""
 "Though it generally isn't recommended, it is possible not to use GPG "
-"verification. In this case, the ``--no-gpg-verify`` option should be used "
-"when adding the repository. Note that it is necessary to become root in "
+"verification. In this case, the ``--no-gpg-verify`` option should be used"
+" when adding the repository. Note that it is necessary to become root in "
 "order to update a repository that does not have GPG verification enabled."
 msgstr ""
-"일반적으로 추천하는 사항은 아니지만, 저장소를 추가할 때 ``—no-gpg-verify`` 옵션을 사용하면 GPG 검증을 건너뛰는 것도 "
-"가능하다. 단, GPG 검증을 활성화 하지 않은 저장소를 업데이트할 때에는 관리자 계정(root)을 필요로 하게 된다는 점을 유의하자."
+"일반적으로 추천하는 사항은 아니지만, 저장소를 추가할 때 ``—no-gpg-verify`` 옵션을 사용하면 GPG 검증을 건너뛰는 "
+"것도 가능하다. 단, GPG 검증을 활성화 하지 않은 저장소를 업데이트할 때에는 관리자 계정(root)을 필요로 하게 된다는 점을 "
+"유의하자."
+

@@ -6,19 +6,18 @@
 # TingPing <tingping@tingping.se>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-05-20 10:37+0000\n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2018-05-20 10:37-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: ohpato <ohpato@hanmail.net>\n"
 "Language: ko\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: ohpato <ohpato@hanmail.net>\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Generated-By: Babel 2.5.1\n"
-"X-Generator: Zanata 4.6.2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../sandbox-permissions.rst:2
 msgid "Sandbox Permissions"
@@ -26,345 +25,452 @@ msgstr "샌드박스 권한"
 
 #: ../../sandbox-permissions.rst:4
 msgid ""
-"One of Flatpak's main goals is to increase the security of desktop systems "
-"by isolating applications from one another. This is achieved using "
-"sandboxing and means that, by default, applications that are run with "
-"Flatpak have extremely limited access to the host environment. This "
+"One of Flatpak's main goals is to increase the security of desktop "
+"systems by isolating applications from one another. This is achieved "
+"using sandboxing and means that, by default, applications that are run "
+"with Flatpak have extremely limited access to the host environment. This "
 "includes:"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:6
+#: ../../sandbox-permissions.rst:9
 msgid ""
-"No access to any host files except the runtime, the app and "
-"``~/.var/app/$APPID``. Only the last of these is writable."
+"No access to any host files except the runtime, the app, "
+"``~/.var/app/$FLATPAK_ID``, and ``$XDG_RUNTIME_DIR/app/$FLATPAK_ID``. "
+"Only the latter two being writable."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:7
+#: ../../sandbox-permissions.rst:12
 #, fuzzy
 msgid "No access to the network."
 msgstr "네트워크 [#f2]_ 접근"
 
-#: ../../sandbox-permissions.rst:8
+#: ../../sandbox-permissions.rst:13
 msgid "No access to any device nodes (apart from ``/dev/null``, etc)."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:9
+#: ../../sandbox-permissions.rst:14
 msgid "No access to processes outside the sandbox."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:10
+#: ../../sandbox-permissions.rst:15
 msgid ""
-"Limited syscalls.  For instance, apps can't use nonstandard network socket "
-"types or ptrace other processes."
-msgstr ""
-
-#: ../../sandbox-permissions.rst:11
-msgid ""
-"Limited access to the session D-Bus instance - an app can only own its own "
-"name on the bus."
-msgstr ""
-
-#: ../../sandbox-permissions.rst:12
-msgid "No access to host services like X11, system D-Bus, or PulseAudio."
-msgstr ""
-
-#: ../../sandbox-permissions.rst:14
-msgid ""
-"Most applications will need access to some of these resources in order to be"
-" useful. This is primarily done during the finishing build stage, which can "
-"be configured through the ``finish-args`` section of the manifest file (see "
-":doc:`manifests`)."
+"Limited syscalls.  For instance, apps can't use nonstandard network "
+"socket types or ptrace other processes."
 msgstr ""
 
 #: ../../sandbox-permissions.rst:17
-msgid "Portals"
+msgid ""
+"Limited access to the session D-Bus instance - an app can only own its "
+"own name on the bus."
 msgstr ""
 
 #: ../../sandbox-permissions.rst:19
+msgid "No access to host services like X11, system D-Bus, or PulseAudio."
+msgstr ""
+
+#: ../../sandbox-permissions.rst:21
 msgid ""
-"Portals have already been mentioned in the :doc:`introduction`. They are a "
+"Most applications will need access to some of these resources in order to"
+" be useful. This is primarily done during the finishing build stage, "
+"which can be configured through the ``finish-args`` section of the "
+"manifest file (see :doc:`manifests`)."
+msgstr ""
+
+#: ../../sandbox-permissions.rst:27
+msgid "Portals"
+msgstr ""
+
+#: ../../sandbox-permissions.rst:29
+msgid ""
+"Portals have already been mentioned in :doc:`basic-concepts`. They are a "
 "framework for providing access to resources outside of the sandbox, "
 "including:"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:21
+#: ../../sandbox-permissions.rst:32
 msgid "Opening files with a native file chooser dialog"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:22
+#: ../../sandbox-permissions.rst:33
 msgid "Opening URIs"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:23
+#: ../../sandbox-permissions.rst:34
 msgid "Printing"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:24
+#: ../../sandbox-permissions.rst:35
 msgid "Showing notifications"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:25
+#: ../../sandbox-permissions.rst:36
 msgid "Taking screenshots"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:26
+#: ../../sandbox-permissions.rst:37
 msgid ""
 "Inhibiting the user session from ending, suspending, idling or getting "
 "switched away"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:27
+#: ../../sandbox-permissions.rst:39
 msgid "Getting network status information"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:29
+#: ../../sandbox-permissions.rst:41
 msgid ""
-"In many cases, portals use a system component to implicitly ask the user for"
-" permission before granting access to a particular resource. For example, in"
-" the case of opening a file, the user's selection of a file using the file "
-"chooser dialog is interpreted as implicitly granting the application access "
-"to whatever file is chosen."
+"In many cases, portals use a system component to implicitly ask the user "
+"for permission before granting access to a particular resource. For "
+"example, in the case of opening a file, the user's selection of a file "
+"using the file chooser dialog is interpreted as implicitly granting the "
+"application access to whatever file is chosen."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:31
+#: ../../sandbox-permissions.rst:47
 msgid ""
 "This approach enables applications to avoid having to configure blanket "
 "access to large amounts of data or services and gives users control over "
 "what their applications have access to."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:33
+#: ../../sandbox-permissions.rst:51
 msgid ""
 "Interface toolkits like GTK3 and Qt5 implement transparent support for "
-"portals, meaning that applications don't need to any additional work to use "
-"them (it is worth checking which portals each toolkit supports). "
-"Applications that aren't using a toolkit with support for portals can refer "
-"to the `xdg-desktop-portal API documentation <https://flatpak.github.io/xdg-"
-"desktop-portal/portal-docs.html>`_ for information on how to use them."
+"portals, meaning that applications don't need to do any additional work "
+"to use them (it is worth checking which portals each toolkit supports). "
+"Applications that aren't using a toolkit with support for portals can "
+"refer to the `xdg-desktop-portal API documentation "
+"<https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for "
+"information on how to use them."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:36
+#: ../../sandbox-permissions.rst:60
 #, fuzzy
 msgid "Permissions guidelines"
 msgstr "권한 옵션"
 
-#: ../../sandbox-permissions.rst:38
+#: ../../sandbox-permissions.rst:62
 msgid ""
-"While application developers have control over the sandbox permissions they "
-"wish to configure, good practice is encouraged and can be enforced. For "
-"example, the Flathub hosting service places requirements on which "
-"permissions can be used, and software on the host may warn users if certain "
-"permissions are used."
+"While application developers have control over the sandbox permissions "
+"they wish to configure, good practice is encouraged and can be enforced. "
+"For example, the Flathub hosting service places requirements on which "
+"permissions can be used, and software on the host may warn users if "
+"certain permissions are used."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:40
+#: ../../sandbox-permissions.rst:68
 msgid ""
 "The following guidelines describe which permissions can be freely used, "
 "which can be used on an as-needed basis, and which should be avoided."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:43
+#: ../../sandbox-permissions.rst:72
 #, fuzzy
 msgid "Standard permissions"
 msgstr "샌드박스 권한"
 
-#: ../../sandbox-permissions.rst:45
+#: ../../sandbox-permissions.rst:74
 msgid ""
 "The following permissions provide access to basic resources that "
 "applications commonly require, and can therefore be freely used:"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:47
+#: ../../sandbox-permissions.rst:77
 #, fuzzy
 msgid "``--share=network`` - access the network"
 msgstr "``—share=network``"
 
-#: ../../sandbox-permissions.rst:48
+#: ../../sandbox-permissions.rst:78
 msgid "``--socket=x11`` - show windows using X11"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:49
+#: ../../sandbox-permissions.rst:79
 msgid ""
 "``--socket=fallback-x11`` - show windows using X11, if Wayland is not "
-"available"
+"available, overrides ``x11`` socket permission"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:50
-msgid ""
-"``--share=ipc`` - share IPC namespace with the host (necessary for X11)"
+#: ../../sandbox-permissions.rst:81
+msgid "``--share=ipc`` - share IPC namespace with the host (necessary for X11)"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:51
+#: ../../sandbox-permissions.rst:82
 msgid "``--socket=wayland`` - show windows with Wayland"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:52
+#: ../../sandbox-permissions.rst:83
 #, fuzzy
 msgid "``--device=dri`` - OpenGL rendering"
 msgstr "``—device=dri``"
 
-#: ../../sandbox-permissions.rst:53
+#: ../../sandbox-permissions.rst:84
 #, fuzzy
 msgid "``--socket=pulseaudio`` - play sound with PulseAudio"
 msgstr "``—socket=pulseaudio``"
 
-#: ../../sandbox-permissions.rst:56
+#: ../../sandbox-permissions.rst:87
 msgid "D-Bus access"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:58
+#: ../../sandbox-permissions.rst:89
 msgid ""
-"Access to the entire bus with ``--socket=system-bus`` or ``--socket=session-"
-"bus`` should be avoided, unless the application is a development tool."
+"Access to the entire bus with ``--socket=system-bus`` or ``--socket"
+"=session-bus`` should be avoided, unless the application is a development"
+" tool."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:60
+#: ../../sandbox-permissions.rst:93
 msgid "**Ownership**"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:62
+#: ../../sandbox-permissions.rst:95
 msgid ""
 "Applications are automatically granted access to their own namespace. "
-"Ownership beyond this is typically unnecessary, although there are a small "
-"number of exceptions, such as using `MPRIS to provide media controls "
-"<https://www.freedesktop.org/wiki/Specifications/mpris-spec/>`_."
+"Ownership beyond this is typically unnecessary, although there are a "
+"small number of exceptions, such as using `MPRIS to provide media "
+"controls <https://www.freedesktop.org/wiki/Specifications/mpris-spec/>`_."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:64
+#: ../../sandbox-permissions.rst:100
 msgid "**Talk**"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:66
+#: ../../sandbox-permissions.rst:102
 msgid ""
-"Talk permissions can be freely used, although it is recommended to use the "
-"minumum required."
+"Talk permissions can be freely used, although it is recommended to use "
+"the minimum required."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:69
+#: ../../sandbox-permissions.rst:106
 msgid "Filesystem access"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:71
+#: ../../sandbox-permissions.rst:108
 msgid ""
-"It is common for applications to require access to different parts of the "
-"host filesystem,and Flatpak provides a flexible set of options for this. "
-"Some examples include:"
+"It is common for applications to require access to different parts of the"
+" host filesystem, and Flatpak provides a flexible set of options for "
+"this. Some examples include:"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:74
+#: ../../sandbox-permissions.rst:112
 msgid ""
-"``--filesystem=host`` - access normal files on the host, not including host "
-"os or system internals described below"
+"``--filesystem=host`` - access normal files on the host, not including "
+"host os or system internals described below"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:75
+#: ../../sandbox-permissions.rst:114
 msgid "``--filesystem=home`` - access the user's home directory"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:76
+#: ../../sandbox-permissions.rst:115
 msgid "``--filesystem=/path/path`` - access specific paths"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:77
+#: ../../sandbox-permissions.rst:116
 #, fuzzy
 msgid "``--filesystem=xdg-download`` - access a specific XDG folder"
 msgstr "``—filesystem=xdg-download``"
 
-#: ../../sandbox-permissions.rst:79
+#: ../../sandbox-permissions.rst:118
 msgid ""
-"As a general rule, Filesystem access should be limited as much as possible. "
-"This includes using:"
+"As a general rule, Filesystem access should be limited as much as "
+"possible. This includes:"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:81
+#: ../../sandbox-permissions.rst:121
 msgid ""
 "Using portals as an alternative to blanket filesystem access, wherever "
 "possible."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:82
+#: ../../sandbox-permissions.rst:123
 msgid "Using read-only access wherever possible, using the ``:ro`` option."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:83
+#: ../../sandbox-permissions.rst:124
 msgid ""
-"If some home directory access is absolutely required, using XDG directory "
-"access only."
+"If some home directory access is absolutely required, using XDG directory"
+" access only."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:85
+#: ../../sandbox-permissions.rst:127
 msgid ""
-"The full list the available filesystem options can be found in the :doc"
+"The full list of available filesystem options can be found in the :doc"
 ":`sandbox-permissions-reference`. Other filesystem access guidelines "
 "include:"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:88
+#: ../../sandbox-permissions.rst:131
 msgid ""
-"The ``--persist=path`` option can be used to map paths from the user's home "
-"directory into the sandbox filesystem. This makes it possible to avoid "
-"configuring access to the entire home directory, and can be useful for "
-"applications that hardcode file paths in ``~/``."
+"The ``--persist=path`` option can be used to map paths from the user's "
+"home directory into the sandbox filesystem. This makes it possible to "
+"avoid configuring access to the entire home directory, and can be useful "
+"for applications that hardcode file paths in ``~/``."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:90
+#: ../../sandbox-permissions.rst:136
 msgid ""
-"If an application uses ``$TMPDIR`` to contain lock files or shared files "
-"with other processes, you may want to add ``--env=TMPDIR=/var/tmp``."
+"If an application uses ``$TMPDIR`` to contain lock files you may want to "
+"add a wrapper script that sets it to "
+"``$XDG_RUNTIME_DIR/app/$FLATPAK_ID``."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:92
+#: ../../sandbox-permissions.rst:138
 msgid ""
-"Retaining and sharing configuration with non-Flatpak installations is to be "
-"avoided."
+"Retaining and sharing configuration with non-Flatpak installations is to "
+"be avoided."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:94
+#: ../../sandbox-permissions.rst:141
 msgid ""
-"As mentioned above the ``host`` option does not actually provide complete "
-"access to the host filesystem. The main rules are:"
+"As mentioned above the ``host`` option does not actually provide complete"
+" access to the host filesystem. The main rules are:"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:97
+#: ../../sandbox-permissions.rst:145
 msgid ""
 "These directories are blacklisted: ``/lib``, ``/lib32``, ``/lib64``, "
 "``/bin``, ``/sbin``, ``/usr``, ``/boot``, ``/root``, ``/tmp``, ``/etc``, "
 "``/app``, ``/run``, ``/proc``, ``/sys``, ``/dev``, ``/var``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:99
+#: ../../sandbox-permissions.rst:149
 msgid "Exceptions from the blacklist: ``/run/media``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:100
-msgid ""
-"These directories are mounted under ``/var/run/host``: ``/etc``, ``/usr``"
+#: ../../sandbox-permissions.rst:150
+msgid "These directories are mounted under ``/var/run/host``: ``/etc``, ``/usr``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:102
+#: ../../sandbox-permissions.rst:152
 msgid ""
-"The reason many of the directories are blacklisted is because they already "
-"exist in the sandbox such as ``/usr`` or are not usable in the sandbox."
+"The reason many of the directories are blacklisted is because they "
+"already exist in the sandbox such as ``/usr`` or are not usable in the "
+"sandbox."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:106
+#: ../../sandbox-permissions.rst:157
 msgid "Device access"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:108
+#: ../../sandbox-permissions.rst:159
 msgid ""
 "While not ideal, ``--device=all`` can be used to access devices like "
 "controllers or webcams."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:111
+#: ../../sandbox-permissions.rst:163
 msgid "dconf access"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:113
-#, fuzzy
+#: ../../sandbox-permissions.rst:165
 msgid ""
-"Until a sandbox-compatible backend is available, applications that require "
-"access to dconf can do so with the following options::"
+"As of xdg-desktop-portal 1.1.0 and glib 2.60.5 (in the runtime) you do "
+"not need direct DConf access in most cases."
 msgstr ""
-"다음과 같은 옵션을 통해, 샌드박스 호환가능한 백엔드(backend)가 지원될 때까지 dconf에 대한 접근을 활성화할 수 있다::"
+
+#: ../../sandbox-permissions.rst:168
+msgid ""
+"As of now this glib version is included in "
+"``org.freedesktop.Platform//19.08`` and ``org.gnome.Platform//3.34`` and "
+"newer."
+msgstr ""
+
+#: ../../sandbox-permissions.rst:171
+msgid ""
+"If an application existed prior to these runtimes you can tell Flatpak "
+"(>= 1.3.4) to migrate the DConf settings on the host into the sandbox by "
+"adding ``--metadata=X-DConf=migrate-path=/org/example/foo/`` to ``finish-"
+"args``. The path must be similar to your app-id or it will not be allowed"
+" (case is ignored and ``_`` and ``-`` are treated equal)."
+msgstr ""
+
+#: ../../sandbox-permissions.rst:178
+msgid ""
+"If you are targeting older runtimes or require direct DConf access for "
+"other reasons you can use these permissions::"
+msgstr ""
+
+#: ../../sandbox-permissions.rst:186
+msgid "With those permissions glib will continue using dconf directly."
+msgstr ""
+
+#~ msgid ""
+#~ "No access to any host files except"
+#~ " the runtime, the app and "
+#~ "``~/.var/app/$APPID``. Only the last of "
+#~ "these is writable."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Portals have already been mentioned in"
+#~ " the :doc:`introduction`. They are a "
+#~ "framework for providing access to "
+#~ "resources outside of the sandbox, "
+#~ "including:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Interface toolkits like GTK3 and Qt5 "
+#~ "implement transparent support for portals, "
+#~ "meaning that applications don't need to"
+#~ " any additional work to use them "
+#~ "(it is worth checking which portals "
+#~ "each toolkit supports). Applications that "
+#~ "aren't using a toolkit with support "
+#~ "for portals can refer to the "
+#~ "`xdg-desktop-portal API documentation "
+#~ "<https://flatpak.github.io/xdg-desktop-portal/portal-"
+#~ "docs.html>`_ for information on how to"
+#~ " use them."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``--socket=fallback-x11`` - show windows using"
+#~ " X11, if Wayland is not available"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Talk permissions can be freely used, "
+#~ "although it is recommended to use "
+#~ "the minumum required."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It is common for applications to "
+#~ "require access to different parts of "
+#~ "the host filesystem,and Flatpak provides "
+#~ "a flexible set of options for "
+#~ "this. Some examples include:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As a general rule, Filesystem access "
+#~ "should be limited as much as "
+#~ "possible. This includes using:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The full list the available filesystem"
+#~ " options can be found in the "
+#~ ":doc:`sandbox-permissions-reference`. Other "
+#~ "filesystem access guidelines include:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If an application uses ``$TMPDIR`` to"
+#~ " contain lock files or shared files"
+#~ " with other processes, you may want"
+#~ " to add ``--env=TMPDIR=/var/tmp``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Until a sandbox-compatible backend is"
+#~ " available, applications that require "
+#~ "access to dconf can do so with "
+#~ "the following options::"
+#~ msgstr ""
+#~ "다음과 같은 옵션을 통해, 샌드박스 호환가능한 "
+#~ "백엔드(backend)가 지원될 때까지 dconf에 대한 접근을 "
+#~ "활성화할 수 있다::"
+

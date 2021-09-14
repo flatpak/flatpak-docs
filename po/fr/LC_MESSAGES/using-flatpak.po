@@ -6,19 +6,19 @@
 # TingPing <tingping@tingping.se>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-05-21 04:34+0000\n"
-"Last-Translator: Baptiste Mille-Mathias <baptiste.millemathias@gmail.com>\n"
-"Language-Team: fr_FR <traduc@traduc.org>\n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2018-05-21 04:34-0400\n"
+"Last-Translator: Baptiste Mille-Mathias <baptiste.millemathias@gmail.com>"
+"\n"
 "Language: fr\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: fr_FR <traduc@traduc.org>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
-"Generated-By: Babel 2.5.1\n"
-"X-Generator: Zanata 4.6.2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../using-flatpak.rst:2
 msgid "Using Flatpak"
@@ -27,326 +27,374 @@ msgstr "Utiliser Flatpak"
 #: ../../using-flatpak.rst:4
 msgid ""
 "This page provides an introduction to the ``flatpak`` command line "
-"interface, and explains essential technical conventions as well as the most "
-"common commands."
+"interface, and explains essential technical conventions as well as the "
+"most common commands."
 msgstr ""
 "Cette page fournit une introduction à l'interface en ligne de commande "
-"``flatpak`` et explique les concepts techniques, les conventions ainsi que "
-"les commandes les plus usuelles. "
+"``flatpak`` et explique les concepts techniques, les conventions ainsi "
+"que les commandes les plus usuelles. "
 
-#: ../../using-flatpak.rst:6
+#: ../../using-flatpak.rst:8
 msgid ""
-"End users shouldn't generally need to use this page or the Flatpak command "
-"line interface, since Flatpak can be easily used through graphical software "
-"management tools, though they are of course free to use the command line if "
-"they prefer!"
+"End users shouldn't generally need to use this page or the Flatpak "
+"command line interface, since Flatpak can be easily used through "
+"graphical software management tools, though they are of course free to "
+"use the command line if they prefer!"
 msgstr ""
-"Les utilisateurs finaux n'ont généralement pas besoin d'utiliser cette page "
-"ou l'interface en ligne de commande Flatpak, puisque Flatpak peut être "
-"facilement utiliser à travers des outils graphiques de gestion de logiciels,"
-" néanmoins ils sont libres d'utiliser la ligne de commande s'il le préfère !"
+"Les utilisateurs finaux n'ont généralement pas besoin d'utiliser cette "
+"page ou l'interface en ligne de commande Flatpak, puisque Flatpak peut "
+"être facilement utiliser à travers des outils graphiques de gestion de "
+"logiciels, néanmoins ils sont libres d'utiliser la ligne de commande s'il"
+" le préfère !"
 
-#: ../../using-flatpak.rst:10
+#: ../../using-flatpak.rst:15
 msgid "The flatpak command"
 msgstr "La commande flatpak"
 
-#: ../../using-flatpak.rst:12
+#: ../../using-flatpak.rst:17
 msgid ""
-"``flatpak`` is the primary Flatpak command, to which specific commands are "
-"appended. For example, the command to install something is ``flatpak "
+"``flatpak`` is the primary Flatpak command, to which specific commands "
+"are appended. For example, the command to install something is ``flatpak "
 "install`` and the command to uninstall is ``flatpak uninstall``."
 msgstr ""
 "``flatpak`` est la commande Flatpak principale à laquelle des commandes "
-"spécifiques sont ajoutées. Par exemple, la commande pour installer quelque-"
-"chose est ``flatpak install`` et la commande pour désinstaller est ``flatpak"
-" uninstall``. "
+"spécifiques sont ajoutées. Par exemple, la commande pour installer "
+"quelque-chose est ``flatpak install`` et la commande pour désinstaller "
+"est ``flatpak uninstall``. "
 
-#: ../../using-flatpak.rst:15
+#: ../../using-flatpak.rst:22
 msgid "Identifiers"
 msgstr "Identifiants"
 
-#: ../../using-flatpak.rst:17
+#: ../../using-flatpak.rst:24
 msgid ""
-"Flatpak identifies each application and runtime using a unique three-part "
-"identifier, such as ``com.company.App``. The final segment of this address "
-"is the object's name, and the preceding part identifies the developer, so "
-"that the same developer can have multiple applications, like "
-"``com.company.App1`` and ``com.company.App2``."
+"Flatpak identifies each application and runtime using a unique three-part"
+" identifier, such as ``com.company.App``. The final segment of this "
+"address is the object's name, and the preceding part identifies the "
+"developer, so that the same developer can have multiple applications, "
+"like ``com.company.App1`` and ``com.company.App2``."
 msgstr ""
-"Flatpak identifie chaque application et runtime à l'aide d'un identifiant "
-"unique en trois parties, tel que ``com.company.App``.  Le segment final de "
-"cette adresse est le nom de l'objet et la partie précédente identifie le "
-"développeur, ainsi le meme développeur peut avoir plusieurs applications "
-"comme ``com.company.App1`` et ``com.company.App2``. "
+"Flatpak identifie chaque application et runtime à l'aide d'un identifiant"
+" unique en trois parties, tel que ``com.company.App``.  Le segment final "
+"de cette adresse est le nom de l'objet et la partie précédente identifie "
+"le développeur, ainsi le meme développeur peut avoir plusieurs "
+"applications comme ``com.company.App1`` et ``com.company.App2``. "
 
-#: ../../using-flatpak.rst:20
+#: ../../using-flatpak.rst:31
 msgid "Identifier triples"
 msgstr "Triplets d'identification"
 
-#: ../../using-flatpak.rst:22
+#: ../../using-flatpak.rst:33
 msgid ""
-"Typically it is sufficient to refer to objects using their ID. However, in "
-"some situations it is necessary to refer to a specific version of an object,"
-" or to a specific architecture. For example, some applications might be "
-"available as a stable and a testing version, in which case it is necessary "
-"to specify which one you want to install."
+"Typically it is sufficient to refer to objects using their ID. However, "
+"in some situations it is necessary to refer to a specific version of an "
+"object, or to a specific architecture. For example, some applications "
+"might be available as a stable and a testing version, in which case it is"
+" necessary to specify which one you want to install."
 msgstr ""
 "Habituellement il suffit de se référer aux objets à l'aide de leur "
-"identifiant. Néanmoins, dans certaines situations il est nécessaire de se "
-"référer à une version spécifique d'un objet ou à une architecture "
-"spécifique. Par exemple des applications peuvent être disponible en version "
-"stable et de test, dans ce cas, il est nécessaire de spécifier laquelle vous"
-" désirez installer."
+"identifiant. Néanmoins, dans certaines situations il est nécessaire de se"
+" référer à une version spécifique d'un objet ou à une architecture "
+"spécifique. Par exemple des applications peuvent être disponible en "
+"version stable et de test, dans ce cas, il est nécessaire de spécifier "
+"laquelle vous désirez installer."
 
-#: ../../using-flatpak.rst:24
+#: ../../using-flatpak.rst:39
 msgid ""
-"Flatpak allows architectures and versions to be specified using an object's "
-"identifier triple. This takes the form of ``name/architecture/branch``, such"
-" as ``com.company.App/i386/stable``. (Branch is the term used to refer to "
-"versions of the same object.) The first part of the triple is the ID, the "
-"second part is the architecture, and the third part is the branch."
+"Flatpak allows architectures and versions to be specified using an "
+"object's identifier triple. This takes the form of "
+"``name/architecture/branch``, such as ``com.company.App/i386/stable``. "
+"(Branch is the term used to refer to versions of the same object.) The "
+"first part of the triple is the ID, the second part is the architecture, "
+"and the third part is the branch."
 msgstr ""
 
-#: ../../using-flatpak.rst:26
+#: ../../using-flatpak.rst:45
 msgid ""
-"Identifier triples can also be used to specify just the architecture or the "
-"branch, by leaving part of the triple blank. For example, "
+"Identifier triples can also be used to specify just the architecture or "
+"the branch, by leaving part of the triple blank. For example, "
 "``com.company.App//stable`` would just specify the branch, and "
 "``com.company.App/i386//`` just specifies the architecture."
 msgstr ""
 
-#: ../../using-flatpak.rst:28
+#: ../../using-flatpak.rst:50
 msgid ""
-"The Flatpak CLI provides feedback if the architecture or branch of an object"
-" needs to be specified."
+"The Flatpak CLI provides feedback if the architecture or branch of an "
+"object needs to be specified."
 msgstr ""
 
-#: ../../using-flatpak.rst:31
+#: ../../using-flatpak.rst:54
 msgid "System versus user"
 msgstr "Système vis-à-vis utilisateur"
 
-#: ../../using-flatpak.rst:33
+#: ../../using-flatpak.rst:56
 msgid ""
-"Flatpak commands can be run either system-wide or per-user. Applications and"
-" runtimes that are installed system-wide are available to all users on the "
-"system. Applications and runtimes that are installed per-user are only "
-"available to the users that installed them."
+"Flatpak commands can be run either system-wide or per-user. Applications "
+"and runtimes that are installed system-wide are available to all users on"
+" the system. Applications and runtimes that are installed per-user are "
+"only available to the users that installed them."
 msgstr ""
 
-#: ../../using-flatpak.rst:35
+#: ../../using-flatpak.rst:61
 msgid ""
 "The same principle applies to repositories - repositories that have been "
-"added system-wide are available to all users, whereas per-user repositories "
-"can only be used by a particular user."
+"added system-wide are available to all users, whereas per-user "
+"repositories can only be used by a particular user."
 msgstr ""
 
-#: ../../using-flatpak.rst:37
+#: ../../using-flatpak.rst:65
 msgid ""
 "Flatpak commands are run system-wide by default. If you are installing "
 "applications for day-to-day usage, it is recommended to stick with this "
 "default behavior."
 msgstr ""
-"Les commandes Flatpak sont exécutées au niveau système par défaut. SI vous "
-"installez des applications pour votre utilisation au quotidien, il est "
-"recommandé de s'en tenir à ce comportement par défaut."
+"Les commandes Flatpak sont exécutées au niveau système par défaut. SI "
+"vous installez des applications pour votre utilisation au quotidien, il "
+"est recommandé de s'en tenir à ce comportement par défaut."
 
-#: ../../using-flatpak.rst:39
+#: ../../using-flatpak.rst:69
 msgid ""
-"However, running commands per-user can be useful for testing and development"
-" purposes, since objects that are installed in this way won't be available "
-"to other users on the system. To do this, use the ``--user`` option, which "
-"can be used in combination with most ``flatpak`` commands."
+"However, running commands per-user can be useful for testing and "
+"development purposes, since objects that are installed in this way won't "
+"be available to other users on the system. To do this, use the ``--user``"
+" option, which can be used in combination with most ``flatpak`` commands."
 msgstr ""
 
-#: ../../using-flatpak.rst:41
+#: ../../using-flatpak.rst:74
 msgid ""
-"Commands behave in exactly the same way if they are run per-user rather than"
-" system-wide."
+"Commands behave in exactly the same way if they are run per-user rather "
+"than system-wide."
 msgstr ""
-"Les commandes réagissent de la même manière si elles sont lancées en tant "
-"qu'utilisateur plutôt qu'au niveau système."
+"Les commandes réagissent de la même manière si elles sont lancées en tant"
+" qu'utilisateur plutôt qu'au niveau système."
 
-#: ../../using-flatpak.rst:44
+#: ../../using-flatpak.rst:78
 msgid "Basic commands"
 msgstr "Commandes basiques"
 
-#: ../../using-flatpak.rst:46
+#: ../../using-flatpak.rst:80
 msgid ""
-"This section covers basic commands needed to install, run and manage Flatpak"
-" applications. For the full list of Flatpak commands, run ``flatpak --help``"
-" or see the :doc:`flatpak-command-reference`."
+"This section covers basic commands needed to install, run and manage "
+"Flatpak applications. For the full list of Flatpak commands, run "
+"``flatpak --help`` or see the :doc:`flatpak-command-reference`."
 msgstr ""
 
-#: ../../using-flatpak.rst:49
+#: ../../using-flatpak.rst:85
 msgid "List remotes"
 msgstr "Lister les dépôts distants"
 
-#: ../../using-flatpak.rst:51
+#: ../../using-flatpak.rst:87
 msgid "To list the remotes that you have configured on your system, run::"
-msgstr ""
-"Pour lister les dépôts distants configurés sur votre système, lancez :"
+msgstr "Pour lister les dépôts distants configurés sur votre système, lancez :"
 
-#: ../../using-flatpak.rst:55
+#: ../../using-flatpak.rst:91
 msgid ""
 "This gives a list of the existing remotes that have been added. The list "
 "indicates whether each remote has been added per-user or system-wide."
 msgstr ""
-"Cela donne la liste des dépots distants qui sont ajoutés. La liste indique "
-"si chaque dépôt à été ajouté au niveau du système ou de l'utilisateur."
+"Cela donne la liste des dépots distants qui sont ajoutés. La liste "
+"indique si chaque dépôt à été ajouté au niveau du système ou de "
+"l'utilisateur."
 
-#: ../../using-flatpak.rst:58
+#: ../../using-flatpak.rst:95
 msgid "Add a remote"
 msgstr "Ajout d'un dépôt distant"
 
-#: ../../using-flatpak.rst:60
+#: ../../using-flatpak.rst:97
 msgid ""
-"The most convenient way to add a remote is by using a ``.flatpakrepo`` file,"
-" which includes both the details of the remote and its GPG key::"
+"The most convenient way to add a remote is by using a ``.flatpakrepo`` "
+"file, which includes both the details of the remote and its GPG key::"
 msgstr ""
-"La manière la plus facile pour ajouter un dépôt est en utilisant un fichier "
-"``.flatpakrepo``, qui inclut les détails du dépôt distant et sa clé GPG::"
+"La manière la plus facile pour ajouter un dépôt est en utilisant un "
+"fichier ``.flatpakrepo``, qui inclut les détails du dépôt distant et sa "
+"clé GPG::"
 
-#: ../../using-flatpak.rst:64
+#: ../../using-flatpak.rst:102
 msgid ""
 "Here, ``flathub`` is the local name that is given to the remote. The URL "
-"points to the remote's ``.flatpakrepo`` file. ``--if-not-exists`` stops the "
-"command from producing an error if the remote already exists."
+"points to the remote's ``.flatpakrepo`` file. ``--if-not-exists`` stops "
+"the command from producing an error if the remote already exists."
 msgstr ""
 "Ici, ``flathub`` est le nom local qui est donné au dépôt distant. L'URL "
-"pointe vers le fichier ``.flatpakrepo`` distant. ``--if-not-exists`` empêche"
-" la command de produire une erreur si le dépôt existe déjà."
+"pointe vers le fichier ``.flatpakrepo`` distant. ``--if-not-exists`` "
+"empêche la command de produire une erreur si le dépôt existe déjà."
 
-#: ../../using-flatpak.rst:67
+#: ../../using-flatpak.rst:107
 msgid "Remove a remote"
 msgstr "Suppression d'un dépôt distant"
 
-#: ../../using-flatpak.rst:69
+#: ../../using-flatpak.rst:109
 msgid "To remove a remote, run::"
 msgstr "Pour supprimer un dépôt distant, lancez :"
 
-#: ../../using-flatpak.rst:73
+#: ../../using-flatpak.rst:113
 msgid "In this case, ``flathub`` is the remote's local name."
 msgstr "Dans ce cas, ``flathub`` est le nom local du dépôt distant."
 
-#: ../../using-flatpak.rst:76
+#: ../../using-flatpak.rst:116
 msgid "Search"
 msgstr "Recherche"
 
-#: ../../using-flatpak.rst:78
+#: ../../using-flatpak.rst:118
 msgid ""
 "Applications can be found in any of your remotes using the ``search`` "
 "command. For example::"
 msgstr ""
-"Les application peuvent trouvées dans n'importe quel des dépôts distants à "
-"l'aide de la commande ``search``. Par exemple :"
+"Les application peuvent trouvées dans n'importe quel des dépôts distants "
+"à l'aide de la commande ``search``. Par exemple :"
 
-#: ../../using-flatpak.rst:82
+#: ../../using-flatpak.rst:123
 msgid ""
-"Search will return any applications matching the search terms. Each search "
-"result includes the application ID and the remote that the application is "
-"in. In this example, the search term is ``gimp``."
+"Search will return any applications matching the search terms. Each "
+"search result includes the application ID and the remote that the "
+"application is in. In this example, the search term is ``gimp``."
 msgstr ""
 "La recherche retournera toute application correspondant au terme de la "
-"recherche. Chaque résult de la recherche include l'ID de l'application et le"
-" dépôt distant auquel elle appartient. Dans cet exemple, le terme de "
+"recherche. Chaque résult de la recherche include l'ID de l'application et"
+" le dépôt distant auquel elle appartient. Dans cet exemple, le terme de "
 "recherche est ``gimp``."
 
-#: ../../using-flatpak.rst:85
-msgid ""
-"Prior to Flatpak 0.11.1, it was necessary to manually update the metadata "
-"for your remotes before search will work. This can be done by either running"
-" ``flatpak update`` or ``flatpak update --appstream``."
-msgstr ""
-
-#: ../../using-flatpak.rst:88
+#: ../../using-flatpak.rst:128
 msgid "Install applications"
 msgstr "Installation d'applications"
 
-#: ../../using-flatpak.rst:90
+#: ../../using-flatpak.rst:130
 msgid "To install an application, run::"
 msgstr "Pour installer une application, lancez::"
 
-#: ../../using-flatpak.rst:94
+#: ../../using-flatpak.rst:134
 msgid ""
 "Here, ``flathub`` is the name of the remote the application is to be "
 "installed from, and ``org.gimp.GIMP`` is the ID of the application."
 msgstr ""
-"Ici, ``flathub`` est le nom du dépôt distant depuis lequel l'application est"
-" installée, et `org.gimp.GIMP`` est l'ID de l'application."
+"Ici, ``flathub`` est le nom du dépôt distant depuis lequel l'application "
+"est installée, et `org.gimp.GIMP`` est l'ID de l'application."
 
-#: ../../using-flatpak.rst:96
+#: ../../using-flatpak.rst:137
 msgid ""
-"Sometimes, an application will require a particular runtime, and this will "
-"be installed prior to the application."
+"Sometimes, an application will require a particular runtime, and this "
+"will be installed prior to the application."
 msgstr ""
 "Parfois, une application nécessitera un runtime particulier, et il sera "
 "installé avant l'application."
 
-#: ../../using-flatpak.rst:98
+#: ../../using-flatpak.rst:140
 msgid ""
 "The details of the application to be installed can also be provided by a "
 "``.flatpakref`` file, which can be either remote or local. To specify a "
-"``.flatpakref`` instead of manually providing the remote and application ID,"
-" run::"
+"``.flatpakref`` instead of manually providing the remote and application "
+"ID, run::"
 msgstr ""
 "Les détails de l'application à installer peut aussi être fournis par un "
-"fichier ``.flatpakref``, qui peut être distant ou local. Pour spécifier un "
-"fichier ``.flatpakref`` au lieu de fournir manuellement le dépôt distant et "
-"l'ID de l'application, exécutez::"
+"fichier ``.flatpakref``, qui peut être distant ou local. Pour spécifier "
+"un fichier ``.flatpakref`` au lieu de fournir manuellement le dépôt "
+"distant et l'ID de l'application, exécutez::"
 
-#: ../../using-flatpak.rst:102
+#: ../../using-flatpak.rst:147
 msgid ""
 "If the ``.flatpakref`` file specifies that the application is to be "
-"installed from a remote that hasn't already been added, you will be asked "
-"whether to add it before the application is installed."
+"installed from a remote that hasn't already been added, you will be asked"
+" whether to add it before the application is installed."
 msgstr ""
-"Si le fichier ``.flatpakref`` spécifie que l'application doit être installé "
-"depuis une dépôt distant qui n'a pas été déjà ajouté, il vous sera demander "
-"si il doit être ajouté avant d'installer l'application."
+"Si le fichier ``.flatpakref`` spécifie que l'application doit être "
+"installé depuis une dépôt distant qui n'a pas été déjà ajouté, il vous "
+"sera demander si il doit être ajouté avant d'installer l'application."
 
-#: ../../using-flatpak.rst:105
+#: ../../using-flatpak.rst:151
+msgid ""
+"Since Flatpak 1.2, the ``install`` command can search for applications. A"
+" simple::"
+msgstr ""
+
+#: ../../using-flatpak.rst:156
+msgid "will confirm the remote and application and proceed to install."
+msgstr ""
+
+#: ../../using-flatpak.rst:159
 msgid "Running applications"
 msgstr "Lancement d'applications"
 
-#: ../../using-flatpak.rst:107
+#: ../../using-flatpak.rst:161
 msgid ""
-"Once an application has been installed, it can be launched using the ``run``"
-" command and its application ID::"
+"Once an application has been installed, it can be launched using the "
+"``run`` command and its application ID::"
 msgstr ""
-"Une fois une application installée, elle peut être lancée en utilisant la "
-"commande ``run`` et l'ID de l'application::"
+"Une fois une application installée, elle peut être lancée en utilisant la"
+" commande ``run`` et l'ID de l'application::"
 
-#: ../../using-flatpak.rst:112
+#: ../../using-flatpak.rst:167
 msgid "Updating"
 msgstr "Mise à jour"
 
-#: ../../using-flatpak.rst:114
+#: ../../using-flatpak.rst:169
 msgid ""
 "To update all your installed applications and runtimes to the latest "
 "version, run::"
 msgstr ""
-"Pour mettre à jour toutes les applications et les runtimes installés à la "
-"dernière version, exécutez::"
+"Pour mettre à jour toutes les applications et les runtimes installés à la"
+" dernière version, exécutez::"
 
-#: ../../using-flatpak.rst:119
+#: ../../using-flatpak.rst:175
 msgid "List installed applications"
 msgstr "Lister les application installées"
 
-#: ../../using-flatpak.rst:121
+#: ../../using-flatpak.rst:177
 msgid "To list the applications and runtimes you have installed, run::"
 msgstr ""
 "Pour lister les applications et les runtimes que vous avez installé, "
 "exécutez::"
 
-#: ../../using-flatpak.rst:125
+#: ../../using-flatpak.rst:181
 msgid "Alternatively, to just list installed applications, run::"
-msgstr ""
-"Alternativement, pour juste lister les application installer, lancez::"
+msgstr "Alternativement, pour juste lister les application installer, lancez::"
 
-#: ../../using-flatpak.rst:130
+#: ../../using-flatpak.rst:186
 msgid "Remove an application"
 msgstr "Suppression d'une application"
 
-#: ../../using-flatpak.rst:132
+#: ../../using-flatpak.rst:188
 msgid "To remove an application, run::"
 msgstr "Pour supprimer une application, exécutez::"
+
+#: ../../using-flatpak.rst:193
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../using-flatpak.rst:195
+msgid ""
+"Flatpak has a few commands that can help you to get things working again "
+"when something goes wrong."
+msgstr ""
+
+#: ../../using-flatpak.rst:198
+msgid ""
+"To remove runtimes and extensions that are not used by installed "
+"applications, use::"
+msgstr ""
+
+#: ../../using-flatpak.rst:203
+msgid "To fix inconsistencies with your local installation, use::"
+msgstr ""
+
+#: ../../using-flatpak.rst:207
+msgid ""
+"Flatpak also has a number of commands to manage the portal permissions of"
+" installed apps. To reset all portal permissions for an app, use "
+"``flatpak permission-reset``::"
+msgstr ""
+
+#: ../../using-flatpak.rst:213
+msgid ""
+"To find out what changes have been made to your Flatpak installation over"
+" time, you can take a look at the logs (since 1.2)::"
+msgstr ""
+
+#~ msgid ""
+#~ "Prior to Flatpak 0.11.1, it was "
+#~ "necessary to manually update the "
+#~ "metadata for your remotes before search"
+#~ " will work. This can be done by"
+#~ " either running ``flatpak update`` or "
+#~ "``flatpak update --appstream``."
+#~ msgstr ""
+

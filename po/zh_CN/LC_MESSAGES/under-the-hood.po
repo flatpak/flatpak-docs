@@ -1,18 +1,19 @@
 # PikachuHy <pikachuhy@163.com>, 2018. #zanata
+# ZiqiangXu <ziqiang_xu@yeah.net>, 2019. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-20 10:17-0400\n"
-"PO-Revision-Date: 2018-10-08 03:35+0000\n"
-"Last-Translator: PikachuHy <pikachuhy@163.com>\n"
-"Language-Team: Chinese (Simplified, China)\n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2019-04-23 06:29-0400\n"
+"Last-Translator: ZiqiangXu <ziqiang_xu@yeah.net>\n"
 "Language: zh_Hans_CN\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Chinese (Simplified, China)\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 4.6.2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../under-the-hood.rst:2
 msgid "Under the Hood"
@@ -22,123 +23,124 @@ msgstr "Flatpak原理"
 msgid ""
 "This page provides an overview of how Flatpak works internally. While it "
 "isn't necessary to be familiar with this in order to use Flatpak, some "
-"people might find it interesting. Knowing about Flatpak's architecture also "
-"helps to get a better understanding of how and why it works the way it does,"
-" from a user and application developer perspective."
-msgstr ""
-"本页面简单介绍了Flatpak内部工作原理。虽然仅仅是使用Flatpak没必要熟悉这些，但是有些人可会会觉得这很有趣。从用户和应用开发者的角度来看，了解Flatpak的体系结构还有助于更好地理解它的工作方式和原因。"
+"people might find it interesting. Knowing about Flatpak's architecture "
+"also helps to get a better understanding of how and why it works the way "
+"it does, from a user and application developer perspective."
+msgstr "本页面简单介绍了Flatpak内部工作原理。虽然仅仅是使用Flatpak没必要熟悉这些，但是有些人可会会觉得这很有趣。从用户和应用开发者的角度来看，了解Flatpak的体系结构还有助于更好地理解它的工作方式和原因。"
 
-#: ../../under-the-hood.rst:7
+#: ../../under-the-hood.rst:11
 msgid "\"Git for apps\""
 msgstr "应用级Git"
 
-#: ../../under-the-hood.rst:9
+#: ../../under-the-hood.rst:13
+#, fuzzy
 msgid ""
 "Flatpak is built on top of a technology called `OSTree "
-"<https://ostree.readthedocs.io/en/latest/manual/introduction/>`_, which is "
-"influenced by and very similar to the Git version control system. Like Git, "
-"OSTree allows versioned data to be tracked and to be distributed between "
+"<https://ostreedev.github.io/ostree/introduction/>`_, which is influenced"
+" by and very similar to the Git version control system. Like Git, OSTree "
+"allows versioned data to be tracked and to be distributed between "
 "different repositories. However, where Git is designed to track source "
 "files, OSTree is designed to track binary files and other large data."
 msgstr ""
 "Flatpak建立在一种名为`OSTree "
 "<https://ostree.readthedocs.io/en/latest/manual/introduction/>`的技术之上，该技术受Git版本控制系统的影响，非常类似Git。与Git一样，OSTree允许跟踪版本化数据并在不同的仓库间分发。不同的是，Git为跟踪源文件设计，OSTree为跟踪二进制文件和其他大数据设计。"
 
-#: ../../under-the-hood.rst:11
+#: ../../under-the-hood.rst:20
+#, fuzzy
 msgid ""
 "Internally, Flatpak therefore works in a similar way to Git, and many "
-"Flatpak concepts are analagous to Git concepts. Like Git, Flatpak uses "
-"repositories to store data, and it tracks the differences between versions."
+"Flatpak concepts are analogous to Git concepts. Like Git, Flatpak uses "
+"repositories to store data, and it tracks the differences between "
+"versions."
 msgstr ""
 "在内部，Flatpak的工作方式与Git类似，许多Flatpak概念与Git概念类似。 "
 "与Git一样，Flatpak使用仓库来存储数据，并跟踪版本之间的差异。"
 
-#: ../../under-the-hood.rst:13
+#: ../../under-the-hood.rst:24
 msgid ""
 "With Flatpak, each application, runtime and extension is a branch in a "
-"repository. An identifier triple, such as ``com.company.App/i386/stable`` is"
-" a reference to that branch. The output of a Flatpak build process is a "
-"directory of files which is committed to one of these branches."
+"repository. An identifier triple, such as ``com.company.App/i386/stable``"
+" is a reference to that branch. The output of a Flatpak build process is "
+"a directory of files which is committed to one of these branches."
 msgstr ""
-"使用Flatpak，每个应用程序，运行时和扩展都是仓库中的一个分支。 标识符三元组，例如 `` com.company.App/i386/stable "
-"`` 是对该分支的引用。 Flatpak构建过程的输出是一个文件目录，它提交给其中一个分支。"
+"使用Flatpak，每个应用程序，运行时和扩展都是仓库中的一个分支。 标识符三元组，例如 `` "
+"com.company.App/i386/stable `` 是对该分支的引用。 "
+"Flatpak构建过程的输出是一个文件目录，它提交给其中一个分支。"
 
-#: ../../under-the-hood.rst:15
+#: ../../under-the-hood.rst:29
 msgid ""
-"When an application is installed with Flatpak, it is pulled from the remote "
-"into a new branch in a local repository. Links are then generated which "
-"point from the right places in the filesystem to the application's files in "
-"the repository (these are `hard links "
-"<https://en.wikipedia.org/wiki/Hard_link>`_, which are fast to resolve and "
-"disk space efficient). In other words, every application that is installed "
-"is stored in a local version control repository, and is then mapped into the"
-" local filesystem."
+"When an application is installed with Flatpak, it is pulled from the "
+"remote into a new branch in a local repository. Links are then generated "
+"which point from the right places in the filesystem to the application's "
+"files in the repository (these are `hard links "
+"<https://en.wikipedia.org/wiki/Hard_link>`_, which are fast to resolve "
+"and disk space efficient). In other words, every application that is "
+"installed is stored in a local version control repository, and is then "
+"mapped into the local filesystem."
 msgstr ""
 "使用Flatpak安装应用时，会将其从远程仓库中拉入到本地仓库中的新分支。 "
 "然后生成从文件系统指向仓库的链接（这些链接是快速解析和高效利用的磁盘空间`硬链接 "
 "<https://en.wikipedia.org/wiki/Hard_link>`）。 "
 "换句话说，安装的每个应用程序都存储在本地版本控制仓库中，然后映射到本地文件系统。"
 
-#: ../../under-the-hood.rst:17
+#: ../../under-the-hood.rst:37
 msgid ""
 "Version tracking is therefore a core part of Flatpak's architecture, and "
 "this makes updating software to the latest version very efficient. "
 "Versioning also makes rollbacks possible, so it's easy to go back to a "
 "previous version, should that be required."
-msgstr ""
-"因此，版本跟踪是Flatpak架构的核心部分，这使得更新软件非常高效。 版本控制也使回滚成为可能，因此如果需要，可以很容易地回滚到以前的版本。"
+msgstr "因此，版本跟踪是Flatpak架构的核心部分，这使得更新软件非常高效。 版本控制也使回滚成为可能，因此如果需要，可以很容易地回滚到以前的版本。"
 
-#: ../../under-the-hood.rst:19
+#: ../../under-the-hood.rst:42
 msgid ""
-"Storing applications in a local OSTree repository has other advantages. For "
-"example, it allows files that are stored on disk to be deduplicated, so the "
-"same file that belongs to multiple applications (or runtimes) is only stored"
-" once."
-msgstr ""
-"将应用程序存储在本地OSTree存储库中具有其他优点。 例如，它允许对存储在磁盘上的文件去重，所以属于多个应用程序（或运行时）的同一文件仅存储一次。"
+"Storing applications in a local OSTree repository has other advantages. "
+"For example, it allows files that are stored on disk to be deduplicated, "
+"so the same file that belongs to multiple applications (or runtimes) is "
+"only stored once."
+msgstr "将应用程序存储在本地OSTree存储库中具有其他优点。 例如，它允许对存储在磁盘上的文件去重，所以属于多个应用程序（或运行时）的同一文件仅存储一次。"
 
-#: ../../under-the-hood.rst:22
+#: ../../under-the-hood.rst:48
 msgid "Underlying technologies"
 msgstr "基础技术"
 
-#: ../../under-the-hood.rst:24
+#: ../../under-the-hood.rst:50
 msgid "Flatpak utilises a number of pre-existing technologies. These include:"
 msgstr "Flatpak使用了许多已经存在的技术。如："
 
-#: ../../under-the-hood.rst:26
+#: ../../under-the-hood.rst:52
 #, fuzzy
 msgid ""
-"The `bubblewrap <https://github.com/projectatomic/bubblewrap>`_ utility from"
-" `Project Atomic <http://www.projectatomic.io/>`_, which lets unprivileged "
-"users set up and run containers, using kernel features such as:"
+"The `bubblewrap <https://github.com/projectatomic/bubblewrap>`_ utility "
+"from `Project Atomic <http://www.projectatomic.io/>`_, which lets "
+"unprivileged users set up and run containers, using kernel features such "
+"as:"
 msgstr ""
-" 来自 `Project Atomic <http://www.projectatomic.io/>`的`bubblewrap "
-"<https://github.com/projectatomic/bubblewrap>`，它可以让授权的用户启动和运行容器。使用到的内核特性："
+" 来自 `Project Atomic <http://www.projectatomic.io/>`_的`bubblewrap "
+"<https://github.com/projectatomic/bubblewrap>`_，它可以让非特权的用户启动和运行容器。使用到的内核特性："
 
-#: ../../under-the-hood.rst:28
+#: ../../under-the-hood.rst:56
 msgid "Cgroups"
 msgstr "Cgroups"
 
-#: ../../under-the-hood.rst:29
+#: ../../under-the-hood.rst:57
 msgid "Namespaces"
 msgstr "Namespaces"
 
-#: ../../under-the-hood.rst:30
+#: ../../under-the-hood.rst:58
 msgid "Bind mounts"
 msgstr "Bind mounts"
 
-#: ../../under-the-hood.rst:31
+#: ../../under-the-hood.rst:59
 msgid "Seccomp rules"
 msgstr "Seccomp rules"
 
-#: ../../under-the-hood.rst:33
+#: ../../under-the-hood.rst:61
 msgid ""
-"`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_ to set up "
-"cgroups for sandboxes"
-msgstr ""
-"`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`为沙盒启动cgroups"
+"`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_ to set up"
+" cgroups for sandboxes"
+msgstr "`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`为沙盒启动cgroups"
 
-#: ../../under-the-hood.rst:34
+#: ../../under-the-hood.rst:63
 msgid ""
 "`D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_, a well-"
 "established way to provide high-level APIs to applications"
@@ -146,26 +148,40 @@ msgstr ""
 "`D-Bus "
 "<https://www.freedesktop.org/wiki/Software/dbus/>`，一种成熟的为应用程序提供高级API的方法"
 
-#: ../../under-the-hood.rst:35
+#: ../../under-the-hood.rst:65
+#, fuzzy
 msgid ""
-"The OCI format from the `Open Container Initiative "
-"<https://www.opencontainers.org/>`_, as a convenient transport format for "
-"single-file bundles"
-msgstr ""
-"`Open Container Initiative "
-"<https://www.opencontainers.org/>`的OCI格式，作为单文件包的便捷传输格式"
-
-#: ../../under-the-hood.rst:36
-msgid ""
-"The `OSTree <https://ostree.readthedocs.io/en/latest/>`_ system for "
+"The `OSTree <https://ostree.readthedocs.io/en/latest/>`__ system for "
 "versioning and distributing filesystem trees"
 msgstr "`OSTree <https://ostree.readthedocs.io/en/latest/>`系统，版本化和分布式文件系统树"
 
-#: ../../under-the-hood.rst:37
+#: ../../under-the-hood.rst:67
+msgid ""
+"The OCI format from the `Open Container Initiative "
+"<https://www.opencontainers.org/>`_, as an alternative to OSTree used by "
+"the `Fedora infrastructure <https://blog.fishsoup.net/2018/12/04"
+"/flatpaks-in-fedora-now-live/>`__"
+msgstr ""
+
+#: ../../under-the-hood.rst:71
+msgid "Flatpak can use either OSTree or OCI for single-file bundles."
+msgstr ""
+
+#: ../../under-the-hood.rst:72
 msgid ""
 "`Appstream <https://www.freedesktop.org/software/appstream/docs/>`_ "
-"metadata, to allow Flatpak applications to show up nicely in software center"
-" applications"
+"metadata, to allow Flatpak applications to show up nicely in software "
+"center applications"
 msgstr ""
 "`Appstream "
 "<https://www.freedesktop.org/software/appstream/docs/>`元数据，允许Flatpak应用在软件中心友好的展示"
+
+#~ msgid ""
+#~ "The OCI format from the `Open "
+#~ "Container Initiative <https://www.opencontainers.org/>`_,"
+#~ " as a convenient transport format for"
+#~ " single-file bundles"
+#~ msgstr ""
+#~ "`Open Container Initiative "
+#~ "<https://www.opencontainers.org/>`的OCI格式，作为单文件包的便捷传输格式"
+

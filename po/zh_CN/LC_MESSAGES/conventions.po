@@ -3,18 +3,18 @@
 # ZiqiangXu <ziqiang_xu@yeah.net>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 20:19-0400\n"
-"PO-Revision-Date: 2018-10-10 08:10+0000\n"
-"Last-Translator: WTZ <zwpwjwtz@126.com>\n"
-"Language-Team: Chinese (Simplified, China)\n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2018-11-03 01:31-0400\n"
+"Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language: zh_Hans_CN\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Chinese (Simplified, China)\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 4.6.2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../conventions.rst:2
 msgid "Requirements & Conventions"
@@ -22,309 +22,403 @@ msgstr "要求与规范"
 
 #: ../../conventions.rst:4
 msgid ""
-"Flatpak deliberately makes as few requirements of applications as possible. "
-"However, a small number of standard Linux desktop conventions are expected, "
-"primarily to ensure that applications integrate with Linux desktops and app "
-"centers. Developers might also encounter a small number of Linux technical "
-"conventions."
+"Flatpak deliberately makes as few requirements of applications as "
+"possible. However, a small number of standard Linux desktop conventions "
+"are expected, primarily to ensure that applications integrate with Linux "
+"desktops and app centers. Developers might also encounter a small number "
+"of Linux technical conventions."
 msgstr ""
 "Flatpak尽可能不对应用程序作出限制。不过，开发者应当尽可能遵循标准Linux桌面的规范，这主要是为了应用程序能更好地集成到Linux桌面和应用中心（App"
 " Center）。开发者也应尽可能遵循Linux技术规范。"
 
-#: ../../conventions.rst:6
+#: ../../conventions.rst:10
 msgid ""
 "Information on further desktop integration options can be found in :doc"
 ":`desktop-integration`."
 msgstr "更多有关桌面集成的选项可以参考 :doc:`desktop-integration`。"
 
-#: ../../conventions.rst:9
+#: ../../conventions.rst:14
 msgid "Expected Standards"
 msgstr "应当遵循的标准"
 
-#: ../../conventions.rst:11
+#: ../../conventions.rst:16
 msgid ""
 "Applications that use Flatpak are generally expected to comply with the "
-"following standards. Applications that have previously targeted the Linux "
-"desktop will typically need to make very few (if any) changes to do this."
+"following standards. Applications that have previously targeted the Linux"
+" desktop will typically need to make very few (if any) changes to do "
+"this."
 msgstr "使用Flatpak构建的应用应当遵循下列标准。一般而言，为Linux桌面设计的应用程序只需做少数改动即可符合这些标准。"
 
-#: ../../conventions.rst:14
+#: ../../conventions.rst:21
 msgid "Application IDs"
 msgstr "应用ID"
 
-#: ../../conventions.rst:16
+#: ../../conventions.rst:23
+#, fuzzy
 msgid ""
-"As described in :doc:`using-flatpak`, Flatpak requires each application to "
-"have a unique identifier, which has a three-part form such as "
-"``org.gnome.Dictionary``. As will be seen below and in future sections, this"
-" ID is expected to be used in a number of places. Developers should follow "
-"the standard `D-Bus naming conventions <https://dbus.freedesktop.org/doc"
-"/dbus-specification.html#message-protocol-names>`_ when creating their own "
-"IDs. This format is already recommended by the `Desktop File specification  "
+"As described in :doc:`using-flatpak`, Flatpak requires each application "
+"to have a unique identifier, which has a form such as "
+"``org.gnome.Dictionary``. The format is in reverse-DNS style so the first"
+" section is a domain controlled by the project and the trailing section "
+"represents the specific project. As will be seen below and in future "
+"sections, this ID is expected to be used in a number of places. "
+"Developers must follow the standard `D-Bus naming conventions "
+"<https://dbus.freedesktop.org/doc/dbus-specification.html#message-"
+"protocol-names>`_ when creating their own IDs. This format is already "
+"recommended by the `Desktop File specification "
 "<https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-"
-"spec-latest.html#file-naming>`_ and `Appstream specification  "
+"spec-latest.html#file-naming>`_ and `Appstream specification "
 "<https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html"
 "#sect-Metadata-GenericComponent>`_ also."
 msgstr ""
-"如   :doc:`using-flatpak` 所述，Flatpak要求每个应用都有一个独立的标识符，由三部分构成，例如  `` "
-"org.gnome.Dictionary ``  。我们在下面和后面的章节也会看到，ID在许多地方会用到。开发者在创建他们自己的ID的时候应该遵守 "
-"`D-Bus naming conventions <https://dbus.freedesktop.org/doc/dbus-"
-"specification.html#message-protocol-names>`_ （D-Bus命名约定，译者注）标准。这种格式也被 "
-"`Desktop File specification  <https://specifications.freedesktop.org"
-"/desktop-entry-spec/desktop-entry-spec-latest.html#file-naming>`_  "
-"（Desktop文件规范，译者注）和  `Appstream specification  "
+"如   :doc:`using-flatpak` 所述，Flatpak要求每个应用都有一个独立的标识符，由三部分构成，例如  "
+"``org.gnome.Dictionary``  "
+"。我们在下面和后面的章节也会看到，ID在许多地方会用到。开发者在创建他们自己的ID的时候应该遵守 `D-Bus naming "
+"conventions <https://dbus.freedesktop.org/doc/dbus-specification.html"
+"#message-protocol-names>`_ （D-Bus命名约定，译者注）标准。这种格式也被 `Desktop File "
+"specification  <https://specifications.freedesktop.org/desktop-entry-spec"
+"/desktop-entry-spec-latest.html#file-naming>`_  （Desktop文件规范，译者注）和  "
+"`Appstream specification  "
 "<https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html"
 "#sect-Metadata-GenericComponent>`_ （AppStream规范，译者注）所推荐。"
 
-#: ../../conventions.rst:19
+#: ../../conventions.rst:38
+msgid "For some practical examples of bad IDs"
+msgstr ""
+
+#: ../../conventions.rst:40
+msgid "``org.example.desktop``"
+msgstr ""
+
+#: ../../conventions.rst:42
+msgid ""
+"This is a bad ID because the Appstream standard for legacy reasons treats"
+" IDs ending with ``.desktop`` as a special case causing inconsistency. "
+"For this same reason, ``.Desktop`` suffixes should not be used for newly "
+"named applications. Don't hesitate to repeat the application name even if"
+" it already is part of the domain name section of the identifier (eg. "
+"``org.example.Example``)."
+msgstr ""
+
+#: ../../conventions.rst:47
+msgid "``io.github.Foo``"
+msgstr ""
+
+#: ../../conventions.rst:49
+msgid ""
+"This is problematic because while ``foo.github.io`` may be unique to your"
+" project it does not include a project specific identifier. This may "
+"cause issues if another project creates ``io.github.Foo-Bar`` which "
+"should be its own namespace but areas of ``flatpak`` may treat them "
+"similar. A better ID would be ``io.github.foo.Foo`` even if its "
+"redundant."
+msgstr ""
+
+#: ../../conventions.rst:54
+msgid "``org.example-site.Foo``"
+msgstr ""
+
+#: ../../conventions.rst:56
+msgid ""
+"This ID is not valid according to the DBus specification. You can use "
+"``org.example_site.Foo`` instead."
+msgstr ""
+
+#: ../../conventions.rst:58
+msgid "``com.github.foo.Bar``"
+msgstr ""
+
+#: ../../conventions.rst:60
+msgid ""
+"While a project may be hosted on GitHub it does not have any control over"
+" the ``github.com`` domain. Instead you should use ``io.github`` as shown"
+" above."
+msgstr ""
+
+#: ../../conventions.rst:64
 msgid "AppData files"
 msgstr "AppData文件"
 
-#: ../../conventions.rst:20
+#: ../../conventions.rst:65
 msgid ""
 "AppData files provide metadata about applications, which is used by "
-"application stores (such as Flathub, GNOME Software and KDE Discover). The "
-"`Freedesktop AppStream specification "
-"<https://www.freedesktop.org/software/appstream/docs/>`_ provides a complete"
-" reference for providing AppData."
+"application stores (such as Flathub, GNOME Software and KDE Discover). "
+"The `Freedesktop AppStream specification "
+"<https://www.freedesktop.org/software/appstream/docs/>`_ provides a "
+"complete reference for providing AppData."
 msgstr ""
 "APPData文件提供了应用的元数据，可以被应用商店使用（例如Flathub、GNOME Software和KDE Discover）。 "
 "`Freedesktop AppStream specification "
 "<https://www.freedesktop.org/software/appstream/docs/>`_ "
 "（APPStream规范）提供了一个AppData的完整参考。"
 
-#: ../../conventions.rst:22
+#: ../../conventions.rst:71
 msgid ""
 "AppData files should be named with the application ID and the "
 "``.appdata.xml`` file extension, and should be placed in "
 "``/app/share/metainfo/``. For example::"
 msgstr ""
-"AppData文件应该以应用的ID命名，并以  `` .appdata.xml ``  为文件扩展名，应该放在  `` "
-"/app/share/metainfo/ ``  。举个例子::"
+"AppData文件应该以应用的ID命名，并以  ``.appdata.xml``  为文件扩展名，应该放在  "
+"``/app/share/metainfo/``  。举个例子::"
 
-#: ../../conventions.rst:26
+#: ../../conventions.rst:76
 msgid ""
-"The ``appstream-util validate-relax`` command can be used to check AppData "
-"files for errors."
-msgstr "  `` appstream-util vlidate-relax ``  命令可以用于检查AppData文件的错误"
+"The ``appstream-util validate-relax`` command can be used to check "
+"AppData files for errors."
+msgstr "``appstream-util vlidate-relax``  命令可以用于检查AppData文件的错误"
 
-#: ../../conventions.rst:29
+#: ../../conventions.rst:80
 msgid "Application icons"
 msgstr "应用图标"
 
-#: ../../conventions.rst:31
+#: ../../conventions.rst:82
 msgid ""
-"Applications are expected to provide an application icon, which is used for "
-"their application launcher. These icons should be provided in accordance "
-"with the `Freedesktop icon specification <https://standards.freedesktop.org"
-"/icon-theme-spec/icon-theme-spec-latest.html>`_."
+"Applications are expected to provide an application icon, which is used "
+"for their application launcher. These icons should be provided in "
+"accordance with the `Freedesktop icon specification "
+"<https://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-"
+"latest.html>`_."
 msgstr ""
 "应用需要提供一个图标，用于应用启动器。这些图标应当与 `Freedesktop icon specification "
 "<https://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-"
-"latest.html>`_（Freedesktop图标规范）一致。"
+"latest.html>`_ （Freedesktop图标规范）一致。"
 
-#: ../../conventions.rst:33
+#: ../../conventions.rst:87
 msgid ""
 "Icons should be named with the application's ID, be in either PNG or SVG "
 "format, and must be placed in the standard location::"
 msgstr "图标应该以应用ID命名，以PNG或者SVG格式，而且必须放在标准的位置::"
 
-#: ../../conventions.rst:37
+#: ../../conventions.rst:92
 msgid ""
-"For example, the path to the 128✕128px version of GNOME Dictionary's icon "
-"is::"
+"For example, the path to the 128✕128px version of GNOME Dictionary's icon"
+" is::"
 msgstr "举个例子，128x128px版本的GNOME Dictionary的图标的路径应该是："
 
-#: ../../conventions.rst:42
+#: ../../conventions.rst:98
 msgid "Desktop files"
 msgstr "desktop文件"
 
-#: ../../conventions.rst:44
+#: ../../conventions.rst:100
 msgid ""
-"Desktop files are used to provide the desktop environment with information "
-"about each application. The `Freedesktop specification "
-"<https://standards.freedesktop.org/desktop-entry-spec/latest/>`_ provides a "
-"complete reference for writing desktop files, and `additional information "
-"about them <https://wiki.archlinux.org/index.php/desktop_entries>`_ is "
-"available online."
+"Desktop files are used to provide the desktop environment with "
+"information about each application. The `Freedesktop specification "
+"<https://standards.freedesktop.org/desktop-entry-spec/latest/>`_ provides"
+" a complete reference for writing desktop files, and `additional "
+"information about them "
+"<https://wiki.archlinux.org/index.php/desktop_entries>`_ is available "
+"online."
 msgstr ""
 "desktop文件用于向桌面环境报告每个应用程序的相关信息。`Freedesktop specification "
-"<https://standards.freedesktop.org/desktop-entry-spec/latest/>` "
+"<https://standards.freedesktop.org/desktop-entry-spec/latest/>`_ "
 "提供了编写desktop文件的完整指南，您也可以在 `ArchLinux Wiki "
-"<https://wiki.archlinux.org/index.php/desktop_entries>` 上找到更多信息。"
+"<https://wiki.archlinux.org/index.php/desktop_entries>`_ 上找到更多信息。"
 
-#: ../../conventions.rst:46
+#: ../../conventions.rst:107
 msgid ""
 "Desktop files should be named with the application's ID, followed by the "
 "``.desktop`` file extension, and should be placed in "
 "``/app/share/applications/``. For example::"
 msgstr ""
-"desktop文件应该以应用的ID命名，以  `` .desktop ``  为文件扩展名，而且应该放在  `` "
-"/app/share/applications/ ``  。举个例子::"
+"desktop文件应该以应用的ID命名，以  ``.desktop``  为文件扩展名，而且应该放在  "
+"``/app/share/applications/``  。举个例子::"
 
-#: ../../conventions.rst:50
+#: ../../conventions.rst:113
 msgid ""
 "A minimal desktop file should contain at least the application's *name*, "
 "*exec* command, *type*, *icon* name and *categories*::"
 msgstr ""
-"一个desktop文件应当至少包含以下字段： *name*（应用程序名）、*exec*（启动命令）、*type*（类型）、*icon*（图标名）和 "
-"*categories* （所属分类）："
+"一个desktop文件应当至少包含以下字段： *name*（应用程序名）、*exec*（启动命令）、*type*（类型）、*icon*（图标名）和"
+" *categories* （所属分类）："
 
-#: ../../conventions.rst:59
+#: ../../conventions.rst:123
 msgid ""
 "The ``desktop-file-validate`` command can be used to check for errors in "
 "desktop files."
-msgstr "  `` desktop-file-validate ``  命令可以用来检测desktop文件的错误。"
+msgstr "``desktop-file-validate``  命令可以用来检测desktop文件的错误。"
 
-#: ../../conventions.rst:62
+#: ../../conventions.rst:127
+msgid "Exporting through extra-data"
+msgstr ""
+
+#: ../../conventions.rst:129
+msgid ""
+"Files downloaded through ``extra-data`` are only downloaded when "
+"installing, as such they aren't yet available for ``flatpak-builder`` to "
+"automatically export during the build process."
+msgstr ""
+
+#: ../../conventions.rst:131
+msgid ""
+"When using ``extra-data``, place any files that must be exported under "
+"this location::"
+msgstr ""
+
+#: ../../conventions.rst:135
+msgid ""
+"For example, if GNOME Dictionary used ``extra-data`` to download a 96x96 "
+"icon this would be its path::"
+msgstr ""
+
+#: ../../conventions.rst:140
 msgid "Technical conventions"
 msgstr "技术规范"
 
-#: ../../conventions.rst:64
+#: ../../conventions.rst:142
 msgid ""
-"The following are standard technical conventions used by Flatpak and Linux "
-"desktops. Those with Linux experience will likely already be aware of them. "
-"However, developers who are new to Linux might find some of this information"
-" useful."
-msgstr ""
-"Flatpak和多数Linux桌面都遵循下列标准技术规范。有Linux使用经验的用户对此可能已有了解。首次使用Linux的开发者同样可以在这里找到有用的信息。"
+"The following are standard technical conventions used by Flatpak and "
+"Linux desktops. Those with Linux experience will likely already be aware "
+"of them. However, developers who are new to Linux might find some of this"
+" information useful."
+msgstr "Flatpak和多数Linux桌面都遵循下列标准技术规范。有Linux使用经验的用户对此可能已有了解。首次使用Linux的开发者同样可以在这里找到有用的信息。"
 
-#: ../../conventions.rst:67
+#: ../../conventions.rst:148
 msgid "D-Bus"
 msgstr "D-Bus"
 
-#: ../../conventions.rst:69
+#: ../../conventions.rst:150
 msgid ""
 "D-Bus is the standard IPC framework used on Linux desktops. A lot of "
-"applications won't need to use it, but it is supported by Flatpak should it "
-"be required."
+"applications won't need to use it, but it is supported by Flatpak should "
+"it be required."
 msgstr ""
 "D-Bus是Linux桌面使用的标准IPC（进程间通讯，译者注）框架。大多数应用程序并不会用到D-Bus；但如果需要，Flatpak也同样提供D-"
 "Bus支持。"
 
-#: ../../conventions.rst:71
+#: ../../conventions.rst:154
 msgid ""
 "D-Bus can be used for application launching and communicating with some "
 "system services. Applications can also provide their own D-Bus services "
-"(when doing this, the D-Bus service name is expected to be the same as the "
-"application ID)."
+"(when doing this, the D-Bus service name is expected to be the same as "
+"the application ID)."
 msgstr ""
-"D-Bus可用于启动应用程序，以及系统服务之间的交互。应用程序也可以实现它们自己的D-Bus服务（此时，D-Bus服务的名称必须与应用程序的ID一致）。"
+"D-Bus可用于启动应用程序，以及系统服务之间的交互。应用程序也可以实现它们自己的D-"
+"Bus服务（此时，D-Bus服务的名称必须与应用程序的ID一致）。"
 
-#: ../../conventions.rst:74
+#: ../../conventions.rst:159
 msgid "Filesystem layout"
 msgstr "Filesystem layout（文件系统布局，译者注）"
 
-#: ../../conventions.rst:76
+#: ../../conventions.rst:161
 msgid ""
-"Each Flatpak sandbox, which is the environment in which an application is "
-"run, contains the filesystem of the application's runtime. This follows "
+"Each Flatpak sandbox, which is the environment in which an application is"
+" run, contains the filesystem of the application's runtime. This follows "
 "`standard Linux filesystem conventions "
 "<https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>`_."
 msgstr ""
 "每个Flatpak沙箱，一个应用运行的环境，包含这个应用的运行时的文件系统。这个准守  `standard Linux filesystem "
-"conventions <https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>`_ "
+"conventions "
+"<https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>`_ "
 "（标准Linux文件系统约定，译者注）。"
 
-#: ../../conventions.rst:78
+#: ../../conventions.rst:166
 msgid ""
 "For example, the root of the sandbox contains the ``/etc`` directory for "
-"configuration files and ``/usr`` for multi-user utilities and applications. "
-"In addition to this, each sandbox contains a top-level ``/app`` directory, "
-"which is where the application's own files are located."
+"configuration files and ``/usr`` for multi-user utilities and "
+"applications. In addition to this, each sandbox contains a top-level "
+"``/app`` directory, which is where the application's own files are "
+"located."
 msgstr ""
-"举个例子，沙箱根目录包含  `` /etc ``  用于配置文件和  `` /usr ``  "
-"用于多用户utilities和应用。除此之外，每个沙箱包含一个顶级  `` /app/ ``  目录，用于应用自己文件的存放。"
+"举个例子，沙箱根目录包含  ``/etc``  用于配置文件和  ``/usr``  "
+"用于多用户utilities和应用。除此之外，每个沙箱包含一个顶级  ``/app/``  目录，用于应用自己文件的存放。"
 
-#: ../../conventions.rst:81
+#: ../../conventions.rst:172
 msgid "XDG base directories"
 msgstr "XDG基本目录"
 
-#: ../../conventions.rst:83
+#: ../../conventions.rst:174
 msgid ""
 "`XDG base directories <https://standards.freedesktop.org/basedir-spec"
 "/basedir-spec-latest.html>`_ are standard locations for user-specific "
 "application data. Popular toolkits provide convenience functions for "
 "accessing XDG base directories. These include:"
 msgstr ""
+"`XDG基本目录 <https://standards.freedesktop.org/basedir-spec/basedir-spec-"
+"latest.html>`_  指定用户应用数据的位置标准。很多工具包都提供了访问XDG基本目录的快捷方法。如:"
 
-#: ../../conventions.rst:85
+#: ../../conventions.rst:179
 msgid "Electron: XDG base directories can be accessed with ``app.getPath``"
-msgstr ""
+msgstr "Electron: 使用 ``app.getPath`` 访问XDG基本目录"
 
-#: ../../conventions.rst:86
+#: ../../conventions.rst:180
 msgid ""
 "Glib: provides access to the XDG base directories through the "
 "``g_get_user_cache_dir ()``, ``g_get_user_data_dir ()``, "
 "``g_get_user_config_dir ()`` functions"
 msgstr ""
+"Glib: 通过 ``g_get_user_cache_dir ()``, ``g_get_user_data_dir ()``, "
+"``g_get_user_config_dir ()`` 函数访问XDG基本目录"
 
-#: ../../conventions.rst:87
+#: ../../conventions.rst:183
+#, fuzzy
 msgid ""
-"Qt: provides access to XDG base directories with the the `QStandardPaths "
+"Qt: provides access to XDG base directories with the `QStandardPaths "
 "Class <http://doc.qt.io/qt-5/qstandardpaths.html>`_"
 msgstr ""
+"Qt: 通过 `QStandardPaths Class "
+"<http://doc.qt.io/qt-5/qstandardpaths.html>`_ 访问XDG基本目录"
 
-#: ../../conventions.rst:89
+#: ../../conventions.rst:186
 msgid ""
-"However, applications that aren't using one of these toolkits can expect to "
-"find their XDG base directories in the following locations:"
-msgstr ""
+"However, applications that aren't using one of these toolkits can expect "
+"to find their XDG base directories in the following locations:"
+msgstr "如果应用没有使用上述工具包，也可以通过下面的方式找到XDG基本目录："
 
-#: ../../conventions.rst:92
+#: ../../conventions.rst:190
 msgid "Base directory"
 msgstr "基本目录"
 
-#: ../../conventions.rst:92
+#: ../../conventions.rst:190
 msgid "Usage"
 msgstr "用途"
 
-#: ../../conventions.rst:92
+#: ../../conventions.rst:190
 msgid "Default location"
 msgstr "默认位置"
 
-#: ../../conventions.rst:94
+#: ../../conventions.rst:192
 msgid "XDG_CONFIG_HOME"
 msgstr "XDG_CONFIG_HOME"
 
-#: ../../conventions.rst:94
+#: ../../conventions.rst:192
 msgid "User-specific configuration files"
 msgstr "具体用户配置文件"
 
-#: ../../conventions.rst:94
+#: ../../conventions.rst:192
 msgid "~/.var/app/<app-id>/config"
 msgstr "~/.var/app/<app-id>/config"
 
-#: ../../conventions.rst:95
+#: ../../conventions.rst:193
 msgid "XDG_DATA_HOME"
 msgstr "XDG_DATA_HOME"
 
-#: ../../conventions.rst:95
+#: ../../conventions.rst:193
 msgid "User-specific data"
 msgstr "具体用户数据"
 
-#: ../../conventions.rst:95
+#: ../../conventions.rst:193
 msgid "~/.var/app/<app-id>/data"
 msgstr "~/.var/app/<app-id>/data"
 
-#: ../../conventions.rst:96
+#: ../../conventions.rst:194
 msgid "XDG_CACHE_HOME"
 msgstr "XDG_CACHE_HOME"
 
-#: ../../conventions.rst:96
+#: ../../conventions.rst:194
 msgid "Non-essential user-specific data"
 msgstr "Non-essential user-specific data（非基本具体用户数据，译者注）"
 
-#: ../../conventions.rst:96
+#: ../../conventions.rst:194
 msgid "~/.var/app/<app-id>/cache"
 msgstr "~/.var/app/<app-id>/cache"
 
-#: ../../conventions.rst:99
+#: ../../conventions.rst:197
 msgid "For example, GNOME Dictionary will store user-specific data in::"
 msgstr "举个例子，GNOME Dictionary会把具体用户数据存放在::"
 
-#: ../../conventions.rst:103
+#: ../../conventions.rst:201
 msgid ""
-"Note that applications can be configured to use non-default base directory "
-"locations (see :doc:`sandbox-permissions`)."
+"Note that applications can be configured to use non-default base "
+"directory locations (see :doc:`sandbox-permissions`)."
 msgstr "注意应用可以被配置成使用非默认基本目录（见 :doc:`sandbox-permissions`)。"
+

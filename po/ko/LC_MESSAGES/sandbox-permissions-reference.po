@@ -6,251 +6,303 @@
 # TingPing <tingping@tingping.se>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-11 18:07-0400\n"
-"PO-Revision-Date: 2018-05-20 10:37+0000\n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2018-05-20 10:37-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ko\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: ko <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Generated-By: Babel 2.5.1\n"
-"X-Generator: Zanata 4.6.2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../sandbox-permissions-reference.rst:2
-msgid "Sandbox Permissions"
+msgid "Sandbox Permissions Reference"
 msgstr ""
 
 #: ../../sandbox-permissions-reference.rst:4
 msgid ""
-"Sandbox permissions can be configured from an application manifest file (see"
-" :doc:`manifests`). They can also be set with the ``build-finish``, ``run`` "
-"and ``override`` commands."
+"Sandbox permissions can be configured from an application manifest file "
+"(see :doc:`manifests`). They can also be set with the ``build-finish``, "
+"``run`` and ``override`` commands."
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:6
+#: ../../sandbox-permissions-reference.rst:8
 msgid ""
-"The following list includes many of the most useful permission options. A "
-"complete list can be viewed using ``flatpak build-finish --help``."
+"The following list includes many of the most useful permission options. A"
+" complete list can be viewed using ``flatpak build-finish --help``."
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:9
+#: ../../sandbox-permissions-reference.rst:12
 msgid "``--socket=x11``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:9
+#: ../../sandbox-permissions-reference.rst:12
 msgid "Show windows using X11"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:10
+#: ../../sandbox-permissions-reference.rst:13
 msgid "``--share=ipc``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:10
+#: ../../sandbox-permissions-reference.rst:13
 msgid "Share IPC namespace with the host [#f1]_"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:11
+#: ../../sandbox-permissions-reference.rst:14
+msgid "``--allow=bluetooth``"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:14
+msgid "Allow access to Bluetooth"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:15
 msgid "``--device=dri``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:11
+#: ../../sandbox-permissions-reference.rst:15
 msgid "OpenGL rendering"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:12
+#: ../../sandbox-permissions-reference.rst:16
 msgid "``--socket=wayland``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:12
+#: ../../sandbox-permissions-reference.rst:16
 msgid "Show windows using Wayland"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:13
+#: ../../sandbox-permissions-reference.rst:17
 msgid "``--socket=pulseaudio``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:13
+#: ../../sandbox-permissions-reference.rst:17
 msgid "Play sounds using PulseAudio"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:14
+#: ../../sandbox-permissions-reference.rst:18
 msgid "``--share=network``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:14
+#: ../../sandbox-permissions-reference.rst:18
 msgid "Access the network [#f2]_"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:15
+#: ../../sandbox-permissions-reference.rst:19
 msgid "``--talk-name=org.freedesktop.secrets``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:15
+#: ../../sandbox-permissions-reference.rst:19
 msgid "Talk to a named service on the session bus"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:16
+#: ../../sandbox-permissions-reference.rst:20
 msgid "``--system-talk-name=org.freedesktop.GeoClue2``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:16
+#: ../../sandbox-permissions-reference.rst:20
 msgid "Talk to a named service on the system bus"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:17
+#: ../../sandbox-permissions-reference.rst:21
 msgid "``--socket=system-bus``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:17
+#: ../../sandbox-permissions-reference.rst:21
 msgid "Unlimited access to all of D-Bus"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:21
+#: ../../sandbox-permissions-reference.rst:25
 msgid "Filesystem permissions"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:23
+#: ../../sandbox-permissions-reference.rst:27
 msgid ""
-"Each of the following permissions configure filesystem access, and should be"
-" added to ``--filesystem=``:"
+"Each of the following permissions configure filesystem access, and should"
+" be added to ``--filesystem=``:"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:26
+#: ../../sandbox-permissions-reference.rst:31
 msgid "``host``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:26
-msgid "Access all files"
+#: ../../sandbox-permissions-reference.rst:31
+msgid "Access all files [#f3]_"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:27
+#: ../../sandbox-permissions-reference.rst:32
 msgid "``home``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:27
+#: ../../sandbox-permissions-reference.rst:32
 msgid "Access the home directory"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:28
+#: ../../sandbox-permissions-reference.rst:33
 msgid "``/some/dir``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:28
+#: ../../sandbox-permissions-reference.rst:33
 msgid "Access an arbitrary path"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:29
+#: ../../sandbox-permissions-reference.rst:34
 msgid "``~/some/dir``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:29
+#: ../../sandbox-permissions-reference.rst:34
 msgid "Access an arbitrary path relative to the home directory"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:30
+#: ../../sandbox-permissions-reference.rst:35
 msgid "``xdg-desktop``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:30
+#: ../../sandbox-permissions-reference.rst:35
 msgid "Access the XDG desktop directory"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:31
+#: ../../sandbox-permissions-reference.rst:36
 msgid "``xdg-documents``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:31
+#: ../../sandbox-permissions-reference.rst:36
 msgid "Access the XDG documents directory"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:32
+#: ../../sandbox-permissions-reference.rst:37
 msgid "``xdg-download``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:32
+#: ../../sandbox-permissions-reference.rst:37
 msgid "Access the XDG download directory"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:33
+#: ../../sandbox-permissions-reference.rst:38
 msgid "``xdg-music``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:33
+#: ../../sandbox-permissions-reference.rst:38
 msgid "Access the XDG music directory"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:34
+#: ../../sandbox-permissions-reference.rst:39
 msgid "``xdg-pictures``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:34
+#: ../../sandbox-permissions-reference.rst:39
 msgid "Access the XDG pictures directory"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:35
+#: ../../sandbox-permissions-reference.rst:40
 msgid "``xdg-public-share``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:35
+#: ../../sandbox-permissions-reference.rst:40
 msgid "Access the XDG public directory"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:36
+#: ../../sandbox-permissions-reference.rst:41
 msgid "``xdg-videos``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:36
+#: ../../sandbox-permissions-reference.rst:41
 msgid "Access the XDG videos directory"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:37
+#: ../../sandbox-permissions-reference.rst:42
 msgid "``xdg-templates``"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:37
+#: ../../sandbox-permissions-reference.rst:42
 msgid "Access the XDG templates directory"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:40
-msgid ""
-"Paths can be added to all the above filesystem options. For example, "
-"``--filesystem=xdg-documents/path``. The following permission options can "
-"also be added:"
-msgstr ""
-
-#: ../../sandbox-permissions-reference.rst:42
-msgid "``:ro`` - read-only access"
+#: ../../sandbox-permissions-reference.rst:43
+msgid "``xdg-config``"
 msgstr ""
 
 #: ../../sandbox-permissions-reference.rst:43
-msgid "``:rw`` - read/write access (this is the default)"
+msgid "Access the XDG config directory"
 msgstr ""
 
 #: ../../sandbox-permissions-reference.rst:44
+msgid "``xdg-cache``"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:44
+msgid "Access the XDG cache directory"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:45
+msgid "``xdg-data``"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:45
+msgid "Access the XDG data directory"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:46
+msgid "``xdg-run/path``"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:46
+msgid ""
+"Access subdirectories of the XDG runtime directory (where path is any "
+"subdirectory)"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:49
+msgid ""
+"Paths can be added to all the above filesystem options. For example, "
+"``--filesystem=xdg-documents/path``. The following permission options can"
+" also be added:"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:53
+msgid "``:ro`` - read-only access"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:54
+msgid "``:rw`` - read/write access (this is the default)"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:55
 msgid ""
 "``:create`` - read/write access, and create the directory if it doesn't "
 "exist"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:47
+#: ../../sandbox-permissions-reference.rst:58
 msgid "Footnotes"
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:48
+#: ../../sandbox-permissions-reference.rst:59
 msgid ""
 "This is not necessarily required, but without it the X11 shared memory "
 "extension will not work, which is very bad for X11 performance."
 msgstr ""
 
-#: ../../sandbox-permissions-reference.rst:49
+#: ../../sandbox-permissions-reference.rst:61
 msgid ""
-"Giving network access also grants access to all host services listening on "
-"abstract Unix sockets (due to how network namespaces work), and these have "
-"no permission checks. This unfortunately affects e.g. the X server and the "
-"session bus which listens to abstract sockets by default. A secure "
-"distribution should disable these and just use regular sockets."
+"Giving network access also grants access to all host services listening "
+"on abstract Unix sockets (due to how network namespaces work), and these "
+"have no permission checks. This unfortunately affects e.g. the X server "
+"and the session bus which listens to abstract sockets by default. A "
+"secure distribution should disable these and just use regular sockets."
 msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:66
+msgid "Except for the blacklisted paths mentioned in :doc:`sandbox-permissions`."
+msgstr ""
+
+#~ msgid "Sandbox Permissions"
+#~ msgstr ""
+
+#~ msgid "Access all files"
+#~ msgstr ""
+
