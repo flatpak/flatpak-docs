@@ -1,7 +1,7 @@
 # Flatpak docs
 # Copyright (C) 2021, Flatpak Team
 # This file is distributed under the same license as the Flatpak package.
-# Markus Richter <semanticdesign@mailbox.org>, 2021.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021.
 #
 msgid ""
 msgstr ""
