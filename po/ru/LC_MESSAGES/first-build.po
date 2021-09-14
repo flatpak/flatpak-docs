@@ -46,8 +46,8 @@ msgid ""
 msgstr ""
 "Чтобы узнать больше, вы должны следовать `руководству по установке на "
 "flatpak.org <http://flatpak.org/setup/>`_. Вам также необходимо "
-"установить ``flatpak-builder``, который обычно доступен из того же "
-"репозитория, что и пакет ``flatpak``. "
+"установить «flatpak-builder», который обычно доступен из того же "
+"репозитория, что и пакет «flatpak». "
 
 #: ../../first-build.rst:15
 msgid "1. Install a runtime and the matching SDK"
@@ -265,5 +265,5 @@ msgstr ""
 
 #: ../../first-build.rst:140
 msgid "This runs the app, so that it prints 'Hello world, from a sandbox'."
-msgstr "Это запускает приложение, и оно печатает ``Hello world, from sandbox``."
+msgstr "Это запускает приложение, и оно печатает «Hello world, from sandbox»."
 
