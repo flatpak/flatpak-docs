@@ -1,0 +1,193 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../tips-and-tricks.rst:2
+msgid "Tips and Tricks"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:4
+msgid "This page explains a few useful features of the Flatpak CLI."
+msgstr ""
+
+#: ../../tips-and-tricks.rst:8
+msgid "Testing an app with a different runtime"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:10
+msgid ""
+"You can (for testing) run an application with a different runtime than it"
+" typically uses.  For instance, to run stable gedit with the latest "
+"unstable gnome runtime you can do::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:16
+msgid ""
+"You can also use a completely different runtime (but same version "
+"number)::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:20
+msgid ""
+"If you just want to use the sdk instead of the platform like the above, a"
+" better approach is to use ``-d``."
+msgstr ""
+
+#: ../../tips-and-tricks.rst:25
+msgid ""
+"Running against a runtime with a completely different ABI is undefined "
+"and unsupported behavior."
+msgstr ""
+
+#: ../../tips-and-tricks.rst:29
+msgid "Downgrading"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:31
+msgid ""
+"It is possible to downgrade an installed application (or runtime) to an "
+"older build."
+msgstr ""
+
+#: ../../tips-and-tricks.rst:34
+msgid "First you look for the commit you are interested in::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:38
+msgid "Then you deploy the commit::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:44
+msgid ""
+"If you have Flatpak 1.5.0 or later, you can also prevent the app from "
+"being included in updates (either manual or automatic)::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:51
+msgid "Bisecting regressions in application builds"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:53
+msgid ""
+"In case the newest builds of an application introduce regressions, you "
+"can use ``flatpak-bisect`` to discover which commit introduced the "
+"regression. It works just like ``git bisect``."
+msgstr ""
+
+#: ../../tips-and-tricks.rst:57
+msgid ""
+"In case your distribution doesn't install the ``flatpak-bisect`` utility,"
+" you can find it distributed alongside the Flatpak source code, in "
+"https://github.com/flatpak/flatpak/blob/master/scripts/flatpak-bisect"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:61
+msgid "First you update the application and get its history::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:65
+msgid "Then, you should set the current commit as the first bad commit::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:69
+msgid ""
+"Now you need to find the hash of the first known good commit. For that, "
+"you can see the build history by running::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:74
+msgid "To start bisecting, checkout the first known good commit you find::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:78
+msgid ""
+"After setting the bad commit and the first known good commit, you can "
+"launch the application to verify if the current commit in the bisecting "
+"session is a good or a bad one."
+msgstr ""
+
+#: ../../tips-and-tricks.rst:82
+msgid "To mark a commit as good or bad, run::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:86
+msgid "Or::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:90
+msgid "``flatpak-bisect`` will inform you when the first bad commit is found."
+msgstr ""
+
+#: ../../tips-and-tricks.rst:93
+msgid "Adding a custom installation"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:95
+msgid ""
+"By default Flatpak installs apps system-wide, and can also be made to "
+"install per-user with the ``--user`` option accepted by most commands. A "
+"third option is to set up a custom installation, which could be stored on"
+" an external hard drive."
+msgstr ""
+
+#: ../../tips-and-tricks.rst:100
+msgid "First ensure that the config directory exists::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:104
+msgid "Then open a file in that directory as root::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:108
+msgid "And write something like this::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:115
+msgid ""
+"See `flatpak-installation(5) <http://docs.flatpak.org/en/latest/flatpak-"
+"command-reference.html#flatpak-installation>`_ for the full format "
+"specification. Replace the path with the actual path you want to use. You"
+" can use ``df`` to see mounted file systems and ``mkdir`` to create a "
+"``flatpak`` directory so the path specified by ``Path=`` exists."
+msgstr ""
+
+#: ../../tips-and-tricks.rst:121
+msgid "Then you can add a remote using a command like::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:125
+msgid "And install to it with::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:131
+msgid ""
+"If your custom installation is the only one with the remote you're "
+"installing from, ``--installation`` can be omitted."
+msgstr ""
+
+#: ../../tips-and-tricks.rst:134
+msgid "And run apps from it with::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:140
+msgid ""
+"If your custom installation is the only one with the app you're running, "
+"``--installation`` can be omitted."
+msgstr ""
+

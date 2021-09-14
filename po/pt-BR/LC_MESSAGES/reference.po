@@ -1,0 +1,30 @@
+# Brazilian Portuguese translation for reference
+# Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2019.
+# Marvin Silc <marvinsilc@tuta.io>, 2020. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version:  Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2020-11-20 02:55-0500\n"
+"Last-Translator: Marvin Silc <marvinsilc@tuta.io>\n"
+"Language: pt_BR\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../reference.rst:2
+msgid "Reference Documentation"
+msgstr "Documentação de referência"
+
+#: ../../reference.rst:4
+#, fuzzy
+msgid "Reference documentation for flatpak, flatpak-builder and libflatpak."
+msgstr "Documentação de referência para Flatpak and flatpak-builder"
+

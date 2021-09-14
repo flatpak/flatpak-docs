@@ -1,0 +1,246 @@
+# Brazilian Portuguese translation for dependencies
+# Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2019.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2020. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version:  Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2020-03-20 02:53-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language: pt_BR\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../dependencies.rst:2
+msgid "Dependencies"
+msgstr "Dependências"
+
+#: ../../dependencies.rst:4
+msgid ""
+"Flatpak provides a number of different options for how applications can "
+"depend on other software. When setting out to build an application with "
+"Flatpak for the first time, it is therefore necessary to decide how "
+"application dependencies will be organized."
+msgstr ""
+"O Flatpak fornece várias opções diferentes de como os aplicativos podem "
+"depender de outro software. Ao se preparar para criar um aplicativo com o"
+" Flatpak pela primeira vez, é necessário decidir como as dependências do "
+"aplicativo serão organizadas."
+
+#: ../../dependencies.rst:9
+msgid ""
+"This page outlines what the options are, and provides guidance on when to"
+" use each one."
+msgstr ""
+"Esta página descreve quais são as opções e fornece orientações sobre "
+"quando usar cada uma."
+
+#: ../../dependencies.rst:13
+msgid "Runtimes"
+msgstr "Runtimes"
+
+#: ../../dependencies.rst:15
+msgid ""
+"As was described in :doc:`basic-concepts`, runtimes provide basic "
+"dependencies that can be used by applications. They also provide the "
+"environment that applications run in. Flatpak requires each application "
+"to specify a runtime. Therefore, one of the first decisions you need to "
+"make when building an application with Flatpak, is which runtime it will "
+"use."
+msgstr ""
+"Como foi descrito em :doc:`basic-concepts`, os runtimes fornecem "
+"dependências básicas que podem ser usadas pelos aplicativos. Eles também "
+"fornecem o ambiente em que os aplicativos são executados. O Flatpak "
+"requer que cada aplicativo especifique um tunrime. Portanto, uma das "
+"primeiras decisões que você precisa tomar ao criar um aplicativo com o "
+"Flatpak é qual runtime será usado."
+
+#: ../../dependencies.rst:21
+msgid ""
+"An overview of the runtimes that are available can be found in the :doc"
+":`available-runtimes` page. There are deliberately only a small number of"
+" runtimes to choose from. Typically, runtimes are picked on the basis of "
+"which dependencies an application requires. If a runtime exists that "
+"provides libraries that you plan on using, this is usually the correct "
+"runtime to use!"
+msgstr ""
+"Uma visão geral dos runtimes disponíveis pode ser encontrada na página "
+":doc:`available-runtimes`. Deliberadamente, há apenas um pequeno número "
+"de runtimes para escolher. Normalmente, os runtimes são escolhidos com "
+"base nas dependências requeridas por um aplicativo. Se existe um runtime "
+"que fornece bibliotecas que você planeja usar, esse geralmente é o "
+"runtime correto a ser usado!"
+
+#: ../../dependencies.rst:29
+msgid ""
+"Runtimes require regular maintenance, and application developers should "
+"generally not consider creating their own."
+msgstr ""
+"Os runtimes exigem manutenção regular e os desenvolvedores de aplicativos"
+" geralmente não devem considerar criar seus próprios."
+
+#: ../../dependencies.rst:32
+msgid ""
+"Runtimes are automatically installed for users when they install an "
+"application, and build tools can also automatically install them for you "
+"(``flatpak-builder``'s ``--install-deps-from`` option is useful for "
+"this). However, if you do need to manually install your chosen runtime, "
+"this can be done in the same way as installing an application, with the "
+"``flatpak install`` command. For example, the command to install the "
+"GNOME 3.26 runtime is::"
+msgstr ""
+"Os runtimes são instalados automaticamente para os usuários quando eles "
+"instalam um aplicativo, e as ferramentas de compilação também podem "
+"instalá-los automaticamente para você (a opção ``--install-deps-from`` do"
+" ``flatpak-builder`` é útil para isso). No entanto, se você precisar "
+"instalar manualmente o runtime escolhido, isso poderá ser feito da mesma "
+"maneira que a instalação de um aplicativo, com o comando ``flatpak "
+"install``. Por exemplo, o comando para instalar o runtime do GNOME 3.26 "
+"é::"
+
+#: ../../dependencies.rst:43
+msgid "Bundling"
+msgstr "Empacotamento"
+
+#: ../../dependencies.rst:45
+msgid ""
+"One of the key advantages of Flatpak is that it allows application "
+"authors to bundle whatever libraries or dependencies that they want. This"
+" means that developers aren't constrained by which libraries are "
+"available through Linux distributions."
+msgstr ""
+"Uma das principais vantagens do Flatpak é que ele permite que os autores "
+"do aplicativo agrupem as bibliotecas ou dependências que desejarem. Isso "
+"significa que os desenvolvedores não são limitados pelas bibliotecas "
+"disponíveis nas distribuições Linux."
+
+#: ../../dependencies.rst:50
+msgid ""
+"When it comes to building an application for the first time, you will "
+"need to decide which dependencies to bundle. This can include:"
+msgstr ""
+"Quando se trata de criar um aplicativo pela primeira vez, você precisa "
+"decidir quais dependências pretende agrupar. Isso pode incluir:"
+
+#: ../../dependencies.rst:53
+msgid "libraries that aren't in your chosen runtime"
+msgstr "bibliotecas que não estão no runtime escolhido"
+
+#: ../../dependencies.rst:54
+msgid "different versions of libraries that are in your chosen runtime"
+msgstr "diferentes versões de bibliotecas que estão no runtime escolhido"
+
+#: ../../dependencies.rst:55
+msgid "patched versions of libraries"
+msgstr "versões corrigidas (com patches) de bibliotecas"
+
+#: ../../dependencies.rst:56
+msgid "data or other resources that form part of the application"
+msgstr "dados ou outros recursos que fazem parte do aplicativo"
+
+#: ../../dependencies.rst:58
+msgid ""
+"As will be seen, bundled dependencies can be automatically downloaded as "
+"part of the build process. It is also possible to apply patches and "
+"perform other transformations."
+msgstr ""
+"Como será visto, as dependências agrupadas podem ser baixadas "
+"automaticamente como parte do processo de compilação. Também é possível "
+"aplicar patches e executar outras transformações."
+
+#: ../../dependencies.rst:62
+msgid ""
+"While bundling is very powerful and flexible, it also places a greater "
+"maintenance burden on the application developer. Therefore, while it is "
+"possible to bundle as much as you would like, it is generally recommended"
+" to try and keep the number of bundled modules as low as possible. If a "
+"dependency is available as part of a runtime, it is generally better to "
+"use that version rather than bundle it yourself."
+msgstr ""
+"Embora o empacotamento seja muito poderoso e flexível, também impõe uma "
+"carga maior de manutenção ao desenvolvedor do aplicativo. Portanto, "
+"embora seja possível agrupar o quanto você quiser, geralmente é "
+"recomendável tentar manter o número de módulos agrupados o mais baixo "
+"possível. Se uma dependência estiver disponível como parte de um runtime,"
+" geralmente é melhor usar essa versão do que agrupá-la você mesmo."
+
+#: ../../dependencies.rst:69
+msgid ""
+"The specifics of how to bundle libraries is covered in the "
+":doc:`manifests` section."
+msgstr ""
+"Os detalhes de como agrupar bibliotecas são abordados na seção "
+":doc:`manifests`."
+
+#: ../../dependencies.rst:73
+msgid "Base apps"
+msgstr "Aplicativos base"
+
+#: ../../dependencies.rst:75
+#, fuzzy
+msgid ""
+"Runtimes and bundling are the two main ways in which dependencies are "
+"handled with Flatpak. They allow applications to rely on stable "
+"collections of dependencies on the one hand, and to have flexibility and "
+"control on the other."
+msgstr ""
+"Runtimes e empacotamento são as duas principais maneiras pelas quais as "
+"dependências são tratadas com o Flatpak. Por um lado, elas permitem que "
+"os aplicativos confiem em coleções estáveis de dependências e, por outro,"
+" tenham flexibilidade e controle."
+
+#: ../../dependencies.rst:79
+msgid ""
+"However, in some cases, dependencies come as part of a bigger framework "
+"or toolkit, which doesn't fit into a runtime but which is also cumbersome"
+" to manually bundle as a series of individual modules. This is where "
+"*base apps* come in."
+msgstr ""
+"No entanto, em alguns casos, as dependências são parte de um framework ou"
+" kit de ferramentas maior, que não se encaixa em um runtime, mas também é"
+" complicado de agrupar manualmente como uma série de módulos individuais."
+" É aqui que entram os aplicativos básicos."
+
+#: ../../dependencies.rst:84
+#, fuzzy
+msgid ""
+"Base apps contain collections of bundled dependencies which can then be "
+"bundled as part of an application. They don't get rebuilt as part of the "
+"build process, which makes building faster (particularly when bundling "
+"large dependencies). And because each base app is only built once, it is "
+"guaranteed to be identical wherever it is used, so it will only be saved "
+"once on disk."
+msgstr ""
+"Os aplicativos básicos contêm coleções de dependências empacotadas que "
+"podem ser agrupadas como parte de um aplicativo. Elas não são "
+"recompiladas como parte do processo de compilação, o que torna a "
+"compilação mais rápida (principalmente ao agrupar grandes dependências). "
+"E como cada aplicativo base é compilado apenas uma vez, é garantido que "
+"seja idêntico onde quer que seja usado, portanto, ele será salvo apenas "
+"uma vez no disco."
+
+#: ../../dependencies.rst:90
+msgid ""
+"Base apps are a relatively specialized concept and only some applications"
+" need to use them (the most common base app is used for `Electron "
+"applications <https://github.com/flathub/io.atom.electron.BaseApp>`_). "
+"However, if your application uses a large, complex or specialized "
+"framework, it is a good idea to check for available base apps before you "
+"start building."
+msgstr ""
+"Aplicativos base são um conceito relativamente especializado e apenas "
+"alguns aplicativos precisam usá-los (o aplicativo base mais comum é usado"
+" para aplicativos `Electron "
+"<https://github.com/flathub/io.atom.electron.BaseApp>`_). No entanto, se "
+"o seu aplicativo usar um framework grande, complexo ou especializado, é "
+"uma boa ideia verificar os aplicativos básicos disponíveis antes de "
+"começar a compilá-lo."
+

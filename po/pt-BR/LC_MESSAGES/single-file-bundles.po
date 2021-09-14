@@ -1,0 +1,83 @@
+# Brazilian Portuguese translation for single-file-bundles
+# Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2019.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2020. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version:  Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2020-03-20 03:25-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language: pt_BR\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../single-file-bundles.rst:2
+msgid "Single-file bundles"
+msgstr "Pacotes de arquivo único"
+
+#: ../../single-file-bundles.rst:4
+msgid ""
+"Hosting a repository is the preferred way to distribute an application, "
+"since repositories allow applications to be updated. However, sometimes "
+"it can be appropriate to use a single-file bundle. These can be used to "
+"provide a direct download of the application, to distribute applications "
+"using removable media, or to send them as email attachments."
+msgstr ""
+"Hospedar um repositório é a maneira preferida de distribuir um "
+"aplicativo, pois os repositórios permitem que os aplicativos sejam "
+"atualizados. No entanto, às vezes pode ser apropriado usar um pacote "
+"configurável de arquivo único. Eles podem ser usados para fornecer um "
+"download direto do aplicativo, distribuir aplicativos usando mídia "
+"removível ou enviá-los como anexos de e-mail."
+
+#: ../../single-file-bundles.rst:12
+msgid ""
+"Since single-file bundles don't include dependencies or AppStream data, "
+"the preferred way of distributing applications offline is with the "
+"create-usb command; see :doc:`usb-drives`."
+msgstr ""
+
+#: ../../single-file-bundles.rst:16
+msgid ""
+"Flatpak allows single file bundles to be created with the ``build-"
+"bundle`` and ``build-import-bundle`` commands, which allow an application"
+" in a repository to be converted into a bundle and back again::"
+msgstr ""
+"O Flatpak permite que pacotes de arquivo único sejam criados com os "
+"comandos ``build-bundle`` e ``build-import-bundle``, que permitem que um "
+"aplicativo em um repositório seja convertido em um pacote e seu caminho "
+"inverso::"
+
+#: ../../single-file-bundles.rst:23
+msgid ""
+"For example, to create a bundle named `dictionary.flatpak` containing the"
+" GNOME dictionary app from the repository at ~/repositories/apps, run::"
+msgstr ""
+"Por exemplo, para criar um pacote chamado `dictionary.flatpak` que contém"
+" o aplicativo de Dicionário GNOME do repositório em ~/repositories/ apps,"
+" execute::"
+
+#: ../../single-file-bundles.rst:28
+msgid "You can also set a runtime repo in the bundle::"
+msgstr "Você também pode definir um repositório de execução no pacote::"
+
+#: ../../single-file-bundles.rst:32
+msgid "To import the bundle into a repository on another machine, run::"
+msgstr "Para importar o pacote para um repositório em outra máquina, execute::"
+
+#: ../../single-file-bundles.rst:36
+msgid ""
+"Alternatively, bundles can also be installed directly without importing "
+"them::"
+msgstr ""
+"Como alternativa, os pacotes também podem ser instalados diretamente sem "
+"importá-los::"
+

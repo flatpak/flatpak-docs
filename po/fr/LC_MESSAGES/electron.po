@@ -1,0 +1,274 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../electron.rst:2
+msgid "Electron"
+msgstr ""
+
+#: ../../electron.rst:4
+msgid ""
+"Due to the nature of Electron, building Electron applications as Flatpaks"
+" requires a few extra steps compared with other applications. Thankfully,"
+" several tools and resources are available which make this much easier."
+msgstr ""
+
+#: ../../electron.rst:8
+msgid ""
+"This guide provides information on how building Electron applications "
+"differs from other applications. It also includes information on the "
+"tooling for building Electron applications and how to use it."
+msgstr ""
+
+#: ../../electron.rst:12
+msgid ""
+"The guide walks through the `manifest file <https://github.com/flathub"
+"/electron-sample-app/blob/master/flatpak/org.flathub.electron-sample-"
+"app.yml>`_ of the `sample Electron Flatpak application "
+"<https://github.com/flathub/electron-sample-app>`_. Before you start, it "
+"is a good idea to take a look at this, either online or by downloading "
+"the application."
+msgstr ""
+
+#: ../../electron.rst:21
+msgid "Building the sample application"
+msgstr ""
+
+#: ../../electron.rst:23
+msgid ""
+"While it isn't strictly necessary, you might want to try building and "
+"running the sample application yourself."
+msgstr ""
+
+#: ../../electron.rst:26
+msgid ""
+"To get setup for the build, download or clone the sample app from GitHub,"
+" and navigate to the ``/flatpak`` directory in the terminal. You must "
+"also install the Electron base app and the Node.js SDK extension::"
+msgstr ""
+
+#: ../../electron.rst:33
+msgid "Then you can run the build::"
+msgstr ""
+
+#: ../../electron.rst:37
+msgid "Finally, the application can be run with::"
+msgstr ""
+
+#: ../../electron.rst:42
+msgid "Basic configuration"
+msgstr ""
+
+#: ../../electron.rst:44
+msgid ""
+"The first part of the sample application's manifest specifies the "
+"application's ID. It also configures the runtime and SDK:"
+msgstr ""
+
+#: ../../electron.rst:54
+msgid ""
+"The Freedesktop runtime is generally the best runtime to use with "
+"Electron applications, since it is the most minimal runtime, and other "
+"dependencies will be specific to Electron itself."
+msgstr ""
+
+#: ../../electron.rst:59
+msgid "The Electron base app"
+msgstr ""
+
+#: ../../electron.rst:61
+msgid ""
+"Next, the manifest specifies that the Electron base app should be used, "
+"by specifying the ``base`` and ``base-version`` properties in the "
+"application manifest:"
+msgstr ""
+
+#: ../../electron.rst:70
+msgid ""
+"Base apps are described in :doc:`dependencies`.  Using the Electron base "
+"app is much faster and more convenient than manually building Electron "
+"dependencies. It also has the advantage of reducing the amount of "
+"duplication on users' machines, since it means that Electron is only "
+"saved once on disk."
+msgstr ""
+
+#: ../../electron.rst:76
+msgid "The Node.js SDK extension"
+msgstr ""
+
+#: ../../electron.rst:78
+msgid ""
+"In order to build Electron-based apps, you need Node.js available at "
+"build time. Flathub provides Node.js LTS versions as extensions for the "
+"SDK, so you can install one of them and add it in your apps' manifest:"
+msgstr ""
+
+#: ../../electron.rst:87
+msgid "Enable the extension by adding it to ``PATH``:"
+msgstr ""
+
+#: ../../electron.rst:94
+msgid ""
+"Note that the extension name (last portion of reverse-dns notation, "
+"``node14`` in this example) must be the same in ``sdk-extensions`` and "
+"``append-path``."
+msgstr ""
+
+#: ../../electron.rst:98
+msgid "Command"
+msgstr ""
+
+#: ../../electron.rst:100
+msgid ""
+"The ``command`` property indicates that a script called ``run.sh`` is to "
+"be executed to run the application. This will be explained in further "
+"detail later."
+msgstr ""
+
+#: ../../electron.rst:109
+msgid "Sandbox permissions"
+msgstr ""
+
+#: ../../electron.rst:111
+msgid ""
+"The standard guidelines on sandbox permissions apply to Electron "
+"applications. However, Electron does not currently support Wayland, so "
+"for display access, only X11 should be used. The sample app also "
+"configures pulseaudio for sound and enables network access:"
+msgstr ""
+
+#: ../../electron.rst:125
+msgid "Build options"
+msgstr ""
+
+#: ../../electron.rst:127
+msgid ""
+"These build options aren't strictly necessary, but can be useful if "
+"something goes wrong. ``env`` allows setting an array of environment "
+"variables, in this case we set ``NPM_CONFIG_LOGLEVEL`` to ``info`` so "
+"that ``npm`` gives us more detailed error messages."
+msgstr ""
+
+#: ../../electron.rst:143
+msgid "The application module"
+msgstr ""
+
+#: ../../electron.rst:145
+msgid ""
+"The final section of the manifest defines how the application module "
+"should be built. This is where some of the additional logic for Electron "
+"and Node.js can be found."
+msgstr ""
+
+#: ../../electron.rst:149
+msgid ""
+"By default, ``flatpak-builder`` doesn't allow build tools to access the "
+"network. This means that tools which rely on downloading sources will not"
+" work. Therefore, Node.js packages must be downloaded prior to running "
+"the build. Setting the  ``electron_config_cache`` environment variable "
+"means that these will be found when it comes to the build."
+msgstr ""
+
+#: ../../electron.rst:155
+msgid ""
+"The next part of the manifest describes how the application should be "
+"built. The simple buildsystem option is used, which allows a sequence of "
+"commands to be specified, which are used for the build. The download "
+"location and hash of the application are also specified."
+msgstr ""
+
+#: ../../electron.rst:178
+msgid "Bundling NPM packages"
+msgstr ""
+
+#: ../../electron.rst:180
+msgid "The next line is how NPM modules get bundled as part of Flatpaks:"
+msgstr ""
+
+#: ../../electron.rst:186
+msgid ""
+"Since even simple Node.js applications depend on dozens of packages, it "
+"would be impractical to specify all of them as part of a manifest file. A"
+" `Python script <https://github.com/flatpak/flatpak-builder-"
+"tools/tree/master/node>`__ has therefore been developed to download "
+"Node.js packages with NPM or Yarn and include them in an application's "
+"sources."
+msgstr ""
+
+#: ../../electron.rst:192
+msgid ""
+"The Python script requires a ``package-lock.json`` (or ``yarn.lock``) "
+"file. This file contains information about the packages that an "
+"application depends on, and can be generated by running ``npm install "
+"--package-lock-only`` from an application's root directory. The script is"
+" then run as follows::"
+msgstr ""
+
+#: ../../electron.rst:199
+msgid ""
+"This generates the manifest JSON needed to build the NPM/Yarn packages "
+"for the application, which are outputted to a file called ``generated-"
+"sources.json``. The content of this file can be copied to the "
+"application's manifest but, because it is often very long, it is often "
+"best to link to it from the main manifest, which is done by adding "
+"``generated-source.json`` as a line in the manifest section, as seen "
+"above."
+msgstr ""
+
+#: ../../electron.rst:207
+msgid "Launching the app"
+msgstr ""
+
+#: ../../electron.rst:209
+msgid ""
+"The Electron app is run through a simple script. This can be given any "
+"name but must be specified in the manifest's ``\"command\":`` property. "
+"See below a sample wrapper for launching app:"
+msgstr ""
+
+#: ../../electron.rst:221
+msgid "Build commands"
+msgstr ""
+
+#: ../../electron.rst:223
+msgid ""
+"Last but not least, since the simple build option is being used, a list "
+"of build commands must be provided. As can be seen, ``npm`` is run with "
+"the ``npm_config_offline=true`` environment variable, installing "
+"dependencies from packages that have already been cached. These are "
+"copied to ``/app/main/``. Finally the ``run.sh`` script is installed to "
+"``/app/bin/`` so that it will be on ``$PATH``:"
+msgstr ""
+
+#: ../../electron.rst:245
+msgid ""
+"Note that if the application you are trying to package contains a "
+"``build`` block in ``package.json`` with instructions for Linux, this can"
+" cause ``electron-builder`` to try to fetch additional binaries at build-"
+"time (Even if `--dir` option is used). The following example shows a "
+"configuration that will try to download AppImage binaries:"
+msgstr ""
+
+#: ../../electron.rst:255
+msgid ""
+"The preferred way of fixing this, is not a patch, but a build-time edit "
+"using ``jq``. The following command will replace ``\"target\": "
+"\"AppImage\"`` with ``\"target\": \"dir\"``:"
+msgstr ""
+

@@ -1,0 +1,213 @@
+# Brazilian Portuguese translation for basic-concepts
+# Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2019.
+# Marvin Silc <marvinsilc@tuta.io>, 2020. #zanata
+# Rafael Fontenelle <rafaelff@gnome.org>, 2020. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version:  Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2020-11-20 02:54-0500\n"
+"Last-Translator: Marvin Silc <marvinsilc@tuta.io>\n"
+"Language: pt_BR\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../basic-concepts.rst:2
+msgid "Basic concepts"
+msgstr "Conceitos básicos"
+
+#: ../../basic-concepts.rst:4
+msgid ""
+"Flatpak can be understood through a small number of key concepts. It is "
+"useful to be familiar with these before learning about how to use Flatpak"
+" from the command line, or using it to build applications."
+msgstr ""
+"O Flatpak pode ser entendido através de um pequeno número de conceitos-"
+"chave. É útil estar familiarizado com isso antes de aprender sobre como "
+"usar o Flatpak na linha de comando ou usá-lo para criar aplicativos."
+
+#: ../../basic-concepts.rst:11
+msgid "Runtimes"
+msgstr "Runtimes"
+
+#: ../../basic-concepts.rst:13
+msgid ""
+"Runtimes provide the basic dependencies that are used by applications. "
+"Each application must be built against a runtime, and this runtime must "
+"be installed on a host system in order for the application to run "
+"(Flatpak can automatically install the runtime required by an "
+"application). Multiple different runtimes can be installed at the same "
+"time, including different versions of the same runtime."
+msgstr ""
+"Os runtimes fornecem as dependências básicas usadas pelos aplicativos. "
+"Cada aplicativo deve ser construído em um runtime, o qual deve ser "
+"instalado em um sistema host para que o aplicativo seja executado (o "
+"Flatpak pode instalar automaticamente o runtime exigido por um "
+"aplicativo). Vários runtimes diferentes podem ser instalados ao mesmo "
+"tempo, incluindo versões diferentes do mesmo runtime."
+
+#: ../../basic-concepts.rst:20
+msgid ""
+"Runtimes are distribution agnostic and do not depend on particular "
+"distribution versions. This means that they provide a stable, cross-"
+"distribution base for applications, and allow applications to continue to"
+" work irrespective of operating system updates."
+msgstr ""
+"Os runtimes não sem vinculam à distribuição e independem de versões "
+"específicas de distribuição. Isso significa que eles fornecem uma base "
+"estável entre diferentes distribuições para aplicativos e permitem que os"
+" aplicativos continuem funcionando independentemente das atualizações do "
+"sistema operacional."
+
+#: ../../basic-concepts.rst:26
+msgid "Bundled libraries"
+msgstr "Bibliotecas empacotadas"
+
+#: ../../basic-concepts.rst:28
+msgid ""
+"If an application requires any dependencies that aren't in its runtime, "
+"they can be bundled as part of the application. This gives application "
+"developers flexibility regarding the dependencies that they use, "
+"including using:"
+msgstr ""
+"Se um aplicativo exigir dependências que não estejam em seu runtime, elas"
+" poderão ser agrupadas como parte do aplicativo. Isso oferece aos "
+"desenvolvedores de aplicativos flexibilidade em relação às dependências "
+"que eles usam, incluindo o uso de:"
+
+#: ../../basic-concepts.rst:32
+#, fuzzy
+msgid "libraries that aren't available in a runtime"
+msgstr "Bibliotecas não estão disponíveis na distribuição ou execução"
+
+#: ../../basic-concepts.rst:33
+#, fuzzy
+msgid "different versions of libraries from the ones that are in a runtime"
+msgstr ""
+"Versões diferentes das bibliotecas daqueles que estão na distribuição ou "
+"execução"
+
+#: ../../basic-concepts.rst:34
+msgid "patched versions of libraries"
+msgstr "versões corrigidas (com patch) das bibliotecas"
+
+#: ../../basic-concepts.rst:37
+msgid "Sandboxes"
+msgstr "Sandboxes"
+
+#: ../../basic-concepts.rst:39
+msgid ""
+"With Flatpak, each application is built and run in an isolated "
+"environment, which is called the 'sandbox'. Each sandbox contains an "
+"application and its runtime. By default, the application can only access "
+"the contents of its sandbox. Access to user files, network, graphics "
+"sockets, subsystems on the bus and devices have to be explicitly granted."
+" Access to other things, such as other processes, is deliberately not "
+"possible."
+msgstr ""
+"Com o Flatpak, cada aplicativo é criado e executado em um ambiente "
+"isolado, chamado de “sandbox”. Cada sandbox contém um aplicativo e seu "
+"runtime. Por padrão, o aplicativo pode acessar apenas o conteúdo de seu "
+"sandbox. O acesso a arquivos do usuário, rede, soquetes gráficos, "
+"subsistemas no barramento e dispositivos deve ser concedido "
+"explicitamente. O acesso a outras coisas, como outros processos, é "
+"deliberadamente não possível."
+
+#: ../../basic-concepts.rst:46
+msgid ""
+"By necessity, some resources that are inside the sandbox need to be "
+"exposed outside, to be used by the host system. These are known as "
+"'exports', since they are files that are exported out of the sandbox, and"
+" include things like the application's ``.desktop`` file and icon."
+msgstr ""
+"Por necessidade, alguns recursos que estão dentro do sandbox precisam ser"
+" expostos do lado de fora, para serem utilizados pelo sistema host. Eles "
+"são conhecidos como “exportações”, pois são arquivos exportados do "
+"sandbox e incluem itens como o arquivo ``.desktop`` e ícone do "
+"aplicativo."
+
+#: ../../basic-concepts.rst:52
+msgid "Portals"
+msgstr "Portais"
+
+#: ../../basic-concepts.rst:54
+msgid ""
+"Portals are a mechanism through which applications can interact with the "
+"host environment from within a sandbox. They give the ability to interact"
+" with data, files and services without the need to add sandbox "
+"permissions."
+msgstr ""
+"Portais são um mecanismo através do qual os aplicativos podem interagir "
+"com o ambiente host a partir de um sandbox. Eles oferecem a capacidade de"
+" interagir com dados, arquivos e serviços sem a necessidade de adicionar "
+"permissões de sandbox."
+
+#: ../../basic-concepts.rst:58
+msgid ""
+"Examples of capabilities that can be accessed through portals include "
+"opening files through a file chooser dialog, or printing. Interface "
+"toolkits can implement transparent support for portals, so access to "
+"resources outside of the sandbox will work securely and out of the box."
+msgstr ""
+"Exemplos de recursos que podem ser acessados através de portais incluem a"
+" abertura de arquivos por meio de um diálogo de seleção de arquivos ou "
+"impressão. Os kits de ferramentas de interface podem implementar suporte "
+"transparente a portais, para que o acesso a recursos fora do sandbox "
+"funcione de maneira segura e imediata."
+
+#: ../../basic-concepts.rst:63
+msgid "More information about portals can be found in :doc:`sandbox-permissions`."
+msgstr ""
+"Mais informações sobre portais podem ser encontradas em :doc:`sandbox-"
+"permissions`."
+
+#: ../../basic-concepts.rst:66
+msgid "Repositories"
+msgstr "Repositórios"
+
+#: ../../basic-concepts.rst:68
+msgid ""
+"Flatpak applications and runtimes are typically stored and published "
+"using repositories, which behave very similarly to Git repositories. A "
+"Flatpak repository can contain a single object or multiple objects, and "
+"each object is versioned, which allows upgrading and even downgrading."
+msgstr ""
+"Normalmente, os aplicativos e os runtimes do Flatpak são armazenados e "
+"publicados usando repositórios, que se comportam de maneira muito "
+"semelhante aos repositórios Git. Um repositório Flatpak pode conter um "
+"único objeto ou vários objetos, e cada objeto é versionado, o que permite"
+" a atualização e até a desatualização."
+
+#: ../../basic-concepts.rst:73
+msgid ""
+"Each system which is using Flatpak can be configured to access any number"
+" of remote repositories. Once a system has been configured to access a "
+"'remote', the remote repository's content can be inspected and searched, "
+"and it can be used as the source of applications and runtimes."
+msgstr ""
+"Cada sistema que está usando o Flatpak pode ser configurado para acessar "
+"qualquer número de repositórios remotos. Depois que um sistema é "
+"configurado para acessar um “remoto”, o conteúdo do repositório remoto "
+"pode ser inspecionado e pesquisado, e pode ser usado como fonte de "
+"aplicativos e runtimes."
+
+#: ../../basic-concepts.rst:78
+msgid ""
+"When an update is performed, new versions of installed applications and "
+"runtimes are downloaded from the relevant remotes. Like with Git, only "
+"the difference between versions is downloaded, which makes the process "
+"very efficient."
+msgstr ""
+"Quando uma atualização é executada, novas versões dos aplicativos e "
+"runtimes instalados são baixados dos remotos relevantes. Como no Git, "
+"apenas a diferença entre as versões é baixada, o que torna o processo "
+"muito eficiente."
+

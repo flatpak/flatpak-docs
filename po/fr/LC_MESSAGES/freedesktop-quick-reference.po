@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../freedesktop-quick-reference.rst:2
+msgid "Freedesktop quick reference"
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:4
+msgid ""
+"In order to ensure interoperability, flatpak adheres strictly to a number"
+" of freedesktop standards and practices. This page describes the basic "
+"conventions that should be followed when building a flatpak app."
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:9
+msgid "Icons"
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:11
+msgid ""
+"Application icons can be in either png or svg format, must use the "
+"application's appid as a prefix and be placed in "
+"``/app/share/icons/hicolor/$size/apps/``"
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:15
+#: ../../freedesktop-quick-reference.rst:49
+#: ../../freedesktop-quick-reference.rst:73
+msgid "Example:"
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:21
+msgid ""
+"If interested, you can read the full spec `here "
+"<https://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-"
+"latest.html>`__"
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:26
+msgid "Desktop files"
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:28
+msgid ""
+"Desktop files are used by desktop environments in order to identify and "
+"display available applications to the user, they contain information "
+"about how to launch the application, its icon and categories among "
+"others."
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:33
+msgid ""
+"A minimal desktop file needs at least the application's *Name*, *Exec* "
+"command, *Type* and *Icon*:"
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:44
+msgid ""
+"Your desktop file should be prefixed with your application's appid and "
+"placed in ``/app/share/applications/``, you should use ``desktop-file-"
+"validate`` to check your file for errors before including it."
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:55
+msgid ""
+"You can find more information `here "
+"<https://wiki.archlinux.org/index.php/desktop_entries>`__. If interested,"
+" you can read also the full spec `here <https://standards.freedesktop.org"
+"/desktop-entry-spec/latest/>`__."
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:61
+msgid "Appdata files"
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:63
+msgid ""
+"Appdata files are used by application stores (eg. kde discover, gnome "
+"software) in order to display metadata about your application, such as a "
+"description, screenshots, display changelogs on update, among other "
+"things."
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:68
+msgid ""
+"your desktop file should be prefixed with your application's appid and "
+"placed in ``/app/share/metainfo/``, you should also use ``appstream-util "
+"validate-relax`` to check your file for errors before including it."
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:79
+msgid ""
+"If interested, you can read the full spec `here "
+"<https://www.freedesktop.org/software/appstream/docs/>`__"
+msgstr ""
+

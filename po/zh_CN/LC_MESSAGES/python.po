@@ -1,0 +1,133 @@
+# PikachuHy <pikachuhy@163.com>, 2018. #zanata
+# ZiqiangXu <ziqiang_xu@yeah.net>, 2018. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version:  Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2018-11-03 02:05-0400\n"
+"Last-Translator: PikachuHy <pikachuhy@163.com>\n"
+"Language: zh_Hans_CN\n"
+"Language-Team: Chinese (Simplified, China)\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../python.rst:2
+msgid "Python"
+msgstr "Python"
+
+#: ../../python.rst:4
+msgid ""
+"Python applications that use supported build systems like Meson, CMake, "
+"or Autotools can be built using the standard method. However, many Python"
+" applications use custom install scripts or are expected to be installed "
+"through Setuptools and ``pip``."
+msgstr ""
+"使用受支持的构建系统（如Meson，CMake或Autotools）的Python应用程序可以使用标准方法构建。 "
+"但是，许多Python应用程序使用自定义安装脚本，或者希望通过Setuptools和``pip`` 安装。"
+
+#: ../../python.rst:9
+msgid ""
+"For these cases, ``flatpak-builder`` provides the ``simple`` buildsystem."
+" Rather than automating the build process, ``simple`` accepts a ``build-"
+"commands`` array of strings, which are executed in sequence."
+msgstr ""
+"对于这些情况，``flatpak-builder`` 提供了 ``simple`` 构建系统。和自动化构建过程不同， ``simple`` "
+"接受一个 ``build`-commands`` 的字符数组，将按顺序执行。"
+
+#: ../../python.rst:13
+#, fuzzy
+msgid ""
+"For example, the following YAML makes building the popular requests "
+"module rather straightforward:"
+msgstr "举个例子，用如下的JSON构建流行的模块非常简单："
+
+#: ../../python.rst:27
+msgid ""
+"Here, ``build-commands`` is an array containing the commands required to "
+"build and install the module. As can be seen, in this case ``pip`` is run"
+" to do this. Here, the ``--prefix=/app`` option is important, because "
+"otherwise ``pip`` would try to install the module under ``/usr/`` which, "
+"because ``/usr/`` is mounted read-only inside the sandbox, would fail."
+msgstr ""
+"这里，``build-commands`` 是一个数组，包含了构建和安装模块的命令。可以看到，在这种情况下 ``pip`` "
+"被用来安装模块。``--prefix=/app`` 选项很重要，因为原本 ``pip`` 会尝试将模块安装到 ``/usr/`` 目录下，又由于 "
+"``/usr/`` 在沙箱中是挂载为只读的，安装会失败。"
+
+#: ../../python.rst:33
+msgid ""
+"Note that ``--no-deps`` is only used for the purpose of the example - "
+"since the requests module has its own dependencies, the build would fail."
+" If multiple dependencies are required, it is better to install them "
+"using the method in the next section, instead."
+msgstr "注意 ``--no-deps`` 仅仅用于实例——一旦依赖的模块有它自己的依赖，构建就会失败。如果存在许多依赖，最好是用下一章节的方法来安装。"
+
+#: ../../python.rst:39
+msgid "Building multiple python dependencies"
+msgstr "构建多个python依赖"
+
+#: ../../python.rst:41
+msgid ""
+"Even though the example above installs, it won't actually work. This is "
+"because the requests module has a number of dependencies that haven't "
+"been installed:"
+msgstr "尽管上述的例子被安装了，它实际上也不能正常运行。正式因为它有大量的依赖没有安装："
+
+#: ../../python.rst:44
+msgid "certifi"
+msgstr "certifi"
+
+#: ../../python.rst:45
+msgid "chardet"
+msgstr "chardet"
+
+#: ../../python.rst:46
+msgid "idna"
+msgstr "idna"
+
+#: ../../python.rst:47
+msgid "urllib3"
+msgstr "urllib3"
+
+#: ../../python.rst:49
+#, fuzzy
+msgid ""
+"Four dependencies aren't very many, and could be installed using the "
+"``simple`` method described above. However, anything more complex than "
+"this would quickly become tedious."
+msgstr "四个依赖不是很多，可以用上述的 ``simple`` 的方法来安装。但是，任何比这个复杂的很快都会变得冗长。"
+
+#: ../../python.rst:53
+msgid ""
+"For these cases, `flatpak-pip-generator <https://github.com/flatpak"
+"/flatpak-builder-tools/tree/master/pip>`_ can be used to generate the "
+"necessary manifest JSON. This is a Python script that takes a package "
+"name and uses ``pip`` to identify its dependencies, along with their "
+"tarball URLs and hashes."
+msgstr ""
+"在这种情况下，`flatpak-pip-generator <https://github.com/flatpak/flatpak-"
+"builder-tools/tree/master/pip>`_ "
+"可以用来产生必要的清单JSON。这是一个Python脚本，可以获取包名和使用``pip``来确定依赖，以及依赖包的压缩包URL和hashes值。"
+
+#: ../../python.rst:59
+msgid "Using ``flatpak-pip-generator`` is as simple as running::"
+msgstr "使用 ``flatpak-pip-generator`` 是简单的::"
+
+#: ../../python.rst:63
+msgid ""
+"Or if you have a ``requirements.txt`` file you can generate modules for "
+"every listed package::"
+msgstr ""
+
+#: ../../python.rst:68
+#, fuzzy
+msgid ""
+"This will output a file called ``python3-requests.json``, containing the "
+"necessary manifest JSON, which can then be included in your application's"
+" manifest file. Even if your manifest uses YAML, you can still include "
+"JSON like this::"
+msgstr "这将输出一个名为 ``python3-requests.json`` 的文件，包含了必要的清单JSON，这个JSON可以放在应用的清单文件里。"
+

@@ -1,0 +1,342 @@
+# PikachuHy <pikachuhy@163.com>, 2018. #zanata
+# ZiqiangXu <ziqiang_xu@yeah.net>, 2018. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version:  Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2018-11-03 12:59-0400\n"
+"Last-Translator: PikachuHy <pikachuhy@163.com>\n"
+"Language: zh_Hans_CN\n"
+"Language-Team: Chinese (Simplified, China)\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../electron.rst:2
+msgid "Electron"
+msgstr "Electron"
+
+#: ../../electron.rst:4
+msgid ""
+"Due to the nature of Electron, building Electron applications as Flatpaks"
+" requires a few extra steps compared with other applications. Thankfully,"
+" several tools and resources are available which make this much easier."
+msgstr "由于Electron的性质，与其他应用相比，将Electron应用构建为Flatpak应用需要一些额外的步骤。值得庆幸的是，有几种工具和资源可以使这些步骤更容易。"
+
+#: ../../electron.rst:8
+msgid ""
+"This guide provides information on how building Electron applications "
+"differs from other applications. It also includes information on the "
+"tooling for building Electron applications and how to use it."
+msgstr "本教程提供有关如何构建Electron应用程序与其他应用程序不同的信息。 它还包括有关构建Electron应用程序的工具以及如何使用它的信息。"
+
+#: ../../electron.rst:12
+#, fuzzy
+msgid ""
+"The guide walks through the `manifest file <https://github.com/flathub"
+"/electron-sample-app/blob/master/flatpak/org.flathub.electron-sample-"
+"app.yml>`_ of the `sample Electron Flatpak application "
+"<https://github.com/flathub/electron-sample-app>`_. Before you start, it "
+"is a good idea to take a look at this, either online or by downloading "
+"the application."
+msgstr ""
+"该指南介绍了 `清单文件 <https://github.com/flathub/electron-sample-"
+"app/blob/master/flatpak/org.flathub.electron-sample-app.json>`_  ，来自 "
+"`示例Electron Flatpak应用程序 <https://github.com/flathub/electron-sample-"
+"app>`_  。在开始之前，最好先在线查看或下载该应用程序。"
+
+#: ../../electron.rst:21
+msgid "Building the sample application"
+msgstr "构建示例应用程序"
+
+#: ../../electron.rst:23
+msgid ""
+"While it isn't strictly necessary, you might want to try building and "
+"running the sample application yourself."
+msgstr "虽然并非绝对必要，但最好自己尝试构建和运行示例应用程序。"
+
+#: ../../electron.rst:26
+#, fuzzy
+msgid ""
+"To get setup for the build, download or clone the sample app from GitHub,"
+" and navigate to the ``/flatpak`` directory in the terminal. You must "
+"also install the Electron base app and the Node.js SDK extension::"
+msgstr ""
+"要获取构建的设置，请从GitHub下载或克隆示例应用程序，然后导航到终端中的 ``/flatpak`` 目录。 "
+"您还必须安装Electron基础应用程序："
+
+#: ../../electron.rst:33
+msgid "Then you can run the build::"
+msgstr "然后运行构建命令："
+
+#: ../../electron.rst:37
+msgid "Finally, the application can be run with::"
+msgstr "最后，运行应用："
+
+#: ../../electron.rst:42
+msgid "Basic configuration"
+msgstr "基本配置"
+
+#: ../../electron.rst:44
+msgid ""
+"The first part of the sample application's manifest specifies the "
+"application's ID. It also configures the runtime and SDK:"
+msgstr "示例应用清单文件的第一部分指定了应用ID、runtime和SDK："
+
+#: ../../electron.rst:54
+msgid ""
+"The Freedesktop runtime is generally the best runtime to use with "
+"Electron applications, since it is the most minimal runtime, and other "
+"dependencies will be specific to Electron itself."
+msgstr "Freedesktop运行时通常是与Electron应用程序一起使用的最佳运行时，因为它是最小的运行时，其他依赖项将特定于Electron本身。"
+
+#: ../../electron.rst:59
+msgid "The Electron base app"
+msgstr "Electron base应用"
+
+#: ../../electron.rst:61
+#, fuzzy
+msgid ""
+"Next, the manifest specifies that the Electron base app should be used, "
+"by specifying the ``base`` and ``base-version`` properties in the "
+"application manifest:"
+msgstr "然后，清单文件通过 ``base`` 和 ``base-version`` 属性指明了Electron要使用的的base app::"
+
+#: ../../electron.rst:70
+#, fuzzy
+msgid ""
+"Base apps are described in :doc:`dependencies`.  Using the Electron base "
+"app is much faster and more convenient than manually building Electron "
+"dependencies. It also has the advantage of reducing the amount of "
+"duplication on users' machines, since it means that Electron is only "
+"saved once on disk."
+msgstr ""
+"base app在 :doc:`building-basics` 有介绍。使用Electron的base "
+"app比手动构建Electron和它的依赖要方便和快速得多。也有在用户的机器上减少大量副本文件的优点，因为这意味着Electron在磁盘上只保存一份。"
+
+#: ../../electron.rst:76
+msgid "The Node.js SDK extension"
+msgstr ""
+
+#: ../../electron.rst:78
+msgid ""
+"In order to build Electron-based apps, you need Node.js available at "
+"build time. Flathub provides Node.js LTS versions as extensions for the "
+"SDK, so you can install one of them and add it in your apps' manifest:"
+msgstr ""
+
+#: ../../electron.rst:87
+msgid "Enable the extension by adding it to ``PATH``:"
+msgstr ""
+
+#: ../../electron.rst:94
+msgid ""
+"Note that the extension name (last portion of reverse-dns notation, "
+"``node14`` in this example) must be the same in ``sdk-extensions`` and "
+"``append-path``."
+msgstr ""
+
+#: ../../electron.rst:98
+msgid "Command"
+msgstr "命令"
+
+#: ../../electron.rst:100
+msgid ""
+"The ``command`` property indicates that a script called ``run.sh`` is to "
+"be executed to run the application. This will be explained in further "
+"detail later."
+msgstr "这个 ``command`` 表明执行一个名为 ``run.sh`` 的脚本用来运行这个应用。这会在后续详细介绍。"
+
+#: ../../electron.rst:109
+msgid "Sandbox permissions"
+msgstr "沙箱权限"
+
+#: ../../electron.rst:111
+msgid ""
+"The standard guidelines on sandbox permissions apply to Electron "
+"applications. However, Electron does not currently support Wayland, so "
+"for display access, only X11 should be used. The sample app also "
+"configures pulseaudio for sound and enables network access:"
+msgstr "标准的指南可以用于Electron应用。可是Electron还不支持Wayland，所以只能使用X11进行显示。示例的应用也为声音配置了pulseaudio和开启了网络的访问："
+
+#: ../../electron.rst:125
+msgid "Build options"
+msgstr "构建选项"
+
+#: ../../electron.rst:127
+msgid ""
+"These build options aren't strictly necessary, but can be useful if "
+"something goes wrong. ``env`` allows setting an array of environment "
+"variables, in this case we set ``NPM_CONFIG_LOGLEVEL`` to ``info`` so "
+"that ``npm`` gives us more detailed error messages."
+msgstr ""
+"构建选项不是必要的，但是在发生一些错误的时候很有用。 ``env`` 允许设置一个环境变量数组，这时将 "
+"``NPM_CONFIG_LOGLEVEL`` 设置为 ``info`` 可以让 ``npm`` 给我们更多关于错误的详情。"
+
+#: ../../electron.rst:143
+msgid "The application module"
+msgstr "应用模块"
+
+#: ../../electron.rst:145
+msgid ""
+"The final section of the manifest defines how the application module "
+"should be built. This is where some of the additional logic for Electron "
+"and Node.js can be found."
+msgstr "清单文件的最后一部分是定义应用模块如何构建。可以找到一些Electron和Node.js的一些附加逻辑。"
+
+#: ../../electron.rst:149
+msgid ""
+"By default, ``flatpak-builder`` doesn't allow build tools to access the "
+"network. This means that tools which rely on downloading sources will not"
+" work. Therefore, Node.js packages must be downloaded prior to running "
+"the build. Setting the  ``electron_config_cache`` environment variable "
+"means that these will be found when it comes to the build."
+msgstr ""
+"``flatpak-builder`` "
+"默认不能访问网络。这意味着依赖于下载资源的工具无法工作。因此，Node.js包必须在构建之前提前下载好。设置环境变量 "
+"``electron_config_cache`` 表明这些包会在构建的时候被找到。"
+
+#: ../../electron.rst:155
+msgid ""
+"The next part of the manifest describes how the application should be "
+"built. The simple buildsystem option is used, which allows a sequence of "
+"commands to be specified, which are used for the build. The download "
+"location and hash of the application are also specified."
+msgstr "清单文件的下一部分描述了怎样构建应用。使用了简单构建系统的选项，允许指定一系列命令来构建。下载地址和应用的hash也会进行指定。"
+
+#: ../../electron.rst:178
+msgid "Bundling NPM packages"
+msgstr "绑定NPM包"
+
+#: ../../electron.rst:180
+msgid "The next line is how NPM modules get bundled as part of Flatpaks:"
+msgstr "下一行是NPM模块如何作为flatpak的一部分进行绑定："
+
+#: ../../electron.rst:186
+#, fuzzy
+msgid ""
+"Since even simple Node.js applications depend on dozens of packages, it "
+"would be impractical to specify all of them as part of a manifest file. A"
+" `Python script <https://github.com/flatpak/flatpak-builder-"
+"tools/tree/master/node>`__ has therefore been developed to download "
+"Node.js packages with NPM or Yarn and include them in an application's "
+"sources."
+msgstr ""
+"即使是非常简单的Node.js应用都依赖几十个包，在一个清单文件中去指定它们是不切实际的因此 一个 `Python脚本 \n"
+"  <https://github.com/flatpak/flatpak-builder-tools/tree/master/npm>`_ "
+"被开发出来，使用NPM下载Node.js包并将他们包含在应用源码里。"
+
+#: ../../electron.rst:192
+#, fuzzy
+msgid ""
+"The Python script requires a ``package-lock.json`` (or ``yarn.lock``) "
+"file. This file contains information about the packages that an "
+"application depends on, and can be generated by running ``npm install "
+"--package-lock-only`` from an application's root directory. The script is"
+" then run as follows::"
+msgstr ""
+"这个Python NPM脚本需要一个 ``package-lock.json`` 文件。它包含了应用依赖包的信息，可以在应用根目录运行 ``npm"
+" install --package-lock-only`` 生成（示例包含了一个 ``package-lock.json`` "
+"供参考）。下面运行这个脚本::"
+
+#: ../../electron.rst:199
+#, fuzzy
+msgid ""
+"This generates the manifest JSON needed to build the NPM/Yarn packages "
+"for the application, which are outputted to a file called ``generated-"
+"sources.json``. The content of this file can be copied to the "
+"application's manifest but, because it is often very long, it is often "
+"best to link to it from the main manifest, which is done by adding "
+"``generated-source.json`` as a line in the manifest section, as seen "
+"above."
+msgstr ""
+"这生成了为应用构建NPM包的JSON清单（译者注：区别于应用的清单文件），输出一个名为 ``generated-sources.json`` "
+"的文件。这个文件的内容可以拷贝到应用的清单文件中，但是因为通常它非常长，最好是从主要的清单链接它。如上所示，可以在清单文件中添加一行 "
+"``generated-source.json`` 来实现链接。"
+
+#: ../../electron.rst:207
+msgid "Launching the app"
+msgstr "启动应用"
+
+#: ../../electron.rst:209
+#, fuzzy
+msgid ""
+"The Electron app is run through a simple script. This can be given any "
+"name but must be specified in the manifest's ``\"command\":`` property. "
+"See below a sample wrapper for launching app:"
+msgstr "Electron应用通过一个简单的脚本文件运行。可以用任何名字，但是必须在清单文件中 ``“command\":`` 属性指明。"
+
+#: ../../electron.rst:221
+msgid "Build commands"
+msgstr "构建命令"
+
+#: ../../electron.rst:223
+#, fuzzy
+msgid ""
+"Last but not least, since the simple build option is being used, a list "
+"of build commands must be provided. As can be seen, ``npm`` is run with "
+"the ``npm_config_offline=true`` environment variable, installing "
+"dependencies from packages that have already been cached. These are "
+"copied to ``/app/main/``. Finally the ``run.sh`` script is installed to "
+"``/app/bin/`` so that it will be on ``$PATH``:"
+msgstr ""
+"最后但不是不重要，因为使用了简单构建选项，必须要提供一个构建命令列表。可以看到，``npm`` 以 ``--offline`` "
+"选项运行，使用的包已经缓存好了。这些被拷贝到了 ``/app/main/`` 。最后 ``run.sh`` 脚本安装到了 "
+"``/app/bin/`` ，所以最后它会在 ``$PATH`` ："
+
+#: ../../electron.rst:245
+msgid ""
+"Note that if the application you are trying to package contains a "
+"``build`` block in ``package.json`` with instructions for Linux, this can"
+" cause ``electron-builder`` to try to fetch additional binaries at build-"
+"time (Even if `--dir` option is used). The following example shows a "
+"configuration that will try to download AppImage binaries:"
+msgstr ""
+
+#: ../../electron.rst:255
+msgid ""
+"The preferred way of fixing this, is not a patch, but a build-time edit "
+"using ``jq``. The following command will replace ``\"target\": "
+"\"AppImage\"`` with ``\"target\": \"dir\"``:"
+msgstr ""
+
+#~ msgid ""
+#~ "Note that this base app is for "
+#~ "projects using Electron 1.x.x, the most"
+#~ " common version at the time of "
+#~ "writing. Electron 2.x.x applications should"
+#~ " use ``org.electronjs.Electron2.BaseApp`` instead."
+#~ msgstr ""
+#~ "注意这个项目的base "
+#~ "app是使用的Electron1.x.x，是写这个项目时最通用的版本。Electron2.x.x的应用应该用 "
+#~ "``org.electronjs.Electron2.Baseapp`` 代替。"
+
+#~ msgid "Building Node.js"
+#~ msgstr "构建Node.js"
+
+#~ msgid ""
+#~ "The next part of the manifest is"
+#~ " the modules list. The Electron base"
+#~ " app does not include Node.js, so "
+#~ "it is necessary to build Node.js "
+#~ "as a module.  This tutorial builds "
+#~ "Node.js 8.11.1, as this version works"
+#~ " with most projects at the time "
+#~ "of writing, but make sure to use"
+#~ " whichever version is best for your"
+#~ " project."
+#~ msgstr ""
+#~ "清单文件的下一部分是模块列表。Electron base "
+#~ "app不包含Node.js，所以有必要将Node.js作为一个模块进行构建。教程构建了Node.js "
+#~ "8.11.1，在写这个教程的时候这个版本可以在大多数项目上正常工作，但是请确保使用在你的项目工作得最好的版本。"
+
+#~ msgid ""
+#~ "Here, the cleanup step isn't strictly"
+#~ " necessary. However, removing documentation "
+#~ "helps to reduce final disk size of"
+#~ " the bundle."
+#~ msgstr "清理步骤也不是必要的。但是，移除文档可以帮助我们减少绑定所占用的空间。"
+

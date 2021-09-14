@@ -1,0 +1,47 @@
+# Brazilian Portuguese translation for getting-started
+# Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2019.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2020. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"PO-Revision-Date: 2020-03-20 02:56-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"Generated-By: Babel 2.7.0\n"
+"X-Generator: Zanata 4.6.2\n"
+
+#: ../../getting-started.rst:2
+msgid "Getting Started"
+msgstr "Primeiros passos"
+
+#: ../../getting-started.rst:4
+msgid ""
+"This section includes an introduction to basic Flatpak concepts, a guide on "
+"how to use the Flatpak command line interface, and a tutorial for building a"
+" simple application."
+msgstr ""
+"Esta seção inclui uma introdução aos conceitos básicos do Flatpak, um guia "
+"sobre como usar a interface da linha de comandos do Flatpak e um tutorial "
+"para criar um aplicativo simples."
+
+#: ../../getting-started.rst:6
+msgid ""
+"To complete this section, Flatpak should have been installed and the Flathub"
+" repository should have been enabled. The Flatpak website provides "
+"`instructions for how to do this with a range of distributions "
+"<https://flatpak.org/setup/>`_."
+msgstr ""
+"Para concluir esta seção, o Flatpak deveria ter sido instalado e o "
+"repositório Flathub deveria ter sido ativado. O site da Flatpak fornece "
+"`instruções sobre como fazer isso com uma variedade de distribuições "
+"<https://flatpak.org/setup/>`_."

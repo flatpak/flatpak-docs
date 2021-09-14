@@ -1,0 +1,517 @@
+# Brazilian Portuguese translation for sandbox-permissions
+# Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2019.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2020. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version:  Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2020-03-20 03:02-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language: pt_BR\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../sandbox-permissions.rst:2
+msgid "Sandbox Permissions"
+msgstr "Permissões de sandbox"
+
+#: ../../sandbox-permissions.rst:4
+msgid ""
+"One of Flatpak's main goals is to increase the security of desktop "
+"systems by isolating applications from one another. This is achieved "
+"using sandboxing and means that, by default, applications that are run "
+"with Flatpak have extremely limited access to the host environment. This "
+"includes:"
+msgstr ""
+"Um dos principais objetivos do Flatpak é aumentar a segurança dos "
+"sistemas de desktop, isolando os aplicativos uns dos outros. Isso é "
+"alcançado usando sandbox e significa que, por padrão, os aplicativos "
+"executados com o Flatpak têm acesso extremamente limitado ao ambiente "
+"host. Isso inclui:"
+
+#: ../../sandbox-permissions.rst:9
+#, fuzzy
+msgid ""
+"No access to any host files except the runtime, the app, "
+"``~/.var/app/$FLATPAK_ID``, and ``$XDG_RUNTIME_DIR/app/$FLATPAK_ID``. "
+"Only the latter two being writable."
+msgstr ""
+"Sem acesso a nenhum arquivo host, exceto o runtime, o aplicativo e "
+"``~/.var/app/$APPID``. Apenas o último deles pode ser escrito."
+
+#: ../../sandbox-permissions.rst:12
+msgid "No access to the network."
+msgstr "Sem acesso à rede."
+
+#: ../../sandbox-permissions.rst:13
+msgid "No access to any device nodes (apart from ``/dev/null``, etc)."
+msgstr "Sem acesso a nenhum nó do dispositivo (além de ``/dev/null``, etc)."
+
+#: ../../sandbox-permissions.rst:14
+msgid "No access to processes outside the sandbox."
+msgstr "Sem acesso a processos fora do sandbox."
+
+#: ../../sandbox-permissions.rst:15
+msgid ""
+"Limited syscalls.  For instance, apps can't use nonstandard network "
+"socket types or ptrace other processes."
+msgstr ""
+"Chamadas de sistema limitados. Por exemplo, os aplicativos não podem usar"
+" tipos de soquete de rede fora do padrão ou rastrear outros processos."
+
+#: ../../sandbox-permissions.rst:17
+msgid ""
+"Limited access to the session D-Bus instance - an app can only own its "
+"own name on the bus."
+msgstr ""
+"Acesso limitado à instância do D-Bus da sessão – um aplicativo pode "
+"possuir apenas seu próprio nome no barramento."
+
+#: ../../sandbox-permissions.rst:19
+msgid "No access to host services like X11, system D-Bus, or PulseAudio."
+msgstr "Sem acesso a serviços de host como X11, D-Bus do sistema ou PulseAudio."
+
+#: ../../sandbox-permissions.rst:21
+msgid ""
+"Most applications will need access to some of these resources in order to"
+" be useful. This is primarily done during the finishing build stage, "
+"which can be configured through the ``finish-args`` section of the "
+"manifest file (see :doc:`manifests`)."
+msgstr ""
+"A maioria dos aplicativos precisará acessar alguns desses recursos para "
+"ser útil. Isso é feito principalmente durante o estágio de compilação de "
+"acabamento, que pode ser configurado através da seção ``finish-args`` do "
+"arquivo de manifesto (consulte :doc:`manifests`)."
+
+#: ../../sandbox-permissions.rst:27
+msgid "Portals"
+msgstr "Portais"
+
+#: ../../sandbox-permissions.rst:29
+#, fuzzy
+msgid ""
+"Portals have already been mentioned in :doc:`basic-concepts`. They are a "
+"framework for providing access to resources outside of the sandbox, "
+"including:"
+msgstr ""
+"Os portais já foram mencionados em :doc:`introduction`. Eles são um "
+"framework para fornecer acesso a recursos fora do sandbox, incluindo:"
+
+#: ../../sandbox-permissions.rst:32
+msgid "Opening files with a native file chooser dialog"
+msgstr "Abertura de arquivos com um diálogo nativo de seleção de arquivos"
+
+#: ../../sandbox-permissions.rst:33
+msgid "Opening URIs"
+msgstr "Abertura de URLs"
+
+#: ../../sandbox-permissions.rst:34
+msgid "Printing"
+msgstr "Impressão"
+
+#: ../../sandbox-permissions.rst:35
+msgid "Showing notifications"
+msgstr "Mostrar notificações"
+
+#: ../../sandbox-permissions.rst:36
+msgid "Taking screenshots"
+msgstr "Obtenção de capturas de tela"
+
+#: ../../sandbox-permissions.rst:37
+msgid ""
+"Inhibiting the user session from ending, suspending, idling or getting "
+"switched away"
+msgstr ""
+"Inibir que a sessão do usuário seja encerrada, suspensa, fique inativa ou"
+" seja trocada"
+
+#: ../../sandbox-permissions.rst:39
+msgid "Getting network status information"
+msgstr "Obtendo informações de status da rede"
+
+#: ../../sandbox-permissions.rst:41
+msgid ""
+"In many cases, portals use a system component to implicitly ask the user "
+"for permission before granting access to a particular resource. For "
+"example, in the case of opening a file, the user's selection of a file "
+"using the file chooser dialog is interpreted as implicitly granting the "
+"application access to whatever file is chosen."
+msgstr ""
+"Em muitos casos, portais usam um componente do sistema para pedir "
+"implicitamente permissão ao usuário antes de conceder acesso a um recurso"
+" específico. Por exemplo, no caso de abrir um arquivo, a seleção de um "
+"arquivo pelo usuário usando a caixa de diálogo do seletor de arquivos é "
+"interpretada como concedendo implicitamente ao aplicativo o acesso a "
+"qualquer arquivo escolhido."
+
+#: ../../sandbox-permissions.rst:47
+msgid ""
+"This approach enables applications to avoid having to configure blanket "
+"access to large amounts of data or services and gives users control over "
+"what their applications have access to."
+msgstr ""
+"Essa abordagem permite que os aplicativos evitem configurar o acesso "
+"geral a grandes quantidades de dados ou serviços e oferece aos usuários "
+"controle sobre o que seus aplicativos têm acesso."
+
+#: ../../sandbox-permissions.rst:51
+msgid ""
+"Interface toolkits like GTK3 and Qt5 implement transparent support for "
+"portals, meaning that applications don't need to do any additional work "
+"to use them (it is worth checking which portals each toolkit supports). "
+"Applications that aren't using a toolkit with support for portals can "
+"refer to the `xdg-desktop-portal API documentation "
+"<https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for "
+"information on how to use them."
+msgstr ""
+
+#: ../../sandbox-permissions.rst:60
+msgid "Permissions guidelines"
+msgstr "Diretrizes de permissões"
+
+#: ../../sandbox-permissions.rst:62
+msgid ""
+"While application developers have control over the sandbox permissions "
+"they wish to configure, good practice is encouraged and can be enforced. "
+"For example, the Flathub hosting service places requirements on which "
+"permissions can be used, and software on the host may warn users if "
+"certain permissions are used."
+msgstr ""
+"Embora os desenvolvedores de aplicativos tenham controle sobre as "
+"permissões do sandbox que desejam configurar, as boas práticas são "
+"incentivadas e podem ser aplicadas. Por exemplo, o serviço de hospedagem "
+"Flathub impõe requisitos nos quais as permissões podem ser usadas, e o "
+"software no host pode avisar os usuários se determinadas permissões forem"
+" usadas."
+
+#: ../../sandbox-permissions.rst:68
+msgid ""
+"The following guidelines describe which permissions can be freely used, "
+"which can be used on an as-needed basis, and which should be avoided."
+msgstr ""
+"As diretrizes a seguir descrevem quais permissões podem ser usadas "
+"livremente, quais podem ser usadas conforme a necessidade e quais devem "
+"ser evitadas."
+
+#: ../../sandbox-permissions.rst:72
+msgid "Standard permissions"
+msgstr "Permissões padrão"
+
+#: ../../sandbox-permissions.rst:74
+msgid ""
+"The following permissions provide access to basic resources that "
+"applications commonly require, and can therefore be freely used:"
+msgstr ""
+"As seguintes permissões fornecem acesso aos recursos básicos que os "
+"aplicativos geralmente exigem e, portanto, podem ser usados livremente:"
+
+#: ../../sandbox-permissions.rst:77
+msgid "``--share=network`` - access the network"
+msgstr "``--share=network`` – acessa a rede"
+
+#: ../../sandbox-permissions.rst:78
+msgid "``--socket=x11`` - show windows using X11"
+msgstr "``--socket=x11`` – mostra janelas usando X11"
+
+#: ../../sandbox-permissions.rst:79
+#, fuzzy
+msgid ""
+"``--socket=fallback-x11`` - show windows using X11, if Wayland is not "
+"available, overrides ``x11`` socket permission"
+msgstr ""
+"``--socket=fallback-x11`` – mostra janelas usando X11, se Wayland não "
+"estiver disponível"
+
+#: ../../sandbox-permissions.rst:81
+msgid "``--share=ipc`` - share IPC namespace with the host (necessary for X11)"
+msgstr ""
+"``--share=ipc`` – compartilha espaço de nome IPC com o host (necessário "
+"para X11)"
+
+#: ../../sandbox-permissions.rst:82
+msgid "``--socket=wayland`` - show windows with Wayland"
+msgstr "``--socket=wayland`` – mostra janelas com Wayland"
+
+#: ../../sandbox-permissions.rst:83
+msgid "``--device=dri`` - OpenGL rendering"
+msgstr "``--device=dri`` – renderização OpenGL"
+
+#: ../../sandbox-permissions.rst:84
+msgid "``--socket=pulseaudio`` - play sound with PulseAudio"
+msgstr "``--socket=pulseaudio`` – reproduz som com PulseAudio"
+
+#: ../../sandbox-permissions.rst:87
+msgid "D-Bus access"
+msgstr "Acesso a D-Bus"
+
+#: ../../sandbox-permissions.rst:89
+msgid ""
+"Access to the entire bus with ``--socket=system-bus`` or ``--socket"
+"=session-bus`` should be avoided, unless the application is a development"
+" tool."
+msgstr ""
+"O acesso a todo o barramento com ``--socket=system-bus`` ou ``--socket"
+"=session-bus`` deve ser evitado, a menos que o aplicativo seja uma "
+"ferramenta de desenvolvimento."
+
+#: ../../sandbox-permissions.rst:93
+msgid "**Ownership**"
+msgstr "**Propriedade**"
+
+#: ../../sandbox-permissions.rst:95
+msgid ""
+"Applications are automatically granted access to their own namespace. "
+"Ownership beyond this is typically unnecessary, although there are a "
+"small number of exceptions, such as using `MPRIS to provide media "
+"controls <https://www.freedesktop.org/wiki/Specifications/mpris-spec/>`_."
+msgstr ""
+"Os aplicativos recebem acesso automaticamente ao seu próprio espaço de "
+"nome. A propriedade além disso é normalmente desnecessária, embora haja "
+"um pequeno número de exceções, como o uso de `MPRIS para fornecer "
+"controles de mídia <https://www.freedesktop.org/wiki/Specifications"
+"/mpris-spec/>`_."
+
+#: ../../sandbox-permissions.rst:100
+msgid "**Talk**"
+msgstr "**Conversa**"
+
+#: ../../sandbox-permissions.rst:102
+msgid ""
+"Talk permissions can be freely used, although it is recommended to use "
+"the minimum required."
+msgstr ""
+
+#: ../../sandbox-permissions.rst:106
+msgid "Filesystem access"
+msgstr "Acesso ao sistema de arquivos"
+
+#: ../../sandbox-permissions.rst:108
+msgid ""
+"It is common for applications to require access to different parts of the"
+" host filesystem, and Flatpak provides a flexible set of options for "
+"this. Some examples include:"
+msgstr ""
+
+#: ../../sandbox-permissions.rst:112
+msgid ""
+"``--filesystem=host`` - access normal files on the host, not including "
+"host os or system internals described below"
+msgstr ""
+"``--filesystem=host`` – acessa arquivos normais no host, sem incluir o "
+"sistema operacional do host ou componetnes internos do sistema descritos "
+"abaixo"
+
+#: ../../sandbox-permissions.rst:114
+msgid "``--filesystem=home`` - access the user's home directory"
+msgstr "``--filesystem=home`` – acessa a pasta pessoal (home) do usuário"
+
+#: ../../sandbox-permissions.rst:115
+msgid "``--filesystem=/path/path`` - access specific paths"
+msgstr "``--filesystem=/caminho/caminho`` – acessa caminhos específicos"
+
+#: ../../sandbox-permissions.rst:116
+msgid "``--filesystem=xdg-download`` - access a specific XDG folder"
+msgstr "``--filesystem=xdg-download`` – acessa uma pasta XDG específica"
+
+#: ../../sandbox-permissions.rst:118
+#, fuzzy
+msgid ""
+"As a general rule, Filesystem access should be limited as much as "
+"possible. This includes:"
+msgstr ""
+"Como regra geral, o acesso ao sistema de arquivos deve ser limitado o "
+"máximo possível. Isso inclui o uso de:"
+
+#: ../../sandbox-permissions.rst:121
+msgid ""
+"Using portals as an alternative to blanket filesystem access, wherever "
+"possible."
+msgstr ""
+"Usar portais como uma alternativa ao acesso geral ao sistema de arquivos,"
+" sempre que possível"
+
+#: ../../sandbox-permissions.rst:123
+msgid "Using read-only access wherever possible, using the ``:ro`` option."
+msgstr "Usar acesso somente leitura sempre que possível, usando a opção ``:ro``."
+
+#: ../../sandbox-permissions.rst:124
+msgid ""
+"If some home directory access is absolutely required, using XDG directory"
+" access only."
+msgstr ""
+"Se for absolutamente necessário algum acesso à pasta pessoal do usuário, "
+"usar apenas o acesso ao diretório XDG."
+
+#: ../../sandbox-permissions.rst:127
+#, fuzzy
+msgid ""
+"The full list of available filesystem options can be found in the :doc"
+":`sandbox-permissions-reference`. Other filesystem access guidelines "
+"include:"
+msgstr ""
+"A lista completa das opções disponíveis do sistema de arquivos pode ser "
+"encontrada em :doc:`sandbox-permissions-reference`. Outras diretrizes de "
+"acesso ao sistema de arquivos incluem:"
+
+#: ../../sandbox-permissions.rst:131
+msgid ""
+"The ``--persist=path`` option can be used to map paths from the user's "
+"home directory into the sandbox filesystem. This makes it possible to "
+"avoid configuring access to the entire home directory, and can be useful "
+"for applications that hardcode file paths in ``~/``."
+msgstr ""
+"A opção ``--persist=path`` pode ser usada para mapear caminhos do "
+"diretório inicial do usuário para o sistema de arquivos sandbox. Isso "
+"torna possível evitar a configuração do acesso a todo o diretório pessoal"
+" e pode ser útil para aplicativos que codificam os caminhos do arquivo em"
+" ``~/``."
+
+#: ../../sandbox-permissions.rst:136
+msgid ""
+"If an application uses ``$TMPDIR`` to contain lock files you may want to "
+"add a wrapper script that sets it to "
+"``$XDG_RUNTIME_DIR/app/$FLATPAK_ID``."
+msgstr ""
+
+#: ../../sandbox-permissions.rst:138
+msgid ""
+"Retaining and sharing configuration with non-Flatpak installations is to "
+"be avoided."
+msgstr ""
+"Reter e compartilhar a configuração com instalações que não sejam do "
+"Flatpak deve ser evitado."
+
+#: ../../sandbox-permissions.rst:141
+msgid ""
+"As mentioned above the ``host`` option does not actually provide complete"
+" access to the host filesystem. The main rules are:"
+msgstr ""
+"Como mencionado acima, a opção ``host`` na verdade não fornece acesso "
+"completo ao sistema de arquivos host. As principais regras são:"
+
+#: ../../sandbox-permissions.rst:145
+msgid ""
+"These directories are blacklisted: ``/lib``, ``/lib32``, ``/lib64``, "
+"``/bin``, ``/sbin``, ``/usr``, ``/boot``, ``/root``, ``/tmp``, ``/etc``, "
+"``/app``, ``/run``, ``/proc``, ``/sys``, ``/dev``, ``/var``"
+msgstr ""
+"Esses diretórios estão na lista negra: ``/lib``, ``/lib32``, ``/lib64``, "
+"``/bin``, ``/sbin``, ``/usr``, ``/boot``, ``/root``, ``/tmp``, ``/etc``, "
+"``/app``, ``/run``, ``/proc``, ``/sys``, ``/dev``, ``/var``"
+
+#: ../../sandbox-permissions.rst:149
+msgid "Exceptions from the blacklist: ``/run/media``"
+msgstr "Exceções da lista de negra: ``/run/media``"
+
+#: ../../sandbox-permissions.rst:150
+msgid "These directories are mounted under ``/var/run/host``: ``/etc``, ``/usr``"
+msgstr "Esses diretórios são montados sob ``/var/run/host``: ``/etc``, ``/usr``"
+
+#: ../../sandbox-permissions.rst:152
+msgid ""
+"The reason many of the directories are blacklisted is because they "
+"already exist in the sandbox such as ``/usr`` or are not usable in the "
+"sandbox."
+msgstr ""
+"A razão pela qual muitos diretórios estão na lista negra é porque eles já"
+" existem no sandbox, como ``/usr`` ou não são usáves no sandbox."
+
+#: ../../sandbox-permissions.rst:157
+msgid "Device access"
+msgstr "Acesso a dispositivo"
+
+#: ../../sandbox-permissions.rst:159
+msgid ""
+"While not ideal, ``--device=all`` can be used to access devices like "
+"controllers or webcams."
+msgstr ""
+"Embora não seja o ideal, ``--device=all`` pode ser usado para acessar "
+"dispositivos como controladores ou webcams."
+
+#: ../../sandbox-permissions.rst:163
+msgid "dconf access"
+msgstr "Acesso a dconf"
+
+#: ../../sandbox-permissions.rst:165
+msgid ""
+"As of xdg-desktop-portal 1.1.0 and glib 2.60.5 (in the runtime) you do "
+"not need direct DConf access in most cases."
+msgstr ""
+
+#: ../../sandbox-permissions.rst:168
+msgid ""
+"As of now this glib version is included in "
+"``org.freedesktop.Platform//19.08`` and ``org.gnome.Platform//3.34`` and "
+"newer."
+msgstr ""
+
+#: ../../sandbox-permissions.rst:171
+msgid ""
+"If an application existed prior to these runtimes you can tell Flatpak "
+"(>= 1.3.4) to migrate the DConf settings on the host into the sandbox by "
+"adding ``--metadata=X-DConf=migrate-path=/org/example/foo/`` to ``finish-"
+"args``. The path must be similar to your app-id or it will not be allowed"
+" (case is ignored and ``_`` and ``-`` are treated equal)."
+msgstr ""
+
+#: ../../sandbox-permissions.rst:178
+msgid ""
+"If you are targeting older runtimes or require direct DConf access for "
+"other reasons you can use these permissions::"
+msgstr ""
+
+#: ../../sandbox-permissions.rst:186
+msgid "With those permissions glib will continue using dconf directly."
+msgstr ""
+
+#~ msgid ""
+#~ "Interface toolkits like GTK3 and Qt5 "
+#~ "implement transparent support for portals, "
+#~ "meaning that applications don't need to"
+#~ " any additional work to use them "
+#~ "(it is worth checking which portals "
+#~ "each toolkit supports). Applications that "
+#~ "aren't using a toolkit with support "
+#~ "for portals can refer to the "
+#~ "`xdg-desktop-portal API documentation "
+#~ "<https://flatpak.github.io/xdg-desktop-portal/portal-"
+#~ "docs.html>`_ for information on how to"
+#~ " use them."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Talk permissions can be freely used, "
+#~ "although it is recommended to use "
+#~ "the minumum required."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It is common for applications to "
+#~ "require access to different parts of "
+#~ "the host filesystem,and Flatpak provides "
+#~ "a flexible set of options for "
+#~ "this. Some examples include:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If an application uses ``$TMPDIR`` to"
+#~ " contain lock files or shared files"
+#~ " with other processes, you may want"
+#~ " to add ``--env=TMPDIR=/var/tmp``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Until a sandbox-compatible backend is"
+#~ " available, applications that require "
+#~ "access to dconf can do so with "
+#~ "the following options::"
+#~ msgstr ""
+
