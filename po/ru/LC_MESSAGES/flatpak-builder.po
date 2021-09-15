@@ -79,6 +79,9 @@ msgid ""
 "You can put more than one application in the same repository by using the"
 " same ``--repo`` path for multiple invocations of ``flatpak-builder``."
 msgstr ""
+"Вы можете разместить более одного приложения в одном репозитории, "
+"используя один и тот же путь ``--repo`` для многократных вызовов ``flatpak-builder``."
+
 
 #: ../../flatpak-builder.rst:34
 msgid ""
