@@ -100,11 +100,11 @@ msgstr ""
 
 #: ../../conventions.rst:38
 msgid "For some practical examples of bad IDs"
-msgstr ""
+msgstr "Для некоторых практических примеров плохих идентификаторов"
 
 #: ../../conventions.rst:40
 msgid "``org.example.desktop``"
-msgstr ""
+msgstr "``org.example.desktop``"
 
 #: ../../conventions.rst:42
 msgid ""
@@ -115,10 +115,16 @@ msgid ""
 " it already is part of the domain name section of the identifier (eg. "
 "``org.example.Example``)."
 msgstr ""
+"Это плохой идентификатор, потому что стандарт Appstream по устаревшим причинам рассматривает"
+"идентификаторы, заканчивающиеся на «.desktop», как особый случай, вызывающий несогласованность."
+"По этой же причине «.Desktop» не следует использовать для приложений с новыми" 
+"именами. Не стесняйтесь повторять название приложения, даже если"
+"оно уже является частью раздела идентификатора доменного имени (например, (eg."
+"``org.example.Example``)."
 
 #: ../../conventions.rst:47
 msgid "``io.github.Foo``"
-msgstr ""
+msgstr "``io.github.Foo``"
 
 #: ../../conventions.rst:49
 msgid ""
@@ -129,20 +135,28 @@ msgid ""
 "similar. A better ID would be ``io.github.foo.Foo`` even if its "
 "redundant."
 msgstr ""
+"Это проблематично, потому что, хотя ``foo.github.io`` может быть уникальным для вашего"
+"проекта, он не включает конкретный идентификатор проекта. Это может "
+"вызвать проблемы, если другой проект создает ``io.github.Foo-Bar``, "
+"которое должно быть собственным пространством имен, но области «flatpak» могут относиться к ним "
+"одинаково. Лучшим идентификатором будет «io.github. foo.Foo``, даже если он "
+"избыточен."
 
 #: ../../conventions.rst:54
 msgid "``org.example-site.Foo``"
-msgstr ""
+msgstr "``org.example-site.Foo``"
 
 #: ../../conventions.rst:56
 msgid ""
 "This ID is not valid according to the DBus specification. You can use "
 "``org.example_site.Foo`` instead."
 msgstr ""
+"Этот идентификатор недействителен в соответствии со спецификацией DBus. Вместо этого вы можете использовать "
+"``org.example_site.Foo``"
 
 #: ../../conventions.rst:58
 msgid "``com.github.foo.Bar``"
-msgstr ""
+msgstr "``com.github.foo.Bar``"
 
 #: ../../conventions.rst:60
 msgid ""
@@ -150,6 +164,9 @@ msgid ""
 " the ``github.com`` domain. Instead you should use ``io.github`` as shown"
 " above."
 msgstr ""
+"Хотя проект может быть размещен на GitHub, он не контролирует домен"
+" «github.com». Вместо этого вы должны использовать «io.github», как показано"
+" выше."
 
 #: ../../conventions.rst:64
 msgid "AppData files"
@@ -269,7 +286,7 @@ msgstr ""
 
 #: ../../conventions.rst:127
 msgid "Exporting through extra-data"
-msgstr ""
+msgstr "Экспорт через «extra-data»"
 
 #: ../../conventions.rst:129
 msgid ""
@@ -277,18 +294,25 @@ msgid ""
 "installing, as such they aren't yet available for ``flatpak-builder`` to "
 "automatically export during the build process."
 msgstr ""
+"Файлы, загруженные через «extra-data», загружаются только при установке, "
+"поэтому они еще не доступны для автоматического экспорта с помощью «flatpak-builder» "
+"в процессе сборки."
 
 #: ../../conventions.rst:131
 msgid ""
 "When using ``extra-data``, place any files that must be exported under "
 "this location::"
 msgstr ""
+"При использовании ``extra-data`` поместите все файлы, которые необходимо экспортировать, "
+"в это место::"
 
 #: ../../conventions.rst:135
 msgid ""
 "For example, if GNOME Dictionary used ``extra-data`` to download a 96x96 "
 "icon this would be its path::"
 msgstr ""
+"Например, если словарь GNOME использовал `` дополнительные данные '' для загрузки значка 96x96, "
+"это был бы его путь::"
 
 #: ../../conventions.rst:140
 msgid "Technical conventions"
