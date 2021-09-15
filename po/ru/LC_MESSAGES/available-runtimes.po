@@ -51,6 +51,12 @@ msgid ""
 "runtime shell you can also inspect ``/usr/manifest.json``, which lists "
 "the sources used to build it."
 msgstr ""
+"Здесь упоминается лишь поверхностный взгляд на содержание. Чтобы"
+"иметь актуальную информацию, просто установите среду выполнения и откройте в ней оболочку "
+"(``flatpak run org.freedesktop.Sdk//21.08``) оттуда вы " 
+"можете осмотреться или использовать такие инструменты, как ``pkg-config --list-all``. В оболочке "
+"среды выполнения вы также можете проверить файл ``/usr/manifest.json``, в котором перечислены "
+"источники, использованные для его создания."
 
 #: ../../available-runtimes.rst:17
 msgid "Freedesktop"
@@ -72,6 +78,9 @@ msgid ""
 "/freedesktop-sdk/freedesktop-sdk/>`__ and has a website `here <https"
 "://freedesktop-sdk.io/>`__."
 msgstr ""
+"Среда выполнения Freedesktop поддерживается` здесь: <https://gitlab.com"
+"/freedesktop-sdk/freedesktop-sdk/>`__ и имеет веб-сайт `здесь: <https"
+"://freedesktop-sdk.io/>`__."
 
 #: ../../available-runtimes.rst:27
 msgid "Available Freedesktop runtimes:"
@@ -108,58 +117,58 @@ msgstr "Переносы среды выполнения (расширение)"
 #: ../../available-runtimes.rst:34
 #, fuzzy
 msgid "org.freedesktop.Platform.VAAPI.Intel{,.i386}"
-msgstr "org.freedesktop.Platform.Locale"
+msgstr "org.freedesktop.Platform.VAAPI.Intel{,.i386}"
 
 #: ../../available-runtimes.rst:34
 msgid "Intel vaapi drivers (extension)"
-msgstr ""
+msgstr "Драйверы Intel vaapi (расширение)"
 
 #: ../../available-runtimes.rst:35
 #, fuzzy
 msgid "org.freedesktop.Platform.ffmpeg-full"
-msgstr "org.freedesktop.Platform"
+msgstr "org.freedesktop.Platform.ffmpeg-full"
 
 #: ../../available-runtimes.rst:35
 msgid "All ffmpeg codecs (extension)"
-msgstr ""
+msgstr "Все кодеки ffmpeg (расширение)"
 
 #: ../../available-runtimes.rst:36
 #, fuzzy
 msgid "org.freedesktop.Platform.Compat.{architecture}"
-msgstr "org.freedesktop.Platform.Locale"
+msgstr "org.freedesktop.Platform.Compat.{architecture}"
 
 #: ../../available-runtimes.rst:36
 msgid "32 bits compatible extension"
-msgstr ""
+msgstr "32-битное совместимое расширение"
 
 #: ../../available-runtimes.rst:37
 #, fuzzy
 msgid "org.freedesktop.Platform.Compat.{architecture}.debug"
-msgstr "org.freedesktop.Platform.Locale"
+msgstr "org.freedesktop.Platform.Compat.{architecture}.debug"
 
 #: ../../available-runtimes.rst:37
 msgid "32 bits compatible extension (debug)"
-msgstr ""
+msgstr "32-битное совместимое расширение (отладка)"
 
 #: ../../available-runtimes.rst:38
 #, fuzzy
 msgid "org.freedesktop.Platform.GL{,32}.default"
-msgstr "org.freedesktop.Platform.Locale"
+msgstr "org.freedesktop.Platform.GL{,32}.default"
 
 #: ../../available-runtimes.rst:38
 #, fuzzy
 msgid "Mesa drivers (extension)"
-msgstr "Переносы среды выполнения (расширение)"
+msgstr "Драйверы Mesa (расширение)"
 
 #: ../../available-runtimes.rst:39
 #, fuzzy
 msgid "org.freedesktop.Platform.GL{,32}.mesa-git"
-msgstr "org.freedesktop.Platform"
+msgstr "org.freedesktop.Platform.GL{,32}.mesa-git"
 
 #: ../../available-runtimes.rst:39
 #, fuzzy
 msgid "Mesa drivers, latest (extension)"
-msgstr "Переносы среды выполнения (расширение)"
+msgstr "Последние версии драйверов Mesa (расширение)"
 
 #: ../../available-runtimes.rst:40
 msgid "org.freedesktop.Sdk"
@@ -199,11 +208,11 @@ msgstr "Документация SDK (расширение)"
 
 #: ../../available-runtimes.rst:44
 msgid "org.freedesktop.Sdk.Extension.toolchain-{architecture}"
-msgstr ""
+msgstr "org.freedesktop.Sdk.Extension.toolchain-{architecture}"
 
 #: ../../available-runtimes.rst:44
 msgid "SDK cross compilers (extension)"
-msgstr ""
+msgstr "Кросс-компиляторы SDK (расширение)"
 
 #: ../../available-runtimes.rst:48
 msgid "GNOME"
@@ -268,6 +277,9 @@ msgid ""
 "The GNOME runtime is maintained `here <https://gitlab.gnome.org/GNOME"
 "/gnome-build-meta>`__."
 msgstr ""
+"Среда выполнения GNOME поддерживается `здесь: <https://gitlab.gnome.org/GNOME"
+"/gnome-build-meta>`__."
+
 
 #: ../../available-runtimes.rst:69
 msgid "Available GNOME runtimes:"
@@ -316,6 +328,8 @@ msgid ""
 "The KDE runtime is maintained `here <https://invent.kde.org/packaging"
 "/flatpak-kde-runtime>`__."
 msgstr ""
+"Среда выполнения KDE поддерживается` здесь: <https://invent.kde.org/packaging"
+"/flatpak-kde-runtime>`__."
 
 #: ../../available-runtimes.rst:92
 msgid "Available KDE runtimes:"
