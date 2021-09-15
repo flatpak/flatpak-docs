@@ -125,7 +125,7 @@ msgstr "Создание скриншотов и скринкастов"
 
 #: ../../desktop-integration.rst:41
 msgid "Toolkits like GTK and Qt provide transparent support for portals:"
-msgstr ""
+msgstr "Такие инструменты, как GTK и Qt, обеспечивают прозрачную поддержку порталов:"
 
 #: ../../desktop-integration.rst:49
 msgid ""
@@ -134,6 +134,11 @@ msgid ""
 "<https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for "
 "more information."
 msgstr ""
+"Если вы не используете один из этих наборов инструментов, можно получить прямой доступ к "
+"API порталов. См. Документацию по API порталов "
+"Дополнительную информацию см. В `документации API порталов: "
+"<https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_"
+
 
 #: ../../desktop-integration.rst:55
 msgid "Notifications"
@@ -144,6 +149,8 @@ msgid ""
 "A number of toolkits and frameworks provide transparent support for Linux"
 " desktop notifications. This includes Electron, GTK, KDE and QML."
 msgstr ""
+"Ряд наборов инструментов и фреймворков обеспечивает прозрачную поддержку уведомлений "
+"рабочего стола Linux. Сюда входят Electron, GTK, KDE и QML.
 
 #: ../../desktop-integration.rst:61
 msgid "Status icons"
@@ -185,6 +192,10 @@ msgid ""
 "sandbox and these services are not designed to be robust against "
 "untrusted software."
 msgstr ""
+"Значки стиля XEmbed будут работать с разрешением ``x11``, но для всех "
+"других интерфейсов значков состояния требуются дополнительные разрешения для выхода из "
+"песочницы, и эти службы не предназначены для защиты от "
+"ненадежного программного обеспечения."
 
 #: ../../desktop-integration.rst:79
 msgid "System search"
@@ -263,7 +274,7 @@ msgstr ""
 
 #: ../../desktop-integration.rst:113
 msgid "Global menus"
-msgstr ""
+msgstr "Глобальные меню"
 
 #: ../../desktop-integration.rst:115
 msgid ""
@@ -271,10 +282,14 @@ msgid ""
 "Qt 5 equivalent they will work as expected from within a sandboxed "
 "application."
 msgstr ""
+"Если ваше приложение использует встроенный «GtkApplication: menu-bar» или "
+"его эквивалент в Qt 5, они будут работать должным образом из изолированного "
+"приложения."
+
 
 #: ../../desktop-integration.rst:119
 msgid "Theming"
-msgstr ""
+msgstr "Тематика"
 
 #: ../../desktop-integration.rst:121
 msgid ""
@@ -288,6 +303,15 @@ msgid ""
 "Freedesktop runtime when the extension point is Gtk, and to the KDE "
 "runtime when the extension point is Qt."
 msgstr ""
+"Приложения Flatpak не могут напрямую использовать системную тему. Это происходит "
+"Это происходит потому, что у flatpaks нет возможности использовать файлы данных или библиотеки "
+"в ``/usr`` (где обычно находятся системные темы). Решением "
+"Решением было упаковать темы как Flatpaks, поскольку надежда на то, что хост будет иметь "
+"правильную версию для каждого Flatpak, лишает его преимуществ переносимости. "
+"переносимости. Эти темы предоставляются как `extensions "
+"<https://github.com/flatpak/flatpak/wiki/Extensions>`_, для "
+"для среды выполнения Freedesktop, когда точкой расширения является Gtk, и для среды выполнения "
+"KDE, когда точкой расширения является Qt."
 
 #: ../../desktop-integration.rst:123
 msgid ""
@@ -295,14 +319,17 @@ msgid ""
 "date ``org.gnome.Platform`` 3.24+, or ``org.freedesktop.Platform`` 1.6+, "
 "or ``org.kde.Platform`` 5.9+."
 msgstr ""
+"Система тем требует Flatpak 0.8.4+ и приложений, использующих "
+"последнюю версию org.gnome.Platform 3.24+, org.freedesktop.Platform 1.6+ "
+"или org.kde.Platform. 5.9+."
 
 #: ../../desktop-integration.rst:126
 msgid "Installing themes"
-msgstr ""
+msgstr "Установка тем"
 
 #: ../../desktop-integration.rst:129
 msgid "Instructions for Gtk"
-msgstr ""
+msgstr "Инструкции для Gtk"
 
 #: ../../desktop-integration.rst:131
 msgid ""
@@ -310,6 +337,9 @@ msgid ""
 "<https://flathub.org/>`_ repository which you can add (if it's not "
 "already added) by running::"
 msgstr ""
+"Текущие темы Gtk упакованы в репозиторий `flathub "
+"<https://flathub.org/>`_ который вы можете добавить (если он "
+"еще не добавлен), запустив::"
 
 #: ../../desktop-integration.rst:135
 msgid ""
@@ -322,6 +352,14 @@ msgid ""
 " description, while the second prints only the full name of the theme's "
 "flatpak package."
 msgstr ""
+"Чтобы увидеть список упакованных в настоящее время тем, вы можете использовать команду "
+"``flatpak search gtk3theme`` (доступна с версии Flatpak 0.10.1). Если"
+" вы используете более старую версию Flatpak, чем эта, вы можете использовать команду "
+"``flatpak remote-ls flathub | grep org.gtk.Gtk3theme`` Разница "
+"в выводе между этими двумя командами заключается в том, что первая выводит "
+"идентификатор приложения, удалённый компьютер, с которого поступает тема, и "
+"описание темы, а вторая печатает только полное имя 
+"пакета flatpak темы."
 
 #: ../../desktop-integration.rst:137
 msgid ""
@@ -329,10 +367,13 @@ msgid ""
 "org.gtk.Gtk3theme.Foo``, replacing ``Foo`` with the name of the desired "
 "theme."
 msgstr ""
+"Вы можете установить темы с помощью команды ``flatpak install flathub "
+"org.gtk.Gtk3theme.Foo``, заменив `Foo` на имя желаемой "
+"темы."
 
 #: ../../desktop-integration.rst:140
 msgid "Instructions for Qt"
-msgstr ""
+msgstr "Инструкции для Qt"
 
 #: ../../desktop-integration.rst:142
 msgid ""
@@ -340,14 +381,17 @@ msgid ""
 " must be installed. These are packed in the kdeapps repository which you "
 "can add by running::"
 msgstr ""
+"Чтобы темы Qt работали, должны быть установлены пакеты"
+" flatpak kstyle и platformtheme. Они упакованы в репозиторий kdeapps, который вы "
+"можете добавить, запустив::"
 
 #: ../../desktop-integration.rst:146
 msgid "Afterwards the two packages can be installed with the following commands::"
-msgstr ""
+msgstr "После этого два пакета можно установить с помощью следующих команд::"
 
 #: ../../desktop-integration.rst:152
 msgid "Applying themes"
-msgstr ""
+msgstr "Применение тем"
 
 #: ../../desktop-integration.rst:154
 msgid ""
@@ -357,6 +401,11 @@ msgid ""
 " to Adwaita (if they use Gtk2 or Gtk3) or the default Qt theme (if they "
 "use Qt) if a corresponding theme isn't detected."
 msgstr ""
+"Не существует идеального способа указать тему, используемую приложениями Flatpak. "
+"Приложения будут пытаться соответствовать используемой в настоящее время системной теме, если "
+"она соответствует какой-либо из установленных тем Flatpak, и будут использовать"
+" Adwaita (если они используют Gtk2 или Gtk3) или тему Qt по умолчанию (если они "
+"используют Qt), если соответствующая тема не обнаружена."
 
 #: ../../desktop-integration.rst:156
 msgid ""
@@ -370,6 +419,15 @@ msgid ""
 "the corresponding system themes are currently being used, the "
 "applications will fall back to Adwaita or the default Qt theme."
 msgstr ""
+"Начиная с Flatpak 0.10.1, система Flatpak может определять, соответствуют ли доступные "
+"системные темы каким-либо темам Flatpak, доступным в "
+"репозиториях, и, если да, автоматически устанавливает найденные темы во "
+"время обновления на основе `` gtk-theme`` Ключ dconf. Однако этот ключ "
+"содержать только одно значение, одно из используемых в настоящее время тем, что "
+"означает, что версии Flatpak совпадающих тем, которые в настоящее время не "
+"используются, не устанавливаются, пока эти темы не будут включены. Если ни одна из "
+"соответствующих системных тем в настоящее время не используются, "
+"приложения вернутся к Adwaita или теме Qt по умолчанию."
 
 #: ../../desktop-integration.rst:158
 msgid ""
@@ -383,10 +441,22 @@ msgid ""
 " DConf option to work on Wayland the application must also be configured "
 "to have DConf access."
 msgstr ""
+"На X11 Gtk3 подбирает темы через XSettings. В частности, демон GNOME "
+"XSettings ``gsd-xsettings`` считывает значения DConf и преобразует "
+"их в значения XSettings. Чтобы это работало, вам нужен правильно настроенный демон xsettings. "
+"Gtk3 на Wayland подбирает темы напрямую через Dconf. "
+"Чтобы это работало, вы можете использовать KDE (``kde- "
+"gtk-config`` > 5.11.95), GNOME, который работает из коробки, или вручную, "
+"или вручную настроить ключи dconf в ``/org/gnome/desktop/interface/``. Чтобы"
+" опция DConf работала в Wayland, приложение также должно быть настроено "
+"для доступа к DConf."
+
+
+
 
 #: ../../desktop-integration.rst:161
 msgid "Other notes on theming"
-msgstr ""
+msgstr "Другие примечания по тематике"
 
 #: ../../desktop-integration.rst:163
 msgid ""
