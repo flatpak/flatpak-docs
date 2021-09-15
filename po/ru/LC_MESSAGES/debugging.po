@@ -174,26 +174,30 @@ msgid ""
 "Flatpak has a number of commands that allow to manage portal permissions "
 "for applications."
 msgstr ""
+"Flatpak имеет ряд команд, позволяющих управлять разрешениями портала "
+"для приложений."
 
 #: ../../debugging.rst:81
 msgid "To see all portal permissions of an application, use::"
-msgstr ""
+msgstr "Чтобы увидеть все права доступа приложения к порталу, используйте::"
 
 #: ../../debugging.rst:85
 msgid "To reset all portal permissions of an application, use::"
-msgstr ""
+msgstr "Чтобы сбросить все права доступа приложения к порталу, используйте::"
 
 #: ../../debugging.rst:91
 msgid "Interacting with running sandboxes"
-msgstr ""
+msgstr "Взаимодействие с запущенными песочницами"
 
 #: ../../debugging.rst:93
 msgid ""
 "You can see all the apps that are currently running in Flatpak sandboxes "
 "(since 1.2)::"
 msgstr ""
+"Вы можете увидеть все приложения, которые в настоящее время работают в песочницах Flatpak "
+"(начиная с версии 1.2)::"
 
 #: ../../debugging.rst:98
 msgid "And, if you need to, you can terminate one by force (since 1.2)::"
-msgstr ""
+msgstr "И, при необходимости, вы можете прекратить его принудительно (начиная с версии 1.2)::"
 
