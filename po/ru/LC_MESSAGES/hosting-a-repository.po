@@ -29,6 +29,8 @@ msgid ""
 "Flathub uses flat-manager to host its Flatpak repository. See "
 "https://github.com/flatpak/flat-manager"
 msgstr ""
+"Flathub использует flat-manager для размещения своего репозитория Flatpak. См."
+"https://github.com/flatpak/flat-manager"
 
 #: ../../hosting-a-repository.rst:9
 msgid ""
