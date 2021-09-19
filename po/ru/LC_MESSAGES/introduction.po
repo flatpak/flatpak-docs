@@ -39,13 +39,15 @@ msgstr ""
 
 #: ../../introduction.rst:9
 msgid "Terminology"
-msgstr ""
+msgstr "Терминология"
 
 #: ../../introduction.rst:11
 msgid ""
 "Flatpak: a system for building, distributing, and running sandboxed "
 "desktop applications on Linux."
 msgstr ""
+"Flatpak: система для создания, распространения и запуска изолированных "
+"настольных приложений в Linux."
 
 #: ../../introduction.rst:12
 msgid ""
@@ -53,22 +55,30 @@ msgid ""
 " ``flatpak`` command or via a different UI like GNOME Software or KDE "
 "Discover."
 msgstr ""
+"Приложение Flatpak: это приложения, которые пользователь устанавливает с помощью"
+" команды ``flatpak`` или другого пользовательского интерфейса, такого как GNOME Software или "
+"KDE Discover."
+
 
 #: ../../introduction.rst:14
 msgid ""
 "Runtime: also called platforms, these are integrated platforms to provide"
 " basic utilities needed for a Flatpak application to work."
 msgstr ""
+"Среда выполнения: также называемые платформами, это интегрированные платформы для предоставления "
+"основных утилит, необходимых для работы приложения Flatpak."
 
 #: ../../introduction.rst:16
 msgid "BaseApp: these are integrated platforms for frameworks like Electron."
-msgstr ""
+msgstr "BaseApp: это интегрированные платформы для таких фреймворков, как Electron."
 
 #: ../../introduction.rst:17
 msgid ""
 "Flatpak bundle: a specific single-file export format which contains a "
 "Flatpak app or runtime."
 msgstr ""
+"Пакет Flatpak: особый формат экспорта одного файла, который содержит "
+"приложение или среду выполнения Flatpak."
 
 #: ../../introduction.rst:20
 msgid "Target audience"
@@ -114,13 +124,15 @@ msgstr ""
 
 #: ../../introduction.rst:37
 msgid "Issues of current model of packaging"
-msgstr ""
+msgstr "Проблемы текущей модели упаковки"
 
 #: ../../introduction.rst:39
 msgid ""
 "It is important to understand the problems of the current model of "
 "packaging applications to understand the existence of Flatpak:"
 msgstr ""
+"Чтобы понять существование Flatpak, важно понимать проблемы "
+"текущей модели упаковки приложений:"
 
 #: ../../introduction.rst:42
 msgid ""
@@ -133,6 +145,14 @@ msgid ""
 "distributions. This makes the Linux desktop a difficult platform for "
 "software vendors to target."
 msgstr ""
+"**Приложения для дублирования работы**: многие дистрибутивы Linux поставляются со "
+"своим собственным менеджером пакетов, форматом пакетов и репозиторием. Для этого требуется,"
+" чтобы множество специалистов по сопровождению упаковывало одно и то же приложение в различные "
+"дистрибутивы, или разработчик приложения изучал язык каждого"
+" формата, а затем упаковывал приложение в эти дистрибутивы, или "
+"игнорировал большинство дистрибутивов и упаковывал и поддерживал несколько "
+"дистрибутивов. Это делает рабочий стол Linux сложной платформой для "
+"поставщиков программного обеспечения."
 
 #: ../../introduction.rst:48
 msgid ""
@@ -142,6 +162,11 @@ msgid ""
 "downloading the archive of the application, extracting it and hoping the "
 "application will launch."
 msgstr ""
+"**Ограничено пакетными приложениями**: не все приложения "
+"изначально доступны в каждом дистрибутиве Linux. Если приложение недоступно"
+" в конкретном дистрибутиве, пользователю придется вручную "
+"загрузить архив приложения, распаковать его и надеяться, что "
+"приложение запустится."
 
 #: ../../introduction.rst:52
 msgid ""
@@ -150,6 +175,10 @@ msgid ""
 " properly setup their workflow. This reduces the amount of distributions "
 "that can be suitable for a user."
 msgstr ""
+"**Ограничено дистрибутивами, в которых есть приложения**: пользователь ограничен "
+"количеством дистрибутивов, в которых есть приложения, необходимые для правильной"
+" настройки рабочего процесса. Это уменьшает количество дистрибутивов, "
+"подходящих для пользователя."
 
 #: ../../introduction.rst:56
 msgid ""
@@ -158,6 +187,10 @@ msgid ""
 "distribution suitable for the end user, instead of focusing on their end "
 "goals. This delays the progress of each distribution."
 msgstr ""
+"**Трудно внедрять инновации в пространстве ОС**: разработчикам дистрибутивов "
+"приходится тратить много времени на упаковку приложений, чтобы сделать "
+"дистрибутив подходящим для конечного пользователя, вместо того, чтобы сосредоточиться на своих конечных "
+"конечных целях. Это задерживает продвижение каждого дистрибутива."
 
 #: ../../introduction.rst:59
 msgid ""
@@ -167,6 +200,11 @@ msgid ""
 "application developers often have little control over how their "
 "application is packaged by distributions."
 msgstr ""
+"**Старые и устаревшие пакеты**: дистрибутивы LTS часто содержат очень старые "
+"версии приложений, упакованные изначально. Воспроизводимость ошибок "
+"затруднена из-за различных сред, в которых выполняются приложения, и "
+"разработчики приложений часто не имеют большого контроля над тем, как их "
+"приложение упаковывается дистрибутивами."
 
 #: ../../introduction.rst:64
 msgid ""
@@ -174,6 +212,9 @@ msgid ""
 "developers to distribute applications from one source and to target the "
 "entire Linux desktop."
 msgstr ""
+"Flatpak стремится исправить перечисленные выше проблемы, предоставляя "
+"разработчикам возможность распространять приложения из одного источника и нацеливаться на "
+"весь рабочий стол Linux."
 
 #: ../../introduction.rst:68
 msgid "Reasons to use Flatpak"
@@ -181,7 +222,7 @@ msgstr "Причины использовать Flatpak"
 
 #: ../../introduction.rst:70
 msgid "Flatpak has some major advantages over most system package managers:"
-msgstr ""
+msgstr "Flatpak имеет несколько основных преимуществ перед большинством системных менеджеров пакетов:"
 
 #: ../../introduction.rst:72
 msgid ""
@@ -191,12 +232,19 @@ msgid ""
 "system (OS), and various architectures without the developer needing the "
 "relevant hardware on hand."
 msgstr ""
+"**Универсальность**: Flatpak позволяет устанавливать и запускать приложения "
+"практически в любом дистрибутиве Linux. Сюда входят дистрибутивы, отличные от GNU, "
+"дистрибутивы без systemd, дистрибутивы с операционной системой (ОС) только для чтения, "
+"а также различные архитектуры без необходимости разработчика "
+"в соответствующем оборудовании."
 
 #: ../../introduction.rst:76
 msgid ""
 "**Space for innovations**: Flatpak facilitates distribution maintainers "
 "to focus on their goals to innovate their distribution."
 msgstr ""
+"**Пространство для инноваций**: Flatpak помогает специалистам по разработке дистрибутивов "
+"сосредоточиться на своих целях по внедрению инноваций в свои дистрибутивы."
 
 #: ../../introduction.rst:78
 msgid ""
@@ -204,12 +252,17 @@ msgid ""
 " from breaking. This is because Flatpak applications and runtimes are "
 "contained to not interfere with the system altogether."
 msgstr ""
+"**Стабильность**: поломка в приложении Flatpak не приведет к поломке" 
+" системы. Это связано с тем, что приложения и среды выполнения Flatpak "
+"содержатся, чтобы полностью не мешать работе системы."
 
 #: ../../introduction.rst:81
 msgid ""
 "**Rootless install**: elevated privileges are not required when "
 "installing a Flatpak application or a runtime."
 msgstr ""
+"**Установка без Root-прав**: повышенные привилегии не требуются при "
+"установке приложения Flatpak или среды выполнения."
 
 #: ../../introduction.rst:83
 msgid ""
@@ -219,12 +272,21 @@ msgid ""
 "applications that are run with Flatpak have limited access to the host "
 "environment."
 msgstr ""
+"**Изолированные приложения**: одна из основных целей Flatpak - повысить "
+"безопасность настольных систем за счет изоляции приложений друг от "
+"друга. Это достигается с помощью песочницы и означает, что по умолчанию "
+"приложения, запускаемые с Flatpak, имеют ограниченный доступ к среде "
+"хоста."
+
+
 
 #: ../../introduction.rst:87
 msgid ""
 "Flatpak has some major advantages over other universal approaches to "
 "distributing applications on Linux:"
 msgstr ""
+"Flatpak имеет несколько основных преимуществ перед другими универсальными подходами к "
+"распространению приложений в Linux:"
 
 #: ../../introduction.rst:90
 #, fuzzy
@@ -259,10 +321,14 @@ msgid ""
 " by multiple applications to save megabytes or even gigabytes worth of "
 "storage depending on the amount of applications installed."
 msgstr ""
+"**Эффективное использование пространства**: Flatpak выполняет дедупликацию библиотек и других файлов, используемых"
+"несколькими приложениями, чтобы сэкономить мегабайты или даже гигабайты "
+"хранилища в зависимости от количества установленных приложений."
+
 
 #: ../../introduction.rst:100
-msgid "**Delta updates**: only changed files are downloaded for updates."
-msgstr ""
+msgid "**Delta updates**: only changed files are downloaded for updates.""
+msgstr "**Дельта-обновления**: для обновлений загружаются только измененные файлы."
 
 #: ../../introduction.rst:102
 msgid "Other benefits for developers include:"
@@ -309,6 +375,8 @@ msgid ""
 "**Branches**: this allows developers to ship applications from different "
 "branches, e.g. ``stable``, ``beta``, etc. while retaining the same name."
 msgstr ""
+"**Ветки**: это позволяет разработчикам отправлять приложения из разных "
+"веток, например стабильная, бета и т. д. с тем же названием."
 
 #: ../../introduction.rst:115
 #, fuzzy
