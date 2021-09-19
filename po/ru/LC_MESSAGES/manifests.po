@@ -413,7 +413,7 @@ msgid ""
 msgstr ""
 "Полный манифест для словаря GNOME, созданный на основе Git "
 "<https://github.com/flathub/org.gnome.Dictionary/blob/master/org.gnome.Dictionary.yml>`_."
-" Также можно просматривать все манифесты, размещенные на Flathub. "
+" Также можно просматривать все манифесты, размещенные на Flathub "
 "<https://github.com/flathub>`_."
 
 #~ msgid ""
