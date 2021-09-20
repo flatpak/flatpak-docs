@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../portals-qt.rst:2
 msgid "Portal support in Qt and KDE"
-msgstr "Поддержка портала в QT и KDE"
+msgstr "Поддержка портала в Qt и KDE"
 
 #: ../../portals-qt.rst:4
 msgid ""
