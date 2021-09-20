@@ -10,9 +10,9 @@ msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-14 17:03-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2021-09-20 22:42+0700\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Language-Team: LANGUAGE ru_RU<>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../multiarch.rst:2
 msgid "Multiarch support"
-msgstr ""
+msgstr "Поддержка MultiArch"
 
 #: ../../multiarch.rst:4
 msgid ""
@@ -28,16 +28,21 @@ msgid ""
 "and require some additional steps to enable it. This section covers "
 "enabling multiarch/multilib in your application bundle."
 msgstr ""
+"Flatpak поддерживает multiarch/multilib но по умолчанию она не включена, "
+"и для ее включения требуются некоторые дополнительные действия. В этом разделе рассказывается "
+"о включении multiarch/multilib в вашем пакете приложений."
 
 #: ../../multiarch.rst:9
 msgid "Running 32-bit programs"
-msgstr ""
+msgstr "Запуск 32-битных программ"
 
 #: ../../multiarch.rst:11
 msgid ""
 "In order to set up the run time environment for 32-bit executables, first"
 " you'll need to allow it in ``finish-args``:"
 msgstr ""
+"Чтобы настроить среду выполнения для 32-битных исполняемых файлов, сначала "
+"вам нужно разрешить это в ``finish-args``:"
 
 #: ../../multiarch.rst:19
 msgid ""
@@ -45,6 +50,9 @@ msgid ""
 "programs are linked dynamically. Those need some shared libraries to "
 "work."
 msgstr ""
+"Этого достаточно для статических двоичных файлов, но "
+"большинство реальных программ GNU / Linux связаны динамически. Им для работы нужны общие "
+"библиотеки."
 
 #: ../../multiarch.rst:22
 msgid ""
@@ -54,16 +62,23 @@ msgid ""
 "the extension for your app, define an extension point for it in the app "
 "manifest:"
 msgstr ""
+"Freedesktop.org и GNOME SDKs предоставляют специальное расширение flatpak "
+"с набором библиотек для соответствующей архитектуры. Это расширение " 
+"можно подключить к приложению с другой архитектурой. Чтобы включить "
+"расширение для вашего приложения, определите для него точку расширения в " 
+"манифесте приложения:"
 
 #: ../../multiarch.rst:40
 msgid "For GNOME runtime, use ``org.gnome.Platform.Compat.i386`` instead."
-msgstr ""
+msgstr "Для среды выполнения GNOME используйте вместо этого ``org.gnome.Platform.Compat.i386``"
 
 #: ../../multiarch.rst:42
 msgid ""
 "Note that this extension ``version`` must match the ``runtime-version`` "
 "of the application."
 msgstr ""
+"Обратите внимание, что это расширение ``version`` должно соответствовать ``runtime-version`` "
+"приложения."
 
 #: ../../multiarch.rst:45
 msgid ""
@@ -71,12 +86,17 @@ msgid ""
 "graphical UI in general, you'll also need 32-bit GL drivers. Add an "
 "extension point for it:"
 msgstr ""
+"Если 32-разрядные программы используют ускорение графического процессора или имеют "
+"графический интерфейс в целом, вам также понадобятся 32-разрядные драйверы GL. Добавьте "
+"для него точку расширения:"
 
 #: ../../multiarch.rst:63
 msgid ""
 "Note that the ``versions`` property here must contain both ``1.4`` and "
 "the same value as in ``runtime-version``."
 msgstr ""
+"Обратите внимание, что свойство «versions» здесь должно содержать как «1.4», так и "
+"то же значение, что и в «runtime-version»."
 
 #: ../../multiarch.rst:66
 msgid ""
@@ -85,6 +105,11 @@ msgid ""
 "to the app bundle mount point, i.e. to ``/app/``). This can be done at "
 "stage of the build."
 msgstr ""
+"Обязательно создайте каталоги, в которых будут монтироваться расширения (точки"
+" монтирования указаны в свойствах каталога и относятся "
+"к точке монтирования пакета приложений, то есть в ``/app/``). Это можно сделать на "
+"этапе сборки."
+
 
 #: ../../multiarch.rst:70
 msgid ""
@@ -92,20 +117,25 @@ msgid ""
 "32-bit libraries. In order to do this, you can install a "
 "``/app/etc/ld.so.conf`` file with contents like this:"
 msgstr ""
+"Наконец, вам нужно сделать так, чтобы загрузчик динамических библиотек знал пути к "
+"32-битным библиотекам. Для этого вы можете установить "
+"файл ``/app/etc/ld.so.conf`` с таким содержимым:"
 
 #: ../../multiarch.rst:79
 msgid ""
 "Here ``/app/lib32`` is the directory where you install additional 32-bit "
 "libraries, if any."
 msgstr ""
+"Здесь ``/app/lib32`` - это каталог, в который вы устанавливаете дополнительные 32-битные "
+"библиотеки, если таковые имеются."
 
 #: ../../multiarch.rst:82
 msgid "You can combine the above two steps in a special module, e.g."
-msgstr ""
+msgstr "Вы можете комбинировать выше два шага в специальном модуле, например."
 
 #: ../../multiarch.rst:100
 msgid "Building 32-bit modules"
-msgstr ""
+msgstr "Сборка 32-битных модулей"
 
 #: ../../multiarch.rst:102
 msgid ""
@@ -115,16 +145,23 @@ msgid ""
 "you are already familiar with building (single-arch) flatpaks. If not, "
 "please refer to :doc:`flatpak-builder` guide first."
 msgstr ""
+"В приведенном выше разделе описано, как запускать уже созданные 32-разрядные "
+"программы. В этом разделе будет описан процесс самостоятельной сборки 32-разрядных "
+"компонентов для их доставки вместе с приложением. Предполагается, что "
+"вы уже знакомы с собранными (одноарочными) flatpaks. В противном случае "
+"сначала обратитесь к руководству :doc:`flatpak-builder`."
 
 #: ../../multiarch.rst:108
 msgid "First of all, you'll need to enable some SDK extensions at build time:"
-msgstr ""
+msgstr "Прежде всего, вам нужно включить некоторые расширения SDK во время сборки:"
 
 #: ../../multiarch.rst:116
 msgid ""
 "The first one is the 32-bit portion of the SDK, containing 32-bit "
 "libraries and development files."
 msgstr ""
+"Первая - это 32-битная часть SDK, содержащая 32-битные "
+"библиотеки и файлы разработки."
 
 #: ../../multiarch.rst:119
 msgid ""
@@ -133,6 +170,10 @@ msgid ""
 "support. Thus, you will need a cross-compiler for building x86 on x86_64 "
 "just as you would need it for any foreign architecture like aarch64."
 msgstr ""
+"Второй - кросс-компилятор. Обычно для сборок с несколькими библиотеками используется "
+"``gcc -m32`` , но пакет SDK flatpak поставляется с gcc без поддержки нескольких "
+"библиотек. Таким образом, вам понадобится кросс-компилятор для сборки x86 на x86_64 "
+"так же, как он понадобится для любой зарубежной архитектуры, такой как aarch64." 
 
 #: ../../multiarch.rst:124
 msgid ""
@@ -140,6 +181,9 @@ msgid ""
 "overridden. Examples here assume that 32-bit libraries are installed in "
 "``/app/lib32`` directory:"
 msgstr ""
+"Чтобы построить 32-битный модуль, необходимо переопределить некоторые глобальные параметры "
+"сборки. Примеры здесь предполагают, что 32-битные библиотеки установлены в "
+"каталог ``/app/lib32``."
 
 #: ../../multiarch.rst:146
 msgid ""
@@ -149,10 +193,17 @@ msgid ""
 "``build-options`` object somewhere in the manifest, add an anchor to it, "
 "and then point each 32-bit modules' ``build-options`` to that anchor:"
 msgstr ""
+"Эти ``параметры сборки`` необходимо установить для каждого 32-битного модуля. Если "
+"манифест вашего приложения имеет формат YAML, привязки YAML могут пригодиться и "
+"избавить вас от копирования-вставки того же фрагмента. Вы можете определить 32-битный "
+"объект build-options где-нибудь в манифесте, добавить к нему привязку, "
+"а затем указать каждому 32-битному модулю ``build-options`` на эту привязку:"
 
 #: ../../multiarch.rst:170
 msgid ""
 "Of course, in order to actually use 32-bit modules you've build, you'll "
 "also need all the same setup from the previous section."
 msgstr ""
+"Конечно, для того, чтобы использовать созданные вами 32-битные модули, вам также потребуются "
+"все те же настройки, что и в предыдущем разделе."
 
