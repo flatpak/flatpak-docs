@@ -216,6 +216,9 @@ msgid ""
 "<https://blogs.gnome.org/mclasen/2019/07/12/settings-in-a-sandbox-"
 "world/>`__."
 msgstr ""
+"Если вас интересует последний аргумент finish, см. `Это сообщение в блоге "
+"<https://blogs.gnome.org/mclasen/2019/07/12/settings-in-a-sandbox-"
+"world/>`__."
 
 #: ../../manifests.rst:101
 msgid "Cleanup"
@@ -228,10 +231,14 @@ msgid ""
 "or developer documentation. Two properties in the manifest file are used "
 "for this."
 msgstr ""
+"Свойство очистки можно использовать для удаления файлов, созданных в процессе сборки, "
+"которые не требуются как часть приложения, например заголовков "
+"или документации разработчика. Для этого используются два свойства "
+"в файле манифеста."
 
 #: ../../manifests.rst:107
 msgid "First, a list of filename patterns can be included::"
-msgstr ""
+msgstr "Во-первых, можно включить список шаблонов имен файлов::"
 
 #: ../../manifests.rst:114
 msgid ""
@@ -371,17 +378,15 @@ msgstr "`cmake <https://cmake.org/>`_"
 #: ../../manifests.rst:176
 #, fuzzy
 msgid "`cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_"
-msgstr ""
-"`cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_, "
-"`meson <http://mesonbuild.com/>`_"
+msgstr "`cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_, "
 
 #: ../../manifests.rst:177
 msgid "`meson <http://mesonbuild.com/>`_"
-msgstr ""
+msgstr "`meson <http://mesonbuild.com/>`_"
 
 #: ../../manifests.rst:178
 msgid "`qmake <https://doc.qt.io/qt-5/qmake-overview.html>`_"
-msgstr ""
+msgstr "`qmake <https://doc.qt.io/qt-5/qmake-overview.html>`_"
 
 #: ../../manifests.rst:179
 msgid "the \"`Build API <https://github.com/cgwalters/build-api/>`_\""
@@ -406,6 +411,10 @@ msgid ""
 " It is also possible to browse `all the manifests hosted by Flathub "
 "<https://github.com/flathub>`_."
 msgstr ""
+"Полный манифест для словаря GNOME, созданный на основе Git "
+"<https://github.com/flathub/org.gnome.Dictionary/blob/master/org.gnome.Dictionary.yml>`_."
+" Также можно просматривать все манифесты, размещенные на Flathub "
+"<https://github.com/flathub>`_."
 
 #~ msgid ""
 #~ "The cleanup property can be used "
