@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-14 17:03-0500\n"
-"PO-Revision-Date: 2021-09-12 02:11+0700\n"
+"PO-Revision-Date: 2021-09-21 23:46+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
 "Language: ru\n"
 "Language-Team: ru_RU <>\n"
@@ -285,8 +285,7 @@ msgid ""
 msgstr ""
 "Поиск вернет все приложения, соответствующие условиям поиска. Каждый "
 "результат поиска включает идентификатор приложения и удалённый компьютер,"
-" на котором находится приложение. В этом примере поисковым запросом "
-"является ``gimp``."
+"на котором находится приложение. В этом примере поисковым запросом является ``gimp``."
 
 #: ../../using-flatpak.rst:128
 msgid "Install applications"
@@ -302,8 +301,7 @@ msgid ""
 "installed from, and ``org.gimp.GIMP`` is the ID of the application."
 msgstr ""
 "Здесь «flathub» - это имя удаленного компьютера, с которого должно быть "
-"установлено приложение, а ``org.gimp.GIMP`` - это идентификатор "
-"приложения."
+"установлено приложение, а ``org.gimp.GIMP`` - это идентификатор приложения."
 
 #: ../../using-flatpak.rst:137
 msgid ""
@@ -340,10 +338,12 @@ msgid ""
 "Since Flatpak 1.2, the ``install`` command can search for applications. A"
 " simple::"
 msgstr ""
+"Начиная с Flatpak 1.2, команда ``install`` может искать приложения. "
+"просто::"
 
 #: ../../using-flatpak.rst:156
 msgid "will confirm the remote and application and proceed to install."
-msgstr ""
+msgstr "подтвердит удалённый компьютер и приложение и перейдет к установке."
 
 #: ../../using-flatpak.rst:159
 msgid "Running applications"
@@ -355,7 +355,7 @@ msgid ""
 "``run`` command and its application ID::"
 msgstr ""
 "После того, как приложение установлено, его можно запустить с помощью "
-"команды ``run`` и идентификатора приложения.::"
+"команды ``run`` и идентификатора приложения::"
 
 #: ../../using-flatpak.rst:167
 msgid "Updating"
@@ -395,23 +395,28 @@ msgstr "Чтобы удалить приложение, запустите::"
 
 #: ../../using-flatpak.rst:193
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Исправление проблем"
 
 #: ../../using-flatpak.rst:195
 msgid ""
 "Flatpak has a few commands that can help you to get things working again "
 "when something goes wrong."
 msgstr ""
+"У Flatpak есть несколько команд, которые могут помочь вам снова заставить все работать, "
+"когда что-то пойдет не так."
 
 #: ../../using-flatpak.rst:198
 msgid ""
 "To remove runtimes and extensions that are not used by installed "
 "applications, use::"
 msgstr ""
+"Чтобы удалить среды выполнения и расширения, которые не используются установленными "
+"приложениями, используйте::"
+
 
 #: ../../using-flatpak.rst:203
 msgid "To fix inconsistencies with your local installation, use::"
-msgstr ""
+msgstr "Чтобы исправить несоответствия с вашей локальной установкой, используйте::"
 
 #: ../../using-flatpak.rst:207
 msgid ""
@@ -419,12 +424,17 @@ msgid ""
 " installed apps. To reset all portal permissions for an app, use "
 "``flatpak permission-reset``::"
 msgstr ""
+"Flatpak также имеет ряд команд для управления разрешениями портала "
+"установленных приложений. Чтобы сбросить все разрешения портала "
+"для приложения, используйте команду ``flatpak permission-reset``::"
 
 #: ../../using-flatpak.rst:213
 msgid ""
 "To find out what changes have been made to your Flatpak installation over"
 " time, you can take a look at the logs (since 1.2)::"
 msgstr ""
+"Чтобы узнать, какие изменения были внесены в вашу установку Flatpak с течением"
+" времени, вы можете просмотреть журналы (начиная с 1.2)::"
 
 #~ msgid ""
 #~ "Prior to Flatpak 0.11.1, it was "
