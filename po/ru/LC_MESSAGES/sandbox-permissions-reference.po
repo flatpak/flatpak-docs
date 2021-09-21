@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-14 17:03-0500\n"
-"PO-Revision-Date: 2021-07-24 18:27+0700\n"
+"PO-Revision-Date: 2021-09-21 20:55+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
 "Language: ru\n"
 "Language-Team: \n"
@@ -62,11 +62,11 @@ msgstr "Совместное использование пространства
 
 #: ../../sandbox-permissions-reference.rst:14
 msgid "``--allow=bluetooth``"
-msgstr ""
+msgstr "``--allow=bluetooth``"
 
 #: ../../sandbox-permissions-reference.rst:14
 msgid "Allow access to Bluetooth"
-msgstr ""
+msgstr "Разрешить доступ к Bluetooth"
 
 #: ../../sandbox-permissions-reference.rst:15
 msgid "``--device=dri``"
@@ -106,7 +106,7 @@ msgstr "``--talk-name=org.freedesktop.secrets``"
 
 #: ../../sandbox-permissions-reference.rst:19
 msgid "Talk to a named service on the session bus"
-msgstr "Общение с названной службой на шине сеанса"
+msgstr "Общение с названной службой на сеансовой шине"
 
 #: ../../sandbox-permissions-reference.rst:20
 msgid "``--system-talk-name=org.freedesktop.GeoClue2``"
@@ -143,7 +143,7 @@ msgstr "``host``"
 #: ../../sandbox-permissions-reference.rst:31
 #, fuzzy
 msgid "Access all files [#f3]_"
-msgstr "Доступ ко всем файлам"
+msgstr "Доступ ко всем файлам [#f3]_"
 
 #: ../../sandbox-permissions-reference.rst:32
 msgid "``home``"
@@ -241,7 +241,7 @@ msgstr "``xdg-music``"
 #: ../../sandbox-permissions-reference.rst:43
 #, fuzzy
 msgid "Access the XDG config directory"
-msgstr "Доступ к домашнему каталогу"
+msgstr "Доступ к каталогу конфигурации XDG"
 
 #: ../../sandbox-permissions-reference.rst:44
 #, fuzzy
@@ -251,7 +251,7 @@ msgstr "``xdg-music``"
 #: ../../sandbox-permissions-reference.rst:44
 #, fuzzy
 msgid "Access the XDG cache directory"
-msgstr "Доступ к домашнему каталогу"
+msgstr "Доступ к каталогу кеша XDG"
 
 #: ../../sandbox-permissions-reference.rst:45
 #, fuzzy
@@ -261,7 +261,7 @@ msgstr "``xdg-desktop``"
 #: ../../sandbox-permissions-reference.rst:45
 #, fuzzy
 msgid "Access the XDG data directory"
-msgstr "Доступ к каталогу рабочего стола XDG"
+msgstr "Доступ к каталогу данных XDG"
 
 #: ../../sandbox-permissions-reference.rst:46
 #, fuzzy
@@ -273,6 +273,8 @@ msgid ""
 "Access subdirectories of the XDG runtime directory (where path is any "
 "subdirectory)"
 msgstr ""
+"Доступ подкаталогии XDG Runtime Directory (где путь любой "
+"подкаталог)"
 
 #: ../../sandbox-permissions-reference.rst:49
 msgid ""
@@ -323,11 +325,11 @@ msgstr ""
 "Предоставление доступа к сети также предоставляет доступ ко всем службам "
 "хоста, прослушивающим абстрактные сокеты Unix (из-за того, как работают "
 "сетевые пространства имен), и для них нет проверок разрешений. К "
-"сожалению, это влияет, например, на X-сервер и сеансовую шину, которая по"
-" умолчанию прослушивает абстрактные сокеты. Безопасный дистрибутив должен"
-" отключить их и просто использовать обычные сокеты."
+"сожалению, это влияет, например, на X-сервер и сеансовую шину, которая по "
+"умолчанию прослушивает абстрактные сокеты. Безопасный дистрибутив должен "
+"отключить их и просто использовать обычные сокеты."
 
 #: ../../sandbox-permissions-reference.rst:66
 msgid "Except for the blacklisted paths mentioned in :doc:`sandbox-permissions`."
-msgstr ""
+msgstr "За исключением черных списков, упомянутых в :doc:`sandbox-permissions`."
 
