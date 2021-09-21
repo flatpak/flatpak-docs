@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-14 17:03-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2021-09-21 20:20+0700\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../qt.rst:2
 msgid "Qt"
-msgstr ""
+msgstr "Qt"
 
 #: ../../qt.rst:4
 msgid ""
@@ -28,16 +28,23 @@ msgid ""
 "corresponding ``org.kde.Sdk`` sdk runtime) that will offer us most Qt "
 "modules and KDE Frameworks for our applications to use."
 msgstr ""
+"Для приложений на основе Qt мы имеем среду выполнения ``org.kde.Platform`` (и "
+"соответствующую среду выполнения sdk ``org.kde.Sdk``), которая предложит нам большинство модулей Qt "
+"и Frameworks KDE для наших приложений для использования."
+
+
 
 #: ../../qt.rst:8
 msgid ""
 "For example, the following YAML makes building a random Qt application "
 "really straight-forward."
 msgstr ""
+"Например, следующий YAML делает построение случайного применения Qt, "
+"действительно, простым."
 
 #: ../../qt.rst:35
 msgid "Contents"
-msgstr ""
+msgstr "Содержание"
 
 #: ../../qt.rst:37
 msgid ""
@@ -47,4 +54,8 @@ msgid ""
 "control, it's also possible to use the ``org.freedesktop.Platform`` as a "
 "base and bundle the parts of Qt you need."
 msgstr ""
-
+"Среда выполнения ``org.kde.Platform``, включает в себя все Qt, "
+"включая некоторые фрейворки KDE. Если вы обнаружите какие-либо проблемы, мы рекомендуем вам `сообщить о них "
+"<https://invent.kde.org/kde/flatpak-kde-runtime>`__. Если вы хотите больше "
+"контроля, также возможно использовать ``org.freedesktop.Platform`` в качестве "
+"основы и размещать детали Qt, которые вам необходимы."
