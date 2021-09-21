@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-14 17:03-0500\n"
-"PO-Revision-Date: 2021-07-24 17:42+0700\n"
+"PO-Revision-Date: 2021-09-21 22:42+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
 "Language: ru\n"
 "Language-Team: \n"
@@ -44,8 +44,9 @@ msgid ""
 "``~/.var/app/$FLATPAK_ID``, and ``$XDG_RUNTIME_DIR/app/$FLATPAK_ID``. "
 "Only the latter two being writable."
 msgstr ""
-"Нет доступа ни к каким файлам хоста, кроме среды выполнения, приложения и"
-" ``~/.var/app/$APPID``. Только последний из них доступен для записи."
+"Нет доступа к каким-либо файлам хоста, кроме среды выполнения, приложения, "
+"``~/.var/app/$FLATPAK_ID``, and ``$XDG_RUNTIME_DIR/app/$FLATPAK_ID``. "
+"Только  два последних доступны для записи."
 
 #: ../../sandbox-permissions.rst:12
 msgid "No access to the network."
@@ -54,8 +55,7 @@ msgstr "Нет доступа к сети."
 #: ../../sandbox-permissions.rst:13
 msgid "No access to any device nodes (apart from ``/dev/null``, etc)."
 msgstr ""
-"Нет доступа к каким-либо узлам устройства (кроме ``/dev/null``, etc и "
-"т.д.)."
+"Нет доступа к каким-либо узлам устройства (кроме ``/dev/null``, etc)."
 
 #: ../../sandbox-permissions.rst:14
 msgid "No access to processes outside the sandbox."
@@ -66,9 +66,9 @@ msgid ""
 "Limited syscalls.  For instance, apps can't use nonstandard network "
 "socket types or ptrace other processes."
 msgstr ""
-"Ограниченные системные вызовы.  Например, приложения не могут "
+"Ограниченные счета.  Например, приложения не могут "
 "использовать нестандартные типы сетевых сокетов или отслеживать другие "
-"процессы."
+"процессы ptrace."
 
 #: ../../sandbox-permissions.rst:17
 msgid ""
@@ -89,8 +89,6 @@ msgid ""
 "which can be configured through the ``finish-args`` section of the "
 "manifest file (see :doc:`manifests`)."
 msgstr ""
-"245 / 5000\n"
-"Результаты перевода\n"
 "Большинству приложений, чтобы быть полезными, потребуется доступ к "
 "некоторым из этих ресурсов. В первую очередь это делается на этапе "
 "завершающей сборки, который можно настроить в разделе ``finish-args`` "
@@ -107,7 +105,7 @@ msgid ""
 "framework for providing access to resources outside of the sandbox, "
 "including:"
 msgstr ""
-"Порталы уже упоминались в :doc:`Introduction`. Они представляют собой "
+"Порталы уже упоминались в :doc:`basic-concepts`. Они представляют собой "
 "основу для предоставления доступа к ресурсам за пределами песочницы, в "
 "том числе:"
 
@@ -212,8 +210,7 @@ msgid ""
 "which can be used on an as-needed basis, and which should be avoided."
 msgstr ""
 "Следующие рекомендации описывают, какие разрешения можно использовать "
-"свободно, какие можно использовать по мере необходимости, а каких следует"
-" избегать."
+"свободно, какие можно использовать по мере необходимости, а каких следует избегать."
 
 #: ../../sandbox-permissions.rst:72
 msgid "Standard permissions"
@@ -247,8 +244,7 @@ msgstr ""
 #: ../../sandbox-permissions.rst:81
 msgid "``--share=ipc`` - share IPC namespace with the host (necessary for X11)"
 msgstr ""
-"``--share=ipc`` - совместно использовать пространство имен IPC с хостом "
-"(необходимо для X11)"
+"``--share=ipc`` - совместно использовать пространство имен IPC с хостом (необходимо для X11)"
 
 #: ../../sandbox-permissions.rst:82
 msgid "``--socket=wayland`` - show windows with Wayland"
@@ -347,8 +343,8 @@ msgid ""
 "As a general rule, Filesystem access should be limited as much as "
 "possible. This includes:"
 msgstr ""
-"Как правило, доступ к файловой системе должен быть максимально ограничен."
-" Это включает:"
+"Как правило, доступ к файловой системе должен быть максимально "
+"ограничен. Это включает:"
 
 #: ../../sandbox-permissions.rst:121
 msgid ""
@@ -360,9 +356,7 @@ msgstr ""
 
 #: ../../sandbox-permissions.rst:123
 msgid "Using read-only access wherever possible, using the ``:ro`` option."
-msgstr ""
-"Использование доступа только для чтения везде, где это возможно, с "
-"использованием параметра ``:ro``."
+msgstr "Использование доступа только для чтения везде, где это возможно, с использованием параметра ``:ro``."
 
 #: ../../sandbox-permissions.rst:124
 msgid ""
@@ -393,8 +387,7 @@ msgstr ""
 "Параметр ``--persist=path`` может использоваться для отображения путей из"
 " домашнего каталога пользователя в файловую систему песочницы. Это "
 "позволяет избежать настройки доступа ко всему домашнему каталогу и может "
-"быть полезно для приложений, которые жестко шифруют пути к файлам в "
-"``~/``."
+"быть полезно для приложений, которые жестко шифруют пути к файлам в ``~/``."
 
 #: ../../sandbox-permissions.rst:136
 msgid ""
@@ -402,6 +395,9 @@ msgid ""
 "add a wrapper script that sets it to "
 "``$XDG_RUNTIME_DIR/app/$FLATPAK_ID``."
 msgstr ""
+"Если приложение использует ``$TMPDIR`` , чтобы содержать файлы блокировки, вы можете "
+"добавить скрипт обертки, который устанавливает его на "
+"``$XDG_RUNTIME_DIR/app/$FLATPAK_ID``."
 
 #: ../../sandbox-permissions.rst:138
 msgid ""
@@ -468,6 +464,9 @@ msgid ""
 "As of xdg-desktop-portal 1.1.0 and glib 2.60.5 (in the runtime) you do "
 "not need direct DConf access in most cases."
 msgstr ""
+"По состоянию на xdg-desktop-portal 1.1.0 и glib 2.60.5 (во время выполнения) вам не "
+"нужен прямой доступ DConf в большинстве случаев."
+
 
 #: ../../sandbox-permissions.rst:168
 msgid ""
@@ -475,6 +474,9 @@ msgid ""
 "``org.freedesktop.Platform//19.08`` and ``org.gnome.Platform//3.34`` and "
 "newer."
 msgstr ""
+"На данный момент эта версия glib включена в "
+"``org.freedesktop.Platform//19.08`` and ``org.gnome.Platform//3.34`` и "
+"новее."
 
 #: ../../sandbox-permissions.rst:171
 msgid ""
@@ -484,16 +486,23 @@ msgid ""
 "args``. The path must be similar to your app-id or it will not be allowed"
 " (case is ignored and ``_`` and ``-`` are treated equal)."
 msgstr ""
+"Если приложение существовало до этих runtimes, вы можете сообщить flatpak "
+"(>= 1.3.4), чтобы перенести настройки DConf на хосте в песочницу, "
+"добавив ``--metadata=X-DConf=migrate-path=/org/example/foo/`` в ``finish-"
+"args``. Путь должен быть похож на ваше ID приложения или его не допущено "
+" (случай игнорируется и ``_`` и ``-`` , обработанные одинаково)."
 
 #: ../../sandbox-permissions.rst:178
 msgid ""
 "If you are targeting older runtimes or require direct DConf access for "
 "other reasons you can use these permissions::"
 msgstr ""
+"Если вы нацеливаете более старые runtimes или требуют прямых доступа DConf по другим причинам, "
+"вы можете использовать эти разрешения::"
 
 #: ../../sandbox-permissions.rst:186
 msgid "With those permissions glib will continue using dconf directly."
-msgstr ""
+msgstr "С этими разрешениями glib продолжит использовать dconf напрямую."
 
 #~ msgid ""
 #~ "If an application uses ``$TMPDIR`` to"
