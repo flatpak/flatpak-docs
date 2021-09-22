@@ -118,7 +118,7 @@ msgstr ""
 
 #: ../../usb-drives.rst:40
 msgid "Now copy the flatpak and its dependencies to the drive::"
-msgstr "Теперь скопируйте flatpak и его зависимости на накопитель"
+msgstr "Теперь скопируйте flatpak и его зависимости на накопитель::"
 
 #: ../../usb-drives.rst:44
 msgid ""
