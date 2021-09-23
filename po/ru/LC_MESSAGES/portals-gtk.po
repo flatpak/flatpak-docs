@@ -64,12 +64,11 @@ msgstr ""
 
 #: ../../portals-gtk.rst:16
 msgid "Use ``gtk_application_inhibit()`` if you want to inhibit idle or logout"
-msgstr ""
-"Используйте ``gtk_application_inhibit()`` если вы хотите запретить простаивать или для выхода"
+msgstr "Используйте ``gtk_application_inhibit()`` если вы хотите запретить простаивать или для выхода"
 
 #: ../../portals-gtk.rst:17
 msgid "Use ``g_application_send_notification()`` to show notifications"
-msgstr ""Используйте ``g_application_send_notification()`` для отображения уведомлений"
+msgstr "Используйте ``g_application_send_notification()`` для отображения уведомлений"
 
 #: ../../portals-gtk.rst:18
 msgid ""
