@@ -29,7 +29,7 @@ msgid ""
 " Internet access is limited or non-existent."
 msgstr ""
 "Можно распространять flatpaks-пакеты вместе с их зависимостями на USB-накопителях "
-"(или общих сетевых ресурсах и т. Д.), Что особенно полезно в ситуациях,"
+"(или общих сетевых ресурсах и т. Д.), Что особенно полезно в ситуациях, если"
 " доступ в Интернет ограничен или отсутствует."
 
 #: ../../usb-drives.rst:8
@@ -118,7 +118,7 @@ msgstr ""
 
 #: ../../usb-drives.rst:40
 msgid "Now copy the flatpak and its dependencies to the drive::"
-msgstr "Теперь скопируйте flatpak и его зависимости на накопитель"
+msgstr "Теперь скопируйте flatpak и его зависимости на накопитель::"
 
 #: ../../usb-drives.rst:44
 msgid ""
