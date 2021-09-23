@@ -208,6 +208,11 @@ msgid ""
 "stores see `Appdata files <http://docs.flatpak.org/en/latest/freedesktop-"
 "quick-reference.html#appdata-files>`_."
 msgstr ""
+"Чтобы ваше приложение отображалось в магазинах приложений во время "
+"тестирования с локальным репозиторием, вам, возможно, придется запустить репозиторий flatpak build-"
+"update-repo. Для получения дополнительной информации о публикации в магазинах приложений "
+"см. `Файлы Appdata <http://docs.flatpak.org/en/latest/freedesktop-"
+"quick-reference.html#appdata-files>`_."
 
 #: ../../first-build.rst:113
 msgid "7. Install the app"
