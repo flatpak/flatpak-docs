@@ -44,6 +44,7 @@ msgid ""
 msgstr ""
 "Значки приложений могут быть в формате png или svg, должны использовать "
 "appid в качестве префикса и располагаться в "
+"``/app/share/icons/hicolor/$size/apps/``"
 
 #: ../../freedesktop-quick-reference.rst:15
 #: ../../freedesktop-quick-reference.rst:49
@@ -72,16 +73,18 @@ msgid ""
 "about how to launch the application, its icon and categories among "
 "others."
 msgstr ""
+"Файлы рабочего стола используются средами рабочего стола для идентификации и "
+"отображения доступных приложений пользователю, они содержат информацию "
+"о том, как запустить приложение, его значок и категории среди "
+"прочего."
 
 #: ../../freedesktop-quick-reference.rst:33
 msgid ""
 "A minimal desktop file needs at least the application's *Name*, *Exec* "
 "command, *Type* and *Icon*:"
 msgstr ""
-"Файлы рабочего стола используются средами рабочего стола для идентификации и "
-"отображения доступных приложений пользователю, они содержат информацию "
-"о том, как запустить приложение, его значок и категории среди "
-"прочего."
+"Минимальный файл рабочего стола требует как минимум  *Name*, *Exec* "
+"команды приложения, *Type* and *Icon*:"
 
 #: ../../freedesktop-quick-reference.rst:44
 msgid ""
