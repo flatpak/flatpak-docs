@@ -74,7 +74,7 @@ msgid ""
 "In this tutorial we will use the Freedesktop 21.08 runtime and SDK. To "
 "install these, run::"
 msgstr ""
-"В этом руководстве мы будем использовать среду выполнения Freedesktop 1.6"
+"В этом руководстве мы будем использовать среду выполнения Freedesktop 21.08"
 " и SDK. Чтобы установить их, запустите::"
 
 #: ../../first-build.rst:28
