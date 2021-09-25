@@ -116,7 +116,7 @@ msgid ""
 "``org.flatpak.Hello.yml``."
 msgstr ""
 "Теперь сохраните файл вместе с ``hello.sh`` и назовите его "
-"``org.flatpak.Hello.json``."
+"``org.flatpak.Hello.yml``."
 
 #: ../../first-build.rst:64
 msgid ""
