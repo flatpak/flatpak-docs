@@ -59,14 +59,13 @@ msgstr ""
 " команды ``flatpak`` или другого пользовательского интерфейса, такого как GNOME Software или "
 "KDE Discover."
 
-
 #: ../../introduction.rst:14
 msgid ""
 "Runtime: also called platforms, these are integrated platforms to provide"
 " basic utilities needed for a Flatpak application to work."
 msgstr ""
-"Среда выполнения: также называемые платформами, это интегрированные платформы для предоставления "
-"основных утилит, необходимых для работы приложения Flatpak."
+"Среда выполнения: также называемые платформами, это интегрированные платформы для предоставления"
+" основных утилит, необходимых для работы приложения Flatpak."
 
 #: ../../introduction.rst:16
 msgid "BaseApp: these are integrated platforms for frameworks like Electron."
@@ -108,8 +107,8 @@ msgstr ""
 "Хотя Flatpak работает только в Linux, его могут использовать приложения, "
 "ориентированные на другие операционные системы, а также в специфичные для"
 " Linux. Приложения могут быть с открытым исходным кодом или "
-"проприетарными (хотя некоторые службы распространения, такие как `Flathub"
-" <https://flathub.org/>`_, могут иметь ограничения в этом отношении)."
+"проприетарными (хотя некоторые службы распространения, такие как `Flathub "
+"<https://flathub.org/>`_, могут иметь ограничения в этом отношении)."
 
 #: ../../introduction.rst:32
 msgid ""
@@ -117,10 +116,10 @@ msgid ""
 "follow a small number of Freedesktop standards, in order to enable "
 "desktop integration (see :doc:`conventions`)."
 msgstr ""
-"Единственные технические требования, предъявляемые Flatpak, заключаются в"
-" том, что приложения должны соответствовать небольшому количеству "
+"Единственные технические требования, предъявляемые Flatpak, заключаются в "
+"том, что приложения должны соответствовать небольшому количеству "
 "стандартов Freedesktop, чтобы обеспечить интеграцию с рабочим столом (см."
-" :doc:`conventions`)."
+":doc:`conventions`)."
 
 #: ../../introduction.rst:37
 msgid "Issues of current model of packaging"
