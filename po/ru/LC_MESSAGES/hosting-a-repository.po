@@ -61,7 +61,6 @@ msgstr ""
 " на котором размещен ваш репозиторий."
 
 #: ../../hosting-a-repository.rst:21
-#, fuzzy
 msgid ""
 "Flatpak supports something called static deltas. These are single files "
 "that contain all the data needed to go between two revisions (or from "
