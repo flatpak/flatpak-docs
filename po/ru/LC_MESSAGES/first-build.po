@@ -35,7 +35,6 @@ msgstr ""
 "установить и запустить."
 
 #: ../../first-build.rst:8
-#, fuzzy
 msgid ""
 "In order to complete this tutorial, you should have followed the `setup "
 "guide on flatpak.org <http://flatpak.org/setup/>`_. You also need to have"
@@ -69,7 +68,6 @@ msgstr ""
 " для среды выполнения."
 
 #: ../../first-build.rst:22
-#, fuzzy
 msgid ""
 "In this tutorial we will use the Freedesktop 21.08 runtime and SDK. To "
 "install these, run::"
@@ -110,7 +108,6 @@ msgstr ""
 "пустой файл следующее:"
 
 #: ../../first-build.rst:61
-#, fuzzy
 msgid ""
 "Now save the file alongside ``hello.sh`` and call it "
 "``org.flatpak.Hello.yml``."
@@ -170,7 +167,6 @@ msgid "6. Put the app in a repository"
 msgstr "6. Поместите приложение в репозиторий."
 
 #: ../../first-build.rst:93
-#, fuzzy
 msgid ""
 "If you want to share the application you can put it in a repository. This"
 " is done by passing the ``--repo`` argument to ``flatpak-builder``::"
@@ -198,7 +194,8 @@ msgid ""
 "build was started."
 msgstr ""
 "Во второй раз мы передали ``--force-clean``, что означает, что ранее "
-"созданный каталог ``build-dir`` был удален до запуска новой сборки."
+"созданный каталог ``build-dir`` был удален до "
+"запуска новой сборки."
 
 #: ../../first-build.rst:108
 msgid ""
