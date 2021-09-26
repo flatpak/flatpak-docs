@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2021-09-21 00:10+0700\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../portals-qt.rst:2
+msgid "Portal support in Qt and KDE"
+msgstr "Поддержка портала в Qt и KDE"
+
+#: ../../portals-qt.rst:4
+msgid ""
+"Qt and KDE libraries will transparently use portals for some "
+"functionality when they detect that they are being used inside a Flatpak "
+"sandbox. Here are some hints for what Qt or KDE applications should do to"
+" benefit from this."
+msgstr ""
+"Библиотеки Qt и KDE будут прозрачно использовать порталы для некоторых "
+"функций, когда обнаружат, что они используются внутри песочницы "
+"Flatpak. Вот несколько советов о том, что следует делать приложениям Qt или KDE,"
+" чтобы извлечь из этого пользу."
+
+#: ../../portals-qt.rst:8
+msgid ""
+"Use ``QDesktopServices::openUrl(const QUrl &url)`` or ``KIO::KRun`` to "
+"open URIs or send an email when using ``mailto`` URL"
+msgstr ""
+"Используйте ``QDesktopServices::openUrl(const QUrl &url)`` or ``KIO::KRun``, чтобы "
+"открывать URI или отправлять электронное письмо при использовании URL mailto."
+
+#: ../../portals-qt.rst:10
+msgid ""
+"Use ``QFileDialog`` class to open files. Avoid using "
+"``QFileDialog::DontUseNativeDialog``. Note that portals cannot currently "
+"give access to directories on the host filesystem"
+msgstr ""
+"Для открытия файлов используйте класс ``QFileDialog`` Избегайте использования "
+"``QFileDialog::DontUseNativeDialog``. Обратите внимание, что порталы в настоящее время "
+"не могут предоставлять доступ к каталогам в файловой системе хоста"
+
+#: ../../portals-qt.rst:13
+msgid "Use ``KNotification::notify()`` to show notification"
+msgstr "Используйте ``KNotification::notify()``, чтобы показать уведомление "
