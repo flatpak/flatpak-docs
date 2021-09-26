@@ -139,7 +139,6 @@ msgstr ""
 "Дополнительную информацию см. В `документации API порталов: "
 "<https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_"
 
-
 #: ../../desktop-integration.rst:55
 msgid "Notifications"
 msgstr "Уведомления"
@@ -285,7 +284,6 @@ msgstr ""
 "Если ваше приложение использует встроенный «GtkApplication: menu-bar» или "
 "его эквивалент в Qt 5, они будут работать должным образом из изолированного "
 "приложения."
-
 
 #: ../../desktop-integration.rst:119
 msgid "Theming"
@@ -450,9 +448,6 @@ msgstr ""
 "или вручную настроить ключи dconf в ``/org/gnome/desktop/interface/``. Чтобы"
 " опция DConf работала в Wayland, приложение также должно быть настроено "
 "для доступа к DConf."
-
-
-
 
 #: ../../desktop-integration.rst:161
 msgid "Other notes on theming"
