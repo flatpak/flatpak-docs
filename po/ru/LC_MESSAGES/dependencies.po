@@ -138,9 +138,7 @@ msgstr "библиотеки, которых нет в выбранной вам
 
 #: ../../dependencies.rst:54
 msgid "different versions of libraries that are in your chosen runtime"
-msgstr ""
-"разные версии библиотек, которые находятся в выбранной вами среде "
-"выполнения"
+msgstr "разные версии библиотек, которые находятся в выбранной вами среде выполнения"
 
 #: ../../dependencies.rst:55
 msgid "patched versions of libraries"
@@ -187,7 +185,6 @@ msgid "Base apps"
 msgstr "Базовые приложения"
 
 #: ../../dependencies.rst:75
-#, fuzzy
 msgid ""
 "Runtimes and bundling are the two main ways in which dependencies are "
 "handled with Flatpak. They allow applications to rely on stable "
@@ -212,7 +209,6 @@ msgstr ""
 "серии отдельных модулей. Вот тут-то и пригодятся *base apps*."
 
 #: ../../dependencies.rst:84
-#, fuzzy
 msgid ""
 "Base apps contain collections of bundled dependencies which can then be "
 "bundled as part of an application. They don't get rebuilt as part of the "
