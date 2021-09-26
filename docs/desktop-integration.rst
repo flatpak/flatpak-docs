@@ -99,7 +99,7 @@ this is the right side of the window (like Windows).
 On X11 applications can rely on system-provided titlebars if they don't
 want to draw their own window controls. For a consistent Wayland experience
 applications must always provide their own.
-See `libdecoration <https://gitlab.gnome.org/jadahl/libdecoration>`_ for a
+See `libdecor <https://gitlab.gnome.org/jadahl/libdecor>`_ for a
 general solution.
 
 Window decorations
