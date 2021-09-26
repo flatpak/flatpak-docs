@@ -165,7 +165,6 @@ msgstr ""
 "шины, принадлежащим logind."
 
 #: ../../debugging.rst:76
-#, fuzzy
 msgid "Inspecting portal permissions"
 msgstr "Переопределение разрешений песочницы"
 
