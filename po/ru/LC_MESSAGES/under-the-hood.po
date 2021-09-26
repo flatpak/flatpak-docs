@@ -43,7 +43,6 @@ msgid "\"Git for apps\""
 msgstr "\"Git for apps\""
 
 #: ../../under-the-hood.rst:13
-#, fuzzy
 msgid ""
 "Flatpak is built on top of a technology called `OSTree "
 "<https://ostreedev.github.io/ostree/introduction/>`_, which is influenced"
@@ -61,7 +60,6 @@ msgstr ""
 "отслеживания двоичных файлов и других больших данных."
 
 #: ../../under-the-hood.rst:20
-#, fuzzy
 msgid ""
 "Internally, Flatpak therefore works in a similar way to Git, and many "
 "Flatpak concepts are analogous to Git concepts. Like Git, Flatpak uses "
@@ -184,7 +182,6 @@ msgstr ""
 "приложений"
 
 #: ../../under-the-hood.rst:65
-#, fuzzy
 msgid ""
 "The `OSTree <https://ostree.readthedocs.io/en/latest/>`__ system for "
 "versioning and distributing filesystem trees"
