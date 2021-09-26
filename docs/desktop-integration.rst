@@ -96,8 +96,11 @@ From a user experience perspective, it is important to ensure that window
 controls appear on the same side of the window as other desktops. On Linux
 this is the right side of the window (like Windows).
 
-Applications can rely on system-provided titlebars on Linux, if they don't
-want to draw their own window controls.
+On X11 applications can rely on system-provided titlebars if they don't
+want to draw their own window controls. For a consistent Wayland experience
+applications must always provide their own.
+See `libdecoration <https://gitlab.gnome.org/jadahl/libdecoration>`_ for a
+general solution.
 
 Window decorations
 ------------------
