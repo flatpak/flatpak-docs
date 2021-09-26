@@ -38,7 +38,6 @@ msgstr ""
 " имеют чрезвычайно ограниченный доступ к среде хоста. Это включает:"
 
 #: ../../sandbox-permissions.rst:9
-#, fuzzy
 msgid ""
 "No access to any host files except the runtime, the app, "
 "``~/.var/app/$FLATPAK_ID``, and ``$XDG_RUNTIME_DIR/app/$FLATPAK_ID``. "
@@ -99,7 +98,6 @@ msgid "Portals"
 msgstr "Порталы"
 
 #: ../../sandbox-permissions.rst:29
-#, fuzzy
 msgid ""
 "Portals have already been mentioned in :doc:`basic-concepts`. They are a "
 "framework for providing access to resources outside of the sandbox, "
@@ -166,7 +164,6 @@ msgstr ""
 "контроль над тем, к чему их приложения имеют доступ."
 
 #: ../../sandbox-permissions.rst:51
-#, fuzzy
 msgid ""
 "Interface toolkits like GTK3 and Qt5 implement transparent support for "
 "portals, meaning that applications don't need to do any additional work "
@@ -233,7 +230,6 @@ msgid "``--socket=x11`` - show windows using X11"
 msgstr "``--socket=x11`` - показать окна с помощью X11"
 
 #: ../../sandbox-permissions.rst:79
-#, fuzzy
 msgid ""
 "``--socket=fallback-x11`` - show windows using X11, if Wayland is not "
 "available, overrides ``x11`` socket permission"
@@ -294,7 +290,6 @@ msgid "**Talk**"
 msgstr "**Talk**"
 
 #: ../../sandbox-permissions.rst:102
-#, fuzzy
 msgid ""
 "Talk permissions can be freely used, although it is recommended to use "
 "the minimum required."
@@ -307,7 +302,6 @@ msgid "Filesystem access"
 msgstr "Доступ к файловой системе"
 
 #: ../../sandbox-permissions.rst:108
-#, fuzzy
 msgid ""
 "It is common for applications to require access to different parts of the"
 " host filesystem, and Flatpak provides a flexible set of options for "
@@ -338,7 +332,6 @@ msgid "``--filesystem=xdg-download`` - access a specific XDG folder"
 msgstr "``--filesystem=xdg-download`` - доступ к определенной папке XDG"
 
 #: ../../sandbox-permissions.rst:118
-#, fuzzy
 msgid ""
 "As a general rule, Filesystem access should be limited as much as "
 "possible. This includes:"
@@ -367,7 +360,6 @@ msgstr ""
 "доступ к каталогу XDG."
 
 #: ../../sandbox-permissions.rst:127
-#, fuzzy
 msgid ""
 "The full list of available filesystem options can be found in the :doc"
 ":`sandbox-permissions-reference`. Other filesystem access guidelines "
@@ -466,7 +458,6 @@ msgid ""
 msgstr ""
 "По состоянию на xdg-desktop-portal 1.1.0 и glib 2.60.5 (во время выполнения) вам не "
 "нужен прямой доступ DConf в большинстве случаев."
-
 
 #: ../../sandbox-permissions.rst:168
 msgid ""
