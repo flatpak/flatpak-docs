@@ -47,7 +47,6 @@ msgstr ""
 "использовать."
 
 #: ../../electron.rst:12
-#, fuzzy
 msgid ""
 "The guide walks through the `manifest file <https://github.com/flathub"
 "/electron-sample-app/blob/master/flatpak/org.flathub.electron-sample-"
@@ -75,7 +74,6 @@ msgstr ""
 "запустить образец приложения самостоятельно."
 
 #: ../../electron.rst:26
-#, fuzzy
 msgid ""
 "To get setup for the build, download or clone the sample app from GitHub,"
 " and navigate to the ``/flatpak`` directory in the terminal. You must "
@@ -121,17 +119,15 @@ msgid "The Electron base app"
 msgstr "Базовое приложение Electron"
 
 #: ../../electron.rst:61
-#, fuzzy
 msgid ""
 "Next, the manifest specifies that the Electron base app should be used, "
 "by specifying the ``base`` and ``base-version`` properties in the "
 "application manifest:"
 msgstr ""
 "Затем в манифесте указано, что следует использовать базовое приложение "
-"Electron, указав свойства base и base-version в манифесте приложения::"
+"Electron, указав свойства base и base-version в манифесте приложения:"
 
 #: ../../electron.rst:70
-#, fuzzy
 msgid ""
 "Base apps are described in :doc:`dependencies`.  Using the Electron base "
 "app is much faster and more convenient than manually building Electron "
@@ -266,12 +262,9 @@ msgstr "Объединение пакетов NPM"
 
 #: ../../electron.rst:180
 msgid "The next line is how NPM modules get bundled as part of Flatpaks:"
-msgstr ""
-"В следующей строке показано, как модули NPM объединяются как часть "
-"Flatpaks:"
+msgstr "В следующей строке показано, как модули NPM объединяются как часть Flatpaks:"
 
 #: ../../electron.rst:186
-#, fuzzy
 msgid ""
 "Since even simple Node.js applications depend on dozens of packages, it "
 "would be impractical to specify all of them as part of a manifest file. A"
@@ -287,7 +280,6 @@ msgstr ""
 "включения их в исходные коды приложения."
 
 #: ../../electron.rst:192
-#, fuzzy
 msgid ""
 "The Python script requires a ``package-lock.json`` (or ``yarn.lock``) "
 "file. This file contains information about the packages that an "
@@ -302,7 +294,6 @@ msgstr ""
 "образом::"
 
 #: ../../electron.rst:199
-#, fuzzy
 msgid ""
 "This generates the manifest JSON needed to build the NPM/Yarn packages "
 "for the application, which are outputted to a file called ``generated-"
@@ -324,7 +315,6 @@ msgid "Launching the app"
 msgstr "Запуск приложения"
 
 #: ../../electron.rst:209
-#, fuzzy
 msgid ""
 "The Electron app is run through a simple script. This can be given any "
 "name but must be specified in the manifest's ``\"command\":`` property. "
@@ -339,7 +329,6 @@ msgid "Build commands"
 msgstr "Команды сборки"
 
 #: ../../electron.rst:223
-#, fuzzy
 msgid ""
 "Last but not least, since the simple build option is being used, a list "
 "of build commands must be provided. As can be seen, ``npm`` is run with "
