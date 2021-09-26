@@ -68,7 +68,6 @@ msgid "Application IDs"
 msgstr "Идентификаторы приложений"
 
 #: ../../conventions.rst:23
-#, fuzzy
 msgid ""
 "As described in :doc:`using-flatpak`, Flatpak requires each application "
 "to have a unique identifier, which has a form such as "
@@ -234,7 +233,9 @@ msgstr ""
 msgid ""
 "For example, the path to the 128✕128px version of GNOME Dictionary's icon"
 " is::"
-msgstr "Например, путь к значку GNOME Dictionary 128✕128px:"
+msgstr ""
+"Например, путь к значку GNOME Dictionary"
+" 128✕128px::"
 
 #: ../../conventions.rst:98
 msgid "Desktop files"
@@ -419,7 +420,6 @@ msgstr ""
 "``g_get_user_config_dir ()``"
 
 #: ../../conventions.rst:183
-#, fuzzy
 msgid ""
 "Qt: provides access to XDG base directories with the `QStandardPaths "
 "Class <http://doc.qt.io/qt-5/qstandardpaths.html>`_"
