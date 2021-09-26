@@ -82,7 +82,6 @@ msgstr ""
 "Вы можете разместить более одного приложения в одном репозитории, "
 "используя один и тот же путь ``--repo`` для многократных вызовов ``flatpak-builder``."
 
-
 #: ../../flatpak-builder.rst:34
 msgid ""
 "By default, ``flatpak-builder`` splits off translations and debug "
