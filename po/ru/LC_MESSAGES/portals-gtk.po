@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2021-09-20 23:37+0700\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Language-Team: LANGUAGE ru_RU<>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../portals-gtk.rst:2
+msgid "Portal support in GTK"
+msgstr "Поддержка портала в GTK"
+
+#: ../../portals-gtk.rst:4
+msgid ""
+"GTK will transparently use portals for some functionality when it detects"
+" that it is being used inside a Flatpak sandbox. Here are some hints for "
+"what GTK applications should do to benefit from this."
+msgstr ""
+"GTK будет прозрачно использовать порталы для некоторых функций, когда обнаружит,"
+" что используется внутри песочницы Flatpak. Вот несколько советов о том, "
+"что должны делать приложения GTK, чтобы извлечь из этого пользу."
+
+#: ../../portals-gtk.rst:8
+msgid ""
+"Use ``g_get_user_config_dir()``, ``g_get_user_cache_dir()`` and "
+"``g_get_user_data_dir()`` to find the right place to store configuration "
+"and data"
+msgstr ""
+"Используйте ``g_get_user_config_dir()``, ``g_get_user_cache_dir()`` и "
+"``g_get_user_data_dir()`` Чтобы найти правильное место для хранения конфигурации "
+"и данных."
+
+#: ../../portals-gtk.rst:11
+msgid ""
+"Use ``GtkFileChooserNative`` (or ``GtkFileChooserButton``) to open files."
+" As of `xdg-desktop-portal-gtk` 1.7.1 it can also open directories."
+msgstr ""
+"Используйте ``GtkFileChooserNative`` (или ``GtkFileChooserButton``), чтобы открыть файлы."
+" Поскольку «xdg-desktop-portal-gtk» 1.7.1 он также может открыть каталоги."
+
+#: ../../portals-gtk.rst:13
+msgid "Use ``GtkPrintOperation`` for printing"
+msgstr "Используйте ``GtkPrintOperation`` для печати"
+
+#: ../../portals-gtk.rst:14
+msgid ""
+"Use ``gtk_show_uri_on_window()`` or "
+"``g_app_info_launch_default_for_uri()`` to open URIs"
+msgstr ""
+"Используйте ``gtk_show_uri_on_window()`` или "
+"``g_app_info_launch_default_for_uri()`` Чтобы открыть URI"
+
+#: ../../portals-gtk.rst:16
+msgid "Use ``gtk_application_inhibit()`` if you want to inhibit idle or logout"
+msgstr "Используйте ``gtk_application_inhibit()`` если вы хотите запретить простаивать или для выхода"
+
+#: ../../portals-gtk.rst:17
+msgid "Use ``g_application_send_notification()`` to show notifications"
+msgstr "Используйте ``g_application_send_notification()`` для отображения уведомлений"
+
+#: ../../portals-gtk.rst:18
+msgid ""
+"Use the ``GtkApplication::screensaver-active`` property to monitor "
+"scrensaver status"
+msgstr ""
+"Используйте свойство ``GtkApplication::screensaver-active`` для отслеживания "
+"статуса экранной заставки"
