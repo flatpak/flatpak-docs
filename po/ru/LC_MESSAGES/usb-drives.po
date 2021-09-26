@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2021-09-22 20:15+0700\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Language-Team: LANGUAGE ru_RU<>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../usb-drives.rst:2
+msgid "USB Drives"
+msgstr "USB-накопители"
+
+#: ../../usb-drives.rst:4
+msgid ""
+"One can distribute flatpaks along with their dependencies on USB drives "
+"(or network shares, etc.) which is especially helpful in situations where"
+" Internet access is limited or non-existent."
+msgstr ""
+"Можно распространять flatpaks-пакеты вместе с их зависимостями на USB-накопителях "
+"(или общих сетевых ресурсах и т. Д.), Что особенно полезно в ситуациях, если"
+" доступ в Интернет ограничен или отсутствует."
+
+#: ../../usb-drives.rst:8
+msgid "For offline distribution to work there are a few prerequisites:"
+msgstr "Для работы автономного распространения есть несколько предварительных условий:"
+
+#: ../../usb-drives.rst:10
+msgid ""
+"the remote repositories providing the app or any of its dependencies must"
+" utilize GPG signatures"
+msgstr ""
+"удаленные репозитории, предоставляющие приложение или любые его зависимости,"
+" должны использовать подписи GPG"
+
+#: ../../usb-drives.rst:12
+msgid "the remote repos must all have a collection ID set on the server side"
+msgstr "все удаленные репозитории должны иметь идентификатор коллекции, установленный на стороне сервера"
+
+#: ../../usb-drives.rst:13
+msgid ""
+"the locally configured remotes must have a collection ID set (on the "
+"client side)"
+msgstr ""
+"локально настроенные удалённые репозитории должны иметь набор идентификаторов (на "
+"стороне клиента)"
+
+#: ../../usb-drives.rst:15
+msgid ""
+"the relevant remotes must be configured on the receiving computer (the "
+"one installing from the drive)"
+msgstr ""
+"соответствующие удалённые репозитории должны быть настроены на принимающем компьютере "
+"(тот, который устанавливается с накопителя)"
+
+#: ../../usb-drives.rst:18
+msgid ""
+"Apps can then be copied to USB drives using `the flatpak create-usb "
+"command <https://docs.flatpak.org/en/latest/flatpak-command-"
+"reference.html#flatpak-create-usb>`_. You can refer to `this blog post "
+"<https://blogs.gnome.org/mclasen/2018/08/26/about-flatpak-"
+"installations/>`__ for an introduction."
+msgstr ""
+"Затем приложения можно скопировать на USB-накопители с помощью команды `the flatpak create-usb "
+"<https://docs.flatpak.org/en/latest/flatpak-command-"
+"reference.html#flatpak-create-usb>`_. Вы можете обратиться к `этому сообщению в блоге "
+"<https://blogs.gnome.org/mclasen/2018/08/26/about-flatpak-"
+"installations/>`__ for an introduction."
+
+#: ../../usb-drives.rst:24
+msgid "For example, if you want to put Gedit on a USB drive:"
+msgstr "Например, если вы хотите поместить Gedit на USB-накопитель:"
+
+#: ../../usb-drives.rst:26
+msgid ""
+"First identify the Application ID using ``flatpak list --app``. In the "
+"case of Gedit it is ``org.gnome.gedit``. Use ``flatpak info -o "
+"org.gnome.gedit`` to determine the origin remote. For example that may be"
+" ``flathub``."
+msgstr ""
+"Сначала определите идентификатор приложения с помощью ``flatpak list --app``. В "
+"случае Gedit это org.gnome.gedit. Используйте flatpak info -o "
+"org.gnome.gedit, чтобы определить удаленный источник. Например, это может быть"
+" ``flathub``."
+
+#: ../../usb-drives.rst:31
+msgid ""
+"Ensure the origin remote has a collection ID set by using ``flatpak "
+"remotes -d`` and checking the \"Collection ID\" column. If not, configure"
+" one with e.g. ``flatpak remote-modify --collection-id=org.flathub.Stable"
+" flathub``. If any dependencies come from other remotes, those will also "
+"need a collection ID configured."
+msgstr ""
+"Убедитесь, что исходный удалённый репозиторий имеет идентификатор коллекции, используя "
+"команду ``flatpak remotes -d`` и проверив столбец \"Collection ID\" Если нет, настройте" 
+" его, например, ``flatpak remote-modify --collection-id=org.flathub.Stable"
+" flathub``. Если какие-либо зависимости исходят от других удалённых репозиториев, им также "
+"потребуется настроенный идентификатор коллекции."
+
+#: ../../usb-drives.rst:37
+msgid ""
+"Next, use the ``df`` command to identify the mount point for the USB "
+"drive. It may be something like ``/media/user/FLATPAKS``."
+msgstr ""
+"Затем используйте команду ``df``, чтобы определить точку монтирования для USB-"
+"накопителя. Это может быть что-то вроде ``/media/user/FLATPAKS``."
+
+#: ../../usb-drives.rst:40
+msgid "Now copy the flatpak and its dependencies to the drive::"
+msgstr "Теперь скопируйте flatpak и его зависимости на накопитель::"
+
+#: ../../usb-drives.rst:44
+msgid ""
+"Wait for the copying process to complete, at which point you should get a"
+" command prompt (``$``). This process can take tens of minutes especially"
+" if the USB drive and USB port aren't USB 3.0+. Then unmount the drive "
+"before removing it::"
+msgstr ""
+"Дождитесь завершения процесса копирования, после чего вы должны получить"
+" командную строку (``$``). Этот процесс может занять десятки минут, особенно"
+" если USB-накопитель и USB-порт не являются USB 3.0+. Затем отключите накопитель "
+"перед его извлечением::"
+
+#: ../../usb-drives.rst:52
+msgid ""
+"The process for installing from such a USB drive (for example on an "
+"offline machine) differs between Flatpak versions before 1.8.0 and those "
+"after. With earlier versions you can simply use the ``flatpak install`` "
+"command as you normally would online::"
+msgstr ""
+"Процесс установки с такого USB-накопителя (например, на "
+"автономном компьютере) отличается для версий Flatpak до 1.8.0 и более "
+"поздних. В более ранних версиях вы можете просто использовать команду "
+"``flatpak install`` , как и online.::"
+
+#: ../../usb-drives.rst:59
+msgid ""
+"For versions after 1.8.0, if your linux distribution has packaged `the "
+"relevant systemd units <https://github.com/flatpak/flatpak/tree/master"
+"/sideload-repos-systemd>`__, using ``flatpak install`` with no extra "
+"arguments still works. Otherwise, you can use the ``--sideload-repo`` "
+"option in your command invocation::"
+msgstr ""
+"Для версий после 1.8.0, если в вашем дистрибутиве Linux были упакованы "
+"соответствующие модули systemd <https://github.com/flatpak/flatpak/tree/master"
+"/sideload-repos-systemd>`__, используя ``flatpak install`` без дополнительных "
+"аргументов все еще работает. В противном случае вы можете использовать параметр "
+"``--sideload-repo`` при вызове команды."
+
+#: ../../usb-drives.rst:67
+msgid "The ``flatpak update`` command also accepts a ``--sideload-repo`` option."
+msgstr "Команда ``flatpak update`` также принимает параметр ``--sideload-repo``"
+
+#: ../../usb-drives.rst:69
+msgid ""
+"Alternatively, it's possible to specify sideload sources using symbolic "
+"links placed in system-wide or user-specific directories and such sources"
+" will then be used for all Flatpak operations without the need for a "
+"``--sideload-repo`` option. See `the flatpak man page "
+"<https://docs.flatpak.org/en/latest/flatpak-command-"
+"reference.html#flatpak>`__."
+msgstr ""
+"В качестве альтернативы можно указать источники неопубликованной загрузки, используя символические "
+"ссылки, размещенные в общесистемных или пользовательских каталогах, и такие источники"
+" затем будут использоваться для всех операций Flatpak без необходимости "
+"в опции ``--sideload-repo``. См. Справочную страницу по flatpak: "
+"<https://docs.flatpak.org/en/latest/flatpak-command-"
+"reference.html#flatpak>`__."
