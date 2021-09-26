@@ -25,7 +25,6 @@ msgid "Introduction to Flatpak"
 msgstr "Введение в Flatpak"
 
 #: ../../introduction.rst:4
-#, fuzzy
 msgid ""
 "Flatpak is a framework for distributing desktop applications across "
 "various Linux distributions. It has been created by developers who have a"
@@ -286,7 +285,6 @@ msgstr ""
 "распространению приложений в Linux:"
 
 #: ../../introduction.rst:90
-#, fuzzy
 msgid ""
 "**Decentralized by design**: while Flatpak does provide a centralized "
 "service for distributing applications, it also allows decentralized "
@@ -300,7 +298,6 @@ msgstr ""
 "приложений."
 
 #: ../../introduction.rst:94
-#, fuzzy
 msgid ""
 "**Desktop integration**: Flatpak also offers native integration for the "
 "main Linux desktops, so that users can easily browse, install, run and "
@@ -331,7 +328,6 @@ msgid "Other benefits for developers include:"
 msgstr "Другие преимущества для разработчиков:"
 
 #: ../../introduction.rst:104
-#, fuzzy
 msgid ""
 "**Forward-compatibility**: the same Flatpak application can be run on "
 "different versions of the same distribution, including versions that "
@@ -344,7 +340,6 @@ msgstr ""
 " со стороны разработчиков приложений."
 
 #: ../../introduction.rst:107
-#, fuzzy
 msgid ""
 "**Bundling**: this allows application developers to ship almost any "
 "dependency or library as part of their application. This gives complete "
@@ -355,7 +350,6 @@ msgstr ""
 "контроль над тем, какое программное обеспечение используется для создания приложений."
 
 #: ../../introduction.rst:110
-#, fuzzy
 msgid ""
 "**Consistent application environments**: because these are the same "
 "across devices, applications perform as intended. This also makes it "
@@ -374,7 +368,6 @@ msgstr ""
 "веток, например «стабильная», «бета» и т. д. с тем же названием."
 
 #: ../../introduction.rst:115
-#, fuzzy
 msgid ""
 "**Maintained platforms**: called runtimes, these contain collections of "
 "dependencies, which can be used by applications, and which can take a lot"
