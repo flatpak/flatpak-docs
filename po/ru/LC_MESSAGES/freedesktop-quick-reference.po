@@ -1,0 +1,142 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../freedesktop-quick-reference.rst:2
+msgid "Freedesktop quick reference"
+msgstr "Краткий справочник Freedesktop"
+
+#: ../../freedesktop-quick-reference.rst:4
+msgid ""
+"In order to ensure interoperability, flatpak adheres strictly to a number"
+" of freedesktop standards and practices. This page describes the basic "
+"conventions that should be followed when building a flatpak app."
+msgstr ""
+"Чтобы обеспечить совместимость, Flatpak строго придерживается ряда" 
+" стандартов и практик freedesktop. На этой странице описаны основные "
+"соглашения, которых следует придерживаться при создании плоского приложения."
+
+#: ../../freedesktop-quick-reference.rst:9
+msgid "Icons"
+msgstr "Иконки"
+
+#: ../../freedesktop-quick-reference.rst:11
+msgid ""
+"Application icons can be in either png or svg format, must use the "
+"application's appid as a prefix and be placed in "
+"``/app/share/icons/hicolor/$size/apps/``"
+msgstr ""
+"Значки приложений могут быть в формате png или svg, должны использовать "
+"appid в качестве префикса и располагаться в "
+"``/app/share/icons/hicolor/$size/apps/``"
+
+#: ../../freedesktop-quick-reference.rst:15
+#: ../../freedesktop-quick-reference.rst:49
+#: ../../freedesktop-quick-reference.rst:73
+msgid "Example:"
+msgstr "Пример:"
+
+#: ../../freedesktop-quick-reference.rst:21
+msgid ""
+"If interested, you can read the full spec `here "
+"<https://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-"
+"latest.html>`__"
+msgstr ""
+"Если интересно, вы можете прочитать полную спецификацию здесь: "
+"<https://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-"
+"latest.html>`__"
+
+#: ../../freedesktop-quick-reference.rst:26
+msgid "Desktop files"
+msgstr "Файлы рабочего стола"
+
+#: ../../freedesktop-quick-reference.rst:28
+msgid ""
+"Desktop files are used by desktop environments in order to identify and "
+"display available applications to the user, they contain information "
+"about how to launch the application, its icon and categories among "
+"others."
+msgstr ""
+"Файлы рабочего стола используются средами рабочего стола для идентификации и "
+"отображения доступных приложений пользователю, они содержат информацию "
+"о том, как запустить приложение, его значок и категории среди "
+"прочего."
+
+#: ../../freedesktop-quick-reference.rst:33
+msgid ""
+"A minimal desktop file needs at least the application's *Name*, *Exec* "
+"command, *Type* and *Icon*:"
+msgstr ""
+"Минимальный файл рабочего стола требует как минимум  *Name*, *Exec* "
+"команды приложения, *Type* and *Icon*:"
+
+#: ../../freedesktop-quick-reference.rst:44
+msgid ""
+"Your desktop file should be prefixed with your application's appid and "
+"placed in ``/app/share/applications/``, you should use ``desktop-file-"
+"validate`` to check your file for errors before including it."
+msgstr ""
+"Файл рабочего стола должен иметь префикс appid и "
+"помещаться в ``/app/share/applications/``, вы должны использовать ``desktop-file-"
+"validate``, чтобы проверить файл на наличие ошибок, прежде чем включать его." 
+
+#: ../../freedesktop-quick-reference.rst:55
+msgid ""
+"You can find more information `here "
+"<https://wiki.archlinux.org/index.php/desktop_entries>`__. If interested,"
+" you can read also the full spec `here <https://standards.freedesktop.org"
+"/desktop-entry-spec/latest/>`__."
+msgstr ""
+"Вы можете найти дополнительную информацию `здесь: "
+"<https://wiki.archlinux.org/index.php/desktop_entries>`__. Если интересно, "
+" вы можете также прочитать полную спецификацию `здесь: <https://standards.freedesktop.org/"
+"/desktop-entry-spec/latest/>` __."
+
+#: ../../freedesktop-quick-reference.rst:61
+msgid "Appdata files"
+msgstr "Файлы Appdata"
+
+#: ../../freedesktop-quick-reference.rst:63
+msgid ""
+"Appdata files are used by application stores (eg. kde discover, gnome "
+"software) in order to display metadata about your application, such as a "
+"description, screenshots, display changelogs on update, among other "
+"things."
+msgstr ""
+"Файлы Appdata используются магазинами приложений (например, kde discover, gnome "
+"software) для отображения метаданных о вашем приложении, таких как: "
+"описание, снимки экрана, отображение журналов изменений при обновлении, среди "
+"прочего." 
+
+#: ../../freedesktop-quick-reference.rst:68
+msgid ""
+"your desktop file should be prefixed with your application's appid and "
+"placed in ``/app/share/metainfo/``, you should also use ``appstream-util "
+"validate-relax`` to check your file for errors before including it."
+msgstr ""
+"ваш файл рабочего стола должен иметь префикс appid и "
+"помещаться в ``/app/share/metainfo/``, вы также должны использовать ``appstream-util "
+"validate-relax`` чтобы проверить свой файл на наличие ошибок, прежде чем включать его."
+
+#: ../../freedesktop-quick-reference.rst:79
+msgid ""
+"If interested, you can read the full spec `here "
+"<https://www.freedesktop.org/software/appstream/docs/>`__"
+msgstr ""
+"Если Вам интересно, вы можете прочитать полную спецификацию `здесь: "
+"<https://www.freedesktop.org/software/appstream/docs/>`__"
