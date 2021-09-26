@@ -104,7 +104,7 @@ msgstr "Исходный код для каждого модуля собран 
 #: ../../building-introduction.rst:38
 #, fuzzy
 msgid "The build is finished by setting sandbox permissions"
-msgstr "Сборка завершена, после установки разрешений песочницы"
+msgstr "Сборка завершена, после установки разрешений для песочницы"
 
 #: ../../building-introduction.rst:39
 msgid ""
