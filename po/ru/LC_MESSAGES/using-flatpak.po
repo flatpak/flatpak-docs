@@ -98,7 +98,6 @@ msgstr ""
 "необходимо указать, какое из них вы хотите установить. "
 
 #: ../../using-flatpak.rst:39
-#, fuzzy
 msgid ""
 "Flatpak allows architectures and versions to be specified using an "
 "object's identifier triple. This takes the form of "
@@ -169,9 +168,9 @@ msgid ""
 "applications for day-to-day usage, it is recommended to stick with this "
 "default behavior."
 msgstr ""
-"Команды Flatpak по умолчанию запускаются в масштабе всей системы. Если вы"
-" устанавливаете приложения для повседневного использования, рекомендуется"
-" придерживаться этого поведения по умолчанию. "
+"Команды Flatpak по умолчанию запускаются в масштабе всей системы. Если вы "
+"устанавливаете приложения для повседневного использования, рекомендуется "
+"придерживаться этого поведения по умолчанию. "
 
 #: ../../using-flatpak.rst:69
 msgid ""
@@ -187,7 +186,6 @@ msgstr ""
 " большинством команд «flatpak». "
 
 #: ../../using-flatpak.rst:74
-#, fuzzy
 msgid ""
 "Commands behave in exactly the same way if they are run per-user rather "
 "than system-wide."
@@ -412,7 +410,6 @@ msgid ""
 msgstr ""
 "Чтобы удалить среды выполнения и расширения, которые не используются установленными "
 "приложениями, используйте::"
-
 
 #: ../../using-flatpak.rst:203
 msgid "To fix inconsistencies with your local installation, use::"
