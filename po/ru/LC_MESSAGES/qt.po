@@ -2,9 +2,8 @@
 # Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
@@ -31,8 +30,6 @@ msgstr ""
 "Для приложений на основе Qt мы имеем среду выполнения ``org.kde.Platform`` (и "
 "соответствующую среду выполнения sdk ``org.kde.Sdk``), которая предложит нам большинство модулей Qt "
 "и Frameworks KDE для наших приложений для использования."
-
-
 
 #: ../../qt.rst:8
 msgid ""
