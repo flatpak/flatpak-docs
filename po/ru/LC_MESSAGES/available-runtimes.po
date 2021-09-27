@@ -115,7 +115,6 @@ msgid "Runtime translations (extension)"
 msgstr "Переносы среды выполнения (расширение)"
 
 #: ../../available-runtimes.rst:34
-#, fuzzy
 msgid "org.freedesktop.Platform.VAAPI.Intel{,.i386}"
 msgstr "org.freedesktop.Platform.VAAPI.Intel{,.i386}"
 
@@ -124,7 +123,6 @@ msgid "Intel vaapi drivers (extension)"
 msgstr "Драйверы Intel vaapi (расширение)"
 
 #: ../../available-runtimes.rst:35
-#, fuzzy
 msgid "org.freedesktop.Platform.ffmpeg-full"
 msgstr "org.freedesktop.Platform.ffmpeg-full"
 
@@ -142,7 +140,6 @@ msgid "32 bits compatible extension"
 msgstr "32-битное совместимое расширение"
 
 #: ../../available-runtimes.rst:37
-#, fuzzy
 msgid "org.freedesktop.Platform.Compat.{architecture}.debug"
 msgstr "org.freedesktop.Platform.Compat.{architecture}.debug"
 
@@ -151,22 +148,18 @@ msgid "32 bits compatible extension (debug)"
 msgstr "32-битное совместимое расширение (отладка)"
 
 #: ../../available-runtimes.rst:38
-#, fuzzy
 msgid "org.freedesktop.Platform.GL{,32}.default"
 msgstr "org.freedesktop.Platform.GL{,32}.default"
 
 #: ../../available-runtimes.rst:38
-#, fuzzy
 msgid "Mesa drivers (extension)"
 msgstr "Драйверы Mesa (расширение)"
 
 #: ../../available-runtimes.rst:39
-#, fuzzy
 msgid "org.freedesktop.Platform.GL{,32}.mesa-git"
 msgstr "org.freedesktop.Platform.GL{,32}.mesa-git"
 
 #: ../../available-runtimes.rst:39
-#, fuzzy
 msgid "Mesa drivers, latest (extension)"
 msgstr "Последние версии драйверов Mesa (расширение)"
 
@@ -280,7 +273,6 @@ msgstr ""
 "Среда выполнения GNOME поддерживается `здесь: <https://gitlab.gnome.org/GNOME"
 "/gnome-build-meta>`__."
 
-
 #: ../../available-runtimes.rst:69
 msgid "Available GNOME runtimes:"
 msgstr "Доступные среды выполнения GNOME:"
@@ -358,4 +350,3 @@ msgstr "org.kde.Sdk.Locale"
 #: ../../available-runtimes.rst:102
 msgid "org.kde.Sdk.Docs"
 msgstr "org.kde.Sdk.Docs"
-
