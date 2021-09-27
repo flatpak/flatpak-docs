@@ -25,7 +25,5 @@ msgid "Reference Documentation"
 msgstr "Справочная документация"
 
 #: ../../reference.rst:4
-#, fuzzy
 msgid "Reference documentation for flatpak, flatpak-builder and libflatpak."
 msgstr "Справочная документация для Flatpak, Flatpak-builder и libflatpak."
-
