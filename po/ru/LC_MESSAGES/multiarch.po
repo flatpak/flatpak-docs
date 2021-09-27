@@ -4,7 +4,6 @@
 # This file is distributed under the same license as the Flatpak package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
@@ -110,7 +109,6 @@ msgstr ""
 "к точке монтирования пакета приложений, то есть в ``/app/``). Это можно сделать на "
 "этапе сборки."
 
-
 #: ../../multiarch.rst:70
 msgid ""
 "Finally, you need to make the dynamic library loader know the paths to "
@@ -206,4 +204,3 @@ msgid ""
 msgstr ""
 "Конечно, для того, чтобы использовать созданные вами 32-битные модули, вам также потребуются "
 "все те же настройки, что и в предыдущем разделе."
-
