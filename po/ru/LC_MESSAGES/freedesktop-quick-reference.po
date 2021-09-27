@@ -4,7 +4,6 @@
 # This file is distributed under the same license as the Flatpak package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
@@ -141,4 +140,3 @@ msgid ""
 msgstr ""
 "Если Вам интересно, вы можете прочитать полную спецификацию `здесь: "
 "<https://www.freedesktop.org/software/appstream/docs/>`__"
-

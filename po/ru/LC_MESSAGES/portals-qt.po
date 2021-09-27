@@ -4,7 +4,6 @@
 # This file is distributed under the same license as the Flatpak package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
@@ -55,4 +54,3 @@ msgstr ""
 #: ../../portals-qt.rst:13
 msgid "Use ``KNotification::notify()`` to show notification"
 msgstr "Используйте ``KNotification::notify()``, чтобы показать уведомление "
-

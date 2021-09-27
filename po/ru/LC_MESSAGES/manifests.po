@@ -25,14 +25,13 @@ msgid "Manifests"
 msgstr "Манифесты"
 
 #: ../../manifests.rst:4
-#, fuzzy
 msgid ""
 "The input to ``flatpak-builder`` is a JSON or YAML file that describes "
 "the parameters for building an application, as well as instructions for "
 "each of the modules that are to be built. This file is called the "
 "manifest."
 msgstr ""
-"Входными данными для ``flatpak-builder`` является файл JSON, который "
+"Входными данными для ``flatpak-builder`` является файл JSON или YAML, который "
 "описывает параметры для создания приложения, а также инструкции для "
 "каждого из модулей, которые должны быть построены. Этот файл называется "
 "манифестом."
@@ -52,7 +51,6 @@ msgstr ""
 "builder`."
 
 #: ../../manifests.rst:13
-#, fuzzy
 msgid ""
 "Manifest files should be named using the application ID. For example, the"
 " manifest file for GNOME Dictionary is named "
@@ -61,7 +59,7 @@ msgid ""
 msgstr ""
 "Файлы манифеста должны получить названия с использованием идентификатора "
 "приложения. Например, файл манифеста для словаря GNOME называется "
-"``org.gnome.Dictionary.json``. Эта страница использует этот файл "
+"``org.gnome.Dictionary.yml``. Эта страница использует этот файл "
 "манифеста, который был представлен в :doc:`first-build`, для всех его "
 "примеров."
 
@@ -110,17 +108,14 @@ msgid "File renaming"
 msgstr "Переименование файла"
 
 #: ../../manifests.rst:45
-#, fuzzy
 msgid ""
 "Exports are application files that are made available to the host, and "
 "include things like the application's ``.desktop`` file and icon."
 msgstr ""
-"Как было описано в :doc:`Introduction`, экспорт - это файлы приложения, "
-"которые предоставляются хосту и включают такие вещи, как файл "
-"``.desktop`` и значок приложения."
+"Экспорт - это файлы приложения, которые доступны хосту, и "
+"включают такие вещи, как файл и значок приложения .desktop." 
 
 #: ../../manifests.rst:48
-#, fuzzy
 msgid ""
 "The names of files that are exported by a Flatpak must be prefixed using "
 "the application ID, such as ``org.gnome.Dictionary.desktop``. The best "
@@ -130,7 +125,7 @@ msgstr ""
 "Имена файлов, экспортируемых Flatpak, должны иметь префикс с "
 "использованием идентификатора приложения, например "
 "``org.gnome.Dictionary.desktop``. Лучший способ сделать это - "
-"переименовать эти файлы прямо в исходном коде приложения."
+"переименовать эти файлы прямо в папке приложения."
 
 #: ../../manifests.rst:52
 msgid ""
@@ -198,7 +193,6 @@ msgstr ""
 "args``, которое можно увидеть в файле манифеста словаря:"
 
 #: ../../manifests.rst:93
-#, fuzzy
 msgid ""
 "Guidance on which permissions to use can be found in the :doc:`sandbox-"
 "permissions`, and a full list of ``finish-args`` options can be found in "
@@ -376,7 +370,6 @@ msgid "`cmake <https://cmake.org/>`_"
 msgstr "`cmake <https://cmake.org/>`_"
 
 #: ../../manifests.rst:176
-#, fuzzy
 msgid "`cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_"
 msgstr "`cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_, "
 
@@ -450,4 +443,3 @@ msgstr ""
 #~ " Также можно просматривать `все манифесты,"
 #~ " размещенные на Flathub "
 #~ "<https://github.com/flathub>`_."
-

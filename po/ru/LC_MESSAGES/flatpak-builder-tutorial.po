@@ -74,8 +74,7 @@ msgid "Download and verify the Dictionary source code"
 msgstr "Скачайте и проверить исходный код словаря"
 
 #: ../../flatpak-builder-tutorial.rst:22
-msgid ""
-"Build and install the source code, using the SDK rather than the host system"
+msgid "Build and install the source code, using the SDK rather than the host system"
 msgstr "Соберите и установите исходный код, используя SDK, а не хост-систему"
 
 #: ../../flatpak-builder-tutorial.rst:23

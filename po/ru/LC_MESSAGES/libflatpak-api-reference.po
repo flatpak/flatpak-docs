@@ -4,7 +4,6 @@
 # This file is distributed under the same license as the Flatpak package.
 # FIRST AUTHOR <dmitrydmitry761@gmail.com>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
@@ -21,4 +20,3 @@ msgstr ""
 #: ../../libflatpak-api-reference.rst:2
 msgid "libflatpak API Reference"
 msgstr "Справочник по API libflatpak"
-

@@ -85,12 +85,10 @@ msgstr ""
 "зависимостей, включая использование:"
 
 #: ../../basic-concepts.rst:32
-#, fuzzy
 msgid "libraries that aren't available in a runtime"
 msgstr "библиотеки, которые недоступны в дистрибутиве или в среде выполнения"
 
 #: ../../basic-concepts.rst:33
-#, fuzzy
 msgid "different versions of libraries from the ones that are in a runtime"
 msgstr ""
 "версии библиотек, отличные от тех, что находятся в дистрибутиве или в "
@@ -211,4 +209,3 @@ msgstr ""
 "выполнения загружаются с соответствующих удалённых. Как и в случае с Git,"
 " загружается только разница между версиями, что делает процесс очень "
 "эффективным."
-

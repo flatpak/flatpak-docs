@@ -102,9 +102,8 @@ msgid "The source code for each module is built and installed"
 msgstr "Исходный код для каждого модуля собран и установлен"
 
 #: ../../building-introduction.rst:38
-#, fuzzy
 msgid "The build is finished by setting sandbox permissions"
-msgstr "Сборка завершена, после установки разрешений песочницы"
+msgstr "Сборка завершена, после установки разрешений для песочницы"
 
 #: ../../building-introduction.rst:39
 msgid ""
@@ -154,13 +153,11 @@ msgstr ""
 "соответствующего SDK."
 
 #: ../../building-introduction.rst:59
-#, fuzzy
 msgid ""
 "Like runtimes, SDKs will sometimes be automatically installed for you, "
 "but if you do need to manually install them, they are installed in the "
 "same way as applications and runtimes, such as::"
 msgstr ""
-"Как и среды выполнения, SDK иногда устанавливаются автоматически для вас,"
-" но если вам нужно установить их вручную, они устанавливаются так же, как"
-" приложения и среды выполнения, например::"
-
+"Как и среды выполнения, SDK иногда устанавливаются автоматически, "
+"но если вам всё-же нужно установить их вручную, они устанавливаются так же, как "
+"приложения и среды выполнения, например::"
