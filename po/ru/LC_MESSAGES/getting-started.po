@@ -1,4 +1,3 @@
-
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2021, Flatpak Team. Licensed under Creative Commons
 # Attribution 4.0 International License.
