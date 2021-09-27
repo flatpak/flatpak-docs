@@ -21,7 +21,6 @@ msgstr ""
 "Generated-By: Babel 2.9.1\n"
 
 #: ../../sandbox-permissions-reference.rst:2
-#, fuzzy
 msgid "Sandbox Permissions Reference"
 msgstr "Разрешения песочницы"
 
@@ -141,7 +140,6 @@ msgid "``host``"
 msgstr "``host``"
 
 #: ../../sandbox-permissions-reference.rst:31
-#, fuzzy
 msgid "Access all files [#f3]_"
 msgstr "Доступ ко всем файлам [#f3]_"
 
@@ -234,37 +232,30 @@ msgid "Access the XDG templates directory"
 msgstr "Доступ к каталогу шаблонов XDG"
 
 #: ../../sandbox-permissions-reference.rst:43
-#, fuzzy
 msgid "``xdg-config``"
 msgstr "``xdg-music``"
 
 #: ../../sandbox-permissions-reference.rst:43
-#, fuzzy
 msgid "Access the XDG config directory"
 msgstr "Доступ к каталогу конфигурации XDG"
 
 #: ../../sandbox-permissions-reference.rst:44
-#, fuzzy
 msgid "``xdg-cache``"
 msgstr "``xdg-music``"
 
 #: ../../sandbox-permissions-reference.rst:44
-#, fuzzy
 msgid "Access the XDG cache directory"
 msgstr "Доступ к каталогу кеша XDG"
 
 #: ../../sandbox-permissions-reference.rst:45
-#, fuzzy
 msgid "``xdg-data``"
 msgstr "``xdg-desktop``"
 
 #: ../../sandbox-permissions-reference.rst:45
-#, fuzzy
 msgid "Access the XDG data directory"
 msgstr "Доступ к каталогу данных XDG"
 
 #: ../../sandbox-permissions-reference.rst:46
-#, fuzzy
 msgid "``xdg-run/path``"
 msgstr "``xdg-templates``"
 
@@ -332,4 +323,3 @@ msgstr ""
 #: ../../sandbox-permissions-reference.rst:66
 msgid "Except for the blacklisted paths mentioned in :doc:`sandbox-permissions`."
 msgstr "За исключением черных списков, упомянутых в :doc:`sandbox-permissions`."
-
