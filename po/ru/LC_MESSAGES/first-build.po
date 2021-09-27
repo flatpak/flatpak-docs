@@ -35,7 +35,6 @@ msgstr ""
 "установить и запустить."
 
 #: ../../first-build.rst:8
-#, fuzzy
 msgid ""
 "In order to complete this tutorial, you should have followed the `setup "
 "guide on flatpak.org <http://flatpak.org/setup/>`_. You also need to have"
@@ -69,13 +68,12 @@ msgstr ""
 " для среды выполнения."
 
 #: ../../first-build.rst:22
-#, fuzzy
 msgid ""
 "In this tutorial we will use the Freedesktop 21.08 runtime and SDK. To "
 "install these, run::"
 msgstr ""
-"В этом руководстве мы будем использовать среду выполнения Freedesktop 1.6"
-" и SDK. Чтобы установить их, запустите::"
+"В этом руководстве мы будем использовать среду выполнения Freedesktop 21.08 "
+"и SDK. Чтобы установить их, запустите::"
 
 #: ../../first-build.rst:28
 msgid "2. Create the app"
@@ -110,13 +108,12 @@ msgstr ""
 "пустой файл следующее:"
 
 #: ../../first-build.rst:61
-#, fuzzy
 msgid ""
 "Now save the file alongside ``hello.sh`` and call it "
 "``org.flatpak.Hello.yml``."
 msgstr ""
 "Теперь сохраните файл вместе с ``hello.sh`` и назовите его "
-"``org.flatpak.Hello.json``."
+"``org.flatpak.Hello.yml``."
 
 #: ../../first-build.rst:64
 msgid ""
@@ -170,7 +167,6 @@ msgid "6. Put the app in a repository"
 msgstr "6. Поместите приложение в репозиторий."
 
 #: ../../first-build.rst:93
-#, fuzzy
 msgid ""
 "If you want to share the application you can put it in a repository. This"
 " is done by passing the ``--repo`` argument to ``flatpak-builder``::"
@@ -198,7 +194,8 @@ msgid ""
 "build was started."
 msgstr ""
 "Во второй раз мы передали ``--force-clean``, что означает, что ранее "
-"созданный каталог ``build-dir`` был удален до запуска новой сборки."
+"созданный каталог ``build-dir`` был удален до "
+"запуска новой сборки."
 
 #: ../../first-build.rst:108
 msgid ""
@@ -271,4 +268,3 @@ msgstr ""
 #: ../../first-build.rst:140
 msgid "This runs the app, so that it prints 'Hello world, from a sandbox'."
 msgstr "Это запускает приложение, и оно печатает «Hello world, from sandbox»."
-
