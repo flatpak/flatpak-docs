@@ -165,7 +165,6 @@ msgstr ""
 "шины, принадлежащим logind."
 
 #: ../../debugging.rst:76
-#, fuzzy
 msgid "Inspecting portal permissions"
 msgstr "Переопределение разрешений песочницы"
 
@@ -200,4 +199,3 @@ msgstr ""
 #: ../../debugging.rst:98
 msgid "And, if you need to, you can terminate one by force (since 1.2)::"
 msgstr "И, при необходимости, вы можете прекратить его принудительно (начиная с версии 1.2)::"
-
