@@ -82,8 +82,12 @@ it to the ``/app`` subdirectory, inside the ``build-dir`` directory.
 
 To verify that the build was successful, run the following::
 
-  $ flatpak-builder --user --install build-dir org.flatpak.Hello.yml
+  $ flatpak-builder --user --install --force-clean build-dir org.flatpak.Hello.yml
   $ flatpak run org.flatpak.Hello
+
+This second time we passed in ``--force-clean``, which means that the
+previously created ``build-dir`` directory was deleted before the new build was
+started.
 
 Congratulations, you've made an app!
 
@@ -100,10 +104,6 @@ This does the build again, and at the end exports the result to a local
 directory called ``repo``. Note that ``flatpak-builder`` keeps a cache of
 previous builds in the ``.flatpak-builder`` subdirectory, so doing a second
 build like this is very fast.
-
-This second time we passed in ``--force-clean``, which means that the
-previously created ``build-dir`` directory was deleted before the new build was
-started.
 
 In order for your application to show up in application stores while testing with a local repository, you might have
 to run ``flatpak build-update-repo repo``.
