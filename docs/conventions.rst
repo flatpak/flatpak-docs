@@ -186,13 +186,14 @@ convenience functions for accessing XDG base directories. These include:
 However, applications that aren't using one of these toolkits can expect to
 find their XDG base directories in the following locations:
 
-===============  =================================  ==========================
+===============  =================================  ================================
 Base directory   Usage                              Default location
-===============  =================================  ==========================
+===============  =================================  ================================
 XDG_CONFIG_HOME  User-specific configuration files  ~/.var/app/<app-id>/config
 XDG_DATA_HOME    User-specific data                 ~/.var/app/<app-id>/data
 XDG_CACHE_HOME   Non-essential user-specific data   ~/.var/app/<app-id>/cache
-===============  =================================  ==========================
+XDG_STATE_HOME   State data such as undo history    ~/.var/app/<app-id>/.local/state
+===============  =================================  ================================
 
 For example, GNOME Dictionary will store user-specific data in::
 
@@ -200,3 +201,9 @@ For example, GNOME Dictionary will store user-specific data in::
 
 Note that applications can be configured to use non-default base directory
 locations (see :doc:`sandbox-permissions`).
+
+Note that ``$XDG_STATE_HOME`` is only supported by Flatpak 1.13 and later. If
+your app needs to work on earlier versions of Flatpak, you can use the
+``--persist=.local/state`` and ``--unset-env=XDG_STATE_HOME`` finish args so
+the app will use the correct directory, even after Flatpak is later upgraded to
+>1.13.
