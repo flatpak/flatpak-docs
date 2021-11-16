@@ -67,9 +67,27 @@ msgstr ""
 "Среда выполнения: также называемые платформами, это интегрированные платформы для предоставления"
 " основных утилит, необходимых для работы приложения Flatpak."
 
-#: ../../introduction.rst:16
+#: ../../introduction.rst:15
 msgid "BaseApp: these are integrated platforms for frameworks like Electron."
 msgstr "BaseApp: это интегрированные платформы для таких фреймворков, как Electron."
+
+#: ../../building-introduction.rst:16
+msgid ""
+"The input to ``flatpak-builder`` is a manifest file. This specifies the "
+"parameters for the application that will be built, such as its name and "
+"which runtime it will depend on. The manifest also lists all the modules "
+"that are to be built as part of the build process. A source for each "
+"module can be specified, including links to file archives or version "
+"control repositories. One of the modules (usually the last one) is the "
+"application code itself."
+msgstr ""
+"Входными данными для ``Flatpak-builder`` является файл манифеста. Это "
+"определяет параметры для приложения, которое будет построено, например, "
+"его имя и среда выполнения, от которой оно будет зависеть. В манифесте "
+"также перечислены все модули, которые должны быть созданы как часть "
+"процесса сборки. Можно указать источник для каждого модуля, включая "
+"ссылки на файловые архивы или репозитории системы контроля версий. Один "
+"из модулей (обычно последний) - это сам код приложения."
 
 #: ../../introduction.rst:17
 msgid ""
@@ -96,6 +114,10 @@ msgstr ""
 "программирования, инструменты сборки, наборы инструментов или фреймворки "
 "можно использовать."
 
+#: ../../building-introduction.rst:24
+msgid "The basic format used to invoke ``flatpak-builder`` is::"
+msgstr "Основной формат, используемый для вызова ``flatpak-builder''::"
+
 #: ../../introduction.rst:27
 msgid ""
 "While Flatpak only runs on Linux, it can be used by applications that "
@@ -110,109 +132,6 @@ msgstr ""
 "проприетарными (хотя некоторые службы распространения, такие как `Flathub "
 "<https://flathub.org/>`_, могут иметь ограничения в этом отношении)."
 
-#: ../../introduction.rst:32
-msgid ""
-"The only technical requirements made by Flatpak are that applications "
-"follow a small number of Freedesktop standards, in order to enable "
-"desktop integration (see :doc:`conventions`)."
-msgstr ""
-"Единственные технические требования, предъявляемые Flatpak, заключаются в "
-"том, что приложения должны соответствовать небольшому количеству "
-"стандартов Freedesktop, чтобы обеспечить интеграцию с рабочим столом (см."
-":doc:`conventions`)."
-
-#: ../../introduction.rst:37
-msgid "Issues of current model of packaging"
-msgstr "Проблемы текущей модели упаковки"
-
-#: ../../introduction.rst:39
-msgid ""
-"It is important to understand the problems of the current model of "
-"packaging applications to understand the existence of Flatpak:"
-msgstr ""
-"Чтобы понять существование Flatpak, важно понимать проблемы "
-"текущей модели упаковки приложений:"
-
-#: ../../introduction.rst:42
-msgid ""
-"**Duplicated work packaging apps**: many Linux distributions come with "
-"their own package manager, package format and repository. This requires a"
-" lot of maintainers to package the same application in various "
-"distributions, or the application developer to learn the language of each"
-" format and then package the application in those distributions, or "
-"ignore most distributions and package and support a couple of "
-"distributions. This makes the Linux desktop a difficult platform for "
-"software vendors to target."
-msgstr ""
-"**Приложения для дублирования работы**: многие дистрибутивы Linux поставляются со "
-"своим собственным менеджером пакетов, форматом пакетов и репозиторием. Для этого требуется,"
-" чтобы множество специалистов по сопровождению упаковывало одно и то же приложение в различные "
-"дистрибутивы, или разработчик приложения изучал язык каждого"
-" формата, а затем упаковывал приложение в эти дистрибутивы, или "
-"игнорировал большинство дистрибутивов и упаковывал и поддерживал несколько "
-"дистрибутивов. Это делает рабочий стол Linux сложной платформой для "
-"поставщиков программного обеспечения."
-
-#: ../../introduction.rst:48
-msgid ""
-"**Limited to apps that are packaged**: not all applications are natively "
-"available in every Linux distribution. If an application is not available"
-" in a specific distribution, the user will have to rely on manually "
-"downloading the archive of the application, extracting it and hoping the "
-"application will launch."
-msgstr ""
-"**Ограничено пакетными приложениями**: не все приложения "
-"изначально доступны в каждом дистрибутиве Linux. Если приложение недоступно"
-" в конкретном дистрибутиве, пользователю придется вручную "
-"загрузить архив приложения, распаковать его и надеяться, что "
-"приложение запустится."
-
-#: ../../introduction.rst:52
-msgid ""
-"**Limited to distributions that have the apps**: the user is limited to "
-"the number of distributions that have the needed applications for them to"
-" properly setup their workflow. This reduces the amount of distributions "
-"that can be suitable for a user."
-msgstr ""
-"**Ограничено дистрибутивами, в которых есть приложения**: пользователь ограничен "
-"количеством дистрибутивов, в которых есть приложения, необходимые для правильной"
-" настройки рабочего процесса. Это уменьшает количество дистрибутивов, "
-"подходящих для пользователя."
-
-#: ../../introduction.rst:56
-msgid ""
-"**Hard to innovate in OS space**: the maintainers of the distributions "
-"have to spend a lot of time packaging applications to make the "
-"distribution suitable for the end user, instead of focusing on their end "
-"goals. This delays the progress of each distribution."
-msgstr ""
-"**Трудно внедрять инновации в пространстве ОС**: разработчикам дистрибутивов "
-"приходится тратить много времени на упаковку приложений, чтобы сделать "
-"дистрибутив подходящим для конечного пользователя, вместо того, чтобы сосредоточиться на своих конечных "
-"конечных целях. Это задерживает продвижение каждого дистрибутива."
-
-#: ../../building-introduction.rst:16
-msgid ""
-"The input to ``flatpak-builder`` is a manifest file. This specifies the "
-"parameters for the application that will be built, such as its name and "
-"which runtime it will depend on. The manifest also lists all the modules "
-"that are to be built as part of the build process. A source for each "
-"module can be specified, including links to file archives or version "
-"control repositories. One of the modules (usually the last one) is the "
-"application code itself."
-msgstr ""
-"Входными данными для ``Flatpak-builder`` является файл манифеста. Это "
-"определяет параметры для приложения, которое будет построено, например, "
-"его имя и среда выполнения, от которой оно будет зависеть. В манифесте "
-"также перечислены все модули, которые должны быть созданы как часть "
-"процесса сборки. Можно указать источник для каждого модуля, включая "
-"ссылки на файловые архивы или репозитории системы контроля версий. Один "
-"из модулей (обычно последний) - это сам код приложения."
-
-#: ../../building-introduction.rst:24
-msgid "The basic format used to invoke ``flatpak-builder`` is::"
-msgstr "Основной формат, используемый для вызова ``flatpak-builder''::"
-
 #: ../../building-introduction.rst:28
 msgid ""
 "Where ``<build-dir>`` is the path to the directory that the application "
@@ -224,6 +143,17 @@ msgstr ""
 "приложение, а ``<manifest>`` - это путь к файлу манифеста. Содержимое "
 "``<build-dir>`` может быть полезно для целей тестирования и отладки, но "
 "обычно рассматривается как артефакт процесса сборки."
+
+#: ../../introduction.rst:32
+msgid ""
+"The only technical requirements made by Flatpak are that applications "
+"follow a small number of Freedesktop standards, in order to enable "
+"desktop integration (see :doc:`conventions`)."
+msgstr ""
+"Единственные технические требования, предъявляемые Flatpak, заключаются в "
+"том, что приложения должны соответствовать небольшому количеству "
+"стандартов Freedesktop, чтобы обеспечить интеграцию с рабочим столом (см."
+":doc:`conventions`)."
 
 #: ../../building-introduction.rst:33
 msgid "When ``flatpak-builder`` is run:"
@@ -253,35 +183,69 @@ msgstr ""
 "Результат сборки экспортируется в репозиторий (который будет создан, если"
 " он еще не существует)."
 
-#: ../../building-introduction.rst:42
+#: ../../building-introduction.rst:40
 msgid "The application can then be installed from the repository and run."
 msgstr "Затем приложение можно установить из репозитория и запустить."
 
-#: ../../building-introduction.rst:45
-msgid "Software Development Kits (SDKs)"
-msgstr "Наборы для разработки программного обеспечения (SDK)"
+#: ../../introduction.rst:41
+msgid "Issues of current model of packaging"
+msgstr "Проблемы текущей модели упаковки"
 
-#: ../../building-introduction.rst:47
+#: ../../introduction.rst:42
 msgid ""
-"Instead of being built using the host environment, Flatpak applications "
-"are built inside a separate environment, called an SDK."
+"It is important to understand the problems of the current model of "
+"packaging applications to understand the existence of Flatpak:"
 msgstr ""
-"Вместо создания с использованием среды хоста, приложения Flatpak "
-"создаются в отдельной среде, называемой SDK."
+"Чтобы понять существование Flatpak, важно понимать проблемы "
+"текущей модели упаковки приложений:"
 
-#: ../../building-introduction.rst:50
+#: ../../introduction.rst:43
 msgid ""
-"SDKs are like the regular runtime that applications run in. The "
-"difference is that SDKs also include all the development resources and "
-"tools that are required to build an application, such as build and "
-"packaging tools, header files, compilers and debuggers."
+"**Duplicated work packaging apps**: many Linux distributions come with "
+"their own package manager, package format and repository. This requires a"
+" lot of maintainers to package the same application in various "
+"distributions, or the application developer to learn the language of each"
+" format and then package the application in those distributions, or "
+"ignore most distributions and package and support a couple of "
+"distributions. This makes the Linux desktop a difficult platform for "
+"software vendors to target."
 msgstr ""
-"SDK похожи на обычную среду выполнения, в которой выполняются приложения."
-" Разница в том, что SDK также включают все ресурсы и инструменты "
-"разработки, необходимые для создания приложения, такие как средства "
-"сборки и упаковки, файлы заголовков, компиляторы и отладчики."
+"**Приложения для дублирования работы**: многие дистрибутивы Linux поставляются со "
+"своим собственным менеджером пакетов, форматом пакетов и репозиторием. Для этого требуется,"
+" чтобы множество специалистов по сопровождению упаковывало одно и то же приложение в различные "
+"дистрибутивы, или разработчик приложения изучал язык каждого"
+" формата, а затем упаковывал приложение в эти дистрибутивы, или "
+"игнорировал большинство дистрибутивов и упаковывал и поддерживал несколько "
+"дистрибутивов. Это делает рабочий стол Linux сложной платформой для "
+"поставщиков программного обеспечения."
 
-#: ../../introduction.rst:52
+#: ../../introduction.rst:45
+msgid ""
+"**Limited to apps that are packaged**: not all applications are natively "
+"available in every Linux distribution. If an application is not available"
+" in a specific distribution, the user will have to rely on manually "
+"downloading the archive of the application, extracting it and hoping the "
+"application will launch."
+msgstr ""
+"**Ограничено пакетными приложениями**: не все приложения "
+"изначально доступны в каждом дистрибутиве Linux. Если приложение недоступно"
+" в конкретном дистрибутиве, пользователю придется вручную "
+"загрузить архив приложения, распаковать его и надеяться, что "
+"приложение запустится."
+
+#: ../../introduction.rst:46
+msgid ""
+"**Hard to innovate in OS space**: the maintainers of the distributions "
+"have to spend a lot of time packaging applications to make the "
+"distribution suitable for the end user, instead of focusing on their end "
+"goals. This delays the progress of each distribution."
+msgstr ""
+"**Трудно внедрять инновации в пространстве ОС**: разработчикам дистрибутивов "
+"приходится тратить много времени на упаковку приложений, чтобы сделать "
+"дистрибутив подходящим для конечного пользователя, вместо того, чтобы сосредоточиться на своих "
+"конечных целях. Это задерживает продвижение каждого дистрибутива."
+
+#: ../../introduction.rst:47
 msgid ""
 "**Limited to distributions that have the apps**: the user is limited to "
 "the number of distributions that have the needed applications for them to"
@@ -293,17 +257,29 @@ msgstr ""
 " настройки рабочего процесса. Это уменьшает количество дистрибутивов, "
 "подходящих для пользователя."
 
-#: ../../introduction.rst:56
+#: ../../building-introduction.rst:49
+msgid "Software Development Kits (SDKs)"
+msgstr "Наборы для разработки программного обеспечения (SDK)"
+
+#: ../../building-introduction.rst:50
 msgid ""
-"**Hard to innovate in OS space**: the maintainers of the distributions "
-"have to spend a lot of time packaging applications to make the "
-"distribution suitable for the end user, instead of focusing on their end "
-"goals. This delays the progress of each distribution."
+"Instead of being built using the host environment, Flatpak applications "
+"are built inside a separate environment, called an SDK."
 msgstr ""
-"**Трудно внедрять инновации в пространстве ОС**: разработчикам дистрибутивов "
-"приходится тратить много времени на упаковку приложений, чтобы сделать "
-"дистрибутив подходящим для конечного пользователя, вместо того, чтобы сосредоточиться на своих конечных "
-"конечных целях. Это задерживает продвижение каждого дистрибутива."
+"Вместо создания с использованием среды хоста, приложения Flatpak "
+"создаются в отдельной среде, называемой SDK."
+
+#: ../../building-introduction.rst:51
+msgid ""
+"SDKs are like the regular runtime that applications run in. The "
+"difference is that SDKs also include all the development resources and "
+"tools that are required to build an application, such as build and "
+"packaging tools, header files, compilers and debuggers."
+msgstr ""
+"SDK похожи на обычную среду выполнения, в которой выполняются приложения."
+" Разница в том, что SDK также включают все ресурсы и инструменты "
+"разработки, необходимые для создания приложения, такие как средства "
+"сборки и упаковки, файлы заголовков, компиляторы и отладчики."
 
 #: ../../building-introduction.rst:55
 msgid ""
