@@ -26,7 +26,7 @@ form such as ``org.gnome.Dictionary``. The format is in reverse-DNS style
 so the first section is a domain controlled by the project and the trailing
 section represents the specific project. As will be seen below and in future sections,
 this ID is expected to be used in a number of places.
-Developers must follow the standard `D-Bus naming conventions
+Developers must follow the standard `D-Bus naming conventions for bus names
 <https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names>`_
 when creating their own IDs. This format is
 already recommended by the `Desktop File specification
