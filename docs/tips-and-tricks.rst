@@ -139,3 +139,19 @@ And run apps from it with::
 
   If your custom installation is the only one with the app you're running,
   ``--installation`` can be omitted.
+
+Configuring resource limits for apps
+------------------------------------
+
+When systemd is available, Flatpak tries to put app processes in a scope such
+as ``app-com.brave.Browser-*.scope`` (in the case of Brave), with ``*`` replaced by
+an arbitrary suffix. This means you can create a file like
+``~/.config/systemd/user/app-flatpak-com.brave.Browser-.scope.d/memory.conf``
+with contents like::
+
+  [Scope]
+  MemoryHigh=1G
+
+Then after a ``systemctl --user daemon-reload``, those
+``systemd.resource-control(5)`` parameters will apply to all instances of that
+app.
