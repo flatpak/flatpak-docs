@@ -53,7 +53,6 @@ Flatpak utilises a number of pre-existing technologies. These include:
   `Project Atomic <http://www.projectatomic.io/>`_, which lets unprivileged
   users set up and run containers, using kernel features such as:
 
-  * Cgroups
   * Namespaces
   * Bind mounts
   * Seccomp rules
