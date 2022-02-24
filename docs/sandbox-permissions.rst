@@ -185,3 +185,35 @@ reasons you can use these permissions::
   --env=DCONF_USER_CONFIG_DIR=.config/dconf
 
 With those permissions glib will continue using dconf directly.
+
+gvfs access
+```````````
+
+As of gvfs 1.48, the gvfs daemons and applications use an on-disk socket
+to communicate, rather than an abstract socket so that the gvfs infrastructure
+still works when network support is disabled in the application's sandbox.
+
+A number of different options need to be passed depending on the application's
+use of gvfs.
+
+``--talk-name=org.gtk.vfs.*`` is necessary to talk to the gvfs daemons over
+D-Bus and list mounts using the GIO APIs.
+
+``--filesystem=xdg-run/gvfsd`` is necessary to use the GIO APIs to list and access
+non-native files using the GIO APIs, using URLs rather than FUSE paths.
+
+``--filesystem=xdg-run/gvfs`` is necessary to give access to the FUSE mounts
+non-GIO and legacy applications can use. This is what will make native files
+appear under ``/run/user/`id -u`/gvfs/``.
+
+Typical GNOME and GTK applications should use::
+
+  --talk-name=org.gtk.vfs.*
+  --filesystem=xdg-run/gvfsd
+
+Typical non-GNOME and non-GTK applications should use::
+
+  --filesystem=xdg-run/gvfs
+
+No application should be using ``--talk-name=org.gtk.vfs`` in its manifest, as
+there are no D-Bus services named ``org.gtk.vfs``.
