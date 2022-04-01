@@ -101,16 +101,13 @@ Software) in order to display metadata about your application, such as a
 description, screenshots, changelogs when updates are available, and
 other miscellaneous things.
 
-Your Appdata file should be prefixed with your application's appid and
-placed in ``/app/share/metainfo/``. You should also use
-``appstream-util validate-relax`` to check your file for errors before
-including it.
-
 Example:
 
 ::
 
     /app/share/metainfo/org.gnome.Dictionary.metainfo.xml
+
+More details can be found at :doc:`conventions`.
 
 If interested, you can read the full spec
 `here <https://www.freedesktop.org/software/appstream/docs/>`__.
