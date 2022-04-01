@@ -110,7 +110,7 @@ Example:
 
 ::
 
-    /app/share/metainfo/org.gnome.Dictionary.appdata.xml
+    /app/share/metainfo/org.gnome.Dictionary.metainfo.xml
 
 If interested, you can read the full spec
 `here <https://www.freedesktop.org/software/appstream/docs/>`__.

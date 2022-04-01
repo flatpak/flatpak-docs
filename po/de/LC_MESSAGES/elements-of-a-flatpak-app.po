@@ -113,8 +113,8 @@ msgid ""
 msgstr "Alle Dateien in dem Exportverzeichnis müssen die Applikations-ID als ihr Präfix besitzen. Zum Beispiel:"
 
 #: ../../elements-of-a-flatpak-app.rst:30
-msgid "``org.gnome.App.appdata.xml``"
-msgstr "``org.gnome.App.appdata.xml``"
+msgid "``org.gnome.App.metainfo.xml``"
+msgstr "``org.gnome.App.metainfo.xml``"
 
 #: ../../elements-of-a-flatpak-app.rst:31
 msgid "``org.gnome.App.desktop``"

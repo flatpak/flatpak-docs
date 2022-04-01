@@ -141,7 +141,7 @@ msgstr ""
 #: ../../conventions.rst:71
 msgid ""
 "AppData files should be named with the application ID and the "
-"``.appdata.xml`` file extension, and should be placed in "
+"``.metainfo.xml`` file extension, and should be placed in "
 "``/app/share/metainfo/``. For example::"
 msgstr ""
 

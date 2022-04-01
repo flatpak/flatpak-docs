@@ -85,8 +85,8 @@ msgid "All the files in the export directory must have the application ID as the
 msgstr "Todos los archivos en el directorio de exportación deben tener el ID de la aplicación como prefijo.  Por ejemplo:"
 
 #: ../../elements-of-a-flatpak-app.rst:30
-msgid "``org.gnome.App.appdata.xml``"
-msgstr "``org.gnome.App.appdata.xml``"
+msgid "``org.gnome.App.metainfo.xml``"
+msgstr "``org.gnome.App.metainfo.xml``"
 
 #: ../../elements-of-a-flatpak-app.rst:31
 msgid "``org.gnome.App.desktop``"

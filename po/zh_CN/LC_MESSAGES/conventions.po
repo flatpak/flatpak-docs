@@ -155,10 +155,10 @@ msgstr ""
 #: ../../conventions.rst:71
 msgid ""
 "AppData files should be named with the application ID and the "
-"``.appdata.xml`` file extension, and should be placed in "
+"``.metainfo.xml`` file extension, and should be placed in "
 "``/app/share/metainfo/``. For example::"
 msgstr ""
-"AppData文件应该以应用的ID命名，并以  ``.appdata.xml``  为文件扩展名，应该放在  "
+"AppData文件应该以应用的ID命名，并以  ``.metainfo.xml``  为文件扩展名，应该放在  "
 "``/app/share/metainfo/``  。举个例子::"
 
 #: ../../conventions.rst:76
