@@ -115,8 +115,8 @@ window. This can be done by running::
 Global menus
 ------------
 
-If your application uses the built in ``GtkApplication:menu-bar`` or the Qt 5
-equivalent they will work as expected from within a sandboxed application.
+If your application uses `Gtk.Application:menubar <https://docs.gtk.org/gtk4/class.Application.html#properties>`_ or `QMenuBar <https://doc.qt.io/qt-6/qmenubar.html>`_
+it will work as expected from within a sandboxed application.
 
 Theming
 -------
