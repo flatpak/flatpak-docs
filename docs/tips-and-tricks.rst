@@ -41,6 +41,16 @@ Then you deploy the commit::
    --commit=ec07ad6c54e803d1428e5580426a41315e50a14376af033458e7a65bfb2b64f0 \
    org.gnome.Recipes
 
+If the application is installed per-user, you will get the error::
+
+ error: org.gnome.Recipes not installed
+
+In that case, omit `sudo` from the command::
+
+ $ flatpak update \
+   --commit=ec07ad6c54e803d1428e5580426a41315e50a14376af033458e7a65bfb2b64f0 \
+   org.gnome.Recipes
+
 If you have Flatpak 1.5.0 or later, you can also prevent the app from being
 included in updates (either manual or automatic)::
 
