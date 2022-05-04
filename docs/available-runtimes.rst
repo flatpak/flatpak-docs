@@ -101,3 +101,29 @@ org.kde.Sdk.Debug        SDK debug information (extension)
 org.kde.Sdk.Locale       SDK translations (extension)
 org.kde.Sdk.Docs         SDK documentation (extension)
 =======================  =================================
+
+elementary
+----------
+
+The elementary runtime is appropriate for any application that would like to publish in elementary AppCenter. It is based on the GNOME runtime and adds the elementary platform, including:
+
+* elementary Icons
+* elementary Stylesheet
+* elementary Sound Theme
+* Granite
+
+The elementary runtime is maintained `here
+<https://github.com/elementary/flatpak-platform>`__.
+
+Available elementary runtimes:
+
+=============================  =================================
+ID                             Description
+=============================  =================================
+io.elementary.Platform         Runtime
+io.elementary.Platform.Locale  Runtime translations (extension)
+io.elementary.Sdk              SDK
+io.elementary.Sdk.Debug        SDK debug information (extension)
+io.elementary.Sdk.Locale       SDK translations (extension)
+io.elementary.Sdk.Docs         SDK documentation (extension)
+=============================  =================================
