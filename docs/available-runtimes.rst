@@ -103,7 +103,7 @@ org.kde.Sdk.Docs         SDK documentation (extension)
 =======================  =================================
 
 elementary
------
+----------
 
 The elementary runtime is appropriate for any application that would like to publish in elementary AppCenter. It is based on the GNOME runtime and adds the elementary platform, including:
 
