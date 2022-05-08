@@ -68,10 +68,14 @@ and KDE Discover). The `Freedesktop AppStream specification
 <https://www.freedesktop.org/software/appstream/docs/>`_ provides a complete
 reference for providing AppData.
 
-AppData files should be named with the application ID and the ``.appdata.xml``
+AppData files should be named with the application ID and the ``.metainfo.xml``
 file extension, and should be placed in ``/app/share/metainfo/``. For example::
 
-  /app/share/metainfo/org.gnome.Dictionary.appdata.xml
+  /app/share/metainfo/org.gnome.Dictionary.metainfo.xml
+
+A legacy convention of having the ``.appdata.xml`` installed in ``/app/share/appdata``
+is also accepted as well, and ```flaptak-builder`` will check either directory with
+either extension.
 
 The ``appstream-util validate-relax`` command can be used to check AppData
 files for errors.
