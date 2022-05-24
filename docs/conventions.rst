@@ -74,7 +74,7 @@ file extension, and should be placed in ``/app/share/metainfo/``. For example::
   /app/share/metainfo/org.gnome.Dictionary.metainfo.xml
 
 A legacy convention of having the ``.appdata.xml`` installed in ``/app/share/appdata``
-is also accepted as well, and ```flaptak-builder`` will check either directory with
+is also accepted as well, and ```flatpak-builder`` will check either directory with
 either extension.
 
 The ``appstream-util validate-relax`` command can be used to check AppData
