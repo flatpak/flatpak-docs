@@ -1,11 +1,20 @@
 /* GNOME Overrides */
 
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: oblique 0deg 10deg;
+  src: url("Inter.var.woff2?v=3.19") format("woff2");
+}
+
+
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: Inter, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Overpass", sans-serif;
+  font-family: Inter, sans-serif;
   font-weight: 600;
 }
 
