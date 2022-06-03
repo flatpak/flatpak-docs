@@ -5,7 +5,8 @@ This page provides information about available Flatpak runtimes. It is
 primarily intended as information for application developers and distributors.
 
 There are currently three main runtimes available: Freedesktop, GNOME and
-KDE. These are all hosted on `Flathub <https://flathub.org/>`_.
+KDE. These are all hosted on `Flathub <https://flathub.org/>`_. Each runtime
+comes with the corresponding SDK for building, and extensions for specific uses.
 
 What is mentioned here is just a high level look at the contents. To have up
 to date information simply install the runtime and open a shell inside of it
@@ -30,6 +31,14 @@ Available Freedesktop runtimes:
 ID                                                     Description
 ====================================================== =====================================
 org.freedesktop.Platform                               Runtime
+org.freedesktop.Sdk                                    SDK
+====================================================== =====================================
+
+The following runtime extensions are available:
+
+====================================================== =====================================
+ID                                                     Description
+====================================================== =====================================
 org.freedesktop.Platform.Locale                        Runtime translations (extension)
 org.freedesktop.Platform.VAAPI.Intel{,.i386}           Intel vaapi drivers (extension)
 org.freedesktop.Platform.ffmpeg-full                   All ffmpeg codecs (extension)
@@ -37,7 +46,6 @@ org.freedesktop.Platform.Compat.{architecture}         32 bits compatible extens
 org.freedesktop.Platform.Compat.{architecture}.debug   32 bits compatible extension (debug)
 org.freedesktop.Platform.GL{,32}.default               Mesa drivers (extension)
 org.freedesktop.Platform.GL{,32}.mesa-git              Mesa drivers, latest (extension)
-org.freedesktop.Sdk                                    SDK
 org.freedesktop.Sdk.Debug                              SDK debug information (extension)
 org.freedesktop.Sdk.Locale                             SDK translations (extension)
 org.freedesktop.Sdk.Docs                               SDK documentation (extension)
@@ -72,8 +80,15 @@ Available GNOME runtimes:
 ID                         Description
 =========================  =================================
 org.gnome.Platform         Runtime
-org.gnome.Platform.Locale  Runtime translations (extension)
 org.gnome.Sdk              SDK
+=========================  =================================
+
+The following runtime extensions are available:
+
+=========================  =================================
+ID                         Description
+=========================  =================================
+org.gnome.Platform.Locale  Runtime translations (extension)
 org.gnome.Sdk.Debug        SDK debug information (extension)
 org.gnome.Sdk.Locale       SDK translations (extension)
 org.gnome.Sdk.Docs         SDK documentation (extension)
@@ -95,8 +110,15 @@ Available KDE runtimes:
 ID                       Description
 =======================  =================================
 org.kde.Platform         Runtime
-org.kde.Platform.Locale  Runtime translations (extension)
 org.kde.Sdk              SDK
+=======================  =================================
+
+The following runtime extensions are available:
+
+=======================  =================================
+ID                       Description
+=======================  =================================
+org.kde.Platform.Locale  Runtime translations (extension)
 org.kde.Sdk.Debug        SDK debug information (extension)
 org.kde.Sdk.Locale       SDK translations (extension)
 org.kde.Sdk.Docs         SDK documentation (extension)
@@ -121,8 +143,15 @@ Available elementary runtimes:
 ID                             Description
 =============================  =================================
 io.elementary.Platform         Runtime
-io.elementary.Platform.Locale  Runtime translations (extension)
 io.elementary.Sdk              SDK
+=============================  =================================
+
+The following runtime extensions are available:
+
+=============================  =================================
+ID                             Description
+=============================  =================================
+io.elementary.Platform.Locale  Runtime translations (extension)
 io.elementary.Sdk.Debug        SDK debug information (extension)
 io.elementary.Sdk.Locale       SDK translations (extension)
 io.elementary.Sdk.Docs         SDK documentation (extension)
