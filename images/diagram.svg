@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg2"
    version="1.1"
    height="450"
    width="580"
    viewbox="0 0 800 500"
    sodipodi:docname="diagram.svg"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    inkscape:export-filename="/home/aday/checkout/flatpak-docs-rest/img/graph.png"
    inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
+   inkscape:export-ydpi="90"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -48,7 +48,8 @@
      inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2"
-     inkscape:snap-global="true">
+     inkscape:snap-global="true"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
        id="grid4574"
@@ -65,7 +66,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -107,11 +108,11 @@
      ry="6.0000005" />
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      x="440.82434"
      y="171.62201"
      id="text2222"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        id="tspan2220"
        x="440.82434"
        y="171.62201">LIBRARY</tspan></text>
@@ -119,22 +120,22 @@
      id="text2226"
      y="171.62201"
      x="490.82434"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      xml:space="preserve"><tspan
        y="171.62201"
        x="490.82434"
        id="tspan2224"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266">LIBRARY</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">LIBRARY</tspan></text>
   <text
      id="text2230"
      y="171.62201"
      x="540.82434"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      xml:space="preserve"><tspan
        y="171.62201"
        x="540.82434"
        id="tspan2228"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266">LIBRARY</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">LIBRARY</tspan></text>
   <rect
      y="98.036621"
      x="420.02747"
@@ -146,11 +147,11 @@
      ry="6.0000005" />
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      x="490.82434"
      y="121.62201"
      id="text2236"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        id="tspan2234"
        x="490.82434"
        y="121.62201">CODE</tspan></text>
@@ -167,12 +168,12 @@
      id="text2242"
      y="71.622009"
      x="490.82434"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      xml:space="preserve"><tspan
        y="71.622009"
        x="490.82434"
        id="tspan2240"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266">DATA</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">DATA</tspan></text>
   <rect
      ry="6.0000005"
      rx="6.0000005"
@@ -222,29 +223,29 @@
      id="text1884"
      y="171.62201"
      x="38.824371"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      xml:space="preserve"><tspan
        y="171.62201"
        x="38.824371"
        id="tspan1882"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266">LIBRARY</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">LIBRARY</tspan></text>
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      x="88.824371"
      y="171.62201"
      id="text1888"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        id="tspan1886"
        x="88.824371"
        y="171.62201">LIBRARY</tspan></text>
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      x="138.82437"
      y="171.62201"
      id="text1892"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        id="tspan1890"
        x="138.82437"
        y="171.62201">LIBRARY</tspan></text>
@@ -261,12 +262,12 @@
      id="text1898"
      y="121.62201"
      x="88.824371"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      xml:space="preserve"><tspan
        y="121.62201"
        x="88.824371"
        id="tspan1896"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266">CODE</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">CODE</tspan></text>
   <rect
      y="48.036652"
      x="18.027451"
@@ -278,11 +279,11 @@
      ry="6.0000005" />
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      x="88.824371"
      y="71.622009"
      id="text1904"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        id="tspan1902"
        x="88.824371"
        y="71.622009">DATA</tspan></text>
@@ -314,33 +315,33 @@
      id="text7634"
      y="-179.72754"
      x="404.68484"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.66666698px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
      xml:space="preserve"><tspan
        y="-179.72754"
        x="404.68484"
        id="tspan7636"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.66666698px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end">RUNTIME</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end">RUNTIME</tspan></text>
   <text
      id="text7456-8"
      y="179.60831"
      x="241.00797"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.73756182;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37562px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.737562;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
      xml:space="preserve"
      transform="scale(1.0006015,0.99939886)"><tspan
        y="179.60831"
        x="241.00797"
        id="tspan7458-5"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.73756182" /></text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37562px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.737562" /></text>
   <text
      y="179.60831"
      x="241.00797"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.73756182;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37562px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.737562;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
      xml:space="preserve"
      id="text917"
      transform="scale(1.0006015,0.99939886)"><tspan
        y="179.60831"
        x="241.00797"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.73756182"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37562px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.737562"
        id="tspan919" /></text>
   <path
      style="fill:none;stroke:#4a90d9;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5, 10;stroke-dashoffset:0;stroke-opacity:1"
@@ -367,11 +368,11 @@
      transform="scale(1.0006015,0.99939886)"
      id="text1224"
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.73756182;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37562px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.737562;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
      x="420.89975"
      y="-228.74405"><tspan
        id="tspan1222"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.73756182"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37562px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.737562"
        x="420.89975"
        y="-228.74405">LIBRARY</tspan></text>
   <rect
@@ -396,22 +397,22 @@
      transform="scale(1.0006015,0.99939886)"
      y="-228.74405"
      x="466.87213"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.73756182;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37562px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.737562;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
      xml:space="preserve"
      id="text1232"><tspan
        y="-228.74405"
        x="466.87213"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.73756182"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37562px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.737562"
        id="tspan1230">LIBRARY</tspan></text>
   <text
      transform="scale(1.0006015,0.99939886)"
      id="text1236"
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.73756182;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37562px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.737562;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
      x="512.84454"
      y="-228.74405"><tspan
        id="tspan1234"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.73756182"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37562px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.737562"
        x="512.84454"
        y="-228.74405">LIBRARY</tspan></text>
   <rect
@@ -427,7 +428,7 @@
      id="text1242"
      y="-329.08444"
      x="466.44949"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.01770973px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.01771px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
      xml:space="preserve"
      transform="scale(1.0006015,0.99939886)"><tspan
        style="fill:#ffffff"
@@ -445,7 +446,7 @@
      y="-302.80316" />
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.01770973px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.01771px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
      x="466.44949"
      y="-278.93484"
      id="text1248"
@@ -472,13 +473,13 @@
   <text
      y="-228.74405"
      x="592.79626"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.73756182;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37562px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.737562;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
      xml:space="preserve"
      id="text1256"
      transform="scale(1.0006015,0.99939886)"><tspan
        y="-228.74405"
        x="592.79626"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.73756182"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37562px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.737562"
        id="tspan1254">LIBRARY</tspan></text>
   <rect
      ry="6.000001"
@@ -501,24 +502,24 @@
   <text
      id="text1264"
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.73756182;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37562px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.737562;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
      x="638.76862"
      y="-228.74405"
      transform="scale(1.0006015,0.99939886)"><tspan
        id="tspan1262"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.73756182"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37562px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.737562"
        x="638.76862"
        y="-228.74405">LIBRARY</tspan></text>
   <text
      y="-228.74405"
      x="684.74103"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.73756182;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37562px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.737562;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
      xml:space="preserve"
      id="text1268"
      transform="scale(1.0006015,0.99939886)"><tspan
        y="-228.74405"
        x="684.74103"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37561846px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.73756182"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.37562px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.737562"
        id="tspan1266">LIBRARY</tspan></text>
   <rect
      ry="6.000001"
@@ -532,7 +533,7 @@
   <text
      transform="scale(1.0006015,0.99939886)"
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.01770973px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.01771px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
      x="638.34601"
      y="-329.08444"
      id="text1274"><tspan
@@ -554,7 +555,7 @@
      id="text1280"
      y="-278.93484"
      x="638.34601"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.01770973px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.01771px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Normal';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
      xml:space="preserve"><tspan
        style="fill:#ffffff"
        y="-278.93484"
@@ -562,22 +563,22 @@
        id="tspan1278">CODE</tspan></text>
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.66666698px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
      x="666.68488"
      y="-179.72754"
      id="text1286"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.66666698px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end"
        id="tspan1284"
        x="666.68488"
        y="-179.72754">RUNTIME</tspan></text>
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.66666698px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
      x="508.39642"
      y="-364.12024"
      id="text1208"
      class="splashlabel"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.66666698px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end"
        id="tspan1206"
        x="508.39642"
        y="-364.12024">APPLICATION</tspan></text>
@@ -586,23 +587,23 @@
      id="text1212"
      y="-364.12024"
      x="688.39642"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.66666698px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
      xml:space="preserve"><tspan
        y="-364.12024"
        x="688.39642"
        id="tspan1210"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.66666698px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end">APPLICATION</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end">APPLICATION</tspan></text>
   <text
      class="splashlabel"
      id="text1908"
      y="21.61322"
      x="243.70476"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07590008px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      xml:space="preserve"><tspan
        y="21.61322"
        x="289.14105"
        id="tspan1906"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle">APPLICATION</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07590008px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">APPLICATION</tspan></text>
   <rect
      ry="10"
      rx="10"
@@ -617,12 +618,12 @@
      id="text1916"
      y="417.61322"
      x="353.39709"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07590008px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      xml:space="preserve"><tspan
        y="417.61322"
        x="353.39709"
        id="tspan1914"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#ffffff">OPERATING SYSTEM</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07590008px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">OPERATING SYSTEM</tspan></text>
   <rect
      y="282.53668"
      x="56.027451"
@@ -645,12 +646,12 @@
      id="text2038"
      y="339.62201"
      x="88.824371"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      xml:space="preserve"><tspan
        y="339.62201"
        x="88.824371"
        id="tspan2036"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.90386266">LIBRARY</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">LIBRARY</tspan></text>
   <rect
      ry="6.0000005"
      rx="6.0000005"
@@ -662,11 +663,11 @@
      y="316.03662" />
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      x="138.82437"
      y="339.62201"
      id="text2044"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.90386266"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        id="tspan2042"
        x="138.82437"
        y="339.62201">LIBRARY</tspan></text>
@@ -681,11 +682,11 @@
      y="316.03662" />
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      x="188.82437"
      y="339.62201"
      id="text2050"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.90386266"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        id="tspan2048"
        x="188.82437"
        y="339.62201">LIBRARY</tspan></text>
@@ -702,12 +703,12 @@
      id="text2058"
      y="339.62201"
      x="238.82437"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      xml:space="preserve"><tspan
        y="339.62201"
        x="238.82437"
        id="tspan2056"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.90386266">LIBRARY</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">LIBRARY</tspan></text>
   <rect
      y="316.03662"
      x="268.02747"
@@ -721,12 +722,12 @@
      id="text2064"
      y="339.62201"
      x="288.82437"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      xml:space="preserve"><tspan
        y="339.62201"
        x="288.82437"
        id="tspan2062"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.90386266">LIBRARY</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">LIBRARY</tspan></text>
   <rect
      ry="6.0000005"
      rx="6.0000005"
@@ -738,11 +739,11 @@
      y="316.03662" />
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      x="338.82434"
      y="339.62201"
      id="text2070"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.90386266"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        id="tspan2068"
        x="338.82434"
        y="339.62201">LIBRARY</tspan></text>
@@ -784,11 +785,11 @@
      ry="6.0000005" />
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      x="238.82437"
      y="171.62201"
      id="text2256"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        id="tspan2254"
        x="238.82437"
        y="171.62201">LIBRARY</tspan></text>
@@ -796,22 +797,22 @@
      id="text2260"
      y="171.62201"
      x="288.82437"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      xml:space="preserve"><tspan
        y="171.62201"
        x="288.82437"
        id="tspan2258"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266">LIBRARY</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">LIBRARY</tspan></text>
   <text
      id="text2264"
      y="171.62201"
      x="338.82437"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      xml:space="preserve"><tspan
        y="171.62201"
        x="338.82437"
        id="tspan2262"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266">LIBRARY</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">LIBRARY</tspan></text>
   <rect
      y="98.036621"
      x="218.02747"
@@ -823,11 +824,11 @@
      ry="6.0000005" />
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      x="288.82437"
      y="121.62201"
      id="text2270"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        id="tspan2268"
        x="288.82437"
        y="121.62201">CODE</tspan></text>
@@ -844,12 +845,12 @@
      id="text2276"
      y="71.622009"
      x="288.82437"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      xml:space="preserve"><tspan
        y="71.622009"
        x="288.82437"
        id="tspan2274"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.90386266">DATA</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">DATA</tspan></text>
   <rect
      ry="6.0000005"
      rx="6.0000005"
@@ -861,12 +862,12 @@
      y="198.03662" />
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07590008px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:end;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      x="318.68488"
      y="304.88007"
      id="text1912"
      class="splashlabel"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#ffffff"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07590008px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        id="tspan1910"
        x="318.68488"
        y="304.88007">RUNTIME</tspan></text>
@@ -929,11 +930,11 @@
      y="316.03662" />
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      x="388.82434"
      y="339.62201"
      id="text2399"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.90386266"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        id="tspan2397"
        x="388.82434"
        y="339.62201">LIBRARY</tspan></text>
@@ -948,11 +949,11 @@
      y="316.03662" />
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      x="438.82434"
      y="339.62201"
      id="text2405"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.90386266"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        id="tspan2403"
        x="438.82434"
        y="339.62201">LIBRARY</tspan></text>
@@ -969,31 +970,31 @@
      id="text2411"
      y="339.62201"
      x="488.82434"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.90386266;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.903863;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      xml:space="preserve"><tspan
        y="339.62201"
        x="488.82434"
        id="tspan2409"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.38673925px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass Semi-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.90386266">LIBRARY</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.38674021px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#4a90d9;fill-opacity:1;stroke-width:0.903863;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">LIBRARY</tspan></text>
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07590008px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      x="43.910492"
      y="21.61322"
      id="text3226"
      class="splashlabel"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07590008px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        id="tspan3224"
        x="89.346786"
        y="21.61322">APPLICATION</tspan></text>
   <text
      xml:space="preserve"
-     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate"
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07590008px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;enable-background:accumulate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
      x="445.91052"
      y="21.61322"
      id="text3230"
      class="splashlabel"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07587051px;line-height:125%;font-family:Overpass;-inkscape-font-specification:'Overpass, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.07590008px;line-height:125%;font-family:Inter;-inkscape-font-specification:'Inter, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        id="tspan3228"
        x="491.3468"
        y="21.61322">APPLICATION</tspan></text>
