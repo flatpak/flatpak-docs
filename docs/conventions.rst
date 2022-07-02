@@ -20,12 +20,15 @@ desktop will typically need to make very few (if any) changes to do this.
 Application IDs
 ```````````````
 
-As described in :doc:`using-flatpak`, Flatpak requires each
-application to have a unique identifier, which has a
-form such as ``org.gnome.Dictionary``. The format is in reverse-DNS style
-so the first section is a domain controlled by the project and the trailing
-section represents the specific project. As will be seen below and in future sections,
-this ID is expected to be used in a number of places.
+As described in :doc:`using-flatpak`, Flatpak requires each application to have a
+unique identifier, which has a form such as ``org.gnome.Dictionary``.
+
+The format is in reverse-DNS style so the first section is generally domain
+controlled by the project and the trailing section represents the specific project.
+There are some exceptions to this, such as extensions using the base application-id of the project
+they extend rather than their own.
+
+As will be seen below and in future sections, this ID is expected to be used in a number of places.
 Developers must follow the standard `D-Bus naming conventions for bus names
 <https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names>`_
 when creating their own IDs. This format is
