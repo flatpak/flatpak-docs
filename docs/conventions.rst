@@ -23,7 +23,7 @@ Application IDs
 As described in :doc:`using-flatpak`, Flatpak requires each application to have a
 unique identifier, which has a form such as ``org.gnome.Dictionary``.
 
-The format is in reverse-DNS style so the first section is generally domain
+The format is in reverse-DNS style so the first section is generally a domain
 controlled by the project and the trailing section represents the specific project.
 There are some exceptions to this, such as extensions using the base application-id of the project
 they extend rather than their own.
