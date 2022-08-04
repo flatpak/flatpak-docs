@@ -92,3 +92,90 @@ need to use them (the most common base app is used for `Electron applications
 <https://github.com/flathub/io.atom.electron.BaseApp>`_). However, if your
 application uses a large, complex or specialized framework, it is a good
 idea to check for available base apps before you start building.
+
+Extensions
+----------
+
+Runtimes and applications can define extension points which allow optional
+additional runtimes to be mounted at a specified location inside the sandbox
+when they are present on the system. Typical uses for extension points include
+translations for applications, debuginfo for sdks, or adding more functionality
+to the application. Some software refers to these extensions as "Add-ons".
+
+By convention, extension points follow the application ID of the application in
+question, followed by a generic term the extension is conveying. For example,
+OBS Studio supports plugins to extend the application's functionality.
+OBS Studio Flatpak has an extension point that goes by
+``com.obsproject.Studio.Plugin``, as "Plugin" conveys the extension type.
+
+We can use the ``add-extensions`` property in the manifest to specify where
+and how should extensions be installed:
+
+.. code-block:: yaml
+
+  add-extensions:
+    org.flatpak.App.ExampleExtension:
+      directory: my-dir # Installs extensions in $FLATPAK_DEST/my-dir
+      version: '1.0' # Branch version of extension
+      versions: 21.08;22.08beta # Supported extension versions
+      subdirectories: true # Creates $FLATPAK_DEST/my-dir/ExampleExtension directory
+      no-autodownload: true # Don't automatically download directories
+      autodelete: false # Don't autodelete
+      add-ld-path: lib # Add $FLATPAK_DEST/lib to library path
+      merge-dirs: my-dir1;my-dir2;my-dir3 # Merge these directories
+      download-if: conditional # Download only if 'conditional' exists
+      enable-if: conditional # Enable extension only if 'conditional' exists
+      subdirectory-suffix
+      locale-subset
+
+Debug Extensions
+````````````````
+
+Debug extensions (stylized as ``.Debug``) are used for debugging purposes.
+To get a list of debug extensions, please visit
+:doc:`available-runtimes?highlight=.Debug`.
+
+Compatibility Debug Extensions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+DESCRIPTION NEEDED
+
+.. code-block:: yaml
+
+  add-extensions:
+    $FLATPAK_ID.Compat.{architecture}:
+      directory: lib/{architecture}-linux-gnu
+      version: '21.08'
+
+    $FLATPAK_ID.Compat.{architecture}.Debug:
+      directory: lib/debug/lib/{architecture}-linux-gnu
+      version: '21.08'
+      no-autodownload: true
+
+SDK Debug Extensions
+^^^^^^^^^^^^^^^^^^^^
+
+DESCRIPTION NEEDED
+
+.. code-block:: yaml
+
+  sdk-extensions:
+    $FLATPAK_ID.Sdk.Debug
+
+
+DESCRIPTION AND EXAMPLE NEEDED
+
+Locale Extensions
+`````````````````
+
+Locale extensions (stylized as ``.Locale``) are used to add support for
+more languages. To get a list of locale extensions, please visit
+:doc:`available-runtimes?highlight=.Locale`.
+
+.. code-block:: yaml
+
+  add-extensions:
+    $FLATPAK_ID.Locale
+
+  sdk-extensions:
+    $FLATPAK_ID.Sdk.Locale
