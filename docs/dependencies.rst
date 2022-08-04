@@ -92,3 +92,26 @@ need to use them (the most common base app is used for `Electron applications
 <https://github.com/flathub/io.atom.electron.BaseApp>`_). However, if your
 application uses a large, complex or specialized framework, it is a good
 idea to check for available base apps before you start building.
+
+Extensions
+----------
+
+Extensions are optional tools and utilities to extend an application's functionality. They are also called "Add-ons". There are several methods to make use of them.
+
+`add-extensions`
+````````````````
+
+`add-extensions`
+````````````````
+
+`sdk-extensions`
+````````````````
+
+`inherit-extensions`
+````````````````````
+
+\.Debug
+```````
+
+\.Locale
+````````
