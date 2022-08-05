@@ -181,6 +181,11 @@ Modules can be built with a variety of build systems, including:
 A "simple" build method is also available, which allows a series of commands
 to be specified.
 
+Flatpak Builder Tools
+`````````````````````
+
+`Flatpak Builder Tools (or flatpak-builder-tools) <https://github.com/flatpak/flatpak-builder-tools>`_ is a collection of scripts to aid using `flatpak-builder`. In this repository, each directory contains instructions to generate a manifest for the respective platform.
+
 Example manifests
 -----------------
 
