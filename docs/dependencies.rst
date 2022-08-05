@@ -96,19 +96,27 @@ idea to check for available base apps before you start building.
 Extensions
 ----------
 
-Extensions are optional tools and utilities to extend an application's functionality. They are also called "Add-ons". There are several methods to make use of them.
+Extensions are optional tools and utilities to extend an application's functionality. They are also called "Add-ons". These extensions are manually installed by the user, via the `flatpak install` or from a software front-end like GNOME Software or KDE Discover. We can use the `add-extensions` property in the manifest to specify where extensions and how should be installed.
 
-`add-extensions`
-````````````````
+.. code-block:: yaml
 
-`add-extensions`
-````````````````
+  add-extensions:
+    org.flatpak.App.Extension:
+      directory: my-dir # Installs extensions in $FLATPAK_DEST/my-dir
+      version: '1.0' # Version of extension
+      versions: 21.08;22.08beta # Supported extension versions
+      subdirectories: true # Allow subdirectories
+      no-autodownload: true # Don't automatically download directories
+      autodelete: false # Don't autodelete
+      add-ld-path: lib # Add $FLATPAK_DEST/lib to LD_PRELOAD variable
+      merge-dirs: my-dir1;my-dir2;my-dir3 # Allow these directories
+      download-if: dependency # Download only if 'dependency' exists
+      enable-if: dependency # Enable extension only if 'dependency' exists
+      subdirectory-suffix
+      locale-subset
 
-`sdk-extensions`
-````````````````
 
-`inherit-extensions`
-````````````````````
+
 
 \.Debug
 ```````
