@@ -41,6 +41,7 @@ it uses characters not allowed in Flatpak.
 .. the object's name, and the preceding part identifies the developer, so that
 .. the same developer can have multiple applications, like ``com.company.App1``
 .. and ``com.company.App2``.
+
 Identifier triples
 ``````````````````
 
@@ -80,6 +81,7 @@ can only be used by a particular user.
 .. Flatpak commands are run system-wide by default. If you are installing
 .. applications for day-to-day usage, it is recommended to stick with this
 .. default behavior.
+
 Flatpak commands are run system-wide by default. If you are installing 
 applications for day-to-day usage, it is recommended to use ``--user`` if 
 you don't need your apps available for all users on your system.
@@ -267,7 +269,7 @@ You can list running Flatpak applications with the following command::
 The full application ID is required, a portion of one will not work.
 
 Additional commands available
-```````````````
+`````````````````````````````
 Flatpak can pin a runtime to prevent automatic removal, like so::
 
  $ flatpak pin org.freedesktop.Platform
