@@ -83,4 +83,5 @@ When a new version of an application is added to a repository, it immediately
 becomes available to users. Software centers are able to automatically check
 for and install new versions. Those who are using the command line have to
 manually run ``flatpak update`` to check for and install new versions of
-any applications they have installed.
+any applications they have installed. Checking for app updates is typically
+done for the user by default with most GUI flatpak management implementations.
