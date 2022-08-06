@@ -82,9 +82,9 @@ can be used in combination with most ``flatpak`` commands.
 
 Commands behave in exactly the same way if they are run per-user rather
 than system-wide, but running them system-wide uses polkit to authenticate the user.
-System-wide installations of flatpak apps are stored in `/var/lib/flatpak`,
-whereas user installations of flatpak apps are stored in `$HOME/.local/share/flatpak`.
-Per-user app configurations are available under `$XDG_DATA_HOME/flatpak`. This may or may not be 
+Flatpak apps install to `$XDG_DATA_HOME/flatpak`. This is typically `$HOME/.local/share/flatpak` 
+for user-installed apps, and `/var/lib/flatpak` for system-wide installations.
+Per-user app configurations are available under `$HOME/.var`. This may or may not be 
 followed by an app, depending on whether or not it follows the appropriate environment 
 variables correctly.
 
