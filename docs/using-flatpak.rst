@@ -1,4 +1,3 @@
-..I've commented out major portions of the docs that may be able to be removed, and that need working on. I'm keeping them in case portions of them can be reused later.
 
 Using Flatpak
 =============
@@ -36,11 +35,6 @@ host their source code - it is typically available under the ID of
 can typically get you the link to the project, depending on whether or not 
 it uses characters not allowed in Flatpak.
 
-.. Flatpak identifies each application and runtime using a unique three-part
-.. identifier, such as ``com.company.App``. The final segment of this address is
-.. the object's name, and the preceding part identifies the developer, so that
-.. the same developer can have multiple applications, like ``com.company.App1``
-.. and ``com.company.App2``.
 
 Identifier triples
 ``````````````````
@@ -78,10 +72,6 @@ The same principle applies to repositories - repositories that have been
 added system-wide are available to all users, whereas per-user repositories
 can only be used by a particular user.
 
-.. Flatpak commands are run system-wide by default. If you are installing
-.. applications for day-to-day usage, it is recommended to stick with this
-.. default behavior.
-
 Flatpak commands are run system-wide by default. If you are installing 
 applications for day-to-day usage, it is recommended to use ``--user`` if 
 you don't need your apps available for all users on your system.
@@ -92,10 +82,10 @@ to other users on the system. To do this, use the ``--user`` option, which
 can be used in combination with most ``flatpak`` commands.
 
 Commands behave in exactly the same way if they are run per-user rather
-than system-wide, but running them system-wide may require root permissions.
+than system-wide, but running them system-wide uses polkit to authenticate the user.
 System-wide installations of flatpak apps are stored in `/var/lib/flatpak`,
 whereas user installations of flatpak apps are stored in `$HOME/.local/share/flatpak`.
-Per-user app configurations are available under `$HOME/.var`. This may or may not be 
+Per-user app configurations are available under `$XDG_DATA_HOME/flatpak`. This may or may not be 
 followed by an app, depending on whether or not it follows the appropriate environment 
 variables correctly.
 
@@ -187,7 +177,7 @@ Running applications
 ````````````````````
 
 Once an application has been installed, it can be launched using the ``run``
-command and its (full) application ID::
+command and its application ID::
 
  $ flatpak run your.application.ID
 
@@ -210,7 +200,7 @@ Alternatively, to just list installed applications, run::
 
  $ flatpak list --app
 
-There are more options available for the ``flatpak list`` command, available by appending ``--help``.
+There are more options available, which can be seen with ``flatpak list --help``.
 
 Remove an application
 `````````````````````
