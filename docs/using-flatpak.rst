@@ -7,10 +7,9 @@ and explains essential technical conventions as well as the most common
 commands.
 
 End users shouldn't generally need to use this page or the Flatpak command
-line interface, since Flatpak can be easily used through graphical software
-management tools, though they are of course free to use the command line if
-they prefer! GNOME Software is one such example of a graphical application 
-to manage installing flatpaks.
+line interface, since Flatpak can be easily used through graphical
+management tools, such as GNOME Software, though they are of course 
+free to use the command line if they prefer!
 
 
 The flatpak command
