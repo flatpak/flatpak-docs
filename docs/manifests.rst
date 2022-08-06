@@ -181,6 +181,39 @@ Modules can be built with a variety of build systems, including:
 A "simple" build method is also available, which allows a series of commands
 to be specified.
 
+Shared Modules
+``````````````
+
+`Shared Modules (or shared-modules) <https://github.com/flathub/shared-modules>`_ is a repository containing various manifests to build common libraries. It is intended to be used as a git submodule.
+
+To add it to your repository, run this command:
+
+.. code-block:: bash
+
+  git submodule add https://github.com/flathub/shared-modules.git
+
+Then, add whichever module you want. In this example, we will use `gtk2`:
+
+.. code-block:: yaml
+
+  modules:
+    - shared-modules/gtk2/gtk2.json
+
+To update the submodule, run this command:
+
+.. code-block:: bash
+
+  git submodule update --remote --merge
+
+To remove the submodule, run these commands:
+
+.. code-block:: bash
+
+  git submodule deinit -f -- shared-modules
+  rm -rf .git/modules/shared-modules
+  git rm -f shared-modules
+  rm .gitmodules
+
 Flatpak Builder Tools
 `````````````````````
 
