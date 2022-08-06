@@ -23,14 +23,18 @@ can be listed with ``flatpak --help``.
 Identifiers
 -----------
 
-Flatpak identifies each project (object) using a (three or more)-part identifier (ID),
-in reverse-DNS style. The final segment of this identifier is the project's name 
-the preceding segment typically identifies the developer so that
-the same developer can have multiple applications, like ``com.company.App1``
-and ``com.company.App2``. An example of this is a project using GitHub to 
-host their source code - it is typically available under the ID of 
-..Someone please make sure using the example below is allowed, I am not 100% sure on it.
-``com.github.username.projectname``, or similar. Reversing the ID 
+Flatpak identifies each project (object) using a two-part identifier (ID),
+in reverse-DNS style. The final part of this identifier is the application's name.
+The preceding segments identify the developer so that the same developer can have 
+multiple applications, like ``com.company.App1`` and ``com.company.App2``. 
+Some examples are:: 
+
+``org.gnome.Epiphany`` (The first two segments are the organization, the final segment is the application)
+``io.github.username.Application`` (the organization is the first three segments)
+
+
+An example of this is a GNOME project - it is 
+typically available under the ID of ``org.gnome.``, or similar. Reversing the ID 
 can typically get you the link to the project, depending on whether or not 
 it uses characters not allowed in Flatpak.
 
