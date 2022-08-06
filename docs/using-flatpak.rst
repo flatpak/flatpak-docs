@@ -55,9 +55,9 @@ or the branch, by leaving part of the triple blank. For example,
 ``com.company.App//stable`` would just specify the branch, and
 ``com.company.App/i386//`` just specifies the architecture.
 
-The Flatpak CLI provides feedback if the architecture or branch of an object
-needs to be specified - it will list all branches of an object if you just 
-specify the ID, or all architectures of a certain branch if you only list the branch.
+The Flatpak CLI provides feedback if the branch of an object needs to 
+be specified - it will list all branches of an object if you just 
+specify the ID, on your current architecture.
 
 System versus user
 ------------------
