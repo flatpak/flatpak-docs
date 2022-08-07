@@ -8,7 +8,7 @@ commands.
 
 End users shouldn't generally need to use this page or the Flatpak command
 line interface, since Flatpak can be easily used through graphical
-management tools, such as GNOME Software, though they are of course 
+management tools, such as GNOME Software and Flatseal, though they are of course 
 free to use the command line if they prefer!
 
 
@@ -33,12 +33,6 @@ Some examples are::
 ``io.github.username.Application`` (the organization is the first three segments)
 
 
-An example of this is a GNOME project - it is 
-typically available under the ID of ``org.gnome.``, or similar. Reversing the ID 
-can typically get you the link to the project, depending on whether or not 
-it uses characters not allowed in Flatpak.
-
-
 Identifier triples
 ``````````````````
 
@@ -59,17 +53,18 @@ or the branch, by leaving part of the triple blank. For example,
 ``com.company.App//stable`` would just specify the branch, and
 ``com.company.App/i386//`` just specifies the architecture.
 
-The Flatpak CLI provides feedback if the branch of an object needs to 
-be specified - it will list all branches of an object if you just 
-specify the ID, on your current architecture.
+The Flatpak CLI provides feedback if the branch of an object needs to be 
+specified - it will list all branches of an object if you just specify the 
+ID, on your current architecture. GUI Implementations will typically 
+include a menu for you to select which branch to install of an app.
 
 System versus user
 ------------------
 
-Flatpak commands can be run either system-wide or per-user. Applications
-and runtimes that are installed system-wide are available to all users on
-the system. Applications and runtimes that are installed per-user are only
-available to the users that installed them.
+Flatpak commands can be run either system-wide or per-user. Objects that 
+are installed system-wide are available to all users on the system. 
+Objects that are installed per-user are only available to the users that 
+installed them.
 
 The same principle applies to repositories - repositories that have been
 added system-wide are available to all users, whereas per-user repositories
@@ -77,9 +72,10 @@ can only be used by a particular user.
 
 Flatpak commands are run system-wide by default. If you are installing 
 applications for day-to-day usage, it is recommended to use ``--user`` if 
-you don't need your apps available for all users on your system.
+you don't need your apps available for all users on your system. Installing 
+for the system can be specified with the ``--system`` argument.
 
-Running commands per-user can be useful for testing and development
+Running commands per-user can also be useful for testing and development
 purposes, since objects that are installed in this way won't be available
 to other users on the system. To do this, use the ``--user`` option, which
 can be used in combination with most ``flatpak`` commands.
@@ -137,21 +133,21 @@ Search
 Applications can be found in any of your remotes using the ``search``
 command. For example::
 
- $ flatpak search gimp
+ $ flatpak search firefox
 
 Search will return any applications matching the search terms. Each search
 result includes the application ID and the remote that the application is
-in. In this example, the search term is ``gimp``.
+in. In this example, the search term is ``firefox``.
 
 Install applications
 ````````````````````
 
 To install an application, run::
 
- $ flatpak install flathub org.gimp.GIMP
+ $ flatpak install flathub org.mozilla.firefox
 
 Here, ``flathub`` is the name of the remote the application is to be installed
-from, and ``org.gimp.GIMP`` is the ID of the application. You can specify a 
+from, and ``org.mozilla.firefox`` is the ID of the application. You can specify a 
 part of an ID, and you will be suggested apps that contain that part of the 
 ID, rather than needing to know the full ID.
 
@@ -163,7 +159,7 @@ The details of the application to be installed can also be provided by a
 ``.flatpakref`` instead of manually providing the remote and application
 ID, run::
 
- $ flatpak install https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
+ $ flatpak install https://flathub.org/repo/appstream/org.mozilla.firefox.flatpakref
 
 If the ``.flatpakref`` file specifies that the application is to be installed
 from a remote that hasn't already been added, you will be asked whether to
@@ -267,7 +263,13 @@ Flatpak can pin a runtime to prevent automatic removal, like so::
 
  $ flatpak pin org.freedesktop.Platform
 
-..The enter command needs to be documented, as well.
+
+It is posssible to enter a running Flatpak sandbox, and manipulate it as 
+if it was an immutable operating system. To do this, run::
+
+  $ flatpak enter your.running.Application command
+
+The command can be a shell, or any other command of your choosing.
 
 .. A specific version of an app can be set as the default, with the `make-current` command:
  This needs someone else to document it as well.
