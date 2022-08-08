@@ -96,7 +96,16 @@ idea to check for available base apps before you start building.
 Extensions
 ----------
 
-Extensions are optional tools and utilities to extend an application's functionality. They are also called "Add-ons". These extensions are manually installed by the user, via the `flatpak install` or from a software front-end like GNOME Software or KDE Discover. We can use the `add-extensions` property in the manifest to specify where extensions and how should be installed.
+Runtimes and applications can define extension points, which allow optional,
+additional runtimes to be mounted at a specified location inside the sandbox
+when they are present on the system. Typical uses for extension points include
+translations for applications, debuginfo for sdks, or adding more functionality
+to the application. These extensions are also referred to as "Add-ons".
+
+We can use the `add-extensions` property in the manifest to specify where
+and how should extensions be installed:
+
+
 
 .. code-block:: yaml
 
@@ -105,18 +114,15 @@ Extensions are optional tools and utilities to extend an application's functiona
       directory: my-dir # Installs extensions in $FLATPAK_DEST/my-dir
       version: '1.0' # Version of extension
       versions: 21.08;22.08beta # Supported extension versions
-      subdirectories: true # Allow subdirectories
+      subdirectories: true # Allow creation of subdirectories
       no-autodownload: true # Don't automatically download directories
       autodelete: false # Don't autodelete
       add-ld-path: lib # Add $FLATPAK_DEST/lib to LD_PRELOAD variable
-      merge-dirs: my-dir1;my-dir2;my-dir3 # Allow these directories
+      merge-dirs: my-dir1;my-dir2;my-dir3 # Merge these directories
       download-if: dependency # Download only if 'dependency' exists
       enable-if: dependency # Enable extension only if 'dependency' exists
       subdirectory-suffix
       locale-subset
-
-
-
 
 \.Debug
 ```````
