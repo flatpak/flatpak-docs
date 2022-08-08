@@ -69,7 +69,7 @@ rather than bundle it yourself.
 The specifics of how to bundle libraries is covered in the :doc:`manifests`
 section.
 
-Base apps
+BaseApps
 ---------
 
 Runtimes and bundling are the two main ways in which dependencies are handled
@@ -78,17 +78,17 @@ dependencies on the one hand, and to have flexibility and control on the other.
 
 However, in some cases, dependencies come as part of a bigger framework or
 toolkit, which doesn't fit into a runtime but which is also cumbersome to
-manually bundle as a series of individual modules. This is where *base apps*
-come in.
+manually bundle as a series of individual modules. This is where *BaseApps*
+(also known as *base application*) come in.
 
-Base apps contain collections of bundled dependencies which can then be
+BaseApps contain collections of bundled dependencies which can then be
 bundled as part of an application. They don't get rebuilt as part of the
 build process, which makes building faster (particularly when bundling large
-dependencies). And because each base app is only built once, it is guaranteed
+dependencies). And because each BaseApp is only built once, it is guaranteed
 to be identical wherever it is used, so it will only be saved once on disk.
 
-Base apps are a relatively specialized concept and only some applications
-need to use them (the most common base app is used for `Electron applications
+BaseApps are a relatively specialized concept and only some applications
+need to use them (the most common BaseApp is used for `Electron applications
 <https://github.com/flathub/io.atom.electron.BaseApp>`_). However, if your
 application uses a large, complex or specialized framework, it is a good
-idea to check for available base apps before you start building.
+idea to check for available BaseApps before you start building.
