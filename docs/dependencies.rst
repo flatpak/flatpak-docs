@@ -102,15 +102,19 @@ when they are present on the system. Typical uses for extension points include
 translations for applications, debuginfo for sdks, or adding more functionality
 to the application. These extensions are also referred to as "Add-ons".
 
+By convention, extension points follow the application ID of the application in
+question, followed by a generic term the extension is conveying. For example,
+OBS Studio supports plugins to extend the application's functionality.
+OBS Studio Flatpak has an extension point that goes by
+``com.obsproject.Studio.Plugin``, as "Plugin" conveys the extension type.
+
 We can use the `add-extensions` property in the manifest to specify where
 and how should extensions be installed:
-
-
 
 .. code-block:: yaml
 
   add-extensions:
-    org.flatpak.App.Extension:
+    org.flatpak.App.ExampleExtension:
       directory: my-dir # Installs extensions in $FLATPAK_DEST/my-dir
       version: '1.0' # Version of extension
       versions: 21.08;22.08beta # Supported extension versions
