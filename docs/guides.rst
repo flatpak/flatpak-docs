@@ -13,3 +13,4 @@ standard guidance provided elsewhere in the Flatpak documentation.
    electron
    qt
    multiarch
+   wine
