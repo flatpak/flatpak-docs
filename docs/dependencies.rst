@@ -123,8 +123,8 @@ and how should extensions be installed:
       autodelete: false # Don't autodelete
       add-ld-path: lib # Add $FLATPAK_DEST/lib to library path
       merge-dirs: my-dir1;my-dir2;my-dir3 # Merge these directories
-      download-if: dependency # Download only if 'dependency' exists
-      enable-if: dependency # Enable extension only if 'dependency' exists
+      download-if: conditional # Download only if 'conditional' exists
+      enable-if: conditional # Enable extension only if 'conditional' exists
       subdirectory-suffix
       locale-subset
 
