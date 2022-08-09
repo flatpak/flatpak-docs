@@ -118,7 +118,7 @@ and how should extensions be installed:
       directory: my-dir # Installs extensions in $FLATPAK_DEST/my-dir
       version: '1.0' # Branch version of extension
       versions: 21.08;22.08beta # Supported extension versions
-      subdirectories: true # Allow creation of subdirectories
+      subdirectories: true # Creates $FLATPAK_DEST/my-dir/ExampleExtension directory
       no-autodownload: true # Don't automatically download directories
       autodelete: false # Don't autodelete
       add-ld-path: lib # Add $FLATPAK_DEST/lib to library path
