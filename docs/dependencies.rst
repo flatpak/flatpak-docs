@@ -96,7 +96,7 @@ idea to check for available base apps before you start building.
 Extensions
 ----------
 
-Runtimes and applications can define extension points, which allow optional,
+Runtimes and applications can define extension points which allow optional
 additional runtimes to be mounted at a specified location inside the sandbox
 when they are present on the system. Typical uses for extension points include
 translations for applications, debuginfo for sdks, or adding more functionality
