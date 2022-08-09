@@ -121,7 +121,7 @@ and how should extensions be installed:
       subdirectories: true # Allow creation of subdirectories
       no-autodownload: true # Don't automatically download directories
       autodelete: false # Don't autodelete
-      add-ld-path: lib # Add $FLATPAK_DEST/lib to LD_PRELOAD variable
+      add-ld-path: lib # Add $FLATPAK_DEST/lib to library path
       merge-dirs: my-dir1;my-dir2;my-dir3 # Merge these directories
       download-if: dependency # Download only if 'dependency' exists
       enable-if: dependency # Enable extension only if 'dependency' exists
