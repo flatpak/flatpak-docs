@@ -77,7 +77,7 @@ commonly require, and can therefore be freely used:
 - ``--share=network`` - access the network
 - ``--socket=x11`` - show windows using X11
 - ``--socket=fallback-x11`` - show windows using X11, if Wayland is not
-  available, overrides ``x11`` socket permission. Note that you must 
+  available. Overrides with the ``x11`` socket permission. Note that you must 
   still use ``--socket=wayland`` for wayland permission
 - ``--share=ipc`` - share IPC namespace with the host (necessary for X11)
 - ``--socket=wayland`` - show windows with Wayland
@@ -110,8 +110,8 @@ It is common for applications to require access to different parts of the
 host filesystem, and
 Flatpak provides a flexible set of options for this. Some examples include:
 
-- ``--filesystem=host`` - access normal files on the host, not including
-  host os or system internals described below
+- ``--filesystem=host`` - access normal files on the host, including
+  host os or system internals as described below
 - ``--filesystem=home`` - access the user's home directory
 - ``--filesystem=/path/path`` - access specific paths
 - ``--filesystem=xdg-download`` - access a specific XDG folder
@@ -133,32 +133,35 @@ Other filesystem access guidelines include:
   home directory into the sandbox filesystem.
   This makes it possible to avoid configuring access to the entire home
   directory, and can be useful for applications that hardcode file paths in
-  ``~/``.
+  ``~/`` but do not want to have full read-write access to those paths on the host.
+  Any persisted directories are located under ``~/.var/app/the.application.ID/(persisted-pathhere)``, 
+  and show as if they were directly in the home folder inside of the sandbox.
 - If an application uses ``$TMPDIR`` to contain lock files you may want to
   add a wrapper script that sets it to ``$XDG_RUNTIME_DIR/app/$FLATPAK_ID``.
 - Retaining and sharing configuration with non-Flatpak installations is to
   be avoided.
 
 As mentioned above the ``host`` option does not actually provide complete
-access to the
-host filesystem. The main rules are:
+access to the host filesystem under the standard directories. The main rules are:
 
 - These directories are blacklisted: ``/lib``, ``/lib32``, ``/lib64``,
   ``/bin``, ``/sbin``, ``/usr``, ``/boot``, ``/root``,
   ``/tmp``, ``/etc``, ``/app``, ``/run``, ``/proc``, ``/sys``, ``/dev``,
   ``/var``
 - Exceptions from the blacklist: ``/run/media``
-- These directories are mounted under ``/var/run/host``: ``/etc``, ``/usr``
+- All blacklisted directories are mounted under ``/run/host`` inside of the 
+flatpak environment. Thus, to access ``/etc/`` on the host, you would specify 
+the permission, and it would be mounted at ``/run/host/etc/``. The same applies 
+to any other blacklisted directories.
 
 The reason many of the directories are blacklisted is because they already
-exist in the sandbox such as ``/usr``
-or are not usable in the sandbox.
+exist in the sandbox such as ``/usr`` or are not usable in the sandbox.
 
 Device access
 `````````````
 
 While not ideal, ``--device=all`` can be used to access devices like
-controllers or webcams.
+controllers or webcams if required by your app.
 
 dconf access
 ````````````

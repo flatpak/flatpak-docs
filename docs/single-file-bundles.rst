@@ -29,6 +29,10 @@ You can also set a runtime repo in the bundle::
 
   $ flatpak build-bundle ~/repositories/apps dictionary.flatpak org.gnome.Dictionary --runtime-repo=https://flathub.org/repo/flathub.flatpakrepo
 
+An architecture (namely x86_64 in this example, although aarch64 is also available)::
+
+  $ flatpak build-bundle ~/repositories/apps dictionary.flatpak org.gnome.Dictionary --arch='x86_64'
+
 To import the bundle into a repository on another machine, run::
 
   $ flatpak build-import-bundle ~/my-apps dictionary.flatpak
@@ -36,3 +40,6 @@ To import the bundle into a repository on another machine, run::
 Alternatively, bundles can also be installed directly without importing them::
 
   $ flatpak install dictionary.flatpak
+
+
+For more information, you can run `flatpak build-bundle --help` and `flatpak --build-import-bundle --help`

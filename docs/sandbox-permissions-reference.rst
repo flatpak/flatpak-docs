@@ -51,7 +51,7 @@ Paths can be added to all the above filesystem options. For example,
 also be added:
 
 - ``:ro`` - read-only access
-- ``:rw`` - read/write access (this is the default)
+- ``:rw`` - read/write access (this is the default if no options are specified)
 - ``:create`` - read/write access, and create the directory if it doesn't exist
 
 .. rubric:: Footnotes

@@ -37,7 +37,7 @@ app, define an extension point for it in the app manifest:
       version: '21.08'
       no-autodownload: true
 
-For GNOME runtime, use ``org.gnome.Platform.Compat.i386`` instead.
+For GNOME and KDE runtimes, use ``org.gnome.Platform.Compat.i386`` and ``org.kde.Platform.Compat.i386``, respectively. 
 
 Note that this extension ``version`` must match the ``runtime-version`` of the
 application.

@@ -10,7 +10,7 @@ comes with the corresponding SDK for building, and extensions for specific uses.
 
 What is mentioned here is just a high level look at the contents. To have up
 to date information simply install the runtime and open a shell inside of it
-(``flatpak run org.freedesktop.Sdk//21.08``) from there you can look around or
+(``flatpak run org.freedesktop.Sdk//21.08``). From there you can look around or
 use tools like ``pkg-config --list-all``. In the runtime shell you can also
 inspect ``/usr/manifest.json``, which lists the sources used to build it.
 
