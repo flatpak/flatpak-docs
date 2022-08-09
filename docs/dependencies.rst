@@ -100,7 +100,7 @@ Runtimes and applications can define extension points which allow optional
 additional runtimes to be mounted at a specified location inside the sandbox
 when they are present on the system. Typical uses for extension points include
 translations for applications, debuginfo for sdks, or adding more functionality
-to the application. These extensions are also referred to as "Add-ons".
+to the application. Some software refers to these extensions as "Add-ons".
 
 By convention, extension points follow the application ID of the application in
 question, followed by a generic term the extension is conveying. For example,
