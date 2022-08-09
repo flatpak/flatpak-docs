@@ -116,7 +116,7 @@ and how should extensions be installed:
   add-extensions:
     org.flatpak.App.ExampleExtension:
       directory: my-dir # Installs extensions in $FLATPAK_DEST/my-dir
-      version: '1.0' # Version of extension
+      version: '1.0' # Branch version of extension
       versions: 21.08;22.08beta # Supported extension versions
       subdirectories: true # Allow creation of subdirectories
       no-autodownload: true # Don't automatically download directories
