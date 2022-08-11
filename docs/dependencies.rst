@@ -100,7 +100,7 @@ Runtimes and applications can define extension points which allow optional
 additional runtimes to be mounted at a specified location inside the sandbox
 when they are present on the system. Typical uses for extension points include
 translations for applications, debuginfo for sdks, or adding more functionality
-to the application. These extensions are also referred to as "Add-ons".
+to the application. Some software refers to these extensions as "Add-ons".
 
 By convention, extension points follow the application ID of the application in
 question, followed by a generic term the extension is conveying. For example,
@@ -123,8 +123,8 @@ and how should extensions be installed:
       autodelete: false # Don't autodelete
       add-ld-path: lib # Add $FLATPAK_DEST/lib to library path
       merge-dirs: my-dir1;my-dir2;my-dir3 # Merge these directories
-      download-if: dependency # Download only if 'dependency' exists
-      enable-if: dependency # Enable extension only if 'dependency' exists
+      download-if: conditional # Download only if 'conditional' exists
+      enable-if: conditional # Enable extension only if 'conditional' exists
       subdirectory-suffix
       locale-subset
 
