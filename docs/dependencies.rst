@@ -108,7 +108,7 @@ OBS Studio supports plugins to extend the application's functionality.
 OBS Studio Flatpak has an extension point that goes by
 ``com.obsproject.Studio.Plugin``, as "Plugin" conveys the extension type.
 
-We can use the `add-extensions` property in the manifest to specify where
+We can use the ``add-extensions`` property in the manifest to specify where
 and how should extensions be installed:
 
 .. code-block:: yaml
@@ -128,8 +128,54 @@ and how should extensions be installed:
       subdirectory-suffix
       locale-subset
 
-\.Debug
-```````
+Debug Extensions
+````````````````
 
-\.Locale
-````````
+Debug extensions (stylized as ``.Debug``) are used for debugging purposes.
+To get a list of debug extensions, please visit
+:doc:`available-runtimes?highlight=.Debug`.
+
+Compatibility Debug Extensions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+DESCRIPTION NEEDED
+
+.. code-block:: yaml
+
+  add-extensions:
+    $FLATPAK_ID.Compat.{architecture}:
+      directory: lib/{architecture}-linux-gnu
+      version: '21.08'
+
+    $FLATPAK_ID.Compat.{architecture}.Debug:
+      directory: lib/debug/lib/{architecture}-linux-gnu
+      version: '21.08'
+      no-autodownload: true
+
+SDK Debug Extensions
+^^^^^^^^^^^^^^^^^^^^
+
+DESCRIPTION NEEDED
+
+.. code-block:: yaml
+
+  sdk-extensions:
+    $FLATPAK_ID.Sdk.Debug
+
+
+DESCRIPTION AND EXAMPLE NEEDED
+
+Locale Extensions
+`````````````````
+
+Locale extensions (stylized as ``.Locale``) are used to add support for
+more languages. To get a list of locale extensions, please visit
+:doc:`available-runtimes?highlight=.Locale`.
+
+.. code-block:: yaml
+
+  add-extensions:
+    $FLATPAK_ID.Locale
+
+  sdk-extensions:
+    $FLATPAK_ID.Sdk.Locale
