@@ -132,18 +132,18 @@ Search
 Applications can be found in any of your remotes using the ``search``
 command. For example::
 
- $ flatpak search firefox
+ $ flatpak search krita
 
 Search will return any applications matching the search terms. Each search
 result includes the application ID and the remote that the application is
-in. In this example, the search term is ``firefox``.
+in. In this example, the search term is ``krita``.
 
 Install applications
 ````````````````````
 
 To install an application, run::
 
- $ flatpak install flathub org.mozilla.firefox
+ $ flatpak install flathub org.kde.krita
 
 Here, ``flathub`` is the name of the remote the application is to be installed
 from, and ``org.mozilla.firefox`` is the ID of the application. You can specify a 
@@ -158,7 +158,7 @@ The details of the application to be installed can also be provided by a
 ``.flatpakref`` instead of manually providing the remote and application
 ID, run::
 
- $ flatpak install https://flathub.org/repo/appstream/org.mozilla.firefox.flatpakref
+ $ flatpak install https://flathub.org/repo/appstream/org.kde.krita.flatpakref
 
 If the ``.flatpakref`` file specifies that the application is to be installed
 from a remote that hasn't already been added, you will be asked whether to
@@ -167,7 +167,7 @@ add it before the application is installed.
 Since Flatpak 1.2, the ``install`` command can search for applications. A
 simple::
 
- $ flatpak install firefox
+ $ flatpak install krita
 
 will confirm the remote and application exist, and proceed to install.
 
