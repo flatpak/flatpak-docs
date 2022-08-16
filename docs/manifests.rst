@@ -80,7 +80,7 @@ naming conflicts, and that renaming files in tree is therefore the most
 reliable approach.
 
 Flatpak finish arguments
----------
+------------------------
 
 Applications that are run with Flatpak have extremely limited access to the
 host environment by default, but applications require access to resources
