@@ -150,9 +150,9 @@ access to the host filesystem under the standard directories. The main rules are
   ``/var``
 - Exceptions from the blacklist: ``/run/media``
 - All blacklisted directories are mounted under ``/run/host`` inside of the 
-flatpak environment. Thus, to access ``/etc/`` on the host, you would specify 
-the permission, and it would be mounted at ``/run/host/etc/``. The same applies 
-to any other blacklisted directories.
+  flatpak environment. Thus, to access ``/etc/`` on the host, you would specify 
+  the permission, and it would be mounted at ``/run/host/etc/``. The same applies 
+  to any other blacklisted directories.
 
 The reason many of the directories are blacklisted is because they already
 exist in the sandbox such as ``/usr`` or are not usable in the sandbox.
