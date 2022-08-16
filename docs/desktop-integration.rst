@@ -43,8 +43,7 @@ Toolkits like GTK and Qt provide transparent support for portals:
 .. toctree::
    :maxdepth: 2
 
-   portals-gtk
-   portals-qt
+   portals
 
 If you are not using one of these toolkits, it is possible to access
 the portals API directly. See the `Portals API documentation
