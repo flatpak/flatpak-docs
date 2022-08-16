@@ -40,6 +40,7 @@ For example, the GNOME Dictionary manifest includes:
 As the `unofficial Visual Studio Code Flatpak <https://github.com/flathub/com.visualstudio.code/blob/master/com.visualstudio.code.yaml#L100>` is a proprietary app, it includes the proprietary tag:
 
 .. code-block:: yaml
+
   app-id: com.visualstudio.code
   default-branch: stable
   runtime: org.freedesktop.Sdk
