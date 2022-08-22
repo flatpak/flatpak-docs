@@ -49,10 +49,10 @@ For some practical examples of bad IDs
  
 - ``io.github.Foo``
  
-  This is problematic because while ``foo.github.io`` may be unique to your project it does not
-  include a project specific identifier. This may cause issues if another project creates
+  This is problematic because while ``foo.github.io`` may be unique to your project, it does not
+  include a project-specific identifier. This may cause issues if another project creates
   ``io.github.Foo-Bar`` which should be its own namespace but areas of ``flatpak`` may treat them
-  similar. A better ID would be ``io.github.foo.Foo`` even if its redundant.
+  similar. A better ID would be ``io.github.foo.Foo`` even if it is redundant.
 
 - ``org.example-site.Foo``
   
