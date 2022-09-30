@@ -1,136 +1,183 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
+# Copyright (C) 2017-2022, Flatpak Team. Licensed under Creative Commons
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2022.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2022-09-29 11:37-0300\n"
+"PO-Revision-Date: 2022-09-29 19:51-0300\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"X-Generator: Gtranslator 42.0\n"
 
 #: ../../usb-drives.rst:2
 msgid "USB Drives"
-msgstr ""
+msgstr "Unidades USB"
 
 #: ../../usb-drives.rst:4
 msgid ""
-"One can distribute flatpaks along with their dependencies on USB drives "
-"(or network shares, etc.) which is especially helpful in situations where"
-" Internet access is limited or non-existent."
+"One can distribute flatpaks along with their dependencies on USB drives (or "
+"network shares, etc.) which is especially helpful in situations where "
+"Internet access is limited or non-existent."
 msgstr ""
+"Pode-se distribuir flatpaks junto com suas dependências em unidades USB (ou "
+"compartilhamentos de rede, etc.), o que é especialmente útil em situações "
+"onde o acesso à Internet é limitado ou inexistente."
 
 #: ../../usb-drives.rst:8
 msgid "For offline distribution to work there are a few prerequisites:"
 msgstr ""
+"Para que a distribuição offline funcione, existem alguns pré-requisitos:"
 
 #: ../../usb-drives.rst:10
 msgid ""
-"the remote repositories providing the app or any of its dependencies must"
-" utilize GPG signatures"
+"the remote repositories providing the app or any of its dependencies must "
+"utilize GPG signatures"
 msgstr ""
+"os repositórios remotos que fornecem o aplicativo ou qualquer uma de suas "
+"dependências devem utilizar assinaturas GPG"
 
 #: ../../usb-drives.rst:12
 msgid "the remote repos must all have a collection ID set on the server side"
 msgstr ""
+"todos os repositórios remotos devem ter um ID de coleção definido no lado do "
+"servidor"
 
 #: ../../usb-drives.rst:13
 msgid ""
-"the locally configured remotes must have a collection ID set (on the "
-"client side)"
+"the locally configured remotes must have a collection ID set (on the client "
+"side)"
 msgstr ""
+"os remotos configurados localmente devem ter um conjunto de ID de coleção "
+"(no lado do cliente)"
 
 #: ../../usb-drives.rst:15
 msgid ""
-"the relevant remotes must be configured on the receiving computer (the "
-"one installing from the drive)"
+"the relevant remotes must be configured on the receiving computer (the one "
+"installing from the drive)"
 msgstr ""
+"os controles remotos relevantes devem ser configurados no computador "
+"receptor (aquele que está instalando a partir da unidade)"
 
 #: ../../usb-drives.rst:18
 msgid ""
-"Apps can then be copied to USB drives using `the flatpak create-usb "
-"command <https://docs.flatpak.org/en/latest/flatpak-command-"
-"reference.html#flatpak-create-usb>`_. You can refer to `this blog post "
-"<https://blogs.gnome.org/mclasen/2018/08/26/about-flatpak-"
-"installations/>`__ for an introduction."
+"Apps can then be copied to USB drives using `the flatpak create-usb command "
+"<https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-"
+"create-usb>`_. You can refer to `this blog post <https://blogs.gnome.org/"
+"mclasen/2018/08/26/about-flatpak-installations/>`__ for an introduction."
 msgstr ""
+"Os aplicativos podem ser copiados para unidades USB usando o `comando "
+"flatpak create-usb <https://docs.flatpak.org/en/latest/flatpak-command-"
+"reference.html#flatpak-create-usb>`_. Você pode consultar `esta postagem do "
+"blog <https://blogs.gnome.org/mclasen/2018/08/26/about-flatpak-installations/"
+">`__ para uma introdução."
 
 #: ../../usb-drives.rst:24
 msgid "For example, if you want to put Gedit on a USB drive:"
-msgstr ""
+msgstr "Por exemplo, se você quiser colocar o Gedit em uma unidade USB:"
 
 #: ../../usb-drives.rst:26
 msgid ""
-"First identify the Application ID using ``flatpak list --app``. In the "
-"case of Gedit it is ``org.gnome.gedit``. Use ``flatpak info -o "
-"org.gnome.gedit`` to determine the origin remote. For example that may be"
-" ``flathub``."
+"First identify the Application ID using ``flatpak list --app``. In the case "
+"of Gedit it is ``org.gnome.gedit``. Use ``flatpak info -o org.gnome.gedit`` "
+"to determine the origin remote. For example that may be ``flathub``."
 msgstr ""
+"Primeiro identifique o ID do aplicativo usando ``flatpak list --app``. No "
+"caso do Gedit é ``org.gnome.gedit``. Use ``flatpak info -o org.gnome.gedit`` "
+"para determinar o remoto de origem. Por exemplo, pode ser ``flathub``."
 
 #: ../../usb-drives.rst:31
 msgid ""
-"Ensure the origin remote has a collection ID set by using ``flatpak "
-"remotes -d`` and checking the \"Collection ID\" column. If not, configure"
-" one with e.g. ``flatpak remote-modify --collection-id=org.flathub.Stable"
-" flathub``. If any dependencies come from other remotes, those will also "
-"need a collection ID configured."
+"Ensure the origin remote has a collection ID set by using ``flatpak remotes -"
+"d`` and checking the \"Collection ID\" column. If not, configure one with e."
+"g. ``flatpak remote-modify --collection-id=org.flathub.Stable flathub``. If "
+"any dependencies come from other remotes, those will also need a collection "
+"ID configured."
 msgstr ""
+"Certifique-se de que o remoto de origem tenha um ID de coleção definido "
+"usando ``flatpak remotes -d`` e verificando a coluna \"ID de coleção\". Caso "
+"contrário, configure um com, por exemplo, ``flatpak remote-modify --"
+"collection-id=org.flathub.Stable flathub``. Se alguma dependência vier de "
+"outros remotos, eles também precisarão de um ID de coleção configurado."
 
 #: ../../usb-drives.rst:37
 msgid ""
-"Next, use the ``df`` command to identify the mount point for the USB "
-"drive. It may be something like ``/media/user/FLATPAKS``."
+"Next, use the ``df`` command to identify the mount point for the USB drive. "
+"It may be something like ``/media/user/FLATPAKS``."
 msgstr ""
+"Em seguida, use o comando ``df`` para identificar o ponto de montagem da "
+"unidade USB. Pode ser algo como ``/media/user/FLATPAKS``."
 
 #: ../../usb-drives.rst:40
 msgid "Now copy the flatpak and its dependencies to the drive::"
-msgstr ""
+msgstr "Agora copie o flatpak e suas dependências para a unidade::"
 
 #: ../../usb-drives.rst:44
 msgid ""
-"Wait for the copying process to complete, at which point you should get a"
-" command prompt (``$``). This process can take tens of minutes especially"
-" if the USB drive and USB port aren't USB 3.0+. Then unmount the drive "
-"before removing it::"
+"Wait for the copying process to complete, at which point you should get a "
+"command prompt (``$``). This process can take tens of minutes especially if "
+"the USB drive and USB port aren't USB 3.0+. Then unmount the drive before "
+"removing it::"
 msgstr ""
+"Aguarde a conclusão do processo de cópia, nesse ponto você deverá obter um "
+"prompt de comando (``$``). Esse processo pode levar dezenas de minutos, "
+"especialmente se a unidade USB e a porta USB não forem USB 3.0+. Em seguida, "
+"desmonte a unidade antes de removê-la::"
 
 #: ../../usb-drives.rst:52
 msgid ""
-"The process for installing from such a USB drive (for example on an "
-"offline machine) differs between Flatpak versions before 1.8.0 and those "
-"after. With earlier versions you can simply use the ``flatpak install`` "
-"command as you normally would online::"
+"The process for installing from such a USB drive (for example on an offline "
+"machine) differs between Flatpak versions before 1.8.0 and those after. With "
+"earlier versions you can simply use the ``flatpak install`` command as you "
+"normally would online::"
 msgstr ""
+"O processo de instalação de uma unidade USB (por exemplo, em uma máquina "
+"offline) difere entre as versões do Flatpak anteriores a 1.8.0 e "
+"posteriores. Com versões anteriores, você pode simplesmente usar o comando "
+"``flatpak install`` como faria normalmente online::"
 
 #: ../../usb-drives.rst:59
 msgid ""
 "For versions after 1.8.0, if your linux distribution has packaged `the "
-"relevant systemd units <https://github.com/flatpak/flatpak/tree/master"
-"/sideload-repos-systemd>`__, using ``flatpak install`` with no extra "
-"arguments still works. Otherwise, you can use the ``--sideload-repo`` "
-"option in your command invocation::"
+"relevant systemd units <https://github.com/flatpak/flatpak/tree/master/"
+"sideload-repos-systemd>`__, using ``flatpak install`` with no extra "
+"arguments still works. Otherwise, you can use the ``--sideload-repo`` option "
+"in your command invocation::"
 msgstr ""
+"Para versões posteriores a 1.8.0, se sua distribuição Linux tiver empacotado "
+"`as unidades systemd relevantes <https://github.com/flatpak/flatpak/tree/"
+"master/sideload-repos-systemd>`__, usando ``flatpak install`` sem argumentos "
+"extras ainda funciona. Caso contrário, você pode usar a opção ``--sideload-"
+"repo`` em sua invocação de comando::"
 
 #: ../../usb-drives.rst:67
-msgid "The ``flatpak update`` command also accepts a ``--sideload-repo`` option."
+msgid ""
+"The ``flatpak update`` command also accepts a ``--sideload-repo`` option."
 msgstr ""
+"O comando ``flatpak update`` também aceita uma opção ``--sideload-repo``."
 
 #: ../../usb-drives.rst:69
 msgid ""
 "Alternatively, it's possible to specify sideload sources using symbolic "
-"links placed in system-wide or user-specific directories and such sources"
-" will then be used for all Flatpak operations without the need for a "
-"``--sideload-repo`` option. See `the flatpak man page "
-"<https://docs.flatpak.org/en/latest/flatpak-command-"
-"reference.html#flatpak>`__."
+"links placed in system-wide or user-specific directories and such sources "
+"will then be used for all Flatpak operations without the need for a ``--"
+"sideload-repo`` option. See `the flatpak man page <https://docs.flatpak.org/"
+"en/latest/flatpak-command-reference.html#flatpak>`__."
 msgstr ""
-
+"Alternativamente, é possível especificar fontes de download local "
+"(*sideloaded*) usando links simbólicos colocados em diretórios de todo o "
+"sistema ou específicos do usuário e tais fontes serão usadas para todas as "
+"operações do Flatpak sem a necessidade de uma opção ``--sideload-repo``. "
+"Veja `a página de manual do flatpak <https://docs.flatpak.org/en/latest/"
+"flatpak-command-reference.html#flatpak>`__."

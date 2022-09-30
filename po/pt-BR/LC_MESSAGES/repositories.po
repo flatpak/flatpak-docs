@@ -3,22 +3,22 @@
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
 # Rafael Fontenelle <rafaelff@gnome.org>, 2019.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2020. #zanata
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 20:19-0400\n"
-"PO-Revision-Date: 2020-03-20 03:01-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Project-Id-Version: Flatpak \n"
+"Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
+"POT-Creation-Date: 2019-11-30 04:28-0300\n"
+"PO-Revision-Date: 2019-12-01 19:02-0300\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
-"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "Generated-By: Babel 2.7.0\n"
-"X-Generator: Zanata 4.6.2\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"X-Generator: Gtranslator 3.32.0\n"
 
 #: ../../repositories.rst:2
 msgid "Repositories"
@@ -32,12 +32,12 @@ msgstr ""
 "Os repositórios do Flatpak são o principal mecanismo de publicação de "
 "aplicativos, para que possam ser instalados pelos usuários."
 
-#: ../../repositories.rst:6
+#: ../../repositories.rst:7
 msgid ""
 "Some aspects of repositories are addressed by other sections of the "
 "documentation. Basic commands for adding, removing and inspecting "
-"repositories can be found in the :doc:`using-flatpak` section. Additionally,"
-" the section on :doc:`flatpak-builder` covers the most common method for "
+"repositories can be found in the :doc:`using-flatpak` section. Additionally, "
+"the section on :doc:`flatpak-builder` covers the most common method for "
 "adding applications to repositories."
 msgstr ""
 "Alguns aspectos dos repositórios são abordados por outras seções da "
@@ -46,10 +46,10 @@ msgstr ""
 "disso, a seção :doc:`flatpak-builder` cobre o método mais comum para "
 "adicionar aplicativos aos repositórios."
 
-#: ../../repositories.rst:8
+#: ../../repositories.rst:13
 msgid ""
-"To use a repository to publish an application, it is possible to either host"
-" your own (covered in the next section, :doc:`hosting-a-repository`) or use "
+"To use a repository to publish an application, it is possible to either host "
+"your own (covered in the next section, :doc:`hosting-a-repository`) or use "
 "`Flathub <http://flathub.org>`_, the primary publishing and hosting service "
 "for Flatpak applications."
 msgstr ""
@@ -58,26 +58,26 @@ msgstr ""
 "o `Flathub <http://flathub.org>`_, o principal serviço de publicação e "
 "hospedagem de aplicativos Flatpak."
 
-#: ../../repositories.rst:10
+#: ../../repositories.rst:18
 msgid ""
 "Software center applications like GNOME Software or KDE Discover allow "
 "browsing repositories, and can also dynamically promote new or popular "
-"applications. If you use Flathub, the repository will typically have already"
-" been added by users, so adding an application to the repository is "
+"applications. If you use Flathub, the repository will typically have already "
+"been added by users, so adding an application to the repository is "
 "sufficient to make it available to them."
 msgstr ""
 "Os aplicativos do centro de software, como o GNOME Programas ou o KDE "
 "Discover, permitem navegar nos repositórios e também podem promover "
 "dinamicamente aplicativos novos ou populares. Se você usa o Flathub, o "
 "repositório normalmente já foi adicionado pelos usuários; portanto, "
-"adicionar um aplicativo ao repositório é suficiente para torná-lo disponível"
-" para eles."
+"adicionar um aplicativo ao repositório é suficiente para torná-lo disponível "
+"para eles."
 
-#: ../../repositories.rst:13
+#: ../../repositories.rst:25
 msgid ".flatpakref files"
 msgstr "Arquivos .flatpakref"
 
-#: ../../repositories.rst:15
+#: ../../repositories.rst:27
 msgid ""
 "``.flatpakref`` files can be used in combination with repositories to "
 "provide an additional, easy way for users to install an application, often "
@@ -87,7 +87,7 @@ msgstr ""
 "para fornecer uma maneira fácil e adicional para os usuários instalarem um "
 "aplicativo, geralmente clicando no arquivo ou no link para download."
 
-#: ../../repositories.rst:17
+#: ../../repositories.rst:31
 msgid ""
 "Internally, ``.flatpakref`` files are simple description files that include "
 "information about a Flatpak application. An example::"
@@ -95,34 +95,34 @@ msgstr ""
 "Internamente, os arquivos ``.flatpakref`` são arquivos de descrição simples "
 "que incluem informações sobre um aplicativo Flatpak. Um exemplo::"
 
-#: ../../repositories.rst:28
+#: ../../repositories.rst:43
 msgid ""
-"As can be seen, the file includes the ID of the application and the location"
-" of the repository that contains it, as well a link to information about the"
-" repository that provides the application's runtime. ``.flatpakref`` files "
+"As can be seen, the file includes the ID of the application and the location "
+"of the repository that contains it, as well a link to information about the "
+"repository that provides the application's runtime. ``.flatpakref`` files "
 "therefore contain all the information needed to install an application."
 msgstr ""
 "Como pode-se ver, o arquivo inclui o ID do aplicativo e o local do "
 "repositório que o contém, além de um link para informações sobre o "
-"repositório que fornece o runtime do aplicativo. Os arquivos ``.flatpakref``"
-" contêm, portanto, todas as informações necessárias para instalar um "
+"repositório que fornece o runtime do aplicativo. Os arquivos ``.flatpakref`` "
+"contêm, portanto, todas as informações necessárias para instalar um "
 "aplicativo."
 
-#: ../../repositories.rst:32
+#: ../../repositories.rst:50
 msgid ""
 "``.flatpakref`` files should include the base64-encoded version of the GPG "
 "key that was used to sign the repository. This can be obtained with the "
 "following command::"
 msgstr ""
 "Os arquivos ``.flatpakref`` devem incluir a versão codificada em base64 da "
-"chave GPG que foi usada para assinar o repositório. Isso pode ser obtido com"
-" o seguinte comando::"
+"chave GPG que foi usada para assinar o repositório. Isso pode ser obtido com "
+"o seguinte comando::"
 
-#: ../../repositories.rst:36
+#: ../../repositories.rst:56
 msgid ""
 "One advantage of ``.flatpakref`` files is that they can be used to install "
-"applications even if their repository hasn't been added by the user. In this"
-" case the repository that contains the application will either be "
+"applications even if their repository hasn't been added by the user. In this "
+"case the repository that contains the application will either be "
 "automatically installed, or the user will be prompted to install it. This "
 "will also happen if the necessary runtime isn't present."
 msgstr ""
@@ -132,27 +132,27 @@ msgstr ""
 "instalado automaticamente ou o usuário será solicitado a instalá-lo. Isso "
 "também acontecerá se o runtime necessário não estiver presente."
 
-#: ../../repositories.rst:38
+#: ../../repositories.rst:62
 msgid ""
-"``.flatpakref`` can be used to install applications from the command line as"
-" well as with graphical software installers. This is done with the standard "
-"``flatpak install`` command, which accepts both local and remote "
-"``.flatpakref`` files. For example::"
+"``.flatpakref`` can be used to install applications from the command line as "
+"well as with graphical software installers. This is done with the standard "
+"``flatpak install`` command, which accepts both local and remote ``."
+"flatpakref`` files. For example::"
 msgstr ""
-"O ``.flatpakref`` pode ser usado para instalar aplicativos a partir da linha"
-" de comando e também com instaladores gráficos de software. Isso é feito com"
-" o comando padrão ``flatpak install``, que aceita arquivos ``.flatpakref`` "
+"O ``.flatpakref`` pode ser usado para instalar aplicativos a partir da linha "
+"de comando e também com instaladores gráficos de software. Isso é feito com "
+"o comando padrão ``flatpak install``, que aceita arquivos ``.flatpakref`` "
 "locais e remotos. Por exemplo::"
 
-#: ../../repositories.rst:42
+#: ../../repositories.rst:69
 msgid "Or, if the same file has been downloaded::"
 msgstr "Ou, se o mesmo arquivo tiver sido baixado::"
 
-#: ../../repositories.rst:48
+#: ../../repositories.rst:75
 msgid "Publishing updates"
 msgstr "Publicando atualizações"
 
-#: ../../repositories.rst:50
+#: ../../repositories.rst:77
 msgid ""
 "Flatpak repositories are similar to Git repositories, in that they store "
 "every version of an application by keeping a record of the difference "
@@ -160,13 +160,13 @@ msgid ""
 "difference (or \"delta\") between two versions needs to be downloaded when "
 "an update is performed."
 msgstr ""
-"Os repositórios Flatpak são semelhantes aos repositórios Git, pois armazenam"
-" todas as versões de um aplicativo, mantendo um registro da diferença entre "
-"cada versão. Isso torna a atualização eficiente, pois apenas a diferença (ou"
-" “delta”) entre duas versões precisa ser baixada quando uma atualização é "
+"Os repositórios Flatpak são semelhantes aos repositórios Git, pois armazenam "
+"todas as versões de um aplicativo, mantendo um registro da diferença entre "
+"cada versão. Isso torna a atualização eficiente, pois apenas a diferença (ou "
+"“delta”) entre duas versões precisa ser baixada quando uma atualização é "
 "executada."
 
-#: ../../repositories.rst:52
+#: ../../repositories.rst:82
 msgid ""
 "When a new version of an application is added to a repository, it "
 "immediately becomes available to users. Software centers are able to "
@@ -175,7 +175,7 @@ msgid ""
 "install new versions of any applications they have installed."
 msgstr ""
 "Quando uma nova versão de um aplicativo é adicionada a um repositório, ela "
-"fica imediatamente disponível para os usuários. Os centros de software podem"
-" procurar e instalar automaticamente novas versões. Aqueles que estão usando"
-" a linha de comando precisam executar manualmente ``flatpak update`` para "
+"fica imediatamente disponível para os usuários. Os centros de software podem "
+"procurar e instalar automaticamente novas versões. Aqueles que estão usando "
+"a linha de comando precisam executar manualmente ``flatpak update`` para "
 "verificar e instalar novas versões de todos os aplicativos que instalaram."

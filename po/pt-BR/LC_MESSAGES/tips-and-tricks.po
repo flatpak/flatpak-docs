@@ -1,193 +1,275 @@
-# SOME DESCRIPTIVE TITLE.
+# Brazilian Portuguese translation for tips-and-tricks
 # Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2019-2022.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
+"POT-Creation-Date: 2022-09-29 11:37-0300\n"
+"PO-Revision-Date: 2022-09-29 19:38-0300\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
+"Language: pt_BR\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
+"X-Generator: Gtranslator 42.0\n"
 
 #: ../../tips-and-tricks.rst:2
 msgid "Tips and Tricks"
-msgstr ""
+msgstr "Dicas e truques"
 
 #: ../../tips-and-tricks.rst:4
 msgid "This page explains a few useful features of the Flatpak CLI."
-msgstr ""
+msgstr "Esta página explica alguns recursos úteis da CLI do Flatpak."
 
 #: ../../tips-and-tricks.rst:8
 msgid "Testing an app with a different runtime"
-msgstr ""
+msgstr "Testando um aplicativo com um runtime diferente"
 
 #: ../../tips-and-tricks.rst:10
 msgid ""
-"You can (for testing) run an application with a different runtime than it"
-" typically uses.  For instance, to run stable gedit with the latest "
-"unstable gnome runtime you can do::"
+"You can (for testing) run an application with a different runtime than it "
+"typically uses.  For instance, to run stable gedit with the latest unstable "
+"gnome runtime you can do::"
 msgstr ""
+"Você pode (para testar) executar um aplicativo com um runtime diferente do "
+"que normalmente usa. Por exemplo, para executar o gedit estável com o ultimo "
+"runtime instável do GNOME, você pode::"
 
 #: ../../tips-and-tricks.rst:16
 msgid ""
-"You can also use a completely different runtime (but same version "
-"number)::"
+"You can also use a completely different runtime (but same version number)::"
 msgstr ""
+"Você também pode usar um runtime completamente diferente (mas o mesmo número "
+"de versão)::"
 
 #: ../../tips-and-tricks.rst:20
 msgid ""
-"If you just want to use the sdk instead of the platform like the above, a"
-" better approach is to use ``-d``."
+"If you just want to use the sdk instead of the platform like the above, a "
+"better approach is to use ``-d``."
 msgstr ""
+"Se você deseja apenas usar o sdk em vez da plataforma como a acima, uma "
+"abordagem melhor é usar ``-d``."
 
 #: ../../tips-and-tricks.rst:25
 msgid ""
-"Running against a runtime with a completely different ABI is undefined "
-"and unsupported behavior."
+"Running against a runtime with a completely different ABI is undefined and "
+"unsupported behavior."
 msgstr ""
+"A execução em um runtime com uma ABI completamente diferente é um "
+"comportamento indefinido e sem suporte."
 
 #: ../../tips-and-tricks.rst:29
 msgid "Downgrading"
-msgstr ""
+msgstr "Fazendo downgrade"
 
 #: ../../tips-and-tricks.rst:31
 msgid ""
 "It is possible to downgrade an installed application (or runtime) to an "
 "older build."
 msgstr ""
+"É possível fazer o downgrade de um aplicativo instalado (ou runtime) para "
+"uma compilação mais antiga."
 
 #: ../../tips-and-tricks.rst:34
 msgid "First you look for the commit you are interested in::"
-msgstr ""
+msgstr "Primeiro você procura o commit no qual está interessado::"
 
 #: ../../tips-and-tricks.rst:38
 msgid "Then you deploy the commit::"
-msgstr ""
+msgstr "Então, você implanta o commit::"
 
-#: ../../tips-and-tricks.rst:44
+#: ../../tips-and-tricks.rst:46
 msgid ""
-"If you have Flatpak 1.5.0 or later, you can also prevent the app from "
-"being included in updates (either manual or automatic)::"
+"The example here uses ``sudo`` for system installations because, unlike "
+"normal updates, downgrades are considered a privileged action. If the "
+"application is installed per-user you would run it as that user."
 msgstr ""
+"O exemplo aqui usa o ``sudo`` para instalações do sistema porque, "
+"diferentemente das atualizações normais, os downgrades são considerados uma "
+"ação privilegiada. Se o aplicativo for instalado por usuário, você o "
+"executará como esse usuário."
 
-#: ../../tips-and-tricks.rst:51
+#: ../../tips-and-tricks.rst:48
+msgid ""
+"If you have Flatpak 1.5.0 or later, you can also prevent the app from being "
+"included in updates (either manual or automatic)::"
+msgstr ""
+"Se você possui o Flatpak 1.5.0 ou posterior, também pode impedir que o "
+"aplicativo seja incluído nas atualizações (manuais ou automáticas)::"
+
+#: ../../tips-and-tricks.rst:55
 msgid "Bisecting regressions in application builds"
-msgstr ""
-
-#: ../../tips-and-tricks.rst:53
-msgid ""
-"In case the newest builds of an application introduce regressions, you "
-"can use ``flatpak-bisect`` to discover which commit introduced the "
-"regression. It works just like ``git bisect``."
-msgstr ""
+msgstr "Dividindo regressões em compilações de aplicativos"
 
 #: ../../tips-and-tricks.rst:57
 msgid ""
-"In case your distribution doesn't install the ``flatpak-bisect`` utility,"
-" you can find it distributed alongside the Flatpak source code, in "
-"https://github.com/flatpak/flatpak/blob/master/scripts/flatpak-bisect"
+"In case the newest builds of an application introduce regressions, you can "
+"use ``flatpak-bisect`` to discover which commit introduced the regression. "
+"It works just like ``git bisect``."
 msgstr ""
+"Caso as versões mais recentes de um aplicativo introduzam regressões, você "
+"pode usar ``flatpak-bisect`` para descobrir qual commit introduziu a "
+"regressão. Funciona como ``git bisect``."
 
 #: ../../tips-and-tricks.rst:61
-msgid "First you update the application and get its history::"
+msgid ""
+"In case your distribution doesn't install the ``flatpak-bisect`` utility, "
+"you can find it distributed alongside the Flatpak source code, in https://"
+"github.com/flatpak/flatpak/blob/master/scripts/flatpak-bisect"
 msgstr ""
+"Caso sua distribuição não instale o utilitário `` flatpak-bisect``, você "
+"poderá encontrá-lo distribuído juntamente com o código-fonte Flatpak, em "
+"https://github.com/flatpak/flatpak/blob/master/scripts/flatpak-bisect"
 
 #: ../../tips-and-tricks.rst:65
-msgid "Then, you should set the current commit as the first bad commit::"
-msgstr ""
+msgid "First you update the application and get its history::"
+msgstr "Primeiro, você atualiza o aplicativo e obtém seu histórico::"
 
 #: ../../tips-and-tricks.rst:69
-msgid ""
-"Now you need to find the hash of the first known good commit. For that, "
-"you can see the build history by running::"
+msgid "Then, you should set the current commit as the first bad commit::"
 msgstr ""
+"Em seguida, você deve definir o commit atual como o primeiro commit "
+"incorreto::"
 
-#: ../../tips-and-tricks.rst:74
-msgid "To start bisecting, checkout the first known good commit you find::"
+#: ../../tips-and-tricks.rst:73
+msgid ""
+"Now you need to find the hash of the first known good commit. For that, you "
+"can see the build history by running::"
 msgstr ""
+"Agora você precisa encontrar o hash do primeiro bom commit conhecido. Para "
+"isso, você pode ver o histórico da compilação executando::"
 
 #: ../../tips-and-tricks.rst:78
-msgid ""
-"After setting the bad commit and the first known good commit, you can "
-"launch the application to verify if the current commit in the bisecting "
-"session is a good or a bad one."
+msgid "To start bisecting, checkout the first known good commit you find::"
 msgstr ""
+"Para começar a dividir, faça o checkout do primeiro commit conhecido que "
+"você encontrar::"
 
 #: ../../tips-and-tricks.rst:82
-msgid "To mark a commit as good or bad, run::"
+msgid ""
+"After setting the bad commit and the first known good commit, you can launch "
+"the application to verify if the current commit in the bisecting session is "
+"a good or a bad one."
 msgstr ""
+"Após definir o commit incorreto e o primeiro commit válido, é possível "
+"iniciar o aplicativo para verificar se o commit atual na sessão de divisão é "
+"bom ou ruim."
 
 #: ../../tips-and-tricks.rst:86
-msgid "Or::"
-msgstr ""
+msgid "To mark a commit as good or bad, run::"
+msgstr "Para marcar um commit como bom ou ruim, execute::"
 
 #: ../../tips-and-tricks.rst:90
+msgid "Or::"
+msgstr "Ou::"
+
+#: ../../tips-and-tricks.rst:94
 msgid "``flatpak-bisect`` will inform you when the first bad commit is found."
 msgstr ""
+"``flatpak-bisect`` vai lhe informar quando o primeiro commit ruim for "
+"encontrado."
 
-#: ../../tips-and-tricks.rst:93
+#: ../../tips-and-tricks.rst:97
 msgid "Adding a custom installation"
-msgstr ""
+msgstr "Adicionando uma instalação personalizada"
 
-#: ../../tips-and-tricks.rst:95
+#: ../../tips-and-tricks.rst:99
 msgid ""
 "By default Flatpak installs apps system-wide, and can also be made to "
 "install per-user with the ``--user`` option accepted by most commands. A "
-"third option is to set up a custom installation, which could be stored on"
-" an external hard drive."
+"third option is to set up a custom installation, which could be stored on an "
+"external hard drive."
 msgstr ""
-
-#: ../../tips-and-tricks.rst:100
-msgid "First ensure that the config directory exists::"
-msgstr ""
+"Por padrão, o Flatpak instala aplicativos em todo o sistema e também pode "
+"ser instalado por usuário com a opção ``--user`` aceita pela maioria dos "
+"comandos. Uma terceira opção é configurar uma instalação personalizada, que "
+"pode ser armazenada em um disco rígido externo."
 
 #: ../../tips-and-tricks.rst:104
-msgid "Then open a file in that directory as root::"
-msgstr ""
+msgid "First ensure that the config directory exists::"
+msgstr "Primeiro, certifique-se de que o diretório de configuração existe::"
 
 #: ../../tips-and-tricks.rst:108
-msgid "And write something like this::"
-msgstr ""
+msgid "Then open a file in that directory as root::"
+msgstr "Em seguida, abra um arquivo nesse diretório como root::"
 
-#: ../../tips-and-tricks.rst:115
+#: ../../tips-and-tricks.rst:112
+msgid "And write something like this::"
+msgstr "E escreva algo assim::"
+
+#: ../../tips-and-tricks.rst:119
 msgid ""
 "See `flatpak-installation(5) <http://docs.flatpak.org/en/latest/flatpak-"
 "command-reference.html#flatpak-installation>`_ for the full format "
-"specification. Replace the path with the actual path you want to use. You"
-" can use ``df`` to see mounted file systems and ``mkdir`` to create a "
+"specification. Replace the path with the actual path you want to use. You "
+"can use ``df`` to see mounted file systems and ``mkdir`` to create a "
 "``flatpak`` directory so the path specified by ``Path=`` exists."
 msgstr ""
-
-#: ../../tips-and-tricks.rst:121
-msgid "Then you can add a remote using a command like::"
-msgstr ""
+"Veja `flatpak-installation(5) <http://docs.flatpak.org/en/latest/flatpak-"
+"command-reference.html#flatpak-installation>`_ para a especificação completa "
+"do formato. Substitua o caminho pelo caminho real que você deseja usar. Você "
+"pode usar ``df`` para ver sistemas de arquivos montados e ``mkdir`` para "
+"criar um diretório ``flatpak`` para que o caminho especificado por ``Path=`` "
+"exista."
 
 #: ../../tips-and-tricks.rst:125
-msgid "And install to it with::"
-msgstr ""
+msgid "Then you can add a remote using a command like::"
+msgstr "Então você pode adicionar um controle remoto usando um comando como::"
 
-#: ../../tips-and-tricks.rst:131
+#: ../../tips-and-tricks.rst:129
+msgid "And install to it with::"
+msgstr "E instale nele com::"
+
+#: ../../tips-and-tricks.rst:135
 msgid ""
 "If your custom installation is the only one with the remote you're "
 "installing from, ``--installation`` can be omitted."
 msgstr ""
+"Se sua instalação personalizada for a única com o controle remoto do qual "
+"você está instalando, ``--installation`` pode ser omitido."
 
-#: ../../tips-and-tricks.rst:134
+#: ../../tips-and-tricks.rst:138
 msgid "And run apps from it with::"
-msgstr ""
+msgstr "E execute aplicativos a partir dele com::"
 
-#: ../../tips-and-tricks.rst:140
+#: ../../tips-and-tricks.rst:144
 msgid ""
-"If your custom installation is the only one with the app you're running, "
-"``--installation`` can be omitted."
+"If your custom installation is the only one with the app you're running, ``--"
+"installation`` can be omitted."
 msgstr ""
+"Se sua instalação personalizada for a única com o aplicativo que você está "
+"executando, ``--installation`` pode ser omitido."
 
+#: ../../tips-and-tricks.rst:148
+msgid "Configuring resource limits for apps"
+msgstr "Configurando limites de recursos para aplicativos"
+
+#: ../../tips-and-tricks.rst:150
+msgid ""
+"When systemd is available, Flatpak tries to put app processes in a scope "
+"such as ``app-com.brave.Browser-*.scope`` (in the case of Brave), with ``*`` "
+"replaced by an arbitrary suffix. This means you can create a file like ``~/."
+"config/systemd/user/app-flatpak-com.brave.Browser-.scope.d/memory.conf`` "
+"with contents like::"
+msgstr ""
+"Quando o systemd está disponível, o Flatpak tenta colocar os processos do "
+"aplicativo em um escopo como ``app-com.brave.Browser-*.scope`` (no caso do "
+"Brave), com ``*`` substituído por um sufixo arbitrário . Isso significa que "
+"você pode criar um arquivo como ``~/.config/systemd/user/app-flatpak-com."
+"brave.Browser-.scope.d/memory.conf`` com conteúdos como::"
+
+#: ../../tips-and-tricks.rst:159
+msgid ""
+"Then after a ``systemctl --user daemon-reload``, those ``systemd.resource-"
+"control(5)`` parameters will apply to all instances of that app."
+msgstr ""
+"Então, após um ``systemctl --user daemon-reload``, esses parâmetros "
+"``systemd.resource-control(5)`` serão aplicados a todas as instâncias desse "
+"aplicativo."

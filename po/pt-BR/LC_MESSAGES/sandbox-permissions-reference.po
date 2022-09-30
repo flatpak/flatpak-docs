@@ -2,27 +2,27 @@
 # Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2019.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2020. #zanata
+# Rafael Fontenelle <rafaelff@gnome.org>, 2019-2022.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version:  Flatpak\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
-"PO-Revision-Date: 2020-03-20 03:24-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Project-Id-Version: Flatpak \n"
+"Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
+"POT-Creation-Date: 2022-09-29 11:37-0300\n"
+"PO-Revision-Date: 2022-09-29 19:57-0300\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
+"X-Generator: Gtranslator 42.0\n"
 
 #: ../../sandbox-permissions-reference.rst:2
-#, fuzzy
 msgid "Sandbox Permissions Reference"
-msgstr "Permissões do sandbox"
+msgstr "Permissões de referência do sandboxn"
 
 #: ../../sandbox-permissions-reference.rst:4
 msgid ""
@@ -30,19 +30,17 @@ msgid ""
 "(see :doc:`manifests`). They can also be set with the ``build-finish``, "
 "``run`` and ``override`` commands."
 msgstr ""
-"As permissões do sandbox podem ser configuradas a partir de um arquivo de"
-" manifesto do aplicativo (consulte :doc:`manifests`). Eles também podem "
-"ser configurados com os comandos ``build-finish``, ``run`` e "
-"``override``."
+"As permissões do sandbox podem ser configuradas a partir de um arquivo de "
+"manifesto do aplicativo (consulte :doc:`manifests`). Eles também podem ser "
+"configurados com os comandos ``build-finish``, ``run`` e ``override``."
 
 #: ../../sandbox-permissions-reference.rst:8
 msgid ""
-"The following list includes many of the most useful permission options. A"
-" complete list can be viewed using ``flatpak build-finish --help``."
+"The following list includes many of the most useful permission options. A "
+"complete list can be viewed using ``flatpak build-finish --help``."
 msgstr ""
-"A lista a seguir inclui muitas das opções de permissão mais úteis. Uma "
-"lista completa pode ser visualizada usando ``flatpak build-finish "
-"--help``."
+"A lista a seguir inclui muitas das opções de permissão mais úteis. Uma lista "
+"completa pode ser visualizada usando ``flatpak build-finish --help``."
 
 #: ../../sandbox-permissions-reference.rst:12
 msgid "``--socket=x11``"
@@ -62,11 +60,11 @@ msgstr "Compartilha espaço de nome IPC com o host [#f1]_"
 
 #: ../../sandbox-permissions-reference.rst:14
 msgid "``--allow=bluetooth``"
-msgstr ""
+msgstr "``--allow=bluetooth``"
 
 #: ../../sandbox-permissions-reference.rst:14
 msgid "Allow access to Bluetooth"
-msgstr ""
+msgstr "Permite acesso ao Bluetooth"
 
 #: ../../sandbox-permissions-reference.rst:15
 msgid "``--device=dri``"
@@ -114,7 +112,7 @@ msgstr "``--system-talk-name=org.freedesktop.GeoClue2``"
 
 #: ../../sandbox-permissions-reference.rst:20
 msgid "Talk to a named service on the system bus"
-msgstr "Conversa com o serviço dado no barramente de sistema"
+msgstr "Conversa com o serviço dado no barramento de sistema"
 
 #: ../../sandbox-permissions-reference.rst:21
 msgid "``--socket=system-bus``"
@@ -130,20 +128,19 @@ msgstr "Permissões de sistema de arquivos"
 
 #: ../../sandbox-permissions-reference.rst:27
 msgid ""
-"Each of the following permissions configure filesystem access, and should"
-" be added to ``--filesystem=``:"
+"Each of the following permissions configure filesystem access, and should be "
+"added to ``--filesystem=``:"
 msgstr ""
-"Cada uma das seguintes permissões configura o acesso ao sistema de "
-"arquivos e deve ser adicionada a ``--filesystem =``:"
+"Cada uma das seguintes permissões configura o acesso ao sistema de arquivos "
+"e deve ser adicionada a ``--filesystem =``:"
 
 #: ../../sandbox-permissions-reference.rst:31
 msgid "``host``"
 msgstr "``host``"
 
 #: ../../sandbox-permissions-reference.rst:31
-#, fuzzy
 msgid "Access all files [#f3]_"
-msgstr "Acessa todos os arquivos"
+msgstr "Acessa todos os arquivos [#f3]_"
 
 #: ../../sandbox-permissions-reference.rst:32
 msgid "``home``"
@@ -234,55 +231,50 @@ msgid "Access the XDG templates directory"
 msgstr "Acesse o diretório XDG de modelos"
 
 #: ../../sandbox-permissions-reference.rst:43
-#, fuzzy
 msgid "``xdg-config``"
-msgstr "``xdg-music``"
+msgstr "``xdg-config``"
 
 #: ../../sandbox-permissions-reference.rst:43
-#, fuzzy
 msgid "Access the XDG config directory"
-msgstr "Acessa a pasta pessoal"
+msgstr "Acesse o diretório XDG de configuração"
 
 #: ../../sandbox-permissions-reference.rst:44
-#, fuzzy
 msgid "``xdg-cache``"
-msgstr "``xdg-music``"
+msgstr "``xdg-cache``"
 
 #: ../../sandbox-permissions-reference.rst:44
-#, fuzzy
 msgid "Access the XDG cache directory"
-msgstr "Acessa a pasta pessoal"
+msgstr "Acesse o diretório XDG de cache"
 
 #: ../../sandbox-permissions-reference.rst:45
-#, fuzzy
 msgid "``xdg-data``"
-msgstr "``xdg-desktop``"
+msgstr "``xdg-data``"
 
 #: ../../sandbox-permissions-reference.rst:45
-#, fuzzy
 msgid "Access the XDG data directory"
-msgstr "Acesse o diretório XDG da área de trabalho"
+msgstr "Acesse o diretório XDG de dados"
 
 #: ../../sandbox-permissions-reference.rst:46
-#, fuzzy
 msgid "``xdg-run/path``"
-msgstr "``xdg-templates``"
+msgstr "``xdg-run/path``"
 
 #: ../../sandbox-permissions-reference.rst:46
 msgid ""
 "Access subdirectories of the XDG runtime directory (where path is any "
 "subdirectory)"
 msgstr ""
+"Acesse subdiretórios do diretório XDG de runtimes (onde caminho é qualquer "
+"subdiretório)"
 
 #: ../../sandbox-permissions-reference.rst:49
 msgid ""
-"Paths can be added to all the above filesystem options. For example, "
-"``--filesystem=xdg-documents/path``. The following permission options can"
-" also be added:"
+"Paths can be added to all the above filesystem options. For example, ``--"
+"filesystem=xdg-documents/path``. The following permission options can also "
+"be added:"
 msgstr ""
-"Os caminhos podem ser adicionados a todas as opções do sistema de "
-"arquivos acima. Por exemplo, ``--filesystem=xdg-documents/caminho``. As "
-"seguintes opções de permissão também podem ser adicionadas:"
+"Os caminhos podem ser adicionados a todas as opções do sistema de arquivos "
+"acima. Por exemplo, ``--filesystem=xdg-documents/caminho``. As seguintes "
+"opções de permissão também podem ser adicionadas:"
 
 #: ../../sandbox-permissions-reference.rst:53
 msgid "``:ro`` - read-only access"
@@ -294,8 +286,7 @@ msgstr "``:rw`` – acesso de leitura/escrita (esse é o padrão)"
 
 #: ../../sandbox-permissions-reference.rst:55
 msgid ""
-"``:create`` - read/write access, and create the directory if it doesn't "
-"exist"
+"``:create`` - read/write access, and create the directory if it doesn't exist"
 msgstr ""
 "``:create`` – acesso de leitura/escrita, e cria o diretório se ele não "
 "existir"
@@ -310,25 +301,27 @@ msgid ""
 "extension will not work, which is very bad for X11 performance."
 msgstr ""
 "Não é necessariamente exigido, mas sem isso a extensão de memória "
-"compartilhada do X11 não funcionará, o que é muito ruim para o desempenho"
-" do X11."
+"compartilhada do X11 não funcionará, o que é muito ruim para o desempenho do "
+"X11."
 
 #: ../../sandbox-permissions-reference.rst:61
 msgid ""
-"Giving network access also grants access to all host services listening "
-"on abstract Unix sockets (due to how network namespaces work), and these "
-"have no permission checks. This unfortunately affects e.g. the X server "
-"and the session bus which listens to abstract sockets by default. A "
-"secure distribution should disable these and just use regular sockets."
+"Giving network access also grants access to all host services listening on "
+"abstract Unix sockets (due to how network namespaces work), and these have "
+"no permission checks. This unfortunately affects e.g. the X server and the "
+"session bus which listens to abstract sockets by default. A secure "
+"distribution should disable these and just use regular sockets."
 msgstr ""
-"Conceder o acesso à rede também o faz a todos os serviços host que "
-"escutam soquetes abstratos do Unix (devido à maneira como os namespaces "
-"de rede funcionam), e eles não têm verificação de permissão. "
-"Infelizmente, isso afeta, por exemplo, o servidor X e o barramento de "
-"sessão que atende soquetes abstratos por padrão. Uma distribuição segura "
-"deve desativá-los e usar soquetes regulares."
+"Conceder o acesso à rede também o faz a todos os serviços host que escutam "
+"soquetes abstratos do Unix (devido à maneira como os espaços de nomes de "
+"rede funcionam), e eles não têm verificação de permissão. Infelizmente, isso "
+"afeta, por exemplo, o servidor X e o barramento de sessão que atende "
+"soquetes abstratos por padrão. Uma distribuição segura deve desativá-los e "
+"usar soquetes regulares."
 
 #: ../../sandbox-permissions-reference.rst:66
-msgid "Except for the blacklisted paths mentioned in :doc:`sandbox-permissions`."
+msgid ""
+"Except for the blacklisted paths mentioned in :doc:`sandbox-permissions`."
 msgstr ""
-
+"Exceto pelos caminhos na lista negra mencionados em :doc:`sandbox-"
+"permissions`."
