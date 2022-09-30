@@ -1,49 +1,59 @@
-# SOME DESCRIPTIVE TITLE.
+# Brazilian Portuguese translation for portals-qt
 # Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2019-2022.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
+"POT-Creation-Date: 2022-09-29 11:37-0300\n"
+"PO-Revision-Date: 2022-09-29 16:36-0300\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
+"Language: pt_BR\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
+"X-Generator: Gtranslator 42.0\n"
 
 #: ../../portals-qt.rst:2
 msgid "Portal support in Qt and KDE"
-msgstr ""
+msgstr "Suporte a portal no Qt e KDE"
 
 #: ../../portals-qt.rst:4
 msgid ""
-"Qt and KDE libraries will transparently use portals for some "
-"functionality when they detect that they are being used inside a Flatpak "
-"sandbox. Here are some hints for what Qt or KDE applications should do to"
-" benefit from this."
+"Qt and KDE libraries will transparently use portals for some functionality "
+"when they detect that they are being used inside a Flatpak sandbox. Here are "
+"some hints for what Qt or KDE applications should do to benefit from this."
 msgstr ""
+"As bibliotecas do Qt e do KDE usarão portais de forma transparente para "
+"algumas funcionalidades quando detectarem que estão sendo usadas dentro de "
+"uma caixa de areia Flatpak. Aqui estão algumas dicas sobre o que os "
+"aplicativos Qt ou KDE devem fazer para se beneficiar disso."
 
 #: ../../portals-qt.rst:8
 msgid ""
-"Use ``QDesktopServices::openUrl(const QUrl &url)`` or ``KIO::KRun`` to "
-"open URIs or send an email when using ``mailto`` URL"
+"Use ``QDesktopServices::openUrl(const QUrl &url)`` or ``KIO::KRun`` to open "
+"URIs or send an email when using ``mailto`` URL"
 msgstr ""
+"Use ``QDesktopServices::openUrl(const QUrl &url)`` ou ``KIO::KRun`` para "
+"abrir URIs ou enviar um e-mail por meio da URL ``mailto``"
 
 #: ../../portals-qt.rst:10
 msgid ""
-"Use ``QFileDialog`` class to open files. Avoid using "
-"``QFileDialog::DontUseNativeDialog``. Note that portals cannot currently "
-"give access to directories on the host filesystem"
+"Use ``QFileDialog`` class to open files and, as of Qt ``5.18.90``, "
+"directories. Avoid using ``QFileDialog::DontUseNativeDialog``. Note that "
+"portals cannot currently give access to directories on the host filesystem"
 msgstr ""
+"Use a classe ``QFileDialog`` para abrir arquivos e, a partir do Qt "
+"``5.18.90``, diretórios. Evite usar ``QFileDialog::DontUseNativeDialog``. "
+"Observe que portais não podem atualmente dar acesso a diretórios no sistema "
+"de arquivos host"
 
 #: ../../portals-qt.rst:13
 msgid "Use ``KNotification::notify()`` to show notification"
-msgstr ""
-
+msgstr "Use ``KNotification::notify()`` para mostrar notificação"
