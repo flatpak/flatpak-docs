@@ -2,14 +2,14 @@
 # Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2019.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2019-2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
 "POT-Creation-Date: 2019-11-30 04:28-0300\n"
-"PO-Revision-Date: 2019-12-01 19:01-0300\n"
+"PO-Revision-Date: 2022-10-04 10:58-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Generated-By: Babel 2.7.0\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
-"X-Generator: Gtranslator 3.32.0\n"
+"X-Generator: Gtranslator 42.0\n"
 
 #: ../../debugging.rst:2
 msgid "Debugging"
@@ -76,7 +76,7 @@ msgid ""
 msgstr ""
 "O SDK do Freedesktop (no qual muitos outros se baseiam) inclui uma variedade "
 "de ferramentas de depuração, como ``gdb``, ``strace``, ``nm``, ``dbus-"
-"send``, ``dconf `` e muitos outros."
+"send``, ``dconf`` e muitos outros."
 
 #: ../../debugging.rst:34
 msgid ""
