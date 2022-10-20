@@ -88,13 +88,11 @@ gettext_compact = False
 #
 html_theme = 'sphinx_rtd_theme'
 
-html_context = {
-    'css_files': [
-        '_static/dark.css',
-        '_static/theme_overrides.css', #GNOME specific overrides
-        'https://fonts.googleapis.com/css?family=Overpass:400,600,700|Source+Sans+Pro:400,400i,700,700i&display=swap&subset=latin-ext', # Web fonts
-        ],
-    }
+html_css_files = [
+    'dark.css',
+    'theme_overrides.css', #GNOME specific overrides
+    'https://fonts.googleapis.com/css?family=Overpass:400,600,700|Source+Sans+Pro:400,400i,700,700i&display=swap&subset=latin-ext', # Web fonts
+]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
