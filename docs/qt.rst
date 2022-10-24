@@ -34,5 +34,5 @@ straight-forward.
 Contents
 --------
 
-The ``org.kde.Platform`` runtime includes all of Qt, including some KDE Frameworks. If you discover any issues we encourage you to `report them <https://invent.kde.org/kde/flatpak-kde-runtime>`__. If you want more control, it's also possible to use the ``org.freedesktop.Platform`` as a base and bundle the parts of Qt you need.
+The ``org.kde.Platform`` runtime includes all of Qt, including some KDE Frameworks. If you discover any issues we encourage you to `report them <https://invent.kde.org/packaging/flatpak-kde-runtime>`__. If you want more control, it's also possible to use the ``org.freedesktop.Platform`` as a base and bundle the parts of Qt you need.
 

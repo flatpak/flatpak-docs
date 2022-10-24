@@ -89,7 +89,7 @@ Application icons
 Applications are expected to provide an application icon, which
 is used for their application launcher. These icons should be
 provided in accordance with the `Freedesktop icon specification
-<https://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html>`_.
+<https://specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html>`_.
 
 Icons should be named with the application's ID, be in either PNG or SVG
 format, and must be placed in the standard location::
@@ -106,9 +106,9 @@ Desktop files
 
 Desktop files are used to provide the desktop environment with
 information about each application. The `Freedesktop specification
-<https://standards.freedesktop.org/desktop-entry-spec/latest/>`_ provides a
+<https://specifications.freedesktop.org/desktop-entry-spec/latest/>`_ provides a
 complete reference for writing desktop files, and `additional information
-about them <https://wiki.archlinux.org/index.php/desktop_entries>`_ is
+about them <https://wiki.archlinux.org/title/desktop_entries>`_ is
 available online.
 
 Desktop files should be named with the application's ID, followed
@@ -179,7 +179,7 @@ XDG base directories
 --------------------
 
 `XDG base directories
-<https://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html>`_ are
+<https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html>`_ are
 standard locations for user-specific application data. Popular toolkits provide
 convenience functions for accessing XDG base directories. These include:
 
@@ -188,7 +188,7 @@ convenience functions for accessing XDG base directories. These include:
   the ``g_get_user_cache_dir ()``, ``g_get_user_data_dir ()``,
   ``g_get_user_config_dir ()`` functions
 - Qt: provides access to XDG base directories with the `QStandardPaths
-  Class <http://doc.qt.io/qt-5/qstandardpaths.html>`_
+  Class <https://doc.qt.io/qt-5/qstandardpaths.html>`_
 
 However, applications that aren't using one of these toolkits can expect to
 find their XDG base directories in the following locations:

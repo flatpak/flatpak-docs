@@ -20,7 +20,7 @@ Example:
 
 If interested, you can read the full spec
 `here
-<https://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html>`__
+<https://specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html>`__
 
 Desktop files
 -------------
@@ -89,9 +89,9 @@ This way, the generated ``Exec`` line looks like this::
     This warning can be ignored.
 
 You can find more general information about desktop files `here
-<https://wiki.archlinux.org/index.php/desktop_entries>`__. If
+<https://wiki.archlinux.org/title/desktop_entries>`__. If
 interested, you can read also the full spec `here
-<https://standards.freedesktop.org/desktop-entry-spec/latest/>`__.
+<https://specifications.freedesktop.org/desktop-entry-spec/latest/>`__.
 
 Appdata files
 -------------

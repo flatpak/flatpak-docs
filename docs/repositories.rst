@@ -12,7 +12,7 @@ to repositories.
 
 To use a repository to publish an application, it is possible to either host
 your own (covered in the next section, :doc:`hosting-a-repository`) or use
-`Flathub <http://flathub.org>`_, the primary publishing and hosting service
+`Flathub <https://flathub.org>`_, the primary publishing and hosting service
 for Flatpak applications.
 
 Software center applications like GNOME Software or KDE Discover allow browsing

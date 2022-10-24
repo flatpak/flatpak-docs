@@ -49,8 +49,8 @@ Underlying technologies
 
 Flatpak utilises a number of pre-existing technologies. These include:
 
-* The `bubblewrap <https://github.com/projectatomic/bubblewrap>`_ utility from
-  `Project Atomic <http://www.projectatomic.io/>`_, which lets unprivileged
+* The `bubblewrap <https://github.com/containers/bubblewrap>`_ utility from
+  `Project Atomic <https://projectatomic.io/>`_, which lets unprivileged
   users set up and run containers, using kernel features such as:
 
   * Namespaces
@@ -64,7 +64,7 @@ Flatpak utilises a number of pre-existing technologies. These include:
 * The `OSTree <https://ostree.readthedocs.io/en/latest/>`__ system for
   versioning and distributing filesystem trees
 * The OCI format from the `Open Container Initiative
-  <https://www.opencontainers.org/>`_, as an alternative to OSTree used by the
+  <https://opencontainers.org/>`_, as an alternative to OSTree used by the
   `Fedora infrastructure
   <https://blog.fishsoup.net/2018/12/04/flatpaks-in-fedora-now-live/>`__
 * Flatpak can use either OSTree or OCI for single-file bundles.
