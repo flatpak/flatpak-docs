@@ -12,7 +12,7 @@ distributors. Their content is also relevant to those who have a general
 interest in Flatpak.
 
 If you are looking for information about how to use Flatpak to install and
-run applications, please refer to `the Flatpak website <http://flatpak.org>`_.
+run applications, please refer to `the Flatpak website <https://flatpak.org>`_.
 
 Contents
 --------

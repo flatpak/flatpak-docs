@@ -60,7 +60,7 @@ just like ``git bisect``.
 
 In case your distribution doesn't install the ``flatpak-bisect`` utility, you
 can find it distributed alongside the Flatpak source code, in
-https://github.com/flatpak/flatpak/blob/master/scripts/flatpak-bisect
+https://github.com/flatpak/flatpak/blob/main/scripts/flatpak-bisect
 
 First you update the application and get its history::
 
@@ -117,7 +117,7 @@ And write something like this::
   StorageType=harddisk
 
 See `flatpak-installation(5)
-<http://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-installation>`_
+<https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-installation>`_
 for the full format specification. Replace the path with the actual path you
 want to use. You can use ``df`` to see mounted file systems and ``mkdir`` to
 create a ``flatpak`` directory so the path specified by ``Path=`` exists.
