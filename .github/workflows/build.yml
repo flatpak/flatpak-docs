@@ -29,7 +29,7 @@ jobs:
       - name: Upload docs as artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: docs
+          name: Documentation
           path: docs/_build/**/html
 
   linkcheck:
@@ -63,4 +63,4 @@ jobs:
         if: always()
         with:
           name: Linkcheck report
-          path: docs/_build/linkcheck/output.txt
+          path: docs/_build/**/linkcheck/output.txt
