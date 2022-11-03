@@ -80,7 +80,7 @@ System search
 
 GNOME-based distributions, like CentOS, Fedora, Red Hat Enterprise Linux and
 Ubuntu, provide the option to integrate with system search, by providing a
-`search provider <https://developer.gnome.org/SearchProvider/>`_. This allows
+`search provider <https://developer-old.gnome.org/SearchProvider/>`_. This allows
 application-provided search results to appear in the Activities Overview.
 
 Window controls
