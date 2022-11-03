@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
 "POT-Creation-Date: 2022-09-29 11:37-0300\n"
-"PO-Revision-Date: 2022-09-29 19:57-0300\n"
+"PO-Revision-Date: 2022-11-01 16:30-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../../sandbox-permissions-reference.rst:2
 msgid "Sandbox Permissions Reference"
-msgstr "Permissões de referência do sandboxn"
+msgstr "Permissões de referência do sandbox"
 
 #: ../../sandbox-permissions-reference.rst:4
 msgid ""
