@@ -2,14 +2,14 @@
 # Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2019.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2019-2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
 "POT-Creation-Date: 2019-11-30 04:28-0300\n"
-"PO-Revision-Date: 2019-12-01 19:02-0300\n"
+"PO-Revision-Date: 2022-10-31 16:01-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Generated-By: Babel 2.7.0\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
-"X-Generator: Gtranslator 3.32.0\n"
+"X-Generator: Gtranslator 42.0\n"
 
 #: ../../using-flatpak.rst:2
 msgid "Using Flatpak"
@@ -73,10 +73,10 @@ msgid ""
 "App1`` and ``com.company.App2``."
 msgstr ""
 "O Flatpak identifica cada aplicativo e runtime usando um identificador "
-"exclusivo de três partes, como ``com.empresa.aplicativo``. O segmento final "
+"exclusivo de três partes, como ``com.empresa.Aplicativo``. O segmento final "
 "desse endereço é o nome do objeto e a parte anterior identifica o "
 "desenvolvedor, para que o mesmo desenvolvedor possa ter vários aplicativos, "
-"como ``com.empresa.aplicativo1`` e ``com.empresa.aplicativo2``."
+"como ``com.empresa.Aplicativo1`` e ``com.empresa.Aplicativo2``."
 
 #: ../../using-flatpak.rst:31
 msgid "Identifier triples"
@@ -106,7 +106,7 @@ msgid ""
 msgstr ""
 "O Flatpak permite que arquiteturas e versões sejam especificadas usando o "
 "trio identificador de um objeto. Este assume a forma de ``nome/arquitetura/"
-"ramo``, como ``com.empresa.aplicativo/i386/stable``. (Ramo é o termo usado "
+"ramo``, como ``com.empresa.Aplicativo/i386/stable``. (Ramo é o termo usado "
 "para se referir a versões do mesmo objeto.) A primeira parte do trio é o ID, "
 "a segunda parte é a arquitetura e a terceira parte é o ramo."
 
@@ -119,8 +119,8 @@ msgid ""
 msgstr ""
 "Os trios identificadores também podem ser usados para especificar apenas a "
 "arquitetura ou o ramo, deixando parte do trio em branco. Por exemplo, ``com."
-"empresa.aplicativo//stable`` apenas especificaria o ramo, e ``com.empresa."
-"aplicativo/i386//`` apenas especifica a arquitetura."
+"empresa.Aplicativo//stable`` apenas especificaria o ramo, e ``com.empresa."
+"Aplicativo/i386//`` apenas especifica a arquitetura."
 
 #: ../../using-flatpak.rst:50
 msgid ""
@@ -238,9 +238,9 @@ msgid ""
 "points to the remote's ``.flatpakrepo`` file. ``--if-not-exists`` stops the "
 "command from producing an error if the remote already exists."
 msgstr ""
-"Aqui, `` flathub`` é o nome local que é dado ao remoto. O URL aponta para o "
-"arquivo ``.flatpakrepo`` do remoto. ``--if-not-exist```` impede que o "
-"comando produza um erro se o remoto já existir."
+"Aqui, ``flathub`` é o nome local que é dado ao remoto. O URL aponta para o "
+"arquivo ``.flatpakrepo`` do remoto. ``--if-not-exist`` impede que o comando "
+"produza um erro se o remoto já existir."
 
 #: ../../using-flatpak.rst:107
 msgid "Remove a remote"

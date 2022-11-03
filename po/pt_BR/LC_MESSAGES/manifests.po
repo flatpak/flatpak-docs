@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
-"POT-Creation-Date: 2022-09-29 11:37-0300\n"
-"PO-Revision-Date: 2022-09-29 16:15-0300\n"
+"POT-Creation-Date: 2022-10-31 16:09-0300\n"
+"PO-Revision-Date: 2022-11-03 12:09-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
@@ -361,8 +361,8 @@ msgstr ""
 "`cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_"
 
 #: ../../manifests.rst:177
-msgid "`meson <http://mesonbuild.com/>`_"
-msgstr "`meson <http://mesonbuild.com/>`_"
+msgid "`meson <https://mesonbuild.com/>`_"
+msgstr "`meson <https://mesonbuild.com/>`_"
 
 #: ../../manifests.rst:178
 msgid "`qmake <https://doc.qt.io/qt-5/qmake-overview.html>`_"
