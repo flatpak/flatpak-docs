@@ -3,6 +3,13 @@ name: Docs
 on:
   push:
   pull_request:
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      language:
+        required: false
+        type: string
+        default: ''
 
 permissions:
   contents: read
@@ -25,6 +32,7 @@ jobs:
       - name: Sphinx build
         run: |
           echo "::add-matcher::.github/matchers/sphinx.json"
+          test -n "${{ inputs.language }}" && SPHINXOPTS+=" -D language=${{ inputs.language }}"
           make -C docs/ html SPHINXOPTS="${SPHINXOPTS}"
           echo "::remove-matcher owner=sphinx::"
         env:
@@ -51,6 +59,7 @@ jobs:
           pip install -U -r requirements.txt
       - name: Sphinx linkcheck
         run: |
+          test -n "${{ inputs.language }}" && SPHINXOPTS+=" -D language=${{ inputs.language }}"
           make -C docs/ linkcheck SPHINXOPTS="${SPHINXOPTS}"
         env:
           SPHINXOPTS: -n -W -a --keep-going
