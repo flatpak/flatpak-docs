@@ -10,6 +10,7 @@ complete list can be viewed using ``flatpak build-finish --help``.
 
 ===================================================  ===========================================
 ``--socket=x11``                                     Show windows using X11
+``--fallback-x11``                                   Show windows using Wayland with fallback to X11
 ``--share=ipc``                                      Share IPC namespace with the host [#f1]_
 ``--allow=bluetooth``                                Allow access to Bluetooth
 ``--device=dri``                                     OpenGL rendering
@@ -18,7 +19,9 @@ complete list can be viewed using ``flatpak build-finish --help``.
 ``--share=network``                                  Access the network [#f2]_
 ``--talk-name=org.freedesktop.secrets``              Talk to a named service on the session bus
 ``--system-talk-name=org.freedesktop.GeoClue2``      Talk to a named service on the system bus
+``--session-bus``                                    D-Bus
 ``--socket=system-bus``                              Unlimited access to all of D-Bus
+``--add-policy=org.freedesktop.example=default``     D-Bus policy
 ===================================================  ===========================================
 
 Filesystem permissions
