@@ -35,7 +35,7 @@ requests module has its own dependencies, the build would fail. If multiple
 dependencies are required, it is better to install them using the method in
 the next section, instead.
 
-Building multiple python dependencies
+Building multiple Python dependencies
 -------------------------------------
 
 Even though the example above installs, it won't actually work. This is because
