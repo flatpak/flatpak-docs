@@ -10,7 +10,7 @@ complete list can be viewed using ``flatpak build-finish --help``.
 
 ===================================================  ===========================================
 ``--socket=x11``                                     Show windows using X11
-``--fallback-x11``                                   Show windows using Wayland with fallback to X11
+``--socket=fallback-x11``                            Grant X11 access when Wayland is not available
 ``--share=ipc``                                      Share IPC namespace with the host [#f1]_
 ``--allow=bluetooth``                                Allow access to Bluetooth
 ``--device=dri``                                     OpenGL rendering
