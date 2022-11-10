@@ -19,7 +19,7 @@ complete list can be viewed using ``flatpak build-finish --help``.
 ``--share=network``                                  Access the network [#f2]_
 ``--talk-name=org.freedesktop.secrets``              Talk to a named service on the session bus
 ``--system-talk-name=org.freedesktop.GeoClue2``      Talk to a named service on the system bus
-``--session-bus``                                    D-Bus
+``--socket=session-bus``                             Unlimited access to user's D-Bus session
 ``--socket=system-bus``                              Unlimited access to all of D-Bus
 ``--add-policy=org.freedesktop.example=default``     D-Bus policy
 ===================================================  ===========================================
