@@ -148,7 +148,7 @@ Configuring resource limits for apps
 ------------------------------------
 
 When systemd is available, Flatpak tries to put app processes in a scope such
-as ``app-com.brave.Browser-*.scope`` (in the case of Brave), with ``*`` replaced by
+as ``app-flatpak-com.brave.Browser-*.scope`` (in the case of Brave), with ``*`` replaced by
 an arbitrary suffix. This means you can create a file like
 ``~/.config/systemd/user/app-flatpak-com.brave.Browser-.scope.d/memory.conf``
 with contents like::
