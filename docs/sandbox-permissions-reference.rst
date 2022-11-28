@@ -35,6 +35,7 @@ be added to ``--filesystem=``:
 
 ====================  ===========================================
 ``host``              Access all files [#f3]_
+``host-etc``              Access all files in /etc
 ``home``              Access the home directory
 ``/some/dir``         Access an arbitrary path
 ``~/some/dir``        Access an arbitrary path relative to the home directory
