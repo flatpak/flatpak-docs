@@ -21,6 +21,8 @@ applications should do to benefit from this.
 Additionally, xdg-desktop-portal-gtk is required for GTK themes and fonts.
 It is also used as a fallback for the filepicker if the main xdg-desktop-portal implementation doesn't support filepicking.
 
+In order to use portal outside of flatpak, make sure to set GTK_USE_PORTAL=1 
+
 Portal support in Qt and KDE
 =============================
 
