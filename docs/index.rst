@@ -27,4 +27,5 @@ Contents
    publishing
    desktop-integration
    tips-and-tricks
+   graphics-drivers
    reference
