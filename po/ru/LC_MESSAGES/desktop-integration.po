@@ -1,0 +1,518 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2022-12-31 00:22+0700\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0\n"
+
+#: ../../desktop-integration.rst:2
+msgid "Desktop Integration"
+msgstr "Интеграция с рабочим столом"
+
+#: ../../desktop-integration.rst:4
+msgid ""
+":doc:`conventions` covers the essential aspects of Linux desktop "
+"integration. This page provides further information on optional desktop "
+"integration features. It also provides guidance on how applications can "
+"ensure that their user interfaces fit into the whole range of Linux desktops "
+"and distributions."
+msgstr ""
+":doc:`conventions` охватывает основные аспекты интеграции рабочего стола "
+"Linux. На этой странице представлена дополнительная информация о "
+"дополнительных функциях интеграции с рабочим столом. Он также предоставляет "
+"руководство о том, как приложения могут гарантировать, что их "
+"пользовательские интерфейсы подходят для всего диапазона настольных "
+"компьютеров и дистрибутивов Linux."
+
+#: ../../desktop-integration.rst:10
+msgid ""
+"This information is primarily intended for developers who are new to Linux. "
+"However it is also relevant to desktop-specific Linux applications who wish "
+"to target a broader range of Linux environments."
+msgstr ""
+"Эта информация в первую очередь предназначена для разработчиков, которые "
+"плохо знакомы с Linux. Однако это также актуально для настольных приложений "
+"Linux, которые хотят ориентироваться на более широкий спектр сред Linux."
+
+#: ../../desktop-integration.rst:14
+msgid ""
+"While targeting the Linux desktop ecosystem might seem challenging, the "
+"existence of common standards, in combination with these guidelines, means "
+"that supporting the full range of Linux environments needn't be difficult."
+msgstr ""
+"Хотя нацеливание на экосистему настольных компьютеров Linux может показаться "
+"сложной задачей, наличие общих стандартов в сочетании с этими рекомендациями "
+"означает, что поддержка всего диапазона сред Linux не должна быть сложной."
+
+#: ../../desktop-integration.rst:19
+msgid "Locale detection"
+msgstr "Определение локали"
+
+#: ../../desktop-integration.rst:21
+msgid ""
+"Application toolkits, such as Electron, GTK and Qt, provide built-in support "
+"for detecting which locale to use. Otherwise, the ``setlocale`` function can "
+"be used."
+msgstr ""
+"Наборы прикладных инструментов, такие как Electron, GTK и Qt, предоставляют "
+"встроенную поддержку для определения того, какой языковой стандарт "
+"использовать. В противном случае можно использовать функцию ``setlocale``."
+
+#: ../../desktop-integration.rst:26
+msgid "Portals"
+msgstr "Порталы"
+
+#: ../../desktop-integration.rst:28
+msgid ""
+"Portals are the framework for securely accessing resources from outside an "
+"application sandbox. They provide a range of common features to "
+"applications, including:"
+msgstr ""
+"Порталы - это платформа для безопасного доступа к ресурсам за пределами "
+"изолированной программной среды приложения. Они предоставляют приложениям "
+"ряд общих функций, в том числе:"
+
+#: ../../desktop-integration.rst:32
+msgid "Determining network status"
+msgstr "Определение статуса сети"
+
+#: ../../desktop-integration.rst:33
+msgid "Opening a file with a file chooser"
+msgstr "Открытие файла с помощью средства выбора файла"
+
+#: ../../desktop-integration.rst:34
+msgid "Opening URIs"
+msgstr "Открытие URIs"
+
+#: ../../desktop-integration.rst:35
+msgid "Preventing the device from suspend/sleep/powering off"
+msgstr "Предотвращение перехода устройства в режим ожидания/сна/выключения"
+
+#: ../../desktop-integration.rst:36
+msgid "Printing"
+msgstr "Печать"
+
+#: ../../desktop-integration.rst:37
+msgid "Sending email"
+msgstr "Отправка электронной почты"
+
+#: ../../desktop-integration.rst:38
+msgid "Showing notifications"
+msgstr "Отображение уведомлений"
+
+#: ../../desktop-integration.rst:39
+msgid "Taking screenshots and screencasts"
+msgstr "Создание скриншотов и скринкастов"
+
+#: ../../desktop-integration.rst:41
+msgid "Toolkits like GTK and Qt provide transparent support for portals:"
+msgstr ""
+"Такие инструменты, как GTK и Qt, обеспечивают прозрачную поддержку порталов:"
+
+#: ../../desktop-integration.rst:49
+msgid ""
+"If you are not using one of these toolkits, it is possible to access the "
+"portals API directly. See the `Portals API documentation <https://flatpak."
+"github.io/xdg-desktop-portal/portal-docs.html>`_ for more information."
+msgstr ""
+"Если вы не используете один из этих наборов инструментов, можно получить "
+"прямой доступ к API порталов. См. Документацию по API порталов "
+"Дополнительную информацию см. В `документации API порталов: <https://flatpak."
+"github.io/xdg-desktop-portal/portal-docs.html>`_ ."
+
+#: ../../desktop-integration.rst:55
+msgid "Notifications"
+msgstr "Уведомления"
+
+#: ../../desktop-integration.rst:57
+msgid ""
+"A number of toolkits and frameworks provide transparent support for Linux "
+"desktop notifications. This includes Electron, GTK, KDE and QML."
+msgstr ""
+"Ряд наборов инструментов и фреймворков обеспечивает прозрачную поддержку "
+"уведомлений."
+
+#: ../../desktop-integration.rst:61
+msgid "Status icons"
+msgstr "Значки состояния"
+
+#: ../../desktop-integration.rst:63
+msgid ""
+"Status icons are the same concept as the system tray or the taskbar on "
+"Windows, or menu bar icons on Mac. These are supported on most Linux "
+"distributions, through libappindicator."
+msgstr ""
+"Значки состояния аналогичны значкам на панели задач или панели задач в "
+"Windows или значкам строки меню на Mac. Они поддерживаются в большинстве "
+"дистрибутивов Linux через libappindicator."
+
+#: ../../desktop-integration.rst:67
+msgid ""
+"A number of Linux distributions don't show status icons. It is still "
+"possible to provide a status icon, and it will be shown in some "
+"distributions. However, in order to ensure compatibility, it is recommended "
+"to only use status icons in a supplementary manner, and not to rely on them "
+"as the only mechanism for providing status information or access to "
+"particular features. This includes \"minimize to tray\" (or equivalent) "
+"functionality."
+msgstr ""
+"В некоторых дистрибутивах Linux не отображаются значки состояния. По-"
+"прежнему можно указать значок состояния, и он будет отображаться в некоторых "
+"дистрибутивах. Однако для обеспечения совместимости рекомендуется "
+"использовать значки состояния только в качестве дополнительных средств и не "
+"полагаться на них как на единственный механизм для предоставления информации "
+"о состоянии или доступа к определенным функциям. Это включает в себя функцию "
+"«свернуть в трей» (или аналогичную)."
+
+#: ../../desktop-integration.rst:74
+msgid ""
+"XEmbed style icons will function with the ``x11`` permission but all other "
+"status icon interfaces require extra permissions to escape the sandbox and "
+"these services are not designed to be robust against untrusted software."
+msgstr ""
+"Значки стиля XEmbed будут работать с разрешением ``x11``, но для всех других "
+"интерфейсов значков состояния требуются дополнительные разрешения для выхода "
+"из песочницы, и эти службы не предназначены для защиты от ненадежного "
+"программного обеспечения."
+
+#: ../../desktop-integration.rst:79
+msgid "System search"
+msgstr "Системный поиск"
+
+#: ../../desktop-integration.rst:81
+msgid ""
+"GNOME-based distributions, like CentOS, Fedora, Red Hat Enterprise Linux and "
+"Ubuntu, provide the option to integrate with system search, by providing a "
+"`search provider <https://developer.gnome.org/SearchProvider/>`_. This "
+"allows application-provided search results to appear in the Activities "
+"Overview."
+msgstr ""
+"Дистрибутивы на основе GNOME, такие как CentOS, Fedora, Red Hat Enterprise "
+"Linux и Ubuntu, предоставляют возможность интеграции с системным поиском, "
+"предоставляя `поставщика поиска <https://developer.gnome.org/SearchProvider/"
+">`_. Это позволяет отображать результаты поиска, предоставляемые "
+"приложением, в обзоре действий."
+
+#: ../../desktop-integration.rst:87
+msgid "Window controls"
+msgstr "Окно управления"
+
+#: ../../desktop-integration.rst:89
+msgid ""
+"Window controls are the buttons used to close, maximize and minimize "
+"windows. These do vary across Linux desktops, particularly in terms of which "
+"controls are shown. Whether applications attempt to follow these variations "
+"is up to their discretion. Providing the exact same controls as used by a "
+"particular desktop environment should not be seen as a hard requirement."
+msgstr ""
+"Оконные элементы управления - это кнопки, используемые для закрытия, "
+"развертывания и минимизации окон. Они действительно различаются для разных "
+"рабочих столов Linux, особенно в том, какие элементы управления "
+"отображаются. Пытаются ли приложения следовать этим вариантам, остается на "
+"их усмотрение. Предоставление тех же элементов управления, которые "
+"используются в конкретной среде рабочего стола, не следует рассматривать как "
+"жесткое требование."
+
+#: ../../desktop-integration.rst:95
+msgid ""
+"From a user experience perspective, it is important to ensure that window "
+"controls appear on the same side of the window as other desktops. On Linux "
+"this is the right side of the window (like Windows)."
+msgstr ""
+"С точки зрения взаимодействия с пользователем важно убедиться, что элементы "
+"управления окнами отображаются на той же стороне окна, что и другие рабочие "
+"столы. В Linux это правая часть окна (как в Windows)."
+
+#: ../../desktop-integration.rst:99
+msgid ""
+"Applications can rely on system-provided titlebars on Linux, if they don't "
+"want to draw their own window controls."
+msgstr ""
+"Приложения могут полагаться на предоставляемые системой заголовки в Linux, "
+"если они отказываются рисовать свои собственные элементы управления окнами."
+
+#: ../../desktop-integration.rst:103
+msgid "Window decorations"
+msgstr "Оконные украшения"
+
+#: ../../desktop-integration.rst:105
+msgid ""
+"If your application uses a dark visual style as well as system-provided "
+"window decorations, the ``GTK_THEME_VARIANT=dark`` X11 window property "
+"should be used, to ensure that window decorations match the rest of the "
+"application window. This can be done by running::"
+msgstr ""
+"Если ваше приложение использует темный визуальный стиль, а также "
+"предоставляемые системой декорации окна, следует использовать свойство окна "
+"X11 ``GTK_THEME_VARIANT=dark``, чтобы гарантировать, что оформление окна "
+"соответствует остальной части окна приложения. Это можно сделать, запустив::"
+
+#: ../../desktop-integration.rst:113
+msgid "Global menus"
+msgstr "Глобальные меню"
+
+#: ../../desktop-integration.rst:115
+msgid ""
+"If your application uses the built in ``GtkApplication:menu-bar`` or the Qt "
+"5 equivalent they will work as expected from within a sandboxed application."
+msgstr ""
+"Если ваше приложение использует встроенный «GtkApplication: menu-bar» или "
+"его эквивалент в Qt 5, они будут работать должным образом из изолированного "
+"приложения."
+
+#: ../../desktop-integration.rst:119
+msgid "Theming"
+msgstr "Тематика"
+
+#: ../../desktop-integration.rst:121
+msgid ""
+"Flatpak applications cannot directly use the system theme. This happens "
+"because flatpaks do not have the ability to use data files or libraries in "
+"``/usr`` (where system themes are typically located). The solution to this "
+"was to package themes as Flatpaks, as relying upon the host to have the "
+"correct version for every flatpak defeats the portability benefits it "
+"provides. These themes are provided as `extensions <https://github.com/"
+"flatpak/flatpak/wiki/Extensions>`_, to the Freedesktop runtime when the "
+"extension point is Gtk, and to the KDE runtime when the extension point is "
+"Qt."
+msgstr ""
+"Приложения Flatpak не могут напрямую использовать системную тему. Это "
+"происходит Это происходит потому, что у flatpaks нет возможности "
+"использовать файлы данных или библиотеки в ``/usr`` (где обычно находятся "
+"системные темы). Решением Решением было упаковать темы как Flatpaks, "
+"поскольку надежда на то, что хост будет иметь правильную версию для каждого "
+"Flatpak, лишает его преимуществ переносимости. переносимости. Эти темы "
+"предоставляются как `extensions <https://github.com/flatpak/flatpak/wiki/"
+"Extensions>`_, для для среды выполнения Freedesktop, когда точкой расширения "
+"является Gtk, и для среды выполнения KDE, когда точкой расширения является "
+"Qt."
+
+#: ../../desktop-integration.rst:123
+msgid ""
+"The theming system requires Flatpak 0.8.4+ and applications using up to date "
+"``org.gnome.Platform`` 3.24+, or ``org.freedesktop.Platform`` 1.6+, or ``org."
+"kde.Platform`` 5.9+."
+msgstr ""
+"Система тем требует Flatpak 0.8.4+ и приложений, использующих последнюю "
+"версию org.gnome.Platform 3.24+, org.freedesktop.Platform 1.6+ или org.kde."
+"Platform. 5.9+."
+
+#: ../../desktop-integration.rst:126
+msgid "Installing themes"
+msgstr "Установка тем"
+
+#: ../../desktop-integration.rst:129
+msgid "Instructions for Gtk"
+msgstr "Инструкции для Gtk"
+
+#: ../../desktop-integration.rst:131
+msgid ""
+"The current Gtk themes are packaged in the `flathub <https://flathub.org/>`_ "
+"repository which you can add (if it's not already added) by running::"
+msgstr ""
+"Текущие темы Gtk упакованы в репозиторий `flathub <https://flathub.org/>`_ "
+"который вы можете добавить (если он еще не добавлен), запустив::"
+
+#: ../../desktop-integration.rst:135
+msgid ""
+"To see a list of currently packaged themes you can use the command ``flatpak "
+"search gtk3theme`` (available since Flatpak version 0.10.1). In case you use "
+"an older version of Flatpak than that, you can use the command ``flatpak "
+"remote-ls flathub | grep org.gtk.Gtk3theme``. The difference in output "
+"between these two commands is that the first prints the application ID, the "
+"remote from which the theme comes and the theme's description, while the "
+"second prints only the full name of the theme's flatpak package."
+msgstr ""
+"Чтобы просмотреть список упакованных тем, вы можете использовать команду "
+"flatpak search gtk3theme (доступно, начиная с версии Flatpak 0.10.1). Если "
+"вы используете более старую версию Flatpak, вы можете использовать команду "
+"``flatpak remote-ls flathub | grep org.gtk.Gtk3theme``. Разница в выводе "
+"между этими двумя командами заключается в том, что первая выводит "
+"идентификатор приложения, удаленное устройство, с которого поступает тема, и "
+"описание темы, а вторая выводит только полное имя пакета темы flatpak."
+
+#: ../../desktop-integration.rst:137
+msgid ""
+"You can install themes with the command ``flatpak install flathub org.gtk."
+"Gtk3theme.Foo``, replacing ``Foo`` with the name of the desired theme."
+msgstr ""
+"Вы можете установить темы с помощью команды ``flatpak install flathub org."
+"gtk.Gtk3theme.Foo``, заменив `Foo` на имя желаемой темы."
+
+#: ../../desktop-integration.rst:140
+msgid "Instructions for Qt"
+msgstr "Инструкции для Qt"
+
+#: ../../desktop-integration.rst:142
+msgid ""
+"For the Qt theming to work, the flatpak packages kstyle and platformtheme "
+"must be installed. These are packed in the kdeapps repository which you can "
+"add by running::"
+msgstr ""
+"Чтобы темы Qt работали, должны быть установлены пакеты flatpak kstyle и "
+"platformtheme. Они упакованы в репозиторий kdeapps, который вы можете "
+"добавить, запустив::"
+
+#: ../../desktop-integration.rst:146
+msgid ""
+"Afterwards the two packages can be installed with the following commands::"
+msgstr "После этого два пакета можно установить с помощью следующих команд::"
+
+#: ../../desktop-integration.rst:152
+msgid "Applying themes"
+msgstr "Применение тем"
+
+#: ../../desktop-integration.rst:154
+msgid ""
+"There is no ideal way to specify the theme Flatpak applications use. The "
+"applications will try to match the system theme currently being used, if it "
+"corresponds to any of the Flatpak themes installed, and will fall back to "
+"Adwaita (if they use Gtk2 or Gtk3) or the default Qt theme (if they use Qt) "
+"if a corresponding theme isn't detected."
+msgstr ""
+"Не существует идеального способа указать тему, используемую приложениями "
+"Flatpak. Приложения будут пытаться соответствовать используемой в настоящее "
+"время системной теме, если она соответствует какой-либо из установленных тем "
+"Flatpak, и будут использовать Adwaita (если они используют Gtk2 или Gtk3) "
+"или тему Qt по умолчанию (если они используют Qt), если соответствующая тема "
+"не обнаружена."
+
+#: ../../desktop-integration.rst:156
+msgid ""
+"As of Flatpak 0.10.1, the Flatpak system can detect whether the system "
+"themes available correspond to any Flatpak themes available in the "
+"repositories, and, if so, will automatically install found themes at update "
+"time based upon the ``gtk-theme`` Dconf key. This key however can contain "
+"only one value, the one of the currently being used theme, which means that "
+"the Flatpak versions of matching themes that aren't currently being used "
+"aren't installed until those themes are enabled. If none of the "
+"corresponding system themes are currently being used, the applications will "
+"fall back to Adwaita or the default Qt theme."
+msgstr ""
+"Начиная с Flatpak 0.10.1, система Flatpak может определять, соответствуют ли "
+"доступные системные темы каким-либо темам Flatpak, доступным в репозиториях, "
+"и, если да, автоматически устанавливает найденные темы во время обновления "
+"на основе `` gtk-theme`` Ключ dconf. Однако этот ключ содержать только одно "
+"значение, одно из используемых в настоящее время тем, что означает, что "
+"версии Flatpak совпадающих тем, которые в настоящее время не используются, "
+"не устанавливаются, пока эти темы не будут включены. Если ни одна из "
+"соответствующих системных тем в настоящее время не используются, приложения "
+"вернутся к Adwaita или теме Qt по умолчанию."
+
+#: ../../desktop-integration.rst:158
+msgid ""
+"On X11, Gtk3 picks up the themes via XSettings. Specifically, the GNOME "
+"XSettings daemon ``gsd-xsettings`` reads the DConf values and converts them "
+"into the XSettings values. For this to work, you need an xsettings daemon "
+"that is correctly configured. Gtk3 on Wayland picks up themes directly via "
+"Dconf. For this to work, you can either use KDE (with ``kde-gtk-config`` > "
+"5.11.95), GNOME, which works out of the box, or manually configure the dconf "
+"keys under ``/org/gnome/desktop/interface/``. For the DConf option to work "
+"on Wayland the application must also be configured to have DConf access."
+msgstr ""
+"На X11 Gtk3 подбирает темы через XSettings. В частности, демон GNOME "
+"XSettings ``gsd-xsettings`` считывает значения DConf и преобразует их в "
+"значения XSettings. Чтобы это работало, вам нужен правильно настроенный "
+"демон xsettings. Gtk3 на Wayland подбирает темы напрямую через Dconf. Чтобы "
+"это работало, вы можете использовать KDE (``kde- gtk-config`` > 5.11.95), "
+"GNOME, который работает из коробки, или вручную, или вручную настроить ключи "
+"dconf в ``/org/gnome/desktop/interface/``. Чтобы опция DConf работала в "
+"Wayland, приложение также должно быть настроено для доступа к DConf."
+
+#: ../../desktop-integration.rst:161
+msgid "Other notes on theming"
+msgstr "Другие примечания по тематике"
+
+#: ../../desktop-integration.rst:163
+msgid ""
+"In regards to icon themes, since Flatpak 0.8.8 the host icons are exposed to "
+"the guest, so that there is usually no need for the presence of Flatpak icon "
+"themes."
+msgstr ""
+"Что касается тем значков, начиная с Flatpak 0.8.8 значки хоста отображаются "
+"для гостя, поэтому обычно нет необходимости в наличии тем значков Flatpak."
+
+#: ../../desktop-integration.rst:165
+msgid ""
+"If you use the *Global Dark Theme* option (removed in GNOME-Tweaks 3.28)  in "
+"``gnome-tweak-tool`` it will not work as that simply writes to ``settings."
+"ini`` which isn’t available in the sandbox. Use dark versions of themes "
+"instead if they exist."
+msgstr ""
+"Если вы используете параметр *Global Dark Theme* (удален в GNOME-Tweaks "
+"3.28) в gnome-tweak-tool, он не будет работать, так как он просто записывает "
+"в ``settings.ini``, который недоступен в песочница. Вместо этого используйте "
+"темные версии тем, если они существуют."
+
+#~ msgid ""
+#~ "Toolkits like GTK and Qt provide transparent support for portals. If you "
+#~ "are not using one of these toolkits, it is possible to access the portals "
+#~ "API directly. See the `portals API documentation <https://flatpak.github."
+#~ "io/xdg-desktop-portal/portal-docs.html>`_ for more information."
+#~ msgstr ""
+#~ "Такие инструменты, как GTK и Qt, обеспечивают прозрачную поддержку "
+#~ "порталов. Если вы не используете один из этих наборов инструментов, можно "
+#~ "получить прямой доступ к API порталов. Дополнительную информацию см. В "
+#~ "документации API порталов <https://flatpak.github.io/xdg-desktop-portal/"
+#~ "portal-docs.html>`_ for more information."
+
+#~ msgid ""
+#~ "A number of toolkits and frameworks provide transparent support for Linux "
+#~ "desktop notificatoions. This includes Electron, GTK, KDE and QML. "
+#~ "Applications not using one of these can either use the `libnotify "
+#~ "<https://developer.gnome.org/libnotify/>`_ library or portals. Of these, "
+#~ "portals has the benefit that it can easily be used from within an "
+#~ "application sandbox."
+#~ msgstr ""
+#~ "Ряд наборов инструментов и фреймворков обеспечивает прозрачную поддержку "
+#~ "уведомлений рабочего стола Linux. Сюда входят Electron, GTK, KDE и QML. "
+#~ "Приложения, не использующие один из них, могут использовать либо "
+#~ "библиотеку `libnotify <https://developer.gnome.org/libnotify/>`_, либо "
+#~ "порталы. Преимущество порталов состоит в том, что их можно легко "
+#~ "использовать из изолированной программной среды приложения. "
+
+#~ msgid "Defunct integration options"
+#~ msgstr "Несуществующие варианты интеграции"
+
+#~ msgid ""
+#~ "The following desktop integration options are no longer in use and can be "
+#~ "safely ignored:"
+#~ msgstr ""
+#~ "Следующие параметры интеграции с рабочим столом больше не используются, и "
+#~ "их можно игнорировать:"
+
+#~ msgid ""
+#~ "Application menus - these are specific to the GNOME desktop. However, "
+#~ "they are likely to be phased out in the future."
+#~ msgstr ""
+#~ "Меню приложений - они характерны для рабочего стола GNOME. Однако в "
+#~ "будущем они, вероятно, будут прекращены."
+
+#~ msgid ""
+#~ "Global menu bar - this was a feature similar to Mac's menu bar, which was "
+#~ "part of Ubuntu's Unity desktop. This has been retired. All Linux desktops "
+#~ "and distributions expect a menu bar to be shown as part of the "
+#~ "application window, should one be provided (rather than relying on a "
+#~ "global menu bar, as on Mac)."
+#~ msgstr ""
+#~ "Глобальная строка меню - это была функция, аналогичная строке меню Mac, "
+#~ "которая была частью рабочего стола Unity Ubuntu. Это было удалено. Все "
+#~ "рабочие столы и дистрибутивы Linux ожидают, что строка меню будет "
+#~ "отображаться как часть окна приложения, если оно есть (вместо того, чтобы "
+#~ "полагаться на глобальную строку меню, как на Mac). "
