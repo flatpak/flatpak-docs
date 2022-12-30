@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-14 17:03-0500\n"
-"PO-Revision-Date: 2021-07-22 21:12+0700\n"
+"PO-Revision-Date: 2022-12-30 01:22+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Language-Team:\n"
 "Language: ru\n"
-"Language-Team: \n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../available-runtimes.rst:2
 msgid "Available Runtimes"
@@ -31,32 +32,33 @@ msgid ""
 "distributors."
 msgstr ""
 "На этой странице представлена информация о доступных средах выполнения "
-"Flatpak. Она, в первую очередь, имеет  информационное значение для "
-"разработчиков и распространителей приложений."
+"Flatpak. Он предназначен в первую очередь как информация для разработчиков "
+"приложений и распространителей."
 
 #: ../../available-runtimes.rst:7
 msgid ""
-"There are currently three main runtimes available: Freedesktop, GNOME and"
-" KDE. These are all hosted on `Flathub <https://flathub.org/>`_."
+"There are currently three main runtimes available: Freedesktop, GNOME and "
+"KDE. These are all hosted on `Flathub <https://flathub.org/>`_."
 msgstr ""
-"В настоящее время доступны три основных среды выполнения: Freedesktop, "
-"GNOME и KDE. Все они размещены на `Flathub <https://flathub.org/>`_."
+"В настоящее время доступны три основные среды выполнения: Freedesktop, GNOME "
+"и KDE. Все они размещены на Flathub <https://flathub.org/>`_."
 
 #: ../../available-runtimes.rst:10
 msgid ""
-"What is mentioned here is just a high level look at the contents. To have"
-" up to date information simply install the runtime and open a shell "
-"inside of it (``flatpak run org.freedesktop.Sdk//21.08``) from there you "
-"can look around or use tools like ``pkg-config --list-all``. In the "
-"runtime shell you can also inspect ``/usr/manifest.json``, which lists "
-"the sources used to build it."
+"What is mentioned here is just a high level look at the contents. To have up "
+"to date information simply install the runtime and open a shell inside of it "
+"(``flatpak run org.freedesktop.Sdk//21.08``) from there you can look around "
+"or use tools like ``pkg-config --list-all``. In the runtime shell you can "
+"also inspect ``/usr/manifest.json``, which lists the sources used to build "
+"it."
 msgstr ""
-"Здесь упоминается лишь поверхностный взгляд на содержание. Чтобы"
-"иметь актуальную информацию, просто установите среду выполнения и откройте в ней оболочку "
-"(``flatpak run org.freedesktop.Sdk//21.08``) оттуда вы " 
-"можете осмотреться или использовать такие инструменты, как ``pkg-config --list-all``. В оболочке "
-"среды выполнения вы также можете проверить файл ``/usr/manifest.json``, в котором перечислены "
-"источники, использованные для его создания."
+"То, что здесь упоминается, — это лишь поверхностный взгляд на "
+"содержимое. Чтобы иметь актуальную информацию, просто установите среду "
+"выполнения и откройте внутри нее оболочку (``flatpak run org.freedesktop."
+"Sdk//21.08``), оттуда вы можете осмотреться или использовать такие "
+"инструменты, как ``pkg-config --list-all ``. В оболочке времени выполнения "
+"вы также можете проверить ``/usr/manifest.json``, в котором перечислены "
+"источники, использованные для его сборки."
 
 #: ../../available-runtimes.rst:17
 msgid "Freedesktop"
@@ -68,19 +70,19 @@ msgid ""
 "application and contains a set of essential libraries and services, "
 "including D-Bus, GLib, Gtk3, PulseAudio, X11 and Wayland."
 msgstr ""
-"Среда выполнения Freedesktop - это стандартная среда выполнения, которая "
-"может использоваться для любого приложения и содержит набор основных "
-"библиотек и служб, включая D-Bus, GLib, Gtk3, PulseAudio, X11 и Wayland."
+"Среда выполнения Freedesktop — это стандартная среда выполнения, которую "
+"можно использовать для любого приложения. Она содержит набор основных "
+"библиотек и сервисов, включая D-Bus, GLib, Gtk3, PulseAudio, X11 и Wayland."
 
 #: ../../available-runtimes.rst:23
 msgid ""
-"The Freedesktop runtime is maintained `here <https://gitlab.com"
-"/freedesktop-sdk/freedesktop-sdk/>`__ and has a website `here <https"
-"://freedesktop-sdk.io/>`__."
+"The Freedesktop runtime is maintained `here <https://gitlab.com/freedesktop-"
+"sdk/freedesktop-sdk/>`__ and has a website `here <https://freedesktop-sdk.io/"
+">`__."
 msgstr ""
-"Среда выполнения Freedesktop поддерживается` здесь: <https://gitlab.com"
-"/freedesktop-sdk/freedesktop-sdk/>`__ и имеет веб-сайт `здесь: <https"
-"://freedesktop-sdk.io/>`__."
+"Среда выполнения Freedesktop поддерживается `здесь <https://gitlab.com/"
+"freedesktop-sdk/freedesktop-sdk/>`__ и имеет веб-сайт `здесь <https://"
+"freedesktop-sdk.io/>`__."
 
 #: ../../available-runtimes.rst:27
 msgid "Available Freedesktop runtimes:"
@@ -112,7 +114,7 @@ msgstr "org.freedesktop.Platform.Locale"
 #: ../../available-runtimes.rst:33 ../../available-runtimes.rst:75
 #: ../../available-runtimes.rst:98
 msgid "Runtime translations (extension)"
-msgstr "Переносы среды выполнения (расширение)"
+msgstr "Переводы среды выполнения (расширение)"
 
 #: ../../available-runtimes.rst:34
 msgid "org.freedesktop.Platform.VAAPI.Intel{,.i386}"
@@ -131,7 +133,6 @@ msgid "All ffmpeg codecs (extension)"
 msgstr "Все кодеки ffmpeg (расширение)"
 
 #: ../../available-runtimes.rst:36
-#, fuzzy
 msgid "org.freedesktop.Platform.Compat.{architecture}"
 msgstr "org.freedesktop.Platform.Compat.{architecture}"
 
@@ -161,7 +162,7 @@ msgstr "org.freedesktop.Platform.GL{,32}.mesa-git"
 
 #: ../../available-runtimes.rst:39
 msgid "Mesa drivers, latest (extension)"
-msgstr "Последние версии драйверов Mesa (расширение)"
+msgstr "Драйверы Mesa, последние (расширение)"
 
 #: ../../available-runtimes.rst:40
 msgid "org.freedesktop.Sdk"
@@ -179,7 +180,7 @@ msgstr "org.freedesktop.Sdk.Debug"
 #: ../../available-runtimes.rst:41 ../../available-runtimes.rst:77
 #: ../../available-runtimes.rst:100
 msgid "SDK debug information (extension)"
-msgstr "Информация об отладке SDK (расширение)"
+msgstr "Отладочная информация SDK (расширение)"
 
 #: ../../available-runtimes.rst:42
 msgid "org.freedesktop.Sdk.Locale"
@@ -188,7 +189,7 @@ msgstr "org.freedesktop.Sdk.Locale"
 #: ../../available-runtimes.rst:42 ../../available-runtimes.rst:78
 #: ../../available-runtimes.rst:101
 msgid "SDK translations (extension)"
-msgstr "Переносы SDK (расширение)"
+msgstr "Переводы SDK (расширение)"
 
 #: ../../available-runtimes.rst:43
 msgid "org.freedesktop.Sdk.Docs"
@@ -218,8 +219,8 @@ msgid ""
 "platform, including:"
 msgstr ""
 "Среда выполнения GNOME подходит для любого приложения, использующего "
-"платформу GNOME. Она основана на среде выполнения Freedesktop и добавляет"
-" платформу GNOME, в том числе:"
+"платформу GNOME. Он основан на среде выполнения Freedesktop и добавляет "
+"платформу GNOME, в том числе:"
 
 #: ../../available-runtimes.rst:54
 msgid "Clutter"
@@ -231,7 +232,7 @@ msgstr "Gjs"
 
 #: ../../available-runtimes.rst:56
 msgid "GObject Introspection"
-msgstr "Cамоанализ GObject"
+msgstr "GObject Introspection"
 
 #: ../../available-runtimes.rst:57
 msgid "GStreamer"
@@ -267,11 +268,11 @@ msgstr "WebKitGTK"
 
 #: ../../available-runtimes.rst:66
 msgid ""
-"The GNOME runtime is maintained `here <https://gitlab.gnome.org/GNOME"
-"/gnome-build-meta>`__."
+"The GNOME runtime is maintained `here <https://gitlab.gnome.org/GNOME/gnome-"
+"build-meta>`__."
 msgstr ""
-"Среда выполнения GNOME поддерживается `здесь: <https://gitlab.gnome.org/GNOME"
-"/gnome-build-meta>`__."
+"Среда выполнения GNOME поддерживается здесь <https://gitlab.gnome.org/GNOME/"
+"gnome-build-meta>`__."
 
 #: ../../available-runtimes.rst:69
 msgid "Available GNOME runtimes:"
@@ -307,21 +308,21 @@ msgstr "KDE"
 
 #: ../../available-runtimes.rst:85
 msgid ""
-"The KDE runtime is also based on the Freedesktop runtime and adds Qt and "
-"KDE Frameworks. It is appropriate for any application that makes use of "
-"the KDE platform and most Qt-based applications."
+"The KDE runtime is also based on the Freedesktop runtime and adds Qt and KDE "
+"Frameworks. It is appropriate for any application that makes use of the KDE "
+"platform and most Qt-based applications."
 msgstr ""
 "Среда выполнения KDE также основана на среде выполнения Freedesktop и "
-"добавляет фреймворки Qt и KDE. Она подходит для любого приложения, "
-"использующего платформу KDE и большинство приложений на основе Qt. "
+"дополнена платформами Qt и KDE. Он подходит для любого приложения, "
+"использующего платформу KDE и большинство приложений на основе Qt."
 
 #: ../../available-runtimes.rst:89
 msgid ""
-"The KDE runtime is maintained `here <https://invent.kde.org/packaging"
-"/flatpak-kde-runtime>`__."
+"The KDE runtime is maintained `here <https://invent.kde.org/packaging/"
+"flatpak-kde-runtime>`__."
 msgstr ""
-"Среда выполнения KDE поддерживается` здесь: <https://invent.kde.org/packaging"
-"/flatpak-kde-runtime>`__."
+"Среда выполнения KDE поддерживается `здесь <https://invent.kde.org/packaging/"
+"flatpak-kde-runtime>`__."
 
 #: ../../available-runtimes.rst:92
 msgid "Available KDE runtimes:"
