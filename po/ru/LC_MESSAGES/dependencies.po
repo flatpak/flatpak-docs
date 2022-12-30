@@ -130,7 +130,7 @@ msgid ""
 "need to decide which dependencies to bundle. This can include:"
 msgstr ""
 "Когда дело доходит до создания приложения в первый раз, вам нужно будет "
-"решить, какие зависимости нужно связать. Это может включать: "
+"решить, какие зависимости нужно связать. Это может включать:"
 
 #: ../../dependencies.rst:53
 msgid "libraries that aren't in your chosen runtime"
