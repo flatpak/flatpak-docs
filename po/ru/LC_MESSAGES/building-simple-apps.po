@@ -91,7 +91,7 @@ msgid ""
 "SDK, the command would look like::"
 msgstr ""
 "Например, для создания приложения GNOME Dictionary с использованием GNOME "
-"3.22SDK команда будет выглядеть так:::"
+"3.22SDK команда будет выглядеть так::"
 
 #: ../../building-simple-apps.rst:25
 msgid ""
