@@ -1,7 +1,8 @@
-# Flatpak docs
-# Copyright (C) 2017, Flatpak Team
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
-# Markus Richter <semanticdesign@mailbox.org>, 2017.
+# Dmitry <dmitrydmitry761@gmail.com>, 2022.
 #
 msgid ""
 msgstr ""
@@ -10,7 +11,7 @@ msgstr ""
 "POT-Creation-Date: 2017-08-01 18:01+0200\n"
 "PO-Revision-Date: 2022-12-31 01:05+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
-"Language-Team: de_DE <>\n"
+"Language-Team: ru <>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
