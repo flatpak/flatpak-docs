@@ -1,0 +1,129 @@
+# Flatpak docs
+# Copyright (C) 2017, Flatpak Team
+# This file is distributed under the same license as the Flatpak package.
+# Markus Richter <semanticdesign@mailbox.org>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-01 18:01+0200\n"
+"PO-Revision-Date: 2022-12-31 02:22+0700\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Language-Team: de_DE <>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.0\n"
+
+#: ../../getting-setup.rst:2
+msgid "Getting Setup"
+msgstr "Получение настройки"
+
+#: ../../getting-setup.rst:4
+msgid ""
+"Getting setup to build Flatpaks is quick and easy. First, it is necessary to "
+"have the ``flatpak`` and ``flatpak-builder`` packages installed on your "
+"system. These are available for most distributions, and the Flatpak website "
+"provides `details on how to get them <http://flatpak.org/getting.html>`_."
+msgstr ""
+"Настройка для создания Flatpak выполняется быстро и легко. Во-первых, в "
+"вашей системе должны быть установлены пакеты ``flatpak`` и ``flatpak-"
+"builder``. Они доступны для большинства дистрибутивов, а на веб-сайте "
+"Flatpak содержится `подробная информация о том, как их получить <http://"
+"flatpak.org/getting.html>`_."
+
+#: ../../getting-setup.rst:6
+msgid ""
+"Once flatpak has been installed, it is necessary to pick a runtime and "
+"install it, along with the matching SDK."
+msgstr ""
+"После установки flatpak необходимо выбрать среду выполнения и установить ее "
+"вместе с соответствующим SDK."
+
+#: ../../getting-setup.rst:9
+msgid "Installing an SDK"
+msgstr "Установка SDK"
+
+#: ../../getting-setup.rst:11
+msgid ""
+"An SDK is a special type of runtime that is used to build applications. "
+"Typically, an SDK is paired with a runtime that will be used by the "
+"application at runtime. For example the GNOME 3.22 SDK is used to build "
+"applications that use the GNOME 3.22 runtime."
+msgstr ""
+"SDK — это особый тип среды выполнения, который используется для создания "
+"приложений. Как правило, SDK связан со средой выполнения, которая будет "
+"использоваться приложением во время выполнения. Например, GNOME 3.22 SDK "
+"используется для создания приложений, использующих среду выполнения GNOME "
+"3.22."
+
+#: ../../getting-setup.rst:13
+msgid ""
+"The Flatpak website provides a `list of the available runtimes <http://"
+"flatpak.org/runtimes.html>`_. Once you have decided which one to use, "
+"getting setup is just a matter of installing it and its SDK."
+msgstr ""
+"Веб-сайт Flatpak предоставляет `список доступных сред выполнения <http://"
+"flatpak.org/runtimes.html>`_. После того, как вы решили, какой из них "
+"использовать, установка — это просто установка среды выполнения и её SDK."
+
+#: ../../getting-setup.rst:15
+msgid ""
+"The examples in the rest of the Flatpak documentation use the GNOME 3.22 "
+"runtime and SDK. If you haven't installed these already, download the "
+"repository GPG key and then add the repository that contains the runtime and "
+"SDK::"
+msgstr ""
+"Примеры в остальной части документации Flatpak используют среду выполнения "
+"GNOME 3.22 и SDK. Если вы еще не установили их, загрузите GPG-ключ "
+"репозитория, а затем добавьте репозиторий, содержащий среду выполнения и "
+"SDK::"
+
+#: ../../getting-setup.rst:19
+msgid "You can now download and install the runtime and SDK::"
+msgstr "Теперь вы можете загрузить и установить среду выполнения и SDK::"
+
+#: ../../getting-setup.rst:23
+msgid "This same procedure can be used to install any other runtime and SDK."
+msgstr ""
+"Эту же процедуру можно использовать для установки любой другой среды "
+"выполнения и SDK."
+
+#: ../../getting-setup.rst:26
+msgid "Taking a look around"
+msgstr "Осматриваюсь вокруг"
+
+#: ../../getting-setup.rst:28
+msgid ""
+"If this is the first time you've used Flatpak, it is a good time to try "
+"installing an application and having a look 'under the hood'. To do this, "
+"you need to add a repository that contains applications. We can do this "
+"using the gnome-apps repository to install gedit::"
+msgstr ""
+"Если вы впервые используете Flatpak, самое время попробовать установить "
+"приложение и заглянуть «под капот». Для этого нужно добавить репозиторий, "
+"содержащий приложения. Мы можем сделать это, используя репозиторий gnome-"
+"apps для установки gedit::"
+
+#: ../../getting-setup.rst:33
+msgid ""
+"You can now use the following command to get a shell in the 'devel sandbox'::"
+msgstr ""
+"Теперь вы можете использовать следующую команду, чтобы получить оболочку в "
+"'devel sandbox'::"
+
+#: ../../getting-setup.rst:37
+msgid ""
+"This gives you an environment which has the application bundle mounted in ``/"
+"app``, and the SDK it was built against mounted in ``/usr``. You can explore "
+"these two directories to see what a typical flatpak looks like, as well as "
+"what is included in the SDK."
+msgstr ""
+"Это дает вам среду, в которой пакет приложения смонтирован в ``/app``, а "
+"SDK, для которого он был создан, смонтирован в ``/usr``. Вы можете изучить "
+"эти два каталога, чтобы увидеть, как выглядит типичный flatpak, а также что "
+"входит в SDK."
