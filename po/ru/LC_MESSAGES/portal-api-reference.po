@@ -1,8 +1,9 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
+# Copyright (C) 2021, Flatpak Team. Licensed under Creative Commons
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021.
+# Dmitry <dmitrydmitry761@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
