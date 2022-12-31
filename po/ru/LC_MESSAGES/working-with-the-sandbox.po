@@ -1,7 +1,8 @@
-# Flatpak docs
-# Copyright (C) 2017, Flatpak Team
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
-# Markus Richter <semanticdesign@mailbox.org>, 2017.
+# Dmitry <dmitrydmitry761@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
