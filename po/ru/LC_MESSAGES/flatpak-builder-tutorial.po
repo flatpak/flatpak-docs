@@ -3,22 +3,22 @@
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
 # Dmitry <dmitrydmitry761@gmail.com>, 2021.
-# Dmitry <dmitrydmitry761@gmail.com>, 2021. #zanata
+# Dmitry <dmitrydmitry761@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-04 20:32-0500\n"
-"PO-Revision-Date: 2021-07-24 00:40+0700\n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2023-01-01 22:41+0700\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
 "Language-Team: \n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.4\n"
-"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 "
+"&& (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../flatpak-builder-tutorial.rst:2
 msgid "Tutorial"
@@ -26,9 +26,9 @@ msgstr "Руководство"
 
 #: ../../flatpak-builder-tutorial.rst:4
 msgid ""
-"This tutorial provides a sample set of step that you can use to try "
-"``flatpak-builder`` yourself. In it, you will learn how to use ``flatpak-"
-"builder`` to build the GNOME Dictionary applicaiton."
+"This tutorial provides a sample set of step that you can use to try ``flatpak-"
+"builder`` yourself. In it, you will learn how to use ``flatpak-builder`` to build "
+"the GNOME Dictionary applicaiton."
 msgstr ""
 "В этом руководстве представлен примерный набор шагов, который вы можете "
 "использовать, чтобы самостоятельно попробовать ``flatpak-builder``. В нем вы "
@@ -42,12 +42,11 @@ msgstr "1. Создайте манифест"
 #: ../../flatpak-builder-tutorial.rst:9
 msgid ""
 "To create a manifest for the application, create a file called ``org.gnome."
-"Dictionary.json`` and paste the Dictionary manifest JSON from :doc:"
-"`manifests` into it."
+"Dictionary.json`` and paste the Dictionary manifest JSON from :doc:`manifests` "
+"into it."
 msgstr ""
 "Чтобы создать манифест для приложения, создайте файл с именем ``org.gnome."
-"Dictionary.json`` и вставьте в него манифест словаря JSON из :doc:"
-"`manifestests`."
+"Dictionary.json`` и вставьте в него манифест словаря JSON из :doc:`manifestests`."
 
 #: ../../flatpak-builder-tutorial.rst:12
 msgid "2. Run the build"
@@ -79,32 +78,31 @@ msgstr "Соберите и установите исходный код, исп
 
 #: ../../flatpak-builder-tutorial.rst:23
 msgid ""
-"Finish the build, by setting permissions (in this case giving access to X11 "
-"and the network)"
+"Finish the build, by setting permissions (in this case giving access to X11 and "
+"the network)"
 msgstr ""
-"Завершите сборку, установив разрешения (в данном случае предоставив доступ к "
-"X11 и сети)"
+"Завершите сборку, установив разрешения (в данном случае предоставив доступ к X11 "
+"и сети)"
 
 #: ../../flatpak-builder-tutorial.rst:24
 msgid ""
 "Create a new repository called repo (if it doesn't exist) and export the "
 "resulting build into it"
 msgstr ""
-"Создайте новый репозиторий с именем repo (если он не существует) и "
-"экспортируйте в него полученную сборку"
+"Создайте новый репозиторий с именем repo (если он не существует) и экспортируйте "
+"в него полученную сборку"
 
 #: ../../flatpak-builder-tutorial.rst:26
 msgid ""
 "``flatpak-builder`` will also do some other useful things, like creating a "
-"separately installable debug runtime (called ``org.gnome.Dictionary.Debug`` "
-"in this case) and a separately installable translation runtime (called ``org."
-"gnome.Dictionary.Locale``)."
+"separately installable debug runtime (called ``org.gnome.Dictionary.Debug`` in "
+"this case) and a separately installable translation runtime (called ``org.gnome."
+"Dictionary.Locale``)."
 msgstr ""
-"``flatpak-builder`` также выполняет некоторые другие полезные функции, "
-"например, создает отдельно устанавливаемую среду выполнения отладки (в "
-"данном случае называемую ``org.gnome.Dictionary.Debug``)  и отдельно "
-"устанавливаемую среду выполнения перевода (именуемую ``org.gnome.Dictionary."
-"Locale``)."
+"``flatpak-builder`` также выполняет некоторые другие полезные функции, такие как "
+"создание отдельно устанавливаемой среды выполнения отладки (называемой ``org."
+"gnome.Dictionary.Debug`` в данном случае) и отдельно устанавливаемой среды "
+"выполнения перевода (называемой ``org .gnome.Dictionary.Locale``)."
 
 #: ../../flatpak-builder-tutorial.rst:29
 msgid "3. Add the new repository"
@@ -112,8 +110,8 @@ msgstr "3. Добавьте новый репозиторий"
 
 #: ../../flatpak-builder-tutorial.rst:31
 msgid ""
-"To test the application that has been built, you need to add the new "
-"repository that has been created::"
+"To test the application that has been built, you need to add the new repository "
+"that has been created::"
 msgstr ""
 "Чтобы протестировать созданное приложение, вам необходимо добавить новый "
 "созданный репозиторий::"
@@ -124,21 +122,21 @@ msgstr "4. Установите приложение"
 
 #: ../../flatpak-builder-tutorial.rst:38
 msgid ""
-"The next step is to install the Dictionary application from the repository. "
-"To do this, run::"
+"The next step is to install the Dictionary application from the repository. To do "
+"this, run::"
 msgstr ""
-"Следующим шагом будет установка приложения Dictionary из репозитория. Для "
-"этого запустите::"
+"Следующим шагом будет установка приложения Dictionary из репозитория. Для этого "
+"запустите::"
 
 #: ../../flatpak-builder-tutorial.rst:42
 msgid ""
-"To check that the application has been successfully installed, you can "
-"compare the sha256 commit of the installed app with the commit ID that was "
-"printed by ``flatpak-builder``::"
+"To check that the application has been successfully installed, you can compare "
+"the sha256 commit of the installed app with the commit ID that was printed by "
+"``flatpak-builder``::"
 msgstr ""
 "Чтобы убедиться, что приложение было успешно установлено, вы можете сравнить "
-"фиксацию sha256 установленного приложения с идентификатором фиксации, "
-"который был создан с помощью ``flatpak-builder``::"
+"фиксацию sha256 установленного приложения с идентификатором фиксации, который был "
+"создан с помощью ``flatpak-builder``::"
 
 #: ../../flatpak-builder-tutorial.rst:48
 msgid "5. Run the application"
