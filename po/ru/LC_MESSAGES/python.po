@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021.
+# Dmitry <dmitrydmitry761@gmail.com>, 2021. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"PO-Revision-Date: 2023-01-04 21:49+0700\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n"
+"%100<12 || n%100>14) ? 1 : 2);\n"
+"Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0\n"
+
+#: ../../python.rst:2
+msgid "Python"
+msgstr "Python"
+
+#: ../../python.rst:4
+msgid ""
+"Python applications that use supported build systems like Meson, CMake, or Autotools can be "
+"built using the standard method. However, many Python applications use custom install "
+"scripts or are expected to be installed through Setuptools and ``pip``."
+msgstr ""
+"Приложения Python, использующие поддерживаемые системы сборки, такие как Meson, CMake или "
+"Autotools, могут быть созданы стандартным методом. Однако многие приложения Python "
+"используют настраиваемые сценарии установки или, как ожидается, будут установлены с помощью "
+"Setuptools и ``pip``."
+
+#: ../../python.rst:9
+msgid ""
+"For these cases, ``flatpak-builder`` provides the ``simple`` buildsystem. Rather than "
+"automating the build process, ``simple`` accepts a ``build-commands`` array of strings, "
+"which are executed in sequence."
+msgstr ""
+"Для этих случаев ``flatpak-builder`` предоставляет простую систему сборки. Вместо того, "
+"чтобы автоматизировать процесс сборки, ``simple`` принимает массив строк ``build-"
+"commands``, которые выполняются последовательно."
+
+#: ../../python.rst:13
+msgid ""
+"For example, the following YAML makes building the popular requests module rather "
+"straightforward:"
+msgstr "Например, следующий YAML упрощает сборку модуля популярных запросов:"
+
+#: ../../python.rst:27
+msgid ""
+"Here, ``build-commands`` is an array containing the commands required to build and install "
+"the module. As can be seen, in this case ``pip`` is run to do this. Here, the ``--prefix=/"
+"app`` option is important, because otherwise ``pip`` would try to install the module under "
+"``/usr/`` which, because ``/usr/`` is mounted read-only inside the sandbox, would fail."
+msgstr ""
+"Здесь ``build-commands`` - это массив, содержащий команды, необходимые для сборки и "
+"установки модуля. Как видно, в этом случае для этого запускается ``pip``. Здесь важен "
+"параметр ``--prefix=/app``, потому-что в противном случае ``pip`` попытается установить "
+"модуль в ``/usr/``, который смонтирован ``/usr/`` только для чтения внутри песочницы и "
+"запись в него окончится неудачно."
+
+#: ../../python.rst:33
+msgid ""
+"Note that ``--no-deps`` is only used for the purpose of the example - since the requests "
+"module has its own dependencies, the build would fail. If multiple dependencies are "
+"required, it is better to install them using the method in the next section, instead."
+msgstr ""
+"Обратите внимание, что параметр ``--no-deps`` используется только в целях примера - "
+"поскольку модуль запросов имеет свои собственные зависимости, сборка завершится ошибкой. "
+"Если требуется несколько зависимостей, лучше установить их, используя метод, описанный в "
+"следующем разделе."
+
+#: ../../python.rst:39
+msgid "Building multiple python dependencies"
+msgstr "Создание нескольких зависимостей Python"
+
+#: ../../python.rst:41
+msgid ""
+"Even though the example above installs, it won't actually work. This is because the "
+"requests module has a number of dependencies that haven't been installed:"
+msgstr ""
+"Несмотря на то, что приведенный выше пример устанавливается, на самом деле он не работает. "
+"Это связано с тем, что у модуля запросов есть ряд зависимостей, которые не были установлены:"
+
+#: ../../python.rst:44
+msgid "certifi"
+msgstr "certifi"
+
+#: ../../python.rst:45
+msgid "chardet"
+msgstr "chardet"
+
+#: ../../python.rst:46
+msgid "idna"
+msgstr "idna"
+
+#: ../../python.rst:47
+msgid "urllib3"
+msgstr "urllib3"
+
+#: ../../python.rst:49
+msgid ""
+"Four dependencies aren't very many, and could be installed using the ``simple`` method "
+"described above. However, anything more complex than this would quickly become tedious."
+msgstr ""
+"Четырех зависимостей не так много, и их можно установить с помощью ``простого`` метода, "
+"описанного выше. Однако что-то более сложное, чем это, быстро станет утомительным."
+
+#: ../../python.rst:53
+msgid ""
+"For these cases, `flatpak-pip-generator <https://github.com/flatpak/flatpak-builder-tools/"
+"tree/master/pip>`_ can be used to generate the necessary manifest JSON. This is a Python "
+"script that takes a package name and uses ``pip`` to identify its dependencies, along with "
+"their tarball URLs and hashes."
+msgstr ""
+"В этих случаях можно использовать `flatpak-pip-generator <https://github.com/flatpak/"
+"flatpak-builder-tools/tree/master/pip>`_ для генерации необходимого манифеста JSON. Это "
+"скрипт Python, который принимает имя пакета и использует pip для определения его "
+"зависимостей, а также их URL-адресов и хэшей архивов."
+
+#: ../../python.rst:59
+msgid "Using ``flatpak-pip-generator`` is as simple as running::"
+msgstr "Использовать ``flatpak-pip-generator`` так же просто, как запустить::"
+
+#: ../../python.rst:63
+msgid ""
+"Or if you have a ``requirements.txt`` file you can generate modules for every listed "
+"package::"
+msgstr ""
+"Или если у вас есть файл ``requirements.txt`` , которым вы можете генерировать модули для "
+"каждого перечисленного пакета::"
+
+#: ../../python.rst:68
+msgid ""
+"This will output a file called ``python3-requests.json``, containing the necessary manifest "
+"JSON, which can then be included in your application's manifest file. Even if your manifest "
+"uses YAML, you can still include JSON like this::"
+msgstr ""
+"В результате будет выведен файл с именем ``python3-requests.json``, содержащий необходимый "
+"манифест JSON, который затем можно будет включить в файл манифеста вашего приложения. Даже "
+"если ваш манифест использует YAML, вы все равно можете включить JSON следующим образом::"
