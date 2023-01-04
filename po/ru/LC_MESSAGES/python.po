@@ -3,7 +3,7 @@
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
 # Dmitry <dmitrydmitry761@gmail.com>, 2021.
-# Dmitry <dmitrydmitry761@gmail.com>, 2021. #zanata
+# Dmitry <dmitrydmitry761@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
