@@ -48,7 +48,7 @@ msgstr ""
 "установке на flatpak.org <http://flatpak.org/setup/>`_. Вам также необходимо "
 "установить ``flatpak-builder``, который обычно доступен в том же "
 "репозитории, что и пакет ``flatpak`` (например, используйте ``apt`` или "
-"``dnf``). Вы также можете установить его как плоский пакет с помощью "
+"``dnf``). Вы также можете установить его как flatpak с помощью "
 "``flatpak install flathub org.flatpak.Builder``."
 
 #: ../../first-build.rst:15
