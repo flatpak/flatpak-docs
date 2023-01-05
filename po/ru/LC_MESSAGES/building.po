@@ -3,12 +3,12 @@
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
 # Dmitry <dmitrydmitry761@gmail.com>, 2021.
-# Dmitry <dmitrydmitry761@gmail.com>, 2021. #zanata
+# Dmitry <dmitrydmitry761@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"POT-Creation-Date: 2021-09-14 17:03-0500\n"
 "PO-Revision-Date: 2023-01-05 20:49+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
 "Language-Team: \n"
