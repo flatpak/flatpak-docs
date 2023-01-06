@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak\n"
+"Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
+"POT-Creation-Date: 2022-10-31 16:09-0300\n"
+"PO-Revision-Date: 2023-01-06 23:01+0700\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0\n"
+
+#: ../../freedesktop-quick-reference.rst:2
+msgid "Freedesktop quick reference"
+msgstr "Краткий справочник Freedesktop"
+
+#: ../../freedesktop-quick-reference.rst:4
+msgid ""
+"In order to ensure interoperability, flatpak adheres strictly to a number of "
+"freedesktop standards and practices. This page describes the basic "
+"conventions that should be followed when building a flatpak app."
+msgstr ""
+"Чтобы обеспечить совместимость, Flatpak строго придерживается ряда "
+"стандартов и практик freedesktop. На этой странице описаны основные "
+"соглашения, которых следует придерживаться при создании плоского приложения."
+
+#: ../../freedesktop-quick-reference.rst:9
+msgid "Icons"
+msgstr "Иконки"
+
+#: ../../freedesktop-quick-reference.rst:11
+msgid ""
+"Application icons can be in either png or svg format, must use the "
+"application's appid as a prefix and be placed in ``/app/share/icons/hicolor/"
+"$size/apps/``"
+msgstr ""
+"Значки приложений могут быть в формате png или svg, должны использовать "
+"appid в качестве префикса и располагаться в ``/app/share/icons/hicolor/$size/"
+"apps/``"
+
+#: ../../freedesktop-quick-reference.rst:15
+#: ../../freedesktop-quick-reference.rst:47
+#: ../../freedesktop-quick-reference.rst:109
+msgid "Example:"
+msgstr "Пример:"
+
+#: ../../freedesktop-quick-reference.rst:21
+msgid ""
+"If interested, you can read the full spec `here <https://specifications."
+"freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html>`__"
+msgstr ""
+"Если интересно, вы можете прочитать полную спецификацию здесь <https://"
+"specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-latest."
+"html>`__"
+
+#: ../../freedesktop-quick-reference.rst:26
+msgid "Desktop files"
+msgstr "Файлы рабочего стола"
+
+#: ../../freedesktop-quick-reference.rst:28
+msgid ""
+"Desktop files are used by desktop environments in order to identify and "
+"display available applications to the user, they contain information about "
+"how to launch the application, its icon and categories among others."
+msgstr ""
+"Файлы рабочего стола используются средами рабочего стола для идентификации и "
+"отображения доступных приложений пользователю, они содержат информацию о "
+"том, как запустить приложение, его значок и категории среди прочего."
+
+#: ../../freedesktop-quick-reference.rst:33
+msgid ""
+"A minimal desktop file needs at least the application's *Name*, *Exec* "
+"command, *Type* and *Icon*:"
+msgstr ""
+"Минимальный файл рабочего стола требует как минимум  *Name*, *Exec* команды "
+"приложения, *Type* and *Icon*:"
+
+#: ../../freedesktop-quick-reference.rst:44
+msgid ""
+"Your desktop file should be prefixed with your application's appid and "
+"placed in ``/app/share/applications/`` within your app."
+msgstr ""
+"Ваш файл на рабочем столе должен иметь префикс appid вашего приложения и "
+"быть помещенным в ``/app/share/applications/`` внутри вашего приложения."
+
+#: ../../freedesktop-quick-reference.rst:53
+msgid ""
+"It's recommended to use ``desktop-file-validate`` to check your file for "
+"errors before including it."
+msgstr ""
+"Рекомендуется использовать ``desktop-file-validate`` для проверки вашего "
+"файла на наличие ошибок перед его включением."
+
+#: ../../freedesktop-quick-reference.rst:56
+msgid ""
+"A special note about the ``Exec`` line: When installing an app, Flatpak will "
+"automatically rewrite the included ``.desktop`` file so that the app will be "
+"started through Flatpak. The rewritten desktop file is then exported to a "
+"path such as ``exports/share/applications/org.gnome.Dictionary.desktop`` "
+"under your Flatpak installation directory (usually ``/var/lib/flatpak/`` or "
+"``~/.local/share/flatpak/``). In the case of ``org.gnome.Dictionary."
+"desktop``, the rewritten ``Exec`` line looks like this::"
+msgstr ""
+"Особое примечание о строке «Exec»: при установке приложения Flatpak "
+"автоматически перезаписывает прилагаемый файл ``.desktop``, чтобы приложение "
+"запускалось через Flatpak. Затем переписанный файл рабочего стола "
+"экспортируется по пути, например, ``exports/share/applications/org.gnome."
+"Dictionary.desktop`` в каталоге установки Flatpak (обычно ``/var/lib/flatpak/"
+"`` или `` ~/.local/share/flatpak/``). В случае с org.gnome.Dictionary."
+"desktop переписанная строка Exec выглядит так::"
+
+#: ../../freedesktop-quick-reference.rst:66
+msgid ""
+"The command from the original desktop file will be part of the ``--command`` "
+"argument to Flatpak and arguments will be passed through. This means that in "
+"most cases, it should match the value of the ``command:`` line in your app's "
+"manifest."
+msgstr ""
+"Команда из исходного десктопного файла будет частью аргумента ``--command`` "
+"для Flatpak, и аргументы будут переданы. Это означает, что в большинстве "
+"случаев оно должно совпадать со значением строки ``command:`` в манифесте "
+"вашего приложения."
+
+#: ../../freedesktop-quick-reference.rst:71
+msgid ""
+"If you want the ``--command`` argument to be omitted from the ``flatpak "
+"run`` command in the generated desktop file, you can leave the ``Exec`` "
+"value in the source desktop file empty::"
+msgstr ""
+"Если вы хотите, чтобы аргумент ``--command`` не использовался в команде "
+"``flatpak run`` в сгенерированном файле рабочего стола, вы можете оставить "
+"значение ``Exec`` в исходном десктопном файле пустым::"
+
+#: ../../freedesktop-quick-reference.rst:81
+msgid "This way, the generated ``Exec`` line looks like this::"
+msgstr "Таким образом, сгенерированная строка ``Exec`` выглядит так::"
+
+#: ../../freedesktop-quick-reference.rst:85
+msgid ""
+"With Flatpak ≤ 1.12.7, a warning may be shown when exporting a build with an "
+"empty Exec= line to a repository::"
+msgstr ""
+"С версии Flatpak ≤ 1.12.7 может появиться предупреждение при экспорте сборки "
+"с пустой строкой Exec= в репозиторий::"
+
+#: ../../freedesktop-quick-reference.rst:89
+msgid "This warning can be ignored."
+msgstr "Это предупреждение можно игнорировать."
+
+#: ../../freedesktop-quick-reference.rst:91
+msgid ""
+"You can find more general information about desktop files `here <https://"
+"wiki.archlinux.org/title/desktop_entries>`__. If interested, you can read "
+"also the full spec `here <https://specifications.freedesktop.org/desktop-"
+"entry-spec/latest/>`__."
+msgstr ""
+"Вы можете найти более общую информацию о файлах рабочего стола `здесь "
+"<https://wiki.archlinux.org/title/desktop_entries>`__. Если интересно, вы "
+"также можете прочитать полную спецификацию здесь <https://specifications."
+"freedesktop.org/desktop-entry-spec/latest/>`__."
+
+#: ../../freedesktop-quick-reference.rst:97
+msgid "Appdata files"
+msgstr "Файлы Appdata"
+
+#: ../../freedesktop-quick-reference.rst:99
+msgid ""
+"Appdata files are used by application stores (e.g. KDE Discover, GNOME "
+"Software) in order to display metadata about your application, such as a "
+"description, screenshots, changelogs when updates are available, and other "
+"miscellaneous things."
+msgstr ""
+"Файлы Appdata используются магазинами приложений (например, KDE Discover, "
+"GNOME Software) для отображения метаданных о вашем приложении, таких как "
+"описание, снимки экрана, журналы изменений, когда доступны обновления, и "
+"другие разные вещи."
+
+#: ../../freedesktop-quick-reference.rst:104
+msgid ""
+"Your Appdata file should be prefixed with your application's appid and "
+"placed in ``/app/share/metainfo/``. You should also use ``appstream-util "
+"validate-relax`` to check your file for errors before including it."
+msgstr ""
+"Ваш файл Appdata должен иметь префикс appid вашего приложения и быть "
+"помещенным в ``/app/share/metainfo/``. Вы также должны использовать "
+"``appstream-util validate-relax`` для проверки файла на наличие ошибок, "
+"прежде чем включать его."
+
+#: ../../freedesktop-quick-reference.rst:115
+msgid ""
+"If interested, you can read the full spec `here <https://www.freedesktop.org/"
+"software/appstream/docs/>`__."
+msgstr ""
+"Если интересно, вы можете прочитать полную спецификацию здесь <https://www."
+"freedesktop.org/software/appstream/docs/>`__."
