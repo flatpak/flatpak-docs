@@ -119,6 +119,6 @@ msgstr ""
 "Обратите внимание, что в настоящее время порталы не могут предоставлять "
 "доступ к каталогам в файловой системе хоста"
 
-#: ../../portals-qt.rst:29
+#: ../../portals-qt.rst:30
 msgid "Use ``KNotification::notify()`` to show notification"
 msgstr "Используйте ``KNotification::notify()``, чтобы показать уведомление"
