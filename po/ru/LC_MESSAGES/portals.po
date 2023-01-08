@@ -69,14 +69,12 @@ msgstr ""
 
 #: ../../portals-gtk.rst:16
 msgid "Use ``gtk_application_inhibit()`` if you want to inhibit idle or logout"
-msgstr ""
-"Используйте ``gtk_application_inhibit()`` если вы хотите запретить "
+msgstr "Используйте ``gtk_application_inhibit()`` если вы хотите запретить "
 "простаивать или для выхода"
 
 #: ../../portals-gtk.rst:17
 msgid "Use ``g_application_send_notification()`` to show notifications"
-msgstr ""
-"Используйте ``g_application_send_notification()`` для отображения уведомлений"
+msgstr "Используйте ``g_application_send_notification()`` для отображения уведомлений"
 
 #: ../../portals-gtk.rst:18
 msgid ""
@@ -101,7 +99,7 @@ msgstr ""
 "несколько советов о том, что следует делать приложениям Qt или KDE, чтобы "
 "извлечь из этого пользу."
 
-#: ../../portals-qt.rst:24
+#: ../../portals-qt.rst:25
 msgid ""
 "Use ``QDesktopServices::openUrl(const QUrl &url)`` or ``KIO::OpenUrlJob`` to "
 "open URIs or send an email when using ``mailto`` URL"
@@ -110,7 +108,7 @@ msgstr ""
 "OpenUrlJob``, чтобы открыть URI или отправить электронное письмо при "
 "использовании URL-адреса ``mailto``"
 
-#: ../../portals-qt.rst:26
+#: ../../portals-qt.rst:27
 msgid ""
 "Use ``QFileDialog`` class to open files and, as of Qt ``5.18.90``, "
 "directories. Avoid using ``QFileDialog::DontUseNativeDialog``. Note that "
@@ -121,6 +119,6 @@ msgstr ""
 "Обратите внимание, что в настоящее время порталы не могут предоставлять "
 "доступ к каталогам в файловой системе хоста"
 
-#: ../../portals-qt.rst:28
+#: ../../portals-qt.rst:29
 msgid "Use ``KNotification::notify()`` to show notification"
 msgstr "Используйте ``KNotification::notify()``, чтобы показать уведомление"
