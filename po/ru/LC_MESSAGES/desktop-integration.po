@@ -3,13 +3,13 @@
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
 # Dmitry <dmitrydmitry761@gmail.com>, 2021.
-# Dmitry <dmitrydmitry761@gmail.com>, 2022.
+# Dmitry <dmitrydmitry761@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
-"PO-Revision-Date: 2022-12-31 00:22+0700\n"
+"Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
+"POT-Creation-Date: 2022-09-29 11:37-0300\n"
+"PO-Revision-Date: 2023-01-06 21:13+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -199,15 +199,15 @@ msgstr "Системный поиск"
 msgid ""
 "GNOME-based distributions, like CentOS, Fedora, Red Hat Enterprise Linux and "
 "Ubuntu, provide the option to integrate with system search, by providing a "
-"`search provider <https://developer.gnome.org/SearchProvider/>`_. This "
+"`search provider <https://developer-old.gnome.org/SearchProvider/>`_. This "
 "allows application-provided search results to appear in the Activities "
 "Overview."
 msgstr ""
 "Дистрибутивы на основе GNOME, такие как CentOS, Fedora, Red Hat Enterprise "
 "Linux и Ubuntu, предоставляют возможность интеграции с системным поиском, "
-"предоставляя `поставщика поиска <https://developer.gnome.org/SearchProvider/"
-">`_. Это позволяет отображать результаты поиска, предоставляемые "
-"приложением, в обзоре действий."
+"предоставляя `поискового провайдера <https://developer-old.gnome.org/"
+"SearchProvider/>`_ . Это позволяет отображать результаты поиска, "
+"предоставленные приложением, в обзоре операций."
 
 #: ../../desktop-integration.rst:87
 msgid "Window controls"
@@ -241,17 +241,24 @@ msgstr ""
 
 #: ../../desktop-integration.rst:99
 msgid ""
-"Applications can rely on system-provided titlebars on Linux, if they don't "
-"want to draw their own window controls."
+"On X11 applications can rely on system-provided titlebars if they don't want "
+"to draw their own window controls. For a consistent Wayland experience "
+"applications must always provide their own. Typically toolkits handle this "
+"but raw wayland clients can use `libdecor <https://gitlab.gnome.org/jadahl/"
+"libdecor>`_ for a general solution."
 msgstr ""
-"Приложения могут полагаться на предоставляемые системой заголовки в Linux, "
-"если они отказываются рисовать свои собственные элементы управления окнами."
+"В X11 приложения могут полагаться на предоставленные системой панели "
+"заголовков, если они не хотят рисовать свои собственные элементы управления "
+"окнами. Для согласованного использования Wayland приложения всегда должны "
+"предоставлять свои собственные. Обычно с этим справляются наборы "
+"инструментов, но необработанные клиенты wayland могут использовать `libdecor "
+"<https://gitlab.gnome.org/jadahl/libdecor>`_ для общего решения."
 
-#: ../../desktop-integration.rst:103
+#: ../../desktop-integration.rst:106
 msgid "Window decorations"
 msgstr "Оконные украшения"
 
-#: ../../desktop-integration.rst:105
+#: ../../desktop-integration.rst:108
 msgid ""
 "If your application uses a dark visual style as well as system-provided "
 "window decorations, the ``GTK_THEME_VARIANT=dark`` X11 window property "
@@ -263,24 +270,27 @@ msgstr ""
 "X11 ``GTK_THEME_VARIANT=dark``, чтобы гарантировать, что оформление окна "
 "соответствует остальной части окна приложения. Это можно сделать, запустив::"
 
-#: ../../desktop-integration.rst:113
+#: ../../desktop-integration.rst:116
 msgid "Global menus"
 msgstr "Глобальные меню"
 
-#: ../../desktop-integration.rst:115
+#: ../../desktop-integration.rst:118
 msgid ""
-"If your application uses the built in ``GtkApplication:menu-bar`` or the Qt "
-"5 equivalent they will work as expected from within a sandboxed application."
+"If your application uses `Gtk.Application:menubar <https://docs.gtk.org/gtk4/"
+"class.Application.html#properties>`_ or `QMenuBar <https://doc.qt.io/qt-6/"
+"qmenubar.html>`_ it will work as expected from within a sandboxed "
+"application."
 msgstr ""
-"Если ваше приложение использует встроенный «GtkApplication: menu-bar» или "
-"его эквивалент в Qt 5, они будут работать должным образом из изолированного "
-"приложения."
+"Если ваше приложение использует `Gtk.Application:menubar <https://docs.gtk."
+"org/gtk4/class.Application.html#properties>`_ или `QMenuBar <https://doc.qt."
+"io/qt-6 /qmenubar.html>`_ он будет работать должным образом из "
+"изолированного приложения."
 
-#: ../../desktop-integration.rst:119
+#: ../../desktop-integration.rst:122
 msgid "Theming"
 msgstr "Тематика"
 
-#: ../../desktop-integration.rst:121
+#: ../../desktop-integration.rst:124
 msgid ""
 "Flatpak applications cannot directly use the system theme. This happens "
 "because flatpaks do not have the ability to use data files or libraries in "
@@ -303,7 +313,7 @@ msgstr ""
 "является Gtk, и для среды выполнения KDE, когда точкой расширения является "
 "Qt."
 
-#: ../../desktop-integration.rst:123
+#: ../../desktop-integration.rst:126
 msgid ""
 "The theming system requires Flatpak 0.8.4+ and applications using up to date "
 "``org.gnome.Platform`` 3.24+, or ``org.freedesktop.Platform`` 1.6+, or ``org."
@@ -313,15 +323,15 @@ msgstr ""
 "версию org.gnome.Platform 3.24+, org.freedesktop.Platform 1.6+ или org.kde."
 "Platform. 5.9+."
 
-#: ../../desktop-integration.rst:126
+#: ../../desktop-integration.rst:129
 msgid "Installing themes"
 msgstr "Установка тем"
 
-#: ../../desktop-integration.rst:129
+#: ../../desktop-integration.rst:132
 msgid "Instructions for Gtk"
 msgstr "Инструкции для Gtk"
 
-#: ../../desktop-integration.rst:131
+#: ../../desktop-integration.rst:134
 msgid ""
 "The current Gtk themes are packaged in the `flathub <https://flathub.org/>`_ "
 "repository which you can add (if it's not already added) by running::"
@@ -329,7 +339,7 @@ msgstr ""
 "Текущие темы Gtk упакованы в репозиторий `flathub <https://flathub.org/>`_ "
 "который вы можете добавить (если он еще не добавлен), запустив::"
 
-#: ../../desktop-integration.rst:135
+#: ../../desktop-integration.rst:138
 msgid ""
 "To see a list of currently packaged themes you can use the command ``flatpak "
 "search gtk3theme`` (available since Flatpak version 0.10.1). In case you use "
@@ -347,7 +357,7 @@ msgstr ""
 "идентификатор приложения, удаленное устройство, с которого поступает тема, и "
 "описание темы, а вторая выводит только полное имя пакета темы flatpak."
 
-#: ../../desktop-integration.rst:137
+#: ../../desktop-integration.rst:140
 msgid ""
 "You can install themes with the command ``flatpak install flathub org.gtk."
 "Gtk3theme.Foo``, replacing ``Foo`` with the name of the desired theme."
@@ -355,11 +365,11 @@ msgstr ""
 "Вы можете установить темы с помощью команды ``flatpak install flathub org."
 "gtk.Gtk3theme.Foo``, заменив `Foo` на имя желаемой темы."
 
-#: ../../desktop-integration.rst:140
+#: ../../desktop-integration.rst:143
 msgid "Instructions for Qt"
 msgstr "Инструкции для Qt"
 
-#: ../../desktop-integration.rst:142
+#: ../../desktop-integration.rst:145
 msgid ""
 "For the Qt theming to work, the flatpak packages kstyle and platformtheme "
 "must be installed. These are packed in the kdeapps repository which you can "
@@ -369,16 +379,16 @@ msgstr ""
 "platformtheme. Они упакованы в репозиторий kdeapps, который вы можете "
 "добавить, запустив::"
 
-#: ../../desktop-integration.rst:146
+#: ../../desktop-integration.rst:149
 msgid ""
 "Afterwards the two packages can be installed with the following commands::"
 msgstr "После этого два пакета можно установить с помощью следующих команд::"
 
-#: ../../desktop-integration.rst:152
+#: ../../desktop-integration.rst:155
 msgid "Applying themes"
 msgstr "Применение тем"
 
-#: ../../desktop-integration.rst:154
+#: ../../desktop-integration.rst:157
 msgid ""
 "There is no ideal way to specify the theme Flatpak applications use. The "
 "applications will try to match the system theme currently being used, if it "
@@ -393,7 +403,7 @@ msgstr ""
 "или тему Qt по умолчанию (если они используют Qt), если соответствующая тема "
 "не обнаружена."
 
-#: ../../desktop-integration.rst:156
+#: ../../desktop-integration.rst:159
 msgid ""
 "As of Flatpak 0.10.1, the Flatpak system can detect whether the system "
 "themes available correspond to any Flatpak themes available in the "
@@ -415,7 +425,7 @@ msgstr ""
 "соответствующих системных тем в настоящее время не используются, приложения "
 "вернутся к Adwaita или теме Qt по умолчанию."
 
-#: ../../desktop-integration.rst:158
+#: ../../desktop-integration.rst:161
 msgid ""
 "On X11, Gtk3 picks up the themes via XSettings. Specifically, the GNOME "
 "XSettings daemon ``gsd-xsettings`` reads the DConf values and converts them "
@@ -435,11 +445,11 @@ msgstr ""
 "dconf в ``/org/gnome/desktop/interface/``. Чтобы опция DConf работала в "
 "Wayland, приложение также должно быть настроено для доступа к DConf."
 
-#: ../../desktop-integration.rst:161
+#: ../../desktop-integration.rst:164
 msgid "Other notes on theming"
 msgstr "Другие примечания по тематике"
 
-#: ../../desktop-integration.rst:163
+#: ../../desktop-integration.rst:166
 msgid ""
 "In regards to icon themes, since Flatpak 0.8.8 the host icons are exposed to "
 "the guest, so that there is usually no need for the presence of Flatpak icon "
@@ -448,7 +458,7 @@ msgstr ""
 "Что касается тем значков, начиная с Flatpak 0.8.8 значки хоста отображаются "
 "для гостя, поэтому обычно нет необходимости в наличии тем значков Flatpak."
 
-#: ../../desktop-integration.rst:165
+#: ../../desktop-integration.rst:168
 msgid ""
 "If you use the *Global Dark Theme* option (removed in GNOME-Tweaks 3.28)  in "
 "``gnome-tweak-tool`` it will not work as that simply writes to ``settings."
@@ -460,17 +470,43 @@ msgstr ""
 "в ``settings.ini``, который недоступен в песочница. Вместо этого используйте "
 "темные версии тем, если они существуют."
 
+#, fuzzy
+#~| msgid ""
+#~| "Toolkits like GTK and Qt provide transparent support for portals. If you "
+#~| "are not using one of these toolkits, it is possible to access the "
+#~| "portals API directly. See the `portals API documentation <https://"
+#~| "flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for more "
+#~| "information."
 #~ msgid ""
-#~ "Toolkits like GTK and Qt provide transparent support for portals. If you "
-#~ "are not using one of these toolkits, it is possible to access the portals "
-#~ "API directly. See the `portals API documentation <https://flatpak.github."
-#~ "io/xdg-desktop-portal/portal-docs.html>`_ for more information."
+#~ "Toolkits like GTK and Qt provide transparent support for portals. See :"
+#~ "doc:`portals-gtk` or :doc:`portals-qt` for detailed information about GTK "
+#~ "and portals. If you are not using one of these toolkits, it is possible "
+#~ "to access the portals API directly. See the `portals API documentation "
+#~ "<https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for "
+#~ "more information."
 #~ msgstr ""
 #~ "Такие инструменты, как GTK и Qt, обеспечивают прозрачную поддержку "
 #~ "порталов. Если вы не используете один из этих наборов инструментов, можно "
 #~ "получить прямой доступ к API порталов. Дополнительную информацию см. В "
 #~ "документации API порталов <https://flatpak.github.io/xdg-desktop-portal/"
 #~ "portal-docs.html>`_ for more information."
+
+#~ msgid ""
+#~ "Applications can rely on system-provided titlebars on Linux, if they "
+#~ "don't want to draw their own window controls."
+#~ msgstr ""
+#~ "Приложения могут полагаться на предоставляемые системой заголовки в "
+#~ "Linux, если они отказываются рисовать свои собственные элементы "
+#~ "управления окнами."
+
+#~ msgid ""
+#~ "If your application uses the built in ``GtkApplication:menu-bar`` or the "
+#~ "Qt 5 equivalent they will work as expected from within a sandboxed "
+#~ "application."
+#~ msgstr ""
+#~ "Если ваше приложение использует встроенный «GtkApplication: menu-bar» или "
+#~ "его эквивалент в Qt 5, они будут работать должным образом из "
+#~ "изолированного приложения."
 
 #~ msgid ""
 #~ "A number of toolkits and frameworks provide transparent support for Linux "

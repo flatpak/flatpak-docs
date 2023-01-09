@@ -7,9 +7,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
-"PO-Revision-Date: 2023-01-01 23:08+0700\n"
+"Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
+"POT-Creation-Date: 2022-10-31 16:09-0300\n"
+"PO-Revision-Date: 2023-01-06 04:05+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -361,8 +361,8 @@ msgstr ""
 "`cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_"
 
 #: ../../manifests.rst:177
-msgid "`meson <http://mesonbuild.com/>`_"
-msgstr "`meson <http://mesonbuild.com/>`_"
+msgid "`meson <https://mesonbuild.com/>`_"
+msgstr "`meson <https://mesonbuild.com/>`_"
 
 #: ../../manifests.rst:178
 msgid "`qmake <https://doc.qt.io/qt-5/qmake-overview.html>`_"
@@ -370,7 +370,7 @@ msgstr "`qmake <https://doc.qt.io/qt-5/qmake-overview.html>`_"
 
 #: ../../manifests.rst:179
 msgid "the \"`Build API <https://github.com/cgwalters/build-api/>`_\""
-msgstr "\"`Build API <https://github.com/cgwalters/build-api/>`_\""
+msgstr "the \"`Build API <https://github.com/cgwalters/build-api/>`_\""
 
 #: ../../manifests.rst:181
 msgid ""
@@ -381,10 +381,59 @@ msgstr ""
 "команд."
 
 #: ../../manifests.rst:185
+msgid "Shared Modules"
+msgstr "Общие модули"
+
+#: ../../manifests.rst:187
+msgid ""
+"`Shared Modules (or shared-modules) <https://github.com/flathub/shared-"
+"modules>`_ is a repository containing various manifests to build common "
+"libraries. It is intended to be used as a git submodule."
+msgstr ""
+"`Общие модули (или общие модули) <https://github.com/flathub/shared-"
+"modules>`_ — это репозиторий, содержащий различные манифесты для создания "
+"общих библиотек. Он предназначен для использования в качестве подмодуля git."
+
+#: ../../manifests.rst:189
+msgid "To add it to your repository, run this command:"
+msgstr "Чтобы добавить его в свой репозиторий, выполните следующую команду:"
+
+#: ../../manifests.rst:195
+msgid ""
+"Then, add whichever module you want. In this example, we will use `gtk2`:"
+msgstr ""
+"Затем добавьте любой модуль, который вы хотите. В этом примере мы будем "
+"использовать `gtk2`:"
+
+#: ../../manifests.rst:202
+msgid "To update the submodule, run this command:"
+msgstr "Чтобы обновить подмодуль, выполните эту команду:"
+
+#: ../../manifests.rst:208
+msgid "To remove the submodule, run these commands:"
+msgstr "Чтобы удалить подмодуль, выполните следующие команды:"
+
+#: ../../manifests.rst:218
+msgid "Flatpak Builder Tools"
+msgstr "Инструменты для создания Flatpak"
+
+#: ../../manifests.rst:220
+msgid ""
+"`Flatpak Builder Tools (or flatpak-builder-tools) <https://github.com/"
+"flatpak/flatpak-builder-tools>`_ is a collection of scripts to aid using "
+"`flatpak-builder`. In this repository, each directory contains instructions "
+"to generate a manifest for the respective platform."
+msgstr ""
+"Flatpak Builder Tools (или flatpak-builder-tools) <https://github.com/"
+"flatpak/flatpak-builder-tools> — это набор скриптов, помогающих использовать "
+"flatpak-builder. В этом репозитории каждый каталог содержит инструкции по "
+"созданию манифеста для соответствующей платформы."
+
+#: ../../manifests.rst:223
 msgid "Example manifests"
 msgstr "Примеры манифестов"
 
-#: ../../manifests.rst:187
+#: ../../manifests.rst:225
 msgid ""
 "A `complete manifest for GNOME Dictionary built from Git <https://github.com/"
 "flathub/org.gnome.Dictionary/blob/master/org.gnome.Dictionary.yml>`_. It is "
@@ -395,6 +444,17 @@ msgstr ""
 "com/flathub/org.gnome.Dictionary/blob/master/org.gnome.Dictionary.yml>`_. "
 "Также можно просматривать все манифесты, размещенные на Flathub <https://"
 "github.com/flathub>`_."
+
+#~ msgid ""
+#~ "A `complete manifest for GNOME Dictionary built from Git <https://github."
+#~ "com/flathub/org.gnome.Dictionary/blob/master/org.gnome.Dictionary."
+#~ "json>`_. It is also possible to browse `all the manifests hosted by "
+#~ "Flathub <https://github.com/flathub>`_."
+#~ msgstr ""
+#~ "Полный манифест для GNOME Dictionary, созданный на основе Git <https://"
+#~ "github.com/flathub/org.gnome.Dictionary/blob/master/org.gnome.Dictionary."
+#~ "json>`_. Также можно просматривать `все манифесты, размещенные на Flathub "
+#~ "<https://github.com/flathub>`_."
 
 #, fuzzy
 #~| msgid ""
@@ -493,15 +553,4 @@ msgstr ""
 #~ "`cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_, "
 #~ "`meson <http://mesonbuild.com/>`_"
 #~ msgstr ""
-#~ "`cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_"
-
-#~ msgid ""
-#~ "A `complete manifest for GNOME Dictionary built from Git <https://github."
-#~ "com/flathub/org.gnome.Dictionary/blob/master/org.gnome.Dictionary."
-#~ "json>`_. It is also possible to browse `all the manifests hosted by "
-#~ "Flathub <https://github.com/flathub>`_."
-#~ msgstr ""
-#~ "Полный манифест для GNOME Dictionary, созданный на основе Git <https://"
-#~ "github.com/flathub/org.gnome.Dictionary/blob/master/org.gnome.Dictionary."
-#~ "json>`_. Также можно просматривать `все манифесты, размещенные на Flathub "
-#~ "<https://github.com/flathub>`_."
+#~ "`cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_,"

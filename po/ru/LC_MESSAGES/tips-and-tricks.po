@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Flatpak Team. Licensed under Creative Commons
+# Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
 # Dmitry <dmitrydmitry761@gmail.com>, 2021.
@@ -8,17 +8,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
-"PO-Revision-Date: 2023-01-01 02:26+0700\n"
+"Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
+"POT-Creation-Date: 2022-10-31 16:09-0300\n"
+"PO-Revision-Date: 2023-01-06 21:45+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n"
-"%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "Generated-By: Babel 2.9.1\n"
 "X-Generator: Poedit 3.0\n"
 
@@ -36,37 +36,48 @@ msgstr "Тестирование приложения с другой средо
 
 #: ../../tips-and-tricks.rst:10
 msgid ""
-"You can (for testing) run an application with a different runtime than it typically uses.  For "
-"instance, to run stable gedit with the latest unstable gnome runtime you can do::"
+"You can (for testing) run an application with a different runtime than it "
+"typically uses.  For instance, to run stable gedit with the latest unstable "
+"gnome runtime you can do::"
 msgstr ""
-"Вы можете (для тестирования) запустить приложение с другой средой выполнения, чем обычно. Например, "
-"чтобы запустить стабильный gedit с последней нестабильной средой выполнения gnome, вы можете сделать::"
+"Вы можете (для тестирования) запустить приложение с другой средой "
+"выполнения, чем обычно. Например, чтобы запустить стабильный gedit с "
+"последней нестабильной средой выполнения gnome, вы можете сделать::"
 
 #: ../../tips-and-tricks.rst:16
-msgid "You can also use a completely different runtime (but same version number)::"
-msgstr "Вы также можете использовать совершенно другую среду выполнения (но с тем же номером версии)::"
+msgid ""
+"You can also use a completely different runtime (but same version number)::"
+msgstr ""
+"Вы также можете использовать совершенно другую среду выполнения (но с тем же "
+"номером версии)::"
 
 #: ../../tips-and-tricks.rst:20
 msgid ""
-"If you just want to use the sdk instead of the platform like the above, a better approach is to use ``-"
-"d``."
+"If you just want to use the sdk instead of the platform like the above, a "
+"better approach is to use ``-d``."
 msgstr ""
-"Если вы просто хотите использовать SDK вместо платформы, подобной указанной выше, лучше использовать "
-"``-d``."
+"Если вы просто хотите использовать SDK вместо платформы, подобной указанной "
+"выше, лучше использовать ``-d``."
 
 #: ../../tips-and-tricks.rst:25
-msgid "Running against a runtime with a completely different ABI is undefined and unsupported behavior."
+msgid ""
+"Running against a runtime with a completely different ABI is undefined and "
+"unsupported behavior."
 msgstr ""
-"Работа со средой выполнения с совершенно другим ABI является неопределенным и неподдерживаемым "
-"поведением."
+"Работа со средой выполнения с совершенно другим ABI является неопределенным "
+"и неподдерживаемым поведением."
 
 #: ../../tips-and-tricks.rst:29
 msgid "Downgrading"
 msgstr "Откат"
 
 #: ../../tips-and-tricks.rst:31
-msgid "It is possible to downgrade an installed application (or runtime) to an older build."
-msgstr "Можно понизить версию установленного приложения (или среды выполнения) до более старой сборки."
+msgid ""
+"It is possible to downgrade an installed application (or runtime) to an "
+"older build."
+msgstr ""
+"Можно понизить версию установленного приложения (или среды выполнения) до "
+"более старой сборки."
 
 #: ../../tips-and-tricks.rst:34
 msgid "First you look for the commit you are interested in::"
@@ -76,137 +87,191 @@ msgstr "Сначала вы ищите интересующий вас комм�
 msgid "Then you deploy the commit::"
 msgstr "Затем вы развертываете коммит::"
 
-#: ../../tips-and-tricks.rst:44
+#: ../../tips-and-tricks.rst:46
 msgid ""
-"If you have Flatpak 1.5.0 or later, you can also prevent the app from being included in updates "
-"(either manual or automatic)::"
+"The example here uses ``sudo`` for system installations because, unlike "
+"normal updates, downgrades are considered a privileged action. If the "
+"application is installed per-user you would run it as that user."
 msgstr ""
-"Если у вас Flatpak 1.5.0 или новее, вы также можете запретить включение приложения в обновления "
-"(вручную или автоматически)::"
+"В этом примере для установки системы используется ``sudo``, потому что, в "
+"отличие от обычных обновлений, переход на более раннюю версию считается "
+"привилегированным действием. Если приложение установлено для каждого "
+"пользователя, вы должны запустить его от имени этого пользователя."
 
-#: ../../tips-and-tricks.rst:51
+#: ../../tips-and-tricks.rst:48
+msgid ""
+"If you have Flatpak 1.5.0 or later, you can also prevent the app from being "
+"included in updates (either manual or automatic)::"
+msgstr ""
+"Если у вас Flatpak 1.5.0 или новее, вы также можете запретить включение "
+"приложения в обновления (вручную или автоматически)::"
+
+#: ../../tips-and-tricks.rst:55
 msgid "Bisecting regressions in application builds"
 msgstr "Поперечная регрессия в сборках приложений"
 
-#: ../../tips-and-tricks.rst:53
-msgid ""
-"In case the newest builds of an application introduce regressions, you can use ``flatpak-bisect`` to "
-"discover which commit introduced the regression. It works just like ``git bisect``."
-msgstr ""
-"В случае, если новейшие сборки приложения вызывают регрессию, вы можете использовать команду flatpak-"
-"bisect, чтобы узнать, какая фиксация привела к регрессии. Он работает так же, как ``git bisect``."
-
 #: ../../tips-and-tricks.rst:57
 msgid ""
-"In case your distribution doesn't install the ``flatpak-bisect`` utility, you can find it distributed "
-"alongside the Flatpak source code, in https://github.com/flatpak/flatpak/blob/master/scripts/flatpak-"
-"bisect"
+"In case the newest builds of an application introduce regressions, you can "
+"use ``flatpak-bisect`` to discover which commit introduced the regression. "
+"It works just like ``git bisect``."
 msgstr ""
-"Если в вашем дистрибутиве не установлена утилита ``flatpak-bisect``, ее можно найти вместе с исходным "
-"кодом Flatpak по адресу: https://github.com/flatpak/flatpak/blob/master/scripts/flatpak-bisect"
+"В случае, если новейшие сборки приложения вызывают регрессию, вы можете "
+"использовать команду flatpak-bisect, чтобы узнать, какая фиксация привела к "
+"регрессии. Он работает так же, как ``git bisect``."
 
 #: ../../tips-and-tricks.rst:61
+msgid ""
+"In case your distribution doesn't install the ``flatpak-bisect`` utility, "
+"you can find it distributed alongside the Flatpak source code, in https://"
+"github.com/flatpak/flatpak/blob/main/scripts/flatpak-bisect"
+msgstr ""
+"Если ваш дистрибутив не устанавливает утилиту ``flatpak-bisect``, вы можете "
+"найти ее вместе с исходным кодом Flatpak по адресу: https://github.com/"
+"flatpak/flatpak/blob/main/scripts/flatpak-bisect"
+
+#: ../../tips-and-tricks.rst:65
 msgid "First you update the application and get its history::"
 msgstr "Сначала вы обновляете приложение и получаете его историю::"
 
-#: ../../tips-and-tricks.rst:65
-msgid "Then, you should set the current commit as the first bad commit::"
-msgstr "Затем вы должны установить текущий коммит как первый ошибочный коммит::"
-
 #: ../../tips-and-tricks.rst:69
-msgid ""
-"Now you need to find the hash of the first known good commit. For that, you can see the build history "
-"by running::"
+msgid "Then, you should set the current commit as the first bad commit::"
 msgstr ""
-"Теперь вам нужно найти хеш первого удачного коммита. Для этого вы можете просмотреть историю сборки, "
-"запустив::"
+"Затем вы должны установить текущий коммит как первый ошибочный коммит::"
 
-#: ../../tips-and-tricks.rst:74
-msgid "To start bisecting, checkout the first known good commit you find::"
-msgstr "Чтобы начать деление пополам, проверьте первый известный удачный коммит, который вы найдете::"
+#: ../../tips-and-tricks.rst:73
+msgid ""
+"Now you need to find the hash of the first known good commit. For that, you "
+"can see the build history by running::"
+msgstr ""
+"Теперь вам нужно найти хеш первого удачного коммита. Для этого вы можете "
+"просмотреть историю сборки, запустив::"
 
 #: ../../tips-and-tricks.rst:78
-msgid ""
-"After setting the bad commit and the first known good commit, you can launch the application to verify "
-"if the current commit in the bisecting session is a good or a bad one."
+msgid "To start bisecting, checkout the first known good commit you find::"
 msgstr ""
-"После установки плохой фиксации и первой известной хорошей фиксации вы можете запустить приложение, "
-"чтобы проверить, является ли текущая фиксация в сеансе разделения на две части: хорошей или плохой."
+"Чтобы начать деление пополам, проверьте первый известный удачный коммит, "
+"который вы найдете::"
 
 #: ../../tips-and-tricks.rst:82
+msgid ""
+"After setting the bad commit and the first known good commit, you can launch "
+"the application to verify if the current commit in the bisecting session is "
+"a good or a bad one."
+msgstr ""
+"После установки плохой фиксации и первой известной хорошей фиксации вы "
+"можете запустить приложение, чтобы проверить, является ли текущая фиксация в "
+"сеансе разделения на две части: хорошей или плохой."
+
+#: ../../tips-and-tricks.rst:86
 msgid "To mark a commit as good or bad, run::"
 msgstr "Чтобы пометить фиксацию как хорошую или плохую, запустите::"
 
-#: ../../tips-and-tricks.rst:86
+#: ../../tips-and-tricks.rst:90
 msgid "Or::"
 msgstr "Или::"
 
-#: ../../tips-and-tricks.rst:90
+#: ../../tips-and-tricks.rst:94
 msgid "``flatpak-bisect`` will inform you when the first bad commit is found."
-msgstr "``flatpak-bisect`` сообщит вам, когда будет обнаружена первая плохая фиксация."
+msgstr ""
+"``flatpak-bisect`` сообщит вам, когда будет обнаружена первая плохая "
+"фиксация."
 
-#: ../../tips-and-tricks.rst:93
+#: ../../tips-and-tricks.rst:97
 msgid "Adding a custom installation"
 msgstr "Добавление выборочной установки"
 
-#: ../../tips-and-tricks.rst:95
+#: ../../tips-and-tricks.rst:99
 msgid ""
-"By default Flatpak installs apps system-wide, and can also be made to install per-user with the ``--"
-"user`` option accepted by most commands. A third option is to set up a custom installation, which "
-"could be stored on an external hard drive."
+"By default Flatpak installs apps system-wide, and can also be made to "
+"install per-user with the ``--user`` option accepted by most commands. A "
+"third option is to set up a custom installation, which could be stored on an "
+"external hard drive."
 msgstr ""
-"По умолчанию Flatpak устанавливает приложения в масштабе всей системы, а также может быть настроен для "
-"установки для каждого пользователя с параметром --user, принятым большинством команд. Третий вариант - "
-"настроить выборочную установку, которая может храниться на  внешнем жестком диске."
+"По умолчанию Flatpak устанавливает приложения в масштабе всей системы, а "
+"также может быть настроен для установки для каждого пользователя с "
+"параметром --user, принятым большинством команд. Третий вариант - настроить "
+"выборочную установку, которая может храниться на  внешнем жестком диске."
 
-#: ../../tips-and-tricks.rst:100
+#: ../../tips-and-tricks.rst:104
 msgid "First ensure that the config directory exists::"
 msgstr "Сначала убедитесь, что каталог конфигурации существует::"
 
-#: ../../tips-and-tricks.rst:104
+#: ../../tips-and-tricks.rst:108
 msgid "Then open a file in that directory as root::"
 msgstr "Затем откройте файл в этом каталоге как root::"
 
-#: ../../tips-and-tricks.rst:108
+#: ../../tips-and-tricks.rst:112
 msgid "And write something like this::"
 msgstr "И напишите что-нибудь вроде этого::"
 
-#: ../../tips-and-tricks.rst:115
+#: ../../tips-and-tricks.rst:119
 msgid ""
-"See `flatpak-installation(5) <http://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-"
-"installation>`_ for the full format specification. Replace the path with the actual path you want to "
-"use. You can use ``df`` to see mounted file systems and ``mkdir`` to create a ``flatpak`` directory so "
-"the path specified by ``Path=`` exists."
+"See `flatpak-installation(5) <https://docs.flatpak.org/en/latest/flatpak-"
+"command-reference.html#flatpak-installation>`_ for the full format "
+"specification. Replace the path with the actual path you want to use. You "
+"can use ``df`` to see mounted file systems and ``mkdir`` to create a "
+"``flatpak`` directory so the path specified by ``Path=`` exists."
 msgstr ""
-"См. `flatpak-installation(5) <http://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-"
-"installation>`_ для полной спецификации формата. Замените путь фактическим путем, который вы хотите "
-"использовать. Вы можете использовать ``df`` для просмотра смонтированных файловых систем и ``mkdir`` "
-"для создания каталога ``flatpak``, чтобы существовал путь, указанный параметром ``Path=``."
-
-#: ../../tips-and-tricks.rst:121
-msgid "Then you can add a remote using a command like::"
-msgstr "Затем вы можете добавить удалённый компьютер с помощью такой команды, как::"
+"Полную спецификацию формата см. в разделе `flatpak-installation(5) <https://"
+"docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-"
+"installation>`_. Замените путь фактическим путем, который вы хотите "
+"использовать. Вы можете использовать ``df`` для просмотра смонтированных "
+"файловых систем и ``mkdir`` для создания каталога ``flatpak``, чтобы "
+"существовал путь, указанный в ``Path=``."
 
 #: ../../tips-and-tricks.rst:125
+msgid "Then you can add a remote using a command like::"
+msgstr ""
+"Затем вы можете добавить удалённый компьютер с помощью такой команды, как::"
+
+#: ../../tips-and-tricks.rst:129
 msgid "And install to it with::"
 msgstr "И установите его с помощью::"
 
-#: ../../tips-and-tricks.rst:131
+#: ../../tips-and-tricks.rst:135
 msgid ""
-"If your custom installation is the only one with the remote you're installing from, ``--installation`` "
-"can be omitted."
+"If your custom installation is the only one with the remote you're "
+"installing from, ``--installation`` can be omitted."
 msgstr ""
-"Если ваша пользовательская установка является единственной с удаленным компьютером, с которого вы "
-"выполняете установку, параметр ``--installation`` можно не указывать."
+"Если ваша пользовательская установка является единственной с удаленным "
+"компьютером, с которого вы выполняете установку, параметр ``--installation`` "
+"можно не указывать."
 
-#: ../../tips-and-tricks.rst:134
+#: ../../tips-and-tricks.rst:138
 msgid "And run apps from it with::"
 msgstr "И запускать из него приложения с помощью::"
 
-#: ../../tips-and-tricks.rst:140
+#: ../../tips-and-tricks.rst:144
 msgid ""
-"If your custom installation is the only one with the app you're running, ``--installation`` can be "
-"omitted."
+"If your custom installation is the only one with the app you're running, ``--"
+"installation`` can be omitted."
 msgstr ""
-"Если ваша пользовательская установка является единственной с приложением, которое вы используете, ``--"
-"installation`` можно не указывать."
+"Если ваша пользовательская установка является единственной с приложением, "
+"которое вы используете, ``--installation`` можно не указывать."
+
+#: ../../tips-and-tricks.rst:148
+msgid "Configuring resource limits for apps"
+msgstr "Настройка лимитов ресурсов для приложений"
+
+#: ../../tips-and-tricks.rst:150
+msgid ""
+"When systemd is available, Flatpak tries to put app processes in a scope "
+"such as ``app-com.brave.Browser-*.scope`` (in the case of Brave), with ``*`` "
+"replaced by an arbitrary suffix. This means you can create a file like ``~/."
+"config/systemd/user/app-flatpak-com.brave.Browser-.scope.d/memory.conf`` "
+"with contents like::"
+msgstr ""
+"Когда доступен systemd, Flatpak пытается поместить процессы приложения в "
+"область действия, такую как app-com.brave.Browser-*.scope (в случае Brave), "
+"с заменой «*» на произвольный суффикс. . Это означает, что вы можете создать "
+"файл типа ``~/.config/systemd/user/app-flatpak-com.brave.Browser-.scope.d/"
+"memory.conf`` с таким содержимым::"
+
+#: ../../tips-and-tricks.rst:159
+msgid ""
+"Then after a ``systemctl --user daemon-reload``, those ``systemd.resource-"
+"control(5)`` parameters will apply to all instances of that app."
+msgstr ""
+"Затем после ``systemctl --user daemon-reload`` эти параметры ``systemd."
+"resource-control(5)`` будут применяться ко всем экземплярам этого приложения."

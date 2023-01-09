@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Flatpak Team. Licensed under Creative Commons
+# Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
 # Dmitry <dmitrydmitry761@gmail.com>, 2021.
@@ -7,9 +7,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
-"PO-Revision-Date: 2023-01-02 00:02+0700\n"
+"Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
+"POT-Creation-Date: 2022-09-29 11:37-0300\n"
+"PO-Revision-Date: 2023-01-06 22:32+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -27,9 +27,9 @@ msgstr "Разрешения песочницы"
 
 #: ../../sandbox-permissions-reference.rst:4
 msgid ""
-"Sandbox permissions can be configured from an application manifest file (see :"
-"doc:`manifests`). They can also be set with the ``build-finish``, ``run`` and "
-"``override`` commands."
+"Sandbox permissions can be configured from an application manifest file "
+"(see :doc:`manifests`). They can also be set with the ``build-finish``, "
+"``run`` and ``override`` commands."
 msgstr ""
 "Разрешения песочницы можно настроить из файла манифеста приложения (см: :doc:"
 "`manifests`). Их также можно установить с помощью команд ``build-finish``, "
@@ -41,8 +41,8 @@ msgid ""
 "complete list can be viewed using ``flatpak build-finish --help``."
 msgstr ""
 "В следующем списке представлены многие из наиболее полезных вариантов "
-"разрешений. Полный список можно просмотреть с помощью команды ``flatpak build-"
-"finish --help``."
+"разрешений. Полный список можно просмотреть с помощью команды ``flatpak "
+"build-finish --help``."
 
 #: ../../sandbox-permissions-reference.rst:12
 msgid "``--socket=x11``"
@@ -133,8 +133,8 @@ msgid ""
 "Each of the following permissions configure filesystem access, and should be "
 "added to ``--filesystem=``:"
 msgstr ""
-"Каждое из следующих разрешений настраивает доступ к файловой системе и должно "
-"быть добавлено в ``--filesystem=``:"
+"Каждое из следующих разрешений настраивает доступ к файловой системе и "
+"должно быть добавлено в ``--filesystem=``:"
 
 #: ../../sandbox-permissions-reference.rst:31
 msgid "``host``"
@@ -234,7 +234,7 @@ msgstr "Доступ к каталогу шаблонов XDG"
 
 #: ../../sandbox-permissions-reference.rst:43
 msgid "``xdg-config``"
-msgstr "``xdg-config``"
+msgstr "``xdg-music``"
 
 #: ../../sandbox-permissions-reference.rst:43
 msgid "Access the XDG config directory"
@@ -264,17 +264,19 @@ msgstr "``xdg-run/path``"
 msgid ""
 "Access subdirectories of the XDG runtime directory (where path is any "
 "subdirectory)"
-msgstr "Доступ подкаталогии XDG Runtime Directory (где путь любой подкаталог)"
+msgstr ""
+"Доступ к подкаталогам каталога среды выполнения XDG (где путь — любой "
+"подкаталог)"
 
 #: ../../sandbox-permissions-reference.rst:49
 msgid ""
 "Paths can be added to all the above filesystem options. For example, ``--"
-"filesystem=xdg-documents/path``. The following permission options can also be "
-"added:"
+"filesystem=xdg-documents/path``. The following permission options can also "
+"be added:"
 msgstr ""
-"Пути могут быть добавлены ко всем указанным выше параметрам файловой системы. "
-"Например, ``--filesystem=xdg-documents/path``. Также можно добавить следующие "
-"параметры разрешений:"
+"Пути могут быть добавлены ко всем указанным выше параметрам файловой "
+"системы. Например, ``--filesystem=xdg-documents/path``. Также можно добавить "
+"следующие параметры разрешений:"
 
 #: ../../sandbox-permissions-reference.rst:53
 msgid "``:ro`` - read-only access"
@@ -306,18 +308,20 @@ msgstr ""
 #: ../../sandbox-permissions-reference.rst:61
 msgid ""
 "Giving network access also grants access to all host services listening on "
-"abstract Unix sockets (due to how network namespaces work), and these have no "
-"permission checks. This unfortunately affects e.g. the X server and the "
+"abstract Unix sockets (due to how network namespaces work), and these have "
+"no permission checks. This unfortunately affects e.g. the X server and the "
 "session bus which listens to abstract sockets by default. A secure "
 "distribution should disable these and just use regular sockets."
 msgstr ""
 "Предоставление доступа к сети также предоставляет доступ ко всем службам "
 "хоста, прослушивающим абстрактные сокеты Unix (из-за того, как работают "
-"сетевые пространства имен), и для них нет проверок разрешений. К сожалению, "
-"это влияет, например, на X-сервер и сеансовую шину, которая по умолчанию "
-"прослушивает абстрактные сокеты. Безопасный дистрибутив должен отключить их и "
-"просто использовать обычные сокеты."
+"сетевые пространства имен), и они не имеют проверок разрешений. Это, к "
+"сожалению, влияет, например. X-сервер и сеансовая шина, которая по умолчанию "
+"слушает абстрактные сокеты. Безопасный дистрибутив должен отключить их и "
+"использовать обычные сокеты."
 
 #: ../../sandbox-permissions-reference.rst:66
-msgid "Except for the blacklisted paths mentioned in :doc:`sandbox-permissions`."
-msgstr "За исключением черных списков, упомянутых в :doc:`sandbox-permissions`."
+msgid ""
+"Except for the blacklisted paths mentioned in :doc:`sandbox-permissions`."
+msgstr ""
+"За исключением черных списков, упомянутых в :doc:`sandbox-permissions`."
