@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"POT-Creation-Date: 2023-01-07 16:26-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 
 #: ../../tips-and-tricks.rst:2
 msgid "Tips and Tricks"
@@ -73,72 +73,79 @@ msgstr ""
 msgid "Then you deploy the commit::"
 msgstr ""
 
-#: ../../tips-and-tricks.rst:44
+#: ../../tips-and-tricks.rst:46
+msgid ""
+"The example here uses ``sudo`` for system installations because, unlike "
+"normal updates, downgrades are considered a privileged action. If the "
+"application is installed per-user you would run it as that user."
+msgstr ""
+
+#: ../../tips-and-tricks.rst:48
 msgid ""
 "If you have Flatpak 1.5.0 or later, you can also prevent the app from "
 "being included in updates (either manual or automatic)::"
 msgstr ""
 
-#: ../../tips-and-tricks.rst:51
+#: ../../tips-and-tricks.rst:55
 msgid "Bisecting regressions in application builds"
 msgstr ""
 
-#: ../../tips-and-tricks.rst:53
+#: ../../tips-and-tricks.rst:57
 msgid ""
 "In case the newest builds of an application introduce regressions, you "
 "can use ``flatpak-bisect`` to discover which commit introduced the "
 "regression. It works just like ``git bisect``."
 msgstr ""
 
-#: ../../tips-and-tricks.rst:57
+#: ../../tips-and-tricks.rst:61
 msgid ""
 "In case your distribution doesn't install the ``flatpak-bisect`` utility,"
 " you can find it distributed alongside the Flatpak source code, in "
-"https://github.com/flatpak/flatpak/blob/master/scripts/flatpak-bisect"
-msgstr ""
-
-#: ../../tips-and-tricks.rst:61
-msgid "First you update the application and get its history::"
+"https://github.com/flatpak/flatpak/blob/main/scripts/flatpak-bisect"
 msgstr ""
 
 #: ../../tips-and-tricks.rst:65
-msgid "Then, you should set the current commit as the first bad commit::"
+msgid "First you update the application and get its history::"
 msgstr ""
 
 #: ../../tips-and-tricks.rst:69
+msgid "Then, you should set the current commit as the first bad commit::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:73
 msgid ""
 "Now you need to find the hash of the first known good commit. For that, "
 "you can see the build history by running::"
 msgstr ""
 
-#: ../../tips-and-tricks.rst:74
+#: ../../tips-and-tricks.rst:78
 msgid "To start bisecting, checkout the first known good commit you find::"
 msgstr ""
 
-#: ../../tips-and-tricks.rst:78
+#: ../../tips-and-tricks.rst:82
 msgid ""
 "After setting the bad commit and the first known good commit, you can "
 "launch the application to verify if the current commit in the bisecting "
 "session is a good or a bad one."
 msgstr ""
 
-#: ../../tips-and-tricks.rst:82
+#: ../../tips-and-tricks.rst:86
 msgid "To mark a commit as good or bad, run::"
 msgstr ""
 
-#: ../../tips-and-tricks.rst:86
+#: ../../tips-and-tricks.rst:90
 msgid "Or::"
 msgstr ""
 
-#: ../../tips-and-tricks.rst:90
+#: ../../tips-and-tricks.rst:94
 msgid "``flatpak-bisect`` will inform you when the first bad commit is found."
 msgstr ""
 
-#: ../../tips-and-tricks.rst:93
+#: ../../tips-and-tricks.rst:97
 msgid "Adding a custom installation"
 msgstr ""
 
-#: ../../tips-and-tricks.rst:95
+#: ../../tips-and-tricks.rst:99
 msgid ""
 "By default Flatpak installs apps system-wide, and can also be made to "
 "install per-user with the ``--user`` option accepted by most commands. A "
@@ -146,48 +153,90 @@ msgid ""
 " an external hard drive."
 msgstr ""
 
-#: ../../tips-and-tricks.rst:100
+#: ../../tips-and-tricks.rst:104
 msgid "First ensure that the config directory exists::"
 msgstr ""
 
-#: ../../tips-and-tricks.rst:104
+#: ../../tips-and-tricks.rst:108
 msgid "Then open a file in that directory as root::"
 msgstr ""
 
-#: ../../tips-and-tricks.rst:108
+#: ../../tips-and-tricks.rst:112
 msgid "And write something like this::"
 msgstr ""
 
-#: ../../tips-and-tricks.rst:115
+#: ../../tips-and-tricks.rst:119
 msgid ""
-"See `flatpak-installation(5) <http://docs.flatpak.org/en/latest/flatpak-"
+"See `flatpak-installation(5) <https://docs.flatpak.org/en/latest/flatpak-"
 "command-reference.html#flatpak-installation>`_ for the full format "
 "specification. Replace the path with the actual path you want to use. You"
 " can use ``df`` to see mounted file systems and ``mkdir`` to create a "
 "``flatpak`` directory so the path specified by ``Path=`` exists."
 msgstr ""
 
-#: ../../tips-and-tricks.rst:121
+#: ../../tips-and-tricks.rst:125
 msgid "Then you can add a remote using a command like::"
 msgstr ""
 
-#: ../../tips-and-tricks.rst:125
+#: ../../tips-and-tricks.rst:129
 msgid "And install to it with::"
 msgstr ""
 
-#: ../../tips-and-tricks.rst:131
+#: ../../tips-and-tricks.rst:135
 msgid ""
 "If your custom installation is the only one with the remote you're "
 "installing from, ``--installation`` can be omitted."
 msgstr ""
 
-#: ../../tips-and-tricks.rst:134
+#: ../../tips-and-tricks.rst:138
 msgid "And run apps from it with::"
 msgstr ""
 
-#: ../../tips-and-tricks.rst:140
+#: ../../tips-and-tricks.rst:144
 msgid ""
 "If your custom installation is the only one with the app you're running, "
 "``--installation`` can be omitted."
 msgstr ""
+
+#: ../../tips-and-tricks.rst:148
+msgid "Configuring resource limits for apps"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:150
+msgid ""
+"When systemd is available, Flatpak tries to put app processes in a scope "
+"such as ``app-flatpak-com.brave.Browser-*.scope`` (in the case of Brave),"
+" with ``*`` replaced by an arbitrary suffix. This means you can create a "
+"file like ``~/.config/systemd/user/app-flatpak-"
+"com.brave.Browser-.scope.d/memory.conf`` with contents like::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:159
+msgid ""
+"Then after a ``systemctl --user daemon-reload``, those ``systemd"
+".resource-control(5)`` parameters will apply to all instances of that "
+"app."
+msgstr ""
+
+#~ msgid ""
+#~ "In case your distribution doesn't "
+#~ "install the ``flatpak-bisect`` utility, "
+#~ "you can find it distributed alongside"
+#~ " the Flatpak source code, in "
+#~ "https://github.com/flatpak/flatpak/blob/master/scripts/flatpak-"
+#~ "bisect"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "See `flatpak-installation(5) "
+#~ "<http://docs.flatpak.org/en/latest/flatpak-command-"
+#~ "reference.html#flatpak-installation>`_ for the "
+#~ "full format specification. Replace the "
+#~ "path with the actual path you want"
+#~ " to use. You can use ``df`` to"
+#~ " see mounted file systems and "
+#~ "``mkdir`` to create a ``flatpak`` "
+#~ "directory so the path specified by "
+#~ "``Path=`` exists."
+#~ msgstr ""
 

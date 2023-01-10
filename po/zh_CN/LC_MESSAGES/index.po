@@ -1,18 +1,18 @@
 # PikachuHy <pikachuhy@163.com>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"POT-Creation-Date: 2023-01-07 16:26-0600\n"
 "PO-Revision-Date: 2018-10-08 03:07-0400\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
-"Language-Team: Chinese (Simplified, China)\n"
 "Language: zh_Hans_CN\n"
+"Language-Team: Chinese (Simplified, China)\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 4.6.2\n"
+"Generated-By: Babel 2.10.3\n"
 
 #: ../../index.rst:2
 msgid "Welcome to Flatpak's documentation!"
@@ -21,28 +21,30 @@ msgstr "欢迎来到Flatpak文档"
 #: ../../index.rst:4
 msgid ""
 "These docs cover everything you need to know to build and distribute "
-"applications using Flatpak. They begin with a basic introduction to Flatpak,"
-" background information on basic concepts, and a guide to the Flatpak "
-"command line interface. Later sections provide detailed information on "
-"building and distributing applications."
+"applications using Flatpak. They begin with a basic introduction to "
+"Flatpak, background information on basic concepts, and a guide to the "
+"Flatpak command line interface. Later sections provide detailed "
+"information on building and distributing applications."
 msgstr ""
 "本文档覆盖了你需要使用Flatpak构建和分发应用的一切。先对Flatpak，基本概念的背景信息和Flatpak "
 "CLI进行一个简单的介绍，然后提供对构建和分发应用的详细信息。"
 
-#: ../../index.rst:6
+#: ../../index.rst:10
 msgid ""
-"The docs are primarily intended for application developers and distributors."
-" Their content is also relevant to those who have a general interest in "
-"Flatpak."
+"The docs are primarily intended for application developers and "
+"distributors. Their content is also relevant to those who have a general "
+"interest in Flatpak."
 msgstr "本文档主要针对应用开发者和分发者。对Flatpak感兴趣的人也可以阅读相关内容。"
 
-#: ../../index.rst:8
+#: ../../index.rst:14
+#, fuzzy
 msgid ""
-"If you are looking for information about how to use Flatpak to install and "
-"run applications, please refer to `the Flatpak website "
-"<http://flatpak.org>`_."
+"If you are looking for information about how to use Flatpak to install "
+"and run applications, please refer to `the Flatpak website "
+"<https://flatpak.org>`_."
 msgstr "如果你正在查找如何使用Flatpak来安装和运行应用，请参考 `Flatpak网站 <http://flatpak.org>`_ 。"
 
-#: ../../index.rst:11
+#: ../../index.rst:18
 msgid "Contents"
 msgstr "目录"
+

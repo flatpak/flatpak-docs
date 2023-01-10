@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"POT-Creation-Date: 2023-01-07 16:26-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 
 #: ../../freedesktop-quick-reference.rst:2
 msgid "Freedesktop quick reference"
@@ -41,15 +41,15 @@ msgid ""
 msgstr ""
 
 #: ../../freedesktop-quick-reference.rst:15
-#: ../../freedesktop-quick-reference.rst:49
-#: ../../freedesktop-quick-reference.rst:73
+#: ../../freedesktop-quick-reference.rst:47
+#: ../../freedesktop-quick-reference.rst:109
 msgid "Example:"
 msgstr ""
 
 #: ../../freedesktop-quick-reference.rst:21
 msgid ""
 "If interested, you can read the full spec `here "
-"<https://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-"
+"<https://specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-"
 "latest.html>`__"
 msgstr ""
 
@@ -74,40 +74,136 @@ msgstr ""
 #: ../../freedesktop-quick-reference.rst:44
 msgid ""
 "Your desktop file should be prefixed with your application's appid and "
-"placed in ``/app/share/applications/``, you should use ``desktop-file-"
-"validate`` to check your file for errors before including it."
+"placed in ``/app/share/applications/`` within your app."
 msgstr ""
 
-#: ../../freedesktop-quick-reference.rst:55
+#: ../../freedesktop-quick-reference.rst:53
 msgid ""
-"You can find more information `here "
-"<https://wiki.archlinux.org/index.php/desktop_entries>`__. If interested,"
-" you can read also the full spec `here <https://standards.freedesktop.org"
-"/desktop-entry-spec/latest/>`__."
+"It's recommended to use ``desktop-file-validate`` to check your file for "
+"errors before including it."
 msgstr ""
 
-#: ../../freedesktop-quick-reference.rst:61
+#: ../../freedesktop-quick-reference.rst:56
+msgid ""
+"A special note about the ``Exec`` line: When installing an app, Flatpak "
+"will automatically rewrite the included ``.desktop`` file so that the app"
+" will be started through Flatpak. The rewritten desktop file is then "
+"exported to a path such as "
+"``exports/share/applications/org.gnome.Dictionary.desktop`` under your "
+"Flatpak installation directory (usually ``/var/lib/flatpak/`` or "
+"``~/.local/share/flatpak/``). In the case of "
+"``org.gnome.Dictionary.desktop``, the rewritten ``Exec`` line looks like "
+"this::"
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:66
+msgid ""
+"The command from the original desktop file will be part of the "
+"``--command`` argument to Flatpak and arguments will be passed through. "
+"This means that in most cases, it should match the value of the "
+"``command:`` line in your app's manifest."
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:71
+msgid ""
+"If you want the ``--command`` argument to be omitted from the ``flatpak "
+"run`` command in the generated desktop file, you can leave the ``Exec`` "
+"value in the source desktop file empty::"
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:81
+msgid "This way, the generated ``Exec`` line looks like this::"
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:85
+msgid ""
+"With Flatpak ≤ 1.12.7, a warning may be shown when exporting a build with"
+" an empty Exec= line to a repository::"
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:89
+msgid "This warning can be ignored."
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:91
+msgid ""
+"You can find more general information about desktop files `here "
+"<https://wiki.archlinux.org/title/desktop_entries>`__. If interested, you"
+" can read also the full spec `here "
+"<https://specifications.freedesktop.org/desktop-entry-spec/latest/>`__."
+msgstr ""
+
+#: ../../freedesktop-quick-reference.rst:97
 msgid "Appdata files"
 msgstr ""
 
-#: ../../freedesktop-quick-reference.rst:63
+#: ../../freedesktop-quick-reference.rst:99
 msgid ""
-"Appdata files are used by application stores (eg. kde discover, gnome "
-"software) in order to display metadata about your application, such as a "
-"description, screenshots, display changelogs on update, among other "
-"things."
+"Appdata files are used by application stores (e.g. KDE Discover, GNOME "
+"Software) in order to display metadata about your application, such as a "
+"description, screenshots, changelogs when updates are available, and "
+"other miscellaneous things."
 msgstr ""
 
-#: ../../freedesktop-quick-reference.rst:68
+#: ../../freedesktop-quick-reference.rst:104
 msgid ""
-"your desktop file should be prefixed with your application's appid and "
-"placed in ``/app/share/metainfo/``, you should also use ``appstream-util "
+"Your Appdata file should be prefixed with your application's appid and "
+"placed in ``/app/share/metainfo/``. You should also use ``appstream-util "
 "validate-relax`` to check your file for errors before including it."
 msgstr ""
 
-#: ../../freedesktop-quick-reference.rst:79
+#: ../../freedesktop-quick-reference.rst:115
 msgid ""
 "If interested, you can read the full spec `here "
-"<https://www.freedesktop.org/software/appstream/docs/>`__"
+"<https://www.freedesktop.org/software/appstream/docs/>`__."
 msgstr ""
+
+#~ msgid ""
+#~ "If interested, you can read the "
+#~ "full spec `here <https://standards.freedesktop.org"
+#~ "/icon-theme-spec/icon-theme-spec-"
+#~ "latest.html>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Your desktop file should be prefixed "
+#~ "with your application's appid and placed"
+#~ " in ``/app/share/applications/``, you should "
+#~ "use ``desktop-file-validate`` to check"
+#~ " your file for errors before "
+#~ "including it."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can find more information `here "
+#~ "<https://wiki.archlinux.org/index.php/desktop_entries>`__. If"
+#~ " interested, you can read also the"
+#~ " full spec `here "
+#~ "<https://standards.freedesktop.org/desktop-entry-"
+#~ "spec/latest/>`__."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Appdata files are used by application"
+#~ " stores (eg. kde discover, gnome "
+#~ "software) in order to display metadata"
+#~ " about your application, such as a"
+#~ " description, screenshots, display changelogs "
+#~ "on update, among other things."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "your desktop file should be prefixed "
+#~ "with your application's appid and placed"
+#~ " in ``/app/share/metainfo/``, you should "
+#~ "also use ``appstream-util validate-"
+#~ "relax`` to check your file for "
+#~ "errors before including it."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If interested, you can read the "
+#~ "full spec `here "
+#~ "<https://www.freedesktop.org/software/appstream/docs/>`__"
+#~ msgstr ""
 

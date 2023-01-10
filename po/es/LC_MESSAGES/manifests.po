@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"POT-Creation-Date: 2023-01-07 16:26-0600\n"
 "PO-Revision-Date: 2018-05-20 10:37-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 
 #: ../../manifests.rst:2
 msgid "Manifests"
@@ -285,7 +285,7 @@ msgid "`cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_"
 msgstr ""
 
 #: ../../manifests.rst:177
-msgid "`meson <http://mesonbuild.com/>`_"
+msgid "`meson <https://mesonbuild.com/>`_"
 msgstr ""
 
 #: ../../manifests.rst:178
@@ -303,10 +303,50 @@ msgid ""
 msgstr ""
 
 #: ../../manifests.rst:185
-msgid "Example manifests"
+msgid "Shared Modules"
 msgstr ""
 
 #: ../../manifests.rst:187
+msgid ""
+"`Shared Modules (or shared-modules) <https://github.com/flathub/shared-"
+"modules>`_ is a repository containing various manifests to build common "
+"libraries. It is intended to be used as a git submodule."
+msgstr ""
+
+#: ../../manifests.rst:189
+msgid "To add it to your repository, run this command:"
+msgstr ""
+
+#: ../../manifests.rst:195
+msgid "Then, add whichever module you want. In this example, we will use `gtk2`:"
+msgstr ""
+
+#: ../../manifests.rst:202
+msgid "To update the submodule, run this command:"
+msgstr ""
+
+#: ../../manifests.rst:208
+msgid "To remove the submodule, run these commands:"
+msgstr ""
+
+#: ../../manifests.rst:218
+msgid "Flatpak Builder Tools"
+msgstr ""
+
+#: ../../manifests.rst:220
+msgid ""
+"`Flatpak Builder Tools (or flatpak-builder-tools) "
+"<https://github.com/flatpak/flatpak-builder-tools>`_ is a collection of "
+"scripts to aid using `flatpak-builder`. In this repository, each "
+"directory contains instructions to generate a manifest for the respective"
+" platform."
+msgstr ""
+
+#: ../../manifests.rst:223
+msgid "Example manifests"
+msgstr ""
+
+#: ../../manifests.rst:225
 msgid ""
 "A `complete manifest for GNOME Dictionary built from Git "
 "<https://github.com/flathub/org.gnome.Dictionary/blob/master/org.gnome.Dictionary.yml>`_."
@@ -390,5 +430,8 @@ msgstr ""
 #~ " It is also possible to browse "
 #~ "`all the manifests hosted by Flathub "
 #~ "<https://github.com/flathub>`_."
+#~ msgstr ""
+
+#~ msgid "`meson <http://mesonbuild.com/>`_"
 #~ msgstr ""
 

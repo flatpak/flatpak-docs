@@ -4,16 +4,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"POT-Creation-Date: 2023-01-07 16:26-0600\n"
 "PO-Revision-Date: 2018-11-03 02:05-0400\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language: zh_Hans_CN\n"
 "Language-Team: Chinese (Simplified, China)\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 
 #: ../../python.rst:2
 msgid "Python"
@@ -66,7 +66,8 @@ msgid ""
 msgstr "注意 ``--no-deps`` 仅仅用于实例——一旦依赖的模块有它自己的依赖，构建就会失败。如果存在许多依赖，最好是用下一章节的方法来安装。"
 
 #: ../../python.rst:39
-msgid "Building multiple python dependencies"
+#, fuzzy
+msgid "Building multiple Python dependencies"
 msgstr "构建多个python依赖"
 
 #: ../../python.rst:41

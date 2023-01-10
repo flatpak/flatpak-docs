@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"POT-Creation-Date: 2023-01-07 16:26-0600\n"
 "PO-Revision-Date: 2018-05-20 10:37-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language: ko\n"
 "Language-Team: ohpato <ohpato@hanmail.net>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 
 #: ../../first-build.rst:2
 msgid "Building your first Flatpak"
@@ -33,10 +33,10 @@ msgstr "이 튜토리얼은 플랫팩을 간략히 소개한다. 이를 통해 �
 #: ../../first-build.rst:8
 msgid ""
 "In order to complete this tutorial, you should have followed the `setup "
-"guide on flatpak.org <http://flatpak.org/setup/>`_. You also need to have"
-" installed ``flatpak-builder``, which is usually available from the same "
-"repository as the ``flatpak`` package (e.g. use ``apt`` or ``dnf``). You "
-"can also install it as a flatpak with ``flatpak install flathub "
+"guide on flatpak.org <https://flatpak.org/setup/>`_. You also need to "
+"have installed ``flatpak-builder``, which is usually available from the "
+"same repository as the ``flatpak`` package (e.g. use ``apt`` or ``dnf``)."
+" You can also install it as a flatpak with ``flatpak install flathub "
 "org.flatpak.Builder``."
 msgstr ""
 
@@ -59,7 +59,7 @@ msgstr ""
 #: ../../first-build.rst:22
 #, fuzzy
 msgid ""
-"In this tutorial we will use the Freedesktop 21.08 runtime and SDK. To "
+"In this tutorial we will use the Freedesktop 22.08 runtime and SDK. To "
 "install these, run::"
 msgstr ""
 "이 튜토리얼는 Freedesktop 런타임 버전 1.6을 사용할 예정이며, 해당 런타임은 플랫팩 저장소에서 제공한다. 저장소를 "
@@ -145,14 +145,24 @@ msgid "To verify that the build was successful, run the following::"
 msgstr "빌드가 성공적이었는지 확인하려면 다음과 같이 실행 해 본다::"
 
 #: ../../first-build.rst:88
+#, fuzzy
+msgid ""
+"This second time we passed in ``--force-clean``, which means that the "
+"previously created ``build-dir`` directory was deleted before the new "
+"build was started."
+msgstr ""
+"위에서 명령행 매개변수로 `—force-clean` 옵션을 주었는데, 기존에 생성한 `app-dir` 디렉토리가 발견될 경우 강제로"
+" 삭제하고 새로 시작하라는 뜻이다."
+
+#: ../../first-build.rst:92
 msgid "Congratulations, you've made an app!"
 msgstr "응용프로그램이 성공적으로 빌드되었다!"
 
-#: ../../first-build.rst:91
+#: ../../first-build.rst:95
 msgid "6. Put the app in a repository"
 msgstr "6. 저장소에 응용프로그램 추가"
 
-#: ../../first-build.rst:93
+#: ../../first-build.rst:97
 #, fuzzy
 msgid ""
 "If you want to share the application you can put it in a repository. This"
@@ -161,7 +171,7 @@ msgstr ""
 "빌드한 응용프로그램을 내려받아 설치하고 실행하고자 한다면, 빌드 결과물을 저장소로 내보내야 한다(export). 이를 위해 플랫팩 "
 "빌더의 실행 명령에 `—repo` 옵션을 주어 실행한다.::"
 
-#: ../../first-build.rst:99
+#: ../../first-build.rst:103
 #, fuzzy
 msgid ""
 "This does the build again, and at the end exports the result to a local "
@@ -173,23 +183,13 @@ msgstr ""
 "빌더는 `.flatpak-builder` 디렉토리에 이전에 빌드한 결과물을 캐시하고 있음을 알아두자. 두 번째 빌드부터는 더욱 "
 "빠르게 수행된다."
 
-#: ../../first-build.rst:104
-#, fuzzy
-msgid ""
-"This second time we passed in ``--force-clean``, which means that the "
-"previously created ``build-dir`` directory was deleted before the new "
-"build was started."
-msgstr ""
-"위에서 명령행 매개변수로 `—force-clean` 옵션을 주었는데, 기존에 생성한 `app-dir` 디렉토리가 발견될 경우 강제로"
-" 삭제하고 새로 시작하라는 뜻이다."
-
 #: ../../first-build.rst:108
 msgid ""
 "In order for your application to show up in application stores while "
 "testing with a local repository, you might have to run ``flatpak build-"
 "update-repo repo``. For more information how to publish to application "
-"stores see `Appdata files <http://docs.flatpak.org/en/latest/freedesktop-"
-"quick-reference.html#appdata-files>`_."
+"stores see `Appdata files <https://docs.flatpak.org/en/latest"
+"/freedesktop-quick-reference.html#appdata-files>`_."
 msgstr ""
 
 #: ../../first-build.rst:113
@@ -252,5 +252,30 @@ msgstr "성공적으로 실행되면 `Hello world, from a sandbox` 라는 메시
 #~ "``flatpak-builder``, which is usually "
 #~ "available from the same repository as"
 #~ " the ``flatpak`` package."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In order to complete this tutorial, "
+#~ "you should have followed the `setup "
+#~ "guide on flatpak.org <http://flatpak.org/setup/>`_."
+#~ " You also need to have installed "
+#~ "``flatpak-builder``, which is usually "
+#~ "available from the same repository as"
+#~ " the ``flatpak`` package (e.g. use "
+#~ "``apt`` or ``dnf``). You can also "
+#~ "install it as a flatpak with "
+#~ "``flatpak install flathub org.flatpak.Builder``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In order for your application to "
+#~ "show up in application stores while "
+#~ "testing with a local repository, you "
+#~ "might have to run ``flatpak build-"
+#~ "update-repo repo``. For more information"
+#~ " how to publish to application stores"
+#~ " see `Appdata files "
+#~ "<http://docs.flatpak.org/en/latest/freedesktop-quick-"
+#~ "reference.html#appdata-files>`_."
 #~ msgstr ""
 

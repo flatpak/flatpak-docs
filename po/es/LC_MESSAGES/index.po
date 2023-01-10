@@ -5,19 +5,18 @@
 # TingPing <tingping@tingping.se>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-20 10:17-0400\n"
+"POT-Creation-Date: 2023-01-07 16:26-0600\n"
 "PO-Revision-Date: 2018-05-20 10:37-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Español; Castellano <manuel.por.aca_AT_gmail.com>\n"
 "Language: es\n"
+"Language-Team: Español; Castellano <manuel.por.aca_AT_gmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"Generated-By: Babel 2.5.1\n"
-"X-Generator: Zanata 4.6.2\n"
+"Generated-By: Babel 2.10.3\n"
 
 #: ../../index.rst:2
 msgid "Welcome to Flatpak's documentation!"
@@ -26,32 +25,33 @@ msgstr "Bienvenido a la documentación de Flatpak!"
 #: ../../index.rst:4
 msgid ""
 "These docs cover everything you need to know to build and distribute "
-"applications using Flatpak. They begin with a basic introduction to Flatpak,"
-" background information on basic concepts, and a guide to the Flatpak "
-"command line interface. Later sections provide detailed information on "
-"building and distributing applications."
+"applications using Flatpak. They begin with a basic introduction to "
+"Flatpak, background information on basic concepts, and a guide to the "
+"Flatpak command line interface. Later sections provide detailed "
+"information on building and distributing applications."
 msgstr ""
 
-#: ../../index.rst:6
+#: ../../index.rst:10
 msgid ""
-"The docs are primarily intended for application developers and distributors."
-" Their content is also relevant to those who have a general interest in "
-"Flatpak."
+"The docs are primarily intended for application developers and "
+"distributors. Their content is also relevant to those who have a general "
+"interest in Flatpak."
 msgstr ""
 "Los documentos están destinados principalmente a desarrolladores de "
-"aplicaciones y distribuidores. Su contenido también es relevante a aquellos "
-"que tengan un interés general en Flatpak."
+"aplicaciones y distribuidores. Su contenido también es relevante a "
+"aquellos que tengan un interés general en Flatpak."
 
-#: ../../index.rst:8
+#: ../../index.rst:14
 #, fuzzy
 msgid ""
-"If you are looking for information about how to use Flatpak to install and "
-"run applications, please refer to `the Flatpak website "
-"<http://flatpak.org>`_."
+"If you are looking for information about how to use Flatpak to install "
+"and run applications, please refer to `the Flatpak website "
+"<https://flatpak.org>`_."
 msgstr ""
 "Si está buscando información sobre como instalar y usar aplicaciones "
 "Flatpak, diríjase `al sitio web de Flatpak <http://flatpak.org>`_."
 
-#: ../../index.rst:11
+#: ../../index.rst:18
 msgid "Contents"
 msgstr "Contenido"
+

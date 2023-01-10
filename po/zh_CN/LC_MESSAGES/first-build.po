@@ -5,16 +5,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"POT-Creation-Date: 2023-01-07 16:26-0600\n"
 "PO-Revision-Date: 2018-11-03 01:28-0400\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language: zh_Hans_CN\n"
 "Language-Team: Chinese (Simplified, China)\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 
 #: ../../first-build.rst:2
 msgid "Building your first Flatpak"
@@ -31,10 +31,10 @@ msgstr "这个教程提供了一个构建flatpak的简单介绍。你可以从�
 #, fuzzy
 msgid ""
 "In order to complete this tutorial, you should have followed the `setup "
-"guide on flatpak.org <http://flatpak.org/setup/>`_. You also need to have"
-" installed ``flatpak-builder``, which is usually available from the same "
-"repository as the ``flatpak`` package (e.g. use ``apt`` or ``dnf``). You "
-"can also install it as a flatpak with ``flatpak install flathub "
+"guide on flatpak.org <https://flatpak.org/setup/>`_. You also need to "
+"have installed ``flatpak-builder``, which is usually available from the "
+"same repository as the ``flatpak`` package (e.g. use ``apt`` or ``dnf``)."
+" You can also install it as a flatpak with ``flatpak install flathub "
 "org.flatpak.Builder``."
 msgstr ""
 "为了完成这个教程，你应该阅读 `flatpak.org上的安装指南 <http://flatpak.org/setup/>`_ 。同时需要安装  "
@@ -56,7 +56,7 @@ msgstr "flatpak要求每个应用指明一个runtime，作为它的基本依赖�
 #: ../../first-build.rst:22
 #, fuzzy
 msgid ""
-"In this tutorial we will use the Freedesktop 21.08 runtime and SDK. To "
+"In this tutorial we will use the Freedesktop 22.08 runtime and SDK. To "
 "install these, run::"
 msgstr "在这个教程中，我们将使用Freedesktop 1.6 runtime和SDK。安装这些，运行::"
 
@@ -130,21 +130,28 @@ msgid "To verify that the build was successful, run the following::"
 msgstr "为了确认构建成功，运行::"
 
 #: ../../first-build.rst:88
+msgid ""
+"This second time we passed in ``--force-clean``, which means that the "
+"previously created ``build-dir`` directory was deleted before the new "
+"build was started."
+msgstr "第二次我们通过 ``--force-clean`` ，会在新的构建开始之前删除先前创建的 ``build-dir`` 目录。"
+
+#: ../../first-build.rst:92
 msgid "Congratulations, you've made an app!"
 msgstr "恭喜，你已经创建了一个应用！"
 
-#: ../../first-build.rst:91
+#: ../../first-build.rst:95
 msgid "6. Put the app in a repository"
 msgstr "6.将应用放到仓库"
 
-#: ../../first-build.rst:93
+#: ../../first-build.rst:97
 #, fuzzy
 msgid ""
 "If you want to share the application you can put it in a repository. This"
 " is done by passing the ``--repo`` argument to ``flatpak-builder``::"
 msgstr "在你运行和安装这个应用之前，它首先需要被放到一个仓库里。通过传递 ``--repo`` 参数给 ``flatpak-builder`` ::"
 
-#: ../../first-build.rst:99
+#: ../../first-build.rst:103
 msgid ""
 "This does the build again, and at the end exports the result to a local "
 "directory called ``repo``. Note that ``flatpak-builder`` keeps a cache of"
@@ -154,20 +161,13 @@ msgstr ""
 "这将再次进行构建，最后将结果导出到名为 ``repo  `` 的本地目录。注意， ``flatpak-builder`` 在 "
 "``.flatpak-builder`` 子目录下保存了先前构建的缓存，所以像这样进行二次构建非常快。"
 
-#: ../../first-build.rst:104
-msgid ""
-"This second time we passed in ``--force-clean``, which means that the "
-"previously created ``build-dir`` directory was deleted before the new "
-"build was started."
-msgstr "第二次我们通过 ``--force-clean`` ，会在新的构建开始之前删除先前创建的 ``build-dir`` 目录。"
-
 #: ../../first-build.rst:108
 msgid ""
 "In order for your application to show up in application stores while "
 "testing with a local repository, you might have to run ``flatpak build-"
 "update-repo repo``. For more information how to publish to application "
-"stores see `Appdata files <http://docs.flatpak.org/en/latest/freedesktop-"
-"quick-reference.html#appdata-files>`_."
+"stores see `Appdata files <https://docs.flatpak.org/en/latest"
+"/freedesktop-quick-reference.html#appdata-files>`_."
 msgstr ""
 
 #: ../../first-build.rst:113
@@ -216,4 +216,16 @@ msgstr "剩下的就是试用应用。通过执行如下命令::"
 #: ../../first-build.rst:140
 msgid "This runs the app, so that it prints 'Hello world, from a sandbox'."
 msgstr "这运行了应用，使它打印“Hello world, from a sandbox”。"
+
+#~ msgid ""
+#~ "In order for your application to "
+#~ "show up in application stores while "
+#~ "testing with a local repository, you "
+#~ "might have to run ``flatpak build-"
+#~ "update-repo repo``. For more information"
+#~ " how to publish to application stores"
+#~ " see `Appdata files "
+#~ "<http://docs.flatpak.org/en/latest/freedesktop-quick-"
+#~ "reference.html#appdata-files>`_."
+#~ msgstr ""
 

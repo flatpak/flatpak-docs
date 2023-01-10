@@ -6,20 +6,19 @@
 # Dmitry <dmitrydmitry761@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
-"POT-Creation-Date: 2022-09-29 11:37-0300\n"
+"POT-Creation-Date: 2023-01-07 16:26-0600\n"
 "PO-Revision-Date: 2023-01-06 22:32+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
-"Language-Team: \n"
 "Language: ru\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"Generated-By: Babel 2.9.1\n"
-"X-Generator: Poedit 3.0\n"
+"Generated-By: Babel 2.10.3\n"
 
 #: ../../sandbox-permissions-reference.rst:2
 msgid "Sandbox Permissions Reference"
@@ -31,14 +30,14 @@ msgid ""
 "(see :doc:`manifests`). They can also be set with the ``build-finish``, "
 "``run`` and ``override`` commands."
 msgstr ""
-"Разрешения песочницы можно настроить из файла манифеста приложения (см: :doc:"
-"`manifests`). Их также можно установить с помощью команд ``build-finish``, "
-"``run`` и ``override``."
+"Разрешения песочницы можно настроить из файла манифеста приложения (см: "
+":doc:`manifests`). Их также можно установить с помощью команд ``build-"
+"finish``, ``run`` и ``override``."
 
 #: ../../sandbox-permissions-reference.rst:8
 msgid ""
-"The following list includes many of the most useful permission options. A "
-"complete list can be viewed using ``flatpak build-finish --help``."
+"The following list includes many of the most useful permission options. A"
+" complete list can be viewed using ``flatpak build-finish --help``."
 msgstr ""
 "В следующем списке представлены многие из наиболее полезных вариантов "
 "разрешений. Полный список можно просмотреть с помощью команды ``flatpak "
@@ -53,214 +52,278 @@ msgid "Show windows using X11"
 msgstr "Показать окна с помощью X11"
 
 #: ../../sandbox-permissions-reference.rst:13
+#, fuzzy
+msgid "``--socket=fallback-x11``"
+msgstr "``--socket=x11``"
+
+#: ../../sandbox-permissions-reference.rst:13
+msgid "Grant X11 access when Wayland is not available"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:14
 msgid "``--share=ipc``"
 msgstr "``--share=ipc``"
 
-#: ../../sandbox-permissions-reference.rst:13
+#: ../../sandbox-permissions-reference.rst:14
 msgid "Share IPC namespace with the host [#f1]_"
 msgstr "Совместное использование пространства имен IPC с хостом [#f1]_"
 
-#: ../../sandbox-permissions-reference.rst:14
+#: ../../sandbox-permissions-reference.rst:15
 msgid "``--allow=bluetooth``"
 msgstr "``--allow=bluetooth``"
 
-#: ../../sandbox-permissions-reference.rst:14
+#: ../../sandbox-permissions-reference.rst:15
 msgid "Allow access to Bluetooth"
 msgstr "Разрешить доступ к Bluetooth"
 
-#: ../../sandbox-permissions-reference.rst:15
+#: ../../sandbox-permissions-reference.rst:16
 msgid "``--device=dri``"
 msgstr "``--device=dri``"
 
-#: ../../sandbox-permissions-reference.rst:15
+#: ../../sandbox-permissions-reference.rst:16
 msgid "OpenGL rendering"
 msgstr "Отрисовка OpenGL"
 
-#: ../../sandbox-permissions-reference.rst:16
+#: ../../sandbox-permissions-reference.rst:17
 msgid "``--socket=wayland``"
 msgstr "``--socket=wayland``"
 
-#: ../../sandbox-permissions-reference.rst:16
+#: ../../sandbox-permissions-reference.rst:17
 msgid "Show windows using Wayland"
 msgstr "Показать окна с помощью Wayland"
 
-#: ../../sandbox-permissions-reference.rst:17
+#: ../../sandbox-permissions-reference.rst:18
 msgid "``--socket=pulseaudio``"
 msgstr "``--socket=pulseaudio``"
 
-#: ../../sandbox-permissions-reference.rst:17
+#: ../../sandbox-permissions-reference.rst:18
 msgid "Play sounds using PulseAudio"
 msgstr "Воспроизведение звуков с помощью PulseAudio"
 
-#: ../../sandbox-permissions-reference.rst:18
+#: ../../sandbox-permissions-reference.rst:19
 msgid "``--share=network``"
 msgstr "``--share=network``"
 
-#: ../../sandbox-permissions-reference.rst:18
+#: ../../sandbox-permissions-reference.rst:19
 msgid "Access the network [#f2]_"
 msgstr "Доступ к сети [#f2]_"
 
-#: ../../sandbox-permissions-reference.rst:19
+#: ../../sandbox-permissions-reference.rst:20
 msgid "``--talk-name=org.freedesktop.secrets``"
 msgstr "``--talk-name=org.freedesktop.secrets``"
 
-#: ../../sandbox-permissions-reference.rst:19
+#: ../../sandbox-permissions-reference.rst:20
 msgid "Talk to a named service on the session bus"
 msgstr "Общение с названной службой на сеансовой шине"
 
-#: ../../sandbox-permissions-reference.rst:20
+#: ../../sandbox-permissions-reference.rst:21
 msgid "``--system-talk-name=org.freedesktop.GeoClue2``"
 msgstr "``--system-talk-name=org.freedesktop.GeoClue2``"
 
-#: ../../sandbox-permissions-reference.rst:20
+#: ../../sandbox-permissions-reference.rst:21
 msgid "Talk to a named service on the system bus"
 msgstr "Общение с указанной службой на системной шине"
 
-#: ../../sandbox-permissions-reference.rst:21
+#: ../../sandbox-permissions-reference.rst:22
+#, fuzzy
+msgid "``--socket=cups``"
+msgstr "``--socket=x11``"
+
+#: ../../sandbox-permissions-reference.rst:22
+msgid "Talk to the CUPS printing system"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:23
+#, fuzzy
+msgid "``--socket=gpg-agent``"
+msgstr "``--socket=wayland``"
+
+#: ../../sandbox-permissions-reference.rst:23
+msgid "Talk to the GPG agent"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:24
+#, fuzzy
+msgid "``--socket=pcsc``"
+msgstr "``--socket=x11``"
+
+#: ../../sandbox-permissions-reference.rst:24
+msgid "Grant access to smart card"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:25
+#, fuzzy
+msgid "``--socket=ssh-auth``"
+msgstr "``--socket=system-bus``"
+
+#: ../../sandbox-permissions-reference.rst:25
+msgid "SSH authentication"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:26
+#, fuzzy
+msgid "``--socket=session-bus``"
+msgstr "``--socket=system-bus``"
+
+#: ../../sandbox-permissions-reference.rst:26
+msgid "Unlimited access to user's D-Bus session"
+msgstr ""
+
+#: ../../sandbox-permissions-reference.rst:27
 msgid "``--socket=system-bus``"
 msgstr "``--socket=system-bus``"
 
-#: ../../sandbox-permissions-reference.rst:21
+#: ../../sandbox-permissions-reference.rst:27
 msgid "Unlimited access to all of D-Bus"
 msgstr "Неограниченный доступ ко всем интерфейсам D-Bus"
 
-#: ../../sandbox-permissions-reference.rst:25
+#: ../../sandbox-permissions-reference.rst:31
 msgid "Filesystem permissions"
 msgstr "Разрешения файловой системы"
 
-#: ../../sandbox-permissions-reference.rst:27
+#: ../../sandbox-permissions-reference.rst:33
 msgid ""
-"Each of the following permissions configure filesystem access, and should be "
-"added to ``--filesystem=``:"
+"Each of the following permissions configure filesystem access, and should"
+" be added to ``--filesystem=``:"
 msgstr ""
 "Каждое из следующих разрешений настраивает доступ к файловой системе и "
 "должно быть добавлено в ``--filesystem=``:"
 
-#: ../../sandbox-permissions-reference.rst:31
+#: ../../sandbox-permissions-reference.rst:37
 msgid "``host``"
 msgstr "``host``"
 
-#: ../../sandbox-permissions-reference.rst:31
+#: ../../sandbox-permissions-reference.rst:37
 msgid "Access all files [#f3]_"
 msgstr "Доступ ко всем файлам [#f3]_"
 
-#: ../../sandbox-permissions-reference.rst:32
+#: ../../sandbox-permissions-reference.rst:38
+#, fuzzy
+msgid "``host-etc``"
+msgstr "``host``"
+
+#: ../../sandbox-permissions-reference.rst:38
+#, fuzzy
+msgid "Access all files in /etc"
+msgstr "Доступ ко всем файлам [#f3]_"
+
+#: ../../sandbox-permissions-reference.rst:39
 msgid "``home``"
 msgstr "``home``"
 
-#: ../../sandbox-permissions-reference.rst:32
+#: ../../sandbox-permissions-reference.rst:39
 msgid "Access the home directory"
 msgstr "Доступ к домашнему каталогу"
 
-#: ../../sandbox-permissions-reference.rst:33
+#: ../../sandbox-permissions-reference.rst:40
 msgid "``/some/dir``"
 msgstr "``/some/dir``"
 
-#: ../../sandbox-permissions-reference.rst:33
+#: ../../sandbox-permissions-reference.rst:40
 msgid "Access an arbitrary path"
 msgstr "Доступ к случайному пути"
 
-#: ../../sandbox-permissions-reference.rst:34
+#: ../../sandbox-permissions-reference.rst:41
 msgid "``~/some/dir``"
 msgstr "``~/some/dir``"
 
-#: ../../sandbox-permissions-reference.rst:34
+#: ../../sandbox-permissions-reference.rst:41
 msgid "Access an arbitrary path relative to the home directory"
 msgstr "Доступ к случайному пути относительно домашнего каталога"
 
-#: ../../sandbox-permissions-reference.rst:35
+#: ../../sandbox-permissions-reference.rst:42
 msgid "``xdg-desktop``"
 msgstr "``xdg-desktop``"
 
-#: ../../sandbox-permissions-reference.rst:35
+#: ../../sandbox-permissions-reference.rst:42
 msgid "Access the XDG desktop directory"
 msgstr "Доступ к каталогу рабочего стола XDG"
 
-#: ../../sandbox-permissions-reference.rst:36
+#: ../../sandbox-permissions-reference.rst:43
 msgid "``xdg-documents``"
 msgstr "``xdg-documents``"
 
-#: ../../sandbox-permissions-reference.rst:36
+#: ../../sandbox-permissions-reference.rst:43
 msgid "Access the XDG documents directory"
 msgstr "Доступ к каталогу документов XDG"
 
-#: ../../sandbox-permissions-reference.rst:37
+#: ../../sandbox-permissions-reference.rst:44
 msgid "``xdg-download``"
 msgstr "``xdg-download``"
 
-#: ../../sandbox-permissions-reference.rst:37
+#: ../../sandbox-permissions-reference.rst:44
 msgid "Access the XDG download directory"
 msgstr "Доступ к каталогу загрузки XDG"
 
-#: ../../sandbox-permissions-reference.rst:38
+#: ../../sandbox-permissions-reference.rst:45
 msgid "``xdg-music``"
 msgstr "``xdg-music``"
 
-#: ../../sandbox-permissions-reference.rst:38
+#: ../../sandbox-permissions-reference.rst:45
 msgid "Access the XDG music directory"
 msgstr "Доступ к музыкальному каталогу XDG"
 
-#: ../../sandbox-permissions-reference.rst:39
+#: ../../sandbox-permissions-reference.rst:46
 msgid "``xdg-pictures``"
 msgstr "``xdg-pictures``"
 
-#: ../../sandbox-permissions-reference.rst:39
+#: ../../sandbox-permissions-reference.rst:46
 msgid "Access the XDG pictures directory"
 msgstr "Доступ к каталогу изображений XDG"
 
-#: ../../sandbox-permissions-reference.rst:40
+#: ../../sandbox-permissions-reference.rst:47
 msgid "``xdg-public-share``"
 msgstr "``xdg-public-share``"
 
-#: ../../sandbox-permissions-reference.rst:40
+#: ../../sandbox-permissions-reference.rst:47
 msgid "Access the XDG public directory"
 msgstr "Доступ к общедоступному каталогу XDG"
 
-#: ../../sandbox-permissions-reference.rst:41
+#: ../../sandbox-permissions-reference.rst:48
 msgid "``xdg-videos``"
 msgstr "``xdg-videos``"
 
-#: ../../sandbox-permissions-reference.rst:41
+#: ../../sandbox-permissions-reference.rst:48
 msgid "Access the XDG videos directory"
 msgstr "Доступ к видеокаталогу XDG"
 
-#: ../../sandbox-permissions-reference.rst:42
+#: ../../sandbox-permissions-reference.rst:49
 msgid "``xdg-templates``"
 msgstr "``xdg-templates``"
 
-#: ../../sandbox-permissions-reference.rst:42
+#: ../../sandbox-permissions-reference.rst:49
 msgid "Access the XDG templates directory"
 msgstr "Доступ к каталогу шаблонов XDG"
 
-#: ../../sandbox-permissions-reference.rst:43
+#: ../../sandbox-permissions-reference.rst:50
 msgid "``xdg-config``"
 msgstr "``xdg-music``"
 
-#: ../../sandbox-permissions-reference.rst:43
+#: ../../sandbox-permissions-reference.rst:50
 msgid "Access the XDG config directory"
 msgstr "Доступ к каталогу конфигурации XDG"
 
-#: ../../sandbox-permissions-reference.rst:44
+#: ../../sandbox-permissions-reference.rst:51
 msgid "``xdg-cache``"
 msgstr "``xdg-cache``"
 
-#: ../../sandbox-permissions-reference.rst:44
+#: ../../sandbox-permissions-reference.rst:51
 msgid "Access the XDG cache directory"
 msgstr "Доступ к каталогу кеша XDG"
 
-#: ../../sandbox-permissions-reference.rst:45
+#: ../../sandbox-permissions-reference.rst:52
 msgid "``xdg-data``"
 msgstr "``xdg-data``"
 
-#: ../../sandbox-permissions-reference.rst:45
+#: ../../sandbox-permissions-reference.rst:52
 msgid "Access the XDG data directory"
 msgstr "Доступ к каталогу данных XDG"
 
-#: ../../sandbox-permissions-reference.rst:46
+#: ../../sandbox-permissions-reference.rst:53
 msgid "``xdg-run/path``"
 msgstr "``xdg-run/path``"
 
-#: ../../sandbox-permissions-reference.rst:46
+#: ../../sandbox-permissions-reference.rst:53
 msgid ""
 "Access subdirectories of the XDG runtime directory (where path is any "
 "subdirectory)"
@@ -268,60 +331,60 @@ msgstr ""
 "Доступ к подкаталогам каталога среды выполнения XDG (где путь — любой "
 "подкаталог)"
 
-#: ../../sandbox-permissions-reference.rst:49
+#: ../../sandbox-permissions-reference.rst:56
 msgid ""
-"Paths can be added to all the above filesystem options. For example, ``--"
-"filesystem=xdg-documents/path``. The following permission options can also "
-"be added:"
+"Paths can be added to all the above filesystem options. For example, "
+"``--filesystem=xdg-documents/path``. The following permission options can"
+" also be added:"
 msgstr ""
 "Пути могут быть добавлены ко всем указанным выше параметрам файловой "
-"системы. Например, ``--filesystem=xdg-documents/path``. Также можно добавить "
-"следующие параметры разрешений:"
+"системы. Например, ``--filesystem=xdg-documents/path``. Также можно "
+"добавить следующие параметры разрешений:"
 
-#: ../../sandbox-permissions-reference.rst:53
+#: ../../sandbox-permissions-reference.rst:60
 msgid "``:ro`` - read-only access"
 msgstr "``:ro`` - доступ только для чтения"
 
-#: ../../sandbox-permissions-reference.rst:54
+#: ../../sandbox-permissions-reference.rst:61
 msgid "``:rw`` - read/write access (this is the default)"
 msgstr "``:rw`` - доступ для чтения/записи (по умолчанию)"
 
-#: ../../sandbox-permissions-reference.rst:55
+#: ../../sandbox-permissions-reference.rst:62
 msgid ""
-"``:create`` - read/write access, and create the directory if it doesn't exist"
+"``:create`` - read/write access, and create the directory if it doesn't "
+"exist"
 msgstr ""
 "``:create`` - доступ для чтения/записи и создание каталога, если он не "
 "существует"
 
-#: ../../sandbox-permissions-reference.rst:58
+#: ../../sandbox-permissions-reference.rst:65
 msgid "Footnotes"
 msgstr "Сноски"
 
-#: ../../sandbox-permissions-reference.rst:59
+#: ../../sandbox-permissions-reference.rst:66
 msgid ""
 "This is not necessarily required, but without it the X11 shared memory "
 "extension will not work, which is very bad for X11 performance."
 msgstr ""
-"Это не обязательно, но без него расширение разделяемой памяти X11 не будет "
-"работать, что очень плохо для производительности X11."
+"Это не обязательно, но без него расширение разделяемой памяти X11 не "
+"будет работать, что очень плохо для производительности X11."
 
-#: ../../sandbox-permissions-reference.rst:61
+#: ../../sandbox-permissions-reference.rst:68
 msgid ""
-"Giving network access also grants access to all host services listening on "
-"abstract Unix sockets (due to how network namespaces work), and these have "
-"no permission checks. This unfortunately affects e.g. the X server and the "
-"session bus which listens to abstract sockets by default. A secure "
-"distribution should disable these and just use regular sockets."
+"Giving network access also grants access to all host services listening "
+"on abstract Unix sockets (due to how network namespaces work), and these "
+"have no permission checks. This unfortunately affects e.g. the X server "
+"and the session bus which listens to abstract sockets by default. A "
+"secure distribution should disable these and just use regular sockets."
 msgstr ""
 "Предоставление доступа к сети также предоставляет доступ ко всем службам "
 "хоста, прослушивающим абстрактные сокеты Unix (из-за того, как работают "
 "сетевые пространства имен), и они не имеют проверок разрешений. Это, к "
-"сожалению, влияет, например. X-сервер и сеансовая шина, которая по умолчанию "
-"слушает абстрактные сокеты. Безопасный дистрибутив должен отключить их и "
-"использовать обычные сокеты."
+"сожалению, влияет, например. X-сервер и сеансовая шина, которая по "
+"умолчанию слушает абстрактные сокеты. Безопасный дистрибутив должен "
+"отключить их и использовать обычные сокеты."
 
-#: ../../sandbox-permissions-reference.rst:66
-msgid ""
-"Except for the blacklisted paths mentioned in :doc:`sandbox-permissions`."
-msgstr ""
-"За исключением черных списков, упомянутых в :doc:`sandbox-permissions`."
+#: ../../sandbox-permissions-reference.rst:73
+msgid "Except for the blacklisted paths mentioned in :doc:`sandbox-permissions`."
+msgstr "За исключением черных списков, упомянутых в :doc:`sandbox-permissions`."
+

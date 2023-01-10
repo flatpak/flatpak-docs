@@ -7,19 +7,19 @@
 # TingPing <tingping@tingping.se>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-11 18:07-0400\n"
+"POT-Creation-Date: 2023-01-07 16:26-0600\n"
 "PO-Revision-Date: 2018-05-21 04:47-0400\n"
-"Last-Translator: Baptiste Mille-Mathias <baptiste.millemathias@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Baptiste Mille-Mathias <baptiste.millemathias@gmail.com>"
+"\n"
 "Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
-"Generated-By: Babel 2.5.1\n"
-"X-Generator: Zanata 4.6.2\n"
+"Generated-By: Babel 2.10.3\n"
 
 #: ../../repositories.rst:2
 msgid "Repositories"
@@ -27,121 +27,125 @@ msgstr "Dépôt"
 
 #: ../../repositories.rst:4
 msgid ""
-"Flatpak repositories are the primary mechanism for publishing applications, "
-"so that they can be installed by users."
+"Flatpak repositories are the primary mechanism for publishing "
+"applications, so that they can be installed by users."
 msgstr ""
 "Les dépôts Flatpak sont le mécanisme principal pour publier des "
 "applications, ainsi elles peuvent être installées par des utilisateurs. "
 
-#: ../../repositories.rst:6
+#: ../../repositories.rst:7
 msgid ""
 "Some aspects of repositories are addressed by other sections of the "
 "documentation. Basic commands for adding, removing and inspecting "
-"repositories can be found in the :doc:`using-flatpak` section. Additionally,"
-" the section on :doc:`flatpak-builder` covers the most common method for "
-"adding applications to repositories."
+"repositories can be found in the :doc:`using-flatpak` section. "
+"Additionally, the section on :doc:`flatpak-builder` covers the most "
+"common method for adding applications to repositories."
 msgstr ""
 "Certains aspects des dépôts sont couverts par d'autres sections de cette "
-"documentation. Les commandes basiques pour ajouter, supprimer et inspecter "
-"les dépôts peuvent être trouvées dans la section :doc:`using-flatpak`. "
-"Additionnellement, la section sur :doc:`flatpak-builder` couvre la façon la "
-"plus commune pour ajouter des applications à un dépôt."
+"documentation. Les commandes basiques pour ajouter, supprimer et "
+"inspecter les dépôts peuvent être trouvées dans la section :doc:`using-"
+"flatpak`. Additionnellement, la section sur :doc:`flatpak-builder` couvre"
+" la façon la plus commune pour ajouter des applications à un dépôt."
 
-#: ../../repositories.rst:8
+#: ../../repositories.rst:13
+#, fuzzy
 msgid ""
-"To use a repository to publish an application, it is possible to either host"
-" your own (covered in the next section, :doc:`hosting-a-repository`) or use "
-"`Flathub <http://flathub.org>`_, the primary publishing and hosting service "
-"for Flatpak applications."
+"To use a repository to publish an application, it is possible to either "
+"host your own (covered in the next section, :doc:`hosting-a-repository`) "
+"or use `Flathub <https://flathub.org>`_, the primary publishing and "
+"hosting service for Flatpak applications."
 msgstr ""
 "Pour utiliser un dépôt pour publier une application, il est possible "
-"d'héberger le vôtre (expliqué dans la prochaine section, :doc:`hosting-a-"
-"repository`) ou utiliser `Flathub <http://flathub.org>`_, le service "
-"principal de publication et d'hébergement des applications Flatpak. "
+"d'héberger le vôtre (expliqué dans la prochaine section, "
+":doc:`hosting-a-repository`) ou utiliser `Flathub <http://flathub.org>`_,"
+" le service principal de publication et d'hébergement des applications "
+"Flatpak. "
 
-#: ../../repositories.rst:10
+#: ../../repositories.rst:18
 msgid ""
 "Software center applications like GNOME Software or KDE Discover allow "
 "browsing repositories, and can also dynamically promote new or popular "
-"applications. If you use Flathub, the repository will typically have already"
-" been added by users, so adding an application to the repository is "
-"sufficient to make it available to them."
+"applications. If you use Flathub, the repository will typically have "
+"already been added by users, so adding an application to the repository "
+"is sufficient to make it available to them."
 msgstr ""
 
-#: ../../repositories.rst:13
+#: ../../repositories.rst:25
 msgid ".flatpakref files"
 msgstr "fichiers .flatpakref"
 
-#: ../../repositories.rst:15
+#: ../../repositories.rst:27
 msgid ""
 "``.flatpakref`` files can be used in combination with repositories to "
-"provide an additional, easy way for users to install an application, often "
-"by clicking on the file or a download link."
+"provide an additional, easy way for users to install an application, "
+"often by clicking on the file or a download link."
 msgstr ""
 
-#: ../../repositories.rst:17
+#: ../../repositories.rst:31
 msgid ""
-"Internally, ``.flatpakref`` files are simple description files that include "
-"information about a Flatpak application. An example::"
+"Internally, ``.flatpakref`` files are simple description files that "
+"include information about a Flatpak application. An example::"
 msgstr ""
 
-#: ../../repositories.rst:28
+#: ../../repositories.rst:43
 msgid ""
-"As can be seen, the file includes the ID of the application and the location"
-" of the repository that contains it, as well a link to information about the"
-" repository that provides the application's runtime. ``.flatpakref`` files "
-"therefore contain all the information needed to install an application."
+"As can be seen, the file includes the ID of the application and the "
+"location of the repository that contains it, as well a link to "
+"information about the repository that provides the application's runtime."
+" ``.flatpakref`` files therefore contain all the information needed to "
+"install an application."
 msgstr ""
 
-#: ../../repositories.rst:32
+#: ../../repositories.rst:50
 msgid ""
-"``.flatpakref`` files should include the base64-encoded version of the GPG "
-"key that was used to sign the repository. This can be obtained with the "
-"following command::"
+"``.flatpakref`` files should include the base64-encoded version of the "
+"GPG key that was used to sign the repository. This can be obtained with "
+"the following command::"
 msgstr ""
-"Les fichiers ``.flatpakref`` incluent une version encodée en base64 de la "
-"clé GPG qui a été utilisée pour signer le dépôt. Elle peut être obtenue avec"
-" la commande suivante::"
+"Les fichiers ``.flatpakref`` incluent une version encodée en base64 de la"
+" clé GPG qui a été utilisée pour signer le dépôt. Elle peut être obtenue "
+"avec la commande suivante::"
 
-#: ../../repositories.rst:36
+#: ../../repositories.rst:56
 msgid ""
-"One advantage of ``.flatpakref`` files is that they can be used to install "
-"applications even if their repository hasn't been added by the user. In this"
-" case the repository that contains the application will either be "
-"automatically installed, or the user will be prompted to install it. This "
-"will also happen if the necessary runtime isn't present."
+"One advantage of ``.flatpakref`` files is that they can be used to "
+"install applications even if their repository hasn't been added by the "
+"user. In this case the repository that contains the application will "
+"either be automatically installed, or the user will be prompted to "
+"install it. This will also happen if the necessary runtime isn't present."
 msgstr ""
 
-#: ../../repositories.rst:38
+#: ../../repositories.rst:62
 msgid ""
-"``.flatpakref`` can be used to install applications from the command line as"
-" well as with graphical software installers. This is done with the standard "
-"``flatpak install`` command, which accepts both local and remote "
-"``.flatpakref`` files. For example::"
+"``.flatpakref`` can be used to install applications from the command line"
+" as well as with graphical software installers. This is done with the "
+"standard ``flatpak install`` command, which accepts both local and remote"
+" ``.flatpakref`` files. For example::"
 msgstr ""
 
-#: ../../repositories.rst:42
+#: ../../repositories.rst:69
 msgid "Or, if the same file has been downloaded::"
 msgstr "Ou, si le même fichier a été téléchargé::"
 
-#: ../../repositories.rst:48
+#: ../../repositories.rst:75
 msgid "Publishing updates"
 msgstr "Publier des mises à jour"
 
-#: ../../repositories.rst:50
+#: ../../repositories.rst:77
 msgid ""
 "Flatpak repositories are similar to Git repositories, in that they store "
 "every version of an application by keeping a record of the difference "
 "between each version. This makes updating efficient, since only the "
-"difference (or \"delta\") between two versions needs to be downloaded when "
-"an update is performed."
+"difference (or \"delta\") between two versions needs to be downloaded "
+"when an update is performed."
 msgstr ""
 
-#: ../../repositories.rst:52
+#: ../../repositories.rst:82
 msgid ""
 "When a new version of an application is added to a repository, it "
 "immediately becomes available to users. Software centers are able to "
-"automatically check for and install new versions. Those who are using the "
-"command line have to manually run ``flatpak update`` to check for and "
+"automatically check for and install new versions. Those who are using the"
+" command line have to manually run ``flatpak update`` to check for and "
 "install new versions of any applications they have installed."
 msgstr ""
+

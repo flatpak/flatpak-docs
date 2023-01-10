@@ -1,22 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, Flatpak Team. Licensed under Creative Commons Attribution 4.0 International License.
+# Copyright (C) 2017, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 # TingPing <tingping@tingping.se>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-06 16:55+0900\n"
+"POT-Creation-Date: 2023-01-07 16:26-0600\n"
 "PO-Revision-Date: 2018-05-20 10:37-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: ohpato <ohpato@hanmail.net>\n"
 "Language: ko\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: ohpato <ohpato@hanmail.net>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Zanata 4.6.2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
 
 #: ../../repositories.rst:2
 msgid "Repositories"
@@ -24,130 +25,134 @@ msgstr "저장소"
 
 #: ../../repositories.rst:4
 msgid ""
-"Flatpak repositories are the primary mechanism for publishing applications, "
-"so that they can be installed by users."
+"Flatpak repositories are the primary mechanism for publishing "
+"applications, so that they can be installed by users."
 msgstr "플랫팩 저장소는 응용프로그램들을 발행(publish)하여 사용자가 설치할 수 있도록 하기 위한 주요 메커니즘이다."
 
-#: ../../repositories.rst:6
+#: ../../repositories.rst:7
 msgid ""
 "Some aspects of repositories are addressed by other sections of the "
 "documentation. Basic commands for adding, removing and inspecting "
-"repositories can be found in the :doc:`using-flatpak` section. Additionally,"
-" the section on :doc:`flatpak-builder` covers the most common method for "
-"adding applications to repositories."
+"repositories can be found in the :doc:`using-flatpak` section. "
+"Additionally, the section on :doc:`flatpak-builder` covers the most "
+"common method for adding applications to repositories."
 msgstr ""
-"저장소에 관한 사항은 문서의 다른 장에서 다루고 있다. 저장소를 추가하고 제거하고 조회하기 위한 기본적인 명령들은 :doc:`플랫팩 "
-"사용하기`에서 찾을 수 있다. 추가적으로 :doc:`플랫팩 빌더`문서는 저장소에 응용프로그램을 추가하기 위한 일반적인 방법을 설명한다."
+"저장소에 관한 사항은 문서의 다른 장에서 다루고 있다. 저장소를 추가하고 제거하고 조회하기 위한 기본적인 명령들은 :doc:`플랫팩"
+" 사용하기`에서 찾을 수 있다. 추가적으로 :doc:`플랫팩 빌더`문서는 저장소에 응용프로그램을 추가하기 위한 일반적인 방법을 "
+"설명한다."
 
-#: ../../repositories.rst:8
+#: ../../repositories.rst:13
+#, fuzzy
 msgid ""
-"To use a repository to publish an application, it is possible to either host"
-" your own (covered in the next section, :doc:`hosting-a-repository`) or use "
-"`Flathub <http://flathub.org>`_, the primary publishing and hosting service "
-"for Flatpak applications."
+"To use a repository to publish an application, it is possible to either "
+"host your own (covered in the next section, :doc:`hosting-a-repository`) "
+"or use `Flathub <https://flathub.org>`_, the primary publishing and "
+"hosting service for Flatpak applications."
 msgstr ""
 "응용프로그램의 발행을 위해 자신만의 저장소를 운영하는 것도 가능하며 (:doc:`저장소 운영하기` 문서에서 다룬다) , 플랫팩 "
 "응용프로그램을 발생하고 호스팅하는 서비스인 `플랫허브(Flathub) <http://flathub.org>`_를 사용할 수도 있다."
 
-#: ../../repositories.rst:10
+#: ../../repositories.rst:18
 msgid ""
 "Software center applications like GNOME Software or KDE Discover allow "
 "browsing repositories, and can also dynamically promote new or popular "
-"applications. If you use Flathub, the repository will typically have already"
-" been added by users, so adding an application to the repository is "
-"sufficient to make it available to them."
+"applications. If you use Flathub, the repository will typically have "
+"already been added by users, so adding an application to the repository "
+"is sufficient to make it available to them."
 msgstr ""
-"GNOME Software나 KDE Discover와 같은 소프트웨어 센터 응용프로그램들은 저장소를 브라우징하고 최신 혹은 인기있는 "
-"응용프로그램을 동적으로 조회할 수 있도록 지원한다. 플랫허브는 많은 사용자들이 추가하는 저장소이므로, 빌드한 프로그램을 플랫허브에 "
-"추가하는 것 만으로도 사용자들에게 공개하기에 충분하다."
+"GNOME Software나 KDE Discover와 같은 소프트웨어 센터 응용프로그램들은 저장소를 브라우징하고 최신 혹은 인기있는"
+" 응용프로그램을 동적으로 조회할 수 있도록 지원한다. 플랫허브는 많은 사용자들이 추가하는 저장소이므로, 빌드한 프로그램을 플랫허브에"
+" 추가하는 것 만으로도 사용자들에게 공개하기에 충분하다."
 
-#: ../../repositories.rst:13
+#: ../../repositories.rst:25
 msgid ".flatpakref files"
 msgstr ".flatpakref 파일"
 
-#: ../../repositories.rst:15
+#: ../../repositories.rst:27
 msgid ""
 "``.flatpakref`` files can be used in combination with repositories to "
-"provide an additional, easy way for users to install an application, often "
-"by clicking on the file or a download link."
+"provide an additional, easy way for users to install an application, "
+"often by clicking on the file or a download link."
 msgstr ""
 "사용자에게 응용프로그램을 쉽게 설치하도록 지원하는 추가적인 수단으로 ``.flatpakref`` 파일과 저장소를 함께 이용할 수 "
 "있다.사용자는 ``.flatpakref`` 파일 또는 파일의 링크만 클릭하면 된다."
 
-#: ../../repositories.rst:17
+#: ../../repositories.rst:31
 msgid ""
-"Internally, ``.flatpakref`` files are simple description files that include "
-"information about a Flatpak application. An example::"
-msgstr ""
-"내부적으로 ``.flatpakref`` 파일은 플랫팩 응용프로그램에 관한 정보를 담고 있는 단순 설명 파일이다. 예를 들면 이렇다::"
+"Internally, ``.flatpakref`` files are simple description files that "
+"include information about a Flatpak application. An example::"
+msgstr "내부적으로 ``.flatpakref`` 파일은 플랫팩 응용프로그램에 관한 정보를 담고 있는 단순 설명 파일이다. 예를 들면 이렇다::"
 
-#: ../../repositories.rst:28
+#: ../../repositories.rst:43
 msgid ""
-"As can be seen, the file includes the ID of the application and the location"
-" of the repository that contains it, as well a link to information about the"
-" repository that provides the application's runtime. ``.flatpakref`` files "
-"therefore contain all the information needed to install an application."
+"As can be seen, the file includes the ID of the application and the "
+"location of the repository that contains it, as well a link to "
+"information about the repository that provides the application's runtime."
+" ``.flatpakref`` files therefore contain all the information needed to "
+"install an application."
 msgstr ""
-"보이는 바와 같이 파일은 응용프로그램의 ID와 해당 프로그램을 올려둔 저장소의 위치, 그리고 해당 프로그램의 런타임을 제공하는 저장소 "
-"정보를 담고 있다. 따라서 응용프로그램 설치에 필요한 모든 정보가 ``.flatpakref`` 파일에 담겨있다고 할 수 있다."
+"보이는 바와 같이 파일은 응용프로그램의 ID와 해당 프로그램을 올려둔 저장소의 위치, 그리고 해당 프로그램의 런타임을 제공하는 "
+"저장소 정보를 담고 있다. 따라서 응용프로그램 설치에 필요한 모든 정보가 ``.flatpakref`` 파일에 담겨있다고 할 수 "
+"있다."
 
-#: ../../repositories.rst:32
+#: ../../repositories.rst:50
 msgid ""
-"``.flatpakref`` files should include the base64-encoded version of the GPG "
-"key that was used to sign the repository. This can be obtained with the "
-"following command::"
+"``.flatpakref`` files should include the base64-encoded version of the "
+"GPG key that was used to sign the repository. This can be obtained with "
+"the following command::"
 msgstr ""
-"``.flatpakref`` 파일은 저장소 서명에 사용된 GPG 키의 base64 인코딩 버전을 포함해야 한다. 다음과 같은 명령을 "
-"실행하여 통해 얻을 수 있다::"
+"``.flatpakref`` 파일은 저장소 서명에 사용된 GPG 키의 base64 인코딩 버전을 포함해야 한다. 다음과 같은 명령을"
+" 실행하여 통해 얻을 수 있다::"
 
-#: ../../repositories.rst:36
+#: ../../repositories.rst:56
 msgid ""
-"One advantage of ``.flatpakref`` files is that they can be used to install "
-"applications even if their repository hasn't been added by the user. In this"
-" case the repository that contains the application will either be "
-"automatically installed, or the user will be prompted to install it. This "
-"will also happen if the necessary runtime isn't present."
+"One advantage of ``.flatpakref`` files is that they can be used to "
+"install applications even if their repository hasn't been added by the "
+"user. In this case the repository that contains the application will "
+"either be automatically installed, or the user will be prompted to "
+"install it. This will also happen if the necessary runtime isn't present."
 msgstr ""
-"``.flatpakref`` 파일을 이용할 때의 장점은 사용자가 저장소를 추가하지 않았더라도 해당 저장소에 있는 응용프로그램을 설치할 수"
-" 있도록 한다는 것이다. 이 경우 해당 저장소는 자동으로 설치되거나 사용자에게 설치할 것인지 여부를 묻게된다. 필요한 런타임이 설치되어 "
-"있지 않은 경우에도 동일한 과정을 거친다."
+"``.flatpakref`` 파일을 이용할 때의 장점은 사용자가 저장소를 추가하지 않았더라도 해당 저장소에 있는 응용프로그램을 "
+"설치할 수 있도록 한다는 것이다. 이 경우 해당 저장소는 자동으로 설치되거나 사용자에게 설치할 것인지 여부를 묻게된다. 필요한 "
+"런타임이 설치되어 있지 않은 경우에도 동일한 과정을 거친다."
 
-#: ../../repositories.rst:38
+#: ../../repositories.rst:62
 msgid ""
-"``.flatpakref`` can be used to install applications from the command line as"
-" well as with graphical software installers. This is done with the standard "
-"``flatpak install`` command, which accepts both local and remote "
-"``.flatpakref`` files. For example::"
+"``.flatpakref`` can be used to install applications from the command line"
+" as well as with graphical software installers. This is done with the "
+"standard ``flatpak install`` command, which accepts both local and remote"
+" ``.flatpakref`` files. For example::"
 msgstr ""
 "``.flatpakref`` 은 커맨드라인이나 GUI기반 설치관리자를 통해 응용프로그램을 설치할 때에도 사용할 수 있다. "
-"``flatpak install`` 명령어를 실행하면 로컬 또는 원격의 ``.flatpakref`` 파일 링크를 이용하여 응용프로그램을 "
-"설치한다. 예를 들면::"
+"``flatpak install`` 명령어를 실행하면 로컬 또는 원격의 ``.flatpakref`` 파일 링크를 이용하여 "
+"응용프로그램을 설치한다. 예를 들면::"
 
-#: ../../repositories.rst:42
+#: ../../repositories.rst:69
 msgid "Or, if the same file has been downloaded::"
 msgstr "해당 파일이 이미 다운로드 되어 있는 경우에는::"
 
-#: ../../repositories.rst:48
+#: ../../repositories.rst:75
 msgid "Publishing updates"
 msgstr "발행 내역 갱신 (publishing updates)"
 
-#: ../../repositories.rst:50
+#: ../../repositories.rst:77
 msgid ""
 "Flatpak repositories are similar to Git repositories, in that they store "
 "every version of an application by keeping a record of the difference "
 "between each version. This makes updating efficient, since only the "
-"difference (or \"delta\") between two versions needs to be downloaded when "
-"an update is performed."
+"difference (or \"delta\") between two versions needs to be downloaded "
+"when an update is performed."
 msgstr ""
 
-#: ../../repositories.rst:52
+#: ../../repositories.rst:82
 msgid ""
 "When a new version of an application is added to a repository, it "
 "immediately becomes available to users. Software centers are able to "
-"automatically check for and install new versions. Those who are using the "
-"command line have to manually run ``flatpak update`` to check for and "
+"automatically check for and install new versions. Those who are using the"
+" command line have to manually run ``flatpak update`` to check for and "
 "install new versions of any applications they have installed."
 msgstr ""
-"저장소에 새 버전의 응용프로그램이 추가되면, 사용자는 즉시 이를 사용할 수 있다. 소프트웨어 센터들은 자동으로 새 버전을 검사하고 설치할"
-" 수 있다. 명령 행을 사용하는 경우에는 수동으로``flatpak update`` 명령을 입력하여, 설치한 응용프로그램의 새 버전을 "
-"검사하고 설치할 수 있다."
+"저장소에 새 버전의 응용프로그램이 추가되면, 사용자는 즉시 이를 사용할 수 있다. 소프트웨어 센터들은 자동으로 새 버전을 검사하고 "
+"설치할 수 있다. 명령 행을 사용하는 경우에는 수동으로``flatpak update`` 명령을 입력하여, 설치한 응용프로그램의 새 "
+"버전을 검사하고 설치할 수 있다."
+
