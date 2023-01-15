@@ -22,7 +22,7 @@ concepts are analogous to Git concepts. Like Git, Flatpak uses repositories
 to store data, and it tracks the differences between versions.
 
 With Flatpak, each application, runtime and extension is a branch in a
-repository. An identifier triple, such as ``com.company.App/i386/stable``
+repository. An identifier triple, such as ``com.company.App/x86_64/stable``
 is a reference to that branch. The output of a Flatpak build process is a
 directory of files which is committed to one of these branches.
 
