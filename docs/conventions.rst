@@ -101,6 +101,12 @@ icon is::
 
   /app/share/icons/hicolor/128x128/apps/org.gnome.Dictionary.png
 
+Icons must be square shaped, ie their width and height must be the
+same. The maximum size allowed by the specification is 512x512px. SVG
+icons are of size ``scalable``::
+
+  /app/share/icons/hicolor/scalable/apps/org.gnome.Dictionary.svg
+
 Desktop files
 `````````````
 
