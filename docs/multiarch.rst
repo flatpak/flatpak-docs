@@ -92,9 +92,12 @@ You can combine the above two steps in a special module, e.g.
         - mkdir -p /app/lib/i386-linux-gnu/GL
         - install -Dm644 ld.so.conf /app/etc/ld.so.conf
       sources:
-        - type: file
+        - type: inline
           dest-filename: ld.so.conf
-          url: data:/app/lib32%0A/app/lib/i386-linux-gnu%0A
+          contents: |
+            /app/lib32
+            /app/lib/i386-linux-gnu
+
 
 Building 32-bit modules
 -----------------------

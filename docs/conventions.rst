@@ -58,10 +58,12 @@ For some practical examples of bad IDs
   
   This ID is not valid according to the DBus specification. You can use ``org.example_site.Foo`` instead.
 
-- ``com.github.foo.Bar``
- 
-  While a project may be hosted on GitHub it does not have any control over the ``github.com`` domain. Instead
-  you should use ``io.github`` as shown above.
+- ``com.github.foo.Bar`` or ``com.gitlab.foo.Bar``
+
+  While a project may be hosted on GitHub or GitLab it does not have
+  any control over the ``github.com`` or ``gitlab.com``
+  domain. Instead you should use ``io.github`` or ``io.gitlab`` as
+  shown above.
 
 AppData files
 `````````````
@@ -100,6 +102,12 @@ For example, the path to the 128✕128px version of GNOME Dictionary's
 icon is::
 
   /app/share/icons/hicolor/128x128/apps/org.gnome.Dictionary.png
+
+Icons must be square shaped, ie their width and height must be the
+same. The maximum size allowed by the specification is 512x512px. SVG
+icons are of size ``scalable``::
+
+  /app/share/icons/hicolor/scalable/apps/org.gnome.Dictionary.svg
 
 Desktop files
 `````````````
