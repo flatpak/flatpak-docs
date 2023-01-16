@@ -294,7 +294,7 @@ msgstr ""
 "стола информации о каждом приложении. `Спецификация Freedesktop <https://"
 "specifications.freedesktop.org/desktop-entry-spec/latest/>`_ "
 "предоставляет полный справочник по написанию файлов рабочего стола и "
-"`дополнительную информацию о них <https://wiki.archlinux. org/title/"
+"`дополнительную информацию о них <https://wiki.archlinux.org/title/"
 "desktop_entries>`_ доступен онлайн."
 
 #: ../../conventions.rst:120
