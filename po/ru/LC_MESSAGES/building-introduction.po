@@ -142,12 +142,12 @@ msgstr ""
 
 #: ../../building-introduction.rst:55
 msgid ""
-"Each runtime has an accompanying SDK. For example, there is both a GNOME 3.26 "
-"runtime and a GNOME 3.26 SDK. Applications that use the runtime are built with "
+"Each runtime has an accompanying SDK. For example, there is both a GNOME 43 "
+"runtime and a GNOME 43 SDK. Applications that use the runtime are built with "
 "the matching SDK."
 msgstr ""
 "Каждая среда выполнения имеет сопутствующий SDK. Например, существует как среда "
-"выполнения GNOME 3.26, так и SDK GNOME 3.26. Приложения, использующие среду "
+"выполнения GNOME 43, так и SDK GNOME 43. Приложения, использующие среду "
 "выполнения, создаются с использованием соответствующего SDK."
 
 #: ../../building-introduction.rst:59
