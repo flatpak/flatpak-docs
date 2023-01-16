@@ -265,11 +265,21 @@ msgstr ""
 "Например, путь к версии значка GNOME Dictionary размером 128✕128 "
 "пикселей::"
 
-#: ../../conventions.rst:105
+#: ../../conventions.rst:104
+msgid ""
+"Icons must be square shaped, ie their width and height must be the "
+"same. The maximum size allowed by the specification is 512x512px. SVG "
+"icons are of size ``scalable``::"
+msgstr ""
+"Иконки должны быть квадратной формы, т.е. их ширина и высота должны быть "
+"одно и тоже. Максимальный размер, разрешенный спецификацией, составляет 512x512px. SVG "
+"иконки имеют размер ``масштабируемый``::"
+
+#: ../../conventions.rst:110
 msgid "Desktop files"
 msgstr "Файлы рабочего стола"
 
-#: ../../conventions.rst:107
+#: ../../conventions.rst:112
 msgid ""
 "Desktop files are used to provide the desktop environment with "
 "information about each application. The `Freedesktop specification "
@@ -285,7 +295,7 @@ msgstr ""
 "`дополнительную информацию о них <https://wiki.archlinux. org/title/"
 "desktop_entries>`_ доступен онлайн."
 
-#: ../../conventions.rst:114
+#: ../../conventions.rst:119
 msgid ""
 "Desktop files should be named with the application's ID, followed by the "
 "``.desktop`` file extension, and should be placed in ``/app/share/"
@@ -295,7 +305,7 @@ msgstr ""
 "которым следует расширение файла ``.desktop``, и должны быть помещены в "
 "``/app/share/applications/``. Например::"
 
-#: ../../conventions.rst:120
+#: ../../conventions.rst:123
 msgid ""
 "A minimal desktop file should contain at least the application's *name*, "
 "*exec* command, *type*, *icon* name and *categories*::"
@@ -303,7 +313,7 @@ msgstr ""
 "Минимальный файл рабочего стола должен содержать как минимум *имя* "
 "приложения, команду *exec*, *тип*, *имя значка* и *категории*::"
 
-#: ../../conventions.rst:130
+#: ../../conventions.rst:126
 msgid ""
 "The ``desktop-file-validate`` command can be used to check for errors in "
 "desktop files."
@@ -311,11 +321,11 @@ msgstr ""
 "Команду ``desktop-file-validate`` можно использовать для проверки "
 "наличия ошибок в файлах рабочего стола."
 
-#: ../../conventions.rst:134
+#: ../../conventions.rst:129
 msgid "Exporting through extra-data"
 msgstr "Экспорт через \"дополнительные данные\""
 
-#: ../../conventions.rst:136
+#: ../../conventions.rst:131
 msgid ""
 "Files downloaded through ``extra-data`` are only downloaded when "
 "installing, as such they aren't yet available for ``flatpak-builder`` to "
@@ -325,7 +335,7 @@ msgstr ""
 "поэтому они еще недоступны для «flatpak-builder» для автоматического "
 "экспорта в процессе сборки."
 
-#: ../../conventions.rst:138
+#: ../../conventions.rst:135
 msgid ""
 "When using ``extra-data``, place any files that must be exported under "
 "this location::"
@@ -333,7 +343,7 @@ msgstr ""
 "При использовании «extra-data» поместите все файлы, которые необходимо "
 "экспортировать, в это место::"
 
-#: ../../conventions.rst:142
+#: ../../conventions.rst:139
 msgid ""
 "For example, if GNOME Dictionary used ``extra-data`` to download a 96x96 "
 "icon this would be its path::"
@@ -341,11 +351,11 @@ msgstr ""
 "Например, если словарь GNOME использовал «extra-data» для загрузки "
 "значка 96x96, это будет его путь:"
 
-#: ../../conventions.rst:147
+#: ../../conventions.rst:143
 msgid "Technical conventions"
 msgstr "Технические соглашения"
 
-#: ../../conventions.rst:149
+#: ../../conventions.rst:145
 msgid ""
 "The following are standard technical conventions used by Flatpak and "
 "Linux desktops. Those with Linux experience will likely already be aware "
@@ -357,11 +367,11 @@ msgstr ""
 "уже знают о них. Однако разработчикам, которые не знакомы с Linux, часть "
 "этой информации может оказаться полезной."
 
-#: ../../conventions.rst:155
+#: ../../conventions.rst:150
 msgid "D-Bus"
 msgstr "D-Bus"
 
-#: ../../conventions.rst:157
+#: ../../conventions.rst:152
 msgid ""
 "D-Bus is the standard IPC framework used on Linux desktops. A lot of "
 "applications won't need to use it, but it is supported by Flatpak should "
@@ -371,7 +381,7 @@ msgstr ""
 "компьютерах Linux. Многим приложениям не нужно его использовать, но "
 "Flatpak поддерживает его, если это необходимо."
 
-#: ../../conventions.rst:161
+#: ../../conventions.rst:156
 msgid ""
 "D-Bus can be used for application launching and communicating with some "
 "system services. Applications can also provide their own D-Bus services "
@@ -383,11 +393,11 @@ msgstr ""
 "собственные службы D-Bus (при этом ожидается, что имя службы D-Bus будет "
 "таким же, как идентификатор приложения)."
 
-#: ../../conventions.rst:166
+#: ../../conventions.rst:161
 msgid "Filesystem layout"
 msgstr "Схема файловой системы"
 
-#: ../../conventions.rst:168
+#: ../../conventions.rst:163
 msgid ""
 "Each Flatpak sandbox, which is the environment in which an application "
 "is run, contains the filesystem of the application's runtime. This "
@@ -400,7 +410,7 @@ msgstr ""
 "системе Linux <https://en.wikipedia.org/wiki/"
 "Filesystem_Hierarchy_Standard>`_."
 
-#: ../../conventions.rst:173
+#: ../../conventions.rst:168
 msgid ""
 "For example, the root of the sandbox contains the ``/etc`` directory for "
 "configuration files and ``/usr`` for multi-user utilities and "
@@ -412,11 +422,11 @@ msgstr ""
 "дополнение к этому каждая песочница содержит каталог верхнего уровня ``/"
 "app``, в котором находятся собственные файлы приложения."
 
-#: ../../conventions.rst:179
+#: ../../conventions.rst:176
 msgid "XDG base directories"
 msgstr "Базовые каталоги XDG"
 
-#: ../../conventions.rst:181
+#: ../../conventions.rst:178
 msgid ""
 "`XDG base directories <https://specifications.freedesktop.org/basedir-"
 "spec/basedir-spec-latest.html>`_ are standard locations for user-"
@@ -429,13 +439,13 @@ msgstr ""
 "инструментов предоставляют удобные функции для доступа к базовым "
 "каталогам XDG. К ним относятся:"
 
-#: ../../conventions.rst:186
+#: ../../conventions.rst:183
 msgid "Electron: XDG base directories can be accessed with ``app.getPath``"
 msgstr ""
 "Electron: доступ к базовым каталогам XDG можно получить с помощью ``app."
 "getPath``"
 
-#: ../../conventions.rst:187
+#: ../../conventions.rst:185
 msgid ""
 "Glib: provides access to the XDG base directories through the "
 "``g_get_user_cache_dir ()``, ``g_get_user_data_dir ()``, "
@@ -445,7 +455,7 @@ msgstr ""
 "``g_get_user_cache_dir()``, ``g_get_user_data_dir()``, "
 "``g_get_user_config_dir()``"
 
-#: ../../conventions.rst:190
+#: ../../conventions.rst:188
 msgid ""
 "Qt: provides access to XDG base directories with the `QStandardPaths "
 "Class <https://doc.qt.io/qt-5/qstandardpaths.html>`_"
@@ -453,7 +463,7 @@ msgstr ""
 "Qt: предоставляет доступ к базовым каталогам XDG с помощью "
 "QStandardPaths <https://doc.qt.io/qt-5/qstandardpaths.html>`_"
 
-#: ../../conventions.rst:193
+#: ../../conventions.rst:191
 msgid ""
 "However, applications that aren't using one of these toolkits can expect "
 "to find their XDG base directories in the following locations:"
@@ -461,7 +471,7 @@ msgstr ""
 "Однако приложения, которые не используют один из этих наборов "
 "инструментов, могут найти свои базовые каталоги XDG в следующих местах:"
 
-#: ../../conventions.rst:197
+#: ../../conventions.rst:195
 msgid "Base directory"
 msgstr "Базовый каталог"
 
