@@ -73,7 +73,7 @@ msgstr ""
 #: ../../under-the-hood.rst:24
 msgid ""
 "With Flatpak, each application, runtime and extension is a branch in a "
-"repository. An identifier triple, such as ``com.company.App/i386/stable`` is "
+"repository. An identifier triple, such as ``com.company.App/x86_64/stable`` is "
 "a reference to that branch. The output of a Flatpak build process is a "
 "directory of files which is committed to one of these branches."
 msgstr ""
