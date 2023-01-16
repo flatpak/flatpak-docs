@@ -75,7 +75,7 @@ msgid ""
 msgstr ""
 "Как описано в :doc:`using-flatpak`, Flatpak требует, чтобы каждое "
 "приложение имело уникальный идентификатор, который имеет такую форму, "
-"как org.gnome.Dictionary``."
+"как ``org.gnome.Dictionary``."
 
 #: ../../conventions.rst:26
 msgid ""
