@@ -154,8 +154,8 @@ types include:
  - ``archive`` - ``.tar`` or ``.zip`` archive files
  - ``git`` - Git repositories
  - ``bzr`` - Bazaar repositories
- - ``file`` - local file (these are copied into the source directory)
- - ``dir`` - local directory (these are copied into the source directory)
+ - ``file`` - local/remote files (these are copied into the source directory)
+ - ``dir`` - local directories (these are copied into the source directory)
  - ``script`` - an array of shell commands (these are put in a shellscript
    file)
  - ``shell`` - an array of shell commands that are run during source extraction
