@@ -6,19 +6,20 @@
 # Dmitry <dmitrydmitry761@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"Project-Id-Version:  Flatpak\n"
+"Project-Id-Version: Flatpak\n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
 "POT-Creation-Date: 2023-01-07 16:26-0600\n"
-"PO-Revision-Date: 2023-01-06 22:32+0700\n"
+"PO-Revision-Date: 2023-01-16 23:03+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
-"Language: ru\n"
 "Language-Team: \n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "Generated-By: Babel 2.10.3\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../sandbox-permissions-reference.rst:2
 msgid "Sandbox Permissions Reference"
@@ -26,22 +27,22 @@ msgstr "Разрешения песочницы"
 
 #: ../../sandbox-permissions-reference.rst:4
 msgid ""
-"Sandbox permissions can be configured from an application manifest file "
-"(see :doc:`manifests`). They can also be set with the ``build-finish``, "
-"``run`` and ``override`` commands."
+"Sandbox permissions can be configured from an application manifest file (see :"
+"doc:`manifests`). They can also be set with the ``build-finish``, ``run`` and "
+"``override`` commands."
 msgstr ""
-"Разрешения песочницы можно настроить из файла манифеста приложения (см: "
-":doc:`manifests`). Их также можно установить с помощью команд ``build-"
-"finish``, ``run`` и ``override``."
+"Разрешения песочницы можно настроить из файла манифеста приложения (см: :doc:"
+"`manifests`). Их также можно установить с помощью команд ``build-finish``, "
+"``run`` и ``override``."
 
 #: ../../sandbox-permissions-reference.rst:8
 msgid ""
-"The following list includes many of the most useful permission options. A"
-" complete list can be viewed using ``flatpak build-finish --help``."
+"The following list includes many of the most useful permission options. A "
+"complete list can be viewed using ``flatpak build-finish --help``."
 msgstr ""
 "В следующем списке представлены многие из наиболее полезных вариантов "
-"разрешений. Полный список можно просмотреть с помощью команды ``flatpak "
-"build-finish --help``."
+"разрешений. Полный список можно просмотреть с помощью команды ``flatpak build-"
+"finish --help``."
 
 #: ../../sandbox-permissions-reference.rst:12
 msgid "``--socket=x11``"
@@ -52,13 +53,12 @@ msgid "Show windows using X11"
 msgstr "Показать окна с помощью X11"
 
 #: ../../sandbox-permissions-reference.rst:13
-#, fuzzy
 msgid "``--socket=fallback-x11``"
-msgstr "``--socket=x11``"
+msgstr "``--socket=fallback-x11``"
 
 #: ../../sandbox-permissions-reference.rst:13
 msgid "Grant X11 access when Wayland is not available"
-msgstr ""
+msgstr "Предоставление доступа к X11, когда недоступен Wayland"
 
 #: ../../sandbox-permissions-reference.rst:14
 msgid "``--share=ipc``"
@@ -125,49 +125,44 @@ msgid "Talk to a named service on the system bus"
 msgstr "Общение с указанной службой на системной шине"
 
 #: ../../sandbox-permissions-reference.rst:22
-#, fuzzy
 msgid "``--socket=cups``"
-msgstr "``--socket=x11``"
+msgstr "``--socket=cups``"
 
 #: ../../sandbox-permissions-reference.rst:22
 msgid "Talk to the CUPS printing system"
-msgstr ""
+msgstr "Общение со службой системой печати CUPS"
 
 #: ../../sandbox-permissions-reference.rst:23
-#, fuzzy
 msgid "``--socket=gpg-agent``"
-msgstr "``--socket=wayland``"
+msgstr "``--socket=gpg-agent``"
 
 #: ../../sandbox-permissions-reference.rst:23
 msgid "Talk to the GPG agent"
-msgstr ""
+msgstr "Общение с GPG-агентом"
 
 #: ../../sandbox-permissions-reference.rst:24
-#, fuzzy
 msgid "``--socket=pcsc``"
-msgstr "``--socket=x11``"
+msgstr "``--socket=pcsc``"
 
 #: ../../sandbox-permissions-reference.rst:24
 msgid "Grant access to smart card"
-msgstr ""
+msgstr "Предоставление доступа к смарт-карте"
 
 #: ../../sandbox-permissions-reference.rst:25
-#, fuzzy
 msgid "``--socket=ssh-auth``"
-msgstr "``--socket=system-bus``"
+msgstr "``--socket=ssh-auth``"
 
 #: ../../sandbox-permissions-reference.rst:25
 msgid "SSH authentication"
-msgstr ""
+msgstr "SSH-аутентификация"
 
 #: ../../sandbox-permissions-reference.rst:26
-#, fuzzy
 msgid "``--socket=session-bus``"
-msgstr "``--socket=system-bus``"
+msgstr "``--socket=session-bus``"
 
 #: ../../sandbox-permissions-reference.rst:26
 msgid "Unlimited access to user's D-Bus session"
-msgstr ""
+msgstr "Неограниченный доступ к сеансу D-Bus пользователя"
 
 #: ../../sandbox-permissions-reference.rst:27
 msgid "``--socket=system-bus``"
@@ -183,11 +178,11 @@ msgstr "Разрешения файловой системы"
 
 #: ../../sandbox-permissions-reference.rst:33
 msgid ""
-"Each of the following permissions configure filesystem access, and should"
-" be added to ``--filesystem=``:"
+"Each of the following permissions configure filesystem access, and should be "
+"added to ``--filesystem=``:"
 msgstr ""
-"Каждое из следующих разрешений настраивает доступ к файловой системе и "
-"должно быть добавлено в ``--filesystem=``:"
+"Каждое из следующих разрешений настраивает доступ к файловой системе и должно "
+"быть добавлено в ``--filesystem=``:"
 
 #: ../../sandbox-permissions-reference.rst:37
 msgid "``host``"
@@ -198,14 +193,12 @@ msgid "Access all files [#f3]_"
 msgstr "Доступ ко всем файлам [#f3]_"
 
 #: ../../sandbox-permissions-reference.rst:38
-#, fuzzy
 msgid "``host-etc``"
-msgstr "``host``"
+msgstr "``host-etc``"
 
 #: ../../sandbox-permissions-reference.rst:38
-#, fuzzy
 msgid "Access all files in /etc"
-msgstr "Доступ ко всем файлам [#f3]_"
+msgstr "Доступ ко всем файлам в /etc"
 
 #: ../../sandbox-permissions-reference.rst:39
 msgid "``home``"
@@ -333,13 +326,13 @@ msgstr ""
 
 #: ../../sandbox-permissions-reference.rst:56
 msgid ""
-"Paths can be added to all the above filesystem options. For example, "
-"``--filesystem=xdg-documents/path``. The following permission options can"
-" also be added:"
+"Paths can be added to all the above filesystem options. For example, ``--"
+"filesystem=xdg-documents/path``. The following permission options can also be "
+"added:"
 msgstr ""
-"Пути могут быть добавлены ко всем указанным выше параметрам файловой "
-"системы. Например, ``--filesystem=xdg-documents/path``. Также можно "
-"добавить следующие параметры разрешений:"
+"Пути могут быть добавлены ко всем указанным выше параметрам файловой системы. "
+"Например, ``--filesystem=xdg-documents/path``. Также можно добавить следующие "
+"параметры разрешений:"
 
 #: ../../sandbox-permissions-reference.rst:60
 msgid "``:ro`` - read-only access"
@@ -351,8 +344,7 @@ msgstr "``:rw`` - доступ для чтения/записи (по умолч
 
 #: ../../sandbox-permissions-reference.rst:62
 msgid ""
-"``:create`` - read/write access, and create the directory if it doesn't "
-"exist"
+"``:create`` - read/write access, and create the directory if it doesn't exist"
 msgstr ""
 "``:create`` - доступ для чтения/записи и создание каталога, если он не "
 "существует"
@@ -366,25 +358,24 @@ msgid ""
 "This is not necessarily required, but without it the X11 shared memory "
 "extension will not work, which is very bad for X11 performance."
 msgstr ""
-"Это не обязательно, но без него расширение разделяемой памяти X11 не "
-"будет работать, что очень плохо для производительности X11."
+"Это не обязательно, но без него расширение разделяемой памяти X11 не будет "
+"работать, что очень плохо для производительности X11."
 
 #: ../../sandbox-permissions-reference.rst:68
 msgid ""
-"Giving network access also grants access to all host services listening "
-"on abstract Unix sockets (due to how network namespaces work), and these "
-"have no permission checks. This unfortunately affects e.g. the X server "
-"and the session bus which listens to abstract sockets by default. A "
-"secure distribution should disable these and just use regular sockets."
+"Giving network access also grants access to all host services listening on "
+"abstract Unix sockets (due to how network namespaces work), and these have no "
+"permission checks. This unfortunately affects e.g. the X server and the "
+"session bus which listens to abstract sockets by default. A secure "
+"distribution should disable these and just use regular sockets."
 msgstr ""
 "Предоставление доступа к сети также предоставляет доступ ко всем службам "
 "хоста, прослушивающим абстрактные сокеты Unix (из-за того, как работают "
 "сетевые пространства имен), и они не имеют проверок разрешений. Это, к "
-"сожалению, влияет, например. X-сервер и сеансовая шина, которая по "
-"умолчанию слушает абстрактные сокеты. Безопасный дистрибутив должен "
-"отключить их и использовать обычные сокеты."
+"сожалению, влияет, например. X-сервер и сеансовая шина, которая по умолчанию "
+"слушает абстрактные сокеты. Безопасный дистрибутив должен отключить их и "
+"использовать обычные сокеты."
 
 #: ../../sandbox-permissions-reference.rst:73
 msgid "Except for the blacklisted paths mentioned in :doc:`sandbox-permissions`."
 msgstr "За исключением черных списков, упомянутых в :doc:`sandbox-permissions`."
-
