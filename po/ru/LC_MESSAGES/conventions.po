@@ -205,8 +205,8 @@ msgstr ""
 "используются магазинами приложений (такими как Flathub, GNOME Software и "
 "KDE Discover). `Спецификация Freedesktop AppStream <https://www."
 "freedesktop.org/software/appstream/docs/>`_ содержит полный справочник "
-"Вы можете использовать онлайн-редактор AppStream MetaInfo Creator "
-"<https://www.freedesktop.org/software/appstream/metainfocreator/>`_ "
+"по предоставлению AppData. Вы можете использовать онлайн-редактор AppStream "
+"MetaInfo Creator <https://www.freedesktop.org/software/appstream/metainfocreator/>`_ "
 "для создания базового файла."
 
 #: ../../conventions.rst:78
