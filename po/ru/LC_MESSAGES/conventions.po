@@ -241,7 +241,7 @@ msgstr ""
 msgid "Application icons"
 msgstr "Значки приложений"
 
-#: ../../conventions.rst:94
+#: ../../conventions.rst:93
 msgid ""
 "Applications are expected to provide an application icon, which is used "
 "for their application launcher. These icons should be provided in "
