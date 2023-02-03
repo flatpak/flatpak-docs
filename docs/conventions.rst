@@ -69,9 +69,13 @@ AppData files
 `````````````
 AppData files provide metadata about applications, which is
 used by application stores (such as Flathub, GNOME Software
-and KDE Discover). The `Freedesktop AppStream specification
+and KDE Discover).
+
+The `Freedesktop AppStream specification
 <https://www.freedesktop.org/software/appstream/docs/>`_ provides a complete
-reference for providing AppData.
+reference for providing AppData. You can use the online
+`AppStream MetaInfo Creator <https://www.freedesktop.org/software/appstream/metainfocreator/>`_
+to generate a basic file.
 
 AppData files should be named with the application ID and the ``.metainfo.xml``
 file extension, and should be placed in ``/app/share/metainfo/``. For example::
