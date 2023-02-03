@@ -266,8 +266,8 @@ msgstr ""
 "Когда доступен systemd, Flatpak пытается поместить процессы приложения в "
 "область действия, такую как app-flatpak-com.brave.Browser-*.scope (в случае "
 "Brave), где ``*`` заменяется произвольным суффиксом. Это означает, что вы "
-"можете создать файл вида ~/.config/systemd/user/app-flatpak-"
-"com.brave.Browser-.scope.d/memory.conf с таким содержимым::"
+"можете создать файл вида ``~/.config/systemd/user/app-flatpak-"
+"com.brave.Browser-.scope.d/memory.conf`` с таким содержимым::"
 
 #: ../../tips-and-tricks.rst:159
 msgid ""
