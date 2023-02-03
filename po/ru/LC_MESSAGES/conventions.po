@@ -198,7 +198,7 @@ msgid ""
 "The `Freedesktop AppStream specification <https://www.freedesktop.org/"
 "software/appstream/docs/>`_ provides a complete reference for providing "
 "AppData. You can use the online `AppStream MetaInfo Creator "
-"<https://www.freedesktop.org/software/appstream/metainfocreator/>`_ 
+"<https://www.freedesktop.org/software/appstream/metainfocreator/>`_ "
 "to generate a basic file."
 msgstr ""
 "Файлы AppData предоставляют метаданные о приложениях, которые "
