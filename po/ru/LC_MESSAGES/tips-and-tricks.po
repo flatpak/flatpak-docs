@@ -256,7 +256,6 @@ msgid "Configuring resource limits for apps"
 msgstr "Настройка лимитов ресурсов для приложений"
 
 #: ../../tips-and-tricks.rst:150
-#, fuzzy
 msgid ""
 "When systemd is available, Flatpak tries to put app processes in a scope "
 "such as ``app-flatpak-com.brave.Browser-*.scope`` (in the case of Brave),"
@@ -265,10 +264,10 @@ msgid ""
 "com.brave.Browser-.scope.d/memory.conf`` with contents like::"
 msgstr ""
 "Когда доступен systemd, Flatpak пытается поместить процессы приложения в "
-"область действия, такую как app-com.brave.Browser-*.scope (в случае "
-"Brave), с заменой «*» на произвольный суффикс. . Это означает, что вы "
-"можете создать файл типа ``~/.config/systemd/user/app-flatpak-"
-"com.brave.Browser-.scope.d/memory.conf`` с таким содержимым::"
+"область действия, такую как app-flatpak-com.brave.Browser-*.scope (в случае "
+"Brave), где ``*`` заменяется произвольным суффиксом. Это означает, что вы "
+"можете создать файл вида ~/.config/systemd/user/app-flatpak-"
+"com.brave.Browser-.scope.d/memory.conf с таким содержимым::"
 
 #: ../../tips-and-tricks.rst:159
 msgid ""
