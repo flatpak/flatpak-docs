@@ -3,13 +3,13 @@
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
 # Dmitry <dmitrydmitry761@gmail.com>, 2021.
-# Dmitry <dmitrydmitry761@gmail.com>, 2022.
+# Dmitry <dmitrydmitry761@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-14 17:03-0500\n"
-"PO-Revision-Date: 2023-01-16 23:03+0700\n"
+"PO-Revision-Date: 2023-02-03 00:03+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -102,7 +102,7 @@ msgstr ""
 "Среды выполнения автоматически устанавливаются для пользователей, когда "
 "они устанавливают приложение, и инструменты сборки также могут "
 "автоматически устанавливать их для вас (для этого полезна опция "
-"``--install-deps-from'' в ``flatpak-builder''). Однако, если вам "
+"``--install-deps-from`` в ``flatpak-builder``). Однако, если вам "
 "действительно нужно вручную установить выбранную среду выполнения, это "
 "можно сделать так же, как и установку приложения, с помощью команды "
 "flatpak install. Например, команда для установки среды выполнения GNOME "
