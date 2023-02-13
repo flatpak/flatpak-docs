@@ -68,12 +68,11 @@ msgstr ""
 " é necessário para compilar aplicativos para o runtime."
 
 #: ../../first-build.rst:22
-#, fuzzy
 msgid ""
 "In this tutorial we will use the Freedesktop 22.08 runtime and SDK. To "
 "install these, run::"
 msgstr ""
-"Neste tutorial, usaremos o runtime e o SDK do Freedesktop 21.08. Para "
+"Neste tutorial, usaremos o runtime e o SDK do Freedesktop 22.08. Para "
 "instalá-los, execute::"
 
 #: ../../first-build.rst:28
