@@ -28,7 +28,7 @@ and navigate to the ``/flatpak`` directory in the terminal. You must also
 install the Electron base app and the Node.js SDK extension::
 
   $ flatpak install flathub org.electronjs.Electron2.BaseApp//22.08
-  $ flatpak install flathub org.freedesktop.Sdk.Extension.node14//22.08
+  $ flatpak install flathub org.freedesktop.Sdk.Extension.node18//22.08
 
 Then you can run the build::
 
@@ -82,16 +82,16 @@ install one of them and add it in your apps' manifest:
 .. code-block:: yaml
 
   sdk-extensions:
-    - org.freedesktop.Sdk.Extension.node14
+    - org.freedesktop.Sdk.Extension.node18
 
 Enable the extension by adding it to ``PATH``:
 
 .. code-block:: yaml
 
   build-options:
-    append-path: /usr/lib/sdk/node14/bin
+    append-path: /usr/lib/sdk/node18/bin
 
-Note that the extension name (last portion of reverse-dns notation, ``node14``
+Note that the extension name (last portion of reverse-dns notation, ``node18``
 in this example) must be the same in ``sdk-extensions`` and ``append-path``.
 
 Command
@@ -165,7 +165,7 @@ and hash of the application are also specified.
     env:
       XDG_CACHE_HOME: /run/build/electron-sample-app/flatpak-node/cache
       npm_config_cache: /run/build/electron-sample-app/flatpak-node/npm-cache
-      npm_config_nodedir: /usr/lib/sdk/node14
+      npm_config_nodedir: /usr/lib/sdk/node18
       npm_config_offline: 'true'
   subdir: main
   sources:

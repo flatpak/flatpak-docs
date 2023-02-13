@@ -153,10 +153,10 @@ msgstr "Включите расширение, добавив его в «PATH»
 
 #: ../../electron.rst:94
 msgid ""
-"Note that the extension name (last portion of reverse-dns notation, ``node14`` in this "
+"Note that the extension name (last portion of reverse-dns notation, ``node18`` in this "
 "example) must be the same in ``sdk-extensions`` and ``append-path``."
 msgstr ""
-"Обратите внимание, что имя расширения (последняя часть нотации обратного DNS, «node14» в "
+"Обратите внимание, что имя расширения (последняя часть нотации обратного DNS, «node18» в "
 "этом примере) должно быть одинаковым в «sdk-extensions» и «append-path»."
 
 #: ../../electron.rst:98

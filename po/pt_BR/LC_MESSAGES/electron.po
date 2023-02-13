@@ -161,11 +161,11 @@ msgstr "Habilite a extensão adicionando-a a ``PATH``:"
 #: ../../electron.rst:94
 msgid ""
 "Note that the extension name (last portion of reverse-dns notation, "
-"``node14`` in this example) must be the same in ``sdk-extensions`` and "
+"``node18`` in this example) must be the same in ``sdk-extensions`` and "
 "``append-path``."
 msgstr ""
 "Observe que o nome da extensão (última parte da notação de DNS reverso, "
-"``node14`` neste exemplo) deve ser o mesmo em ``sdk-extensions`` e ``append-"
+"``node18`` neste exemplo) deve ser o mesmo em ``sdk-extensions`` e ``append-"
 "path``."
 
 #: ../../electron.rst:98
