@@ -27,8 +27,8 @@ To get setup for the build, download or clone the sample app from GitHub,
 and navigate to the ``/flatpak`` directory in the terminal. You must also
 install the Electron base app and the Node.js SDK extension::
 
-  $ flatpak install flathub org.electronjs.Electron2.BaseApp//21.08
-  $ flatpak install flathub org.freedesktop.Sdk.Extension.node14//21.08
+  $ flatpak install flathub org.electronjs.Electron2.BaseApp//22.08
+  $ flatpak install flathub org.freedesktop.Sdk.Extension.node18//22.08
 
 Then you can run the build::
 
@@ -48,7 +48,7 @@ ID. It also configures the runtime and SDK:
 
   app-id: org.flathub.electron-sample-app
   runtime: org.freedesktop.Platform
-  runtime-version: '21.08'
+  runtime-version: '22.08'
   sdk: org.freedesktop.Sdk
 
 The Freedesktop runtime is generally the best runtime to use with Electron
@@ -65,7 +65,7 @@ manifest:
 .. code-block:: yaml
 
   base: org.electronjs.Electron2.BaseApp
-  base-version: '21.08'
+  base-version: '22.08'
 
 Base apps are described in :doc:`dependencies`.  Using the Electron base
 app is much faster and more convenient than manually building Electron
@@ -82,16 +82,16 @@ install one of them and add it in your apps' manifest:
 .. code-block:: yaml
 
   sdk-extensions:
-    - org.freedesktop.Sdk.Extension.node14
+    - org.freedesktop.Sdk.Extension.node18
 
 Enable the extension by adding it to ``PATH``:
 
 .. code-block:: yaml
 
   build-options:
-    append-path: /usr/lib/sdk/node14/bin
+    append-path: /usr/lib/sdk/node18/bin
 
-Note that the extension name (last portion of reverse-dns notation, ``node14``
+Note that the extension name (last portion of reverse-dns notation, ``node18``
 in this example) must be the same in ``sdk-extensions`` and ``append-path``.
 
 Command
@@ -165,7 +165,7 @@ and hash of the application are also specified.
     env:
       XDG_CACHE_HOME: /run/build/electron-sample-app/flatpak-node/cache
       npm_config_cache: /run/build/electron-sample-app/flatpak-node/npm-cache
-      npm_config_nodedir: /usr/lib/sdk/node14
+      npm_config_nodedir: /usr/lib/sdk/node18
       npm_config_offline: 'true'
   subdir: main
   sources:
@@ -222,7 +222,7 @@ Build commands
 
 Last but not least, since the simple build option is being used, a list of
 build commands must be provided. As can be seen, ``npm`` is run with the
-``npm_config_offline=true`` environment variable, installing dependencies from 
+``npm_config_offline=true`` environment variable, installing dependencies from
 packages that have already been cached. These are copied to ``/app/main/``.
 Finally the ``run.sh`` script is installed to ``/app/bin/`` so that it will be
 on ``$PATH``:
