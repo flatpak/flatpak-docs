@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-07 16:26-0600\n"
+"POT-Creation-Date: 2023-05-31 14:18-0300\n"
 "PO-Revision-Date: 2019-06-26 05:18-0400\n"
 "Last-Translator: Markus Richter <semanticdesign@pm.me>\n"
 "Language: de\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.12.1\n"
 
 #: ../../conventions.rst:2
 msgid "Requirements & Conventions"
@@ -127,54 +127,61 @@ msgid ""
 msgstr ""
 
 #: ../../conventions.rst:61
-msgid "``com.github.foo.Bar``"
+msgid "``com.github.foo.Bar`` or ``com.gitlab.foo.Bar``"
 msgstr ""
 
 #: ../../conventions.rst:63
 msgid ""
-"While a project may be hosted on GitHub it does not have any control over"
-" the ``github.com`` domain. Instead you should use ``io.github`` as shown"
-" above."
+"While a project may be hosted on GitHub or GitLab it does not have any "
+"control over the ``github.com`` or ``gitlab.com`` domain. Instead you "
+"should use ``io.github`` or ``io.gitlab`` as shown above."
 msgstr ""
 
-#: ../../conventions.rst:67
+#: ../../conventions.rst:69
 msgid "AppData files"
 msgstr ""
 
-#: ../../conventions.rst:68
+#: ../../conventions.rst:70
 msgid ""
 "AppData files provide metadata about applications, which is used by "
-"application stores (such as Flathub, GNOME Software and KDE Discover). "
-"The `Freedesktop AppStream specification "
-"<https://www.freedesktop.org/software/appstream/docs/>`_ provides a "
-"complete reference for providing AppData."
+"application stores (such as Flathub, GNOME Software and KDE Discover)."
 msgstr ""
 
 #: ../../conventions.rst:74
+msgid ""
+"The `Freedesktop AppStream specification "
+"<https://www.freedesktop.org/software/appstream/docs/>`_ provides a "
+"complete reference for providing AppData. You can use the online "
+"`AppStream MetaInfo Creator "
+"<https://www.freedesktop.org/software/appstream/metainfocreator/>`_ to "
+"generate a basic file."
+msgstr ""
+
+#: ../../conventions.rst:80
 msgid ""
 "AppData files should be named with the application ID and the "
 "``.metainfo.xml`` file extension, and should be placed in "
 "``/app/share/metainfo/``. For example::"
 msgstr ""
 
-#: ../../conventions.rst:79
+#: ../../conventions.rst:85
 msgid ""
 "A legacy convention of having the ``.appdata.xml`` installed in "
 "``/app/share/appdata`` is also accepted as well, and ``flatpak-builder`` "
 "will check either directory with either extension."
 msgstr ""
 
-#: ../../conventions.rst:83
+#: ../../conventions.rst:89
 msgid ""
 "The ``appstream-util validate-relax`` command can be used to check "
 "AppData files for errors."
 msgstr ""
 
-#: ../../conventions.rst:87
+#: ../../conventions.rst:93
 msgid "Application icons"
 msgstr ""
 
-#: ../../conventions.rst:89
+#: ../../conventions.rst:95
 msgid ""
 "Applications are expected to provide an application icon, which is used "
 "for their application launcher. These icons should be provided in "
@@ -183,23 +190,30 @@ msgid ""
 "latest.html>`_."
 msgstr ""
 
-#: ../../conventions.rst:94
+#: ../../conventions.rst:100
 msgid ""
 "Icons should be named with the application's ID, be in either PNG or SVG "
 "format, and must be placed in the standard location::"
 msgstr ""
 
-#: ../../conventions.rst:99
+#: ../../conventions.rst:105
 msgid ""
 "For example, the path to the 128✕128px version of GNOME Dictionary's icon"
 " is::"
 msgstr ""
 
-#: ../../conventions.rst:105
+#: ../../conventions.rst:110
+msgid ""
+"Icons must be square shaped, ie their width and height must be the same. "
+"The maximum size allowed by the specification is 512x512px. SVG icons are"
+" of size ``scalable``::"
+msgstr ""
+
+#: ../../conventions.rst:117
 msgid "Desktop files"
 msgstr ""
 
-#: ../../conventions.rst:107
+#: ../../conventions.rst:119
 msgid ""
 "Desktop files are used to provide the desktop environment with "
 "information about each application. The `Freedesktop specification "
@@ -209,53 +223,53 @@ msgid ""
 "<https://wiki.archlinux.org/title/desktop_entries>`_ is available online."
 msgstr ""
 
-#: ../../conventions.rst:114
+#: ../../conventions.rst:126
 msgid ""
 "Desktop files should be named with the application's ID, followed by the "
 "``.desktop`` file extension, and should be placed in "
 "``/app/share/applications/``. For example::"
 msgstr ""
 
-#: ../../conventions.rst:120
+#: ../../conventions.rst:132
 msgid ""
 "A minimal desktop file should contain at least the application's *name*, "
 "*exec* command, *type*, *icon* name and *categories*::"
 msgstr ""
 
-#: ../../conventions.rst:130
+#: ../../conventions.rst:142
 msgid ""
 "The ``desktop-file-validate`` command can be used to check for errors in "
 "desktop files."
 msgstr ""
 
-#: ../../conventions.rst:134
+#: ../../conventions.rst:146
 msgid "Exporting through extra-data"
 msgstr ""
 
-#: ../../conventions.rst:136
+#: ../../conventions.rst:148
 msgid ""
 "Files downloaded through ``extra-data`` are only downloaded when "
 "installing, as such they aren't yet available for ``flatpak-builder`` to "
 "automatically export during the build process."
 msgstr ""
 
-#: ../../conventions.rst:138
+#: ../../conventions.rst:150
 msgid ""
 "When using ``extra-data``, place any files that must be exported under "
 "this location::"
 msgstr ""
 
-#: ../../conventions.rst:142
+#: ../../conventions.rst:154
 msgid ""
 "For example, if GNOME Dictionary used ``extra-data`` to download a 96x96 "
 "icon this would be its path::"
 msgstr ""
 
-#: ../../conventions.rst:147
+#: ../../conventions.rst:159
 msgid "Technical conventions"
 msgstr ""
 
-#: ../../conventions.rst:149
+#: ../../conventions.rst:161
 msgid ""
 "The following are standard technical conventions used by Flatpak and "
 "Linux desktops. Those with Linux experience will likely already be aware "
@@ -263,18 +277,18 @@ msgid ""
 " information useful."
 msgstr ""
 
-#: ../../conventions.rst:155
+#: ../../conventions.rst:167
 msgid "D-Bus"
 msgstr ""
 
-#: ../../conventions.rst:157
+#: ../../conventions.rst:169
 msgid ""
 "D-Bus is the standard IPC framework used on Linux desktops. A lot of "
 "applications won't need to use it, but it is supported by Flatpak should "
 "it be required."
 msgstr ""
 
-#: ../../conventions.rst:161
+#: ../../conventions.rst:173
 msgid ""
 "D-Bus can be used for application launching and communicating with some "
 "system services. Applications can also provide their own D-Bus services "
@@ -282,11 +296,11 @@ msgid ""
 "the application ID)."
 msgstr ""
 
-#: ../../conventions.rst:166
+#: ../../conventions.rst:178
 msgid "Filesystem layout"
 msgstr ""
 
-#: ../../conventions.rst:168
+#: ../../conventions.rst:180
 msgid ""
 "Each Flatpak sandbox, which is the environment in which an application is"
 " run, contains the filesystem of the application's runtime. This follows "
@@ -294,7 +308,7 @@ msgid ""
 "<https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>`_."
 msgstr ""
 
-#: ../../conventions.rst:173
+#: ../../conventions.rst:185
 msgid ""
 "For example, the root of the sandbox contains the ``/etc`` directory for "
 "configuration files and ``/usr`` for multi-user utilities and "
@@ -303,11 +317,11 @@ msgid ""
 "located."
 msgstr ""
 
-#: ../../conventions.rst:179
+#: ../../conventions.rst:191
 msgid "XDG base directories"
 msgstr ""
 
-#: ../../conventions.rst:181
+#: ../../conventions.rst:193
 msgid ""
 "`XDG base directories <https://specifications.freedesktop.org/basedir-"
 "spec/basedir-spec-latest.html>`_ are standard locations for user-specific"
@@ -315,100 +329,100 @@ msgid ""
 "accessing XDG base directories. These include:"
 msgstr ""
 
-#: ../../conventions.rst:186
+#: ../../conventions.rst:198
 msgid "Electron: XDG base directories can be accessed with ``app.getPath``"
 msgstr ""
 
-#: ../../conventions.rst:187
+#: ../../conventions.rst:199
 msgid ""
 "Glib: provides access to the XDG base directories through the "
 "``g_get_user_cache_dir ()``, ``g_get_user_data_dir ()``, "
 "``g_get_user_config_dir ()`` functions"
 msgstr ""
 
-#: ../../conventions.rst:190
+#: ../../conventions.rst:202
 msgid ""
 "Qt: provides access to XDG base directories with the `QStandardPaths "
 "Class <https://doc.qt.io/qt-5/qstandardpaths.html>`_"
 msgstr ""
 
-#: ../../conventions.rst:193
+#: ../../conventions.rst:205
 msgid ""
 "However, applications that aren't using one of these toolkits can expect "
 "to find their XDG base directories in the following locations:"
 msgstr ""
 
-#: ../../conventions.rst:197
+#: ../../conventions.rst:209
 msgid "Base directory"
 msgstr ""
 
-#: ../../conventions.rst:197
+#: ../../conventions.rst:209
 msgid "Usage"
 msgstr ""
 
-#: ../../conventions.rst:197
+#: ../../conventions.rst:209
 msgid "Default location"
 msgstr ""
 
-#: ../../conventions.rst:199
+#: ../../conventions.rst:211
 msgid "XDG_CONFIG_HOME"
 msgstr ""
 
-#: ../../conventions.rst:199
+#: ../../conventions.rst:211
 msgid "User-specific configuration files"
 msgstr ""
 
-#: ../../conventions.rst:199
+#: ../../conventions.rst:211
 msgid "~/.var/app/<app-id>/config"
 msgstr ""
 
-#: ../../conventions.rst:200
+#: ../../conventions.rst:212
 msgid "XDG_DATA_HOME"
 msgstr ""
 
-#: ../../conventions.rst:200
+#: ../../conventions.rst:212
 msgid "User-specific data"
 msgstr ""
 
-#: ../../conventions.rst:200
+#: ../../conventions.rst:212
 msgid "~/.var/app/<app-id>/data"
 msgstr ""
 
-#: ../../conventions.rst:201
+#: ../../conventions.rst:213
 msgid "XDG_CACHE_HOME"
 msgstr ""
 
-#: ../../conventions.rst:201
+#: ../../conventions.rst:213
 msgid "Non-essential user-specific data"
 msgstr ""
 
-#: ../../conventions.rst:201
+#: ../../conventions.rst:213
 msgid "~/.var/app/<app-id>/cache"
 msgstr ""
 
-#: ../../conventions.rst:202
+#: ../../conventions.rst:214
 msgid "XDG_STATE_HOME"
 msgstr ""
 
-#: ../../conventions.rst:202
+#: ../../conventions.rst:214
 msgid "State data such as undo history"
 msgstr ""
 
-#: ../../conventions.rst:202
+#: ../../conventions.rst:214
 msgid "~/.var/app/<app-id>/.local/state"
 msgstr ""
 
-#: ../../conventions.rst:205
+#: ../../conventions.rst:217
 msgid "For example, GNOME Dictionary will store user-specific data in::"
 msgstr ""
 
-#: ../../conventions.rst:209
+#: ../../conventions.rst:221
 msgid ""
 "Note that applications can be configured to use non-default base "
 "directory locations (see :doc:`sandbox-permissions`)."
 msgstr ""
 
-#: ../../conventions.rst:212
+#: ../../conventions.rst:224
 msgid ""
 "Note that ``$XDG_STATE_HOME`` is only supported by Flatpak 1.13 and "
 "later. If your app needs to work on earlier versions of Flatpak, you can "
@@ -530,5 +544,27 @@ msgstr ""
 #~ "Qt: provides access to XDG base "
 #~ "directories with the `QStandardPaths Class "
 #~ "<http://doc.qt.io/qt-5/qstandardpaths.html>`_"
+#~ msgstr ""
+
+#~ msgid "``com.github.foo.Bar``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "While a project may be hosted on"
+#~ " GitHub it does not have any "
+#~ "control over the ``github.com`` domain. "
+#~ "Instead you should use ``io.github`` as"
+#~ " shown above."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "AppData files provide metadata about "
+#~ "applications, which is used by "
+#~ "application stores (such as Flathub, "
+#~ "GNOME Software and KDE Discover). The"
+#~ " `Freedesktop AppStream specification "
+#~ "<https://www.freedesktop.org/software/appstream/docs/>`_ "
+#~ "provides a complete reference for "
+#~ "providing AppData."
 #~ msgstr ""
 

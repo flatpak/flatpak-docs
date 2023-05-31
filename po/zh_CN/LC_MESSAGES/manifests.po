@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-07 16:26-0600\n"
+"POT-Creation-Date: 2023-05-31 14:18-0300\n"
 "PO-Revision-Date: 2018-11-03 01:52-0400\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language: zh_Hans_CN\n"
@@ -13,7 +13,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.12.1\n"
 
 #: ../../manifests.rst:2
 msgid "Manifests"
@@ -246,11 +246,13 @@ msgid "``bzr`` - Bazaar repositories"
 msgstr "``bzr``  - Bazaar 仓库"
 
 #: ../../manifests.rst:157
-msgid "``file`` - local file (these are copied into the source directory)"
+#, fuzzy
+msgid "``file`` - local/remote files (these are copied into the source directory)"
 msgstr "``file``  - 本地文件（这些复制到源码目录）"
 
 #: ../../manifests.rst:158
-msgid "``dir`` - local directory (these are copied into the source directory)"
+#, fuzzy
+msgid "``dir`` - local directories (these are copied into the source directory)"
 msgstr "``dir`` - 本地目录 (这些将复制到源码目录)"
 
 #: ../../manifests.rst:159

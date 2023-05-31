@@ -6,20 +6,19 @@
 # Dmitry <dmitrydmitry761@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
-"POT-Creation-Date: 2023-01-07 16:26-0600\n"
+"POT-Creation-Date: 2023-05-31 14:18-0300\n"
 "PO-Revision-Date: 2023-02-03 22:36+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
-"Language-Team: \n"
 "Language: ru\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"Generated-By: Babel 2.10.3\n"
-"X-Generator: Poedit 3.0\n"
+"Generated-By: Babel 2.12.1\n"
 
 #: ../../conventions.rst:2
 msgid "Requirements & Conventions"
@@ -41,8 +40,8 @@ msgstr ""
 
 #: ../../conventions.rst:10
 msgid ""
-"Information on further desktop integration options can be found in :doc:"
-"`desktop-integration`."
+"Information on further desktop integration options can be found in :doc"
+":`desktop-integration`."
 msgstr ""
 "Информацию о дополнительных возможностях интеграции с рабочим столом "
 "можно найти в :doc:`desktop-integration`."
@@ -54,9 +53,9 @@ msgstr "Ожидаемые стандарты"
 #: ../../conventions.rst:16
 msgid ""
 "Applications that use Flatpak are generally expected to comply with the "
-"following standards. Applications that have previously targeted the "
-"Linux desktop will typically need to make very few (if any) changes to "
-"do this."
+"following standards. Applications that have previously targeted the Linux"
+" desktop will typically need to make very few (if any) changes to do "
+"this."
 msgstr ""
 "Обычно ожидается, что приложения, использующие Flatpak, будут "
 "соответствовать следующим стандартам. Приложениям, которые ранее были "
@@ -70,12 +69,12 @@ msgstr "Идентификаторы приложений"
 #: ../../conventions.rst:23
 msgid ""
 "As described in :doc:`using-flatpak`, Flatpak requires each application "
-"to have a unique identifier, which has a form such as ``org.gnome."
-"Dictionary``."
+"to have a unique identifier, which has a form such as "
+"``org.gnome.Dictionary``."
 msgstr ""
 "Как описано в :doc:`using-flatpak`, Flatpak требует, чтобы каждое "
-"приложение имело уникальный идентификатор, который имеет такую форму, "
-"как ``org.gnome.Dictionary``."
+"приложение имело уникальный идентификатор, который имеет такую форму, как"
+" ``org.gnome.Dictionary``."
 
 #: ../../conventions.rst:26
 msgid ""
@@ -96,23 +95,23 @@ msgid ""
 "As will be seen below and in future sections, this ID is expected to be "
 "used in a number of places. Developers must follow the standard `D-Bus "
 "naming conventions for bus names <https://dbus.freedesktop.org/doc/dbus-"
-"specification.html#message-protocol-names>`_ when creating their own "
-"IDs. This format is already recommended by the `Desktop File "
-"specification <https://specifications.freedesktop.org/desktop-entry-spec/"
-"desktop-entry-spec-latest.html#file-naming>`_ and `Appstream "
-"specification <https://www.freedesktop.org/software/appstream/docs/chap-"
-"Metadata.html#sect-Metadata-GenericComponent>`_ also."
+"specification.html#message-protocol-names>`_ when creating their own IDs."
+" This format is already recommended by the `Desktop File specification "
+"<https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-"
+"spec-latest.html#file-naming>`_ and `Appstream specification "
+"<https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html"
+"#sect-Metadata-GenericComponent>`_ also."
 msgstr ""
 "Как будет показано ниже и в следующих разделах, ожидается, что этот "
 "идентификатор будет использоваться в ряде мест. Разработчики должны "
-"следовать стандартным соглашениям об именах D-Bus для имен шин <https://"
-"dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-"
-"names>`_ при создании своих собственных идентификаторов. Этот формат уже "
-"рекомендован `Спецификацией файла рабочего стола <https://specifications."
-"freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html#file-"
-"naming>`_ и `Спецификацией потока приложений <https ://www.freedesktop."
-"org/software/appstream/docs/chap-Metadata.html#sect-Metadata-"
-"GenericComponent>`_."
+"следовать стандартным соглашениям об именах D-Bus для имен шин "
+"<https://dbus.freedesktop.org/doc/dbus-specification.html#message-"
+"protocol-names>`_ при создании своих собственных идентификаторов. Этот "
+"формат уже рекомендован `Спецификацией файла рабочего стола "
+"<https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-"
+"spec-latest.html#file-naming>`_ и `Спецификацией потока приложений <https"
+" ://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#sect-"
+"Metadata-GenericComponent>`_."
 
 #: ../../conventions.rst:41
 msgid "For some practical examples of bad IDs"
@@ -124,20 +123,20 @@ msgstr "``org.example.desktop``"
 
 #: ../../conventions.rst:45
 msgid ""
-"This is a bad ID because the Appstream standard for legacy reasons "
-"treats IDs ending with ``.desktop`` as a special case causing "
-"inconsistency. For this same reason, ``.Desktop`` suffixes should not be "
-"used for newly named applications. Don't hesitate to repeat the "
-"application name even if it already is part of the domain name section "
-"of the identifier (eg. ``org.example.Example``)."
+"This is a bad ID because the Appstream standard for legacy reasons treats"
+" IDs ending with ``.desktop`` as a special case causing inconsistency. "
+"For this same reason, ``.Desktop`` suffixes should not be used for newly "
+"named applications. Don't hesitate to repeat the application name even if"
+" it already is part of the domain name section of the identifier (eg. "
+"``org.example.Example``)."
 msgstr ""
 "Это неправильный идентификатор, поскольку стандарт Appstream по "
-"устаревшим причинам рассматривает идентификаторы, оканчивающиеся на ``."
-"desktop``, как особый случай, вызывающий несогласованность. По этой же "
-"причине суффиксы ``.Desktop`` не следует использовать для новых названий "
-"приложений. Не стесняйтесь повторять имя приложения, даже если оно уже "
-"является частью раздела доменного имени идентификатора (например, ``org."
-"example.Example``)."
+"устаревшим причинам рассматривает идентификаторы, оканчивающиеся на "
+"``.desktop``, как особый случай, вызывающий несогласованность. По этой же"
+" причине суффиксы ``.Desktop`` не следует использовать для новых названий"
+" приложений. Не стесняйтесь повторять имя приложения, даже если оно уже "
+"является частью раздела доменного имени идентификатора (например, "
+"``org.example.Example``)."
 
 #: ../../conventions.rst:50
 msgid "``io.github.Foo``"
@@ -145,19 +144,19 @@ msgstr "``io.github.Foo``"
 
 #: ../../conventions.rst:52
 msgid ""
-"This is problematic because while ``foo.github.io`` may be unique to "
-"your project, it does not include a project-specific identifier. This "
-"may cause issues if another project creates ``io.github.Foo-Bar`` which "
+"This is problematic because while ``foo.github.io`` may be unique to your"
+" project, it does not include a project-specific identifier. This may "
+"cause issues if another project creates ``io.github.Foo-Bar`` which "
 "should be its own namespace but areas of ``flatpak`` may treat them "
 "similar. A better ID would be ``io.github.foo.Foo`` even if it is "
 "redundant."
 msgstr ""
 "Это проблематично, потому что, хотя ``foo.github.io`` может быть "
 "уникальным для вашего проекта, он не включает в себя идентификатор "
-"проекта. Это может вызвать проблемы, если другой проект создаст io."
-"github.Foo-Bar, который должен быть собственным пространством имен, но "
-"области flatpak могут относиться к ним одинаково. Лучшим идентификатором "
-"будет io.github.foo.Foo, даже если он избыточен."
+"проекта. Это может вызвать проблемы, если другой проект создаст io.github"
+".Foo-Bar, который должен быть собственным пространством имен, но области "
+"flatpak могут относиться к ним одинаково. Лучшим идентификатором будет "
+"io.github.foo.Foo, даже если он избыточен."
 
 #: ../../conventions.rst:57
 msgid "``org.example-site.Foo``"
@@ -172,64 +171,71 @@ msgstr ""
 "Вместо этого вы можете использовать org.example_site.Foo."
 
 #: ../../conventions.rst:61
-msgid "``com.github.foo.Bar``"
+#, fuzzy
+msgid "``com.github.foo.Bar`` or ``com.gitlab.foo.Bar``"
 msgstr "``com.github.foo.Bar``"
 
 #: ../../conventions.rst:63
 msgid ""
-"While a project may be hosted on GitHub or GitLab it does not have "
-"any control over the ``github.com`` or ``gitlab.com`` "
-"domain. Instead you should use ``io.github`` or ``io.gitlab`` as "
-"shown above."
+"While a project may be hosted on GitHub or GitLab it does not have any "
+"control over the ``github.com`` or ``gitlab.com`` domain. Instead you "
+"should use ``io.github`` or ``io.gitlab`` as shown above."
 msgstr ""
 "Хотя проект может быть размещен на GitHub или GitLab, он не имеет "
-"никакого контроля над доменом ``github.com`` или ``gitlab.com``. "
-"Вместо этого вы должны использовать ``io.github`` или ``io.gitlab`` как "
-"показано выше."
+"никакого контроля над доменом ``github.com`` или ``gitlab.com``. Вместо "
+"этого вы должны использовать ``io.github`` или ``io.gitlab`` как показано"
+" выше."
 
-#: ../../conventions.rst:68
+#: ../../conventions.rst:69
 msgid "AppData files"
 msgstr "Файлы AppData"
 
-#: ../../conventions.rst:69
+#: ../../conventions.rst:70
 msgid ""
 "AppData files provide metadata about applications, which is used by "
-"application stores (such as Flathub, GNOME Software and KDE Discover). "
-"The `Freedesktop AppStream specification <https://www.freedesktop.org/"
-"software/appstream/docs/>`_ provides a complete reference for providing "
-"AppData. You can use the online `AppStream MetaInfo Creator "
-"<https://www.freedesktop.org/software/appstream/metainfocreator/>`_ "
-"to generate a basic file."
+"application stores (such as Flathub, GNOME Software and KDE Discover)."
+msgstr ""
+
+#: ../../conventions.rst:74
+#, fuzzy
+msgid ""
+"The `Freedesktop AppStream specification "
+"<https://www.freedesktop.org/software/appstream/docs/>`_ provides a "
+"complete reference for providing AppData. You can use the online "
+"`AppStream MetaInfo Creator "
+"<https://www.freedesktop.org/software/appstream/metainfocreator/>`_ to "
+"generate a basic file."
 msgstr ""
 "Файлы AppData предоставляют метаданные о приложениях, которые "
 "используются магазинами приложений (такими как Flathub, GNOME Software и "
-"KDE Discover). `Спецификация Freedesktop AppStream <https://www."
-"freedesktop.org/software/appstream/docs/>`_ содержит полный справочник "
-"по предоставлению AppData. Вы можете использовать онлайн-редактор AppStream "
-"MetaInfo Creator <https://www.freedesktop.org/software/appstream/metainfocreator/>`_ "
-"для создания базового файла."
+"KDE Discover). `Спецификация Freedesktop AppStream "
+"<https://www.freedesktop.org/software/appstream/docs/>`_ содержит полный "
+"справочник по предоставлению AppData. Вы можете использовать "
+"онлайн-редактор AppStream MetaInfo Creator "
+"<https://www.freedesktop.org/software/appstream/metainfocreator/>`_ для "
+"создания базового файла."
 
-#: ../../conventions.rst:78
+#: ../../conventions.rst:80
 msgid ""
-"AppData files should be named with the application ID and the ``."
-"metainfo.xml`` file extension, and should be placed in ``/app/share/"
-"metainfo/``. For example::"
+"AppData files should be named with the application ID and the "
+"``.metainfo.xml`` file extension, and should be placed in "
+"``/app/share/metainfo/``. For example::"
 msgstr ""
 "Файлы AppData должны называться с идентификатором приложения и "
-"расширением файла ``.metainfo.xml`` и должны быть помещены в ``/app/"
-"share/metainfo/``. Например::"
+"расширением файла ``.metainfo.xml`` и должны быть помещены в "
+"``/app/share/metainfo/``. Например::"
 
-#: ../../conventions.rst:83
+#: ../../conventions.rst:85
 msgid ""
-"A legacy convention of having the ``.appdata.xml`` installed in ``/app/"
-"share/appdata`` is also accepted as well, and ``flatpak-builder`` will "
-"check either directory with either extension."
+"A legacy convention of having the ``.appdata.xml`` installed in "
+"``/app/share/appdata`` is also accepted as well, and ``flatpak-builder`` "
+"will check either directory with either extension."
 msgstr ""
-"Устаревшее соглашение об установке ``.appdata.xml`` в ``/app/share/"
-"appdata`` также принимается, и ``flatpak-builder`` будет проверять любой "
-"каталог с любым расширением."
+"Устаревшее соглашение об установке ``.appdata.xml`` в "
+"``/app/share/appdata`` также принимается, и ``flatpak-builder`` будет "
+"проверять любой каталог с любым расширением."
 
-#: ../../conventions.rst:87
+#: ../../conventions.rst:89
 msgid ""
 "The ``appstream-util validate-relax`` command can be used to check "
 "AppData files for errors."
@@ -237,81 +243,81 @@ msgstr ""
 "Команду ``appstream-util validate-relax `` можно использовать для "
 "проверки файлов AppData на наличие ошибок."
 
-#: ../../conventions.rst:91
+#: ../../conventions.rst:93
 msgid "Application icons"
 msgstr "Значки приложений"
 
-#: ../../conventions.rst:93
+#: ../../conventions.rst:95
 msgid ""
 "Applications are expected to provide an application icon, which is used "
 "for their application launcher. These icons should be provided in "
-"accordance with the `Freedesktop icon specification <https://"
-"specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-latest."
-"html>`_."
+"accordance with the `Freedesktop icon specification "
+"<https://specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-"
+"latest.html>`_."
 msgstr ""
 "Ожидается, что приложения будут предоставлять значок приложения, который "
-"используется для запуска их приложений. Эти значки должны "
-"предоставляться в соответствии со спецификацией значков Freedesktop "
+"используется для запуска их приложений. Эти значки должны предоставляться"
+" в соответствии со спецификацией значков Freedesktop "
 "<https://specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-"
 "latest.html>`_."
 
-#: ../../conventions.rst:98
+#: ../../conventions.rst:100
 msgid ""
 "Icons should be named with the application's ID, be in either PNG or SVG "
 "format, and must be placed in the standard location::"
 msgstr ""
-"Иконки должны называться с идентификатором приложения, быть в формате "
-"PNG или SVG и должны быть размещены в стандартном месте::"
+"Иконки должны называться с идентификатором приложения, быть в формате PNG"
+" или SVG и должны быть размещены в стандартном месте::"
 
-#: ../../conventions.rst:103
+#: ../../conventions.rst:105
 msgid ""
-"For example, the path to the 128✕128px version of GNOME Dictionary's "
-"icon is::"
+"For example, the path to the 128✕128px version of GNOME Dictionary's icon"
+" is::"
 msgstr ""
 "Например, путь к версии значка GNOME Dictionary размером 128✕128 "
 "пикселей::"
 
-#: ../../conventions.rst:108
+#: ../../conventions.rst:110
 msgid ""
-"Icons must be square shaped, ie their width and height must be the "
-"same. The maximum size allowed by the specification is 512x512px. SVG "
-"icons are of size ``scalable``::"
+"Icons must be square shaped, ie their width and height must be the same. "
+"The maximum size allowed by the specification is 512x512px. SVG icons are"
+" of size ``scalable``::"
 msgstr ""
 "Иконки должны быть квадратной формы, т.е. их ширина и высота должны быть "
-"одинаковыми. Максимальный размер, разрешенный спецификацией, составляет 512x512px. SVG "
-"иконки имеют размер ``масштабируемый``::"
+"одинаковыми. Максимальный размер, разрешенный спецификацией, составляет "
+"512x512px. SVG иконки имеют размер ``масштабируемый``::"
 
-#: ../../conventions.rst:114
+#: ../../conventions.rst:117
 msgid "Desktop files"
 msgstr "Файлы рабочего стола"
 
-#: ../../conventions.rst:116
+#: ../../conventions.rst:119
 msgid ""
 "Desktop files are used to provide the desktop environment with "
 "information about each application. The `Freedesktop specification "
 "<https://specifications.freedesktop.org/desktop-entry-spec/latest/>`_ "
 "provides a complete reference for writing desktop files, and `additional "
-"information about them <https://wiki.archlinux.org/title/"
-"desktop_entries>`_ is available online."
+"information about them "
+"<https://wiki.archlinux.org/title/desktop_entries>`_ is available online."
 msgstr ""
-"Файлы рабочего стола используются для предоставления среде рабочего "
-"стола информации о каждом приложении. `Спецификация Freedesktop <https://"
-"specifications.freedesktop.org/desktop-entry-spec/latest/>`_ "
+"Файлы рабочего стола используются для предоставления среде рабочего стола"
+" информации о каждом приложении. `Спецификация Freedesktop "
+"<https://specifications.freedesktop.org/desktop-entry-spec/latest/>`_ "
 "предоставляет полный справочник по написанию файлов рабочего стола и "
-"`дополнительную информацию о них <https://wiki.archlinux.org/title/"
-"desktop_entries>`_ доступен онлайн."
+"`дополнительную информацию о них "
+"<https://wiki.archlinux.org/title/desktop_entries>`_ доступен онлайн."
 
-#: ../../conventions.rst:123
+#: ../../conventions.rst:126
 msgid ""
 "Desktop files should be named with the application's ID, followed by the "
-"``.desktop`` file extension, and should be placed in ``/app/share/"
-"applications/``. For example::"
+"``.desktop`` file extension, and should be placed in "
+"``/app/share/applications/``. For example::"
 msgstr ""
 "Файлы рабочего стола должны называться с идентификатором приложения, за "
 "которым следует расширение файла ``.desktop``, и должны быть помещены в "
 "``/app/share/applications/``. Например::"
 
-#: ../../conventions.rst:127
+#: ../../conventions.rst:132
 msgid ""
 "A minimal desktop file should contain at least the application's *name*, "
 "*exec* command, *type*, *icon* name and *categories*::"
@@ -319,19 +325,19 @@ msgstr ""
 "Минимальный файл рабочего стола должен содержать как минимум *имя* "
 "приложения, команду *exec*, *тип*, *имя значка* и *категории*::"
 
-#: ../../conventions.rst:130
+#: ../../conventions.rst:142
 msgid ""
 "The ``desktop-file-validate`` command can be used to check for errors in "
 "desktop files."
 msgstr ""
-"Команду ``desktop-file-validate`` можно использовать для проверки "
-"наличия ошибок в файлах рабочего стола."
+"Команду ``desktop-file-validate`` можно использовать для проверки наличия"
+" ошибок в файлах рабочего стола."
 
-#: ../../conventions.rst:133
+#: ../../conventions.rst:146
 msgid "Exporting through extra-data"
 msgstr "Экспорт через \"дополнительные данные\""
 
-#: ../../conventions.rst:135
+#: ../../conventions.rst:148
 msgid ""
 "Files downloaded through ``extra-data`` are only downloaded when "
 "installing, as such they aren't yet available for ``flatpak-builder`` to "
@@ -341,7 +347,7 @@ msgstr ""
 "поэтому они еще недоступны для «flatpak-builder» для автоматического "
 "экспорта в процессе сборки."
 
-#: ../../conventions.rst:139
+#: ../../conventions.rst:150
 msgid ""
 "When using ``extra-data``, place any files that must be exported under "
 "this location::"
@@ -349,35 +355,35 @@ msgstr ""
 "При использовании «extra-data» поместите все файлы, которые необходимо "
 "экспортировать, в это место::"
 
-#: ../../conventions.rst:143
+#: ../../conventions.rst:154
 msgid ""
 "For example, if GNOME Dictionary used ``extra-data`` to download a 96x96 "
 "icon this would be its path::"
 msgstr ""
-"Например, если словарь GNOME использовал «extra-data» для загрузки "
-"значка 96x96, это будет его путь:"
+"Например, если словарь GNOME использовал «extra-data» для загрузки значка"
+" 96x96, это будет его путь:"
 
-#: ../../conventions.rst:147
+#: ../../conventions.rst:159
 msgid "Technical conventions"
 msgstr "Технические соглашения"
 
-#: ../../conventions.rst:149
+#: ../../conventions.rst:161
 msgid ""
 "The following are standard technical conventions used by Flatpak and "
 "Linux desktops. Those with Linux experience will likely already be aware "
-"of them. However, developers who are new to Linux might find some of "
-"this information useful."
+"of them. However, developers who are new to Linux might find some of this"
+" information useful."
 msgstr ""
 "Ниже приведены стандартные технические соглашения, используемые рабочими "
 "столами Flatpak и Linux. Те, у кого есть опыт работы с Linux, вероятно, "
 "уже знают о них. Однако разработчикам, которые не знакомы с Linux, часть "
 "этой информации может оказаться полезной."
 
-#: ../../conventions.rst:154
+#: ../../conventions.rst:167
 msgid "D-Bus"
 msgstr "D-Bus"
 
-#: ../../conventions.rst:156
+#: ../../conventions.rst:169
 msgid ""
 "D-Bus is the standard IPC framework used on Linux desktops. A lot of "
 "applications won't need to use it, but it is supported by Flatpak should "
@@ -387,7 +393,7 @@ msgstr ""
 "компьютерах Linux. Многим приложениям не нужно его использовать, но "
 "Flatpak поддерживает его, если это необходимо."
 
-#: ../../conventions.rst:160
+#: ../../conventions.rst:173
 msgid ""
 "D-Bus can be used for application launching and communicating with some "
 "system services. Applications can also provide their own D-Bus services "
@@ -399,59 +405,59 @@ msgstr ""
 "собственные службы D-Bus (при этом ожидается, что имя службы D-Bus будет "
 "таким же, как идентификатор приложения)."
 
-#: ../../conventions.rst:165
+#: ../../conventions.rst:178
 msgid "Filesystem layout"
 msgstr "Схема файловой системы"
 
-#: ../../conventions.rst:167
+#: ../../conventions.rst:180
 msgid ""
-"Each Flatpak sandbox, which is the environment in which an application "
-"is run, contains the filesystem of the application's runtime. This "
-"follows `standard Linux filesystem conventions <https://en.wikipedia.org/"
-"wiki/Filesystem_Hierarchy_Standard>`_."
+"Each Flatpak sandbox, which is the environment in which an application is"
+" run, contains the filesystem of the application's runtime. This follows "
+"`standard Linux filesystem conventions "
+"<https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>`_."
 msgstr ""
 "Каждая песочница Flatpak, представляющая собой среду, в которой "
 "запускается приложение, содержит файловую систему среды выполнения "
-"приложения. Это соответствует `стандартным соглашениям о файловой "
-"системе Linux <https://en.wikipedia.org/wiki/"
-"Filesystem_Hierarchy_Standard>`_."
+"приложения. Это соответствует `стандартным соглашениям о файловой системе"
+" Linux <https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>`_."
 
-#: ../../conventions.rst:172
+#: ../../conventions.rst:185
 msgid ""
 "For example, the root of the sandbox contains the ``/etc`` directory for "
 "configuration files and ``/usr`` for multi-user utilities and "
-"applications. In addition to this, each sandbox contains a top-level ``/"
-"app`` directory, which is where the application's own files are located."
+"applications. In addition to this, each sandbox contains a top-level "
+"``/app`` directory, which is where the application's own files are "
+"located."
 msgstr ""
 "Например, корень песочницы содержит каталог ``/etc`` для файлов "
 "конфигурации и ``/usr`` для многопользовательских утилит и приложений. В "
-"дополнение к этому каждая песочница содержит каталог верхнего уровня ``/"
-"app``, в котором находятся собственные файлы приложения."
+"дополнение к этому каждая песочница содержит каталог верхнего уровня "
+"``/app``, в котором находятся собственные файлы приложения."
 
-#: ../../conventions.rst:180
+#: ../../conventions.rst:191
 msgid "XDG base directories"
 msgstr "Базовые каталоги XDG"
 
-#: ../../conventions.rst:182
+#: ../../conventions.rst:193
 msgid ""
 "`XDG base directories <https://specifications.freedesktop.org/basedir-"
-"spec/basedir-spec-latest.html>`_ are standard locations for user-"
-"specific application data. Popular toolkits provide convenience "
-"functions for accessing XDG base directories. These include:"
+"spec/basedir-spec-latest.html>`_ are standard locations for user-specific"
+" application data. Popular toolkits provide convenience functions for "
+"accessing XDG base directories. These include:"
 msgstr ""
 "`Базовые каталоги XDG <https://specifications.freedesktop.org/basedir-"
-"spec/basedir-spec-latest.html>`_ являются стандартными расположениями "
-"для данных приложений, специфичных для пользователя. Популярные наборы "
+"spec/basedir-spec-latest.html>`_ являются стандартными расположениями для"
+" данных приложений, специфичных для пользователя. Популярные наборы "
 "инструментов предоставляют удобные функции для доступа к базовым "
 "каталогам XDG. К ним относятся:"
 
-#: ../../conventions.rst:187
+#: ../../conventions.rst:198
 msgid "Electron: XDG base directories can be accessed with ``app.getPath``"
 msgstr ""
-"Electron: доступ к базовым каталогам XDG можно получить с помощью ``app."
-"getPath``"
+"Electron: доступ к базовым каталогам XDG можно получить с помощью "
+"``app.getPath``"
 
-#: ../../conventions.rst:189
+#: ../../conventions.rst:199
 msgid ""
 "Glib: provides access to the XDG base directories through the "
 "``g_get_user_cache_dir ()``, ``g_get_user_data_dir ()``, "
@@ -461,15 +467,15 @@ msgstr ""
 "``g_get_user_cache_dir()``, ``g_get_user_data_dir()``, "
 "``g_get_user_config_dir()``"
 
-#: ../../conventions.rst:192
+#: ../../conventions.rst:202
 msgid ""
 "Qt: provides access to XDG base directories with the `QStandardPaths "
 "Class <https://doc.qt.io/qt-5/qstandardpaths.html>`_"
 msgstr ""
-"Qt: предоставляет доступ к базовым каталогам XDG с помощью "
-"QStandardPaths <https://doc.qt.io/qt-5/qstandardpaths.html>`_"
+"Qt: предоставляет доступ к базовым каталогам XDG с помощью QStandardPaths"
+" <https://doc.qt.io/qt-5/qstandardpaths.html>`_"
 
-#: ../../conventions.rst:195
+#: ../../conventions.rst:205
 msgid ""
 "However, applications that aren't using one of these toolkits can expect "
 "to find their XDG base directories in the following locations:"
@@ -477,71 +483,71 @@ msgstr ""
 "Однако приложения, которые не используют один из этих наборов "
 "инструментов, могут найти свои базовые каталоги XDG в следующих местах:"
 
-#: ../../conventions.rst:198
+#: ../../conventions.rst:209
 msgid "Base directory"
 msgstr "Базовый каталог"
 
-#: ../../conventions.rst:200
+#: ../../conventions.rst:209
 msgid "Usage"
 msgstr "Применение"
 
-#: ../../conventions.rst:200
+#: ../../conventions.rst:209
 msgid "Default location"
 msgstr "Местоположение по умолчанию"
 
-#: ../../conventions.rst:202
+#: ../../conventions.rst:211
 msgid "XDG_CONFIG_HOME"
 msgstr "XDG_CONFIG_HOME"
 
-#: ../../conventions.rst:202
+#: ../../conventions.rst:211
 msgid "User-specific configuration files"
 msgstr "Пользовательские файлы конфигурации"
 
-#: ../../conventions.rst:202
+#: ../../conventions.rst:211
 msgid "~/.var/app/<app-id>/config"
 msgstr "~/.var/app/<app-id>/config"
 
-#: ../../conventions.rst:203
+#: ../../conventions.rst:212
 msgid "XDG_DATA_HOME"
 msgstr "XDG_DATA_HOME"
 
-#: ../../conventions.rst:203
+#: ../../conventions.rst:212
 msgid "User-specific data"
 msgstr "Пользовательские данные"
 
-#: ../../conventions.rst:203
+#: ../../conventions.rst:212
 msgid "~/.var/app/<app-id>/data"
 msgstr "~/.var/app/<app-id>/data"
 
-#: ../../conventions.rst:204
+#: ../../conventions.rst:213
 msgid "XDG_CACHE_HOME"
 msgstr "XDG_CACHE_HOME"
 
-#: ../../conventions.rst:204
+#: ../../conventions.rst:213
 msgid "Non-essential user-specific data"
 msgstr "Несущественные пользовательские данные"
 
-#: ../../conventions.rst:204
+#: ../../conventions.rst:213
 msgid "~/.var/app/<app-id>/cache"
 msgstr "~/.var/app/<app-id>/cache"
 
-#: ../../conventions.rst:205
+#: ../../conventions.rst:214
 msgid "XDG_STATE_HOME"
 msgstr "XDG_STATE_HOME"
 
-#: ../../conventions.rst:205
+#: ../../conventions.rst:214
 msgid "State data such as undo history"
 msgstr "Данные состояния, такие как история отмен"
 
-#: ../../conventions.rst:205
+#: ../../conventions.rst:214
 msgid "~/.var/app/<app-id>/.local/state"
 msgstr "~/.var/app/<app-id>/.local/state"
 
-#: ../../conventions.rst:208
+#: ../../conventions.rst:217
 msgid "For example, GNOME Dictionary will store user-specific data in::"
 msgstr "Например, словарь GNOME будет хранить пользовательские данные в::"
 
-#: ../../conventions.rst:213
+#: ../../conventions.rst:221
 msgid ""
 "Note that applications can be configured to use non-default base "
 "directory locations (see :doc:`sandbox-permissions`)."
@@ -549,56 +555,77 @@ msgstr ""
 "Обратите внимание, что приложения могут быть настроены на использование "
 "базовых каталогов не по умолчанию (см. :doc:`разрешения для песочницы`)."
 
-#: ../../conventions.rst:216
+#: ../../conventions.rst:224
 msgid ""
 "Note that ``$XDG_STATE_HOME`` is only supported by Flatpak 1.13 and "
 "later. If your app needs to work on earlier versions of Flatpak, you can "
 "use the ``--persist=.local/state`` and ``--unset-env=XDG_STATE_HOME`` "
-"finish args so the app will use the correct directory, even after "
-"Flatpak is later upgraded to >1.13."
+"finish args so the app will use the correct directory, even after Flatpak"
+" is later upgraded to >1.13."
 msgstr ""
 "Обратите внимание, что ``$XDG_STATE_HOME`` поддерживается только Flatpak "
 "1.13 и более поздними версиями. Если вашему приложению необходимо "
 "работать с более ранними версиями Flatpak, вы можете использовать "
 "аргументы завершения ``--persist=.local/state`` и ``--unset-"
-"env=XDG_STATE_HOME``, чтобы приложение использовало правильный "
-"каталог. , даже после того, как Flatpak позже был обновлен до > 1.13."
+"env=XDG_STATE_HOME``, чтобы приложение использовало правильный каталог. ,"
+" даже после того, как Flatpak позже был обновлен до > 1.13."
 
 #~ msgid ""
-#~ "As described in :doc:`using-flatpak`, Flatpak requires each "
-#~ "application to have a unique identifier, which has a form such as "
-#~ "``org.gnome.Dictionary``. The format is in reverse-DNS style so the "
-#~ "first section is a domain controlled by the project and the trailing "
-#~ "section represents the specific project. As will be seen below and in "
-#~ "future sections, this ID is expected to be used in a number of "
-#~ "places. Developers must follow the standard `D-Bus naming conventions "
-#~ "<https://dbus.freedesktop.org/doc/dbus-specification.html#message-"
-#~ "protocol-names>`_ when creating their own IDs. This format is already "
-#~ "recommended by the `Desktop File specification <https://"
-#~ "specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-"
-#~ "latest.html#file-naming>`_ and `Appstream specification <https://www."
-#~ "freedesktop.org/software/appstream/docs/chap-Metadata.html#sect-"
-#~ "Metadata-GenericComponent>`_ also."
+#~ "As described in :doc:`using-flatpak`, "
+#~ "Flatpak requires each application to "
+#~ "have a unique identifier, which has "
+#~ "a form such as ``org.gnome.Dictionary``. "
+#~ "The format is in reverse-DNS style"
+#~ " so the first section is a "
+#~ "domain controlled by the project and "
+#~ "the trailing section represents the "
+#~ "specific project. As will be seen "
+#~ "below and in future sections, this "
+#~ "ID is expected to be used in "
+#~ "a number of places. Developers must "
+#~ "follow the standard `D-Bus naming "
+#~ "conventions <https://dbus.freedesktop.org/doc/dbus-"
+#~ "specification.html#message-protocol-names>`_ when"
+#~ " creating their own IDs. This format"
+#~ " is already recommended by the "
+#~ "`Desktop File specification "
+#~ "<https://specifications.freedesktop.org/desktop-entry-spec"
+#~ "/desktop-entry-spec-latest.html#file-naming>`_"
+#~ " and `Appstream specification "
+#~ "<https://www.freedesktop.org/software/appstream/docs/chap-"
+#~ "Metadata.html#sect-Metadata-GenericComponent>`_ "
+#~ "also."
 #~ msgstr ""
-#~ "Как описано в :doc:`using-flatpak`, Flatpak требует, чтобы каждое "
-#~ "приложение имело уникальный идентификатор, который имеет такую форму, "
-#~ "как org.gnome.Dictionary``. Формат выполнен в стиле обратного DNS, "
-#~ "поэтому первый раздел представляет собой домен, контролируемый "
-#~ "проектом, а завершающий раздел представляет конкретный проект. Как "
-#~ "будет показано ниже и в следующих разделах, ожидается, что этот "
-#~ "идентификатор будет использоваться в ряде мест. Разработчики должны "
-#~ "следовать стандартным соглашениям об именах D-Bus <https://dbus."
-#~ "freedesktop.org/doc/dbus-specification.html#message-protocol-names>`_ "
-#~ "при создании своих собственных идентификаторов. Этот формат уже "
-#~ "рекомендован `Спецификацией файла рабочего стола <https://"
-#~ "specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-"
-#~ "latest.html#file-naming>`_ и `Спецификацией потока приложений "
-#~ "<https ://www.freedesktop.org/software/appstream/docs/chap-Metadata."
-#~ "html#sect-Metadata-GenericComponent>`_."
+#~ "Как описано в :doc:`using-flatpak`, "
+#~ "Flatpak требует, чтобы каждое приложение "
+#~ "имело уникальный идентификатор, который имеет"
+#~ " такую форму, как org.gnome.Dictionary``. "
+#~ "Формат выполнен в стиле обратного DNS,"
+#~ " поэтому первый раздел представляет собой"
+#~ " домен, контролируемый проектом, а "
+#~ "завершающий раздел представляет конкретный "
+#~ "проект. Как будет показано ниже и "
+#~ "в следующих разделах, ожидается, что "
+#~ "этот идентификатор будет использоваться в "
+#~ "ряде мест. Разработчики должны следовать "
+#~ "стандартным соглашениям об именах D-Bus "
+#~ "<https://dbus.freedesktop.org/doc/dbus-specification.html"
+#~ "#message-protocol-names>`_ при создании "
+#~ "своих собственных идентификаторов. Этот формат"
+#~ " уже рекомендован `Спецификацией файла "
+#~ "рабочего стола <https://specifications.freedesktop.org"
+#~ "/desktop-entry-spec/desktop-entry-spec-"
+#~ "latest.html#file-naming>`_ и `Спецификацией "
+#~ "потока приложений <https "
+#~ "://www.freedesktop.org/software/appstream/docs/chap-"
+#~ "Metadata.html#sect-Metadata-GenericComponent>`_."
 
 #~ msgid ""
-#~ "Qt: provides access to XDG base directories with the the "
-#~ "`QStandardPaths Class <http://doc.qt.io/qt-5/qstandardpaths.html>`_"
+#~ "Qt: provides access to XDG base "
+#~ "directories with the the `QStandardPaths "
+#~ "Class <http://doc.qt.io/qt-5/qstandardpaths.html>`_"
 #~ msgstr ""
-#~ "Qt: предоставляет доступ к базовым каталогам XDG с помощью класса "
+#~ "Qt: предоставляет доступ к базовым "
+#~ "каталогам XDG с помощью класса "
 #~ "QStandardPaths <http://doc.qt.io/qt-5/qstandardpaths.html>`_"
+
