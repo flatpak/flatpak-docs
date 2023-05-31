@@ -2,17 +2,17 @@
 # Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2019-2022.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2019-2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
 "POT-Creation-Date: 2023-01-07 16:26-0600\n"
-"PO-Revision-Date: 2022-11-03 14:46-0300\n"
+"PO-Revision-Date: 2023-05-31 14:30-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
-"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Language-Team: Brazilian Portuguese\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -120,11 +120,10 @@ msgid "Taking screenshots and screencasts"
 msgstr "Obter capturas de tela e fazer gravação de tela"
 
 #: ../../desktop-integration.rst:41
-#, fuzzy
 msgid "Toolkits like GTK and Qt provide transparent support for portals."
 msgstr ""
 "Kits de ferramentas como GTK e Qt fornecem suporte transparente para "
-"portais:"
+"portais."
 
 #: ../../desktop-integration.rst:48
 msgid ""

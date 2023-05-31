@@ -2,17 +2,17 @@
 # Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2019-2022.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2019-2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
 "POT-Creation-Date: 2023-05-31 14:18-0300\n"
-"PO-Revision-Date: 2022-09-29 19:54-0300\n"
+"PO-Revision-Date: 2023-05-31 14:28-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
-"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Language-Team: Brazilian Portuguese\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -88,7 +88,6 @@ msgstr ""
 " geralmente não devem considerar criar seus próprios."
 
 #: ../../dependencies.rst:32
-#, fuzzy
 msgid ""
 "Runtimes are automatically installed for users when they install an "
 "application, and build tools can also automatically install them for you "
@@ -102,9 +101,9 @@ msgstr ""
 "instalam um aplicativo, e as ferramentas de compilação também podem "
 "instalá-los automaticamente para você (a opção ``--install-deps-from`` do"
 " ``flatpak-builder`` é útil para isso). No entanto, se você precisar "
-"instalar manualmente o runtime escolhido, isso poderá ser feito da mesma "
+"instalar manualmente o runtime escolhido, isso pode ser feito da mesma "
 "maneira que a instalação de um aplicativo, com o comando ``flatpak "
-"install``. Por exemplo, o comando para instalar o runtime do GNOME 3.26 "
+"install``. Por exemplo, o comando para instalar o runtime do GNOME 43 "
 "é::"
 
 #: ../../dependencies.rst:43

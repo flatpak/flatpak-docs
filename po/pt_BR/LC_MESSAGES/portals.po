@@ -1,19 +1,18 @@
-# SOME DESCRIPTIVE TITLE.
+# Brazilian Portuguese translation for portals
 # Copyright (C) 2017-2022, Flatpak Team. Licensed under Creative Commons
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2023.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
 "POT-Creation-Date: 2023-05-31 14:18-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2023-05-31 14:42-0300\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
-"Language-Team: pt_BR <LL@li.org>\n"
+"Language-Team: Brazilian Portuguese\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -22,7 +21,7 @@ msgstr ""
 
 #: ../../portals.rst:2
 msgid "Portal support in GTK"
-msgstr ""
+msgstr "Suporte a portal no GTK"
 
 #: ../../portals.rst:4
 msgid ""
@@ -30,6 +29,10 @@ msgid ""
 " that it is being used inside a Flatpak sandbox. Here are some hints for "
 "what GTK applications should do to benefit from this."
 msgstr ""
+"O GTK usará de forma transparente portais para algumas funcionalidades "
+"quando detectar que está sendo usado dentro de uma sandbox Flatpak. Aqui "
+"estão algumas dicas sobre o que os aplicativos GTK devem fazer para se "
+"beneficiar disso."
 
 #: ../../portals.rst:8
 msgid ""
@@ -37,36 +40,48 @@ msgid ""
 "``g_get_user_data_dir()`` to find the right place to store configuration "
 "and data"
 msgstr ""
+"Use ``g_get_user_config_dir()``, ``g_get_user_cache_dir()`` e "
+"``g_get_user_data_dir()`` para encontrar o local certo para armazenar "
+"configurações e dados"
 
 #: ../../portals.rst:11
 msgid ""
 "Use ``GtkFileChooserNative`` (or ``GtkFileChooserButton``) to open files."
 " As of `xdg-desktop-portal-gtk` 1.7.1 it can also open directories."
 msgstr ""
+"Use ``GtkFileChooserNative`` (ou ``GtkFileChooserButton``) para abrir "
+"arquivos. A partir do `xdg-desktop-portal-gtk` 1.7.1 ele também pode abrir "
+"diretórios."
 
 #: ../../portals.rst:13
 msgid "Use ``GtkPrintOperation`` for printing"
-msgstr ""
+msgstr "Use ``GtkPrintOperation`` para imprimir"
 
 #: ../../portals.rst:14
 msgid ""
 "Use ``gtk_show_uri_on_window()`` or "
 "``g_app_info_launch_default_for_uri()`` to open URIs"
 msgstr ""
+"Use ``gtk_show_uri_on_window()`` ou "
+"``g_app_info_launch_default_for_uri()`` para abrir URIs"
 
 #: ../../portals.rst:16
 msgid "Use ``gtk_application_inhibit()`` if you want to inhibit idle or logout"
 msgstr ""
+"Use ``gtk_application_inhibit()`` se você quiser inibir ociosidade ou "
+"encerramento de sessão (logout)"
 
 #: ../../portals.rst:17
 msgid "Use ``g_application_send_notification()`` to show notifications"
-msgstr ""
+msgstr "Use ``g_application_send_notification()`` para mostrar notificações"
 
 #: ../../portals.rst:18
 msgid ""
 "Use the ``GtkApplication::screensaver-active`` property to monitor "
 "scrensaver status"
 msgstr ""
+"Use a propriedade ``GtkApplication::screensaver-active`` para monitorar o "
+"status da proteção de tela"
 
 #: ../../portals.rst:21
 msgid ""
@@ -74,10 +89,14 @@ msgid ""
 "fonts. It is also used as a fallback for the filepicker if the main xdg-"
 "desktop-portal implementation doesn't support filepicking."
 msgstr ""
+"Além disso, xdg-desktop-portal-gtk é necessário para temas e fontes GTK. "
+"Ele também é usado como substituto para o selecionador de arquivos se a "
+"implementação principal do xdg-desktop-portal não suportar seleção de "
+"arquivos."
 
 #: ../../portals.rst:25
 msgid "Portal support in Qt and KDE"
-msgstr ""
+msgstr "Suporte a portal no Qt e KDE"
 
 #: ../../portals.rst:27
 msgid ""
@@ -86,12 +105,18 @@ msgid ""
 "sandbox. Here are some hints for what Qt or KDE applications should do to"
 " benefit from this."
 msgstr ""
+"As bibliotecas do Qt e do KDE usarão portais de forma transparente para "
+"algumas funcionalidades quando detectarem que estão sendo usadas dentro "
+"de uma caixa de areia Flatpak. Aqui estão algumas dicas sobre o que os "
+"aplicativos Qt ou KDE devem fazer para se beneficiar disso."
 
 #: ../../portals.rst:31
 msgid ""
 "Use ``QDesktopServices::openUrl(const QUrl &url)`` or ``KIO::OpenUrlJob``"
 " to open URIs or send an email when using ``mailto`` URL"
 msgstr ""
+"Use ``QDesktopServices::openUrl(const QUrl &url)`` ou ``KIO::Krun`` para "
+"abrir URIs ou enviar um e-mail por meio de URL ``mailto``"
 
 #: ../../portals.rst:33
 msgid ""
@@ -100,8 +125,11 @@ msgid ""
 "portals cannot currently give access to directories on the host "
 "filesystem"
 msgstr ""
+"Use a classe ``QFileDialog`` para abrir arquivos e, a partir do Qt "
+"``5.18.90``, diretórios. Evite usar ``QFileDialog::DontUseNativeDialog``."
+" Observe que portais não podem atualmente dar acesso a diretórios no "
+"sistema de arquivos host"
 
 #: ../../portals.rst:36
 msgid "Use ``KNotification::notify()`` to show notification"
-msgstr ""
-
+msgstr "Use ``KNotification::notify()`` para mostrar notificação"

@@ -2,17 +2,17 @@
 # Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2019-2022.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2019-2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
 "POT-Creation-Date: 2023-01-07 16:26-0600\n"
-"PO-Revision-Date: 2022-09-29 16:38-0300\n"
+"PO-Revision-Date: 2023-05-31 14:40-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
-"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Language-Team: Brazilian Portuguese\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -83,9 +83,8 @@ msgstr ""
 "usando o método na seção seguinte."
 
 #: ../../python.rst:39
-#, fuzzy
 msgid "Building multiple Python dependencies"
-msgstr "Compilando várias dependências python"
+msgstr "Compilando várias dependências Python"
 
 #: ../../python.rst:41
 msgid ""
