@@ -2,17 +2,17 @@
 # Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2019-2022.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2019-2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
 "POT-Creation-Date: 2023-05-31 14:18-0300\n"
-"PO-Revision-Date: 2022-11-03 12:06-0300\n"
+"PO-Revision-Date: 2023-05-31 14:22-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
-"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Language-Team: Brazilian Portuguese\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -77,7 +77,6 @@ msgstr ""
 "``org.gnome.Dictionary``."
 
 #: ../../conventions.rst:26
-#, fuzzy
 msgid ""
 "The format is in reverse-DNS style so the first section should be a "
 "domain controlled by the project and the trailing section represents the "
@@ -86,10 +85,10 @@ msgid ""
 "their own."
 msgstr ""
 "O formato está no estilo DNS reverso, portanto, a primeira seção "
-"geralmente é um domínio controlado pelo projeto e a seção final "
-"representa o projeto específico. Existem algumas exceções a isso, como "
-"extensões que usam o ID de aplicativo base do projeto que elas estendem "
-"em vez de suas próprias."
+"deve ser um domínio controlado pelo projeto e a seção final representa o "
+"projeto específico. Existem algumas exceções a isso, como extensões que "
+"usam o ID de aplicativo base do projeto que elas estendem em vez de suas "
+"próprias."
 
 #: ../../conventions.rst:31
 msgid ""
@@ -171,36 +170,31 @@ msgstr ""
 "``org.site_exemplo.Foo``."
 
 #: ../../conventions.rst:61
-#, fuzzy
 msgid "``com.github.foo.Bar`` or ``com.gitlab.foo.Bar``"
-msgstr "``com.github.foo.Bar``"
+msgstr "``com.github.foo.Bar`` ou ``com.gitlab.foo.Bar``"
 
 #: ../../conventions.rst:63
-#, fuzzy
 msgid ""
 "While a project may be hosted on GitHub or GitLab it does not have any "
 "control over the ``github.com`` or ``gitlab.com`` domain. Instead you "
 "should use ``io.github`` or ``io.gitlab`` as shown above."
 msgstr ""
-"Embora um projeto possa estar hospedado no GitHub, ele não tem controle "
-"sobre o domínio ``github.com``. Em vez disso, você deve usar o "
-"``io.github`` como mostrado acima."
+"Embora um projeto possa estar hospedado no GitHub ou GitLab, ele não tem "
+"controle sobre o domínio ``github.com`` ou ``gitlab.com``. Em vez disso, "
+"você deve usar o ``io.github`` ou ``io.gitlab`` como mostrado acima."
 
 #: ../../conventions.rst:69
 msgid "AppData files"
 msgstr "Arquivos AppData"
 
 #: ../../conventions.rst:70
-#, fuzzy
 msgid ""
 "AppData files provide metadata about applications, which is used by "
 "application stores (such as Flathub, GNOME Software and KDE Discover)."
 msgstr ""
 "Os arquivos AppData fornecem metadados sobre aplicativos, que são usados "
 "pelos repositórios de aplicativos (como Flathub, GNOME Programas e KDE "
-"Discover). A `especificação de AppStream do Freedesktop "
-"<https://www.freedesktop.org/software/appstream/docs/>`_ fornece uma "
-"referência completa sobre o fornecimento de AppData."
+"Discover)."
 
 #: ../../conventions.rst:74
 msgid ""
@@ -211,6 +205,12 @@ msgid ""
 "<https://www.freedesktop.org/software/appstream/metainfocreator/>`_ to "
 "generate a basic file."
 msgstr ""
+"A `especificação de AppStream do Freedesktop "
+"<https://www.freedesktop.org/software/appstream/docs/>`_ fornece uma "
+"referência completa sobre o fornecimento de AppData. Você pode usar o "
+"`AppStream MetaInfo Creator "
+"<https://www.freedesktop.org/software/appstream/metainfocreator/>`_ "
+"online para gerar um arquivo básico."
 
 #: ../../conventions.rst:80
 msgid ""
@@ -280,6 +280,9 @@ msgid ""
 "The maximum size allowed by the specification is 512x512px. SVG icons are"
 " of size ``scalable``::"
 msgstr ""
+"Ícones devem estar em formato de quadrados, ou seja, sua largura e sua "
+"altura devem ser iguais. O tamanho máximo permitido pela especificação é "
+"512x512px. Ícones SVG têm o tamanho ``scalable``::"
 
 #: ../../conventions.rst:117
 msgid "Desktop files"

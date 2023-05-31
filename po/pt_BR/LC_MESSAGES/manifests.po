@@ -2,7 +2,7 @@
 # Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
 # Attribution 4.0 International License.
 # This file is distributed under the same license as the Flatpak package.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2019-2022.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2019-2023.
 #
 msgid ""
 msgstr ""
@@ -12,7 +12,7 @@ msgstr ""
 "PO-Revision-Date: 2022-11-03 12:09-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
-"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Language-Team: Brazilian Portuguese\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -299,17 +299,15 @@ msgid "``bzr`` - Bazaar repositories"
 msgstr "``bzr`` – repositórios Bazaar"
 
 #: ../../manifests.rst:157
-#, fuzzy
 msgid "``file`` - local/remote files (these are copied into the source directory)"
 msgstr ""
-"``file`` – arquivo local (esses são copiados para dentro do diretório "
+"``file`` – arquivos locais/remotos (esses são copiados para dentro do diretório "
 "fonte)"
 
 #: ../../manifests.rst:158
-#, fuzzy
 msgid "``dir`` - local directories (these are copied into the source directory)"
 msgstr ""
-"``dir`` – diretório local (esses são copiados para dentro do diretório "
+"``dir`` – diretórios locais (esses são copiados para dentro do diretório "
 "fonte)"
 
 #: ../../manifests.rst:159
