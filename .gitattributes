@@ -1,0 +1,3 @@
+docs/** -linguist-documentation
+docs/**/*.rst linguist-detectable
+docs/**/*.html linguist-generated
