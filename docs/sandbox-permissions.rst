@@ -189,6 +189,10 @@ reasons you can use these permissions::
 
 With those permissions glib will continue using dconf directly.
 
+If you use a newer runtime where dconf is no longer built and still need it
+you will have to build the `dconf <https://download.gnome.org/sources/dconf/>`_ GIO module
+and set ``--env=GIO_EXTRA_MODULES=/app/lib/gio/modules/``.
+
 gvfs access
 ```````````
 
