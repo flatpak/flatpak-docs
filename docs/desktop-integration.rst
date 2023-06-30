@@ -61,7 +61,7 @@ Status icons
 
 Status icons are the same concept as the system tray or the taskbar on Windows,
 or menu bar icons on Mac. These are supported on most Linux distributions,
-through libappindicator.
+through abstractions such as libappindicator.
 
 A number of Linux distributions don't show status icons. It is still possible
 to provide a status icon, and it will be shown in some distributions. However,
@@ -70,9 +70,33 @@ in a supplementary manner, and not to rely on them as the only mechanism for
 providing status information or access to particular features. This includes
 "minimize to tray" (or equivalent) functionality.
 
-XEmbed style icons will function with the ``x11`` permission but all other
-status icon interfaces require extra permissions to escape the sandbox and
-these services are not designed to be robust against untrusted software.
+XEmbed style icons will function on desktops that support them with the
+``x11`` permission.
+
+StatusNotifier
+^^^^^^^^^^^^^^
+
+StatusNotifier style icons will not function without extra permissions as it
+requires talking to a non-hardenend host service. Risks include impersonation of
+other software and exploitation of bugs in the host service such as image decoders.
+
+At the very minimum to use StatusNotifier you must have the
+``--talk-name=org.kde.StatusNotifierWatcher`` permission to register an item.
+
+Depending on the exact implementation of StatusNotifier that your application is
+using it may need session bus ownership of ``org.kde.StatusNotifierItem-$PID-$ITEM_ID``.
+
+This permission is problematic in Flatpak as the ``$PID`` value is often the same
+in sandboxes and the item will possibly conflict with other applications.
+However if needed the ``--own-name=org.kde.*`` permission will allow this. This opens
+many new risks including the ability to impersonate any KDE service or application
+possibly capturing important user data.
+
+Most implementations of StatusNotifer have dropped this requirement but known exceptions
+to this are Electron versions older than 23.3.0.
+
+Current versions of Electron, Chromium, KNotifications, and libappindicator are known
+to work without ownership permissions.
 
 System search
 -------------
@@ -146,7 +170,7 @@ For the Qt theming to work, the flatpak packages kstyle and platformtheme must b
   $ flatpak remote-add kdeapps https://distribute.kde.org/kdeapps.flatpakrepo
 
 Afterwards the two packages can be installed with the following commands::
-  
+
   $ flatpak install kdeapps org.kde.KStyle.Adwaita//5.9
   $ flatpak install kdeapps org.kde.PlatformTheme.QGnomePlatform//5.9
 
