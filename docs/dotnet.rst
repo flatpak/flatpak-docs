@@ -96,7 +96,7 @@ Creating the Flatpak
   .. note::
 
       For providing access to other things such as the network or
-      filesystem, see the `“Sandbox Permissions” section <../sandbox-permissions.html>`__
+      filesystem, see the `“Sandbox Permissions” section <https://docs.flatpak.org/en/latest/sandbox-permissions.html>`__
 
 7.  Copy and save the dotnet NuGet sources generator script
     ``flatpak-dotnet-generator.py`` from the `Flatpak Builder Tools
