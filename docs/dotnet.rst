@@ -3,12 +3,9 @@ Dotnet
 
 Prerequisites
 ~~~~~~~~~~~~~
-   -  Is written with a Linux-compatible .NET desktop application framework compatible such as
-      `GTKSharp <https://github.com/GtkSharp/GtkSharp>`__, `Avalonia
-      UI <https://www.avaloniaui.net/>`__, or
-      `Eto <https://github.com/picoe/Eto>`__
-   -  Has source code hosted on a Git server such as GitHub, GitLab,
-      or Bitbucket
+  - The application is built with a Linux-compatible .NET desktop application framework compatible such as `GTKSharp <https://github.com/GtkSharp/GtkSharp>`__, `Avalonia UI <https://www.avaloniaui.net/>`__, or `Eto <https://github.com/picoe/Eto>`__
+  - The application's source code is hosted on a Git server such as GitHub, GitLab, or Bitbucket
+  - A Git commit with a `Tag <https://git-scm.com/book/en/v2/Git-Basics-Tagging>`__ exists on the repository to use for the build. This usually represents the version number of the application (e.g. v1.0, v1.1, etc.).
 
 Steps for Packaging
 ~~~~~~~~~~~~~~~~~~~
@@ -44,6 +41,12 @@ Installing dependencies
 
 Creating the Flatpak
 ^^^^^^^^^^^^^^^^^^^^
+
+.. note::
+
+  Here is a brief description of the placeholders in the below example:
+
+  - ``<release-number>``: The numbered release to build from, in the form of a Git `Tag <https://git-scm.com/book/en/v2/Git-Basics-Tagging>`__.
 
 5.  Create a new folder somewhere different from your existing project
 
@@ -86,7 +89,8 @@ Creating the Flatpak
           buildsystem: simple
           sources:
             - type: git
-              url: https://github.com/[[username]]/[[project-name]].git
+              url: https://github.com/<username>/<project-name>.git
+              tags: <release-number>
             - ./nuget-sources.json
           build-commands:
             - dotnet publish [[project-name]]/[[project-name]].csproj -c Release --no-self-contained --source ./nuget-sources
