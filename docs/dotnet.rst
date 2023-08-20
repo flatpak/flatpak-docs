@@ -99,7 +99,7 @@ Creating the Flatpak
           build-commands:
             - dotnet publish <project-name>/<project-name>.csproj -c Release --no-self-contained --source ./nuget-sources
             - mkdir -p ${FLATPAK_DEST}/bin
-            - cp -r ${FLATPAK_BUILDER_BUILDDIR}/<project-name>/bin/Release/net6.0/publish/* ${FLATPAK_DEST}/bin
+            - cp -r <project-name>/bin/Release/net6.0/publish/* ${FLATPAK_DEST}/bin
 
   .. note::
 
