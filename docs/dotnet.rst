@@ -70,13 +70,13 @@ Creating the Flatpak
       build-options:
         prepend-path: "/usr/lib/sdk/dotnet6/bin"
         append-ld-library-path: "/usr/lib/sdk/dotnet6/lib"
-        env:
-          PKG_CONFIG_PATH: "/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib/sdk/dotnet6/lib/pkgconfig"
+        prepend-pkg-config-path: "/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib/sdk/dotnet6/lib/pkgconfig"
 
       command: <project-name>
 
       finish-args:
         - --device=dri
+        - --share=ipc
         # TODO: Replace this with wayland and fallback-x11 once Wayland support
         #       becomes available:
         #       https://github.com/AvaloniaUI/Avalonia/pull/8003
@@ -125,7 +125,7 @@ Creating the Flatpak
 
   .. code-block:: shell
 
-        python3 flatpak-dotnet-generator.py --dotnet 7 nuget-sources.json <app-name>/<project-name>/<project-name>.csproj
+        python3 flatpak-dotnet-generator.py --dotnet 6 nuget-sources.json <app-name>/<project-name>/<project-name>.csproj
 
 10. Run the Flatpak Builder script to build the local Flatpak
 
