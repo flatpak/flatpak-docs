@@ -94,7 +94,7 @@ Creating the Flatpak
           sources:
             - type: git
               url: https://github.com/<username>/<project-name>.git
-              tags: <release-number>
+              tag: <release-number>
             - ./nuget-sources.json
           build-commands:
             - dotnet publish <project-name>/<project-name>.csproj -c Release --no-self-contained --source ./nuget-sources
