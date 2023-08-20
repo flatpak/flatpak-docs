@@ -24,19 +24,27 @@ Installing dependencies
 
 1. Install Flatpak using the method provided for your distribution
    `Flatpak - Quick Setup <https://flatpak.org/setup/>`__
-2. Install the FreeDesktop SDKs (When prompted for a version, select the
+
+2. Install Flatpak Builder as both a flatpak package and a distribution package (apt / dnf)
+
+  .. code-block:: shell
+
+        flatpak install org.flatpak.Builder
+        sudo apt install flatpak-builder
+
+3. Install the FreeDesktop SDKs (When prompted for a version, select the
    latest available version)
 
   .. code-block:: shell
 
         flatpak install flathub org.freedesktop.Platform org.freedesktop.Sdk
 
-3. Install the Flatpak SDK extension for your dotnet version
+4. Install the Flatpak SDK extension for your dotnet version
    (e.g. `dotnet6 <https://github.com/flathub/org.freedesktop.Sdk.Extension.dotnet6>`__, `dotnet7 <https://github.com/flathub/org.freedesktop.Sdk.Extension.dotnet7>`__)
 
   .. code-block:: shell
 
-        flatpak install org.freedesktop.Sdk.Extension.dotnet7
+        flatpak install org.freedesktop.Sdk.Extension.dotnet6
 
 
 Creating the Flatpak
@@ -50,26 +58,27 @@ Creating the Flatpak
 
 5.  Create a new folder somewhere different from your existing project
 
+
 6.  Create a YAML file titled
-    ``com.github.[[username]].[[project-name]].yaml`` with the following
+    ``<namespace>.<app-name>.yaml`` with the following
     example template, replacing the placeholders with the appropriate
     information: \
 
   .. code-block:: yaml
 
-      app-id: com.github.[[username]].[[project-name]]
+      app-id: <namespace>.<app-name>
       runtime: org.freedesktop.Platform
       runtime-version: '22.08'
       sdk: org.freedesktop.Sdk
       sdk-extensions:
-        - org.freedesktop.Sdk.Extension.dotnet7
+        - org.freedesktop.Sdk.Extension.dotnet6
       build-options:
-        prepend-path: "/usr/lib/sdk/dotnet7/bin"
-        append-ld-library-path: "/usr/lib/sdk/dotnet7/lib"
+        prepend-path: "/usr/lib/sdk/dotnet6/bin"
+        append-ld-library-path: "/usr/lib/sdk/dotnet6/lib"
         env:
-          PKG_CONFIG_PATH: "/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib/sdk/dotnet7/lib/pkgconfig"
+          PKG_CONFIG_PATH: "/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib/sdk/dotnet6/lib/pkgconfig"
 
-      command: [[project-name]]
+      command: <project-name>
 
       finish-args:
         - --device=dri
@@ -83,9 +92,9 @@ Creating the Flatpak
         - name: dotnet
           buildsystem: simple
           build-commands:
-          - /usr/lib/sdk/dotnet7/bin/install.sh
+          - /usr/lib/sdk/dotnet6/bin/install.sh
 
-        - name: [[project-name]]
+        - name: <app-name>
           buildsystem: simple
           sources:
             - type: git
@@ -93,9 +102,9 @@ Creating the Flatpak
               tags: <release-number>
             - ./nuget-sources.json
           build-commands:
-            - dotnet publish [[project-name]]/[[project-name]].csproj -c Release --no-self-contained --source ./nuget-sources
+            - dotnet publish <project-name>/<project-name>.csproj -c Release --no-self-contained --source ./nuget-sources
             - mkdir -p ${FLATPAK_DEST}/bin
-            - cp -r ${FLATPAK_BUILDER_BUILDDIR}/[[project-name]]/bin/Release/net7.0/publish/* ${FLATPAK_DEST}/bin
+            - cp -r ${FLATPAK_BUILDER_BUILDDIR}/<project-name>/bin/Release/net6.0/publish/* ${FLATPAK_DEST}/bin
 
   .. note::
 
@@ -115,31 +124,34 @@ Creating the Flatpak
 
   .. code-block:: shell
 
-        git clone https://github.com/[[username]]/[[project]].git
+        git clone https://github.com/<username>/<app-name>.git
 
-9.  Run the NuGet source config generator script
-    ``flatpak-dotnet-generator.py`` with the following arguments:
+9.  Run the NuGet source config generator script ``flatpak-dotnet-generator.py`` with the following arguments:
 
   .. code-block:: shell
 
-        python3 flatpak-dotnet-generator.py --dotnet 7 nuget-sources.json [[project-name]]/[[project-name]]/[[project-name]].csproj
+        python3 flatpak-dotnet-generator.py --dotnet 7 nuget-sources.json <app-name>/<project-name>/<project-name>.csproj
 
 10. Run the Flatpak Builder script to build the local Flatpak
 
   .. code-block:: shell
 
-        flatpak-builder build-dir ./org.[[username]].[[project-name]].yaml --force-clean
-
-11. If the above build ran successfully, install the local flatpak
-
-  .. code-block:: shell
-
-        flatpak-builder --user --install build-dir ./org.[[username]].[[project-name]].yaml --force-clean
+        flatpak-builder build-dir <namespace>.<app-name>.yaml --force-clean
 
 
-12. Run the newly generated and installed Flatpak application
+Testing the build
+^^^^^^^^^^^^^^^^^
+
+11. Rebuild and install the local flatpak
 
   .. code-block:: shell
 
-        flatpak run com.github.[[username]].[[project]]
+        flatpak-builder --user --install build-dir <namespace>.<app-name>.yaml --force-clean
+
+
+12. Run the installed Flatpak application
+
+  .. code-block:: shell
+
+        flatpak run <namespace>.<app-name>
 
