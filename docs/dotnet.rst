@@ -10,15 +10,6 @@ Prerequisites
 Steps for Packaging
 ~~~~~~~~~~~~~~~~~~~
 
-.. note::
-
-  The steps below make a couple of assumptions for the sake of example, that may require modification to work for your use case:
-
-  - The application is namespaced with “com.github.[[username]]” for GitHub users.
-    (This can be replaced with any domain that you own, such as another Git server or your own website domain.)
-  - The application uses .NET 7.
-    (It still should be applicable for other versions by modifying the version number)
-
 Installing dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -54,6 +45,10 @@ Creating the Flatpak
 
   Here is a brief description of the placeholders in the below example:
 
+  - ``<namespace>``: The prefix that goes before the name of your Flatpak, which uniquely identifies the author. See `"Conventions - Application IDs" section <https://docs.flatpak.org/en/latest/conventions.html#application-ids>`__ to find the appropriate value for your use case.
+  - ``<app-name>``: The name of your application to use for Flatpak, usually somewhat similar to the project name inside the solution
+  - ``<project-name>``: The name of your ``.csproj`` file
+  - ``<user-name>``: The username you use in your Git server (GitHub, GitLab, Bitbucket)
   - ``<release-number>``: The numbered release to build from, in the form of a Git `Tag <https://git-scm.com/book/en/v2/Git-Basics-Tagging>`__.
 
 5.  Create a new folder somewhere different from your existing project
