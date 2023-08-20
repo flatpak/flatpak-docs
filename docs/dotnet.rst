@@ -76,11 +76,11 @@ Creating the Flatpak
 
       finish-args:
         - --device=dri
-        - --share=ipc
         # TODO: Replace this with wayland and fallback-x11 once Wayland support
         #       becomes available:
         #       https://github.com/AvaloniaUI/Avalonia/pull/8003
         - --socket=x11
+        - --share=ipc
         - --env=DOTNET_ROOT=/app/lib/dotnet
 
       modules:
