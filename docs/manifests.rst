@@ -32,7 +32,7 @@ For example, the GNOME Dictionary manifest includes:
 
   app-id: org.gnome.Dictionary
   runtime: org.gnome.Platform
-  runtime-version: '43'
+  runtime-version: '44'
   sdk: org.gnome.Sdk
   command: gnome-dictionary
 
@@ -81,14 +81,15 @@ be seen in the Dictionary manifest file:
   finish-args:
     # X11 + XShm access
     - --share=ipc
-    - --socket=x11
+    - --socket=fallback-x11
     # Wayland access
     - --socket=wayland
+    # GPU acceleration if needed
+    - --device=dri
     # Needs to talk to the network:
     - --share=network
     # Needs to save files locally
     - --filesystem=xdg-documents
-    - --metadata=X-DConf=migrate-path=/org/gnome/dictionary/
 
 Guidance on which permissions to use can be found in the
 :doc:`sandbox-permissions`, and a full list of ``finish-args`` options can be

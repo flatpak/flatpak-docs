@@ -12,14 +12,13 @@ straight-forward.
 
   app-id: org.flatpak.qtdemo
   runtime: org.kde.Platform
-  runtime-version: '5.11'
+  runtime-version: '5.15-22.08'
   sdk: org.kde.Sdk
   command: flatpak-demo
   finish-args:
     - --share=ipc
-    - --socket=x11
+    - --socket=fallback-x11
     - --socket=wayland
-    - --filesystem=host
     - --device=dri
   modules:
     - name: flatpak-demo
