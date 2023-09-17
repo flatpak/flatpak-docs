@@ -19,10 +19,10 @@ dependencies. Each runtime has a matching SDK (Software Development Kit), which
 contains all the things that are in the runtime, plus headers and development
 tools. This SDK is required to build apps for the runtime.
 
-In this tutorial we will use the Freedesktop 22.08 runtime and SDK. To
+In this tutorial we will use the Freedesktop 23.08 runtime and SDK. To
 install these, run::
 
-  $ flatpak install flathub org.freedesktop.Platform//22.08 org.freedesktop.Sdk//22.08
+  $ flatpak install flathub org.freedesktop.Platform//23.08 org.freedesktop.Sdk//23.08
 
 2. Create the app
 -----------------
@@ -46,7 +46,7 @@ manifest to the hello world app, add the following to an empty file:
 
   app-id: org.flatpak.Hello
   runtime: org.freedesktop.Platform
-  runtime-version: '22.08'
+  runtime-version: '23.08'
   sdk: org.freedesktop.Sdk
   command: hello.sh
   modules:

@@ -32,7 +32,7 @@ For example, the GNOME Dictionary manifest includes:
 
   app-id: org.gnome.Dictionary
   runtime: org.gnome.Platform
-  runtime-version: '44'
+  runtime-version: '45'
   sdk: org.gnome.Sdk
   command: gnome-dictionary
 
