@@ -55,8 +55,11 @@ For some practical examples of bad IDs
   similar. A better ID would be ``io.github.foo.Foo`` even if it is redundant.
 
 - ``org.example-site.Foo``
-  
-  This ID is not valid according to the DBus specification. You can use ``org.example_site.Foo`` instead.
+
+  This ID is not valid according to the DBus specification as a dash
+  ``-`` isn't allowed except on the last component. You should replace
+  ``-`` with an undercore ``_`` and therefore, use
+  ``org.example_site.Foo`` instead.
 
 - ``com.github.foo.Bar`` or ``com.gitlab.foo.Bar``
 
