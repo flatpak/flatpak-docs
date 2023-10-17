@@ -47,7 +47,7 @@ Toolkits like GTK and Qt provide transparent support for portals.
 
 If you are not using one of these toolkits, it is possible to access
 the portals API directly. See the `Portals API documentation
-<https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for more
+<https://flatpak.github.io/xdg-desktop-portal/>`_ for more
 information.
 
 Notifications
