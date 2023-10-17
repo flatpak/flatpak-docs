@@ -53,7 +53,7 @@ portals, meaning that applications don't need to do any additional
 work to use them (it is worth checking which portals each toolkit
 supports). Applications that aren't using a toolkit with support
 for portals can refer to the `xdg-desktop-portal API documentation
-<https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for
+<https://flatpak.github.io/xdg-desktop-portal/>`_ for
 information on how to use them.
 
 Permissions guidelines
