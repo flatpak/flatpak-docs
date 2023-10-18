@@ -30,15 +30,15 @@ complete list can be viewed using ``flatpak build-finish --help``.
 Filesystem permissions
 ----------------------
 
-Each of the following permissions configure filesystem access, and should
+Each of the following permissions configures filesystem access, and should
 be added to ``--filesystem=``:
 
 ====================  ===========================================
 ``host``              Access all files [#f3]_
 ``host-etc``          Access all files in /etc
 ``home``              Access the home directory
-``/some/dir``         Access an arbitrary path
-``~/some/dir``        Access an arbitrary path relative to the home directory
+``/some/dir``         Access an arbitrary directory
+``~/some/dir``        Access an arbitrary directory relative to the home directory
 ``xdg-desktop``       Access the XDG desktop directory
 ``xdg-documents``     Access the XDG documents directory
 ``xdg-download``      Access the XDG download directory
