@@ -19,3 +19,4 @@ before reading this section.
    manifests
    sandbox-permissions
    guides
+   troubleshooting
