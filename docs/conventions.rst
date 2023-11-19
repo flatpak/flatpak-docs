@@ -21,7 +21,7 @@ Application IDs
 ```````````````
 
 As described in :doc:`using-flatpak`, Flatpak requires each application to have a
-unique identifier, which has a form such as ``org.gnome.Dictionary``.
+unique identifier, which has a form such as ``org.example.app``.
 
 The format is in reverse-DNS style so the first section should be a domain
 controlled by the project and the trailing section represents the specific project.
@@ -47,29 +47,36 @@ For some practical examples of bad IDs
   should not be used for newly named applications. Don't hesitate to repeat the application name
   even if it already is part of the domain name section of the identifier (eg. ``org.example.Example``).
 
-- ``io.github.Foo``
+- ``io.github.foo``
 
   This is problematic because while ``foo.github.io`` may be unique to your project, it does not
   include a project-specific identifier. This may cause issues if another project creates
-  ``io.github.Foo-Bar`` which should be its own namespace but areas of ``flatpak`` may treat them
-  similar. A better ID would be ``io.github.foo.Foo`` even if it is redundant.
+  ``io.github.foo-bar`` which should be its own namespace but areas of ``flatpak`` may treat them
+  similar. A better ID would be ``io.github.foo.foo`` even if it is redundant.
 
-- ``org.example-site.Foo``
+- ``org.example-site.foo``
 
   This ID is not valid according to the DBus specification as a dash
   ``-`` isn't allowed except on the last component. You should replace
   ``-`` with an undercore ``_`` and therefore, use
   ``org.example_site.Foo`` instead.
 
-- ``com.github.foo.Bar`` or ``com.gitlab.foo.Bar``
+- ``com.github.foo.bar`` or ``com.gitlab.foo.bar``
 
   While a project may be hosted on GitHub or GitLab it does not have
   any control over the ``github.com`` or ``gitlab.com``
   domain. Instead you should use ``io.github`` or ``io.gitlab`` as
   shown above.
 
+- ``Org.Example.App``
+
+  The TLD portion of the ID must be lowercased and while not required
+  the application portion is recommended to be lowercase as well.
+  Instead you should use ``org.example.app``.
+
 MetaInfo files
 ``````````````
+
 MetaInfo files provide metadata about applications, which is
 used by application stores (such as Flathub, GNOME Software
 and KDE Discover).
