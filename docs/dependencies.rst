@@ -98,84 +98,48 @@ Extensions
 
 Runtimes and applications can define extension points which allow optional
 additional runtimes to be mounted at a specified location inside the sandbox
-when they are present on the system. Typical uses for extension points include
+when they are present on the system. Typical uses for extensions include
 translations for applications, debuginfo for sdks, or adding more functionality
 to the application. Some software refers to these extensions as "Add-ons".
 
-By convention, extension points follow the application ID of the application in
-question, followed by a generic term the extension is conveying. For example,
-OBS Studio supports plugins to extend the application's functionality.
-OBS Studio Flatpak has an extension point that goes by
-``com.obsproject.Studio.Plugin``, as "Plugin" conveys the extension type.
+For an extension to be loaded in the application or runtime, an extension
+point first needs to be defined in the application or runtime in 
+question.
 
-We can use the ``add-extensions`` property in the manifest to specify where
-and how should extensions be installed:
+By convention, extension points follow the ID of the application or 
+runtime in question, followed by a generic term for the extension. 
+For example, the OBS Studio flatpak may define an extension point 
+``com.obsproject.Studio.Plugin``, where "Plugin" is the generic term 
+prefixed by the application ID.
 
-.. code-block:: yaml
+To see available extension points, it's best to look at the application
+or runtime manifest.
 
-  add-extensions:
-    org.flatpak.App.ExampleExtension:
-      directory: my-dir # Installs extensions in $FLATPAK_DEST/my-dir
-      version: '1.0' # Branch version of extension
-      versions: 21.08;22.08beta # Supported extension versions
-      subdirectories: true # Creates $FLATPAK_DEST/my-dir/ExampleExtension directory
-      no-autodownload: true # Don't automatically download directories
-      autodelete: false # Don't autodelete
-      add-ld-path: lib # Add $FLATPAK_DEST/lib to library path
-      merge-dirs: my-dir1;my-dir2;my-dir3 # Merge these directories
-      download-if: conditional # Download only if 'conditional' exists
-      enable-if: conditional # Enable extension only if 'conditional' exists
-      subdirectory-suffix
-      locale-subset
+Any extension now choosing to be loaded inside the OBS Studio flatpak 
+must prefix their ID by ``com.obsproject.Studio.Plugin`` for example
+``com.obsproject.Studio.Plugin.Gstreamer``.
 
-Debug Extensions
-````````````````
+Some extension names having special significance are discussed below. 
 
-Debug extensions (stylized as ``.Debug``) are used for debugging purposes.
-To get a list of debug extensions, please visit
-:doc:`available-runtimes?highlight=.Debug`.
+- ``.Debug`` is used for Debug extensions by applications, runtimes and 
+  SDKs. They are used for debugging purposes. Every application or runtime 
+  built with ``flatpak-builder`` produces a ``.Debug`` extension unless 
+  specifically disabled in the manifest.
 
-Compatibility Debug Extensions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  A ``.Debug`` extension will be needed when generating useful 
+  backtraces. This is explained more in :doc:`debugging`.
 
-DESCRIPTION NEEDED
+- ``.Locale`` is used for Locale extensions by applications or runtimes.
+  They add support for more languages to the parent application or runtime.
+  These are usually partially downloaded by ``flatpak`` based on the 
+  configured system locale. Every application or runtime built with 
+  ``flatpak-builder`` produces a ``.Locale`` extension unless specifically 
+  disabled in the manifest.
 
-.. code-block:: yaml
+- ``.Sources`` is used for Sources extension by application or runtime.
+  They are used to bundle sources of the modules used in the application 
+  or runtime in question. ``flatpak-builder`` will produce a ``.Sources`` 
+  extension prefixed by ID when ``--bundle-sources`` is used.
 
-  add-extensions:
-    $FLATPAK_ID.Compat.{architecture}:
-      directory: lib/{architecture}-linux-gnu
-      version: '21.08'
-
-    $FLATPAK_ID.Compat.{architecture}.Debug:
-      directory: lib/debug/lib/{architecture}-linux-gnu
-      version: '21.08'
-      no-autodownload: true
-
-SDK Debug Extensions
-^^^^^^^^^^^^^^^^^^^^
-
-DESCRIPTION NEEDED
-
-.. code-block:: yaml
-
-  sdk-extensions:
-    $FLATPAK_ID.Sdk.Debug
-
-
-DESCRIPTION AND EXAMPLE NEEDED
-
-Locale Extensions
-`````````````````
-
-Locale extensions (stylized as ``.Locale``) are used to add support for
-more languages. To get a list of locale extensions, please visit
-:doc:`available-runtimes?highlight=.Locale`.
-
-.. code-block:: yaml
-
-  add-extensions:
-    $FLATPAK_ID.Locale
-
-  sdk-extensions:
-    $FLATPAK_ID.Sdk.Locale
+Please visit :doc:`extension` for a guide on how to create 
+extension points and extensions.
