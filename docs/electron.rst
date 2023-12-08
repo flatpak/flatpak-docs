@@ -46,7 +46,7 @@ ID. It also configures the runtime and SDK:
 
 .. code-block:: yaml
 
-  app-id: org.flathub.electron-sample-app
+  id: org.flathub.electron-sample-app
   runtime: org.freedesktop.Platform
   runtime-version: '23.08'
   sdk: org.freedesktop.Sdk
