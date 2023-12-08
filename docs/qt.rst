@@ -10,7 +10,7 @@ straight-forward.
 
 .. code-block:: yaml
 
-  app-id: org.flatpak.qtdemo
+  id: org.flatpak.qtdemo
   runtime: org.kde.Platform
   runtime-version: '5.15-22.08'
   sdk: org.kde.Sdk

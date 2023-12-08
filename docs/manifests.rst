@@ -22,7 +22,7 @@ Basic properties
 ----------------
 
 Each manifest file should specify basic information about the application that
-is to be built, including the ``app-id``, ``runtime``, ``runtime-version``,
+is to be built, including the ``id``, ``runtime``, ``runtime-version``,
 ``sdk`` and ``command`` parameters. These properties are typically specified
 at the beginning of the file.
 
@@ -30,7 +30,7 @@ For example, the GNOME Dictionary manifest includes:
 
 .. code-block:: yaml
 
-  app-id: org.gnome.Dictionary
+  id: org.gnome.Dictionary
   runtime: org.gnome.Platform
   runtime-version: '45'
   sdk: org.gnome.Sdk

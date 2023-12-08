@@ -44,7 +44,7 @@ manifest to the hello world app, add the following to an empty file:
 
 .. code-block:: yaml
 
-  app-id: org.flatpak.Hello
+  id: org.flatpak.Hello
   runtime: org.freedesktop.Platform
   runtime-version: '23.08'
   sdk: org.freedesktop.Sdk
