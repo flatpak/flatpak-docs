@@ -164,7 +164,7 @@ types include:
    include archive or package files
 
 Different properties are available for each source type, which are listed
-in the :doc:`flatpak-builder-command-reference`.
+in the :doc:`module-sources`.
 
 Supported build systems
 ```````````````````````

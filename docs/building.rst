@@ -17,5 +17,6 @@ before reading this section.
    dependencies
    flatpak-builder
    manifests
+   module-sources
    sandbox-permissions
    guides
