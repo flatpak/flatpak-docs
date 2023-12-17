@@ -61,6 +61,18 @@ also be added:
 - ``:rw`` - read/write access (this is the default)
 - ``:create`` - read/write access, and create the directory if it doesn't exist
 
+Accessing the host's XDG base directories from within the sandbox can be done
+by prefixing the standard environment variables with HOST\_.
+These prefixed variables are:
+
+HOST_XDG_DATA_HOME
+
+HOST_XDG_CONFIG_HOME
+
+HOST_XDG_CACHE_HOME
+
+HOST_XDG_STATE_HOME (since Flatpak 1.13)
+
 .. rubric:: Footnotes
 
 .. [#f1] This is not necessarily required, but without it the X11 shared
