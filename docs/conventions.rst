@@ -46,9 +46,9 @@ For some practical examples of bad IDs
   ``.desktop`` as a special case causing inconsistency. For this same reason, ``.Desktop`` suffixes
   should not be used for newly named applications. Don't hesitate to repeat the application name
   even if it already is part of the domain name section of the identifier (eg. ``org.example.Example``).
- 
+
 - ``io.github.Foo``
- 
+
   This is problematic because while ``foo.github.io`` may be unique to your project, it does not
   include a project-specific identifier. This may cause issues if another project creates
   ``io.github.Foo-Bar`` which should be its own namespace but areas of ``flatpak`` may treat them
@@ -221,11 +221,16 @@ For example, GNOME Dictionary will store user-specific data in::
 
   ~/.var/app/org.gnome.Dictionary/data/gnome-dictionary
 
-Note that applications can be configured to use non-default base directory
-locations (see :doc:`sandbox-permissions`).
+These environment variables are always set by flatpak and override any host values.
+However if using the host directories are needed the ``$HOST_XDG_CONFIG_HOME``,
+``$HOST_XDG_DATA_HOME``, ``$HOST_XDG_CACHE_HOME``, and ``$HOST_XDG_STATE_HOME`` environment
+variables will be set if a custom value was set on the host.
 
-Note that ``$XDG_STATE_HOME`` is only supported by Flatpak 1.13 and later. If
-your app needs to work on earlier versions of Flatpak, you can use the
+Note that ``$XDG_STATE_HOME`` and ``$HOST_XDG_STATE_HOME`` is only supported by Flatpak 1.13
+and later. If your app needs to work on earlier versions of Flatpak, you can use the
 ``--persist=.local/state`` and ``--unset-env=XDG_STATE_HOME`` finish args so
 the app will use the correct directory, even after Flatpak is later upgraded to
 >1.13.
+
+Note that applications can be configured to use non-default base directory
+locations (see :doc:`sandbox-permissions`).
