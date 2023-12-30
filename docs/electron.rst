@@ -109,9 +109,13 @@ Sandbox permissions
 -------------------
 
 The standard guidelines on sandbox permissions apply to Electron
-applications. However, Electron does not currently support Wayland, so for
-display access, only X11 should be used. The sample app also configures
-pulseaudio for sound and enables network access:
+applications. However, Electron does not use Wayland by default. So for
+display access, only X11 should be used as the default configuration.
+This will make Electron use Xwayland in a wayland session and nothing
+else is required.
+
+The sample app also configures pulseaudio for sound and enables network
+access.
 
 .. code-block:: yaml
 
@@ -120,6 +124,34 @@ pulseaudio for sound and enables network access:
     - --socket=x11
     - --socket=pulseaudio
     - --share=network
+
+.. note::
+
+  Native wayland support in electron experimental and often unstable.
+  It is advised to stick with the X11 and Xwayland configuration above
+  as the default.
+
+To enable experimental `native Wayland` support in electron, the following
+flags can be passed to the program depending on the Electron version it
+uses.
+
+- ``--ozone-platform-hint=auto`` for Electron>=20. `auto` will
+  choose wayland when the seesion is wayland and x11 otherwise. With
+  this, to make `native wayland` the default for users ``--socket=fallback-x11``
+  and ``--socket=wayland`` must be used.
+
+  The recommended option is to leave it to the user. So ``--socket=x11``
+  can be used in manifest and Wayland can be tested with
+  ``flatpak run --socket=wayland org.flathub.electron-sample-app``.
+
+- ``--enable-features=UseOzonePlatform --ozone-platform=wayland`` for
+  Electron>=13 (deprecated since Electron 20). This flag should only be
+  used when the session is wayland. This can be determined by checking for
+  ``"${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY:-"wayland-0"}"`` and
+  ``$XDG_SESSION_TYPE == "wayland"`` at runtime through a script.
+
+Client-side window decorations in native wayland can be enabled by
+passing ``--enable-features=WaylandWindowDecorations`` (Electron>=17)
 
 Electron uses ``libnotify`` on Linux to provide desktop notifications.
 libnotify `since 0.8.0 <https://gitlab.gnome.org/GNOME/libnotify/-/merge_requests/27>`_
