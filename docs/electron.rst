@@ -121,6 +121,15 @@ pulseaudio for sound and enables network access:
     - --socket=pulseaudio
     - --share=network
 
+Electron uses ``libnotify`` on Linux to provide desktop notifications.
+libnotify `since 0.8.0 <https://gitlab.gnome.org/GNOME/libnotify/-/merge_requests/27>`_
+automatically uses the `notification portal <https://flatpak.github.io/xdg-desktop-portal/docs/doc-org.freedesktop.portal.Notification.html>`_
+when inside a sandboxed environment and ``--talk-name=org.freedesktop.Notifications``
+is not required.
+
+``org.electronjs.Electron2.BaseApp`` since ``branch/23.08`` comes with
+``libnotify>=0.8.0``
+
 Build options
 -------------
 
