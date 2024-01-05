@@ -131,27 +131,21 @@ access.
   It is advised to stick with the X11 and Xwayland configuration above
   as the default.
 
-To enable experimental `native Wayland` support in electron, the following
-flags can be passed to the program depending on the Electron version it
-uses.
+To enable experimental `native Wayland` support in Electron>=20, the
+``--ozone-platform-hint=auto`` flag can be passed to the program. `auto`
+will choose Wayland when the seesion is wayland and Xwayland or X11 
+otherwise.
 
-- ``--ozone-platform-hint=auto`` for Electron>=20. `auto` will
-  choose wayland when the seesion is wayland and x11 otherwise. With
-  this, to make `native wayland` the default for users ``--socket=fallback-x11``
-  and ``--socket=wayland`` must be used.
+The recommended option is to leave it to the user. So ``--socket=x11``
+should be used in manifest and Wayland can be tested with::
 
-  The recommended option is to leave it to the user. So ``--socket=x11``
-  can be used in manifest and Wayland can be tested with
-  ``flatpak run --socket=wayland org.flathub.electron-sample-app``.
+  flatpak run --socket=wayland org.flathub.electron-sample-app
 
-- ``--enable-features=UseOzonePlatform --ozone-platform=wayland`` for
-  Electron>=13 (deprecated since Electron 20). This flag should only be
-  used when the session is wayland. This can be determined by checking for
-  ``"${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY:-"wayland-0"}"`` and
-  ``$XDG_SESSION_TYPE == "wayland"`` at runtime through a script.
+To make native wayland the `default` for users ``--socket=fallback-x11``
+and ``--socket=wayland`` must be used in the manifest.
 
 Client-side window decorations in native wayland can be enabled by
-passing ``--enable-features=WaylandWindowDecorations`` (Electron>=17)
+passing ``--enable-features=WaylandWindowDecorations`` (Electron>=17).
 
 Electron uses ``libnotify`` on Linux to provide desktop notifications.
 libnotify `since 0.8.0 <https://gitlab.gnome.org/GNOME/libnotify/-/merge_requests/27>`_
