@@ -127,7 +127,7 @@ access.
 
 .. note::
 
-  Native wayland support in electron experimental and often unstable.
+  Native wayland support in electron is experimental and often unstable.
   It is advised to stick with the X11 and Xwayland configuration above
   as the default.
 
