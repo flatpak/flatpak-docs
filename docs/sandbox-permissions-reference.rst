@@ -33,25 +33,25 @@ Filesystem permissions
 Each of the following permissions configure filesystem access, and should
 be added to ``--filesystem=``:
 
-====================  ===========================================
+====================  ========================================================  ===================================================
 ``host``              Access all files [#f3]_
 ``host-etc``          Access all files in /etc
 ``home``              Access the home directory
 ``/some/dir``         Access an arbitrary path [#f4]_
 ``~/some/dir``        Access an arbitrary path relative to the home directory
-``xdg-desktop``       Access the XDG desktop directory
-``xdg-documents``     Access the XDG documents directory
-``xdg-download``      Access the XDG download directory
-``xdg-music``         Access the XDG music directory
-``xdg-pictures``      Access the XDG pictures directory
-``xdg-public-share``  Access the XDG public directory
-``xdg-videos``        Access the XDG videos directory
-``xdg-templates``     Access the XDG templates directory
-``xdg-config``        Access the XDG config directory
-``xdg-cache``         Access the XDG cache directory
-``xdg-data``          Access the XDG data directory
-``xdg-run/path``      Access subdirectories of the XDG runtime directory (where path is any subdirectory)
-====================  ===========================================
+``xdg-desktop``       Access the XDG desktop directory                          ``$XDG_DESKTOP_DIR`` or ``$HOME/Desktop``
+``xdg-documents``     Access the XDG documents directory                        ``$XDG_DOCUMENTS_DIR`` or ``$HOME/Documents``
+``xdg-download``      Access the XDG download directory                         ``$XDG_DOWNLOAD_DIR`` or ``$HOME/Downloads``
+``xdg-music``         Access the XDG music directory                            ``$XDG_MUSIC_DIR`` or ``$HOME/Music``
+``xdg-pictures``      Access the XDG pictures directory                         ``$XDG_PICTURES_DIR`` or ``$HOME/Pictures``
+``xdg-public-share``  Access the XDG public directory                           ``$XDG_PUBLICSHARE_DIR`` or ``$HOME/Public``
+``xdg-videos``        Access the XDG videos directory                           ``$XDG_VIDEOS_DIR`` or ``$HOME/Videos``
+``xdg-templates``     Access the XDG templates directory                        ``$XDG_TEMPLATES_DIR`` or ``$HOME/Templates``
+``xdg-config``        Access the XDG config directory [#f5]_                    ``$XDG_CONFIG_HOME`` or ``$HOME/.config``
+``xdg-cache``         Access the XDG cache directory  [#f5]_                    ``$XDG_CACHE_HOME`` or ``$HOME/.cache``
+``xdg-data``          Access the XDG data directory   [#f5]_                    ``$XDG_DATA_HOME`` or ``$HOME/.local/share``
+``xdg-run/path``      Access subdirectories of the XDG runtime directory        ``$XDG_RUNTIME_DIR/path`` (``/run/user/$UID/path``)
+====================  ========================================================  ===================================================
 
 Paths can be added to all the above filesystem options. For example,
 ``--filesystem=xdg-documents/path``. The following permission options can
@@ -72,4 +72,9 @@ also be added:
    secure distribution should disable these and just use regular sockets.
 .. [#f3] Except for the blacklisted paths mentioned in :doc:`sandbox-permissions`.
 .. [#f4] Except ``/app, /dev, /etc, /lib, /lib32, /lib64, /proc, /root, /run/flatpak, /run/host, /sbin, /usr``
+.. [#f5] ``xdg-{cache, config, data}`` binds mount the paths from host to the per-app sandbox directory.
+   Inside the sandbox ``$XDG_CACHE_HOME, $XDG_CONFIG_HOME and $XDG_DATA_HOME`` is set to
+   ``$HOME/.var/app/<app-id>/{cache, config, data}``. So this permission is not needed
+   unless access to the host directory, bind mounted to
+   ``$HOME/.var/app/<app-id>/{cache, config, data}`` is desired.
 
