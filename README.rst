@@ -13,14 +13,15 @@ The docs are written in `reStructuredText
 Building
 --------
 
-To build the docs locally, first install ``sphinx`` and ``sphinx_rtd_theme``.
+To build the docs locally, first install ``sphinx``, ``furo`` and
+``sphinx-copybutton``.
 On Fedora this can be with::
 
-  sudo dnf install python3-sphinx python3-sphinx_rtd_theme
+  sudo dnf install python3-sphinx python3-furo python-sphinx-copybutton
 
 On Debian this can be with::
 
-  sudo apt install python3-sphinx python3-sphinx-rtd-theme
+  sudo apt install python3-sphinx python3-furo python-sphinx-copybutton
 
 Then run ``make html`` in the ``docs`` directory.
 
