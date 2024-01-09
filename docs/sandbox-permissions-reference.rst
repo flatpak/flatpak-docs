@@ -37,7 +37,7 @@ be added to ``--filesystem=``:
 ``host``              Access all files [#f3]_
 ``host-etc``          Access all files in /etc
 ``home``              Access the home directory
-``/some/dir``         Access an arbitrary path
+``/some/dir``         Access an arbitrary path [#f4]_
 ``~/some/dir``        Access an arbitrary path relative to the home directory
 ``xdg-desktop``       Access the XDG desktop directory
 ``xdg-documents``     Access the XDG documents directory
@@ -71,4 +71,5 @@ also be added:
    server and the session bus which listens to abstract sockets by default. A
    secure distribution should disable these and just use regular sockets.
 .. [#f3] Except for the blacklisted paths mentioned in :doc:`sandbox-permissions`.
+.. [#f4] Except ``/app, /dev, /etc, /lib, /lib32, /lib64, /proc, /root, /run/flatpak, /run/host, /sbin, /usr``
 
