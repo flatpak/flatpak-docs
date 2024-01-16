@@ -17,11 +17,11 @@ To build the docs locally, first install ``sphinx``, ``furo`` and
 ``sphinx-copybutton``.
 On Fedora this can be with::
 
-  sudo dnf install python3-sphinx python3-furo python-sphinx-copybutton
+  sudo dnf install python3-sphinx python3-furo python-sphinx-copybutton python-sphinxext-opengraph
 
 On Debian this can be with::
 
-  sudo apt install python3-sphinx python3-furo python-sphinx-copybutton
+  sudo apt install python3-sphinx python3-furo python-sphinx-copybutton python-sphinxext-opengraph
 
 Then run ``make html`` in the ``docs`` directory.
 
