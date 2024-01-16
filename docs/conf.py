@@ -32,6 +32,7 @@
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinxext.opengraph',
     'sphinx_copybutton',
 ]
 
@@ -169,3 +170,7 @@ texinfo_documents = [
      author, 'Flatpak', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+# -- Options for OpenGraph ---------------------------------------------------
+
+ogp_site_url = 'https://docs.flatpak.org/'
