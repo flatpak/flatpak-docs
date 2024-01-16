@@ -173,4 +173,4 @@ texinfo_documents = [
 
 # -- Options for OpenGraph ---------------------------------------------------
 
-ogp_site_url = 'https://docs.flatpak.org/'
+ogp_site_url = 'https://docs.flatpak.org/en/latest'
