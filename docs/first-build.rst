@@ -107,7 +107,8 @@ build like this is very fast.
 
 In order for your application to show up in application stores while testing with a local repository, you might have
 to run ``flatpak build-update-repo repo``.
-For more information how to publish to application stores see `Appdata files <https://docs.flatpak.org/en/latest/freedesktop-quick-reference.html#appdata-files>`_.
+
+For more information how to publish to application stores see `MetaInfo files <https://docs.flatpak.org/en/latest/conventions.html#metainfo-files>`_.
 
 7. Install the app
 ------------------

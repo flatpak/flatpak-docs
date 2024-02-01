@@ -92,7 +92,7 @@ The instructions will use Gitlab.com.
 .. code-block:: yaml
 
   variables:
-    # Application id of the app, should be same as id used in flatpak manifest and appdata
+    # Application id of the app, should be same as id used in flatpak manifest and MetaInfo
     APP_ID: tld.vendor.app_name
     # Location of the flatpak manifest, root of git repository
     MANIFEST_PATH: $CI_PROJECT_DIR/${APP_ID}.yaml
