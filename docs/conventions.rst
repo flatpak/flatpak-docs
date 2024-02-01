@@ -140,7 +140,7 @@ A minimal desktop file should contain at least the application's *name*,
   Exec=org.gnome.Dictionary
   Type=Application
   Icon=org.gnome.Dictionary
-  Categories=GNOME;GTK;Office;Dictionary;
+  Categories=Office;Dictionary;
 
 The ``desktop-file-validate`` command can be used to check for errors in
 desktop files.
