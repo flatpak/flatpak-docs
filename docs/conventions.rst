@@ -89,7 +89,7 @@ A legacy convention of having the ``.appdata.xml`` installed in ``/app/share/app
 is also accepted as well, and ``flatpak-builder`` will check either directory with
 either extension.
 
-The ``appstream-util validate-relax`` command can be used to check MetaInfo
+The ``appstreamcli validate --explain`` command can be used to check MetaInfo
 files for errors.
 
 Application icons
