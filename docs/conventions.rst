@@ -116,6 +116,16 @@ icons are of size ``scalable``::
 
   /app/share/icons/hicolor/scalable/apps/org.gnome.Dictionary.svg
 
+Flatpak will export the following icon name patterns:
+``$FLATPAK_ID, $FLATPAK_ID.foo, $FLATPAK_ID-foo``. They may end with an
+extension suffix like ``.png, .svg``. Exported icons can be found in the
+``icons`` subfolder of ``$HOME/.local/share/flatpak/exports/share`` or
+``/var/lib/flatpak/exports/share`` depending on system or user install.
+
+The distribution usually appends those paths to ``$XDG_DATA_DIRS`` on
+host when installing the ``flatpak`` package. Unless an icon is exported
+by Flatpak, host applications cannot access it.
+
 Desktop files
 `````````````
 
@@ -137,13 +147,30 @@ A minimal desktop file should contain at least the application's *name*,
 
   [Desktop Entry]
   Name=Gnome Dictionary
-  Exec=org.gnome.Dictionary
+  Exec=gnome-dictionary
   Type=Application
   Icon=org.gnome.Dictionary
   Categories=Office;Dictionary;
 
 The ``desktop-file-validate`` command can be used to check for errors in
 desktop files.
+
+The ``Exec`` key of the desktop files is rewritten by Flatpak  when installing
+an app. The original value of the key becomes the value of the ``--command``
+argument like so::
+
+  Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=gnome-dictionary org.gnome.Dictionary
+
+Flatpak will export the following desktop filename patterns:
+``$FLATPAK_ID.desktop, $FLATPAK_ID.foo.desktop, $FLATPAK_ID-foo.desktop``.
+Exported desktop files can be found in the ``applications`` subfolder of
+``$HOME/.local/share/flatpak/exports/share`` or
+``/var/lib/flatpak/exports/share`` depending on system or
+user install.
+
+The distribution usually appends those paths to ``$XDG_DATA_DIRS`` on
+host when installing the ``flatpak`` package. Unless a desktop file is
+exported by Flatpak, host applications cannot access it.
 
 Exporting through extra-data
 ----------------------------
