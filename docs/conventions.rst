@@ -68,19 +68,19 @@ For some practical examples of bad IDs
   domain. Instead you should use ``io.github`` or ``io.gitlab`` as
   shown above.
 
-AppData files
-`````````````
-AppData files provide metadata about applications, which is
+MetaInfo files
+``````````````
+MetaInfo files provide metadata about applications, which is
 used by application stores (such as Flathub, GNOME Software
 and KDE Discover).
 
 The `Freedesktop AppStream specification
 <https://www.freedesktop.org/software/appstream/docs/>`_ provides a complete
-reference for providing AppData. You can use the online
+reference for providing MetaInfo. You can use the online
 `AppStream MetaInfo Creator <https://www.freedesktop.org/software/appstream/metainfocreator/>`_
 to generate a basic file.
 
-AppData files should be named with the application ID and the ``.metainfo.xml``
+MetaInfo files should be named with the application ID and the ``.metainfo.xml``
 file extension, and should be placed in ``/app/share/metainfo/``. For example::
 
   /app/share/metainfo/org.gnome.Dictionary.metainfo.xml
@@ -89,7 +89,7 @@ A legacy convention of having the ``.appdata.xml`` installed in ``/app/share/app
 is also accepted as well, and ``flatpak-builder`` will check either directory with
 either extension.
 
-The ``appstream-util validate-relax`` command can be used to check AppData
+The ``appstream-util validate-relax`` command can be used to check MetaInfo
 files for errors.
 
 Application icons

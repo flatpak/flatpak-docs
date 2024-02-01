@@ -56,7 +56,7 @@ the manifest:
 
 - ``rename-icon`` - rename the application icon
 - ``rename-desktop-file`` - rename the ``.desktop`` filename
-- ``rename-appdata-file`` - rename the AppData file
+- ``rename-appdata-file`` - rename the MetaInfo file
 
 Each of these properties accepts the name of the source file to be
 renamed. ``flatpak-builder`` then automatically renames the file to match
