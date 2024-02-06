@@ -353,8 +353,8 @@ be in ``$PATH`` or ``$PKG_CONFIG_PATH`` by default. Any such additional
 variables need to be set in ``build-options``. This is done using
 ``prefix`` and ``prepend-*`` properties.
 
-An appdata file should be provided for discoverability in software
-stores. This is a typical example of an extension appdata.
+A MetaInfo file should be provided for discoverability in software
+stores. This is a typical example of an extension MetaInfo file.
 
 .. code-block:: xml
 
