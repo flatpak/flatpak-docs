@@ -133,7 +133,7 @@ access.
 
 To enable experimental `native Wayland` support in Electron>=20, the
 ``--ozone-platform-hint=auto`` flag can be passed to the program. `auto`
-will choose Wayland when the seesion is wayland and Xwayland or X11 
+will choose Wayland when the seesion is wayland and Xwayland or X11
 otherwise.
 
 The recommended option is to leave it to the user. So ``--socket=x11``
@@ -155,6 +155,18 @@ is not required.
 
 ``org.electronjs.Electron2.BaseApp`` since ``branch/23.08`` comes with
 ``libnotify>=0.8.0``
+
+.. _use-correct-desktop-filename:
+
+Using correct desktop file name
+-------------------------------
+It's important for Linux Applications to know the correct name of their desktop file. If not, it can led to problems e.g. a missing Icon under Wayland.
+By default electron uses ``{appname}.desktop`` as desktop file name. In Flatpak the name of the desktop file must be the id of the Flatpak.
+To tell Electron to use another name you need to set ``desktopName`` key in your ``package.json`` e.g. ``"desktopName": "com.example.MyApp.desktop"``.
+
+In case you repack a binary, you can use the ``patch-desktop-filename`` script provided by the BaseApp. Each Electron binary ships with ``resources/app.asar`` file.
+You need to call ``patch-desktop-filename`` with this file as Argument.
+If your App is e.g. installed under ``${FLATPAK_DEST}/my-app`` you need to run ``patch-desktop-filename ${FLATPAK_DEST}/my-app/resources/app.asar``.
 
 Build options
 -------------
@@ -292,3 +304,14 @@ The preferred way of fixing this, is not a patch, but a build-time edit using ``
 .. code-block:: bash
 
   jq '.build.linux.target="dir"' <<<$(<package.json) > package.json
+
+Make setProgressBar and setBadgeCount work
+-------------------------------------------
+Electron has the 2 functions `setProgressBar <https://www.electronjs.org/de/docs/latest/api/browser-window#winsetprogressbarprogress-options>`_ and `setBadgeCount <https://www.electronjs.org/de/docs/latest/api/browser-window#winsetprogressbarprogress-options>`_.
+These functions allow showing a Progress bar and a Number in the Window Icon. It is implemented under Linux using the UnityLauncherAPI. This API is not implemented on every Desktop. A known Desktop who implements this is KDE.
+It is also implemented by the popular `Dash to Dock <https://micheleg.github.io/dash-to-dock>`_ GNOME extension and `Plank <https://launchpad.net/plank>`_.
+
+To make it work in Flatpak, the App needs to :ref:`use the correct desktop filename <use-correct-desktop-filename>`. The Flatpak also need the ``--talk-name=com.canonical.Unity``.
+
+Electron checks `checks if it's running on Unity or KDE <https://github.com/electron/electron/blob/fb88375ab4d2161dbf7e958a2a94c7c6d97dc84c/shell/browser/linux/unity_service.cc#L64>`_ before using the UnityLauncherAPI.
+To make this work on other Desktops too, you need to set ``XDG_CURRENT_SESSION=KDE`` to pretend the App is running on KDE.
