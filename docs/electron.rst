@@ -310,7 +310,7 @@ The preferred way of fixing this, is not a patch, but a build-time edit using ``
 Make setProgressBar and setBadgeCount work
 -------------------------------------------
 Electron has the two functions `setProgressBar <https://www.electronjs.org/de/docs/latest/api/browser-window#winsetprogressbarprogress-options>`_ and `setBadgeCount <https://www.electronjs.org/de/docs/latest/api/browser-window#winsetprogressbarprogress-options>`_.
-These functions allow showing a Progress bar and a Number in the Window Icon. It is implemented under Linux using the UnityLauncherAPI. This API is not implemented on every Desktop. A known desktop environment which implements this is KDE.
+These functions allow showing a progress bar and a number in the window icon. It is implemented under Linux using the UnityLauncherAPI. This API is not implemented on every Desktop. A known desktop environment which implements this is KDE.
 It is also implemented by the popular `Dash to Dock <https://micheleg.github.io/dash-to-dock>`_ GNOME extension and `Plank <https://launchpad.net/plank>`_.
 
 To make it work in Flatpak, the App needs to :ref:`use the correct desktop filename <use-correct-desktop-filename>`. The Flatpak also needs the ``--talk-name=com.canonical.Unity`` permission.
