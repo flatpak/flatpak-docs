@@ -162,7 +162,7 @@ is not required.
 Using correct desktop file name
 -------------------------------
 
-It's important for Linux applications to set the correct desktop file name. If not, it can led to problems e.g. a missing icon under Wayland.
+It's important for Linux applications to set the correct desktop file name. If not, it can lead to problems e.g. a missing icon under Wayland.
 By default Electron uses ``{appname}.desktop`` as desktop file name. In Flatpak the name of the desktop file must be the id of the Flatpak.
 To tell Electron to use another name you need to set the ``desktopName`` key in your ``package.json`` e.g. ``"desktopName": "com.example.MyApp.desktop"``.
 
