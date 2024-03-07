@@ -359,27 +359,31 @@ stores. This is a typical example of an extension MetaInfo file.
 .. code-block:: xml
 
   <?xml version="1.0" encoding="UTF-8"?>
-    <component type="addon">
-      <id>org.flatpak.app.plugin.foo</id>
-      <extends>org.flatpak.app</extends>
-      <name>Foo</name>
-      <summary>A nice summary</summary>
-      <project_license>GPL-2.0</project_license>
-      <metadata_license>CC0-1.0</metadata_license>
-      <developer_name>Bar</developer_name>
-      <url type="homepage">https://flatpak.github.io/</url>
-      <update_contact>bar_AT_example.org</update_contact>
-      <releases>
+  <component type="addon">
+    <id>org.flatpak.app.plugin.foo</id>
+    <extends>org.flatpak.app</extends>
+    <name>Foo</name>
+    <summary>A nice summary</summary>
+    <project_license>GPL-2.0-only</project_license>
+    <metadata_license>CC0-1.0</metadata_license>
+    <developer id="com.example">
+      <name>Bar</name>
+    </developer>
+    <url type="homepage">https://flatpak.github.io/</url>
+    <update_contact>bar_AT_example.org</update_contact>
+    <releases>
       <release version="1.2.0" date="2023-12-03">
-        <description>
+      <description>
+        <p>Release description</p>
         <ul>
           <li>A release note</li>
           <li>A bugfix</li>
         </ul>
       </description>
+      </release>
       <release version="1.0.0" date="2020-04-20"/>
-     </releases>
-    </component>
+    </releases>
+  </component>
 
 Unmaintained Flatpak extensions
 -------------------------------
