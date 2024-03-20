@@ -314,7 +314,6 @@ is discussed below.
   sdk: org.gnome.Sdk//45
   build-extension: true
   separate-locales: false
-  appstream-compose: false
   build-options:
     prefix: /app/extension_directory/foo
     prepend-path: /app/extension_directory/foo/bin
@@ -326,7 +325,6 @@ is discussed below.
       build-commands:
         - <build commands>
         - install -Dm644 org.flatpak.app.plugin.foo.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
-        - appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak ${FLATPAK_ID}
       sources:
         ...
 
@@ -345,8 +343,15 @@ is discussed below.
 - ``build-extension: true`` instructs flatpak to build an extension.
 - ``separate-locales: false`` disables creating a ``.Locale`` extension
   for this extension.
-- ``appstream-compose: false`` disables running ``appstream-compose``.
-  This is run manually in the build or cleanup stage.
+
+Flatpak-builder (>= 1.3.4), can compose metadata for extensions
+automatically and it is no longer required to manually compose them
+through commands in the manifest.
+
+In case a manual compose is still required ``appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak ${FLATPAK_ID}``
+for composing with appstream-glib or ``appstreamcli compose --components=${FLATPAK_ID} --prefix=/ --origin=${FLATPAK_ID} --result-root=${FLATPAK_DEST} --data-dir=${FLATPAK_DEST}/share/app-info/xmls ${FLATPAK_DEST}`` for composing with appstreamcli can be used in ``build-commands``
+or ``post-install`` along with having ``appstream-compose: false`` in
+the top.
 
 Note that the extension prefix or location of pkg-config files will not
 be in ``$PATH`` or ``$PKG_CONFIG_PATH`` by default. Any such additional
