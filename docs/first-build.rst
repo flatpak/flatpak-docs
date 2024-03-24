@@ -66,6 +66,10 @@ last one would typically be the application itself, and the earlier ones would
 be dependencies that are bundled with the app because they are not part of the
 runtime.
 
+All files are copied into the ``/build`` directory. If you add more files,
+they should be copied over to the ``/app`` directory, see
+`Filesystem Layout <https://docs.flatpak.org/en/latest/conventions.html#filesystem-layout>`_.
+
 4. Build the application
 ------------------------
 
