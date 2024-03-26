@@ -77,12 +77,19 @@ commonly require, and can therefore be freely used:
 - ``--share=network`` - access the network
 - ``--socket=x11`` - show windows using X11
 - ``--socket=fallback-x11`` - show windows using X11, if Wayland is not
-  available, overrides ``x11`` socket permission. Note that you must 
+  available, overrides ``x11`` socket permission. Note that you must
   still use ``--socket=wayland`` for wayland permission
 - ``--share=ipc`` - share IPC namespace with the host (necessary for X11)
 - ``--socket=wayland`` - show windows with Wayland
 - ``--device=dri`` - OpenGL rendering
 - ``--socket=pulseaudio`` - play sound with PulseAudio
+
+.. note::
+
+  Applications that do not support native Wayland should use
+  ``--socket=x11`` and applications that do should use ``--socket=fallback-x11``
+  and ``--socket=wayland``. The two configurations here will make it work
+  on both X11 and Wayland sessions of the desktop environment.
 
 D-Bus access
 ````````````
