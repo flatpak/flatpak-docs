@@ -90,6 +90,13 @@ commonly require, and can therefore be freely used:
   available, overrides ``x11`` socket permission. Note that you must
   still use ``--socket=wayland`` for wayland permission
 
+.. note::
+
+  Applications that do not support native Wayland should use
+  ``--socket=x11`` and applications that do should use ``--socket=fallback-x11``
+  and ``--socket=wayland``. The two configurations here will make it work
+  on both X11 and Wayland sessions of the desktop environment.
+
 D-Bus access
 ````````````
 
