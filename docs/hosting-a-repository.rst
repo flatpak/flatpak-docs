@@ -116,7 +116,7 @@ The instructions will use Gitlab.com.
   update-sources:
     stage: setup
     image:
-      # https://github.com/flathub/flatpak-external-data-checker
+      # https://github.com/flathub-infra/flatpak-external-data-checker
       name: ghcr.io/flathub/flatpak-external-data-checker
       # Open shell rather than the bin
       entrypoint: [""]
@@ -317,7 +317,7 @@ if they are available.
 
 11. You can set up a `pipeline schedule <https://docs.gitlab.com/ee/ci/pipelines/schedules.html>`_, 
     optionally to automatically check for updates using 
-    `flatpak-x-checker <https://github.com/flathub/flatpak-external-data-checker>`_ 
+    `flatpak-x-checker <https://github.com/flathub-infra/flatpak-external-data-checker>`_ 
     and send PRs to the repo.
 
 Credits
