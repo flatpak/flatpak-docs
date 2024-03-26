@@ -182,6 +182,13 @@ exported by Flatpak, host applications cannot access it.
 Exporting through extra-data
 ----------------------------
 
+.. note::
+
+  Note, that when creating a Flatpak package for a software store like
+  Flathub or when composing the metadata with appstreamcli, desktop files
+  and icons must not be placed in ``/app/extra/export/`` and instead
+  should go to the proper locations documented above.
+
 Files downloaded through ``extra-data`` are only downloaded when installing, as such they aren't yet available for ``flatpak-builder`` to automatically export during the build process.
 
 When using ``extra-data``, place any files that must be exported under this location::
