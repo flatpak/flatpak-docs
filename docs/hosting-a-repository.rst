@@ -65,10 +65,8 @@ of clicking the repository file or a download link that points to it.
 Hosting a repository on Gitlab/Github pages
 -------------------------------------------
 
-Flat-manager can be complicated to self host. For single applications, 
-you can quickly host a Flatpak repository through Gitlab or Github pages 
-and distribute your app. These methods will rely on 
-`flatpak-github-actions <https://github.com/flatpak/flatpak-github-actions>`_. 
+A Flatpak repository can be easily hosted through Gitlab or Github pages
+and distributed to users.
 
 .. note::
   Github or Gitlab may have pipeline quotas, storage and bandwidth 
@@ -116,7 +114,7 @@ The instructions will use Gitlab.com.
   update-sources:
     stage: setup
     image:
-      # https://github.com/flathub/flatpak-external-data-checker
+      # https://github.com/flathub-infra/flatpak-external-data-checker
       name: ghcr.io/flathub/flatpak-external-data-checker
       # Open shell rather than the bin
       entrypoint: [""]
@@ -317,7 +315,7 @@ if they are available.
 
 11. You can set up a `pipeline schedule <https://docs.gitlab.com/ee/ci/pipelines/schedules.html>`_, 
     optionally to automatically check for updates using 
-    `flatpak-x-checker <https://github.com/flathub/flatpak-external-data-checker>`_ 
+    `flatpak-x-checker <https://github.com/flathub-infra/flatpak-external-data-checker>`_ 
     and send PRs to the repo.
 
 Credits
