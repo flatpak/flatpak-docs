@@ -36,6 +36,7 @@ be added to ``--filesystem=``:
 ====================  ========================================================  ===================================================
 ``host``              Access all files [#f3]_
 ``host-etc``          Access all files in /etc
+``host-os``           Access to host operating system's libraries, executables  Mounted in ``/run/host`` inside the sandbox
 ``home``              Access the home directory
 ``/some/dir``         Access an arbitrary path [#f4]_ [#f5]_
 ``~/some/dir``        Access an arbitrary path relative to the home directory
@@ -54,9 +55,9 @@ be added to ``--filesystem=``:
 ``xdg-run/path``      Access subdirectories of the XDG runtime directory        ``$XDG_RUNTIME_DIR/path`` (``/run/user/$UID/path``)
 ====================  ========================================================  ===================================================
 
-Paths can be added to all the above filesystem options. For example,
-``--filesystem=xdg-documents/path``. The following permission options can
-also be added:
+Except ``host, host-etc, host-os`` paths can be added to all the above
+filesystem options. For example, ``--filesystem=xdg-documents/path``.
+The following permission options can also be added:
 
 - ``:ro`` - read-only access
 - ``:rw`` - read/write access (this is the default)
