@@ -116,4 +116,27 @@ Other benefits for developers include:
   dependencies, which can be used by applications, and which can take a lot
   of the work out of application development.
 
+
+In general Flatpak is best suited suited for desktop applications and
+while command line applications also work, it may not be suited in some
+cases:
+
+- Applications needs to elevate priviledges using ``su, sudo, pkexec``
+  etc. Flatpak cannot run in SUID binaries inside the sandbox.
+- Application needs to read ``/proc`` from host or have unfiltered access
+  to processes. This is not allowed as Flatpak has a private proc.
+- Application uses a syscall that is blocklisted by Flatpak's seccomp
+  filter. For example, Flatpak won't allow spawning sub-namespaces
+  in the sandbox.
+- Kernel modules or drivers are non application packages and won't work
+  inside a Flatpak.
+
+In general in cases where the sandbox prohibits the core functionality
+of the application or makes it too inconvenient and/or obtrusive , it is
+not best suited to be packaged with Flatpak.
+
+Flatpak also won't export udev rules or systemd services from the sandbox
+to the host and requires manual configuration after installing the
+flatpak package.
+
 Information about Flatpak's internals can be found in :doc:`under-the-hood`.
