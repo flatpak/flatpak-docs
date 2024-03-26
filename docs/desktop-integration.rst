@@ -177,11 +177,69 @@ Afterwards the two packages can be installed with the following commands::
 Applying themes
 ^^^^^^^^^^^^^^^
 
+Introduction
+```````````````````
+
 There is no ideal way to specify the theme Flatpak applications use. The applications will try to match the system theme currently being used, if it corresponds to any of the Flatpak themes installed, and will fall back to Adwaita (if they use Gtk2 or Gtk3) or the default Qt theme (if they use Qt) if a corresponding theme isn't detected.
 
 As of Flatpak 0.10.1, the Flatpak system can detect whether the system themes available correspond to any Flatpak themes available in the repositories, and, if so, will automatically install found themes at update time based upon the ``gtk-theme`` Dconf key. This key however can contain only one value, the one of the currently being used theme, which means that the Flatpak versions of matching themes that aren't currently being used aren't installed until those themes are enabled. If none of the corresponding system themes are currently being used, the applications will fall back to Adwaita or the default Qt theme.
 
 On X11, Gtk3 picks up the themes via XSettings. Specifically, the GNOME XSettings daemon ``gsd-xsettings`` reads the DConf values and converts them into the XSettings values. For this to work, you need an xsettings daemon that is correctly configured. Gtk3 on Wayland picks up themes directly via Dconf. For this to work, you can either use KDE (with ``kde-gtk-config`` > 5.11.95), GNOME, which works out of the box, or manually configure the dconf keys under ``/org/gnome/desktop/interface/``. For the DConf option to work on Wayland the application must also be configured to have DConf access.
+
+Steps with Flatseal
+```````````````````
+
+Summarized steps for users to set a default theme for either all Flatpak applications or selected Flatpak applications: Navigate to **All Applications** horizontal tab —> **Filesystem** group —> **Other files** subgroup; Add the appropriate variable(s). Redo the same for **Environment** group. In the future, most future Flatpak applications you open will use the new theme.
+
+This screenshot shows the Flatseal configuration at https://i.postimg.cc/9M9jwVKC/flatseal-theme.png
+
+The reason why Flatpak does not automatically use the user's default operating system (OS) theme is that, by default, all Flatpak applications are almost fully independent of the OS. Think of two independent devices inside your device. This is much stronger security. The downside is that sometimes, you need both your devices to communicate with each other. So that they can use shared settings or anything else to your liking. Such as themes and icons.
+
+Flatseal resolve this challenge. Flatseal is a free permission manager for any Flatpak applications.
+
+------------
+
+Below is are the same steps as above. But with details for users not familiar with Flatseal.
+
+1. Keep in mind that the below steps will automatically set a default theme to your liking for most of all Flatpak applications. Including both the one already installed and those installed in the future. Be aware that all your Flatpak packages will be allowed to access all the theme settings on your operating system (OS). If you’re ok with this, find your next action below.
+
+2. Install this free Flatseal Flatpak application at https://flathub.org/fr/apps/com.github.tchx84.Flatseal
+
+3. Using Flatseal, navigate to **All Applications** horizontal tab —> **Filesystem** group —> **Other files** subgroup
+
+4. In this **Other** files group, on the right side, click on the small plus (**+**) button. Add the appropriate **GTK_THEME** Filesystem variable(s) for any theme to your liking. For example, for **Adwaita-dark**, add those two:
+
+.. code-block:: yaml
+
+   ~/.themes
+
+.. code-block:: yaml
+
+   ~/.icons
+
+5. Still using Flatseal, navigate to **All Applications** horizontal tab —> **Environment** group —> Variables subgroup
+
+6. In this **Variables** group, on the right side, click on the small plus (**+**) button. Add the appropriate **ICON_THEME** Environment variable(s) for any theme to your liking. For example, for **Adwaita-dark**, add those two:
+
+.. code-block:: yaml
+
+   GTK_THEME=Adwaita-dark
+
+.. code-block:: yaml
+
+   ICON_THEME=Adwaita-dark
+
+7. This screenshot https://i.postimg.cc/9M9jwVKC/flatseal-theme.png shows the end result for Adwaita-dark theme. Including both the theme and icons variables. See the screenshot above for an example of the final configuration.
+
+8. Flatseal conveniently and automatically save any added variable or change to variables. In other words, you do not need to click on any Save button. Close Flatseal.
+
+9. Open Flatseal. Flatseal now automatically open using the new theme you set. Congratulation. You have successfully set a new theme for most Flatpak applications.
+
+10. In the future, most future Flatpak applications you open will automatically and permanently use the new theme of your choosing. Easy.
+
+11. Optionally, if you need to set a different theme per Flatpak application, using Flatseal, navigate to **<APP NAME>** horizontal tab. Then redo that same steps as above. But only for this one app. This screenshot shows an example of a final result with the **Calculator** Flatpak Application.
+
+Attribution and thanks to Sreenath for his publication about Flatseal at [https://itsfoss.com/flatpak-app-apply-theme/ 11](https://itsfoss.com/flatpak-app-apply-theme/)
 
 Other notes on theming
 ^^^^^^^^^^^^^^^^^^^^^^
