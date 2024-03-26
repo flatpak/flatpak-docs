@@ -65,10 +65,8 @@ of clicking the repository file or a download link that points to it.
 Hosting a repository on Gitlab/Github pages
 -------------------------------------------
 
-Flat-manager can be complicated to self host. For single applications, 
-you can quickly host a Flatpak repository through Gitlab or Github pages 
-and distribute your app. These methods will rely on 
-`flatpak-github-actions <https://github.com/flatpak/flatpak-github-actions>`_. 
+A Flatpak repository can be easily hosted through Gitlab or Github pages
+and distributed to users.
 
 .. note::
   Github or Gitlab may have pipeline quotas, storage and bandwidth 
