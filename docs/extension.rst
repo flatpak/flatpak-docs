@@ -79,7 +79,9 @@ further below.
 
 - ``add-ld-path`` adds a path relative to the extension prefix
   ``/app/extension_directory/foo/lib``, so that a library residing there
-  can be loaded. This supports a single value.
+  can be loaded. This supports a single value. If the ``$LD_LIBRARY_PATH``
+  environment variable exists, the path here is appended to it, otherwise
+  it is put in a ld config file in ``/run/flatpak/ld.so.conf.d``.
 
 - ``merge-dirs: plug-ins;help`` will merge the contents of these
   directories from multiple extensions using the same extension point.
@@ -99,6 +101,9 @@ further below.
 
 - ``autodelete: true`` will remove all extensions under this extension
   point when the application is removed.
+
+  ``.Debug`` and ``.Locale`` extensions are created with 
+  ``autodelete: true`` by default.
 
 - ``mkdir -p ${FLATPAK_DEST}/extension_directory`` runs during the cleanup
   phase. It is used to initialise an empty directory for the extension to
@@ -173,8 +178,6 @@ in the application. The extension is loaded at runtime and the user needs
 to have it installed.
 
 The extensions are mounted in alphabetical path order of directory.
-ld-path prepended before ``/app/lib`` for app extensions and appended
-after ``/app/lib`` in case of runtime extensions.
 
 ``org.freedesktop.Platform.ffmpeg-full`` is an extension of the runtime
 ``org.freedesktop.Platform`` and ``org.kde.Platform`` is a child runtime
@@ -208,7 +211,7 @@ of ``org.freedesktop.Platform``.
   add-extensions:
     org.freedesktop.Sdk.Extension.texlive:
       directory: texlive
-      version: '22.08'
+      version: '23.08'
   cleanup-commands:
     - mkdir -p ${FLATPAK_DEST}/texlive
 
