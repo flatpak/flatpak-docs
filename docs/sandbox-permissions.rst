@@ -77,7 +77,7 @@ commonly require, and can therefore be freely used:
 - ``--share=network`` - access the network
 - ``--socket=x11`` - show windows using X11
 - ``--socket=fallback-x11`` - show windows using X11, if Wayland is not
-  available, overrides ``x11`` socket permission. Note that you must 
+  available, overrides ``x11`` socket permission. Note that you must
   still use ``--socket=wayland`` for wayland permission
 - ``--share=ipc`` - share IPC namespace with the host (necessary for X11)
 - ``--socket=wayland`` - show windows with Wayland
@@ -224,3 +224,22 @@ Typical non-GNOME and non-GTK applications should use::
 
 No application should be using ``--talk-name=org.gtk.vfs`` in its manifest, as
 there are no D-Bus services named ``org.gtk.vfs``.
+
+External drive access
+`````````````````````
+
+External drives are mounted by the host system using systemd, udev, udisk
+fstab etc. and each of them can have different defaults. Flatpak has no
+control over how and where they get mounted. The following
+filesystem permissions should work in most cases::
+
+  --filesystem=/media
+  --filesystem=/run/media
+  --filesystem=/mnt
+
+If ``--filesystem=host`` is used ``/media, /run/media`` is shared
+automatically if they exist.
+
+Note that these should not have subpaths in them unless the value
+of the subpath can be consistently pre-determined. Block device naming
+depends on the kernel/fstab configuration and cannot be pre-determined.
