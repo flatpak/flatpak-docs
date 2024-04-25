@@ -74,22 +74,31 @@ Standard permissions
 The following permissions provide access to basic resources that applications
 commonly require, and can therefore be freely used:
 
-- ``--share=network`` - access the network
+- ``--allow=bluetooth`` - Allow access to Bluetooth
+- ``--device=dri`` - OpenGL rendering
+- ``--device=input`` - Access to ``/dev/input``
+- ``--share=ipc`` - share IPC namespace with the host [#f1]_
+- ``--share=network`` - access the network [#f2]_
+- ``--socket=cups`` - Talk to the CUPS printing system
+- ``--socket=gpg-agent`` - Talk to the GPG agent
+- ``--socket=pcsc`` - Smart card access
+- ``--socket=pulseaudio`` - Play sound with PulseAudio
+- ``--socket=ssh-auth``- Allow access to ``SSH_AUTH_SOCK``
+- ``--socket=wayland`` - Show windows with Wayland
 - ``--socket=x11`` - show windows using X11
 - ``--socket=fallback-x11`` - show windows using X11, if Wayland is not
-  available, overrides ``x11`` socket permission. Note that you must 
+  available, overrides ``x11`` socket permission. Note that you must
   still use ``--socket=wayland`` for wayland permission
-- ``--share=ipc`` - share IPC namespace with the host (necessary for X11)
-- ``--socket=wayland`` - show windows with Wayland
-- ``--device=dri`` - OpenGL rendering
-- ``--socket=pulseaudio`` - play sound with PulseAudio
 
 D-Bus access
 ````````````
 
 Access to the entire bus with ``--socket=system-bus`` or
-``--socket=session-bus`` should be avoided, unless the application is a
-development tool.
+``--socket=session-bus`` is a security risk and must be avoided, unless
+the application is a development tool.
+
+``flatpak run --log-session-bus <appid>`` can be used to find the specific
+D-Bus permissions needed.
 
 **Ownership**
 
@@ -106,18 +115,8 @@ minimum required.
 Filesystem access
 `````````````````
 
-It is common for applications to require access to different parts of the
-host filesystem, and
-Flatpak provides a flexible set of options for this. Some examples include:
-
-- ``--filesystem=host`` - access normal files on the host, not including
-  host os or system internals described below
-- ``--filesystem=home`` - access the user's home directory
-- ``--filesystem=/path/path`` - access specific paths
-- ``--filesystem=xdg-download`` - access a specific XDG folder
-
-As a general rule, Filesystem access should be limited as much as
-possible. This includes:
+As a general rule, static and permanent filesystem access should be
+limited as much as possible. This includes:
 
 - Using portals as an alternative to blanket filesystem access, wherever
   possible.
@@ -125,8 +124,40 @@ possible. This includes:
 - If some home directory access is absolutely required, using XDG directory
   access only.
 
-The full list of available filesystem options can be found in the
-:doc:`sandbox-permissions-reference`.
+The following permission options are available:
+
+- ``:ro`` - read-only access
+- ``:create`` - read/write access, and create the directory if it doesn't
+  exist
+
+Additionally the following permissions are available:
+
+====================  ===============================================================  ===================================================
+``host``              Access all files [#f3]_                                           
+``host-etc``          Access all files in host and host's /etc [#f3]_
+``home``              Access the home directory [#f4]_
+``/some/dir``         Access an arbitrary path [#f5]_ [#f6]_
+``~/some/dir``        Access an arbitrary path relative to the home directory [#f6]_
+``xdg-desktop``       Access the XDG desktop directory                                  ``$XDG_DESKTOP_DIR`` or ``$HOME/Desktop``
+``xdg-documents``     Access the XDG documents directory                                ``$XDG_DOCUMENTS_DIR`` or ``$HOME/Documents``
+``xdg-download``      Access the XDG download directory                                 ``$XDG_DOWNLOAD_DIR`` or ``$HOME/Downloads``
+``xdg-music``         Access the XDG music directory                                    ``$XDG_MUSIC_DIR`` or ``$HOME/Music``
+``xdg-pictures``      Access the XDG pictures directory                                 ``$XDG_PICTURES_DIR`` or ``$HOME/Pictures``
+``xdg-public-share``  Access the XDG public directory                                   ``$XDG_PUBLICSHARE_DIR`` or ``$HOME/Public``
+``xdg-videos``        Access the XDG videos directory                                   ``$XDG_VIDEOS_DIR`` or ``$HOME/Videos``
+``xdg-templates``     Access the XDG templates directory                                ``$XDG_TEMPLATES_DIR`` or ``$HOME/Templates``
+``xdg-config``        Access the XDG config directory [#f7]_                            ``$XDG_CONFIG_HOME`` or ``$HOME/.config``
+``xdg-cache``         Access the XDG cache directory  [#f7]_                            ``$XDG_CACHE_HOME`` or ``$HOME/.cache``
+``xdg-data``          Access the XDG data directory   [#f7]_                            ``$XDG_DATA_HOME`` or ``$HOME/.local/share``
+``xdg-run/path``      Access subdirectories of the XDG runtime directory                ``$XDG_RUNTIME_DIR/path`` (``/run/user/$UID/path``)
+====================  ===============================================================  ===================================================
+
+Note that ``host, host-etc, host-os`` mounts the host directories under
+``/run/host`` inside the sandbox to avoid conflict with the runtime.
+
+Except ``host, host-etc, host-os`` paths can be added to all the above
+filesystem options. For example, ``--filesystem=xdg-documents/path``.
+
 Other filesystem access guidelines include:
 
 - The ``--persist=path`` option can be used to map paths from the user's
@@ -138,24 +169,6 @@ Other filesystem access guidelines include:
   add a wrapper script that sets it to ``$XDG_RUNTIME_DIR/app/$FLATPAK_ID``.
 - Retaining and sharing configuration with non-Flatpak installations is to
   be avoided.
-
-As mentioned above the ``host`` option does not actually provide complete
-access to the
-host filesystem. The main rules are:
-
-- These directories are blacklisted: ``/lib``, ``/lib32``, ``/lib64``,
-  ``/bin``, ``/sbin``, ``/usr``, ``/boot``, ``/root``,
-  ``/tmp``, ``/etc``, ``/app``, ``/run``, ``/proc``, ``/sys``, ``/dev``,
-  ``/var``
-- Exceptions from the blacklist: ``/run/media``
-- These directories are mounted under ``/var/run/host``: ``/etc``, ``/usr``
-
-The reason many of the directories are blacklisted is because they already
-exist in the sandbox such as ``/usr``
-or are not usable in the sandbox.
-
-The ``home`` permission also has exceptions as it does not grant access to
-the subdirectories for other applications in ``~/.var/app/``.
 
 Device access
 `````````````
@@ -224,3 +237,23 @@ Typical non-GNOME and non-GTK applications should use::
 
 No application should be using ``--talk-name=org.gtk.vfs`` in its manifest, as
 there are no D-Bus services named ``org.gtk.vfs``.
+
+
+.. rubric:: Footnotes
+
+.. [#f1] This is not necessarily required, but without it the X11 shared
+   memory extension will not work, which is very bad for X11 performance.
+.. [#f2] Giving network access also grants access to all host services
+   listening on abstract Unix sockets (due to how network namespaces work),
+   and these have no permission checks. This unfortunately affects e.g. the X
+   server and the session bus which listens to abstract sockets by default. A
+   secure distribution should disable these and just use regular sockets.
+.. [#f3] Except for ``/app, /bin, /boot, /efi, /etc, /lib, /lib32, /lib64, /proc, /root, /run, /sbin, /tmp, /usr, /var``
+.. [#f4] This does not include access to folders under ``~/.var/app`` except the application's own
+.. [#f5] Except ``/app, /dev, /etc, /lib, /lib32, /lib64, /proc, /root, /run/flatpak, /run/host, /sbin, /usr``
+.. [#f6] The arbitrary path includes all its subfolders and subfiles if any.
+.. [#f7] ``xdg-{cache, config, data}`` binds mount the paths from host to the per-app sandbox directory.
+   Inside the sandbox ``$XDG_CACHE_HOME, $XDG_CONFIG_HOME and $XDG_DATA_HOME`` is set to
+   ``$HOME/.var/app/<app-id>/{cache, config, data}``. So this permission is not needed
+   unless access to the host directory, bind mounted to
+   ``$HOME/.var/app/<app-id>/{cache, config, data}`` is desired.

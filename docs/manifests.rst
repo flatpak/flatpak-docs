@@ -92,8 +92,7 @@ be seen in the Dictionary manifest file:
     - --filesystem=xdg-documents
 
 Guidance on which permissions to use can be found in the
-:doc:`sandbox-permissions`, and a full list of ``finish-args`` options can be
-found in :doc:`sandbox-permissions-reference`.
+:doc:`sandbox-permissions`.
 
 If you're wondering about the last finish arg, see `this blog post
 <https://blogs.gnome.org/mclasen/2019/07/12/settings-in-a-sandbox-world/>`__.
