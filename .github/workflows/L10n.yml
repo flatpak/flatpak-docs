@@ -1,0 +1,33 @@
+name: test
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'po/'
+
+jobs:
+  get-langs-changed:
+    runs-on: ubuntu-latest
+    outputs:
+      languages: ${{ steps.languages.outputs.languages }}
+    steps:
+      - uses: actions/checkout@v3
+      - id: languages
+        shell: bash
+        run: |
+          content="$(find . -mindepth 1 -maxdepth 1 -type d -printf '"%P"\n' | sort | tr '\n' ',' | sed 's|,$||')"
+          echo "languages=[$content]" >> $GITHUB_OUTPUT
+        working-directory: po
+
+  # GitHub Actions editor complains "array was expected but string was found", and it is OK
+  build-translated-docs:
+    needs: [get-langs-changed]
+    strategy:
+      max-parallel: 2
+      fail-fast: false
+      matrix:
+        language: ${{ fromJSON(needs.get-langs-changed.outputs.languages) }}
+    uses: ./.github/workflows/docs.yml
+    with:
+      language: ${{ matrix.language }}
