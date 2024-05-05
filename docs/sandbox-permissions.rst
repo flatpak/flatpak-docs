@@ -133,7 +133,7 @@ The following permission options are available:
 Additionally the following permissions are available:
 
 ====================  ===============================================================  ===================================================
-``host``              Access all files [#f3]_                                           
+``host``              Access all files [#f3]_
 ``host-etc``          Access all files in host and host's /etc [#f3]_
 ``home``              Access the home directory [#f4]_
 ``/some/dir``         Access an arbitrary path [#f5]_ [#f6]_
