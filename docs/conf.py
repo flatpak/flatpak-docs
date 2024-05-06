@@ -149,6 +149,13 @@ latex_documents = [
      'Flatpak Team', 'manual'),
 ]
 
+# Ignore link anchors on these sites
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-linkcheck_anchors_ignore_for_url
+linkcheck_anchors_ignore_for_url = [
+    r'https://github\.com/.*',
+    r'https://gitlab\.com/.*',
+    r'https://hg\.mozilla\.org/.*'
+]
 
 # -- Options for manual page output ---------------------------------------
 
