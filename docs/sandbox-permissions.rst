@@ -177,6 +177,23 @@ Other filesystem access guidelines include:
 - Retaining and sharing configuration with non-Flatpak installations is to
   be avoided.
 
+Additionally the following directories from host need to be explicitly
+requested with ``--filesystem`` and are not available with
+``home, host, host-os, host-etc`` by default:
+
+- ``~/.var/app`` - The app can access only its own directory in ``~/.var/app/app-id``
+- ``$XDG_DATA_HOME/flatpak`` (``~/.local/share/flatpak``)
+- ``/boot``
+- ``/efi``
+- ``/root``
+- ``/sys``
+- ``/tmp``
+- ``/var`` - Note that by default ``/var/{cache, config, data, tmp}``
+  inside the sandbox are the same as ``~/.var/app/app-id/{cache, config, data, cache/tmp}``.
+  However an explicit ``--filesystem=/var`` will make only ``/var`` from
+  host available and those will no longer be available.
+- ``/var/lib/flatpak`` - ``/var`` does not give access to this.
+
 Device access
 `````````````
 
