@@ -162,13 +162,13 @@ is not required.
 Using correct desktop file name
 -------------------------------
 
-It's important for Linux applications to set the correct desktop file name. If not, it can lead to problems e.g. a missing icon under Wayland.
+It's important for Linux applications to set the correct desktop file name. If not, it can lead to problems like missing the window icon under Wayland.
 By default Electron uses ``{appname}.desktop`` as desktop file name. In Flatpak the name of the desktop file must be the id of the Flatpak.
 To tell Electron to use another name you need to set the ``desktopName`` key in your ``package.json`` e.g. ``"desktopName": "com.example.MyApp.desktop"``.
 
 In case you repack a binary, you can use the ``patch-desktop-filename`` script provided by the BaseApp. Each Electron binary ships with ``resources/app.asar`` file.
-You need to call ``patch-desktop-filename`` with this file as Argument.
-If your application is e.g. installed under ``${FLATPAK_DEST}/my-app`` you need to run ``patch-desktop-filename ${FLATPAK_DEST}/my-app/resources/app.asar``.
+You need to call ``patch-desktop-filename`` with this file as argument.
+If your application is installed under ``${FLATPAK_DEST}/my-app`` you need to run ``patch-desktop-filename ${FLATPAK_DEST}/my-app/resources/app.asar``.
 
 Build options
 -------------
@@ -309,11 +309,10 @@ The preferred way of fixing this, is not a patch, but a build-time edit using ``
 
 Make setProgressBar and setBadgeCount work
 -------------------------------------------
-Electron has the two functions `setProgressBar <https://www.electronjs.org/de/docs/latest/api/browser-window#winsetprogressbarprogress-options>`_ and `setBadgeCount <https://www.electronjs.org/de/docs/latest/api/browser-window#winsetprogressbarprogress-options>`_.
-These functions allow showing a progress bar and a number in the window icon. It is implemented under Linux using the UnityLauncherAPI. This API is not implemented on every Desktop. A known desktop environment which implements this is KDE.
+The `setProgressBar <https://www.electronjs.org/docs/latest/api/browser-window#winsetprogressbarprogress-options>`_ and `setBadgeCount <https://www.electronjs.org/docs/latest/api/app#appsetbadgecountcount-linux-macos>`_ functions allow showing a progress bar and a badge count in the window icon. It is implemented under Linux using the `UnityLauncherAPI <https://wiki.ubuntu.com/Unity/LauncherAPI>`_. This API is not implemented on every desktop environment. A known desktop environment which implements this is KDE.
 It is also implemented by the popular `Dash to Dock <https://micheleg.github.io/dash-to-dock>`_ GNOME extension and `Plank <https://launchpad.net/plank>`_.
 
-To make it work in Flatpak, the App needs to :ref:`use the correct desktop filename <use-correct-desktop-filename>`. The Flatpak also needs the ``--talk-name=com.canonical.Unity`` permission.
+To make it work in Flatpak, the app needs to :ref:`use the correct desktop filename <use-correct-desktop-filename>`. The Flatpak also needs the ``--talk-name=com.canonical.Unity`` permission.
 
 Electron checks `checks if it's running on Unity or KDE <https://github.com/electron/electron/blob/fb88375ab4d2161dbf7e958a2a94c7c6d97dc84c/shell/browser/linux/unity_service.cc#L64>`_ before using the UnityLauncherAPI.
-To make this work on other Desktops too, you need to set ``XDG_CURRENT_SESSION=KDE`` and ``XDG_CURRENT_DESKTOP=KDE`` to pretend the App is running on KDE.
+To make this work on other Desktops too, you need to set ``XDG_CURRENT_SESSION=KDE`` and ``XDG_CURRENT_DESKTOP=KDE`` to pretend the app is running on KDE.
