@@ -140,11 +140,12 @@ The following permission options are available:
 Additionally the following permissions are available:
 
 ====================  ===============================================================  ===================================================
-``host``              Access all files [#f3]_
-``host-etc``          Access all files in host and host's /etc [#f3]_
-``home``              Access the home directory [#f4]_
-``/some/dir``         Access an arbitrary path [#f5]_ [#f6]_
-``~/some/dir``        Access an arbitrary path relative to the home directory [#f6]_
+``host``              Access ``/home, /media, /opt, /run/media`` and ``/srv``           Includes any subpaths
+``host-etc``          Everything in ``host`` and host's ``/etc``                        host's ``/etc`` is mounted at ``/run/host/etc``
+``host-os``           Everything in ``host`` and ``/usr, /bin, /sbin, /lib{32, 64}``    ``/usr`` is mounted at ``/run/host/usr``
+``home``              Access the home directory                                         Except ``~/.var/app``
+``/some/dir``         Access an arbitrary path except any reserved path                 Includes any subpaths
+``~/some/dir``        Arbitrary path relative to the home directory                     Includes any subpaths
 ``xdg-desktop``       Access the XDG desktop directory                                  ``$XDG_DESKTOP_DIR`` or ``$HOME/Desktop``
 ``xdg-documents``     Access the XDG documents directory                                ``$XDG_DOCUMENTS_DIR`` or ``$HOME/Documents``
 ``xdg-download``      Access the XDG download directory                                 ``$XDG_DOWNLOAD_DIR`` or ``$HOME/Downloads``
@@ -153,14 +154,11 @@ Additionally the following permissions are available:
 ``xdg-public-share``  Access the XDG public directory                                   ``$XDG_PUBLICSHARE_DIR`` or ``$HOME/Public``
 ``xdg-videos``        Access the XDG videos directory                                   ``$XDG_VIDEOS_DIR`` or ``$HOME/Videos``
 ``xdg-templates``     Access the XDG templates directory                                ``$XDG_TEMPLATES_DIR`` or ``$HOME/Templates``
-``xdg-config``        Access the XDG config directory [#f7]_                            ``$XDG_CONFIG_HOME`` or ``$HOME/.config``
-``xdg-cache``         Access the XDG cache directory  [#f7]_                            ``$XDG_CACHE_HOME`` or ``$HOME/.cache``
-``xdg-data``          Access the XDG data directory   [#f7]_                            ``$XDG_DATA_HOME`` or ``$HOME/.local/share``
+``xdg-config``        Access the XDG config directory [#f3]_                            ``$XDG_CONFIG_HOME`` or ``$HOME/.config``
+``xdg-cache``         Access the XDG cache directory  [#f3]_                            ``$XDG_CACHE_HOME`` or ``$HOME/.cache``
+``xdg-data``          Access the XDG data directory   [#f3]_                            ``$XDG_DATA_HOME`` or ``$HOME/.local/share``
 ``xdg-run/path``      Access subdirectories of the XDG runtime directory                ``$XDG_RUNTIME_DIR/path`` (``/run/user/$UID/path``)
 ====================  ===============================================================  ===================================================
-
-Note that ``host, host-etc, host-os`` mounts the host directories under
-``/run/host`` inside the sandbox to avoid conflict with the runtime.
 
 Except ``host, host-etc, host-os`` paths can be added to all the above
 filesystem options. For example, ``--filesystem=xdg-documents/path``.
@@ -176,6 +174,16 @@ Other filesystem access guidelines include:
   add a wrapper script that sets it to ``$XDG_RUNTIME_DIR/app/$FLATPAK_ID``.
 - Retaining and sharing configuration with non-Flatpak installations is to
   be avoided.
+
+Reserved Paths
+``````````````
+
+The following paths are reserved for the runtime and Flatpak itself
+and are never shared::
+
+/app, /bin, /dev, /etc, /lib, /lib32, /lib64, /proc, /run, /run/flatpak, /run/host, /sbin, /usr
+
+Some subpaths of ``/run`` are allowed but not the entire directory.
 
 Additionally the following directories from host need to be explicitly
 requested with ``--filesystem`` and are not available with
@@ -290,15 +298,11 @@ depends on the kernel/fstab configuration and cannot be pre-determined.
    and these have no permission checks. This unfortunately affects e.g. the X
    server and the session bus which listens to abstract sockets by default. A
    secure distribution should disable these and just use regular sockets.
-.. [#f3] Except for ``/app, /bin, /boot, /efi, /etc, /lib, /lib32, /lib64, /proc, /root, /run, /sbin, /tmp, /usr, /var``
-.. [#f4] This does not include access to folders under ``~/.var/app`` except the application's own
-.. [#f5] Except ``/app, /dev, /etc, /lib, /lib32, /lib64, /proc, /root, /run/flatpak, /run/host, /sbin, /usr``
-.. [#f6] The arbitrary path includes all its subfolders and subfiles if any.
-.. [#f7] ``xdg-{cache, config, data}`` bind mounts the paths from host to the per-app sandbox directory.
-    Inside the sandbox ``$XDG_CACHE_HOME``, ``$XDG_CONFIG_HOME`` and ``$XDG_DATA_HOME`` is set to
-    ``$HOME/.var/app/app-id/{cache, config, data}`` respectively. So for example, ``xdg-data/applications`` ie.
-    ``$XDG_DATA_HOME/applications`` on host is bind mounted to ``$HOME/.var/app/app-id/data/applications``
-    (inside the sandbox this is ``$XDG_DATA_HOME/applications``).
-    Additionally it'll have two mount points - one expanded to
-    ``$XDG_DATA_HOME/applications`` from the host and another to the
-    sandbox's ``$XDG_DATA_HOME/applications`` ie. ``$HOME/.var/app/app-id/data/applications``.
+.. [#f3] ``xdg-{cache, config, data}`` bind mounts the paths from host to the per-app sandbox directory.
+   Inside the sandbox ``$XDG_CACHE_HOME``, ``$XDG_CONFIG_HOME`` and ``$XDG_DATA_HOME`` is set to
+   ``$HOME/.var/app/app-id/{cache, config, data}`` respectively. So for example, ``xdg-data/applications`` ie.
+   ``$XDG_DATA_HOME/applications`` on host is bind mounted to ``$HOME/.var/app/app-id/data/applications``
+   (inside the sandbox this is ``$XDG_DATA_HOME/applications``).
+   Additionally it'll have two mount points - one expanded to
+   ``$XDG_DATA_HOME/applications`` from the host and another to the
+   sandbox's ``$XDG_DATA_HOME/applications`` ie. ``$HOME/.var/app/app-id/data/applications``.
