@@ -277,8 +277,11 @@ depends on the kernel/fstab configuration and cannot be pre-determined.
 .. [#f4] This does not include access to folders under ``~/.var/app`` except the application's own
 .. [#f5] Except ``/app, /dev, /etc, /lib, /lib32, /lib64, /proc, /root, /run/flatpak, /run/host, /sbin, /usr``
 .. [#f6] The arbitrary path includes all its subfolders and subfiles if any.
-.. [#f7] ``xdg-{cache, config, data}`` binds mount the paths from host to the per-app sandbox directory.
-   Inside the sandbox ``$XDG_CACHE_HOME, $XDG_CONFIG_HOME and $XDG_DATA_HOME`` is set to
-   ``$HOME/.var/app/<app-id>/{cache, config, data}``. So this permission is not needed
-   unless access to the host directory, bind mounted to
-   ``$HOME/.var/app/<app-id>/{cache, config, data}`` is desired.
+.. [#f7] ``xdg-{cache, config, data}`` bind mounts the paths from host to the per-app sandbox directory.
+    Inside the sandbox ``$XDG_CACHE_HOME``, ``$XDG_CONFIG_HOME`` and ``$XDG_DATA_HOME`` is set to
+    ``$HOME/.var/app/app-id/{cache, config, data}`` respectively. So for example, ``xdg-data/applications`` ie.
+    ``$XDG_DATA_HOME/applications`` on host is bind mounted to ``$HOME/.var/app/app-id/data/applications``
+    (inside the sandbox this is ``$XDG_DATA_HOME/applications``).
+    Additionally it'll have two mount points - one expanded to
+    ``$XDG_DATA_HOME/applications`` from the host and another to the
+    sandbox's ``$XDG_DATA_HOME/applications`` ie. ``$HOME/.var/app/app-id/data/applications``.
