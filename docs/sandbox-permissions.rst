@@ -189,7 +189,7 @@ Additionally the following directories from host need to be explicitly
 requested with ``--filesystem`` and are not available with
 ``home, host, host-os, host-etc`` by default:
 
-- ``~/.var/app`` - The app can access only its own directory in ``~/.var/app/app-id``
+- ``~/.var/app`` - The app can access only its own directory in ``~/.var/app/$FLATPAK_ID``
 - ``$XDG_DATA_HOME/flatpak`` (``~/.local/share/flatpak``)
 - ``/boot``
 - ``/efi``
@@ -197,7 +197,7 @@ requested with ``--filesystem`` and are not available with
 - ``/sys``
 - ``/tmp``
 - ``/var`` - Note that by default ``/var/{cache, config, data, tmp}``
-  inside the sandbox are the same as ``~/.var/app/app-id/{cache, config, data, cache/tmp}``.
+  inside the sandbox are the same as ``~/.var/app/$FLATPAK_ID/{cache, config, data, cache/tmp}``.
   However an explicit ``--filesystem=/var`` will make only ``/var`` from
   host available and those will no longer be available.
 - ``/var/lib/flatpak`` - ``/var`` does not give access to this.
@@ -300,9 +300,9 @@ depends on the kernel/fstab configuration and cannot be pre-determined.
    secure distribution should disable these and just use regular sockets.
 .. [#f3] ``xdg-{cache, config, data}`` bind mounts the paths from host to the per-app sandbox directory.
    Inside the sandbox ``$XDG_CACHE_HOME``, ``$XDG_CONFIG_HOME`` and ``$XDG_DATA_HOME`` is set to
-   ``$HOME/.var/app/app-id/{cache, config, data}`` respectively. So for example, ``xdg-data/applications`` ie.
-   ``$XDG_DATA_HOME/applications`` on host is bind mounted to ``$HOME/.var/app/app-id/data/applications``
+   ``$HOME/.var/app/$FLATPAK_ID/{cache, config, data}`` respectively. So for example, ``xdg-data/applications`` ie.
+   ``$XDG_DATA_HOME/applications`` on host is bind mounted to ``$HOME/.var/app/$FLATPAK_ID/data/applications``
    (inside the sandbox this is ``$XDG_DATA_HOME/applications``).
    Additionally it'll have two mount points - one expanded to
    ``$XDG_DATA_HOME/applications`` from the host and another to the
-   sandbox's ``$XDG_DATA_HOME/applications`` ie. ``$HOME/.var/app/app-id/data/applications``.
+   sandbox's ``$XDG_DATA_HOME/applications`` ie. ``$HOME/.var/app/$FLATPAK_ID/data/applications``.
