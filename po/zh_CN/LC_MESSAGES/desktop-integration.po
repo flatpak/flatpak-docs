@@ -1,3 +1,4 @@
+# Gordon Zhang
 # PikachuHy <pikachuhy@163.com>, 2018. #zanata
 # WTZ <zwpwjwtz@126.com>, 2018. #zanata
 # ZiqiangXu <ziqiang_xu@yeah.net>, 2018. #zanata
@@ -276,6 +277,18 @@ msgid ""
 " description, while the second prints only the full name of the theme's "
 "flatpak package."
 msgstr ""
+
+#: ../../desktop-integration.rst:138
+msgid ""
+"Global menus"
+msgstr "全局菜单"
+
+#: ../../desktop-integration.rst:141
+msgid ""
+"If your application uses `Gtk.Application:menubar <https://docs.gtk.org/gtk4/class.Application.html#properties>`_ or `QMenuBar <https://doc.qt.io/qt-6/qmenubar.html>`_"
+"it will work as expected from within a sandboxed application."
+msgstr "如果你的应用程序使用`Gtk.Application:menubar <https://docs.gtk.org/gtk4/class.Application.html#properties>`_或`QMenuBar <https://doc.qt.io/qt-6/qmenubar.html>`_,"
+"它将会就像预料中没有经过沙盒的应用程序一样"
 
 #: ../../desktop-integration.rst:139
 msgid ""
