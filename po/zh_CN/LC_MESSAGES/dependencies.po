@@ -7,7 +7,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-31 14:18-0300\n"
 "PO-Revision-Date: 2018-11-03 01:34-0400\n"
-"Last-Translator: PikachuHy <pikachuhy@163.com>\n"
+"Last-Translator: Gordon Zhang<jp20171211@163.com\n"
 "Language: zh_Hans_CN\n"
 "Language-Team: Chinese (Simplified, China)\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -187,4 +187,33 @@ msgstr ""
 "base apps是一个相对专业的概念，只有一些应用需要使用他们（最常用的base app是用于 `Electron applications "
 "<https://github.com/flathub/io.atom.electron.BaseApp>`_ "
 "）。但是，如果你的应用使用一个巨大的，复杂的或者专用的框架，在开始构建的时候检查是否有可用的base apps是一个好主意。"
+
+
+#: ../../dependencies.rst:99
+msgid ""
+"Runtimes and applications can define extension points which allow optional"
+"additional runtimes to be mounted at a specified location inside the sandbox"
+"when they are present on the system. "
+msgstr "运行时和应用程序可以定义在系统上出现时允许可选附加运行时在沙盒中指定位置挂载的插件点。"
+
+
+#: ../../dependencies.rst: 105
+msgid ""
+"For an extension to be loaded in the application or runtime, an extension"
+"point first needs to be defined in the application or runtime in "
+"question."
+msgstr ""
+"为了使一个插件在应用或运行时中被加载，一个插件点首先需要在被在应用程序或运行时（在问题中）被定义。"
+
+#: ../../dependencies.rst: 115
+msgid ""
+"To see available extension points, it's best to look at the application"
+"or runtime manifest."
+msgstr ""
+"为了查看可用的插件点， 最好看看应用程序本身。"
+
+#: ../../dependencies.rst: 122
+msgid "Some extension names having special significance are discussed below. "
+msgstr "一些有特殊意义的插件名称在下面讨论。"
+
 
