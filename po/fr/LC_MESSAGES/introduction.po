@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"POT-Creation-Date: 2024-05-11 23:46+0000\n"
 "PO-Revision-Date: 2018-05-20 10:37-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language: fr\n"
 "Language-Team: fr_FR <traduc@traduc.org>\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.1\n"
 
 #: ../../introduction.rst:2
 msgid "Introduction to Flatpak"
@@ -271,7 +271,53 @@ msgid ""
 " of the work out of application development."
 msgstr ""
 
-#: ../../introduction.rst:119
+#: ../../introduction.rst:120
+msgid ""
+"In general Flatpak is best suited suited for desktop applications and "
+"while command line applications also work, it may not be suited in some "
+"cases:"
+msgstr ""
+
+#: ../../introduction.rst:124
+msgid ""
+"Applications needs to elevate priviledges using ``su, sudo, pkexec`` etc."
+" Flatpak cannot run in SUID binaries inside the sandbox."
+msgstr ""
+
+#: ../../introduction.rst:126
+msgid ""
+"Application needs to read ``/proc`` from host or have unfiltered access "
+"to processes. This is not allowed as Flatpak has a private proc."
+msgstr ""
+
+#: ../../introduction.rst:128
+msgid ""
+"Application uses a syscall that is blocklisted by Flatpak's seccomp "
+"filter. For example, Flatpak won't allow spawning sub-namespaces in the "
+"sandbox."
+msgstr ""
+
+#: ../../introduction.rst:131
+msgid ""
+"Kernel modules or drivers are non application packages and won't work "
+"inside a Flatpak."
+msgstr ""
+
+#: ../../introduction.rst:134
+msgid ""
+"In general in cases where the sandbox prohibits the core functionality of"
+" the application or makes it too inconvenient and/or obtrusive , it is "
+"not best suited to be packaged with Flatpak."
+msgstr ""
+
+#: ../../introduction.rst:138
+msgid ""
+"Flatpak also won't export udev rules or systemd services from the sandbox"
+" to the host and requires manual configuration after installing the "
+"flatpak package."
+msgstr ""
+
+#: ../../introduction.rst:142
 msgid ""
 "Information about Flatpak's internals can be found in :doc:`under-the-"
 "hood`."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
-"POT-Creation-Date: 2023-05-31 14:18-0300\n"
+"POT-Creation-Date: 2024-05-11 23:46+0000\n"
 "PO-Revision-Date: 2022-11-03 12:09-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.10.1\n"
 
 #: ../../manifests.rst:2
 msgid "Manifests"
@@ -75,9 +75,10 @@ msgid "Basic properties"
 msgstr "Propriedades básicas"
 
 #: ../../manifests.rst:24
+#, fuzzy
 msgid ""
 "Each manifest file should specify basic information about the application"
-" that is to be built, including the ``app-id``, ``runtime``, ``runtime-"
+" that is to be built, including the ``id``, ``runtime``, ``runtime-"
 "version``, ``sdk`` and ``command`` parameters. These properties are "
 "typically specified at the beginning of the file."
 msgstr ""
@@ -145,7 +146,8 @@ msgid "``rename-desktop-file`` - rename the ``.desktop`` filename"
 msgstr "``rename-desktop-file`` – renomeia o arquivo ``.desktop``"
 
 #: ../../manifests.rst:59
-msgid "``rename-appdata-file`` - rename the AppData file"
+#, fuzzy
+msgid "``rename-appdata-file`` - rename the MetaInfo file"
 msgstr "``rename-appdata-file`` – renomeia o arquivo AppData"
 
 #: ../../manifests.rst:61
@@ -188,11 +190,11 @@ msgstr ""
 "A seção de manifesto de acabamento usa a propriedade ``finish-args``, que"
 " pode ser vista no arquivo de manifesto do Dicionário:"
 
-#: ../../manifests.rst:93
+#: ../../manifests.rst:94
+#, fuzzy
 msgid ""
 "Guidance on which permissions to use can be found in the :doc:`sandbox-"
-"permissions`, and a full list of ``finish-args`` options can be found in "
-":doc:`sandbox-permissions-reference`."
+"permissions`."
 msgstr ""
 "As orientações sobre quais permissões usar podem ser encontradas em :doc"
 ":`sandbox-permissions`, e uma lista completa das opções ``finish-args`` "
@@ -301,8 +303,8 @@ msgstr "``bzr`` – repositórios Bazaar"
 #: ../../manifests.rst:157
 msgid "``file`` - local/remote files (these are copied into the source directory)"
 msgstr ""
-"``file`` – arquivos locais/remotos (esses são copiados para dentro do diretório "
-"fonte)"
+"``file`` – arquivos locais/remotos (esses são copiados para dentro do "
+"diretório fonte)"
 
 #: ../../manifests.rst:158
 msgid "``dir`` - local directories (these are copied into the source directory)"

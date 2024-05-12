@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-31 14:18-0300\n"
+"POT-Creation-Date: 2024-05-11 23:46+0000\n"
 "PO-Revision-Date: 2018-11-03 01:34-0400\n"
 "Last-Translator: Gordon Zhang<jp20171211@163.com\n"
 "Language: zh_Hans_CN\n"
@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.10.1\n"
 
 #: ../../dependencies.rst:2
 msgid "Dependencies"
@@ -188,32 +188,92 @@ msgstr ""
 "<https://github.com/flathub/io.atom.electron.BaseApp>`_ "
 "）。但是，如果你的应用使用一个巨大的，复杂的或者专用的框架，在开始构建的时候检查是否有可用的base apps是一个好主意。"
 
+#: ../../dependencies.rst:97
+msgid "Extensions"
+msgstr ""
 
 #: ../../dependencies.rst:99
+#, fuzzy
 msgid ""
-"Runtimes and applications can define extension points which allow optional"
-"additional runtimes to be mounted at a specified location inside the sandbox"
-"when they are present on the system. "
+"Runtimes and applications can define extension points which allow "
+"optional additional runtimes to be mounted at a specified location inside"
+" the sandbox when they are present on the system. Typical uses for "
+"extensions include translations for applications, debuginfo for sdks, or "
+"adding more functionality to the application. Some software refers to "
+"these extensions as \"Add-ons\"."
 msgstr "运行时和应用程序可以定义在系统上出现时允许可选附加运行时在沙盒中指定位置挂载的插件点。"
 
-
-#: ../../dependencies.rst: 105
+#: ../../dependencies.rst:105
+#, fuzzy
 msgid ""
 "For an extension to be loaded in the application or runtime, an extension"
-"point first needs to be defined in the application or runtime in "
+" point first needs to be defined in the application or runtime in "
 "question."
-msgstr ""
-"为了使一个插件在应用或运行时中被加载，一个插件点首先需要在被在应用程序或运行时（在问题中）被定义。"
+msgstr "为了使一个插件在应用或运行时中被加载，一个插件点首先需要在被在应用程序或运行时（在问题中）被定义。"
 
-#: ../../dependencies.rst: 115
+#: ../../dependencies.rst:109
 msgid ""
-"To see available extension points, it's best to look at the application"
-"or runtime manifest."
+"By convention, extension points follow the ID of the application or "
+"runtime in question, followed by a generic term for the extension. For "
+"example, the OBS Studio flatpak may define an extension point "
+"``com.obsproject.Studio.Plugin``, where \"Plugin\" is the generic term "
+"prefixed by the application ID."
 msgstr ""
-"为了查看可用的插件点， 最好看看应用程序本身。"
 
-#: ../../dependencies.rst: 122
-msgid "Some extension names having special significance are discussed below. "
+#: ../../dependencies.rst:115
+#, fuzzy
+msgid ""
+"To see available extension points, it's best to look at the application "
+"or runtime manifest."
+msgstr "为了查看可用的插件点， 最好看看应用程序本身。"
+
+#: ../../dependencies.rst:118
+msgid ""
+"Any extension now choosing to be loaded inside the OBS Studio flatpak "
+"must prefix their ID by ``com.obsproject.Studio.Plugin`` for example "
+"``com.obsproject.Studio.Plugin.Gstreamer``."
+msgstr ""
+
+#: ../../dependencies.rst:122
+#, fuzzy
+msgid "Some extension names having special significance are discussed below."
 msgstr "一些有特殊意义的插件名称在下面讨论。"
 
+#: ../../dependencies.rst:124
+msgid ""
+"``.Debug`` is used for Debug extensions by applications, runtimes and "
+"SDKs. They are used for debugging purposes. Every application or runtime "
+"built with ``flatpak-builder`` produces a ``.Debug`` extension unless "
+"specifically disabled in the manifest."
+msgstr ""
+
+#: ../../dependencies.rst:129
+msgid ""
+"A ``.Debug`` extension will be needed when generating useful backtraces. "
+"This is explained more in :doc:`debugging`."
+msgstr ""
+
+#: ../../dependencies.rst:132
+msgid ""
+"``.Locale`` is used for Locale extensions by applications or runtimes. "
+"They add support for more languages to the parent application or runtime."
+" These are usually partially downloaded by ``flatpak`` based on the "
+"configured system locale. Every application or runtime built with "
+"``flatpak-builder`` produces a ``.Locale`` extension unless specifically "
+"disabled in the manifest."
+msgstr ""
+
+#: ../../dependencies.rst:139
+msgid ""
+"``.Sources`` is used for Sources extension by application or runtime. "
+"They are used to bundle sources of the modules used in the application or"
+" runtime in question. ``flatpak-builder`` will produce a ``.Sources`` "
+"extension prefixed by ID when ``--bundle-sources`` is used."
+msgstr ""
+
+#: ../../dependencies.rst:144
+msgid ""
+"Please visit :doc:`extension` for a guide on how to create extension "
+"points and extensions."
+msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-07 16:26-0600\n"
+"POT-Creation-Date: 2024-05-11 23:46+0000\n"
 "PO-Revision-Date: 2019-06-26 12:05-0400\n"
 "Last-Translator: Markus Richter <semanticdesign@pm.me>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.10.1\n"
 
 #: ../../first-build.rst:2
 msgid "Building your first Flatpak"
@@ -71,7 +71,7 @@ msgstr ""
 #: ../../first-build.rst:22
 #, fuzzy
 msgid ""
-"In this tutorial we will use the Freedesktop 22.08 runtime and SDK. To "
+"In this tutorial we will use the Freedesktop 23.08 runtime and SDK. To "
 "install these, run::"
 msgstr ""
 "In diesem Tutorial verwenden wir Laufzeitumgebung und SDK zu Freedesktop "
@@ -211,16 +211,21 @@ msgstr ""
 msgid ""
 "In order for your application to show up in application stores while "
 "testing with a local repository, you might have to run ``flatpak build-"
-"update-repo repo``. For more information how to publish to application "
-"stores see `Appdata files <https://docs.flatpak.org/en/latest"
-"/freedesktop-quick-reference.html#appdata-files>`_."
+"update-repo repo``."
 msgstr ""
 
-#: ../../first-build.rst:113
+#: ../../first-build.rst:111
+msgid ""
+"For more information how to publish to application stores see `MetaInfo "
+"files <https://docs.flatpak.org/en/latest/conventions.html#metainfo-"
+"files>`_."
+msgstr ""
+
+#: ../../first-build.rst:114
 msgid "7. Install the app"
 msgstr "7. Installieren der Anwendung"
 
-#: ../../first-build.rst:115
+#: ../../first-build.rst:116
 msgid ""
 "Now we're ready to add the repository that was just created and install "
 "the app. This is done with two commands::"
@@ -229,7 +234,7 @@ msgstr ""
 "wurde, hinzuzufügen und die Anwendung zu installieren. Dies wird mit zwei"
 " Kommandos durchgeführt::"
 
-#: ../../first-build.rst:121
+#: ../../first-build.rst:122
 msgid ""
 "The first command adds the repository that was created in the previous "
 "step. The second command installs the app from the repository."
@@ -238,7 +243,7 @@ msgstr ""
 "erzeugt wurde. Das zweite Kommando installiert die Anwendung vom "
 "Repository."
 
-#: ../../first-build.rst:124
+#: ../../first-build.rst:125
 msgid ""
 "Both these commands use the ``--user`` argument, which means that the "
 "repository and the app are added per-user rather than system-wide. This "
@@ -248,7 +253,7 @@ msgstr ""
 "Repository für den jeweiligen Benutzer hinzugefügt – und nicht "
 "systemweit. Dies ist sinnvoll für Testläufe."
 
-#: ../../first-build.rst:128
+#: ../../first-build.rst:129
 msgid ""
 "Note that the repository was added with ``--no-gpg-verify``, since a GPG "
 "key wasn't specified when the app was built. This is fine for testing, "
@@ -260,11 +265,11 @@ msgstr ""
 "Anwendung erzeugt wurde. Dies ist gut zum Testen, aber für offizielle "
 "Repositorys sollten diese mit einem privaten GPG-Schlüssel signiert sein."
 
-#: ../../first-build.rst:133
+#: ../../first-build.rst:134
 msgid "8. Run the app"
 msgstr "8. Starten der Anwendung"
 
-#: ../../first-build.rst:135
+#: ../../first-build.rst:136
 msgid ""
 "All that's left is to try the app. This can be done with the following "
 "command::"
@@ -272,7 +277,7 @@ msgstr ""
 "Zum Abschluss kann die Anwendung getestet werden. Um dies durchzuführen "
 "wird folgendes Kommando eingegeben::"
 
-#: ../../first-build.rst:140
+#: ../../first-build.rst:141
 msgid "This runs the app, so that it prints 'Hello world, from a sandbox'."
 msgstr ""
 "Das startet die Anwendung und gibt den Text 'Hello world, from a sandbox'"
@@ -287,6 +292,18 @@ msgstr ""
 #~ " how to publish to application stores"
 #~ " see `Appdata files "
 #~ "<http://docs.flatpak.org/en/latest/freedesktop-quick-"
+#~ "reference.html#appdata-files>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In order for your application to "
+#~ "show up in application stores while "
+#~ "testing with a local repository, you "
+#~ "might have to run ``flatpak build-"
+#~ "update-repo repo``. For more information"
+#~ " how to publish to application stores"
+#~ " see `Appdata files "
+#~ "<https://docs.flatpak.org/en/latest/freedesktop-quick-"
 #~ "reference.html#appdata-files>`_."
 #~ msgstr ""
 

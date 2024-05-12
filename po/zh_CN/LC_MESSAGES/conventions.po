@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-31 14:18-0300\n"
+"POT-Creation-Date: 2024-05-11 23:46+0000\n"
 "PO-Revision-Date: 2018-11-03 01:31-0400\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language: zh_Hans_CN\n"
@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.10.1\n"
 
 #: ../../conventions.rst:2
 msgid "Requirements & Conventions"
@@ -57,7 +57,7 @@ msgstr "应用ID"
 msgid ""
 "As described in :doc:`using-flatpak`, Flatpak requires each application "
 "to have a unique identifier, which has a form such as "
-"``org.gnome.Dictionary``."
+"``org.example.app``."
 msgstr ""
 
 #: ../../conventions.rst:26
@@ -101,48 +101,61 @@ msgid ""
 msgstr ""
 
 #: ../../conventions.rst:50
-msgid "``io.github.Foo``"
+msgid "``io.github.foo``"
 msgstr ""
 
 #: ../../conventions.rst:52
 msgid ""
 "This is problematic because while ``foo.github.io`` may be unique to your"
 " project, it does not include a project-specific identifier. This may "
-"cause issues if another project creates ``io.github.Foo-Bar`` which "
+"cause issues if another project creates ``io.github.foo-bar`` which "
 "should be its own namespace but areas of ``flatpak`` may treat them "
-"similar. A better ID would be ``io.github.foo.Foo`` even if it is "
+"similar. A better ID would be ``io.github.foo.foo`` even if it is "
 "redundant."
 msgstr ""
 
 #: ../../conventions.rst:57
-msgid "``org.example-site.Foo``"
+msgid "``org.example-site.foo``"
 msgstr ""
 
 #: ../../conventions.rst:59
 msgid ""
-"This ID is not valid according to the DBus specification. You can use "
-"``org.example_site.Foo`` instead."
+"This ID is not valid according to the DBus specification as a dash ``-`` "
+"isn't allowed except on the last component. You should replace ``-`` with"
+" an undercore ``_`` and therefore, use ``org.example_site.Foo`` instead."
 msgstr ""
 
-#: ../../conventions.rst:61
-msgid "``com.github.foo.Bar`` or ``com.gitlab.foo.Bar``"
+#: ../../conventions.rst:64
+msgid "``com.github.foo.bar`` or ``com.gitlab.foo.bar``"
 msgstr ""
 
-#: ../../conventions.rst:63
+#: ../../conventions.rst:66
 msgid ""
 "While a project may be hosted on GitHub or GitLab it does not have any "
 "control over the ``github.com`` or ``gitlab.com`` domain. Instead you "
 "should use ``io.github`` or ``io.gitlab`` as shown above."
 msgstr ""
 
-#: ../../conventions.rst:69
-msgid "AppData files"
-msgstr "AppData文件"
+#: ../../conventions.rst:71
+msgid "``Org.Example.App``"
+msgstr ""
 
-#: ../../conventions.rst:70
+#: ../../conventions.rst:73
+msgid ""
+"The TLD portion of the ID must be lowercased and while not required the "
+"application portion is recommended to be lowercase as well. Instead you "
+"should use ``org.example.app``."
+msgstr ""
+
+#: ../../conventions.rst:78
+#, fuzzy
+msgid "MetaInfo files"
+msgstr "desktop文件"
+
+#: ../../conventions.rst:80
 #, fuzzy
 msgid ""
-"AppData files provide metadata about applications, which is used by "
+"MetaInfo files provide metadata about applications, which is used by "
 "application stores (such as Flathub, GNOME Software and KDE Discover)."
 msgstr ""
 "APPData文件提供了应用的元数据，可以被应用商店使用（例如Flathub、GNOME Software和KDE Discover）。 "
@@ -150,44 +163,45 @@ msgstr ""
 "<https://www.freedesktop.org/software/appstream/docs/>`_ "
 "（APPStream规范）提供了一个AppData的完整参考。"
 
-#: ../../conventions.rst:74
+#: ../../conventions.rst:84
 msgid ""
 "The `Freedesktop AppStream specification "
 "<https://www.freedesktop.org/software/appstream/docs/>`_ provides a "
-"complete reference for providing AppData. You can use the online "
+"complete reference for providing MetaInfo. You can use the online "
 "`AppStream MetaInfo Creator "
 "<https://www.freedesktop.org/software/appstream/metainfocreator/>`_ to "
 "generate a basic file."
 msgstr ""
 
-#: ../../conventions.rst:80
+#: ../../conventions.rst:90
 #, fuzzy
 msgid ""
-"AppData files should be named with the application ID and the "
+"MetaInfo files should be named with the application ID and the "
 "``.metainfo.xml`` file extension, and should be placed in "
 "``/app/share/metainfo/``. For example::"
 msgstr ""
 "AppData文件应该以应用的ID命名，并以  ``.appdata.xml``  为文件扩展名，应该放在  "
 "``/app/share/metainfo/``  。举个例子::"
 
-#: ../../conventions.rst:85
+#: ../../conventions.rst:95
 msgid ""
 "A legacy convention of having the ``.appdata.xml`` installed in "
 "``/app/share/appdata`` is also accepted as well, and ``flatpak-builder`` "
 "will check either directory with either extension."
 msgstr ""
 
-#: ../../conventions.rst:89
+#: ../../conventions.rst:99
+#, fuzzy
 msgid ""
-"The ``appstream-util validate-relax`` command can be used to check "
-"AppData files for errors."
+"The ``appstreamcli validate --explain`` command can be used to check "
+"MetaInfo files for errors."
 msgstr "``appstream-util vlidate-relax``  命令可以用于检查AppData文件的错误"
 
-#: ../../conventions.rst:93
+#: ../../conventions.rst:103
 msgid "Application icons"
 msgstr "应用图标"
 
-#: ../../conventions.rst:95
+#: ../../conventions.rst:105
 #, fuzzy
 msgid ""
 "Applications are expected to provide an application icon, which is used "
@@ -200,30 +214,46 @@ msgstr ""
 "<https://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-"
 "latest.html>`_ （Freedesktop图标规范）一致。"
 
-#: ../../conventions.rst:100
+#: ../../conventions.rst:110
 msgid ""
 "Icons should be named with the application's ID, be in either PNG or SVG "
 "format, and must be placed in the standard location::"
 msgstr "图标应该以应用ID命名，以PNG或者SVG格式，而且必须放在标准的位置::"
 
-#: ../../conventions.rst:105
+#: ../../conventions.rst:115
 msgid ""
 "For example, the path to the 128✕128px version of GNOME Dictionary's icon"
 " is::"
 msgstr "举个例子，128x128px版本的GNOME Dictionary的图标的路径应该是："
 
-#: ../../conventions.rst:110
+#: ../../conventions.rst:120
 msgid ""
 "Icons must be square shaped, ie their width and height must be the same. "
 "The maximum size allowed by the specification is 512x512px. SVG icons are"
 " of size ``scalable``::"
 msgstr ""
 
-#: ../../conventions.rst:117
+#: ../../conventions.rst:126
+msgid ""
+"Flatpak will export the following icon name patterns: ``$FLATPAK_ID, "
+"$FLATPAK_ID.foo, $FLATPAK_ID-foo``. They may end with an extension suffix"
+" like ``.png, .svg``. Exported icons can be found in the ``icons`` "
+"subfolder of ``$HOME/.local/share/flatpak/exports/share`` or "
+"``/var/lib/flatpak/exports/share`` depending on system or user install."
+msgstr ""
+
+#: ../../conventions.rst:132
+msgid ""
+"The distribution usually appends those paths to ``$XDG_DATA_DIRS`` on "
+"host when installing the ``flatpak`` package. Unless an icon is exported "
+"by Flatpak, host applications cannot access it."
+msgstr ""
+
+#: ../../conventions.rst:137
 msgid "Desktop files"
 msgstr "desktop文件"
 
-#: ../../conventions.rst:119
+#: ../../conventions.rst:139
 #, fuzzy
 msgid ""
 "Desktop files are used to provide the desktop environment with "
@@ -238,7 +268,7 @@ msgstr ""
 "提供了编写desktop文件的完整指南，您也可以在 `ArchLinux Wiki "
 "<https://wiki.archlinux.org/index.php/desktop_entries>`_ 上找到更多信息。"
 
-#: ../../conventions.rst:126
+#: ../../conventions.rst:146
 msgid ""
 "Desktop files should be named with the application's ID, followed by the "
 "``.desktop`` file extension, and should be placed in "
@@ -247,7 +277,7 @@ msgstr ""
 "desktop文件应该以应用的ID命名，以  ``.desktop``  为文件扩展名，而且应该放在  "
 "``/app/share/applications/``  。举个例子::"
 
-#: ../../conventions.rst:132
+#: ../../conventions.rst:152
 msgid ""
 "A minimal desktop file should contain at least the application's *name*, "
 "*exec* command, *type*, *icon* name and *categories*::"
@@ -255,40 +285,72 @@ msgstr ""
 "一个desktop文件应当至少包含以下字段： *name*（应用程序名）、*exec*（启动命令）、*type*（类型）、*icon*（图标名）和"
 " *categories* （所属分类）："
 
-#: ../../conventions.rst:142
+#: ../../conventions.rst:162
 msgid ""
 "The ``desktop-file-validate`` command can be used to check for errors in "
 "desktop files."
 msgstr "``desktop-file-validate``  命令可以用来检测desktop文件的错误。"
 
-#: ../../conventions.rst:146
+#: ../../conventions.rst:165
+msgid ""
+"The ``Exec`` key of the desktop files is rewritten by Flatpak  when "
+"installing an app. The original value of the key becomes the value of the"
+" ``--command`` argument like so::"
+msgstr ""
+
+#: ../../conventions.rst:171
+msgid ""
+"Flatpak will export the following desktop filename patterns: "
+"``$FLATPAK_ID.desktop, $FLATPAK_ID.foo.desktop, $FLATPAK_ID-"
+"foo.desktop``. Exported desktop files can be found in the "
+"``applications`` subfolder of "
+"``$HOME/.local/share/flatpak/exports/share`` or "
+"``/var/lib/flatpak/exports/share`` depending on system or user install."
+msgstr ""
+
+#: ../../conventions.rst:178
+msgid ""
+"The distribution usually appends those paths to ``$XDG_DATA_DIRS`` on "
+"host when installing the ``flatpak`` package. Unless a desktop file is "
+"exported by Flatpak, host applications cannot access it."
+msgstr ""
+
+#: ../../conventions.rst:183
 msgid "Exporting through extra-data"
 msgstr ""
 
-#: ../../conventions.rst:148
+#: ../../conventions.rst:187
+msgid ""
+"Note, that when creating a Flatpak package for a software store like "
+"Flathub or when composing the metadata with appstreamcli, desktop files "
+"and icons must not be placed in ``/app/extra/export/`` and instead should"
+" go to the proper locations documented above."
+msgstr ""
+
+#: ../../conventions.rst:192
 msgid ""
 "Files downloaded through ``extra-data`` are only downloaded when "
 "installing, as such they aren't yet available for ``flatpak-builder`` to "
 "automatically export during the build process."
 msgstr ""
 
-#: ../../conventions.rst:150
+#: ../../conventions.rst:194
 msgid ""
 "When using ``extra-data``, place any files that must be exported under "
 "this location::"
 msgstr ""
 
-#: ../../conventions.rst:154
+#: ../../conventions.rst:198
 msgid ""
 "For example, if GNOME Dictionary used ``extra-data`` to download a 96x96 "
 "icon this would be its path::"
 msgstr ""
 
-#: ../../conventions.rst:159
+#: ../../conventions.rst:203
 msgid "Technical conventions"
 msgstr "技术规范"
 
-#: ../../conventions.rst:161
+#: ../../conventions.rst:205
 msgid ""
 "The following are standard technical conventions used by Flatpak and "
 "Linux desktops. Those with Linux experience will likely already be aware "
@@ -296,11 +358,11 @@ msgid ""
 " information useful."
 msgstr "Flatpak和多数Linux桌面都遵循下列标准技术规范。有Linux使用经验的用户对此可能已有了解。首次使用Linux的开发者同样可以在这里找到有用的信息。"
 
-#: ../../conventions.rst:167
+#: ../../conventions.rst:211
 msgid "D-Bus"
 msgstr "D-Bus"
 
-#: ../../conventions.rst:169
+#: ../../conventions.rst:213
 msgid ""
 "D-Bus is the standard IPC framework used on Linux desktops. A lot of "
 "applications won't need to use it, but it is supported by Flatpak should "
@@ -309,7 +371,7 @@ msgstr ""
 "D-Bus是Linux桌面使用的标准IPC（进程间通讯，译者注）框架。大多数应用程序并不会用到D-Bus；但如果需要，Flatpak也同样提供D-"
 "Bus支持。"
 
-#: ../../conventions.rst:173
+#: ../../conventions.rst:217
 msgid ""
 "D-Bus can be used for application launching and communicating with some "
 "system services. Applications can also provide their own D-Bus services "
@@ -319,11 +381,11 @@ msgstr ""
 "D-Bus可用于启动应用程序，以及系统服务之间的交互。应用程序也可以实现它们自己的D-"
 "Bus服务（此时，D-Bus服务的名称必须与应用程序的ID一致）。"
 
-#: ../../conventions.rst:178
+#: ../../conventions.rst:222
 msgid "Filesystem layout"
 msgstr "Filesystem layout（文件系统布局，译者注）"
 
-#: ../../conventions.rst:180
+#: ../../conventions.rst:224
 msgid ""
 "Each Flatpak sandbox, which is the environment in which an application is"
 " run, contains the filesystem of the application's runtime. This follows "
@@ -335,7 +397,7 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>`_ "
 "（标准Linux文件系统约定，译者注）。"
 
-#: ../../conventions.rst:185
+#: ../../conventions.rst:229
 msgid ""
 "For example, the root of the sandbox contains the ``/etc`` directory for "
 "configuration files and ``/usr`` for multi-user utilities and "
@@ -346,11 +408,11 @@ msgstr ""
 "举个例子，沙箱根目录包含  ``/etc``  用于配置文件和  ``/usr``  "
 "用于多用户utilities和应用。除此之外，每个沙箱包含一个顶级  ``/app/``  目录，用于应用自己文件的存放。"
 
-#: ../../conventions.rst:191
+#: ../../conventions.rst:235
 msgid "XDG base directories"
 msgstr "XDG基本目录"
 
-#: ../../conventions.rst:193
+#: ../../conventions.rst:237
 #, fuzzy
 msgid ""
 "`XDG base directories <https://specifications.freedesktop.org/basedir-"
@@ -361,11 +423,11 @@ msgstr ""
 "`XDG基本目录 <https://standards.freedesktop.org/basedir-spec/basedir-spec-"
 "latest.html>`_  指定用户应用数据的位置标准。很多工具包都提供了访问XDG基本目录的快捷方法。如:"
 
-#: ../../conventions.rst:198
+#: ../../conventions.rst:242
 msgid "Electron: XDG base directories can be accessed with ``app.getPath``"
 msgstr "Electron: 使用 ``app.getPath`` 访问XDG基本目录"
 
-#: ../../conventions.rst:199
+#: ../../conventions.rst:243
 msgid ""
 "Glib: provides access to the XDG base directories through the "
 "``g_get_user_cache_dir ()``, ``g_get_user_data_dir ()``, "
@@ -374,7 +436,7 @@ msgstr ""
 "Glib: 通过 ``g_get_user_cache_dir ()``, ``g_get_user_data_dir ()``, "
 "``g_get_user_config_dir ()`` 函数访问XDG基本目录"
 
-#: ../../conventions.rst:202
+#: ../../conventions.rst:246
 #, fuzzy
 msgid ""
 "Qt: provides access to XDG base directories with the `QStandardPaths "
@@ -383,91 +445,100 @@ msgstr ""
 "Qt: 通过 `QStandardPaths Class "
 "<http://doc.qt.io/qt-5/qstandardpaths.html>`_ 访问XDG基本目录"
 
-#: ../../conventions.rst:205
+#: ../../conventions.rst:249
 msgid ""
 "However, applications that aren't using one of these toolkits can expect "
 "to find their XDG base directories in the following locations:"
 msgstr "如果应用没有使用上述工具包，也可以通过下面的方式找到XDG基本目录："
 
-#: ../../conventions.rst:209
+#: ../../conventions.rst:253
 msgid "Base directory"
 msgstr "基本目录"
 
-#: ../../conventions.rst:209
+#: ../../conventions.rst:253
 msgid "Usage"
 msgstr "用途"
 
-#: ../../conventions.rst:209
+#: ../../conventions.rst:253
 msgid "Default location"
 msgstr "默认位置"
 
-#: ../../conventions.rst:211
+#: ../../conventions.rst:255
 msgid "XDG_CONFIG_HOME"
 msgstr "XDG_CONFIG_HOME"
 
-#: ../../conventions.rst:211
+#: ../../conventions.rst:255
 msgid "User-specific configuration files"
 msgstr "具体用户配置文件"
 
-#: ../../conventions.rst:211
+#: ../../conventions.rst:255
 msgid "~/.var/app/<app-id>/config"
 msgstr "~/.var/app/<app-id>/config"
 
-#: ../../conventions.rst:212
+#: ../../conventions.rst:256
 msgid "XDG_DATA_HOME"
 msgstr "XDG_DATA_HOME"
 
-#: ../../conventions.rst:212
+#: ../../conventions.rst:256
 msgid "User-specific data"
 msgstr "具体用户数据"
 
-#: ../../conventions.rst:212
+#: ../../conventions.rst:256
 msgid "~/.var/app/<app-id>/data"
 msgstr "~/.var/app/<app-id>/data"
 
-#: ../../conventions.rst:213
+#: ../../conventions.rst:257
 msgid "XDG_CACHE_HOME"
 msgstr "XDG_CACHE_HOME"
 
-#: ../../conventions.rst:213
+#: ../../conventions.rst:257
 msgid "Non-essential user-specific data"
 msgstr "Non-essential user-specific data（非基本具体用户数据，译者注）"
 
-#: ../../conventions.rst:213
+#: ../../conventions.rst:257
 msgid "~/.var/app/<app-id>/cache"
 msgstr "~/.var/app/<app-id>/cache"
 
-#: ../../conventions.rst:214
+#: ../../conventions.rst:258
 msgid "XDG_STATE_HOME"
 msgstr ""
 
-#: ../../conventions.rst:214
+#: ../../conventions.rst:258
 msgid "State data such as undo history"
 msgstr ""
 
-#: ../../conventions.rst:214
+#: ../../conventions.rst:258
 #, fuzzy
 msgid "~/.var/app/<app-id>/.local/state"
 msgstr "~/.var/app/<app-id>/cache"
 
-#: ../../conventions.rst:217
+#: ../../conventions.rst:261
 msgid "For example, GNOME Dictionary will store user-specific data in::"
 msgstr "举个例子，GNOME Dictionary会把具体用户数据存放在::"
 
-#: ../../conventions.rst:221
+#: ../../conventions.rst:265
+msgid ""
+"These environment variables are always set by flatpak and override any "
+"host values. However if using the host directories are needed the "
+"``$HOST_XDG_CONFIG_HOME``, ``$HOST_XDG_DATA_HOME``, "
+"``$HOST_XDG_CACHE_HOME``, and ``$HOST_XDG_STATE_HOME`` environment "
+"variables will be set if a custom value was set on the host."
+msgstr ""
+
+#: ../../conventions.rst:270
+msgid ""
+"Note that ``$XDG_STATE_HOME`` and ``$HOST_XDG_STATE_HOME`` is only "
+"supported by Flatpak 1.13 and later. If your app needs to work on earlier"
+" versions of Flatpak, you can use the ``--persist=.local/state`` and "
+"``--unset-env=XDG_STATE_HOME`` finish args so the app will use the "
+"correct directory, even after Flatpak is later upgraded to >1.13."
+msgstr ""
+
+#: ../../conventions.rst:276
 msgid ""
 "Note that applications can be configured to use non-default base "
 "directory locations (see :doc:`sandbox-permissions`)."
 msgstr "注意应用可以被配置成使用非默认基本目录（见 :doc:`sandbox-permissions`)。"
-
-#: ../../conventions.rst:224
-msgid ""
-"Note that ``$XDG_STATE_HOME`` is only supported by Flatpak 1.13 and "
-"later. If your app needs to work on earlier versions of Flatpak, you can "
-"use the ``--persist=.local/state`` and ``--unset-env=XDG_STATE_HOME`` "
-"finish args so the app will use the correct directory, even after Flatpak"
-" is later upgraded to >1.13."
-msgstr ""
 
 #~ msgid ""
 #~ "As described in :doc:`using-flatpak`, "
@@ -531,5 +602,65 @@ msgstr ""
 #~ "control over the ``github.com`` domain. "
 #~ "Instead you should use ``io.github`` as"
 #~ " shown above."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As described in :doc:`using-flatpak`, "
+#~ "Flatpak requires each application to "
+#~ "have a unique identifier, which has "
+#~ "a form such as ``org.gnome.Dictionary``."
+#~ msgstr ""
+
+#~ msgid "``io.github.Foo``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is problematic because while "
+#~ "``foo.github.io`` may be unique to your"
+#~ " project, it does not include a "
+#~ "project-specific identifier. This may "
+#~ "cause issues if another project creates"
+#~ " ``io.github.Foo-Bar`` which should be "
+#~ "its own namespace but areas of "
+#~ "``flatpak`` may treat them similar. A"
+#~ " better ID would be ``io.github.foo.Foo``"
+#~ " even if it is redundant."
+#~ msgstr ""
+
+#~ msgid "``org.example-site.Foo``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This ID is not valid according to"
+#~ " the DBus specification. You can use"
+#~ " ``org.example_site.Foo`` instead."
+#~ msgstr ""
+
+#~ msgid "``com.github.foo.Bar`` or ``com.gitlab.foo.Bar``"
+#~ msgstr ""
+
+#~ msgid "AppData files"
+#~ msgstr "AppData文件"
+
+#~ msgid ""
+#~ "The `Freedesktop AppStream specification "
+#~ "<https://www.freedesktop.org/software/appstream/docs/>`_ "
+#~ "provides a complete reference for "
+#~ "providing AppData. You can use the "
+#~ "online `AppStream MetaInfo Creator "
+#~ "<https://www.freedesktop.org/software/appstream/metainfocreator/>`_"
+#~ " to generate a basic file."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Note that ``$XDG_STATE_HOME`` is only "
+#~ "supported by Flatpak 1.13 and later. "
+#~ "If your app needs to work on "
+#~ "earlier versions of Flatpak, you can "
+#~ "use the ``--persist=.local/state`` and "
+#~ "``--unset-env=XDG_STATE_HOME`` finish args so "
+#~ "the app will use the correct "
+#~ "directory, even after Flatpak is later"
+#~ " upgraded to >1.13."
 #~ msgstr ""
 

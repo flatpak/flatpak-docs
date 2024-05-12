@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
-"POT-Creation-Date: 2023-05-31 14:18-0300\n"
+"POT-Creation-Date: 2024-05-11 23:46+0000\n"
 "PO-Revision-Date: 2023-05-31 14:32-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.10.1\n"
 
 #: ../../under-the-hood.rst:2
 msgid "Under the Hood"
@@ -178,8 +178,9 @@ msgstr ""
 "bem estabelecida de fornecer APIs de alto nível para aplicativos"
 
 #: ../../under-the-hood.rst:64
+#, fuzzy
 msgid ""
-"The `OSTree <https://ostree.readthedocs.io/en/latest/>`__ system for "
+"The `OSTree <https://ostreedev.github.io/ostree/>`__ system for "
 "versioning and distributing filesystem trees"
 msgstr ""
 "O sistema `OSTree <https://ostree.readthedocs.io/en/latest/>`__ para "

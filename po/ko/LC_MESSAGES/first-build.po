@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-07 16:26-0600\n"
+"POT-Creation-Date: 2024-05-11 23:46+0000\n"
 "PO-Revision-Date: 2018-05-20 10:37-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language: ko\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.10.1\n"
 
 #: ../../first-build.rst:2
 msgid "Building your first Flatpak"
@@ -59,7 +59,7 @@ msgstr ""
 #: ../../first-build.rst:22
 #, fuzzy
 msgid ""
-"In this tutorial we will use the Freedesktop 22.08 runtime and SDK. To "
+"In this tutorial we will use the Freedesktop 23.08 runtime and SDK. To "
 "install these, run::"
 msgstr ""
 "이 튜토리얼는 Freedesktop 런타임 버전 1.6을 사용할 예정이며, 해당 런타임은 플랫팩 저장소에서 제공한다. 저장소를 "
@@ -187,28 +187,33 @@ msgstr ""
 msgid ""
 "In order for your application to show up in application stores while "
 "testing with a local repository, you might have to run ``flatpak build-"
-"update-repo repo``. For more information how to publish to application "
-"stores see `Appdata files <https://docs.flatpak.org/en/latest"
-"/freedesktop-quick-reference.html#appdata-files>`_."
+"update-repo repo``."
 msgstr ""
 
-#: ../../first-build.rst:113
+#: ../../first-build.rst:111
+msgid ""
+"For more information how to publish to application stores see `MetaInfo "
+"files <https://docs.flatpak.org/en/latest/conventions.html#metainfo-"
+"files>`_."
+msgstr ""
+
+#: ../../first-build.rst:114
 msgid "7. Install the app"
 msgstr "7. 응용프로그램 설치"
 
-#: ../../first-build.rst:115
+#: ../../first-build.rst:116
 msgid ""
 "Now we're ready to add the repository that was just created and install "
 "the app. This is done with two commands::"
 msgstr "이제 막 생성된 저장소를 추가하고 응용프로그램을 설치할 준비가 되었다. 다음 두 명령어를 입력 해 보자::"
 
-#: ../../first-build.rst:121
+#: ../../first-build.rst:122
 msgid ""
 "The first command adds the repository that was created in the previous "
 "step. The second command installs the app from the repository."
 msgstr "첫번째 명령은 위에서 막 생성한 저장소를 추가하는 명령이다. 두번째 명령은 저장소로부터 응용프로그램을 받아 설치하는 명령이다."
 
-#: ../../first-build.rst:124
+#: ../../first-build.rst:125
 #, fuzzy
 msgid ""
 "Both these commands use the ``--user`` argument, which means that the "
@@ -218,7 +223,7 @@ msgstr ""
 "두 명령 모두 `—user` 매개변수를 사용한다. 이는 해당 저장소와 응용프로그램이 모두 시스템 전역적으로 추가(system-"
 "wide)된 것이 아닌, 사용자별로(per-user) 추가되었음을 의미한다. 테스팅을 위해서는 사용자별 추가 방식이 유용하다."
 
-#: ../../first-build.rst:128
+#: ../../first-build.rst:129
 #, fuzzy
 msgid ""
 "Note that the repository was added with ``--no-gpg-verify``, since a GPG "
@@ -229,17 +234,17 @@ msgstr ""
 "저장소 추가 시 `—no-gpg-verify` 옵션을 사용하였다. 응용프로그램을 빌드할 때 GPG 키를 지정하지 않았기 때문이다. "
 "테스팅 시에는 무방하나, 공식 저장소에 올려둘 때에는 개인 GPG 키로 응용프로그램에 서명 해야 한다."
 
-#: ../../first-build.rst:133
+#: ../../first-build.rst:134
 msgid "8. Run the app"
 msgstr "8. 응용프로그램 실행"
 
-#: ../../first-build.rst:135
+#: ../../first-build.rst:136
 msgid ""
 "All that's left is to try the app. This can be done with the following "
 "command::"
 msgstr "이제 남은 작업은 응용프로그램을 실행하는 것 뿐이다. 다음과 같이 실행할 수 있다. ::"
 
-#: ../../first-build.rst:140
+#: ../../first-build.rst:141
 #, fuzzy
 msgid "This runs the app, so that it prints 'Hello world, from a sandbox'."
 msgstr "성공적으로 실행되면 `Hello world, from a sandbox` 라는 메시지가 출력된다."
@@ -276,6 +281,18 @@ msgstr "성공적으로 실행되면 `Hello world, from a sandbox` 라는 메시
 #~ " how to publish to application stores"
 #~ " see `Appdata files "
 #~ "<http://docs.flatpak.org/en/latest/freedesktop-quick-"
+#~ "reference.html#appdata-files>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In order for your application to "
+#~ "show up in application stores while "
+#~ "testing with a local repository, you "
+#~ "might have to run ``flatpak build-"
+#~ "update-repo repo``. For more information"
+#~ " how to publish to application stores"
+#~ " see `Appdata files "
+#~ "<https://docs.flatpak.org/en/latest/freedesktop-quick-"
 #~ "reference.html#appdata-files>`_."
 #~ msgstr ""
 

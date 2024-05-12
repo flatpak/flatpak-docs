@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-31 14:18-0300\n"
+"POT-Creation-Date: 2024-05-11 23:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.10.1\n"
 
 #: ../../electron.rst:2
 msgid "Electron"
@@ -148,16 +148,98 @@ msgstr ""
 #: ../../electron.rst:111
 msgid ""
 "The standard guidelines on sandbox permissions apply to Electron "
-"applications. However, Electron does not currently support Wayland, so "
-"for display access, only X11 should be used. The sample app also "
-"configures pulseaudio for sound and enables network access:"
+"applications. However, Electron does not use Wayland by default. So for "
+"display access, only X11 should be used as the default configuration. "
+"This will make Electron use Xwayland in a wayland session and nothing "
+"else is required."
 msgstr ""
 
-#: ../../electron.rst:125
+#: ../../electron.rst:117
+msgid ""
+"The sample app also configures pulseaudio for sound and enables network "
+"access."
+msgstr ""
+
+#: ../../electron.rst:131
+msgid ""
+"Native wayland support in electron is experimental and often unstable. It"
+" is advised to stick with the X11 and Xwayland configuration above as the"
+" default."
+msgstr ""
+
+#: ../../electron.rst:135
+msgid ""
+"To enable experimental `native Wayland` support in Electron>=20, the "
+"``--ozone-platform-hint=auto`` flag can be passed to the program. `auto` "
+"will choose Wayland when the session is wayland and Xwayland or X11 "
+"otherwise."
+msgstr ""
+
+#: ../../electron.rst:140
+msgid ""
+"The recommended option is to leave it to the user. So ``--socket=x11`` "
+"should be used in manifest and Wayland can be tested with::"
+msgstr ""
+
+#: ../../electron.rst:145
+msgid ""
+"To make native wayland the `default` for users ``--socket=fallback-x11`` "
+"and ``--socket=wayland`` must be used in the manifest."
+msgstr ""
+
+#: ../../electron.rst:148
+msgid ""
+"Client-side window decorations in native wayland can be enabled by "
+"passing ``--enable-features=WaylandWindowDecorations`` (Electron>=17)."
+msgstr ""
+
+#: ../../electron.rst:151
+msgid ""
+"Electron uses ``libnotify`` on Linux to provide desktop notifications. "
+"libnotify `since 0.8.0 "
+"<https://gitlab.gnome.org/GNOME/libnotify/-/merge_requests/27>`_ "
+"automatically uses the `notification portal <https://flatpak.github.io"
+"/xdg-desktop-portal/docs/doc-org.freedesktop.portal.Notification.html>`_ "
+"when inside a sandboxed environment and ``--talk-"
+"name=org.freedesktop.Notifications`` is not required."
+msgstr ""
+
+#: ../../electron.rst:157
+msgid ""
+"``org.electronjs.Electron2.BaseApp`` since ``branch/23.08`` comes with "
+"``libnotify>=0.8.0``"
+msgstr ""
+
+#: ../../electron.rst:163
+msgid "Using correct desktop file name"
+msgstr ""
+
+#: ../../electron.rst:165
+msgid ""
+"It's important for Linux applications to set the correct desktop file "
+"name. If not, it can lead to problems like missing the window icon under "
+"Wayland. By default Electron uses ``{appname}.desktop`` as desktop file "
+"name. In Flatpak the name of the desktop file must be the id of the "
+"Flatpak. To tell Electron to use another name you need to set the "
+"``desktopName`` key in your ``package.json`` e.g. ``\"desktopName\": "
+"\"com.example.MyApp.desktop\"``."
+msgstr ""
+
+#: ../../electron.rst:169
+msgid ""
+"In case you repack a binary, you can use the ``patch-desktop-filename`` "
+"script provided by the BaseApp. Each Electron binary ships with "
+"``resources/app.asar`` file. You need to call ``patch-desktop-filename`` "
+"with this file as argument. If your application is installed under "
+"``${FLATPAK_DEST}/my-app`` you need to run ``patch-desktop-filename "
+"${FLATPAK_DEST}/my-app/resources/app.asar``."
+msgstr ""
+
+#: ../../electron.rst:174
 msgid "Build options"
 msgstr ""
 
-#: ../../electron.rst:127
+#: ../../electron.rst:176
 msgid ""
 "These build options aren't strictly necessary, but can be useful if "
 "something goes wrong. ``env`` allows setting an array of environment "
@@ -165,18 +247,18 @@ msgid ""
 "that ``npm`` gives us more detailed error messages."
 msgstr ""
 
-#: ../../electron.rst:143
+#: ../../electron.rst:192
 msgid "The application module"
 msgstr ""
 
-#: ../../electron.rst:145
+#: ../../electron.rst:194
 msgid ""
 "The final section of the manifest defines how the application module "
 "should be built. This is where some of the additional logic for Electron "
 "and Node.js can be found."
 msgstr ""
 
-#: ../../electron.rst:149
+#: ../../electron.rst:198
 msgid ""
 "By default, ``flatpak-builder`` doesn't allow build tools to access the "
 "network. This means that tools which rely on downloading sources will not"
@@ -185,7 +267,7 @@ msgid ""
 "means that these will be found when it comes to the build."
 msgstr ""
 
-#: ../../electron.rst:155
+#: ../../electron.rst:204
 msgid ""
 "The next part of the manifest describes how the application should be "
 "built. The simple buildsystem option is used, which allows a sequence of "
@@ -193,15 +275,15 @@ msgid ""
 "location and hash of the application are also specified."
 msgstr ""
 
-#: ../../electron.rst:178
+#: ../../electron.rst:227
 msgid "Bundling NPM packages"
 msgstr ""
 
-#: ../../electron.rst:180
+#: ../../electron.rst:229
 msgid "The next line is how NPM modules get bundled as part of Flatpaks:"
 msgstr ""
 
-#: ../../electron.rst:186
+#: ../../electron.rst:235
 msgid ""
 "Since even simple Node.js applications depend on dozens of packages, it "
 "would be impractical to specify all of them as part of a manifest file. A"
@@ -211,7 +293,7 @@ msgid ""
 "sources."
 msgstr ""
 
-#: ../../electron.rst:192
+#: ../../electron.rst:241
 msgid ""
 "The Python script requires a ``package-lock.json`` (or ``yarn.lock``) "
 "file. This file contains information about the packages that an "
@@ -220,7 +302,7 @@ msgid ""
 " then run as follows::"
 msgstr ""
 
-#: ../../electron.rst:199
+#: ../../electron.rst:248
 msgid ""
 "This generates the manifest JSON needed to build the NPM/Yarn packages "
 "for the application, which are outputted to a file called ``generated-"
@@ -231,22 +313,22 @@ msgid ""
 "above."
 msgstr ""
 
-#: ../../electron.rst:207
+#: ../../electron.rst:256
 msgid "Launching the app"
 msgstr ""
 
-#: ../../electron.rst:209
+#: ../../electron.rst:258
 msgid ""
 "The Electron app is run through a simple script. This can be given any "
 "name but must be specified in the manifest's ``\"command\":`` property. "
 "See below a sample wrapper for launching app:"
 msgstr ""
 
-#: ../../electron.rst:221
+#: ../../electron.rst:270
 msgid "Build commands"
 msgstr ""
 
-#: ../../electron.rst:223
+#: ../../electron.rst:272
 msgid ""
 "Last but not least, since the simple build option is being used, a list "
 "of build commands must be provided. As can be seen, ``npm`` is run with "
@@ -256,7 +338,7 @@ msgid ""
 "``/app/bin/`` so that it will be on ``$PATH``:"
 msgstr ""
 
-#: ../../electron.rst:245
+#: ../../electron.rst:294
 msgid ""
 "Note that if the application you are trying to package contains a "
 "``build`` block in ``package.json`` with instructions for Linux, this can"
@@ -265,11 +347,45 @@ msgid ""
 "configuration that will try to download AppImage binaries:"
 msgstr ""
 
-#: ../../electron.rst:255
+#: ../../electron.rst:304
 msgid ""
 "The preferred way of fixing this, is not a patch, but a build-time edit "
 "using ``jq``. The following command will replace ``\"target\": "
 "\"AppImage\"`` with ``\"target\": \"dir\"``:"
+msgstr ""
+
+#: ../../electron.rst:311
+msgid "Make setProgressBar and setBadgeCount work"
+msgstr ""
+
+#: ../../electron.rst:312
+msgid ""
+"The `setProgressBar <https://www.electronjs.org/docs/latest/api/browser-"
+"window#winsetprogressbarprogress-options>`_ and `setBadgeCount "
+"<https://www.electronjs.org/docs/latest/api/app#appsetbadgecountcount-"
+"linux-macos>`_ functions allow showing a progress bar and a badge count "
+"in the window icon. It is implemented under Linux using the "
+"`UnityLauncherAPI <https://wiki.ubuntu.com/Unity/LauncherAPI>`_. This API"
+" is not implemented on every desktop environment. A known desktop "
+"environment which implements this is KDE. It is also implemented by the "
+"popular `Dash to Dock <https://micheleg.github.io/dash-to-dock>`_ GNOME "
+"extension and `Plank <https://launchpad.net/plank>`_."
+msgstr ""
+
+#: ../../electron.rst:315
+msgid ""
+"To make it work in Flatpak, the app needs to :ref:`use the correct "
+"desktop filename <use-correct-desktop-filename>`. The Flatpak also needs "
+"the ``--talk-name=com.canonical.Unity`` permission."
+msgstr ""
+
+#: ../../electron.rst:317
+msgid ""
+"Electron checks `checks if it's running on Unity or KDE "
+"<https://github.com/electron/electron/blob/fb88375ab4d2161dbf7e958a2a94c7c6d97dc84c/shell/browser/linux/unity_service.cc#L64>`_"
+" before using the UnityLauncherAPI. To make this work on other Desktops "
+"too, you need to set ``XDG_CURRENT_SESSION=KDE`` and "
+"``XDG_CURRENT_DESKTOP=KDE`` to pretend the app is running on KDE."
 msgstr ""
 
 #~ msgid ""
@@ -278,5 +394,15 @@ msgstr ""
 #~ "``node14`` in this example) must be "
 #~ "the same in ``sdk-extensions`` and "
 #~ "``append-path``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The standard guidelines on sandbox "
+#~ "permissions apply to Electron applications."
+#~ " However, Electron does not currently "
+#~ "support Wayland, so for display access,"
+#~ " only X11 should be used. The "
+#~ "sample app also configures pulseaudio "
+#~ "for sound and enables network access:"
 #~ msgstr ""
 

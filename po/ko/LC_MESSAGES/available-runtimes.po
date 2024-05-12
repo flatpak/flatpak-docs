@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-31 14:18-0300\n"
+"POT-Creation-Date: 2024-05-11 23:46+0000\n"
 "PO-Revision-Date: 2018-05-20 10:37-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language: ko\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.10.1\n"
 
 #: ../../available-runtimes.rst:2
 msgid "Available Runtimes"
@@ -45,7 +45,7 @@ msgstr ""
 msgid ""
 "What is mentioned here is just a high level look at the contents. To have"
 " up to date information simply install the runtime and open a shell "
-"inside of it (``flatpak run org.freedesktop.Sdk//22.08``) from there you "
+"inside of it (``flatpak run org.freedesktop.Sdk//23.08``) from there you "
 "can look around or use tools like ``pkg-config --list-all``. In the "
 "runtime shell you can also inspect ``/usr/manifest.json``, which lists "
 "the sources used to build it."
@@ -77,16 +77,16 @@ msgid "Available Freedesktop runtimes:"
 msgstr "사용 가능한 Freedesktop 런타임들:"
 
 #: ../../available-runtimes.rst:31 ../../available-runtimes.rst:40
-#: ../../available-runtimes.rst:80 ../../available-runtimes.rst:89
-#: ../../available-runtimes.rst:110 ../../available-runtimes.rst:119
-#: ../../available-runtimes.rst:143 ../../available-runtimes.rst:152
+#: ../../available-runtimes.rst:79 ../../available-runtimes.rst:88
+#: ../../available-runtimes.rst:109 ../../available-runtimes.rst:118
+#: ../../available-runtimes.rst:142 ../../available-runtimes.rst:151
 msgid "ID"
 msgstr "ID"
 
 #: ../../available-runtimes.rst:31 ../../available-runtimes.rst:40
-#: ../../available-runtimes.rst:80 ../../available-runtimes.rst:89
-#: ../../available-runtimes.rst:110 ../../available-runtimes.rst:119
-#: ../../available-runtimes.rst:143 ../../available-runtimes.rst:152
+#: ../../available-runtimes.rst:79 ../../available-runtimes.rst:88
+#: ../../available-runtimes.rst:109 ../../available-runtimes.rst:118
+#: ../../available-runtimes.rst:142 ../../available-runtimes.rst:151
 msgid "Description"
 msgstr "설명"
 
@@ -94,8 +94,8 @@ msgstr "설명"
 msgid "org.freedesktop.Platform"
 msgstr "org.freedesktop.Platform"
 
-#: ../../available-runtimes.rst:33 ../../available-runtimes.rst:82
-#: ../../available-runtimes.rst:112 ../../available-runtimes.rst:145
+#: ../../available-runtimes.rst:33 ../../available-runtimes.rst:81
+#: ../../available-runtimes.rst:111 ../../available-runtimes.rst:144
 msgid "Runtime"
 msgstr "Runtime"
 
@@ -103,13 +103,13 @@ msgstr "Runtime"
 msgid "org.freedesktop.Sdk"
 msgstr "org.freedesktop.Sdk"
 
-#: ../../available-runtimes.rst:34 ../../available-runtimes.rst:83
-#: ../../available-runtimes.rst:113 ../../available-runtimes.rst:146
+#: ../../available-runtimes.rst:34 ../../available-runtimes.rst:82
+#: ../../available-runtimes.rst:112 ../../available-runtimes.rst:145
 msgid "SDK"
 msgstr "SDK"
 
-#: ../../available-runtimes.rst:37 ../../available-runtimes.rst:86
-#: ../../available-runtimes.rst:116 ../../available-runtimes.rst:149
+#: ../../available-runtimes.rst:37 ../../available-runtimes.rst:85
+#: ../../available-runtimes.rst:115 ../../available-runtimes.rst:148
 msgid "The following runtime extensions are available:"
 msgstr ""
 
@@ -117,8 +117,8 @@ msgstr ""
 msgid "org.freedesktop.Platform.Locale"
 msgstr "org.freedesktop.Platform.Locale"
 
-#: ../../available-runtimes.rst:42 ../../available-runtimes.rst:91
-#: ../../available-runtimes.rst:121 ../../available-runtimes.rst:154
+#: ../../available-runtimes.rst:42 ../../available-runtimes.rst:90
+#: ../../available-runtimes.rst:120 ../../available-runtimes.rst:153
 msgid "Runtime translations (extension)"
 msgstr "런타임 다국어 번역 (확장)"
 
@@ -182,8 +182,8 @@ msgstr "런타임 다국어 번역 (확장)"
 msgid "org.freedesktop.Sdk.Debug"
 msgstr "org.freedesktop.Sdk.Debug"
 
-#: ../../available-runtimes.rst:49 ../../available-runtimes.rst:92
-#: ../../available-runtimes.rst:122 ../../available-runtimes.rst:155
+#: ../../available-runtimes.rst:49 ../../available-runtimes.rst:91
+#: ../../available-runtimes.rst:121 ../../available-runtimes.rst:154
 msgid "SDK debug information (extension)"
 msgstr "SDK 디버그 정보 (확장)"
 
@@ -191,8 +191,8 @@ msgstr "SDK 디버그 정보 (확장)"
 msgid "org.freedesktop.Sdk.Locale"
 msgstr "org.freedesktop.Sdk.Locale"
 
-#: ../../available-runtimes.rst:50 ../../available-runtimes.rst:93
-#: ../../available-runtimes.rst:123 ../../available-runtimes.rst:156
+#: ../../available-runtimes.rst:50 ../../available-runtimes.rst:92
+#: ../../available-runtimes.rst:122 ../../available-runtimes.rst:155
 msgid "SDK translations (extension)"
 msgstr "SDK 다국어 번역 (확장)"
 
@@ -200,8 +200,8 @@ msgstr "SDK 다국어 번역 (확장)"
 msgid "org.freedesktop.Sdk.Docs"
 msgstr "org.freedesktop.Sdk.Docs"
 
-#: ../../available-runtimes.rst:51 ../../available-runtimes.rst:94
-#: ../../available-runtimes.rst:124 ../../available-runtimes.rst:157
+#: ../../available-runtimes.rst:51 ../../available-runtimes.rst:93
+#: ../../available-runtimes.rst:123 ../../available-runtimes.rst:156
 msgid "SDK documentation (extension)"
 msgstr "SDK 문서 (확장)"
 
@@ -227,88 +227,84 @@ msgstr ""
 "GNOME 플랫폼을 더한 것이며, 다음을 포함한다:"
 
 #: ../../available-runtimes.rst:62
-msgid "Clutter"
-msgstr "Clutter"
-
-#: ../../available-runtimes.rst:63
 msgid "Gjs"
 msgstr "Gjs"
 
-#: ../../available-runtimes.rst:64
+#: ../../available-runtimes.rst:63
 msgid "GObject Introspection"
 msgstr "GObject Introspection"
 
-#: ../../available-runtimes.rst:65
+#: ../../available-runtimes.rst:64
 msgid "GStreamer"
 msgstr "GStreamer"
 
-#: ../../available-runtimes.rst:66
+#: ../../available-runtimes.rst:65
 msgid "GVFS"
 msgstr "GVFS"
 
-#: ../../available-runtimes.rst:67
+#: ../../available-runtimes.rst:66
 msgid "Libnotify"
 msgstr "Libnotify"
 
-#: ../../available-runtimes.rst:68
+#: ../../available-runtimes.rst:67
 msgid "Libsecret"
 msgstr "Libsecret"
 
-#: ../../available-runtimes.rst:69
+#: ../../available-runtimes.rst:68
 msgid "LibSoup"
 msgstr "LibSoup"
 
-#: ../../available-runtimes.rst:70
+#: ../../available-runtimes.rst:69
 msgid "PyGObject"
 msgstr "PyGObject"
 
-#: ../../available-runtimes.rst:71
+#: ../../available-runtimes.rst:70
 msgid "Vala"
 msgstr "Vala"
 
-#: ../../available-runtimes.rst:72
+#: ../../available-runtimes.rst:71
 msgid "WebKitGTK"
 msgstr "WebKitGTK"
 
-#: ../../available-runtimes.rst:74
+#: ../../available-runtimes.rst:73
 msgid ""
 "The GNOME runtime is maintained `here <https://gitlab.gnome.org/GNOME"
 "/gnome-build-meta>`__."
 msgstr ""
 
-#: ../../available-runtimes.rst:77
+#: ../../available-runtimes.rst:76
 msgid "Available GNOME runtimes:"
 msgstr "Available GNOME runtimes:"
 
-#: ../../available-runtimes.rst:82
+#: ../../available-runtimes.rst:81
 msgid "org.gnome.Platform"
 msgstr "org.gnome.Platform"
 
-#: ../../available-runtimes.rst:83
+#: ../../available-runtimes.rst:82
 msgid "org.gnome.Sdk"
 msgstr "org.gnome.Sdk"
 
-#: ../../available-runtimes.rst:91
+#: ../../available-runtimes.rst:90
 msgid "org.gnome.Platform.Locale"
 msgstr "org.gnome.Platform.Locale"
 
-#: ../../available-runtimes.rst:92
+#: ../../available-runtimes.rst:91
 msgid "org.gnome.Sdk.Debug"
 msgstr "org.gnome.Sdk.Debug"
 
-#: ../../available-runtimes.rst:93
+#: ../../available-runtimes.rst:92
 msgid "org.gnome.Sdk.Locale"
 msgstr "org.gnome.Sdk.Locale"
 
-#: ../../available-runtimes.rst:94
+#: ../../available-runtimes.rst:93
 msgid "org.gnome.Sdk.Docs"
 msgstr "org.gnome.Sdk.Docs"
 
-#: ../../available-runtimes.rst:98
+#: ../../available-runtimes.rst:97
 msgid "KDE"
 msgstr "KDE"
 
-#: ../../available-runtimes.rst:100
+#: ../../available-runtimes.rst:99
 msgid ""
 "The KDE runtime is also based on the Freedesktop runtime and adds Qt and "
 "KDE Frameworks. It is appropriate for any application that makes use of "
@@ -317,45 +313,45 @@ msgstr ""
 "KDE 런타임 또한 Freedesktop 런타임을 기초로 Qt와 KDE 프레임워크를 더한것이며, KDE 플랫폼을 사용하는 "
 "응용프로그램 및 Qt 기반 응용을 위해 적합하다."
 
-#: ../../available-runtimes.rst:104
+#: ../../available-runtimes.rst:103
 msgid ""
 "The KDE runtime is maintained `here <https://invent.kde.org/packaging"
 "/flatpak-kde-runtime>`__."
 msgstr ""
 
-#: ../../available-runtimes.rst:107
+#: ../../available-runtimes.rst:106
 msgid "Available KDE runtimes:"
 msgstr "사용 가능한 KDE 런타임들 :"
 
-#: ../../available-runtimes.rst:112
+#: ../../available-runtimes.rst:111
 msgid "org.kde.Platform"
 msgstr "org.kde.Platform"
 
-#: ../../available-runtimes.rst:113
+#: ../../available-runtimes.rst:112
 msgid "org.kde.Sdk"
 msgstr "org.kde.Sdk"
 
-#: ../../available-runtimes.rst:121
+#: ../../available-runtimes.rst:120
 msgid "org.kde.Platform.Locale"
 msgstr "org.kde.Platform.Locale"
 
-#: ../../available-runtimes.rst:122
+#: ../../available-runtimes.rst:121
 msgid "org.kde.Sdk.Debug"
 msgstr "org.kde.Sdk.Debug"
 
-#: ../../available-runtimes.rst:123
+#: ../../available-runtimes.rst:122
 msgid "org.kde.Sdk.Locale"
 msgstr "org.kde.Sdk.Locale"
 
-#: ../../available-runtimes.rst:124
+#: ../../available-runtimes.rst:123
 msgid "org.kde.Sdk.Docs"
 msgstr "org.kde.Sdk.Docs"
 
-#: ../../available-runtimes.rst:128
+#: ../../available-runtimes.rst:127
 msgid "elementary"
 msgstr ""
 
-#: ../../available-runtimes.rst:130
+#: ../../available-runtimes.rst:129
 #, fuzzy
 msgid ""
 "The elementary runtime is appropriate for any application that would like"
@@ -365,56 +361,56 @@ msgstr ""
 "GNOME 런타임은 GNOME 플랫폼을 사용하는 응용프로그램들을 위해 적합한 런타임으로서, Freedesktop 런타임을 기초로 "
 "GNOME 플랫폼을 더한 것이며, 다음을 포함한다:"
 
-#: ../../available-runtimes.rst:132
+#: ../../available-runtimes.rst:131
 msgid "elementary Icons"
 msgstr ""
 
-#: ../../available-runtimes.rst:133
+#: ../../available-runtimes.rst:132
 msgid "elementary Stylesheet"
 msgstr ""
 
-#: ../../available-runtimes.rst:134
+#: ../../available-runtimes.rst:133
 msgid "elementary Sound Theme"
 msgstr ""
 
-#: ../../available-runtimes.rst:135
+#: ../../available-runtimes.rst:134
 msgid "Granite"
 msgstr ""
 
-#: ../../available-runtimes.rst:137
+#: ../../available-runtimes.rst:136
 msgid ""
 "The elementary runtime is maintained `here <https://github.com/elementary"
 "/flatpak-platform>`__."
 msgstr ""
 
-#: ../../available-runtimes.rst:140
+#: ../../available-runtimes.rst:139
 #, fuzzy
 msgid "Available elementary runtimes:"
 msgstr "사용 가능한 KDE 런타임들 :"
 
-#: ../../available-runtimes.rst:145
+#: ../../available-runtimes.rst:144
 #, fuzzy
 msgid "io.elementary.Platform"
 msgstr "org.gnome.Platform"
 
-#: ../../available-runtimes.rst:146
+#: ../../available-runtimes.rst:145
 msgid "io.elementary.Sdk"
 msgstr ""
 
-#: ../../available-runtimes.rst:154
+#: ../../available-runtimes.rst:153
 #, fuzzy
 msgid "io.elementary.Platform.Locale"
 msgstr "org.gnome.Platform.Locale"
 
-#: ../../available-runtimes.rst:155
+#: ../../available-runtimes.rst:154
 msgid "io.elementary.Sdk.Debug"
 msgstr ""
 
-#: ../../available-runtimes.rst:156
+#: ../../available-runtimes.rst:155
 msgid "io.elementary.Sdk.Locale"
 msgstr ""
 
-#: ../../available-runtimes.rst:157
+#: ../../available-runtimes.rst:156
 msgid "io.elementary.Sdk.Docs"
 msgstr ""
 
@@ -431,4 +427,21 @@ msgstr ""
 #~ "inspect ``/usr/manifest.json``, which lists "
 #~ "the sources used to build it."
 #~ msgstr ""
+
+#~ msgid ""
+#~ "What is mentioned here is just a"
+#~ " high level look at the contents. "
+#~ "To have up to date information "
+#~ "simply install the runtime and open "
+#~ "a shell inside of it (``flatpak "
+#~ "run org.freedesktop.Sdk//22.08``) from there "
+#~ "you can look around or use tools"
+#~ " like ``pkg-config --list-all``. In"
+#~ " the runtime shell you can also "
+#~ "inspect ``/usr/manifest.json``, which lists "
+#~ "the sources used to build it."
+#~ msgstr ""
+
+#~ msgid "Clutter"
+#~ msgstr "Clutter"
 

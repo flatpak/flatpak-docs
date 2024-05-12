@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
-"POT-Creation-Date: 2023-01-07 16:26-0600\n"
+"POT-Creation-Date: 2024-05-11 23:46+0000\n"
 "PO-Revision-Date: 2023-05-31 14:30-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.10.1\n"
 
 #: ../../desktop-integration.rst:2
 msgid "Desktop Integration"
@@ -126,11 +126,11 @@ msgstr ""
 "portais."
 
 #: ../../desktop-integration.rst:48
+#, fuzzy
 msgid ""
 "If you are not using one of these toolkits, it is possible to access the "
 "portals API directly. See the `Portals API documentation "
-"<https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for "
-"more information."
+"<https://flatpak.github.io/xdg-desktop-portal/>`_ for more information."
 msgstr ""
 "Se você não estiver usando um desses kits de ferramentas, é possível "
 "acessar diretamente a API dos portais. Consulte a `documentação da API de"
@@ -154,10 +154,11 @@ msgid "Status icons"
 msgstr "Ícones de status"
 
 #: ../../desktop-integration.rst:62
+#, fuzzy
 msgid ""
 "Status icons are the same concept as the system tray or the taskbar on "
 "Windows, or menu bar icons on Mac. These are supported on most Linux "
-"distributions, through libappindicator."
+"distributions, through abstractions such as libappindicator."
 msgstr ""
 "Os ícones de status são o mesmo conceito que a área de notificação ou a "
 "barra de tarefas no Windows ou os ícones da barra de menus no Mac. Eles "
@@ -184,21 +185,62 @@ msgstr ""
 
 #: ../../desktop-integration.rst:73
 msgid ""
-"XEmbed style icons will function with the ``x11`` permission but all "
-"other status icon interfaces require extra permissions to escape the "
-"sandbox and these services are not designed to be robust against "
-"untrusted software."
+"XEmbed style icons will function on desktops that support them with the "
+"``x11`` permission."
 msgstr ""
-"Os ícones de estilo XEmbed funcionarão com a permissão ``x11``, mas todas"
-" as outras interfaces de ícones de status requerem permissões extras para"
-" escapar da área restrita e esses serviços não foram projetados para "
-"serem robustos contra softwares não confiáveis."
 
-#: ../../desktop-integration.rst:78
+#: ../../desktop-integration.rst:77
+msgid "StatusNotifier"
+msgstr ""
+
+#: ../../desktop-integration.rst:79
+msgid ""
+"StatusNotifier style icons will not function without extra permissions as"
+" it requires talking to a non-hardenend host service. Risks include "
+"impersonation of other software and exploitation of bugs in the host "
+"service such as image decoders."
+msgstr ""
+
+#: ../../desktop-integration.rst:83
+msgid ""
+"At the very minimum to use StatusNotifier you must have the ``--talk-"
+"name=org.kde.StatusNotifierWatcher`` permission to register an item."
+msgstr ""
+
+#: ../../desktop-integration.rst:86
+msgid ""
+"Depending on the exact implementation of StatusNotifier that your "
+"application is using it may need session bus ownership of "
+"``org.kde.StatusNotifierItem-$PID-$ITEM_ID``."
+msgstr ""
+
+#: ../../desktop-integration.rst:89
+msgid ""
+"This permission is problematic in Flatpak as the ``$PID`` value is often "
+"the same in sandboxes and the item will possibly conflict with other "
+"applications. However if needed the ``--own-name=org.kde.*`` permission "
+"will allow this. This opens many new risks including the ability to "
+"impersonate any KDE service or application possibly capturing important "
+"user data."
+msgstr ""
+
+#: ../../desktop-integration.rst:95
+msgid ""
+"Most implementations of StatusNotifer have dropped this requirement but "
+"known exceptions to this are Electron versions older than 23.3.0."
+msgstr ""
+
+#: ../../desktop-integration.rst:98
+msgid ""
+"Current versions of Electron, Chromium, KNotifications, and "
+"libappindicator are known to work without ownership permissions."
+msgstr ""
+
+#: ../../desktop-integration.rst:102
 msgid "System search"
 msgstr "Pesquisa do sistema"
 
-#: ../../desktop-integration.rst:80
+#: ../../desktop-integration.rst:104
 msgid ""
 "GNOME-based distributions, like CentOS, Fedora, Red Hat Enterprise Linux "
 "and Ubuntu, provide the option to integrate with system search, by "
@@ -212,11 +254,11 @@ msgstr ""
 "old.gnome.org/SearchProvider/>`_. Isso permite que os resultados da "
 "pesquisa fornecidos pelo aplicativo apareçam no panorama de atividades."
 
-#: ../../desktop-integration.rst:86
+#: ../../desktop-integration.rst:110
 msgid "Window controls"
 msgstr "Controles de janela"
 
-#: ../../desktop-integration.rst:88
+#: ../../desktop-integration.rst:112
 msgid ""
 "Window controls are the buttons used to close, maximize and minimize "
 "windows. These do vary across Linux desktops, particularly in terms of "
@@ -232,7 +274,7 @@ msgstr ""
 "controles usados por um ambiente de área de trabalho específico não deve "
 "ser visto como um requisito rígido."
 
-#: ../../desktop-integration.rst:94
+#: ../../desktop-integration.rst:118
 msgid ""
 "From a user experience perspective, it is important to ensure that window"
 " controls appear on the same side of the window as other desktops. On "
@@ -242,7 +284,7 @@ msgstr ""
 "controles de janela apareçam no mesmo lado da janela que outras áreas de "
 "trabalho. No Linux, este é o lado direito da janela (como o Windows)."
 
-#: ../../desktop-integration.rst:98
+#: ../../desktop-integration.rst:122
 msgid ""
 "On X11 applications can rely on system-provided titlebars if they don't "
 "want to draw their own window controls. For a consistent Wayland "
@@ -257,11 +299,11 @@ msgstr ""
 "isso, mas os clientes mais simples de wayland podem usar `libdecor "
 "<https://gitlab.gnome.org/jadahl/libdecor>`_ para uma solução geral."
 
-#: ../../desktop-integration.rst:105
+#: ../../desktop-integration.rst:129
 msgid "Window decorations"
 msgstr "Decorações de janela"
 
-#: ../../desktop-integration.rst:107
+#: ../../desktop-integration.rst:131
 msgid ""
 "If your application uses a dark visual style as well as system-provided "
 "window decorations, the ``GTK_THEME_VARIANT=dark`` X11 window property "
@@ -274,11 +316,11 @@ msgstr ""
 " de janelas correspondam ao restante da janela do aplicativo. Isso pode "
 "ser feito executando::"
 
-#: ../../desktop-integration.rst:115
+#: ../../desktop-integration.rst:139
 msgid "Global menus"
 msgstr "Menus globais"
 
-#: ../../desktop-integration.rst:117
+#: ../../desktop-integration.rst:141
 msgid ""
 "If your application uses `Gtk.Application:menubar "
 "<https://docs.gtk.org/gtk4/class.Application.html#properties>`_ or "
@@ -290,11 +332,11 @@ msgstr ""
 "`QMenuBar <https://doc.qt.io/qt-6 /qmenubar.html>`_ funcionará como "
 "esperado de dentro de um aplicativo em área restrita."
 
-#: ../../desktop-integration.rst:121
+#: ../../desktop-integration.rst:145
 msgid "Theming"
 msgstr "Temas"
 
-#: ../../desktop-integration.rst:123
+#: ../../desktop-integration.rst:147
 msgid ""
 "Flatpak applications cannot directly use the system theme. This happens "
 "because flatpaks do not have the ability to use data files or libraries "
@@ -317,7 +359,7 @@ msgstr ""
 " Freedesktop quando o ponto de extensão é Gtk e para o runtime do KDE "
 "quando o ponto de extensão é Qt."
 
-#: ../../desktop-integration.rst:125
+#: ../../desktop-integration.rst:149
 msgid ""
 "The theming system requires Flatpak 0.8.4+ and applications using up to "
 "date ``org.gnome.Platform`` 3.24+, or ``org.freedesktop.Platform`` 1.6+, "
@@ -327,15 +369,15 @@ msgstr ""
 "``org.gnome.Platform`` 3.24+ ou ``org.freedesktop.Platform`` 1.6+ ou "
 "``org.kde.Platform`` 5,9+ atualizados."
 
-#: ../../desktop-integration.rst:128
+#: ../../desktop-integration.rst:152
 msgid "Installing themes"
 msgstr "Instalando temas"
 
-#: ../../desktop-integration.rst:131
+#: ../../desktop-integration.rst:155
 msgid "Instructions for Gtk"
 msgstr "Instruções para Gtk"
 
-#: ../../desktop-integration.rst:133
+#: ../../desktop-integration.rst:157
 msgid ""
 "The current Gtk themes are packaged in the `flathub "
 "<https://flathub.org/>`_ repository which you can add (if it's not "
@@ -345,7 +387,7 @@ msgstr ""
 "<https://flathub.org/>`_ que você pode adicionar (se ainda não estiver "
 "adicionado) executando::"
 
-#: ../../desktop-integration.rst:137
+#: ../../desktop-integration.rst:161
 msgid ""
 "To see a list of currently packaged themes you can use the command "
 "``flatpak search gtk3theme`` (available since Flatpak version 0.10.1). In"
@@ -365,7 +407,7 @@ msgstr ""
 "tema, enquanto o segundo imprime apenas o nome completo do pacote flatpak"
 " do tema."
 
-#: ../../desktop-integration.rst:139
+#: ../../desktop-integration.rst:163
 msgid ""
 "You can install themes with the command ``flatpak install flathub "
 "org.gtk.Gtk3theme.Foo``, replacing ``Foo`` with the name of the desired "
@@ -374,11 +416,11 @@ msgstr ""
 "Você pode instalar temas com o comando ``flatpak install flathub "
 "org.gtk.Gtk3theme.Foo``, substituindo ``Foo`` pelo nome do tema desejado."
 
-#: ../../desktop-integration.rst:142
+#: ../../desktop-integration.rst:166
 msgid "Instructions for Qt"
 msgstr "Instruções para Qt"
 
-#: ../../desktop-integration.rst:144
+#: ../../desktop-integration.rst:168
 msgid ""
 "For the Qt theming to work, the flatpak packages kstyle and platformtheme"
 " must be installed. These are packed in the kdeapps repository which you "
@@ -388,15 +430,15 @@ msgstr ""
 "devem ser instalados. Eles estão empacotados no repositório kdeapps que "
 "você pode adicionar executando::"
 
-#: ../../desktop-integration.rst:148
+#: ../../desktop-integration.rst:172
 msgid "Afterwards the two packages can be installed with the following commands::"
 msgstr "Depois os dois pacotes podem ser instalados com os seguintes comandos::"
 
-#: ../../desktop-integration.rst:154
+#: ../../desktop-integration.rst:178
 msgid "Applying themes"
 msgstr "Aplicando temas"
 
-#: ../../desktop-integration.rst:156
+#: ../../desktop-integration.rst:180
 msgid ""
 "There is no ideal way to specify the theme Flatpak applications use. The "
 "applications will try to match the system theme currently being used, if "
@@ -410,7 +452,7 @@ msgstr ""
 "instalados, e retornarão ao Adwaita (se usarem Gtk2 ou Gtk3) ou ao tema "
 "padrão Qt (se usarem Qt) se um tema correspondente não é detectado."
 
-#: ../../desktop-integration.rst:158
+#: ../../desktop-integration.rst:182
 msgid ""
 "As of Flatpak 0.10.1, the Flatpak system can detect whether the system "
 "themes available correspond to any Flatpak themes available in the "
@@ -433,7 +475,7 @@ msgstr ""
 "correspondentes estiver sendo usado no momento, os aplicativos retornarão"
 " ao Adwaita ou ao tema padrão do Qt."
 
-#: ../../desktop-integration.rst:160
+#: ../../desktop-integration.rst:184
 msgid ""
 "On X11, Gtk3 picks up the themes via XSettings. Specifically, the GNOME "
 "XSettings daemon ``gsd-xsettings`` reads the DConf values and converts "
@@ -456,11 +498,11 @@ msgstr ""
 "Wayland o aplicativo também deve estar configurado para ter acesso ao "
 "DConf."
 
-#: ../../desktop-integration.rst:163
+#: ../../desktop-integration.rst:187
 msgid "Other notes on theming"
 msgstr "Outras notas sobre temas"
 
-#: ../../desktop-integration.rst:165
+#: ../../desktop-integration.rst:189
 msgid ""
 "In regards to icon themes, since Flatpak 0.8.8 the host icons are exposed"
 " to the guest, so that there is usually no need for the presence of "
@@ -470,7 +512,7 @@ msgstr ""
 "são expostos ao convidado, de modo que geralmente não há necessidade da "
 "presença de temas de ícones do Flatpak."
 
-#: ../../desktop-integration.rst:167
+#: ../../desktop-integration.rst:191
 msgid ""
 "If you use the *Global Dark Theme* option (removed in GNOME-Tweaks 3.28)"
 "  in ``gnome-tweak-tool`` it will not work as that simply writes to "
@@ -530,4 +572,20 @@ msgstr ""
 #~ " equivalente do Qt 5, eles "
 #~ "funcionarão conforme o esperado em um"
 #~ " aplicativo em sandbox."
+
+#~ msgid ""
+#~ "XEmbed style icons will function with"
+#~ " the ``x11`` permission but all other"
+#~ " status icon interfaces require extra "
+#~ "permissions to escape the sandbox and"
+#~ " these services are not designed to"
+#~ " be robust against untrusted software."
+#~ msgstr ""
+#~ "Os ícones de estilo XEmbed funcionarão"
+#~ " com a permissão ``x11``, mas todas"
+#~ " as outras interfaces de ícones de"
+#~ " status requerem permissões extras para "
+#~ "escapar da área restrita e esses "
+#~ "serviços não foram projetados para serem"
+#~ " robustos contra softwares não confiáveis."
 
