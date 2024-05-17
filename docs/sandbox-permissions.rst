@@ -172,11 +172,11 @@ Other filesystem access guidelines include:
 
   For example, if an application hardcodes the directory ``~/.foo``,
   without any ``home`` access and no ``--persist`` the directory will be
-  lost from the sandbox once exited. A ``--persist=.foo``
-  bind mounts ``~/.foo`` `inside the sandbox` to
-  ``~/.var/app/$FLATPAK_ID/.foo`` on host thus allowing an app to
-  persistently store data in ``~/.var/app/$FLATPAK_ID/.foo`` which
-  would otherwise be lost.
+  lost from the sandbox once exited due to the filesystem being set up
+  as tmpfs by flatpak unless overriden. A ``--persist=.foo`` bind mounts
+  ``~/.foo`` `inside the sandbox` to ``~/.var/app/$FLATPAK_ID/.foo`` on
+  host thus allowing an app to persistently store data in
+  ``~/.var/app/$FLATPAK_ID/.foo`` which would otherwise be lost.
 
   A ``--persist=.`` will `persist` all directories.
 
