@@ -187,7 +187,9 @@ Other filesystem access guidelines include:
   directory, and can be useful for applications that hardcode file paths
   in ``~/``.
 - If an application uses ``$TMPDIR`` to contain lock files you may want to
-  add a wrapper script that sets it to ``$XDG_RUNTIME_DIR/app/$FLATPAK_ID``.
+  add a wrapper script that sets it to
+  ``$XDG_RUNTIME_DIR/app/$FLATPAK_ID`` (tmpfs) or ``/var/tmp`` (persistent
+  on host).
 - Retaining and sharing configuration with non-Flatpak installations is to
   be avoided.
 
