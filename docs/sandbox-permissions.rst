@@ -165,11 +165,27 @@ filesystem options. For example, ``--filesystem=xdg-documents/path``.
 
 Other filesystem access guidelines include:
 
-- The ``--persist=path`` option can be used to map paths from the user's
-  home directory into the sandbox filesystem.
+- The ``--persist=DIR`` option can be used to map directories from the
+  user's home directory into the sandbox filesystem. This only works if
+  the application has no ``home`` or a broader permission like ``host``
+  that includes ``home``.
+
+  For example, if an application hardcodes the directory ``~/.foo``,
+  without any ``home`` access and no ``--persist`` the directory will be
+  lost from the sandbox once exited. A ``--persist=.foo``
+  bind mounts ``~/.foo`` `inside the sandbox` to
+  ``~/.var/app/$FLATPAK_ID/.foo`` on host thus allowing an app to
+  persistently store data in ``~/.var/app/$FLATPAK_ID/.foo`` which
+  would otherwise be lost.
+
+  A ``--persist=.`` will `persist` all directories.
+
+  This does not support ``:create, :ro, :rw`` suffixes or
+  special values like ``xdg-documents``.
+
   This makes it possible to avoid configuring access to the entire home
-  directory, and can be useful for applications that hardcode file paths in
-  ``~/``.
+  directory, and can be useful for applications that hardcode file paths
+  in ``~/``.
 - If an application uses ``$TMPDIR`` to contain lock files you may want to
   add a wrapper script that sets it to ``$XDG_RUNTIME_DIR/app/$FLATPAK_ID``.
 - Retaining and sharing configuration with non-Flatpak installations is to
