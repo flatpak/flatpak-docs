@@ -181,7 +181,8 @@ Other filesystem access guidelines include:
   A ``--persist=.`` will `persist` all directories.
 
   This does not support ``:create, :ro, :rw`` suffixes or
-  special values like ``xdg-documents``.
+  special values like ``xdg-documents``. However, the directory will be
+  created by flatpak if it doesn't already exist.
 
   This makes it possible to avoid configuring access to the entire home
   directory, and can be useful for applications that hardcode file paths
