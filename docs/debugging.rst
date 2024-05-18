@@ -60,20 +60,13 @@ When an application is built, ``flatpak-builder`` automatically
 creates a ``.Debug`` extension. This can be disabled with the ``no-debuginfo``
 option.
 
-To install the ``.Debug`` extension created locally, export the build
-to a repo by passing ``--repo repo`` to ``flatpak-builder`` when
-building. Then add the repo folder as a local remote::
+To install the ``.Debug`` extension created locally, pass ``--install``
+to ``flatpak-builder`` which will set up a new remote for the build. The
+remotes available can be checked with
+``flatpak remotes --columns=name,url``. Then install the ``.Debug``
+extension from that remote::
 
-  $ flatpak remote-add --user --no-gpg-verify test-debug file:///path/to/repo
-
-Then install the package from that remote::
-
-  $ flatpak install --user test-debug $FLATPAK_ID.Debug
-
-Alternatively, you can run ``flatpak install`` directly on the
-flatpak-builder cache folder::
-
-  $ flatpak install --user /absolute/path/to/.flatpak-builder/cache $FLATPAK_ID.Debug
+  $ flatpak install foo-origin $FLATPAK_ID.Debug
 
 Overriding sandbox permissions
 ------------------------------
