@@ -9,6 +9,9 @@ extremely limited access to the host environment. This includes:
 - No access to any host files except the runtime, the app,
   ``~/.var/app/$FLATPAK_ID``, and ``$XDG_RUNTIME_DIR/app/$FLATPAK_ID``.
   Only the latter two being writable.
+  So, if you can choose where to store data between runs of the app,
+  use ``/var/cache``, ``/var/config``, ``/var/data`` and ``/var/tmp``.
+  They are read/write by default and persist between runs.
 - No access to the network.
 - No access to any device nodes (apart from ``/dev/null``, etc).
 - No access to processes outside the sandbox.
