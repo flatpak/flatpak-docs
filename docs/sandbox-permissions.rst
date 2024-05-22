@@ -137,8 +137,11 @@ limited as much as possible. This includes:
 - Using portals as an alternative to blanket filesystem access, wherever
   possible.
 - Using read-only access wherever possible, using the ``:ro`` option.
-- If some home directory access is absolutely required, using XDG directory
-  access only.
+- Using :ref:`conventions:XDG base directories` to store application's
+  cache, config and state. Then no additional filesystem access would be
+  required.
+- Avoiding full home access and instead using XDG directories such
+  as ``xdg-music`` or ``xdg-downloads`` etc.
 
 The following permission options are available:
 
