@@ -1,3 +1,5 @@
+.. rst-class:: hide-header
+
 libflatpak API Reference
 ========================
 
