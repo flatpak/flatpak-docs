@@ -231,13 +231,8 @@ configuration files and ``/usr`` for multi-user utilities and applications. In
 addition to this, each sandbox contains a top-level ``/app`` directory,
 which is where the application's own files are located.
 
-
-.. _xdg-base-directories: 
-
 XDG base directories
 --------------------
-
-
 `XDG base directories
 <https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html>`_ are
 standard locations for user-specific application data. Popular toolkits provide
