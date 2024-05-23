@@ -40,7 +40,7 @@ Run the tests::
   make -C docs linkcheck
 
 You can run an HTTP server and follow the printed link
-(`0.0.0.0:8000 <http://0.0.0.0:8000>`_)
+(`localhost:8000 <http://localhost:8000>`_)
 to view the documentation in your browser::
 
   python3 -m http.server -d docs/_build/html
