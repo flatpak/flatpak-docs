@@ -1,3 +1,5 @@
+.. rst-class:: hide-header
+
 Flatpak Command Reference
 =========================
 
