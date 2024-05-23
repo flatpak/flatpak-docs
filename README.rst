@@ -10,8 +10,8 @@ Some documentation is also available on the Flatpak wiki and as part of the
 The docs are written in `reStructuredText
 <http://www.sphinx-doc.org/rest.html>`_ and contributions are welcome!
 
-Building
---------
+Setup Development
+-----------------
 
 To build the docs locally, first install ``sphinx``, ``furo`` and
 ``sphinx-copybutton``.
@@ -26,36 +26,49 @@ On **Debian** this can be done with::
 
 With **pip**, this can be done with::
 
-  pip install -r requirements.txt
+  pip install -r requirements.txt sphinx-intl
 
-Then, build the documentation::
+Build the Documentation
+-----------------------
 
-  cd docs
-  make html
+After setup, you can build the documentation::
 
-Then, you can run an HTTP server and follow the printed link
-(`localhost:8000 <http://localhost:8000>`_)
+  make -C docs html
+
+Run the tests::
+
+  make -C docs linkcheck
+
+You can run an HTTP server and follow the printed link
+(`0.0.0.0:8000 <http://0.0.0.0:8000>`_)
 to view the documentation in your browser::
 
-  ( cd _build/html && python3 -m http.server )
+  python3 -m http.server -d docs/_build/html
+
+Build Translations
+------------------
 
 By default, the document being built is in English. If you want to build
 documents in other languages, such as Chinese, you can use the following
 command::
 
-  sphinx-build -b html -D language=zh_CN . _build/html/zh_CN
+  sphinx-build -b html -D language=zh_CN docs docs/_build/html/zh_CN
 
 Then you will see the Chinese documentation in the directory
-``_build/html/zh_CN`` .
+``docs/_build/html/zh_CN`` .
 
-Translations
-------------
+Translate the Documentation
+---------------------------
 
 You can open a pull request adding a new language.
 
-For maintainers run ``make gettext`` in the ``docs`` directory to generate
-``.pot`` files.
-To update ``.po`` files run ``sphinx-intl update -p _build/gettext``
+Maintainers can generate the ``.pot`` files by running::
+
+  make -C docs gettext
+
+To update ``.po`` files run::
+
+  sphinx-intl update -p docs/_build/gettext -d po
 
 Audience
 --------
