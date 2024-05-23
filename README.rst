@@ -34,7 +34,7 @@ Then, build the documentation::
   make html
 
 Then, you can run an HTTP server and follow the printed link
-(`localhost:8000 <http://localhost:8000>`)
+(`localhost:8000 <http://localhost:8000>`_)
 to view the documentation in your browser::
 
   ( cd _build/html && python3 -m http.server )
