@@ -10,41 +10,65 @@ Some documentation is also available on the Flatpak wiki and as part of the
 The docs are written in `reStructuredText
 <http://www.sphinx-doc.org/rest.html>`_ and contributions are welcome!
 
-Building
---------
+Setup Development
+-----------------
 
 To build the docs locally, first install ``sphinx``, ``furo`` and
 ``sphinx-copybutton``.
-On Fedora this can be with::
+
+On **Fedora** this can be done with::
 
   sudo dnf install python3-sphinx python3-furo python-sphinx-copybutton python-sphinxext-opengraph
 
-On Debian this can be with::
+On **Debian** this can be done with::
 
   sudo apt install python3-sphinx python3-furo python-sphinx-copybutton python-sphinxext-opengraph
 
-Then run ``make html`` in the ``docs`` directory.
+With **pip**, this can be done with::
 
-You can then execute ``cd _build/html && python3 -m http.server`` and follow
-the HTTP link printed by Python to view the docs in your browser.
+  pip install -r requirements.txt sphinx-intl
+
+Build the Documentation
+-----------------------
+
+After setup, you can build the documentation::
+
+  make -C docs html
+
+Run the tests::
+
+  make -C docs linkcheck
+
+You can run an HTTP server and follow the printed link
+(`localhost:8000 <http://localhost:8000>`_)
+to view the documentation in your browser::
+
+  python3 -m http.server -d docs/_build/html
+
+Build Translations
+------------------
 
 By default, the document being built is in English. If you want to build
 documents in other languages, such as Chinese, you can use the following
 command::
 
-  sphinx-build -b html -D language=zh_CN . _build/html/zh_CN
+  sphinx-build -b html -D language=zh_CN docs docs/_build/html/zh_CN
 
 Then you will see the Chinese documentation in the directory
-``_build/html/zh_CN`` .
+``docs/_build/html/zh_CN`` .
 
-Translations
-------------
+Translate the Documentation
+---------------------------
 
 You can open a pull request adding a new language.
 
-For maintainers run ``make gettext`` in the ``docs`` directory to generate
-``.pot`` files.
-To update ``.po`` files run ``sphinx-intl update -p _build/gettext``
+Maintainers can generate the ``.pot`` files by running::
+
+  make -C docs gettext
+
+To update ``.po`` files run::
+
+  sphinx-intl update -p docs/_build/gettext -d po
 
 Audience
 --------
