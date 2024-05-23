@@ -15,18 +15,29 @@ Building
 
 To build the docs locally, first install ``sphinx``, ``furo`` and
 ``sphinx-copybutton``.
-On Fedora this can be with::
+
+On **Fedora** this can be done with::
 
   sudo dnf install python3-sphinx python3-furo python-sphinx-copybutton python-sphinxext-opengraph
 
-On Debian this can be with::
+On **Debian** this can be done with::
 
   sudo apt install python3-sphinx python3-furo python-sphinx-copybutton python-sphinxext-opengraph
 
-Then run ``make html`` in the ``docs`` directory.
+With **pip**, this can be done with::
 
-You can then execute ``cd _build/html && python3 -m http.server`` and follow
-the HTTP link printed by Python to view the docs in your browser.
+  pip install -r requirements.txt
+
+Then, build the documentation::
+
+  cd docs
+  make html
+
+Then, you can run an HTTP server and follow the printed link
+(`localhost:8000 <http://localhost:8000>`)
+to view the documentation in your browser::
+
+  ( cd _build/html && python3 -m http.server )
 
 By default, the document being built is in English. If you want to build
 documents in other languages, such as Chinese, you can use the following
