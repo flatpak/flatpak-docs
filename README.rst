@@ -13,18 +13,11 @@ The docs are written in `reStructuredText
 Setup Development
 -----------------
 
-To build the docs locally, first install ``sphinx``, ``furo`` and
-``sphinx-copybutton``.
+Create a Python `virtual environment <https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments>`_::
 
-On **Fedora** this can be done with::
+  python3 -m venv .venv && source .venv/bin/activate
 
-  sudo dnf install python3-sphinx python3-furo python-sphinx-copybutton python-sphinxext-opengraph
-
-On **Debian** this can be done with::
-
-  sudo apt install python3-sphinx python3-furo python-sphinx-copybutton python-sphinxext-opengraph
-
-With **pip**, this can be done with::
+Then install the dependencies with **pip**::
 
   pip install -r requirements.txt sphinx-intl
 
