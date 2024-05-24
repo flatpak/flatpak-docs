@@ -2,7 +2,7 @@ flatpak-docs
 ============
 
 This repository is the main source of developer documentation for Flatpak. It
-can be read at `flatpak.readthedocs.io <http://flatpak.readthedocs.io/>`_.
+can be read at `docs.flatpak.org <http://docs.flatpak.org/>`_.
 
 Some documentation is also available on the Flatpak wiki and as part of the
 ``flatpak`` and ``flatpak-builder`` man pages.
