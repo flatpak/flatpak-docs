@@ -3,10 +3,14 @@
 
 # You can set these variables from the command line.
 SPHINXOPTS    =
-SPHINXBUILD  := `sh -c '[ -e /usr/bin/sphinx-build-3 ] && echo sphinx-build-3 || echo sphinx-build'`
+SPHINXBUILD  := sphinx-build
 SPHINXPROJ    = Flatpak
 SOURCEDIR     = .
 BUILDDIR      = _build
+
+ifeq ($(shell command -v $(SPHINXBUILD) 2> /dev/null),)
+SPHINXBUILD := sphinx-build-3
+endif
 
 # Put it first so that "make" without argument is like "make help".
 help:
