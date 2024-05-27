@@ -241,8 +241,73 @@ You can provide the following device permissions:
 While not ideal, ``--device=all`` can be used to access devices like
 generic USB or webcams.
 
-Using newer permissions like ``input`` on older versions of Flatpak
-will have no effect, or fail on the command-line.
+Newer permissions like ``input``, are meant to avoid using ``all`` but
+they will not work on older versions of Flatpak. Since not all
+distributions or users might be running the latest version of Flatpak
+supporting this feature, it is necessary to remain compatible with
+older versions.
+
+Starting with Flatpak 1.16, there is a device fallback mechanism. The
+device fallback mechanism is meant to specify that a certain device
+permission is to be used with a fallback, and therefore, if Flatpak
+knows about it, it can tighten device access as intended and ignore
+the fallback.
+
+Packagers should take great care in considering device permissions and
+use the fallback mechanism when available.
+
+For example in the case where input device access is needed you could
+specify:
+
+.. code-block::
+
+   --device=input
+
+.. warning::
+
+   On the command line, with Flatpak < 1.15.6, you will get an
+   error. In the metadata, it will be ignored making the package not
+   function as intended and offer a poor user experience.
+
+The solution is to use a fallback.
+
+Fallback gets specified with the ``--device`` option like for device
+permissions. It starts with ``fallback:`` and then lists the
+permission, followed by the fallback, separated by a comma. In most
+case the fallback will be ``all`` as there is currently no overlap
+otherwise.
+
+The generic syntax is:
+
+.. code-block::
+
+   --device=fallback:DEVICE_PERMISSION,FALLBACK_PERMISSION
+   --device=FALLBACK_PERMISSION
+
+Specifying a fallback permission (second line) is required.
+
+In the example above, the fallback syntax would be as follows:
+
+.. code-block::
+
+  --device=fallback:input,all
+  --device=all
+
+This translates to "grant permission to ``input`` devices if Flatpak
+supports it and ignore ``all``, otherwise fallback to granting ``all``
+device access".
+
+In this case ``all`` is the fallback permission, and ``input`` is the
+device permission.
+
+The key takeaway is that the fallback mechanism will ignore the
+permission of the fallback (``FALLBACK_PERMISSION``) if all the other
+permissions using it as a fallback are available.
+
+Currently ``all`` is the only practical fallback.
+
+Use of a fallback is not necessary for the following permissions:
+``dri``, ``kvm``, ``shm`` and ``all``.
 
 dconf access
 ````````````
