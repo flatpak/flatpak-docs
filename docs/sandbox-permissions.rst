@@ -139,26 +139,26 @@ The following permission options are available:
 
 Additionally the following permissions are available:
 
-====================  ===============================================================  ===================================================
-``host``              Access ``/home, /media, /opt, /run/media`` and ``/srv``           Includes any subpaths
-``host-etc``          Everything in ``host`` and host's ``/etc``                        host's ``/etc`` is mounted at ``/run/host/etc``
-``host-os``           Everything in ``host`` and ``/usr, /bin, /sbin, /lib{32, 64}``    ``/usr`` is mounted at ``/run/host/usr``
-``home``              Access the home directory                                         Except ``~/.var/app``
-``/some/dir``         Access an arbitrary path except any reserved path                 Includes any subpaths
-``~/some/dir``        Arbitrary path relative to the home directory                     Includes any subpaths
-``xdg-desktop``       Access the XDG desktop directory                                  ``$XDG_DESKTOP_DIR`` or ``$HOME/Desktop``
-``xdg-documents``     Access the XDG documents directory                                ``$XDG_DOCUMENTS_DIR`` or ``$HOME/Documents``
-``xdg-download``      Access the XDG download directory                                 ``$XDG_DOWNLOAD_DIR`` or ``$HOME/Downloads``
-``xdg-music``         Access the XDG music directory                                    ``$XDG_MUSIC_DIR`` or ``$HOME/Music``
-``xdg-pictures``      Access the XDG pictures directory                                 ``$XDG_PICTURES_DIR`` or ``$HOME/Pictures``
-``xdg-public-share``  Access the XDG public directory                                   ``$XDG_PUBLICSHARE_DIR`` or ``$HOME/Public``
-``xdg-videos``        Access the XDG videos directory                                   ``$XDG_VIDEOS_DIR`` or ``$HOME/Videos``
-``xdg-templates``     Access the XDG templates directory                                ``$XDG_TEMPLATES_DIR`` or ``$HOME/Templates``
-``xdg-config``        Access the XDG config directory [#f3]_                            ``$XDG_CONFIG_HOME`` or ``$HOME/.config``
-``xdg-cache``         Access the XDG cache directory  [#f3]_                            ``$XDG_CACHE_HOME`` or ``$HOME/.cache``
-``xdg-data``          Access the XDG data directory   [#f3]_                            ``$XDG_DATA_HOME`` or ``$HOME/.local/share``
-``xdg-run/path``      Access subdirectories of the XDG runtime directory                ``$XDG_RUNTIME_DIR/path`` (``/run/user/$UID/path``)
-====================  ===============================================================  ===================================================
+====================  ==============================================================================================================================  ===================================================
+``host``              Access to ``/home, /media, /opt, /run/media, /srv`` and everything provided by ``host-os, host-etc`` mounted in ``/run/host``    Includes any subpaths
+``host-etc``          Host's ``/etc``                                                                                                                  Host's ``/etc`` is mounted at ``/run/host/etc``
+``host-os``           Host's ``/usr, /bin, /sbin, /lib{32, 64}, /etc/ld.so.cache, /etc/alternatives``                                                  Mounted at ``/run/host``
+``home``              Access the home directory                                                                                                        Except ``~/.var/app``
+``/some/dir``         Access an arbitrary path except any reserved path                                                                                Includes any subpaths
+``~/some/dir``        Arbitrary path relative to the home directory                                                                                    Includes any subpaths
+``xdg-desktop``       Access the XDG desktop directory                                                                                                 ``$XDG_DESKTOP_DIR`` or ``$HOME/Desktop``
+``xdg-documents``     Access the XDG documents directory                                                                                               ``$XDG_DOCUMENTS_DIR`` or ``$HOME/Documents``
+``xdg-download``      Access the XDG download directory                                                                                                ``$XDG_DOWNLOAD_DIR`` or ``$HOME/Downloads``
+``xdg-music``         Access the XDG music directory                                                                                                   ``$XDG_MUSIC_DIR`` or ``$HOME/Music``
+``xdg-pictures``      Access the XDG pictures directory                                                                                                ``$XDG_PICTURES_DIR`` or ``$HOME/Pictures``
+``xdg-public-share``  Access the XDG public directory                                                                                                  ``$XDG_PUBLICSHARE_DIR`` or ``$HOME/Public``
+``xdg-videos``        Access the XDG videos directory                                                                                                  ``$XDG_VIDEOS_DIR`` or ``$HOME/Videos``
+``xdg-templates``     Access the XDG templates directory                                                                                               ``$XDG_TEMPLATES_DIR`` or ``$HOME/Templates``
+``xdg-config``        Access the XDG config directory [#f3]_                                                                                           ``$XDG_CONFIG_HOME`` or ``$HOME/.config``
+``xdg-cache``         Access the XDG cache directory  [#f3]_                                                                                           ``$XDG_CACHE_HOME`` or ``$HOME/.cache``
+``xdg-data``          Access the XDG data directory   [#f3]_                                                                                           ``$XDG_DATA_HOME`` or ``$HOME/.local/share``
+``xdg-run/path``      Access subdirectories of the XDG runtime directory                                                                               ``$XDG_RUNTIME_DIR/path`` (``/run/user/$UID/path``)
+====================  ==============================================================================================================================  ===================================================
 
 Except ``host, host-etc, host-os`` paths can be added to all the above
 filesystem options. For example, ``--filesystem=xdg-documents/path``.
