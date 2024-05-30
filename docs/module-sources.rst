@@ -459,7 +459,7 @@ The ``apply_extra`` script here requires
   ``/app/extra/export/`` and instead should go to the proper locations
   documented in :doc:`conventions`.
 
-The icon, desktop file and Metainfo must be added as file sources. The
+The icon, desktop file and Metainfo must be added as sources. The
 ``path`` indicates that they reside in the same directory relative to the
 manifest. The first three lines of the ``build-commands`` installs them
 so that ``appstream-compose`` can compose the metadata.
