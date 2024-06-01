@@ -26,7 +26,13 @@ There are a few properties common to all source types ``only-arches``,
 
 ``only-arches`` and ``skip-arches`` are used to build the source only
 on the specified architecture or skip building it on the specified
-architecture respectively. This is often useful for binary packages:
+architecture respectively. This is often useful for binary packages.
+
+.. note::
+
+  Note that ``only-arches`` or ``skip-arches`` are used to control if
+  that particular source is downloaded on the specified architecture(s).
+  If not specified, the default is to download on all architectures.
 
 .. code-block:: yaml
 
