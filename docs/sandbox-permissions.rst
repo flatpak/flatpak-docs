@@ -76,7 +76,7 @@ commonly require, and can therefore be freely used:
 
 - ``--allow=bluetooth`` - Allow access to Bluetooth
 - ``--device=dri`` - OpenGL rendering
-- ``--device=input`` - Access to ``/dev/input``
+- ``--device=input`` - Access to ``/dev/input``, since Flatpak 1.15.6.
 - ``--share=ipc`` - share IPC namespace with the host [#f1]_
 - ``--share=network`` - access the network [#f2]_
 - ``--socket=cups`` - Talk to the CUPS printing system
@@ -223,9 +223,27 @@ requested with ``--filesystem`` and are not available with
 
 Device access
 `````````````
+You can provide the following device permissions:
+
+========= ======================================================
+``dri``   Direct Rendering Interface. Necessary for GL.
+``kvm``   Kernel based Virtual Machine ``/dev/kvm``
+``shm``   Shared Memory in ``/dev/shm``.
+``input`` Input devices as exposed in ``/dev/input``. This includes game controllers. Since Flatpak 1.15.6.
+``all``   All devices, including all of the above except ``shm``
+========= ======================================================
+
+.. note::
+
+   ALSA sound devices in ``/dev/snd`` are exposed with the socket
+   permission ``pulseaudio``. This includes sound inputs (microphone)
+   and MIDI.
 
 While not ideal, ``--device=all`` can be used to access devices like
-controllers or webcams.
+generic USB or webcams.
+
+Using newer permissions like ``input`` on older versions of Flatpak
+will have no effect, or fail on the command-line.
 
 dconf access
 ````````````
