@@ -244,6 +244,7 @@ You can provide the following device permissions:
 ``kvm``   Kernel based Virtual Machine ``/dev/kvm``
 ``shm``   Shared Memory in ``/dev/shm``.
 ``input`` Input devices as exposed in ``/dev/input``. This includes game controllers. Since Flatpak 1.15.6.
+``usb``   Raw USB devices as exposed in ``/dev/bus/usb``. Since Flatpak 1.15.11.
 ``all``   All devices, including all of the above except ``shm``
 ========= ======================================================
 
@@ -253,7 +254,10 @@ You can provide the following device permissions:
   versions and fail when used through Flatpak commandline.
 
 While not ideal, ``--device=all`` can be used to access devices like
-generic USB drives, webcams, CD/DVD drives etc.
+webcams, CD/DVD drives etc.
+
+Using newer permissions like ``input`` or ``usb`` on older versions of Flatpak
+will have no effect, or fail on the command-line.
 
 dconf access
 ````````````
