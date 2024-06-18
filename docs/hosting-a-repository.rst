@@ -97,12 +97,7 @@ The instructions will use Gitlab.com.
     # Name of flatpak bundle
     BUNDLE: "${APP_ID}.flatpak"
     # Docker image to use
-    DOCKER_REGISTRY: "docker.io/bilelmoussaoui/flatpak-github-actions"
-    # Runtime to use, https://github.com/flatpak/flatpak-github-actions#docker-image
-    RUNTIME_NAME: "freedesktop"
-    # Runtime version to use
-    RUNTIME_VRESION: "23.08"
-    DOCKER_IMAGE: ${DOCKER_REGISTRY}:${RUNTIME_NAME}-${RUNTIME_VRESION}
+    DOCKER_IMAGE: "ghcr.io/flathub-infra/flatpak-github-actions:freedesktop-23.08"
     SCHEDULE_TASK: default
 
   stages:
