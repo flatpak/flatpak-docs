@@ -159,13 +159,11 @@ The instructions will use Gitlab.com.
       paths:
         - repo
       expire_in: 1 week
-    tags: [""]
     rules:
       - if: $CI_PIPELINE_SOURCE == "schedule"
         when: never
-      - when: always
       - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-        when: always
+        when: on_success
       - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
         when: manual
 
@@ -190,7 +188,7 @@ The instructions will use Gitlab.com.
       - if: $CI_PIPELINE_SOURCE == "schedule"
         when: never
       - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-        when: always
+        when: on_success
 
 4. `Create <https://www.gnupg.org/gph/en/manual/c14.html>`_ a new GPG key 
    locally, to sign the repository.
