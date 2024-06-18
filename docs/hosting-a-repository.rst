@@ -138,22 +138,28 @@ The instructions will use Gitlab.com.
     variables:
       # Stable Flathub repo
       RUNTIME_REPO: "https://flathub.org/repo/flathub.flatpakrepo"
-    before_script:
+    script:
+      - |
+        cat <<EOF > /etc/passwd
+        root:x:0:0:root:/root:/bin/bash
+        EOF
+
+        cat <<EOF > /etc/group
+        root:x:0:
+        EOF
+
       # Sets up the stable Flathub repository for dependencies
       - flatpak remote-add --user --if-not-exists flathub ${RUNTIME_REPO}
-    script:
       # Sets up GPG signing
       - gpg --list-keys --with-keygrip 
       - echo "allow-preset-passphrase" >> ~/.gnupg/gpg-agent.conf
       - gpg-connect-agent reloadagent /bye
       - cat $GPG_PASSPHRASE | /usr/libexec/gpg-preset-passphrase --preset $GPG_KEY_GREP
       - gpg --import --batch ${GPG_PRIVATE_KEY}
-
       # Build & install build dependencies
       - flatpak-builder build --user --install-deps-from=flathub --gpg-sign=${GPG_KEY_ID} --disable-rofiles-fuse --disable-updates --force-clean --repo=repo ${BRANCH:+--default-branch=$BRANCH} ${MANIFEST_PATH}
       # Generate a Flatpak bundle
       - flatpak build-bundle --gpg-sign=${GPG_KEY_ID} repo ${BUNDLE} --runtime-repo=${RUNTIME_REPO} ${APP_ID} ${BRANCH}
-
       - flatpak build-update-repo --gpg-sign=${GPG_KEY_ID} --generate-static-deltas --prune repo/
     artifacts:
       paths:
