@@ -102,7 +102,7 @@ further below.
 - ``autodelete: true`` will remove all extensions under this extension
   point when the application is removed.
 
-  ``.Debug`` and ``.Locale`` extensions are created with 
+  ``.Debug`` and ``.Locale`` extensions are created with
   ``autodelete: true`` by default.
 
 - ``mkdir -p ${FLATPAK_DEST}/extension_directory`` runs during the cleanup
@@ -179,9 +179,9 @@ to have it installed.
 
 The extensions are mounted in alphabetical path order of directory.
 
-``org.freedesktop.Platform.ffmpeg-full`` is an extension of the runtime
-``org.freedesktop.Platform`` and ``org.kde.Platform`` is a child runtime
-of ``org.freedesktop.Platform``.
+``org.freedesktop.Platform.ffmpeg-full`` is an application extension
+(mounted inside ``/app/extension_directory``) belonging to
+org.freedesktop.Platform.
 
 .. code-block:: yaml
 
@@ -198,7 +198,7 @@ of ``org.freedesktop.Platform``.
   cleanup-commands:
     - mkdir -p ${FLATPAK_DEST}/lib/ffmpeg
 
-``org.freedesktop.Sdk.Extension`` is an extension of the SDK
+``org.freedesktop.Sdk.Extension`` is an extension point defined in
 ``org.freedesktop.Sdk``.
 
 .. code-block:: yaml
