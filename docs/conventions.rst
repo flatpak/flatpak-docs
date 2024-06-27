@@ -213,7 +213,6 @@ which is where the application's own files are located.
 
 XDG base directories
 --------------------
-
 `XDG base directories
 <https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html>`_ are
 standard locations for user-specific application data. Popular toolkits provide

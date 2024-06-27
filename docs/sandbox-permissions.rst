@@ -68,6 +68,13 @@ are used.
 The following guidelines describe which permissions can be freely used,
 which can be used on an as-needed basis, and which should be avoided.
 
+Default Storage
+```````````````
+
+Most Applications have a state that persists during runs. No additional permissions need adding to store configuration and save or cache data.
+
+If your app uses only the :ref:`conventions:XDG base directories`, then you do not need to add permissions for any access. The directories are mapped automatically to app specific directories in the user's home.
+
 Standard permissions
 ````````````````````
 
