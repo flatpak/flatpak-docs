@@ -117,7 +117,7 @@ Other benefits for developers include:
   of the work out of application development.
 
 
-In general Flatpak is best suited suited for desktop applications and
+In general Flatpak is best suited for desktop applications and
 while command line applications also work, it may not be suited in some
 cases:
 
