@@ -94,15 +94,19 @@ be seen in the Dictionary manifest file:
 Guidance on which permissions to use can be found in the
 :doc:`sandbox-permissions`.
 
-If you're wondering about the last finish arg, see `this blog post
-<https://blogs.gnome.org/mclasen/2019/07/12/settings-in-a-sandbox-world/>`__.
-
 Cleanup
 -------
 
 The cleanup property can be used to remove files produced by the build process
 that are not wanted as part of the application, such as headers or developer
 documentation. Two properties in the manifest file are used for this.
+This can be either done for each modules in which case only names created
+by that module will be matched or at the toplevel which will match
+anything created in the entire manifest.
+
+Items starting with `/` are taken to be relative to the prefix, so
+``/include`` will cleanup ``/app/include``, otherwise it matches the
+basename.
 
 First, a list of filename patterns can be included::
 
@@ -111,14 +115,23 @@ First, a list of filename patterns can be included::
     - '/bin/foo-*'
     - '*.a'
 
-The second cleanup property is a list of commands that are run during the
-cleanup phase::
+A cleanup with ``*``, at the `module level` will cleanup all artifacts
+built from that module. This is often useful for build dependencies of
+a module that does not need to be shipped in the final Flatpak package::
+
+  cleanup:
+    - '*'
+
+The `cleanup-commands` property can be a list of cleanup commands::
 
   cleanup-commands:
-    - 'sed s/foo/bar/ /bin/app.sh'
+    - 'find /app/bin -mindepth 1 -maxdepth 1  -name 'rpm*' ! -name 'rpm2cpio' -delete'
 
-Cleanup properties can be set on a per-module basis, in which case only
-filenames that were created by that particular module will be matched.
+Note that, instead of cleaning up unnecessary files, it is often better
+to build less components through ``config-opts, build-commands, make-args``.
+For example, if the application does not need documentation files or
+manpages, it's best to stop building them. This should make the build
+faster in some cases and reduce the need for excessive cleanups.
 
 Modules
 -------
