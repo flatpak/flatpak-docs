@@ -174,7 +174,7 @@ available on the host. A typical example of using this is:
         - type: git
           url: https://example.org/repo/foo.git
           tag: <git tag>
-          commit: <commit hash>>
+          commit: <commit hash>
 
 - ``url`` is url of the git repository. The following schemes are
   usually used ``http://``, ``https://``, ``git://``, ``git+ssh://``,
@@ -309,8 +309,10 @@ Multiple patches can be specified with ``paths``:
 
 By default, ``patch -p 1`` is used, but it can be adjusted with
 ``strip-components`` and additional options can be passed with
-``options``. The defaults here work well with the default patchfiles
-generated with ``git format-patch`` or ``git diff``.
+``options``.
+
+The default patchfiles generated with ``git format-patch`` or ``git diff``
+do not need any additional options.
 
 .. code-block:: yaml
 
@@ -323,7 +325,7 @@ generated with ``git format-patch`` or ``git diff``.
       - dir1
 
 ``use-git: true`` and ``use-git-am: true`` can be used to use
-``git apply``and ``git am`` respectively instead of ``patch``.
+``git apply`` and ``git am`` respectively instead of ``patch``.
 
 Shell and Script sources
 ------------------------
