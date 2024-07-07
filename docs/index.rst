@@ -26,5 +26,6 @@ Contents
    debugging
    publishing
    desktop-integration
+   flatpak-devel
    tips-and-tricks
    reference
