@@ -3,68 +3,130 @@ Debugging
 
 This section includes documentation on how to debug Flatpak apps.
 
-Running debugging tools
------------------------
+Debug packages
+--------------
 
-Because Flatpak runs each application inside a sandbox, debugging tools
-can't be used in the usual way, and must instead be run from inside the
-sandbox. To get a shell inside an application's sandbox, it can be run with
-the ``--command`` option::
+Before debugging, it is essential to install the debug packages used by
+the application. This can be done by::
 
- $ flatpak run --command=sh --devel <application-id>
+
+  $ flatpak install --include-sdk --include-debug $FLATPAK_ID
+
+This will install the SDK, the Debug SDK and the Debug extension for
+the application.
+
+Debug shell
+-----------
+
+A debugging environment can be created by starting a shell inside the
+sandbox::
+
+  $ flatpak run --command=sh --devel --filesystem=$(pwd) $FLATPAK_ID
 
 This creates a sandbox for the application with the given ID and, instead
-of running the application, runs a shell inside the sandbox. From the shell
-prompt, it is then possible to run the application. This can also be done
-using any debugging tools that you want to use. For example, to run the
-application with ``gdb``::
+of running the application, runs a shell inside the sandbox. The
+``--devel`` option tells Flatpak to use the SDK as the runtime, which
+includes various debugging tools and it also adjusts the sandbox setup
+to enable debugging.
 
- $ gdb /app/bin/<application-binary>
-
-This works because the ``--devel`` option tells Flatpak to use the SDK as the
-runtime, which includes debugging tools like ``gdb``. The ``--devel`` option
-also adjusts the sandbox setup to enable debugging.
-
-.. note::
-
-  The Freedesktop SDK (on which many others are based), includes a range
-  of debugging tools, such as ``gdb``, ``strace``, ``nm``, ``dbus-send``,
-  ``dconf``, and many others.
-
-``gdb`` is much more useful when it has access to debug information for the
-application and the runtime it is using. Flatpak splits this information off
-into debug extensions, which you should install before debugging an
-application::
-
- $ flatpak install <runtime-id>.Debug
-
-When the ``--devel`` option is used, Flatpak will automatically use any
-matching debug extensions that it finds.
-
-It is also possible to get a shell inside an application sandbox without having
-to install it. This is done using ``flatpak-builder``'s ``--run`` option::
+It is also possible to get a shell inside an application sandbox without
+having to install it. This is done using ``flatpak-builder``'s ``--run``
+option::
 
  $ flatpak-builder --run <build-dir> <manifest> sh
 
 This sets up a sandbox that is populated with the build results found in
 the build directory, and runs a shell inside it.
 
-Creating a .Debug extension
+Using GDB in the sandbox
+------------------------
+
+Note that :ref:`debugging:Debug packages` must be installed to get
+meaningful traces from GDB. Once inside the :ref:`debugging:Debug shell`
+to run the application with ``gdb`` ::
+
+ $ gdb /app/bin/<application-binary>
+
+To pass arguments to the application::
+
+  $ gdb --args /app/bin/<application-binary> <arguments>
+  $ (gdb) run
+
+A breakpoint can also be set for example on the ``main`` function
+and once it is reached the source code can be listed::
+
+  $ (gdb) break main
+    (gdb) run
+    (gdb) list
+
+Once the bug is reproduced, if it is a crash it will automatically
+return to the gdb prompt. In case of a freeze pressing Ctrl+c will cause
+it to return to the gdb prompt. Now enable logging to a file (this will
+be saved in the working directory and the Flatpak needs filesystem
+access to that ``--filesystem=$(pwd)``)::
+
+  $ (gdb) set logging enabled on
+
+Then to get the backtrace::
+
+  $ (gdb) bt full
+
+Or for all threads, in case of a multi-threaded program::
+
+  $ (gdb) thread apply all backtrace
+
+Note that ``gdb`` inside the sandbox cannot use debug symbols from
+host's `debuginfod servers <https://sourceware.org/elfutils/Debuginfod.html>`_.
+
+Please also see the `GDB user manual <https://sourceware.org/gdb/current/onlinedocs/gdb.html/>`_
+for a more complete overview on how to use GDB.
+
+Getting stacktraces from a crash
+--------------------------------
+
+If an application crashed and the system has coredumps and
+`systemd-coredump <https://www.freedesktop.org/software/systemd/man/latest/systemd-coredump.html#>`_
+enabled, a coredump will be logged. Get the ``PID`` from that coredump::
+
+  $ coredumpctl list
+
+Now run ``flatpak-coredumpctl`` (this requires :ref:`debugging:Debug packages`
+to be installed)::
+
+  $ flatpak-coredumpctl -m <PID> $FLATPAK_ID
+  (gdb) bt full
+
+Using other debugging tools
+---------------------------
+
+``org.freedesktop.Sdk`` also includes other debugging tools like
+`Valgrind <https://valgrind.org/>`_ which is useful to find memory leaks.
+Once inside the :ref:`debugging:Debug shell`, it can be run with::
+
+  $ valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all --log-file="valgrind.log" /app/bin/<application-binary>
+
+`Strace <https://strace.io/>`_ can be useful to check what an application
+is doing. For example, to trace ``openat(), read()`` calls::
+
+  $ strace -e trace=openat,read -o strace.log -f /app/bin/<application-binary>
+
+Creating a Debug extension
 ---------------------------
 
 Like many other packaging systems, Flatpak separates bulky debug information
-from regular content and ships it separately, in what is called a ``.Debug``
-extension.
+from regular content and ships it separately, in a Debug  extension.
 
 When an application is built, ``flatpak-builder`` automatically
-creates a ``.Debug`` extension. This can be disabled with the ``no-debuginfo``
+creates a Debug extension. This can be disabled with the ``no-debuginfo``
 option.
 
-To install the ``.Debug`` extension created locally, pass ``--install``
+To install the Debug extension created locally, pass ``--install``
 to ``flatpak-builder`` which will set up a new remote for the build. The
-remotes available can be checked with
-``flatpak remotes --columns=name,url``. Then install the ``.Debug``
-extension from that remote::
+remotes available can be checked with::
+
+  $ flatpak remotes --columns=name,url
+
+Then install the Debug extension from that remote::
 
   $ flatpak install foo-origin $FLATPAK_ID.Debug
 
