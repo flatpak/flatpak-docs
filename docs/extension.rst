@@ -399,12 +399,9 @@ Bundled extensions
 Extensions can also be built directly from the application manifest
 instead of creating a separate extension manifest. The ``bundle: true``
 property allows exporting them as separate extensions from the application
-manifest.
-
-The extension point first needs to be defined in the application manifest
-using ``add-extensions``. Then the individual extensions can be listed
-under it. The contents of the ``directory`` will be exported into that
-extension.
+manifest. The extension needs to be defined in the application manifest
+using ``add-extensions``. The contents of the ``directory`` will be
+exported into that extension.
 
 .. code-block:: yaml
 
