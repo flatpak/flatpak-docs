@@ -109,10 +109,10 @@ D-Bus permissions needed.
 
 **Ownership**
 
-Applications are automatically granted access to their own namespace. Ownership
-beyond this is typically unnecessary, although there are a small
-number of exceptions, such as using `MPRIS to provide media controls
-<https://www.freedesktop.org/wiki/Specifications/mpris-spec/>`_.
+Applications are automatically granted access to their own namespace as well
+as ``org.mpris.MediaPlayer2.$FLAPTAK_ID`` for `MPRIS <https://www.freedesktop.org/wiki/Specifications/mpris-spec/>`_.
+Ownership beyond this is typically unnecessary although there are a small
+number of exceptions.
 
 **Talk**
 
