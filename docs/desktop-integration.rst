@@ -224,6 +224,14 @@ is undesirable in most cases as it weakens the sandbox and reduces
 portability. The desktop environments should provide proper portal or
 XSettings daemon support.
 
+Appearance Settings
+^^^^^^^^^^^^^^^^^^^
+
+Appearance settings such as the Freedesktop color-scheme preference are
+also exposed similarly via the respective Settings portal. The
+application needs to support reading it and the proper portal backends
+are needed to be installed for this to work.
+
 Fonts
 ------
 
