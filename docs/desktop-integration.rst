@@ -223,3 +223,17 @@ Qt settings from host, usually by giving it filesystem access. This
 is undesirable in most cases as it weakens the sandbox and reduces
 portability. The desktop environments should provide proper portal or
 XSettings daemon support.
+
+Fonts
+------
+
+Flatpak exposes fonts from host to the sandbox and the runtime ships
+the default fontconfig from upstream.
+
+Fonts from ``/usr/share/fonts`` are exposed in ``/run/host/fonts``,
+``/usr/local/share/fonts`` is exposed in ``/run/host/local-fonts`` and
+``$XDG_DATA_HOME/fonts`` in ``/run/host/user-fonts``. 
+
+``~/.fonts`` is a legacy path, and should not be used.
+
+Fontconfig config files from host are not exposed.
