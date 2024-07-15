@@ -236,6 +236,15 @@ also exposed similarly via the respective Settings portal. The
 application needs to support reading it and the proper portal backends
 are needed to be installed for this to work.
 
+Icons
+------
+
+Since Flatpak 0.8.8, host icons from ``/usr/share/icons`` are exposed
+in the sandbox in ``/run/host/share/icons`` and ``$XDG_DATA_HOME/icons``
+in ``/run/host/user-share/icons``.
+
+``~/.icons`` is a legacy path, and should not be used.
+
 Fonts
 ------
 
