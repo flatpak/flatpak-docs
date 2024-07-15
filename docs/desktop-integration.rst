@@ -224,6 +224,10 @@ is undesirable in most cases as it weakens the sandbox and reduces
 portability. The desktop environments should provide proper portal or
 XSettings daemon support.
 
+If a Gtk theme is not packaged as an extension, an unmaintained extension
+can be created for it. Please see
+:ref:`extension:Creating an unmaintained Gtk theme extension`.
+
 Appearance Settings
 ^^^^^^^^^^^^^^^^^^^
 
