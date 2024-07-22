@@ -101,19 +101,27 @@ commonly require, and can therefore be freely used.
 D-Bus access
 ````````````
 
-Access to the entire bus with ``--socket=system-bus`` or
-``--socket=session-bus`` is a security risk and must be avoided, unless
-the application is a development tool.
+DBus access is filtered by default. The default policy for the session bus
+only allows the application to own its own namespace named by
+``$FLATPAK_ID``, subnames of it and ``org.mpris.MediaPlayer2.$FLATPAK_ID``
+for `MPRIS <https://www.freedesktop.org/wiki/Specifications/mpris-spec/>`_.
+Furthermore, it is only allowed to talk to names matching those patterns,
+the bus itself ``org.freedesktop.DBus`` and portal APIs of the form
+``org.freedesktop.portal.*``.
 
-``flatpak run --log-session-bus <appid>`` can be used to find the specific
+Access to the entire bus with ``--socket=system-bus`` or
+``--socket=session-bus`` stops the filtering and using them is a security
+risk. So they must be avoided, unless the application is a development
+tool.
+
+``flatpak run --log-session-bus $FLATPAK_ID`` can be used to find the specific
 D-Bus permissions needed.
 
 **Ownership**
 
-Applications are automatically granted access to their own namespace as well
-as ``org.mpris.MediaPlayer2.$FLAPTAK_ID`` for `MPRIS <https://www.freedesktop.org/wiki/Specifications/mpris-spec/>`_.
-Ownership beyond this is typically unnecessary although there are a small
-number of exceptions.
+Any ownership beyond what is granted by default ie. own namespace and
+``org.mpris.MediaPlayer2.$FLAPTAK_ID`` is typically unnecessary
+although there can be exceptions.
 
 **Talk**
 
