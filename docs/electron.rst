@@ -50,10 +50,10 @@ The Freedesktop runtime is generally the best runtime to use with Electron
 applications, since it is the most minimal runtime, and other dependencies
 will be specific to Electron itself.
 
-The Electron base app
+The Electron BaseApp
 ---------------------
 
-Next, the manifest specifies that the Electron base app should be used, by
+Next, the manifest specifies that the Electron BaseApp should be used, by
 specifying the ``base`` and ``base-version`` properties in the application
 manifest:
 
@@ -62,7 +62,7 @@ manifest:
   base: org.electronjs.Electron2.BaseApp
   base-version: '23.08'
 
-Base apps are described in :doc:`dependencies`.  Using the Electron base
+BaseApps are described in :doc:`dependencies`.  Using the Electron base
 app is much faster and more convenient than manually building Electron
 dependencies. It also has the advantage of reducing the amount of duplication
 on users' machines, since it means that Electron is only saved once on disk.
