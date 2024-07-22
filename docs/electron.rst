@@ -24,15 +24,10 @@ While it isn't strictly necessary, you might want to try building and running
 the sample application yourself.
 
 To get setup for the build, download or clone the sample app from GitHub,
-and navigate to the ``/flatpak`` directory in the terminal. You must also
-install the Electron base app and the Node.js SDK extension::
+and navigate to the ``/flatpak`` directory in the terminal. Then
+to build::
 
-  $ flatpak install flathub org.electronjs.Electron2.BaseApp//23.08
-  $ flatpak install flathub org.freedesktop.Sdk.Extension.node18//23.08
-
-Then you can run the build::
-
-  $ flatpak-builder build org.flathub.electron-sample-app.yml --install --force-clean --user
+  $ flatpak-builder build org.flathub.electron-sample-app.yml --install-deps-from=flathub --force-clean --user --install
 
 Finally, the application can be run with::
 
