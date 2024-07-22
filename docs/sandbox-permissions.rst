@@ -72,30 +72,31 @@ Standard permissions
 ````````````````````
 
 The following permissions provide access to basic resources that applications
-commonly require, and can therefore be freely used:
+commonly require, and can therefore be freely used.
 
-- ``--allow=bluetooth`` - Allow access to Bluetooth
+- ``--allow=bluetooth`` - Allow access to Bluetooth (``AF_BLUETOOTH``) sockets
 - ``--device=dri`` - OpenGL rendering
-- ``--device=input`` - Access to ``/dev/input``, since Flatpak 1.15.6.
-- ``--share=ipc`` - share IPC namespace with the host [#f1]_
-- ``--share=network`` - access the network [#f2]_
-- ``--socket=cups`` - Talk to the CUPS printing system
-- ``--socket=gpg-agent`` - Talk to the GPG agent
-- ``--socket=pcsc`` - Smart card access
-- ``--socket=pulseaudio`` - Play sound with PulseAudio
-- ``--socket=ssh-auth``- Allow access to ``SSH_AUTH_SOCK``
-- ``--socket=wayland`` - Show windows with Wayland
-- ``--socket=x11`` - show windows using X11
-- ``--socket=fallback-x11`` - show windows using X11, if Wayland is not
-  available, overrides ``x11`` socket permission. Note that you must
-  still use ``--socket=wayland`` for wayland permission
+- ``--share=ipc`` - Share IPC namespace with the host [#f1]_
+- ``--share=network`` - Access the network [#f2]_
+- ``--socket=cups`` - Talk to the CUPS printing system (``$CUPS_SERVER`` or server defined in CUPS's ``client.conf``. Falls back to ``/var/run/cups/cups.sock``)
+- ``--socket=gpg-agent`` - Talk to the GPG agent (The socket in ``gpgconf --list-dir agent-socket``)
+- ``--socket=pcsc`` - Smart card access ``$PCSCLITE_CSOCK_NAME``
+- ``--socket=pulseaudio`` - Access to PulseAudio, includes sound input (mic), sound output/playback, MIDI and ALSA sound devices in ``/dev/snd``
+- ``--socket=ssh-auth``- Allow access to ``$SSH_AUTH_SOCK``
 
 .. note::
 
   Applications that do not support native Wayland should use
-  ``--socket=x11`` and applications that do should use ``--socket=fallback-x11``
-  and ``--socket=wayland``. The two configurations here will make it work
-  on both X11 and Wayland sessions of the desktop environment.
+  only ``--socket=x11`` and applications that do, should use
+  ``--socket=fallback-x11`` and ``--socket=wayland``.
+  The two configurations here will make the application work on both
+  X11 and Wayland sessions of the desktop environment.
+
+- ``--socket=wayland`` - Show windows with Wayland
+- ``--socket=x11`` - Show windows using X11
+- ``--socket=fallback-x11`` - Show windows using X11, if Wayland is not
+  available, overrides ``x11`` socket permission. Note that you must
+  still use ``--socket=wayland`` for wayland permission
 
 D-Bus access
 ````````````
@@ -235,15 +236,11 @@ You can provide the following device permissions:
 
 .. note::
 
-   ALSA sound devices in ``/dev/snd`` are exposed with the socket
-   permission ``pulseaudio``. This includes sound inputs (microphone)
-   and MIDI.
+  Newer permissions like ``input`` will have no effect on older Flatpak
+  versions and fail when used through Flatpak commandline.
 
 While not ideal, ``--device=all`` can be used to access devices like
-generic USB or webcams.
-
-Using newer permissions like ``input`` on older versions of Flatpak
-will have no effect, or fail on the command-line.
+generic USB drives, webcams, CD/DVD drives etc.
 
 dconf access
 ````````````
