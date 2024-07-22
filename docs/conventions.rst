@@ -138,10 +138,8 @@ Desktop files
 
 Desktop files are used to provide the desktop environment with
 information about each application. The `Freedesktop specification
-<https://specifications.freedesktop.org/desktop-entry-spec/latest/>`_ provides a
-complete reference for writing desktop files, and `additional information
-about them <https://wiki.archlinux.org/title/desktop_entries>`_ is
-available online.
+<https://specifications.freedesktop.org/desktop-entry-spec/latest/>`_
+provides a complete reference for writing desktop files.
 
 Desktop files should be named with the application's ID, followed
 by the ``.desktop`` file extension, and should be placed in
