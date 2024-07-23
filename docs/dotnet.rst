@@ -30,13 +30,12 @@ Installing dependencies
 Creating the Flatpak
 ^^^^^^^^^^^^^^^^^^^^
 
-.. note::
+A few placeholders have been used in the steps below, while going through the steps replace these with the ones respective to your project:
 
-  Here is a brief description of the placeholders in the below example:
-
-  - ``<app-id>``: The name of your Flatpak, see :ref:`conventions:application ids`.
-  - ``<app-name>``: The name of the root folder of your app repository
-  - ``<project-name>``: The name of your ``.csproj`` file
+- ``<app-id>``: The name of your Flatpak, see :ref:`conventions:application ids`.
+- ``<app-name>``: The name of the root folder of your app repository
+- ``<project-name>``: The name of your ``.csproj`` file
+- ``<git-url>``: The URL to the git repository of the project
 - ``<git-tag>``: The numbered release to build from, in the form of a Git `Tag <https://git-scm.com/book/en/v2/Git-Basics-Tagging>`_.
 
 3.  Create a new folder somewhere different from your existing project
@@ -45,7 +44,7 @@ Creating the Flatpak
 
 .. code-block:: yaml
 
-  app-id: <app-id>
+  id: <app-id>
   runtime: org.freedesktop.Platform
   runtime-version: '23.08'
   sdk: org.freedesktop.Sdk
@@ -54,7 +53,7 @@ Creating the Flatpak
   build-options:
     prepend-path: "/usr/lib/sdk/dotnet8/bin"
     append-ld-library-path: "/usr/lib/sdk/dotnet8/lib"
-    prepend-pkg-config-path: "/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib/sdk/dotnet8/lib/pkgconfig"
+    prepend-pkg-config-path: "/usr/lib/sdk/dotnet8/lib/pkgconfig"
 
   command: <project-name>
 
@@ -73,17 +72,17 @@ Creating the Flatpak
       build-commands:
       - /usr/lib/sdk/dotnet8/bin/install.sh
 
-    - name: <app-id>
+    - name: <app-name>
       buildsystem: simple
       sources:
         - type: git
-          url: <git-server-url>/<user-name>/<project-name>.git
-          tag: <release-number>
+          url: <git-url>
+          tag: <git-tag>
         - ./nuget-sources.json
       build-commands:
         - dotnet publish <project-name>.csproj -c Release --no-self-contained --source ./nuget-sources
         - mkdir -p ${FLATPAK_DEST}/bin
-        - cp -r /bin/Release/net8.0/publish/* ${FLATPAK_DEST}/bin
+        - cp -r bin/Release/net8.0/publish/* ${FLATPAK_DEST}/bin
 
 .. note::
 
@@ -103,25 +102,31 @@ Creating the Flatpak
 
 .. code-block:: shell
 
-      git clone <git-server-url>/<username>/<app-name>.git
+      git clone <git-url>
 
-7.  Run the NuGet source config generator script ``flatpak-dotnet-generator.py`` with the following arguments:
-
-.. code-block:: shell
-
-      python3 flatpak-dotnet-generator.py --dotnet 8 nuget-sources.json <app-name>/<project-name>.csproj
-
-8. Run the Flatpak Builder script to build and install the local Flatpak
+7.  Install dependencies from Flathub
 
 .. code-block:: shell
 
-      flatpak-builder build-dir --install-deps-from=flathub --user --force-clean --install --repo=repo <app-id>.yaml
+      flatpak-builder build-dir --user --repo=repo --install-deps-from=flathub <app-id>.yaml
+
+8.  Run the NuGet source config generator script ``flatpak-dotnet-generator.py`` with the following arguments:
+
+.. code-block:: shell
+
+      python3 flatpak-dotnet-generator.py --dotnet 8 --freedesktop 23.08 nuget-sources.json <app-name>/<project-name>.csproj
+
+9. Run the Flatpak Builder script to build and install the local Flatpak
+
+.. code-block:: shell
+
+      flatpak-builder build-dir --user --force-clean --install --repo=repo <app-id>.yaml
 
 
 Testing the build
 ^^^^^^^^^^^^^^^^^
 
-9. Run the installed Flatpak application
+10. Run the installed Flatpak application
 
 .. code-block:: shell
 
