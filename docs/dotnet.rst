@@ -23,20 +23,6 @@ Installing dependencies
         flatpak install org.flatpak.Builder
         sudo apt install flatpak-builder
 
-3. Install the FreeDesktop SDKs (When prompted for a version, select the
-   latest available version)
-
-  .. code-block:: shell
-
-        flatpak install flathub org.freedesktop.Platform org.freedesktop.Sdk
-
-4. Install the Flatpak SDK extension for your dotnet version
-   (e.g. `dotnet8 <https://github.com/flathub/org.freedesktop.Sdk.Extension.dotnet8>`__)
-
-  .. code-block:: shell
-
-        flatpak install org.freedesktop.Sdk.Extension.dotnet8
-
 
 Creating the Flatpak
 ^^^^^^^^^^^^^^^^^^^^
@@ -45,23 +31,20 @@ Creating the Flatpak
 
   Here is a brief description of the placeholders in the below example:
 
-  - ``<namespace>``: The prefix that goes before the name of your Flatpak, which uniquely identifies the author. See `"Conventions - Application IDs" section <https://docs.flatpak.org/en/latest/conventions.html#application-ids>`__ to find the appropriate value for your use case.
-  - ``<app-name>``: The name of your application to use for Flatpak, usually somewhat similar to the project name inside the solution
+  - ``<app-id>``: The name of your Flatpak, see `"Conventions - Application IDs" section <https://docs.flatpak.org/en/latest/conventions.html#application-ids>`__.
+  - ``<app-name>``: The name of the root folder of your app repository
   - ``<project-name>``: The name of your ``.csproj`` file
+  - ``<git-server-url>``: The URL to your git server (e.g. ``https://github.com/``, ``https://gitlab.com``)
   - ``<user-name>``: The username you use in your Git server (GitHub, GitLab, Bitbucket)
   - ``<release-number>``: The numbered release to build from, in the form of a Git `Tag <https://git-scm.com/book/en/v2/Git-Basics-Tagging>`__.
 
-5.  Create a new folder somewhere different from your existing project
+3.  Create a new folder somewhere different from your existing project
 
-
-6.  Create a YAML file titled
-    ``<namespace>.<app-name>.yaml`` with the following
-    example template, replacing the placeholders with the appropriate
-    information: \
+4.  Create a YAML file titled ``<app-id>.yaml`` with the following example template, replacing the placeholders with the appropriate information. (Note: If your project file lives in a subfolder, be sure to include that in the build paths in this file and subsequent commands as well.): 
 
   .. code-block:: yaml
 
-      app-id: <namespace>.<app-name>
+      app-id: <app-id>
       runtime: org.freedesktop.Platform
       runtime-version: '23.08'
       sdk: org.freedesktop.Sdk
@@ -89,15 +72,15 @@ Creating the Flatpak
           build-commands:
           - /usr/lib/sdk/dotnet8/bin/install.sh
 
-        - name: <app-name>
+        - name: <app-id>
           buildsystem: simple
           sources:
             - type: git
-              url: https://github.com/<username>/<project-name>.git
+              url: <git-server-url>/<user-name>/<project-name>.git
               tag: <release-number>
             - ./nuget-sources.json
           build-commands:
-            - dotnet publish <project-name>/<project-name>.csproj -c Release --no-self-contained --source ./nuget-sources
+            - dotnet publish <project-name>.csproj -c Release --no-self-contained --source ./nuget-sources
             - mkdir -p ${FLATPAK_DEST}/bin
             - cp -r /bin/Release/net8.0/publish/* ${FLATPAK_DEST}/bin
 
@@ -106,7 +89,7 @@ Creating the Flatpak
       For providing access to other things such as the network or
       filesystem, see the `“Sandbox Permissions” section <https://docs.flatpak.org/en/latest/sandbox-permissions.html>`__
 
-7.  Copy and save the dotnet NuGet sources generator script
+5.  Copy and save the dotnet NuGet sources generator script
     ``flatpak-dotnet-generator.py`` from the `Flatpak Builder Tools
     repository <https://github.com/flatpak/flatpak-builder-tools>`__, to
     the current folder, or run the following command to download it:
@@ -115,38 +98,31 @@ Creating the Flatpak
 
         wget https://raw.githubusercontent.com/flatpak/flatpak-builder-tools/master/dotnet/flatpak-dotnet-generator.py
 
-8.  Clone down your project repository to the folder
+6.  Clone down your project repository to the folder
 
   .. code-block:: shell
 
-        git clone https://github.com/<username>/<app-name>.git
+        git clone <git-server-url>/<username>/<app-name>.git
 
-9.  Run the NuGet source config generator script ``flatpak-dotnet-generator.py`` with the following arguments:
-
-  .. code-block:: shell
-
-        python3 flatpak-dotnet-generator.py --dotnet 8 nuget-sources.json <app-name>/<project-name>/<project-name>.csproj
-
-10. Run the Flatpak Builder script to build the local Flatpak
+7.  Run the NuGet source config generator script ``flatpak-dotnet-generator.py`` with the following arguments:
 
   .. code-block:: shell
 
-        flatpak-builder build-dir <namespace>.<app-name>.yaml --force-clean
+        python3 flatpak-dotnet-generator.py --dotnet 8 nuget-sources.json <app-name>/<project-name>.csproj
+
+8. Run the Flatpak Builder script to build and install the local Flatpak
+
+  .. code-block:: shell
+
+        flatpak-builder build-dir --install-deps-from=flathub --user --force-clean --install --repo=repo <app-id>.yaml
 
 
 Testing the build
 ^^^^^^^^^^^^^^^^^
 
-11. Rebuild and install the local flatpak
+9. Run the installed Flatpak application
 
   .. code-block:: shell
 
-        flatpak-builder --user --install build-dir <namespace>.<app-name>.yaml --force-clean
-
-
-12. Run the installed Flatpak application
-
-  .. code-block:: shell
-
-        flatpak run <namespace>.<app-name>
+        flatpak run <app-id>
 
