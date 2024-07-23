@@ -1,2 +1,5 @@
 Sphinx
-sphinx-rtd-theme
+furo
+matplotlib
+sphinxext-opengraph
+sphinx-copybutton

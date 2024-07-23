@@ -24,15 +24,10 @@ While it isn't strictly necessary, you might want to try building and running
 the sample application yourself.
 
 To get setup for the build, download or clone the sample app from GitHub,
-and navigate to the ``/flatpak`` directory in the terminal. You must also
-install the Electron base app and the Node.js SDK extension::
+and navigate to the ``/flatpak`` directory in the terminal. Then
+to build::
 
-  $ flatpak install flathub org.electronjs.Electron2.BaseApp//22.08
-  $ flatpak install flathub org.freedesktop.Sdk.Extension.node18//22.08
-
-Then you can run the build::
-
-  $ flatpak-builder build org.flathub.electron-sample-app.yml --install --force-clean --user
+  $ flatpak-builder build org.flathub.electron-sample-app.yml --install-deps-from=flathub --force-clean --user --install
 
 Finally, the application can be run with::
 
@@ -46,28 +41,28 @@ ID. It also configures the runtime and SDK:
 
 .. code-block:: yaml
 
-  app-id: org.flathub.electron-sample-app
+  id: org.flathub.electron-sample-app
   runtime: org.freedesktop.Platform
-  runtime-version: '22.08'
+  runtime-version: '23.08'
   sdk: org.freedesktop.Sdk
 
 The Freedesktop runtime is generally the best runtime to use with Electron
 applications, since it is the most minimal runtime, and other dependencies
 will be specific to Electron itself.
 
-The Electron base app
+The Electron BaseApp
 ---------------------
 
-Next, the manifest specifies that the Electron base app should be used, by
+Next, the manifest specifies that the Electron BaseApp should be used, by
 specifying the ``base`` and ``base-version`` properties in the application
 manifest:
 
 .. code-block:: yaml
 
   base: org.electronjs.Electron2.BaseApp
-  base-version: '22.08'
+  base-version: '23.08'
 
-Base apps are described in :doc:`dependencies`.  Using the Electron base
+BaseApps are described in :doc:`dependencies`.  Using the Electron base
 app is much faster and more convenient than manually building Electron
 dependencies. It also has the advantage of reducing the amount of duplication
 on users' machines, since it means that Electron is only saved once on disk.
@@ -109,9 +104,13 @@ Sandbox permissions
 -------------------
 
 The standard guidelines on sandbox permissions apply to Electron
-applications. However, Electron does not currently support Wayland, so for
-display access, only X11 should be used. The sample app also configures
-pulseaudio for sound and enables network access:
+applications. However, Electron does not use Wayland by default. So for
+display access, only X11 should be used as the default configuration.
+This will make Electron use Xwayland in a wayland session and nothing
+else is required.
+
+The sample app also configures pulseaudio for sound and enables network
+access.
 
 .. code-block:: yaml
 
@@ -120,6 +119,51 @@ pulseaudio for sound and enables network access:
     - --socket=x11
     - --socket=pulseaudio
     - --share=network
+    - --env=ELECTRON_TRASH=gio
+
+.. note::
+
+  Native wayland support in electron is experimental and often unstable.
+  It is advised to stick with the X11 and Xwayland configuration above
+  as the default.
+
+To enable experimental `native Wayland` support in Electron>=20, the
+``--ozone-platform-hint=auto`` flag can be passed to the program. `auto`
+will choose Wayland when the session is wayland and Xwayland or X11
+otherwise.
+
+The recommended option is to leave it to the user. So ``--socket=x11``
+should be used in manifest and Wayland can be tested with::
+
+  flatpak run --socket=wayland org.flathub.electron-sample-app
+
+To make native wayland the `default` for users ``--socket=fallback-x11``
+and ``--socket=wayland`` must be used in the manifest.
+
+Client-side window decorations in native wayland can be enabled by
+passing ``--enable-features=WaylandWindowDecorations`` (Electron>=17).
+
+Electron uses ``libnotify`` on Linux to provide desktop notifications.
+libnotify `since 0.8.0 <https://gitlab.gnome.org/GNOME/libnotify/-/merge_requests/27>`_
+automatically uses the `notification portal <https://flatpak.github.io/xdg-desktop-portal/docs/doc-org.freedesktop.portal.Notification.html>`_
+when inside a sandboxed environment and ``--talk-name=org.freedesktop.Notifications``
+is not required.
+
+``org.electronjs.Electron2.BaseApp`` since ``branch/23.08`` comes with
+``libnotify>=0.8.0``
+
+.. _use-correct-desktop-filename:
+
+Using correct desktop file name
+-------------------------------
+
+It's important for Linux applications to set the correct desktop file name. If not, it can lead to problems like missing the window icon under Wayland.
+By default Electron uses ``{appname}.desktop`` as desktop file name. In Flatpak the name of the desktop file must be the id of the Flatpak.
+To tell Electron to use another name you need to set the ``desktopName`` key in your ``package.json`` e.g. ``"desktopName": "com.example.MyApp.desktop"``.
+
+In case you repack a binary, you can use the ``patch-desktop-filename`` script provided by the BaseApp. Each Electron binary ships with ``resources/app.asar`` file.
+You need to call ``patch-desktop-filename`` with this file as argument.
+If your application is installed under ``${FLATPAK_DEST}/my-app`` you need to run ``patch-desktop-filename ${FLATPAK_DEST}/my-app/resources/app.asar``.
 
 Build options
 -------------
@@ -194,7 +238,7 @@ file contains information about the packages that an application depends on, and
 can be generated by running ``npm install --package-lock-only`` from an
 application's root directory. The script is then run as follows::
 
-  $ python3 flatpak-node-generator.py npm --xdg-layout package-lock.json
+  $ flatpak-node-generator npm package-lock.json
 
 This generates the manifest JSON needed to build the NPM/Yarn
 packages for the application, which are outputted to a file called
@@ -257,3 +301,10 @@ The preferred way of fixing this, is not a patch, but a build-time edit using ``
 .. code-block:: bash
 
   jq '.build.linux.target="dir"' <<<$(<package.json) > package.json
+
+Make setProgressBar and setBadgeCount work
+-------------------------------------------
+The `setProgressBar <https://www.electronjs.org/docs/latest/api/browser-window#winsetprogressbarprogress-options>`_ and `setBadgeCount <https://www.electronjs.org/docs/latest/api/app#appsetbadgecountcount-linux-macos>`_ functions allow showing a progress bar and a badge count in the window icon. It is implemented under Linux using the `UnityLauncherAPI <https://wiki.ubuntu.com/Unity/LauncherAPI>`_. This API is not implemented on every desktop environment. A known desktop environment which implements this is KDE.
+It is also implemented by the popular `Dash to Dock <https://micheleg.github.io/dash-to-dock>`_ GNOME extension and `Plank <https://launchpad.net/plank>`_.
+
+To make it work in Flatpak, the app needs to :ref:`use the correct desktop filename <use-correct-desktop-filename>`. The Flatpak also needs the ``--talk-name=com.canonical.Unity`` permission. Electron versions earlier than v32 checks `checks if it's running on Unity or KDE <https://github.com/electron/electron/blob/fb88375ab4d2161dbf7e958a2a94c7c6d97dc84c/shell/browser/linux/unity_service.cc#L64>`_ before using the UnityLauncherAPI.

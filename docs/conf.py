@@ -31,7 +31,13 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = []
+extensions = [
+    'sphinxext.opengraph',
+    'sphinx_copybutton',
+    'sphinx.ext.autosectionlabel'
+]
+
+autosectionlabel_prefix_document = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -47,7 +53,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Flatpak'
-copyright = '2017-2022, Flatpak Team. Licensed under Creative Commons Attribution 4.0 International License.'
+copyright = '2017-2024, Flatpak Team. Licensed under Creative Commons Attribution 4.0 International License.'
 author = 'Flatpak Team'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -86,12 +92,16 @@ gettext_compact = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+
+html_theme = 'furo'
+html_theme_options = {
+    'source_repository': 'https://github.com/flatpak/flatpak-docs/',
+    'source_branch': 'master',
+    'source_directory': 'docs/',
+}
 
 html_css_files = [
-    'dark.css',
-    'theme_overrides.css', #GNOME specific overrides
-    'https://fonts.googleapis.com/css?family=Overpass:400,600,700|Source+Sans+Pro:400,400i,700,700i&display=swap&subset=latin-ext', # Web fonts
+    'xdg.css',
 ]
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -142,6 +152,14 @@ latex_documents = [
      'Flatpak Team', 'manual'),
 ]
 
+# Ignore link anchors on these sites
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-linkcheck_anchors_ignore_for_url
+linkcheck_anchors_ignore_for_url = [
+    r'https://github\.com/.*',
+    r'https://gitlab\.com/.*',
+    r'https://hg\.mozilla\.org/.*',
+    r'https://gitlab\.gnome\.org/GNOME/Initiatives/-/wikis/DevOps-with-Flatpak'
+]
 
 # -- Options for manual page output ---------------------------------------
 
@@ -163,3 +181,7 @@ texinfo_documents = [
      author, 'Flatpak', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+# -- Options for OpenGraph ---------------------------------------------------
+
+ogp_site_url = 'https://docs.flatpak.org/en/latest'

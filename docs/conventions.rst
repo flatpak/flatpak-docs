@@ -21,7 +21,7 @@ Application IDs
 ```````````````
 
 As described in :doc:`using-flatpak`, Flatpak requires each application to have a
-unique identifier, which has a form such as ``org.gnome.Dictionary``.
+unique identifier, which has a form such as ``org.example.app``.
 
 The format is in reverse-DNS style so the first section should be a domain
 controlled by the project and the trailing section represents the specific project.
@@ -46,38 +46,48 @@ For some practical examples of bad IDs
   ``.desktop`` as a special case causing inconsistency. For this same reason, ``.Desktop`` suffixes
   should not be used for newly named applications. Don't hesitate to repeat the application name
   even if it already is part of the domain name section of the identifier (eg. ``org.example.Example``).
- 
-- ``io.github.Foo``
- 
+
+- ``io.github.foo``
+
   This is problematic because while ``foo.github.io`` may be unique to your project, it does not
   include a project-specific identifier. This may cause issues if another project creates
-  ``io.github.Foo-Bar`` which should be its own namespace but areas of ``flatpak`` may treat them
-  similar. A better ID would be ``io.github.foo.Foo`` even if it is redundant.
+  ``io.github.foo-bar`` which should be its own namespace but areas of ``flatpak`` may treat them
+  similar. A better ID would be ``io.github.foo.foo`` even if it is redundant.
 
-- ``org.example-site.Foo``
-  
-  This ID is not valid according to the DBus specification. You can use ``org.example_site.Foo`` instead.
+- ``org.example-site.foo``
 
-- ``com.github.foo.Bar`` or ``com.gitlab.foo.Bar``
+  This ID is not valid according to the DBus specification as a dash
+  ``-`` isn't allowed except on the last component. You should replace
+  ``-`` with an undercore ``_`` and therefore, use
+  ``org.example_site.Foo`` instead.
+
+- ``com.github.foo.bar`` or ``com.gitlab.foo.bar``
 
   While a project may be hosted on GitHub or GitLab it does not have
   any control over the ``github.com`` or ``gitlab.com``
   domain. Instead you should use ``io.github`` or ``io.gitlab`` as
   shown above.
 
-AppData files
-`````````````
-AppData files provide metadata about applications, which is
+- ``Org.Example.App``
+
+  The TLD portion of the ID must be lowercased and while not required
+  the application portion is recommended to be lowercase as well.
+  Instead you should use ``org.example.app``.
+
+MetaInfo files
+``````````````
+
+MetaInfo files provide metadata about applications, which is
 used by application stores (such as Flathub, GNOME Software
 and KDE Discover).
 
 The `Freedesktop AppStream specification
 <https://www.freedesktop.org/software/appstream/docs/>`_ provides a complete
-reference for providing AppData. You can use the online
+reference for providing MetaInfo. You can use the online
 `AppStream MetaInfo Creator <https://www.freedesktop.org/software/appstream/metainfocreator/>`_
 to generate a basic file.
 
-AppData files should be named with the application ID and the ``.metainfo.xml``
+MetaInfo files should be named with the application ID and the ``.metainfo.xml``
 file extension, and should be placed in ``/app/share/metainfo/``. For example::
 
   /app/share/metainfo/org.gnome.Dictionary.metainfo.xml
@@ -86,7 +96,7 @@ A legacy convention of having the ``.appdata.xml`` installed in ``/app/share/app
 is also accepted as well, and ``flatpak-builder`` will check either directory with
 either extension.
 
-The ``appstream-util validate-relax`` command can be used to check AppData
+The ``appstreamcli validate --explain`` command can be used to check MetaInfo
 files for errors.
 
 Application icons
@@ -113,15 +123,23 @@ icons are of size ``scalable``::
 
   /app/share/icons/hicolor/scalable/apps/org.gnome.Dictionary.svg
 
+Flatpak will export the following icon name patterns:
+``$FLATPAK_ID, $FLATPAK_ID.foo, $FLATPAK_ID-foo``. They may end with an
+extension suffix like ``.png, .svg``. Exported icons can be found in the
+``icons`` subfolder of ``$HOME/.local/share/flatpak/exports/share`` or
+``/var/lib/flatpak/exports/share`` depending on system or user install.
+
+The distribution usually appends those paths to ``$XDG_DATA_DIRS`` on
+host when installing the ``flatpak`` package. Unless an icon is exported
+by Flatpak, host applications cannot access it.
+
 Desktop files
 `````````````
 
 Desktop files are used to provide the desktop environment with
 information about each application. The `Freedesktop specification
-<https://specifications.freedesktop.org/desktop-entry-spec/latest/>`_ provides a
-complete reference for writing desktop files, and `additional information
-about them <https://wiki.archlinux.org/title/desktop_entries>`_ is
-available online.
+<https://specifications.freedesktop.org/desktop-entry-spec/latest/>`_
+provides a complete reference for writing desktop files.
 
 Desktop files should be named with the application's ID, followed
 by the ``.desktop`` file extension, and should be placed in
@@ -134,26 +152,30 @@ A minimal desktop file should contain at least the application's *name*,
 
   [Desktop Entry]
   Name=Gnome Dictionary
-  Exec=org.gnome.Dictionary
+  Exec=gnome-dictionary
   Type=Application
   Icon=org.gnome.Dictionary
-  Categories=GNOME;GTK;Office;Dictionary;
+  Categories=Office;Dictionary;
 
 The ``desktop-file-validate`` command can be used to check for errors in
 desktop files.
 
-Exporting through extra-data
-----------------------------
+The ``Exec`` key of the desktop files is rewritten by Flatpak  when installing
+an app. The original value of the key becomes the value of the ``--command``
+argument like so::
 
-Files downloaded through ``extra-data`` are only downloaded when installing, as such they aren't yet available for ``flatpak-builder`` to automatically export during the build process.
+  Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=gnome-dictionary org.gnome.Dictionary
 
-When using ``extra-data``, place any files that must be exported under this location::
+Flatpak will export the following desktop filename patterns:
+``$FLATPAK_ID.desktop, $FLATPAK_ID.foo.desktop, $FLATPAK_ID-foo.desktop``.
+Exported desktop files can be found in the ``applications`` subfolder of
+``$HOME/.local/share/flatpak/exports/share`` or
+``/var/lib/flatpak/exports/share`` depending on system or
+user install.
 
-  /app/extra/export/share/
-
-For example, if GNOME Dictionary used ``extra-data`` to download a 96x96 icon this would be its path::
-
-  /app/extra/export/share/icons/hicolor/96x96/apps/org.gnome.Dictionary.png
+The distribution usually appends those paths to ``$XDG_DATA_DIRS`` on
+host when installing the ``flatpak`` package. Unless a desktop file is
+exported by Flatpak, host applications cannot access it.
 
 Technical conventions
 ---------------------
@@ -218,11 +240,16 @@ For example, GNOME Dictionary will store user-specific data in::
 
   ~/.var/app/org.gnome.Dictionary/data/gnome-dictionary
 
-Note that applications can be configured to use non-default base directory
-locations (see :doc:`sandbox-permissions`).
+These environment variables are always set by flatpak and override any host values.
+However if using the host directories are needed the ``$HOST_XDG_CONFIG_HOME``,
+``$HOST_XDG_DATA_HOME``, ``$HOST_XDG_CACHE_HOME``, and ``$HOST_XDG_STATE_HOME`` environment
+variables will be set if a custom value was set on the host.
 
-Note that ``$XDG_STATE_HOME`` is only supported by Flatpak 1.13 and later. If
-your app needs to work on earlier versions of Flatpak, you can use the
+Note that ``$XDG_STATE_HOME`` and ``$HOST_XDG_STATE_HOME`` is only supported by Flatpak 1.13
+and later. If your app needs to work on earlier versions of Flatpak, you can use the
 ``--persist=.local/state`` and ``--unset-env=XDG_STATE_HOME`` finish args so
 the app will use the correct directory, even after Flatpak is later upgraded to
 >1.13.
+
+Note that applications can be configured to use non-default base directory
+locations (see :doc:`sandbox-permissions`).

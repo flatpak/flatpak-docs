@@ -61,7 +61,7 @@ Flatpak utilises a number of pre-existing technologies. These include:
   cgroups for sandboxes
 * `D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_, a
   well-established way to provide high-level APIs to applications
-* The `OSTree <https://ostree.readthedocs.io/en/latest/>`__ system for
+* The `OSTree <https://ostreedev.github.io/ostree/>`__ system for
   versioning and distributing filesystem trees
 * The OCI format from the `Open Container Initiative
   <https://opencontainers.org/>`_, as an alternative to OSTree used by the

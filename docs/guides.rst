@@ -14,3 +14,4 @@ standard guidance provided elsewhere in the Flatpak documentation.
    dotnet
    qt
    multiarch
+   extension
