@@ -31,11 +31,11 @@ Installing dependencies
         flatpak install flathub org.freedesktop.Platform org.freedesktop.Sdk
 
 4. Install the Flatpak SDK extension for your dotnet version
-   (e.g. `dotnet6 <https://github.com/flathub/org.freedesktop.Sdk.Extension.dotnet6>`__, `dotnet7 <https://github.com/flathub/org.freedesktop.Sdk.Extension.dotnet7>`__)
+   (e.g. `dotnet8 <https://github.com/flathub/org.freedesktop.Sdk.Extension.dotnet8>`__)
 
   .. code-block:: shell
 
-        flatpak install org.freedesktop.Sdk.Extension.dotnet6
+        flatpak install org.freedesktop.Sdk.Extension.dotnet8
 
 
 Creating the Flatpak
@@ -63,14 +63,14 @@ Creating the Flatpak
 
       app-id: <namespace>.<app-name>
       runtime: org.freedesktop.Platform
-      runtime-version: '22.08'
+      runtime-version: '23.08'
       sdk: org.freedesktop.Sdk
       sdk-extensions:
-        - org.freedesktop.Sdk.Extension.dotnet6
+        - org.freedesktop.Sdk.Extension.dotnet8
       build-options:
-        prepend-path: "/usr/lib/sdk/dotnet6/bin"
-        append-ld-library-path: "/usr/lib/sdk/dotnet6/lib"
-        prepend-pkg-config-path: "/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib/sdk/dotnet6/lib/pkgconfig"
+        prepend-path: "/usr/lib/sdk/dotnet8/bin"
+        append-ld-library-path: "/usr/lib/sdk/dotnet8/lib"
+        prepend-pkg-config-path: "/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib/sdk/dotnet8/lib/pkgconfig"
 
       command: <project-name>
 
@@ -87,7 +87,7 @@ Creating the Flatpak
         - name: dotnet
           buildsystem: simple
           build-commands:
-          - /usr/lib/sdk/dotnet6/bin/install.sh
+          - /usr/lib/sdk/dotnet8/bin/install.sh
 
         - name: <app-name>
           buildsystem: simple
@@ -99,7 +99,7 @@ Creating the Flatpak
           build-commands:
             - dotnet publish <project-name>/<project-name>.csproj -c Release --no-self-contained --source ./nuget-sources
             - mkdir -p ${FLATPAK_DEST}/bin
-            - cp -r <project-name>/bin/Release/net6.0/publish/* ${FLATPAK_DEST}/bin
+            - cp -r /bin/Release/net8.0/publish/* ${FLATPAK_DEST}/bin
 
   .. note::
 
@@ -125,7 +125,7 @@ Creating the Flatpak
 
   .. code-block:: shell
 
-        python3 flatpak-dotnet-generator.py --dotnet 6 nuget-sources.json <app-name>/<project-name>/<project-name>.csproj
+        python3 flatpak-dotnet-generator.py --dotnet 8 nuget-sources.json <app-name>/<project-name>/<project-name>.csproj
 
 10. Run the Flatpak Builder script to build the local Flatpak
 
