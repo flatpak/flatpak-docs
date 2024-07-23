@@ -35,7 +35,7 @@ Creating the Flatpak
 
   Here is a brief description of the placeholders in the below example:
 
-  - ``<app-id>``: The name of your Flatpak, see `"Conventions - Application IDs" section <https://docs.flatpak.org/en/latest/conventions.html#application-ids>`__.
+  - ``<app-id>``: The name of your Flatpak, see :ref:`conventions:application ids`.
   - ``<app-name>``: The name of the root folder of your app repository
   - ``<project-name>``: The name of your ``.csproj`` file
   - ``<git-server-url>``: The URL to your git server (e.g. ``https://github.com/``, ``https://gitlab.com``)
@@ -91,7 +91,7 @@ Creating the Flatpak
 .. note::
 
     For providing access to other things such as the network or
-    filesystem, see the `“Sandbox Permissions” section <https://docs.flatpak.org/en/latest/sandbox-permissions.html>`__
+    filesystem, see :ref:`sandbox-permissions:sandbox permissions`
 
 5.  Copy and save the dotnet NuGet sources generator script
     ``flatpak-dotnet-generator.py`` from the `Flatpak Builder Tools
