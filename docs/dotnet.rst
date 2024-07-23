@@ -3,7 +3,7 @@ Dotnet
 
 Prerequisites
 ~~~~~~~~~~~~~
-  - The application is built with a Linux-compatible .NET desktop application framework compatible such as `GTKSharp <https://github.com/GtkSharp/GtkSharp>`__, `Avalonia UI <https://www.avaloniaui.net/>`__, or `Eto <https://github.com/picoe/Eto>`__
+  - The application is built with a Linux-compatible .NET desktop application framework compatible such as `Avalonia UI <https://www.avaloniaui.net/>`__, `Uno <https://platform.uno/>`__, `Eto <https://github.com/picoe/Eto>`__, or `GTKSharp <https://github.com/GtkSharp/GtkSharp>`__.
   - The application's source code is hosted on a Git server such as GitHub, GitLab, or Bitbucket
   - A Git commit with a `Tag <https://git-scm.com/book/en/v2/Git-Basics-Tagging>`__ exists on the repository to use for the build. This usually represents the version number of the application (e.g. v1.0, v1.1, etc.).
 
