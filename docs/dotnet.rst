@@ -20,11 +20,10 @@ Installing dependencies
 1. Install Flatpak using the method provided for your distribution
    `Flatpak - Quick Setup <https://flatpak.org/setup/>`_
 
-2. Install Flatpak Builder as both a flatpak package and a distribution package (apt / dnf)
+2. Install Flatpak Builder through your distribution package manager (e.g. ``apt`` / ``dnf``)
 
 .. code-block:: shell
 
-  flatpak install org.flatpak.Builder
   sudo apt install flatpak-builder
 
 
