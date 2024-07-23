@@ -4,12 +4,12 @@ Dotnet
 Prerequisites
 ~~~~~~~~~~~~~
 - The application is built with a Linux-compatible .NET desktop application framework such as:
-    - `Avalonia UI <https://avaloniaui.net/>`__
-    - `Uno Platform <https://platform.uno/>`__
-    - `Eto <https://github.com/picoe/Eto>`__
-    - `GTKSharp <https://github.com/GtkSharp/GtkSharp>`__
+    - `Avalonia UI <https://avaloniaui.net/>`_
+    - `Uno Platform <https://platform.uno/>`_
+    - `Eto <https://github.com/picoe/Eto>`_
+    - `GTKSharp <https://github.com/GtkSharp/GtkSharp>`_
 - The application's source code is hosted on a Git server such as GitHub, GitLab, or Bitbucket
-- A Git commit with a `Tag <https://git-scm.com/book/en/v2/Git-Basics-Tagging>`__ exists on the repository to use for the build. This usually represents the version number of the application (e.g. v1.0, v1.1, etc.).
+- A Git commit with a `tag <https://git-scm.com/book/en/v2/Git-Basics-Tagging>`_ exists on the repository to use for the build. This usually represents the version number of the application (e.g. v1.0, v1.1, etc.).
 
 Steps for Packaging
 ~~~~~~~~~~~~~~~~~~~
@@ -18,7 +18,7 @@ Installing dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Install Flatpak using the method provided for your distribution
-   `Flatpak - Quick Setup <https://flatpak.org/setup/>`__
+   `Flatpak - Quick Setup <https://flatpak.org/setup/>`_
 
 2. Install Flatpak Builder as both a flatpak package and a distribution package (apt / dnf)
 
@@ -38,9 +38,7 @@ Creating the Flatpak
   - ``<app-id>``: The name of your Flatpak, see :ref:`conventions:application ids`.
   - ``<app-name>``: The name of the root folder of your app repository
   - ``<project-name>``: The name of your ``.csproj`` file
-  - ``<git-server-url>``: The URL to your git server (e.g. ``https://github.com/``, ``https://gitlab.com``)
-  - ``<user-name>``: The username you use in your Git server (GitHub, GitLab, Bitbucket)
-  - ``<release-number>``: The numbered release to build from, in the form of a Git `Tag <https://git-scm.com/book/en/v2/Git-Basics-Tagging>`__.
+- ``<git-tag>``: The numbered release to build from, in the form of a Git `Tag <https://git-scm.com/book/en/v2/Git-Basics-Tagging>`_.
 
 3.  Create a new folder somewhere different from your existing project
 
@@ -91,11 +89,11 @@ Creating the Flatpak
 .. note::
 
     For providing access to other things such as the network or
-    filesystem, see :ref:`sandbox-permissions:sandbox permissions`
+    filesystem, see :doc:`sandbox-permissions`
 
 5.  Copy and save the dotnet NuGet sources generator script
     ``flatpak-dotnet-generator.py`` from the `Flatpak Builder Tools
-    repository <https://github.com/flatpak/flatpak-builder-tools>`__, to
+    repository <https://github.com/flatpak/flatpak-builder-tools>`_, to
     the current folder, or run the following command to download it:
 
 .. code-block:: shell
