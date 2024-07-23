@@ -5,7 +5,7 @@ Prerequisites
 ~~~~~~~~~~~~~
 - The application is built with a Linux-compatible .NET desktop application framework such as:
     - `Avalonia UI <https://avaloniaui.net/>`__
-    - `Uno <https://platform.uno/>`__
+    - `Uno Platform <https://platform.uno/>`__
     - `Eto <https://github.com/picoe/Eto>`__
     - `GTKSharp <https://github.com/GtkSharp/GtkSharp>`__
 - The application's source code is hosted on a Git server such as GitHub, GitLab, or Bitbucket
