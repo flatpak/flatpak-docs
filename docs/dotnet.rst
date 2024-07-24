@@ -108,7 +108,7 @@ A few placeholders have been used in the steps below, while going through the st
 
 .. code-block:: shell
 
-      flatpak-builder build-dir --user --repo=repo --install-deps-from=flathub <app-id>.yaml
+      flatpak-builder build-dir --user --install-deps-from=flathub --download-only <app-id>.yaml
 
 8.  Run the NuGet source config generator script ``flatpak-dotnet-generator.py`` with the following arguments:
 
