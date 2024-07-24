@@ -14,8 +14,8 @@ Prerequisites
 Steps for Packaging
 ~~~~~~~~~~~~~~~~~~~
 
-Installing dependencies
-^^^^^^^^^^^^^^^^^^^^^^^
+Installing Flatpak and Flatpak builder
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Install Flatpak using the method provided for your distribution
    `Flatpak - Quick Setup <https://flatpak.org/setup/>`_
@@ -116,7 +116,7 @@ A few placeholders have been used in the steps below, while going through the st
 
       python3 flatpak-dotnet-generator.py --dotnet 8 --freedesktop 23.08 nuget-sources.json <app-name>/<project-name>.csproj
 
-9. Run the Flatpak Builder script to build and install the local Flatpak
+9. Build and install using Flatpak builder
 
 .. code-block:: shell
 
