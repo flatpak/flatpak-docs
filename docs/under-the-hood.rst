@@ -44,6 +44,9 @@ example, it allows files that are stored on disk to be deduplicated, so
 the same file that belongs to multiple applications (or runtimes) is only
 stored once.
 
+This `blog post <https://blogs.gnome.org/alexl/2017/10/02/on-application-sizes-and-bloat-in-flatpak/>`_
+explains the underlying structure of a Flatpak repository in more detail.
+
 Underlying technologies
 -----------------------
 
