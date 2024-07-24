@@ -3,6 +3,7 @@ Dotnet
 
 Prerequisites
 ~~~~~~~~~~~~~
+- :doc:`first-build`
 - The application is built with a Linux-compatible .NET desktop application framework such as:
     - `Avalonia UI <https://avaloniaui.net/>`_
     - `Uno Platform <https://platform.uno/>`_
