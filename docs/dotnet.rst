@@ -9,7 +9,6 @@ Prerequisites
     - `Eto <https://github.com/picoe/Eto>`_
     - `GTKSharp <https://github.com/GtkSharp/GtkSharp>`_
 - The application's source code is hosted on a Git server such as GitHub, GitLab, or Bitbucket
-- A Git commit with a `tag <https://git-scm.com/book/en/v2/Git-Basics-Tagging>`_ exists on the repository to use for the build. This usually represents the version number of the application (e.g. v1.0, v1.1, etc.).
 
 Steps for Packaging
 ~~~~~~~~~~~~~~~~~~~
@@ -36,7 +35,6 @@ A few placeholders have been used in the steps below, while going through the st
 - ``<app-name>``: The name of the root folder of your app repository
 - ``<project-name>``: The name of your ``.csproj`` file
 - ``<git-url>``: The URL to the git repository of the project
-- ``<git-tag>``: The numbered release to build from, in the form of a Git `Tag <https://git-scm.com/book/en/v2/Git-Basics-Tagging>`_.
 
 3.  Create a new folder somewhere different from your existing project
 
@@ -77,7 +75,6 @@ A few placeholders have been used in the steps below, while going through the st
       sources:
         - type: git
           url: <git-url>
-          tag: <git-tag>
         - ./nuget-sources.json
       build-commands:
         - dotnet publish <project-name>.csproj -c Release --no-self-contained --source ./nuget-sources
