@@ -110,6 +110,11 @@ is doing. For example, to trace ``openat(), read()`` calls::
 
   $ strace -e trace=openat,read -o strace.log -f /app/bin/<application-binary>
 
+`Perf <https://perf.wiki.kernel.org/index.php/Main_Page>`_ requires
+access to ``--filesystem=/sys`` to run::
+
+  $ flatpak run --command=perf --filesystem=/sys --filesystem=$(pwd) --devel $FLATPAK_ID record -v -- <command>
+
 Creating a Debug extension
 ---------------------------
 
