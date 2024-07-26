@@ -209,12 +209,14 @@ Other filesystem access guidelines include:
 Reserved Paths
 ``````````````
 
-The following paths are reserved for the runtime and Flatpak itself
-and are never shared::
+The following paths and subpaths of them are reserved and asking access
+to them with ``--filesystem`` will have no effect::
 
-/app, /bin, /dev, /etc, /lib, /lib32, /lib64, /proc, /run, /run/flatpak, /run/host, /sbin, /usr
+/app, /bin, /dev, /etc, /lib, /lib32, /lib64, /proc, /run/flatpak, /run/host, /sbin, /usr
 
-Some subpaths of ``/run`` are allowed but not the entire directory.
+The entire ``/run`` is not allowed and all subpaths of ``/run`` except
+``/run/flatpak, /run/host`` is allowed to be exposed via
+``--filesystem``.
 
 Additionally the following directories from host need to be explicitly
 requested with ``--filesystem`` and are not available with
