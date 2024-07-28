@@ -50,7 +50,7 @@ an empty file and save it as ``org.flatpak.Hello.yml``.
             - echo "Hello world, from a sandbox"
 
 The `application` here is a simple script, that is self contained in the
-manifest!
+manifest! The `install -Dm755 <https://www.gnu.org/software/coreutils/manual/html_node/install-invocation.html>`_ command will create a file containing our hello world script in ``/app/bin/hello`` with `execution permissions <https://www.gnu.org/software/coreutils/manual/html_node/Numeric-Modes.html>`_ inside the sandbox.
 
 In a more complex application, the manifest would list multiple
 modules and build instructions.
