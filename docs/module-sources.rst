@@ -150,7 +150,7 @@ the following archive types: ``"rpm", "tar", "tar-gzip", "tar-compress", "tar-bz
 The archive type is guessed from the suffix of the file basename.
 
 ``rpm`` is extracted with ``rpm2cpio``, ``zip`` is extracted with ``unzip``
-and ``7z`` is extratced with ``7z``. The rest are extracted with
+and ``7z`` is extracted with ``7z``. The rest are extracted with
 ``tar``. These should be present on host so that flatpak-builder can
 use them.The archive type is calculated from the suffix of the file
 basename.
