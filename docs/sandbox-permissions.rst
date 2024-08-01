@@ -141,7 +141,7 @@ limited as much as possible. This includes:
   cache, config and state. Then no additional filesystem access would be
   required.
 - Avoiding full home access and instead using XDG directories such
-  as ``xdg-music`` or ``xdg-downloads`` etc.
+  as ``xdg-music`` or ``xdg-download`` etc.
 
 The following permission options are available:
 
