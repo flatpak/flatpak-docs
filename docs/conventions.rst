@@ -33,7 +33,7 @@ Developers must follow the standard `D-Bus naming conventions for bus names
 <https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names>`_
 when creating their own IDs. This format is
 already recommended by the `Desktop File specification
-<https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html#file-naming>`_
+<https://specifications.freedesktop.org/desktop-entry-spec/latest/file-naming.html>`_
 and `Appstream specification
 <https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#sect-Metadata-GenericComponent>`_
 also.
