@@ -47,21 +47,49 @@ in general, you'll also need 32-bit GL drivers. Add an extension point for it:
 
 .. code-block:: yaml
 
-  add-extensions:
-    org.freedesktop.Platform.GL32:
-      directory: lib/i386-linux-gnu/GL
-      version: '1.4'
-      versions: 23.08;1.4
-      subdirectories: true
-      no-autodownload: true
-      autodelete: false
-      add-ld-path: lib
-      merge-dirs: vulkan/icd.d;glvnd/egl_vendor.d;OpenCL/vendors;lib/dri;lib/d3d;vulkan/explicit_layer.d;vulkan/implicit_layer.d
-      download-if: active-gl-driver
-      enable-if: active-gl-driver
+  runtime: org.freedesktop.Platform
+  runtime-version: &runtime-version '23.08'
+  # Synced from Freedesktop runtime
+  # https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/blob/ed97d222b21d0a8744779ce6e5e8af5b032bfee1/elements/flatpak-images/include/platform-vars.yml#L2
+  x-gl-version: &gl-version '1.4'
+  x-gl-versions: &gl-versions 23.08;1.4
+  x-gl-merge-dirs: &gl-merge-dirs vulkan/icd.d;glvnd/egl_vendor.d;egl/egl_external_platform.d;OpenCL/vendors;lib/dri;lib/d3d;lib/gbm;vulkan/explicit_layer.d;vulkan/implicit_layer.d
 
-Note that the ``versions`` property here must contain both ``1.4`` and the same
-value as in ``runtime-version``.
+  org.freedesktop.Platform.GL32:
+    directory: lib/i386-linux-gnu/GL
+    version: *gl-version
+    versions: *gl-versions
+    subdirectories: true
+    no-autodownload: true
+    autodelete: false
+    add-ld-path: lib
+    merge-dirs: *gl-merge-dirs
+    download-if: active-gl-driver
+    enable-if: active-gl-driver
+    autoprune-unless: active-gl-driver
+
+  org.freedesktop.Platform.GL32.Debug:
+    directory: lib/debug/lib/i386-linux-gnu/GL
+    version: *gl-version
+    versions: *gl-versions
+    subdirectories: true
+    no-autodownload: true
+    merge-dirs: *gl-merge-dirs
+    enable-if: active-gl-driver
+    autoprune-unless: active-gl-driver
+
+  org.freedesktop.Platform.VAAPI.Intel.i386:
+    directory: lib/i386-linux-gnu/dri/intel-vaapi-driver
+    version: *runtime-version
+    versions: *runtime-version
+    autodelete: false
+    no-autodownload: true
+    add-ld-path: lib
+    download-if: have-intel-gpu
+    autoprune-unless: have-intel-gpu
+
+Note that the ``x-gl-versions`` property here must contain both ``1.4``
+and the same value as in ``runtime-version``.
 
 Make sure to create directories where the extensions will be mounted (the mount
 points are specified in ``directory`` properties and are relative to the app
@@ -90,6 +118,7 @@ You can combine the above two steps in a special module, e.g.
         - mkdir -p /app/lib/i386-linux-gnu
         - mkdir -p /app/lib/debug/lib/i386-linux-gnu
         - mkdir -p /app/lib/i386-linux-gnu/GL
+        - mkdir -p /app/lib/i386-linux-gnu/dri/intel-vaapi-driver
         - install -Dm644 ld.so.conf /app/etc/ld.so.conf
       sources:
         - type: inline
