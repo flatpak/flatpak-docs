@@ -547,7 +547,7 @@ These are common to the Freedesktop SDK and runtime.
   patented codecs.
 - org.freedesktop.Platform.GL.Debug - Debug extension point for
   org.freedesktop.Platform.GL, managed by the runtime but the user needs
-  to explicitly instalL ``org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}``
+  to explicitly install ``org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}``
   and ``org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}-extra``
   to have the debug symbols available.
 
