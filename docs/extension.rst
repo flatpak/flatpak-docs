@@ -22,6 +22,10 @@ To see what are the available extension points in runtime or
 applications, please see the corresponding flatpak or build
 manifest.
 
+``.Debug, .Locale, .Sources`` extensions created by Flatpak builder do
+not need to be specified manually. These are automaitcally created and
+loaded if installed.
+
 Extension point
 ---------------
 
@@ -179,6 +183,15 @@ to have it installed.
 
 The extensions are mounted in alphabetical path order of directory.
 
+.. warning::
+
+  Some extensions are installed automatically by the runtime based on
+  certain conditions and these do not need be added to application
+  manifests. Please see below for the purpose of extensions or
+  extension points defined in the runtime. Similarly extensions created
+  by Flatpak builder like ``.Locale, .Debug`` also do not need to be
+  in application manifest.
+
 ``org.freedesktop.Platform.ffmpeg-full`` is an application extension
 (mounted inside ``/app/extension_directory``) belonging to
 org.freedesktop.Platform.
@@ -215,6 +228,92 @@ org.freedesktop.Platform.
   cleanup-commands:
     - mkdir -p ${FLATPAK_DEST}/texlive
 
+Note that ``Compat`` or ``GL32`` extensions need to specifically
+requested.
+
+To provide compat i386 library support at runtime in an application:
+
+.. code-block:: yaml
+
+  add-extensions:
+    org.freedesktop.Platform.Compat.i386:
+      directory: lib/i386-linux-gnu
+      version: '23.08'
+    # Not strictly needed but provides support for debug symbols
+    org.freedesktop.Platform.Compat.i386.Debug:
+      directory: lib/debug/lib/i386-linux-gnu
+      version: '23.08'
+      no-autodownload: true
+  cleanup-commands:
+    - mkdir -p ${FLATPAK_DEST}/lib/i386-linux-gnu ${FLATPAK_DEST}/lib/debug/lib/i386-linux-gnu
+
+And for building i386 modules in an application:
+
+.. code-block:: yaml
+
+  sdk-extensions:
+    - org.freedesktop.Sdk.Compat.i386
+    - org.freedesktop.Sdk.Extension.toolchain-i386
+
+  prepend-pkg-config-path: /app/lib32/pkgconfig:/usr/lib/i386-linux-gnu/pkgconfig
+  ldflags: -L/app/lib32
+  prepend-path: /usr/lib/sdk/toolchain-i386/bin
+  env:
+    CC: i686-unknown-linux-gnu-gcc
+    CXX: i686-unknown-linux-gnu-g++
+  libdir: /app/lib32
+
+The extension properties here should be kept in sync with the Freedesktop
+runtime.
+
+To provide i386 graphics drivers in an application:
+
+.. code-block:: yaml
+
+  runtime: org.freedesktop.Platform
+  runtime-version: &runtime-version '23.08'
+  # Synced from Freedesktop runtime
+  # https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/blob/ed97d222b21d0a8744779ce6e5e8af5b032bfee1/elements/flatpak-images/include/platform-vars.yml#L2
+  x-gl-version: &gl-version '1.4'
+  x-gl-versions: &gl-versions 23.08;1.4
+  x-gl-merge-dirs: &gl-merge-dirs vulkan/icd.d;glvnd/egl_vendor.d;egl/egl_external_platform.d;OpenCL/vendors;lib/dri;lib/d3d;lib/gbm;vulkan/explicit_layer.d;vulkan/implicit_layer.d
+
+  org.freedesktop.Platform.GL32:
+    directory: lib/i386-linux-gnu/GL
+    version: *gl-version
+    versions: *gl-versions
+    subdirectories: true
+    no-autodownload: true
+    autodelete: false
+    add-ld-path: lib
+    merge-dirs: *gl-merge-dirs
+    download-if: active-gl-driver
+    enable-if: active-gl-driver
+    autoprune-unless: active-gl-driver
+
+  org.freedesktop.Platform.GL32.Debug:
+    directory: lib/debug/lib/i386-linux-gnu/GL
+    version: *gl-version
+    versions: *gl-versions
+    subdirectories: true
+    no-autodownload: true
+    merge-dirs: *gl-merge-dirs
+    enable-if: active-gl-driver
+    autoprune-unless: active-gl-driver
+
+  org.freedesktop.Platform.VAAPI.Intel.i386:
+    directory: lib/i386-linux-gnu/dri/intel-vaapi-driver
+    version: *runtime-version
+    versions: *runtime-version
+    autodelete: false
+    no-autodownload: true
+    add-ld-path: lib
+    download-if: have-intel-gpu
+    autoprune-unless: have-intel-gpu
+
+  cleanup-commands:
+    - mkdir -p ${FLATPAK_DEST}/lib/i386-linux-gnu/GL ${FLATPAK_DEST}/lib/debug/lib/i386-linux-gnu/GL ${FLATPAK_DEST}/lib/i386-linux-gnu/dri/intel-vaapi-driver
+
 There is currently no way to `request` autodownload of a runtime
 extension from an application. The extension point in the runtime has
 to be set to autodownload or the user has to manually install it.
@@ -222,12 +321,13 @@ to be set to autodownload or the user has to manually install it.
 A few related extension properties can be found in application or runtime
 manifests. These are:
 
-- ``inherit-extensions`` can be used to specify an extra set of extensions
-  having an extension point in the parent runtime or base that is inherited
-  in the application. This for example, can be used to inherit i386
-  graphics drivers ``org.freedesktop.Platform.GL32`` or ffmpeg
-  ``org.freedesktop.Platform.ffmpeg-full`` in any application that
-  uses the ``org.freedesktop.Platform`` runtime or a child runtime of it.
+- ``inherit-extensions`` can be used to specify an extra set of extension
+  points or extensions from the parent runtime or base that is inherited
+  into the application or the current runtime. This for example, can be
+  used to inherit i386 graphics drivers ``org.freedesktop.Platform.GL32``
+  or ffmpeg ``org.freedesktop.Platform.ffmpeg-full`` in any application
+  that uses the ``org.freedesktop.Platform`` runtime or a child runtime
+  of it.
 
 .. code-block:: yaml
 
@@ -495,3 +595,84 @@ or ``$XDG_DATA_HOME/themes``.
   	rmdir --ignore-fail-on-non-empty "$THEME_EXTENSION_DIR"
   	exit 1
   fi
+
+Extensions or extension points defined by runtime
+-------------------------------------------------
+
+The following extensions and extension points are defined in the
+Freedesktop runtime/SDK or are shipped along with it. Most of these
+are inherited by the GNOME and KDE runtimes as well. These may
+change over time, please check the respective project.
+
+These are common to the Freedesktop SDK and runtime.
+
+- org.freedesktop.Platform.GL - Extension for graphics drivers managed
+  by the runtime and installed or removed automatically. The default
+  has two branches ``${RUNTIME_VERSION}`` and
+  ``${RUNTIME_VERSION}-extra``, the latter containing support for
+  patented codecs.
+- org.freedesktop.Platform.GL.Debug - Debug extension point for
+  org.freedesktop.Platform.GL, managed by the runtime but the user needs
+  to explicitly instalL ``org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}``
+  and ``org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}-extra``
+  to have the debug symbols available.
+
+
+The following extensions utilise the above two extension points::
+
+  org.freedesktop.Platform.GL.default//${RUNTIME_VERSION}
+  org.freedesktop.Platform.GL.default//${RUNTIME_VERSION}-extra
+  org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}
+  org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}-extra
+
+  org.freedesktop.Platform.GL32.default//${RUNTIME_VERSION}
+  org.freedesktop.Platform.GL32.default//${RUNTIME_VERSION}-extra
+  org.freedesktop.Platform.GL32.Debug.default//${RUNTIME_VERSION}
+  org.freedesktop.Platform.GL32.Debug.default//${RUNTIME_VERSION}-extra
+
+  org.freedesktop.Platform.GL.nvidia-${DRIVER_VERSION}
+  org.freedesktop.Platform.GL32.nvidia-${DRIVER_VERSION}
+
+- org.freedesktop.Platform.VulkanLayer - Extension point for
+  `Vulkan layers <https://github.com/KhronosGroup/Vulkan-Guide/blob/master/chapters/layers.md>`_.
+  Developers can provide extensions using this extension point
+  and the user needs to install those extensions to have them available.
+- org.freedesktop.Platform.GStreamer - Extension point for GStreamer
+  plugins. Developers can provide extensions using this extension point
+  and the user needs to install those extensions to have them available.
+- org.freedesktop.Platform.Icontheme - Extension point for icon themes.
+  Developers can provide extensions using this extension point
+  and the user needs to install those extensions to have them available.
+- org.gtk.Gtk3theme - Extension point for Gtk3 themes. Extensions
+  under this extension point are automatically installed by Flatpak
+  if an extension matching the host theme is available. Developers can
+  provide extensions using this extension point.
+- org.freedesktop.Platform.VAAPI.Intel - Extension providing Intel
+  VAAPI media drivers. This is automatically installed if the user
+  has an Intel GPU.
+
+  This has a compat i386 extension ``org.freedesktop.Platform.VAAPI.Intel.i386``.
+
+- org.freedesktop.Platform.openh264 - Extension providing OpenH264,
+  automatically installed by the runtime.
+- org.freedesktop.Platform.ffmpeg - Extension providing ffmpeg with
+  support for patented codecs. This needs to explicitly added to the
+  manifest using ``add-extensions`` by the developer, so that it becomes
+  available when the user installs it.
+
+  This has a compat i386 extension ``org.freedesktop.Platform.ffmpeg_full.i386``.
+
+These are only in Freedesktop SDK.
+
+- org.freedesktop.Sdk.Extension - Extension point for SDK extensions
+  like extra toolchains (eg. LLVM), compilers and language specific
+  tools to aid building applications or provide language support for
+  development tools such as IDEs.
+
+  The application developer needs to explicitly add these extensions
+  in the manifest by using ``sdk-extensions`` when building an app.
+
+Extensions marked as ``Compat`` in the name or ``GL32`` provide compat
+support for extra architectures and needs to explicitly requested.
+
+Additionally all SDKs provide a ``.Docs`` extension for documentation.
