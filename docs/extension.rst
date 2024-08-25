@@ -172,7 +172,23 @@ The resultant extension is called ``org.freedesktop.Platform.GL.default``
 and it is downloaded and enabled automatically if ``active-gl-driver``
 is true and deleted if only it is false.
 
-For a list of this conditionals, please see ``man flatpak-metadata``.
+The following conditionals are available: download-if, autoprune-unless
+enable-if.
+
+``download-if`` and ``enable-if`` supports the following:
+
+- ``active-gl-driver``
+- ``active-gtk-theme`` is true if the host GTK theme via ``org.gnome.desktop.interface``
+  matches the extension basename.
+- ``have-intel-gpu`` is true if the i915 kernel module is loaded.
+- ``have-kernel-module-{module_name}`` is true if ``module_name`` is
+  found in ``/proc/modules``.
+- ``on-xdg-desktop-{desktop_name}`` is true if ``desktop_name``
+  matches the value of ``XDG_CURRENT_DESKTOP`` on host.
+
+``autoprune-unless`` supports only ``active-gl-driver``. If this evaluates
+to ``false`` the extension will be considered unused and removed
+automatically when doing ``flatpak uninstall --unused``.
 
 Loading existing extensions
 ---------------------------
