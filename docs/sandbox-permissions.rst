@@ -250,14 +250,12 @@ You can provide the following device permissions:
 
 .. note::
 
-  Newer permissions like ``input`` will have no effect on older Flatpak
-  versions and fail when used through Flatpak commandline.
+  Using newer permissions like ``input`` or ``usb`` will have no effect
+  on older Flatpak versions and will fail when used through Flatpak
+  commandline.
 
 While not ideal, ``--device=all`` can be used to access devices like
 webcams, CD/DVD drives etc.
-
-Using newer permissions like ``input`` or ``usb`` on older versions of Flatpak
-will have no effect, or fail on the command-line.
 
 dconf access
 ````````````
