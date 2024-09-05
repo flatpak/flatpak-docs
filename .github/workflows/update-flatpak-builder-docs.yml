@@ -1,0 +1,51 @@
+name: Update Flatpak Builder docs
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'
+  workflow_dispatch: {}
+
+jobs:
+  archive:
+    name: Update Flatpak Builder docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          sudo add-apt-repository ppa:flatpak/development
+          sudo apt update
+          sudo apt install -y flatpak flatpak-builder git libxml2-utils
+
+      - name: Get current docs version
+        run: |
+          old_flatpak_builder_version="$(xmllint --html --xpath "//p[@class='releaseinfo']/text()" docs/flatpak-builder-docs.html|sed "s/Version//g"|awk '{$1=$1};1')"
+          echo "OLD_FLATPAK_BUILDER_VERSION=${old_flatpak_builder_version}" >> $GITHUB_ENV
+
+      - name: Move docs
+        run: |
+          cp -vf /usr/share/doc/flatpak-builder/flatpak-builder-docs.html docs/
+
+      - name: Get new docs version
+        run: |
+          new_flatpak_builder_version="$(xmllint --html --xpath "//p[@class='releaseinfo']/text()" docs/flatpak-builder-docs.html|sed "s/Version//g"|awk '{$1=$1};1')"
+          echo "NEW_FLATPAK_BUILDER_VERSION=${new_flatpak_builder_version}" >> $GITHUB_ENV
+
+      - name: Compare versions
+        run: |
+          appstreamcli vercmp $NEW_FLATPAK_BUILDER_VERSION gt $OLD_FLATPAK_BUILDER_VERSION
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch-suffix: "short-commit-hash"
+          commit-message: |
+            (Automated) Update Flatpak Builder docs
+
+            Update Flatpak Builder docs from ${{env.OLD_FLATPAK_BUILDER_VERSION}} to ${{env.NEW_FLATPAK_BUILDER_VERSION}}
+          title: "(Automated) Update Flatpak Builder docs"
+          body: |
+            Update Flatpak Builder docs from ${{env.OLD_FLATPAK_BUILDER_VERSION}} to ${{env.NEW_FLATPAK_BUILDER_VERSION}}
+          delete-branch: true
+          sign-commits: true
