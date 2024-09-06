@@ -49,3 +49,4 @@ jobs:
             Update Flatpak Builder docs from ${{env.OLD_FLATPAK_BUILDER_VERSION}} to ${{env.NEW_FLATPAK_BUILDER_VERSION}}
           delete-branch: true
           sign-commits: true
+          draft: always-true
