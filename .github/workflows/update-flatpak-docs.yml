@@ -39,7 +39,7 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch-suffix: "short-commit-hash"
+          branch-suffix: "random"
           commit-message: |
             (Automated) Update Flatpak docs
 
