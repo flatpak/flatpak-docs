@@ -63,7 +63,7 @@ further below.
 
 - ``version`` is the branch to use when looking for the extension. This
   is useful to have parallel installations of the same extension in case
-  of an API/ABI break. This will be the ``branch`` used in the
+  of an API/ABI break. The value here will be the ``branch`` used in the
   extension manifest.
 
   If not specified it defaults to application or runtime branch of the
@@ -366,7 +366,7 @@ is discussed below.
         ...
 
 - ``id`` must have the correct prefix of the extension point.
-- ``branch`` refers to the extension version.
+- ``branch`` must be the ``version`` declared in the extension point.
 - ``runtime`` should be the ID of the parent module where the extension
   point is defined.
 - ``runtime-version`` is the version of the runtime used by the
