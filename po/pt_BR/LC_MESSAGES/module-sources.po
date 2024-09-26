@@ -1,0 +1,505 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-26 16:32-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../module-sources.rst:2
+msgid "Module Sources"
+msgstr ""
+
+#: ../../module-sources.rst:4
+msgid "This page will go in depth on each source type with examples."
+msgstr ""
+
+#: ../../module-sources.rst:6
+msgid ""
+"Sources are copied or downloaded to the source directory before the build"
+" starts. The source directory lives under flatpak-builder's state "
+"directory, which by default is located at ``.flatpak-builder`` on host, "
+"relative to the manifest root. The source directory for bzr, git and svn "
+"sources is at ``.flatpak-builder/git, .flatpak-builder/bzr, .flatpak-"
+"builder/svn`` respectively while ``.flatpak-"
+"builder/downloads/<checksum>`` is used for file and archive sources."
+msgstr ""
+
+#: ../../module-sources.rst:14
+msgid ""
+"The ``type`` property of a source determines how that source will be "
+"handled before or during build by ``flatpak`` or ``flatpak-builder``."
+msgstr ""
+
+#: ../../module-sources.rst:17
+msgid ""
+"Most of the sources support ``path`` and ``url`` property where ``path`` "
+"is relative to the root of manifest and ``url`` is a direct url to the "
+"source."
+msgstr ""
+
+#: ../../module-sources.rst:21
+msgid ""
+"The ``url`` property requires a checksum to be specified after using "
+"``sha256`` or ``sha512``."
+msgstr ""
+
+#: ../../module-sources.rst:24
+msgid ""
+"There are a few properties common to all source types ``only-arches``, "
+"``skip-arches`` and ``dest``."
+msgstr ""
+
+#: ../../module-sources.rst:27
+msgid ""
+"``only-arches`` and ``skip-arches`` are used to build the source only on "
+"the specified architecture or skip building it on the specified "
+"architecture respectively. This is often useful for binary packages."
+msgstr ""
+
+#: ../../module-sources.rst:33
+msgid ""
+"Note that ``only-arches`` or ``skip-arches`` are used to control if that "
+"particular source is downloaded on the specified architecture(s). If not "
+"specified, the default is to download on all architectures."
+msgstr ""
+
+#: ../../module-sources.rst:59
+msgid ""
+"``dest`` is used to indicate a directory inside the source directory "
+"where the given source will be placed:"
+msgstr ""
+
+#: ../../module-sources.rst:78
+msgid ""
+"The contents of ``foo.tar.xz`` will be placed under ``.flatpak-"
+"builder/build/coolapp/`` and the contents of the ``bar.git`` repo will go"
+" under ``.flatpak-builder/build/coolapp/src/deps/bar``."
+msgstr ""
+
+#: ../../module-sources.rst:82
+msgid ""
+"This is often useful to replace bundled dependencies inside sources with "
+"custom versions."
+msgstr ""
+
+#: ../../module-sources.rst:86
+msgid "Archive sources"
+msgstr ""
+
+#: ../../module-sources.rst:88
+msgid ""
+"These are sources of ``type: archive``. They are downloaded to the "
+"download directory and extracted into the build directory when the build "
+"starts."
+msgstr ""
+
+#: ../../module-sources.rst:92
+msgid "A typical example of using this is:"
+msgstr ""
+
+#: ../../module-sources.rst:108
+msgid ""
+"``mirror-urls`` is a list of alternative urls that will be used for "
+"downloading, if the main ``url`` fails."
+msgstr ""
+
+#: ../../module-sources.rst:111
+msgid ""
+"The ``sha256`` is the sha256 checksum of the downloaded file, supplied by"
+" upstream of the source or calculated using ``sha256sum``."
+msgstr ""
+
+#: ../../module-sources.rst:114
+msgid ""
+"``dest-filename`` is not usually used for this source. It is used to "
+"rename the downloaded file. This can be useful if the buildsystem expects"
+" a certain name for the archive."
+msgstr ""
+
+#: ../../module-sources.rst:118
+msgid ""
+"``strip-components`` is the number of pathname components to strip during"
+" extraction. This defaults to ``1`` if not specified."
+msgstr ""
+
+#: ../../module-sources.rst:148
+msgid ""
+"``flatpak-builder`` supports the following archive types: ``\"rpm\", "
+"\"tar\", \"tar-gzip\", \"tar-compress\", \"tar-bzip2\", \"tar-lzip\", "
+"\"tar-lzma\", \"tar-lzop\", \"tar-xz\", \"tar-zst\", \"zip\", \"7z\"`` "
+"The archive type is guessed from the suffix of the file basename."
+msgstr ""
+
+#: ../../module-sources.rst:152
+msgid ""
+"``rpm`` is extracted with ``rpm2cpio``, ``zip`` is extracted with "
+"``unzip`` and ``7z`` is extracted with ``7z``. The rest are extracted "
+"with ``tar``. These should be present on host so that flatpak-builder can"
+" use them.The archive type is calculated from the suffix of the file "
+"basename."
+msgstr ""
+
+#: ../../module-sources.rst:158
+msgid ""
+"In case the correct archive type cannot be `guessed` from the filename "
+"``archive-type: str`` can be used to manually specify the type where "
+"``str`` is one of the above types."
+msgstr ""
+
+#: ../../module-sources.rst:163
+msgid "Git sources"
+msgstr ""
+
+#: ../../module-sources.rst:165
+msgid ""
+"These are sources of ``type: git`` and it requires ``git`` to be "
+"available on the host. A typical example of using this is:"
+msgstr ""
+
+#: ../../module-sources.rst:179
+msgid ""
+"``url`` is url of the git repository. The following schemes are usually "
+"used ``http://``, ``https://``, ``git://``, ``git+ssh://``, ``ssh://``."
+msgstr ""
+
+#: ../../module-sources.rst:185
+msgid ""
+"To use the ``file://`` scheme for a git repository, do ``git config "
+"--global protocol.file.allow always``."
+msgstr ""
+
+#: ../../module-sources.rst:188
+msgid ""
+"A ``branch: branch_name`` can also be used in place of a ``tag`` and "
+"``commit``."
+msgstr ""
+
+#: ../../module-sources.rst:191
+msgid "``commit`` is the commit to use from the git repository."
+msgstr ""
+
+#: ../../module-sources.rst:193
+msgid ""
+"In case of a tag, this must be the commit, the tag points to (``git rev-"
+"list -n 1 $tag``). In case of a ``branch``, it is verified that the "
+"branch points to this specific commit (``git show-ref "
+"\"refs/heads/$branch\"``)."
+msgstr ""
+
+#: ../../module-sources.rst:200
+msgid ""
+"To ensure reproduciblity and avoid build failures, it is best to avoid "
+"using ``branch`` and always add a ``commit`` to a ``tag``."
+msgstr ""
+
+#: ../../module-sources.rst:203
+msgid ""
+"By default ``flatpak-builder`` will do a shallow-clone of the git "
+"repository and checkout submodules if any. ``disable-shallow-clone: "
+"true`` and ``disable-submodules`` can be used to override this behaviour."
+msgstr ""
+
+#: ../../module-sources.rst:207
+msgid ""
+"``git`` source also supports using a local git repository with the "
+"``path`` property."
+msgstr ""
+
+#: ../../module-sources.rst:212
+msgid ""
+"Currently ``flatpak-builder`` does not support ``git lfs``. It can be "
+"worked around with using ``buildsystem: simple`` and running ``git lfs "
+"pull`` in the ``build-commands``."
+msgstr ""
+
+#: ../../module-sources.rst:217
+msgid "File sources"
+msgstr ""
+
+#: ../../module-sources.rst:219
+msgid ""
+"These are sources of ``type: file``. They are copied into the source "
+"directory without any modifications."
+msgstr ""
+
+#: ../../module-sources.rst:222
+msgid ""
+"Any arbitrary file type can be specified here along with ``buildsystem: "
+"simple`` to manually modify, build or install it within ``build-"
+"commands``. This can be used in place of ``type: archive`` to manually "
+"extract an archive, uncompress squashfs filesystems (like snaps) etc. "
+"provided the tool being used is made available inside the sandbox."
+msgstr ""
+
+#: ../../module-sources.rst:229
+msgid "A typical example is:"
+msgstr ""
+
+#: ../../module-sources.rst:273
+msgid ""
+"``dest-filename`` is typically used with this source type to make the "
+"filename `predictable` for the commands in the ``build-commands`` array."
+msgstr ""
+
+#: ../../module-sources.rst:277
+msgid "Patch sources"
+msgstr ""
+
+#: ../../module-sources.rst:279
+msgid ""
+"These are sources of ``type: patch`` used with patchfiles. This requires "
+"``patch`` and optionally ``git`` to be available on host. The typical "
+"usage is to create patchfiles and place them somewhere relative to the "
+"manifest root. The ``path`` property is the location of the file relative"
+" to the manifest."
+msgstr ""
+
+#: ../../module-sources.rst:301
+msgid "Multiple patches can be specified with ``paths``:"
+msgstr ""
+
+#: ../../module-sources.rst:310
+msgid ""
+"By default, ``patch -p 1`` is used, but it can be adjusted with ``strip-"
+"components`` and additional options can be passed with ``options``."
+msgstr ""
+
+#: ../../module-sources.rst:314
+msgid ""
+"The default patchfiles generated with ``git format-patch`` or ``git "
+"diff`` do not need any additional options."
+msgstr ""
+
+#: ../../module-sources.rst:327
+msgid ""
+"``use-git: true`` and ``use-git-am: true`` can be used to use ``git "
+"apply`` and ``git am`` respectively instead of ``patch``."
+msgstr ""
+
+#: ../../module-sources.rst:331
+msgid "Shell and Script sources"
+msgstr ""
+
+#: ../../module-sources.rst:333
+msgid ""
+"A shell source with ``type: shell`` is used to modify a source during "
+"extraction. ``commands`` takes in any shell commands."
+msgstr ""
+
+#: ../../module-sources.rst:336
+msgid ""
+"This is usually used to make quick modifications to sources but a patch "
+"should be used for any complex modification to make it fail safe."
+msgstr ""
+
+#: ../../module-sources.rst:351
+msgid ""
+"A script source with ``type: script`` is used to create self-contained "
+"``/bin/sh`` scripts. ``commands`` takes in any shell commands and ``dest-"
+"filename`` can be used to specify the name for the resultant file inside "
+"the source directory."
+msgstr ""
+
+#: ../../module-sources.rst:356
+msgid ""
+"This is often useful if the executable requires custom arguments to be "
+"passed before launch."
+msgstr ""
+
+#: ../../module-sources.rst:377
+msgid "Extra Data"
+msgstr ""
+
+#: ../../module-sources.rst:379
+msgid ""
+"Extra data is often used for proprietary applications to avoid "
+"redistribution by downloading the binary package provided by the original"
+" distributors during installation by the user. It may also be used for "
+"sources with very large file sizes (over several gigabytes) to avoid "
+"storing a huge amount of data in the ostree repository."
+msgstr ""
+
+#: ../../module-sources.rst:385
+msgid ""
+"Since the package is downloaded only when installing, the application "
+"metadata such as the desktop file, icon and the MetaInfo file must be "
+"installed beforehand so that appstream can compose them to generate "
+"catalogue data."
+msgstr ""
+
+#: ../../module-sources.rst:390
+msgid ""
+"When installing the Flatpak package containing an extra data source, "
+"Flatpak calls the ``apply_extra`` script which executes the command "
+"defined in it. The dependencies needed to run the commands in the script "
+"must be available in the sandbox."
+msgstr ""
+
+#: ../../module-sources.rst:395
+msgid "The following properties must be present for an `extra-data` source:"
+msgstr ""
+
+#: ../../module-sources.rst:397
+msgid ""
+"``type: extra-data`` indicates that this is an extra-data source. "
+"Multiple such sources can exist."
+msgstr ""
+
+#: ../../module-sources.rst:400
+msgid ""
+"``url`` should be a direct link to the binary source package. This is "
+"downloaded by Flatpak when installing the Flatpak package."
+msgstr ""
+
+#: ../../module-sources.rst:403
+msgid "``sha256`` should be its SHA-256 checksum of the above package."
+msgstr ""
+
+#: ../../module-sources.rst:405
+msgid ""
+"``size`` should be the file size of the package in `bytes` (``wc --bytes "
+"< file``)."
+msgstr ""
+
+#: ../../module-sources.rst:407
+msgid "``filename`` can be anything to name the downloaded source package."
+msgstr ""
+
+#: ../../module-sources.rst:409
+msgid ""
+"The binary source packages are often specific to one architecture, so "
+"``only-arches`` can be used to make the build specific to that "
+"architecture only."
+msgstr ""
+
+#: ../../module-sources.rst:413
+msgid "A typical extra-data manifest may look like:"
+msgstr ""
+
+#: ../../module-sources.rst:456
+msgid "The ``buildsystem`` is ``simple`` as the module is manually installed."
+msgstr ""
+
+#: ../../module-sources.rst:458
+msgid ""
+"The ``apply_extra`` script here requires ``unsquashfs`` to run, so that "
+"is built and installed."
+msgstr ""
+
+#: ../../module-sources.rst:463
+msgid ""
+"Flatpak supports exporting icons, desktop files etc. from "
+"``/app/extra/export/share/`` however when creating a Flatpak package for "
+"a software store like Flathub or when composing the metadata with "
+"appstreamcli, desktop files and icons must not be placed in "
+"``/app/extra/export/`` and instead should go to the proper locations "
+"documented in :doc:`conventions`."
+msgstr ""
+
+#: ../../module-sources.rst:470
+msgid ""
+"The icon, desktop file and Metainfo must be added as sources. The "
+"``path`` indicates that they reside in the same directory relative to the"
+" manifest. The first three lines of the ``build-commands`` installs them "
+"so that ``appstream-compose`` can compose the metadata."
+msgstr ""
+
+#: ../../module-sources.rst:475
+msgid ""
+"The last line creates an empty symlink from ``${FLATPAK_DEST}/extra/`` to"
+" ``${FLATPAK_DEST}/bin/`` so that the executable is found in ``$PATH`` "
+"inside the sandbox and can be used in the top-level ``command: "
+"foo_binary`` property. Instead of a symlink this also often a script "
+"like:"
+msgstr ""
+
+#: ../../module-sources.rst:487
+msgid ""
+"The ``subdir`` directory comes from the contents of the extracted snap "
+"and how that is installed."
+msgstr ""
+
+#: ../../module-sources.rst:490
+msgid ""
+"The commands needed to extract the snap are specified in the "
+"``apply_extra`` script. These can be any shell commands that run when "
+"installing the Flatpak package but note that it won't have access to "
+"anything outside ``/app/extra``. The script is run in a sandbox "
+"(equivalent to ``flatpak run --sandbox``) and won't have network, dbus or"
+" any host access. The ``apply_extra`` can itself be a seperate script "
+"file too but must be installed as ``${FLATPAK_DEST}/bin/apply_extra``."
+msgstr ""
+
+#: ../../module-sources.rst:498
+msgid ""
+"``unsquashfs -quiet -no-progress foo.snap`` extracts the snap package "
+"into a directory called ``squashfs-root``, then the contents of that "
+"direcory are moved to ``/app/extra`` and lastly ``squashfs-root`` and the"
+" snap package itself is cleaned up to save space."
+msgstr ""
+
+#: ../../module-sources.rst:503
+msgid ""
+"This is another example that can be used to extract Debian packages "
+"(``.deb``)."
+msgstr ""
+
+#: ../../module-sources.rst:523
+msgid ""
+"Flatpak extensions can also use extra-data sources in a similar manner. "
+"This is an example of an extension manifest utilising an extra-data "
+"source."
+msgstr ""
+
+#: ../../module-sources.rst:551
+msgid "For more information on Flatpak extensions please see :doc:`extension`."
+msgstr ""
+
+#: ../../module-sources.rst:554
+msgid "Directory source"
+msgstr ""
+
+#: ../../module-sources.rst:556
+msgid ""
+"A directory source with ``type: dir`` is best suited for use in CI to "
+"build the latest changes and avoid downloading multiple times. These "
+"don't support any caching, so it will be rebuilt each time the "
+"application is being built."
+msgstr ""
+
+#: ../../module-sources.rst:561
+msgid ""
+"When submitting an application to software stores like Flathub, ``dir`` "
+"should be avoided altogether."
+msgstr ""
+
+#: ../../module-sources.rst:564
+msgid ""
+"``path`` should be the path of the local directory relative to the "
+"manifest root path, whoose contents will be copied during build."
+msgstr ""
+
+#: ../../module-sources.rst:578
+msgid ""
+"Additonally there are `bzr`, `svn` and `inline` sources supported. `bzr` "
+"and `svn` requires the `bzr <https://code.launchpad.net/bzr>`_ and `svn "
+"<https://subversion.apache.org/>`_ commandline tools to be installed "
+"respectively. Please see :doc:`flatpak-builder-command-reference` for "
+"them."
+msgstr ""
+

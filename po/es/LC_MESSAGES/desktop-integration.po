@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-07 16:26-0600\n"
+"POT-Creation-Date: 2024-09-26 16:32-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../desktop-integration.rst:2
 msgid "Desktop Integration"
@@ -108,8 +108,7 @@ msgstr ""
 msgid ""
 "If you are not using one of these toolkits, it is possible to access the "
 "portals API directly. See the `Portals API documentation "
-"<https://flatpak.github.io/xdg-desktop-portal/portal-docs.html>`_ for "
-"more information."
+"<https://flatpak.github.io/xdg-desktop-portal/>`_ for more information."
 msgstr ""
 
 #: ../../desktop-integration.rst:54
@@ -130,7 +129,7 @@ msgstr ""
 msgid ""
 "Status icons are the same concept as the system tray or the taskbar on "
 "Windows, or menu bar icons on Mac. These are supported on most Linux "
-"distributions, through libappindicator."
+"distributions, through abstractions such as libappindicator."
 msgstr ""
 
 #: ../../desktop-integration.rst:66
@@ -146,30 +145,76 @@ msgstr ""
 
 #: ../../desktop-integration.rst:73
 msgid ""
-"XEmbed style icons will function with the ``x11`` permission but all "
-"other status icon interfaces require extra permissions to escape the "
-"sandbox and these services are not designed to be robust against "
-"untrusted software."
+"XEmbed style icons will function on desktops that support them with the "
+"``x11`` permission."
 msgstr ""
 
-#: ../../desktop-integration.rst:78
-msgid "System search"
+#: ../../desktop-integration.rst:77
+msgid "StatusNotifier"
 msgstr ""
 
-#: ../../desktop-integration.rst:80
+#: ../../desktop-integration.rst:79
 msgid ""
-"GNOME-based distributions, like CentOS, Fedora, Red Hat Enterprise Linux "
-"and Ubuntu, provide the option to integrate with system search, by "
-"providing a `search provider <https://developer-"
-"old.gnome.org/SearchProvider/>`_. This allows application-provided search"
-" results to appear in the Activities Overview."
+"StatusNotifier style icons will not function without extra permissions as"
+" it requires talking to a non-hardenend host service. Risks include "
+"impersonation of other software and exploitation of bugs in the host "
+"service such as image decoders."
+msgstr ""
+
+#: ../../desktop-integration.rst:83
+msgid ""
+"At the very minimum to use StatusNotifier you must have the ``--talk-"
+"name=org.kde.StatusNotifierWatcher`` permission to register an item."
 msgstr ""
 
 #: ../../desktop-integration.rst:86
+msgid ""
+"Depending on the exact implementation of StatusNotifier that your "
+"application is using it may need session bus ownership of "
+"``org.kde.StatusNotifierItem-$PID-$ITEM_ID``."
+msgstr ""
+
+#: ../../desktop-integration.rst:89
+msgid ""
+"This permission is problematic in Flatpak as the ``$PID`` value is often "
+"the same in sandboxes and the item will possibly conflict with other "
+"applications. However if needed the ``--own-name=org.kde.*`` permission "
+"will allow this. This opens many new risks including the ability to "
+"impersonate any KDE service or application possibly capturing important "
+"user data."
+msgstr ""
+
+#: ../../desktop-integration.rst:95
+msgid ""
+"Most implementations of StatusNotifer have dropped this requirement but "
+"known exceptions to this are Electron versions older than 23.3.0."
+msgstr ""
+
+#: ../../desktop-integration.rst:98
+msgid ""
+"Current versions of Electron, Chromium, KNotifications, and "
+"libappindicator are known to work without ownership permissions."
+msgstr ""
+
+#: ../../desktop-integration.rst:102
+msgid "System search"
+msgstr ""
+
+#: ../../desktop-integration.rst:104
+msgid ""
+"GNOME-based distributions, like CentOS, Fedora, Red Hat Enterprise Linux "
+"and Ubuntu, provide the option to integrate with system search, by "
+"providing a `search provider "
+"<https://developer.gnome.org/documentation/tutorials/search-"
+"provider.html>`_. This allows application-provided search results to "
+"appear in the Activities Overview."
+msgstr ""
+
+#: ../../desktop-integration.rst:110
 msgid "Window controls"
 msgstr ""
 
-#: ../../desktop-integration.rst:88
+#: ../../desktop-integration.rst:112
 msgid ""
 "Window controls are the buttons used to close, maximize and minimize "
 "windows. These do vary across Linux desktops, particularly in terms of "
@@ -179,14 +224,14 @@ msgid ""
 "requirement."
 msgstr ""
 
-#: ../../desktop-integration.rst:94
+#: ../../desktop-integration.rst:118
 msgid ""
 "From a user experience perspective, it is important to ensure that window"
 " controls appear on the same side of the window as other desktops. On "
 "Linux this is the right side of the window (like Windows)."
 msgstr ""
 
-#: ../../desktop-integration.rst:98
+#: ../../desktop-integration.rst:122
 msgid ""
 "On X11 applications can rely on system-provided titlebars if they don't "
 "want to draw their own window controls. For a consistent Wayland "
@@ -195,11 +240,11 @@ msgid ""
 "<https://gitlab.gnome.org/jadahl/libdecor>`_ for a general solution."
 msgstr ""
 
-#: ../../desktop-integration.rst:105
+#: ../../desktop-integration.rst:129
 msgid "Window decorations"
 msgstr ""
 
-#: ../../desktop-integration.rst:107
+#: ../../desktop-integration.rst:131
 msgid ""
 "If your application uses a dark visual style as well as system-provided "
 "window decorations, the ``GTK_THEME_VARIANT=dark`` X11 window property "
@@ -207,11 +252,11 @@ msgid ""
 "application window. This can be done by running::"
 msgstr ""
 
-#: ../../desktop-integration.rst:115
+#: ../../desktop-integration.rst:139
 msgid "Global menus"
 msgstr ""
 
-#: ../../desktop-integration.rst:117
+#: ../../desktop-integration.rst:141
 msgid ""
 "If your application uses `Gtk.Application:menubar "
 "<https://docs.gtk.org/gtk4/class.Application.html#properties>`_ or "
@@ -219,135 +264,206 @@ msgid ""
 "expected from within a sandboxed application."
 msgstr ""
 
-#: ../../desktop-integration.rst:121
+#: ../../desktop-integration.rst:145
 msgid "Theming"
 msgstr ""
 
-#: ../../desktop-integration.rst:123
+#: ../../desktop-integration.rst:147
 msgid ""
 "Flatpak applications cannot directly use the system theme. This happens "
 "because flatpaks do not have the ability to use data files or libraries "
 "in ``/usr`` (where system themes are typically located). The solution to "
-"this was to package themes as Flatpaks, as relying upon the host to have "
+"this is to package themes as Flatpaks, as relying upon the host to have "
 "the correct version for every flatpak defeats the portability benefits it"
-" provides. These themes are provided as `extensions "
-"<https://github.com/flatpak/flatpak/wiki/Extensions>`_, to the "
-"Freedesktop runtime when the extension point is Gtk, and to the KDE "
-"runtime when the extension point is Qt."
+" provides. These themes are provided as :doc:`extension`, to the "
+"Freedesktop runtime for Gtk3 themes, and to the KDE runtime for Qt "
+"themes."
 msgstr ""
 
-#: ../../desktop-integration.rst:125
+#: ../../desktop-integration.rst:149
 msgid ""
 "The theming system requires Flatpak 0.8.4+ and applications using up to "
 "date ``org.gnome.Platform`` 3.24+, or ``org.freedesktop.Platform`` 1.6+, "
 "or ``org.kde.Platform`` 5.9+."
 msgstr ""
 
-#: ../../desktop-integration.rst:128
+#: ../../desktop-integration.rst:152
 msgid "Installing themes"
 msgstr ""
 
-#: ../../desktop-integration.rst:131
-msgid "Instructions for Gtk"
+#: ../../desktop-integration.rst:155
+msgid "Instructions for Gtk themes"
 msgstr ""
 
-#: ../../desktop-integration.rst:133
+#: ../../desktop-integration.rst:157
 msgid ""
-"The current Gtk themes are packaged in the `flathub "
-"<https://flathub.org/>`_ repository which you can add (if it's not "
-"already added) by running::"
-msgstr ""
-
-#: ../../desktop-integration.rst:137
-msgid ""
-"To see a list of currently packaged themes you can use the command "
-"``flatpak search gtk3theme`` (available since Flatpak version 0.10.1). In"
-" case you use an older version of Flatpak than that, you can use the "
-"command ``flatpak remote-ls flathub | grep org.gtk.Gtk3theme``. The "
-"difference in output between these two commands is that the first prints "
-"the application ID, the remote from which the theme comes and the theme's"
-" description, while the second prints only the full name of the theme's "
-"flatpak package."
-msgstr ""
-
-#: ../../desktop-integration.rst:139
-msgid ""
-"You can install themes with the command ``flatpak install flathub "
-"org.gtk.Gtk3theme.Foo``, replacing ``Foo`` with the name of the desired "
-"theme."
-msgstr ""
-
-#: ../../desktop-integration.rst:142
-msgid "Instructions for Qt"
-msgstr ""
-
-#: ../../desktop-integration.rst:144
-msgid ""
-"For the Qt theming to work, the flatpak packages kstyle and platformtheme"
-" must be installed. These are packed in the kdeapps repository which you "
-"can add by running::"
-msgstr ""
-
-#: ../../desktop-integration.rst:148
-msgid "Afterwards the two packages can be installed with the following commands::"
-msgstr ""
-
-#: ../../desktop-integration.rst:154
-msgid "Applying themes"
-msgstr ""
-
-#: ../../desktop-integration.rst:156
-msgid ""
-"There is no ideal way to specify the theme Flatpak applications use. The "
-"applications will try to match the system theme currently being used, if "
-"it corresponds to any of the Flatpak themes installed, and will fall back"
-" to Adwaita (if they use Gtk2 or Gtk3) or the default Qt theme (if they "
-"use Qt) if a corresponding theme isn't detected."
-msgstr ""
-
-#: ../../desktop-integration.rst:158
-msgid ""
-"As of Flatpak 0.10.1, the Flatpak system can detect whether the system "
-"themes available correspond to any Flatpak themes available in the "
-"repositories, and, if so, will automatically install found themes at "
-"update time based upon the ``gtk-theme`` Dconf key. This key however can "
-"contain only one value, the one of the currently being used theme, which "
-"means that the Flatpak versions of matching themes that aren't currently "
-"being used aren't installed until those themes are enabled. If none of "
-"the corresponding system themes are currently being used, the "
-"applications will fall back to Adwaita or the default Qt theme."
+"As of Flatpak 0.10.1, Flatpak can automatically detect the active Gtk "
+"theme on host by reading the value of the ``gtk-theme`` DConf key."
 msgstr ""
 
 #: ../../desktop-integration.rst:160
 msgid ""
-"On X11, Gtk3 picks up the themes via XSettings. Specifically, the GNOME "
-"XSettings daemon ``gsd-xsettings`` reads the DConf values and converts "
-"them into the XSettings values. For this to work, you need an xsettings "
-"daemon that is correctly configured. Gtk3 on Wayland picks up themes "
-"directly via Dconf. For this to work, you can either use KDE (with ``kde-"
-"gtk-config`` > 5.11.95), GNOME, which works out of the box, or manually "
-"configure the dconf keys under ``/org/gnome/desktop/interface/``. For the"
-" DConf option to work on Wayland the application must also be configured "
-"to have DConf access."
-msgstr ""
-
-#: ../../desktop-integration.rst:163
-msgid "Other notes on theming"
+"If the corressponding theme is packaged as an extension in the remote, "
+"Flatpak will automatically install it during ``flatpak install`` or "
+"``flatpak update``."
 msgstr ""
 
 #: ../../desktop-integration.rst:165
-msgid ""
-"In regards to icon themes, since Flatpak 0.8.8 the host icons are exposed"
-" to the guest, so that there is usually no need for the presence of "
-"Flatpak icon themes."
+msgid "Instructions for Qt themes"
 msgstr ""
 
 #: ../../desktop-integration.rst:167
 msgid ""
-"If you use the *Global Dark Theme* option (removed in GNOME-Tweaks 3.28)"
-"  in ``gnome-tweak-tool`` it will not work as that simply writes to "
-"``settings.ini`` which isn’t available in the sandbox. Use dark versions "
-"of themes instead if they exist."
+"There are a few Qt theme extensions packaged on Flathub. To see a list, "
+"you can run::"
+msgstr ""
+
+#: ../../desktop-integration.rst:172
+msgid "Then you can install the theme with::"
+msgstr ""
+
+#: ../../desktop-integration.rst:176
+msgid ""
+"replacing ``Foo`` with the name of the desired theme. The theme needs to "
+"be available for the KDE runtime branch used by the application."
+msgstr ""
+
+#: ../../desktop-integration.rst:180
+msgid "Gtk look and feel in Qt applications"
+msgstr ""
+
+#: ../../desktop-integration.rst:182
+msgid ""
+"Since ``org.kde.Platform`` runtime branches 5.15-22.08+ and 6.5+, on "
+"Wayland, ``org.kde.WaylandDecoration.QAdwaitaDecorations`` and "
+"``org.kde.WaylandDecoration.QGnomePlatform-decoration`` needs to be "
+"installed. Please see the `usage "
+"<https://github.com/FedoraQt/QAdwaitaDecorations?tab=readme-ov-"
+"file#usage>`_ instructions upstream too."
+msgstr ""
+
+#: ../../desktop-integration.rst:188
+msgid "These plugins will be part of upstream starting at Qt 6.8."
+msgstr ""
+
+#: ../../desktop-integration.rst:190
+msgid ""
+"For older runtimes, ``org.kde.PlatformTheme.QGnomePlatform`` and "
+"``org.kde.WaylandDecoration.QGnomePlatform-decoration`` needs to be "
+"installed."
+msgstr ""
+
+#: ../../desktop-integration.rst:195
+msgid "Applying themes"
+msgstr ""
+
+#: ../../desktop-integration.rst:197
+msgid ""
+"The pre-requisite to applying themes in Flatpaks is to have the theme "
+"available to the application in the sandbox, commonly done by packaging "
+"them as theme extensions."
+msgstr ""
+
+#: ../../desktop-integration.rst:201
+msgid "Now the system theme needs to be communicated from host to the sandbox."
+msgstr ""
+
+#: ../../desktop-integration.rst:203
+msgid ""
+"On X11, Gtk3 picks up themes from XSettings. Specifically, on GNOME, the "
+"GNOME XSettings daemon ``gsd-xsettings`` reads the DConf values and "
+"converts them into XSettings values. On GNOME, this should work by "
+"default provided ``gsd-xsettings`` is running."
+msgstr ""
+
+#: ../../desktop-integration.rst:208
+msgid ""
+"On Wayland, the active theme is exposed via the corresponding Settings "
+"portal. This requires the portal backend for the desktop environment to "
+"be installed."
+msgstr ""
+
+#: ../../desktop-integration.rst:212
+msgid ""
+"Once the theme is installed and exposed in the sandbox, depending on the "
+"toolkit/libraries used or the application, it will automatically be "
+"applied."
+msgstr ""
+
+#: ../../desktop-integration.rst:216
+msgid ""
+"If the theme is not available via Flatpak extensions or portal or "
+"xsettings support is lacking, Gtk and Qt applications will fallback to "
+"using Adwaita or the default Qt theme."
+msgstr ""
+
+#: ../../desktop-integration.rst:220
+msgid ""
+"In this case, either the theme needs to be packaged as an extension or "
+"the application needs to have permission to read the theme and Gtk or Qt "
+"settings from host, usually by giving it filesystem access. This is "
+"undesirable in most cases as it weakens the sandbox and reduces "
+"portability. The desktop environments should provide proper portal or "
+"XSettings daemon support."
+msgstr ""
+
+#: ../../desktop-integration.rst:227
+msgid ""
+"If a Gtk theme is not packaged as an extension, an unmaintained extension"
+" can be created for it. Please see :ref:`extension:Creating an "
+"unmaintained Gtk theme extension`."
+msgstr ""
+
+#: ../../desktop-integration.rst:232
+msgid "Appearance Settings"
+msgstr ""
+
+#: ../../desktop-integration.rst:234
+msgid ""
+"Appearance settings such as the Freedesktop color-scheme preference are "
+"also exposed similarly via the respective Settings portal. The "
+"application needs to support reading it and the proper portal backends "
+"are needed to be installed for this to work."
+msgstr ""
+
+#: ../../desktop-integration.rst:240
+msgid "Icons"
+msgstr ""
+
+#: ../../desktop-integration.rst:242
+msgid ""
+"Since Flatpak 0.8.8, host icons from ``/usr/share/icons`` are exposed in "
+"the sandbox in ``/run/host/share/icons`` and ``$XDG_DATA_HOME/icons`` in "
+"``/run/host/user-share/icons``."
+msgstr ""
+
+#: ../../desktop-integration.rst:246
+msgid "``~/.icons`` is a legacy path, and should not be used."
+msgstr ""
+
+#: ../../desktop-integration.rst:249
+msgid "Fonts"
+msgstr ""
+
+#: ../../desktop-integration.rst:251
+msgid ""
+"Flatpak exposes fonts from host to the sandbox and the runtime ships the "
+"default fontconfig from upstream."
+msgstr ""
+
+#: ../../desktop-integration.rst:254
+msgid ""
+"Fonts from ``/usr/share/fonts`` are exposed in ``/run/host/fonts``, "
+"``/usr/local/share/fonts`` is exposed in ``/run/host/local-fonts`` and "
+"``$XDG_DATA_HOME/fonts`` in ``/run/host/user-fonts``."
+msgstr ""
+
+#: ../../desktop-integration.rst:258
+msgid "``~/.fonts`` is a legacy path, and should not be used."
+msgstr ""
+
+#: ../../desktop-integration.rst:260
+msgid "Fontconfig config files from host are not exposed."
 msgstr ""
 
 #~ msgid "Toolkits like GTK and Qt provide transparent support for portals:"
@@ -377,5 +493,190 @@ msgstr ""
 #~ " 5 equivalent they will work as "
 #~ "expected from within a sandboxed "
 #~ "application."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you are not using one of "
+#~ "these toolkits, it is possible to "
+#~ "access the portals API directly. See "
+#~ "the `Portals API documentation "
+#~ "<https://flatpak.github.io/xdg-desktop-portal/portal-"
+#~ "docs.html>`_ for more information."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Status icons are the same concept "
+#~ "as the system tray or the taskbar"
+#~ " on Windows, or menu bar icons "
+#~ "on Mac. These are supported on "
+#~ "most Linux distributions, through "
+#~ "libappindicator."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "XEmbed style icons will function with"
+#~ " the ``x11`` permission but all other"
+#~ " status icon interfaces require extra "
+#~ "permissions to escape the sandbox and"
+#~ " these services are not designed to"
+#~ " be robust against untrusted software."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "GNOME-based distributions, like CentOS, "
+#~ "Fedora, Red Hat Enterprise Linux and "
+#~ "Ubuntu, provide the option to integrate"
+#~ " with system search, by providing a"
+#~ " `search provider <https://developer-"
+#~ "old.gnome.org/SearchProvider/>`_. This allows "
+#~ "application-provided search results to "
+#~ "appear in the Activities Overview."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Flatpak applications cannot directly use "
+#~ "the system theme. This happens because"
+#~ " flatpaks do not have the ability "
+#~ "to use data files or libraries in"
+#~ " ``/usr`` (where system themes are "
+#~ "typically located). The solution to this"
+#~ " was to package themes as Flatpaks,"
+#~ " as relying upon the host to "
+#~ "have the correct version for every "
+#~ "flatpak defeats the portability benefits "
+#~ "it provides. These themes are provided"
+#~ " as `extensions "
+#~ "<https://github.com/flatpak/flatpak/wiki/Extensions>`_, to "
+#~ "the Freedesktop runtime when the "
+#~ "extension point is Gtk, and to the"
+#~ " KDE runtime when the extension point"
+#~ " is Qt."
+#~ msgstr ""
+
+#~ msgid "Instructions for Gtk"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The current Gtk themes are packaged "
+#~ "in the `flathub <https://flathub.org/>`_ "
+#~ "repository which you can add (if "
+#~ "it's not already added) by running::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To see a list of currently "
+#~ "packaged themes you can use the "
+#~ "command ``flatpak search gtk3theme`` "
+#~ "(available since Flatpak version 0.10.1). "
+#~ "In case you use an older version"
+#~ " of Flatpak than that, you can "
+#~ "use the command ``flatpak remote-ls "
+#~ "flathub | grep org.gtk.Gtk3theme``. The "
+#~ "difference in output between these two"
+#~ " commands is that the first prints"
+#~ " the application ID, the remote from"
+#~ " which the theme comes and the "
+#~ "theme's description, while the second "
+#~ "prints only the full name of the"
+#~ " theme's flatpak package."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can install themes with the "
+#~ "command ``flatpak install flathub "
+#~ "org.gtk.Gtk3theme.Foo``, replacing ``Foo`` with "
+#~ "the name of the desired theme."
+#~ msgstr ""
+
+#~ msgid "Instructions for Qt"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For the Qt theming to work, the"
+#~ " flatpak packages kstyle and platformtheme"
+#~ " must be installed. These are packed"
+#~ " in the kdeapps repository which you"
+#~ " can add by running::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Afterwards the two packages can be "
+#~ "installed with the following commands::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "There is no ideal way to specify"
+#~ " the theme Flatpak applications use. "
+#~ "The applications will try to match "
+#~ "the system theme currently being used,"
+#~ " if it corresponds to any of "
+#~ "the Flatpak themes installed, and will"
+#~ " fall back to Adwaita (if they "
+#~ "use Gtk2 or Gtk3) or the default"
+#~ " Qt theme (if they use Qt) if"
+#~ " a corresponding theme isn't detected."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As of Flatpak 0.10.1, the Flatpak "
+#~ "system can detect whether the system "
+#~ "themes available correspond to any "
+#~ "Flatpak themes available in the "
+#~ "repositories, and, if so, will "
+#~ "automatically install found themes at "
+#~ "update time based upon the ``gtk-"
+#~ "theme`` Dconf key. This key however "
+#~ "can contain only one value, the "
+#~ "one of the currently being used "
+#~ "theme, which means that the Flatpak "
+#~ "versions of matching themes that aren't"
+#~ " currently being used aren't installed "
+#~ "until those themes are enabled. If "
+#~ "none of the corresponding system themes"
+#~ " are currently being used, the "
+#~ "applications will fall back to Adwaita"
+#~ " or the default Qt theme."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "On X11, Gtk3 picks up the themes"
+#~ " via XSettings. Specifically, the GNOME "
+#~ "XSettings daemon ``gsd-xsettings`` reads "
+#~ "the DConf values and converts them "
+#~ "into the XSettings values. For this "
+#~ "to work, you need an xsettings "
+#~ "daemon that is correctly configured. "
+#~ "Gtk3 on Wayland picks up themes "
+#~ "directly via Dconf. For this to "
+#~ "work, you can either use KDE (with"
+#~ " ``kde-gtk-config`` > 5.11.95), "
+#~ "GNOME, which works out of the box,"
+#~ " or manually configure the dconf keys"
+#~ " under ``/org/gnome/desktop/interface/``. For the"
+#~ " DConf option to work on Wayland "
+#~ "the application must also be configured"
+#~ " to have DConf access."
+#~ msgstr ""
+
+#~ msgid "Other notes on theming"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In regards to icon themes, since "
+#~ "Flatpak 0.8.8 the host icons are "
+#~ "exposed to the guest, so that "
+#~ "there is usually no need for the"
+#~ " presence of Flatpak icon themes."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you use the *Global Dark Theme*"
+#~ " option (removed in GNOME-Tweaks "
+#~ "3.28)  in ``gnome-tweak-tool`` it "
+#~ "will not work as that simply "
+#~ "writes to ``settings.ini`` which isn’t "
+#~ "available in the sandbox. Use dark "
+#~ "versions of themes instead if they "
+#~ "exist."
 #~ msgstr ""
 

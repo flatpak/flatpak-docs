@@ -9,17 +9,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"POT-Creation-Date: 2024-09-26 16:32-0300\n"
 "PO-Revision-Date: 2018-05-21 03:13-0400\n"
 "Last-Translator: Baptiste Mille-Mathias <baptiste.millemathias@gmail.com>"
 "\n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../hosting-a-repository.rst:2
 msgid "Hosting a repository"
@@ -100,6 +100,239 @@ msgid ""
 "``.flatpakrepo`` files should include the base64-encoded version of the "
 "GPG key that was used to sign the repository. This can be obtained with "
 "the following command::"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:66
+#, fuzzy
+msgid "Hosting a repository on Gitlab/Github pages"
+msgstr "Héberger un dépôt"
+
+#: ../../hosting-a-repository.rst:68
+msgid ""
+"A Flatpak repository can be easily hosted through Gitlab or Github pages "
+"and distributed to users."
+msgstr ""
+
+#: ../../hosting-a-repository.rst:72
+msgid ""
+"Github or Gitlab may have pipeline quotas, storage and bandwidth limits. "
+"Please consult their documentation on this."
+msgstr ""
+
+#: ../../hosting-a-repository.rst:76
+msgid "On Gitlab"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:78
+msgid "The instructions will use Gitlab.com."
+msgstr ""
+
+#: ../../hosting-a-repository.rst:80
+msgid "Create a new blank repository on Gitlab"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:82
+msgid "Clone the repository locally"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:88
+msgid "Create a ``.gitlab-ci.yml`` with the following contents."
+msgstr ""
+
+#: ../../hosting-a-repository.rst:91
+msgid "A worflow that builds for aarch64 and x86_64 is provided below."
+msgstr ""
+
+#: ../../hosting-a-repository.rst:203
+msgid ""
+"`Create <https://www.gnupg.org/gph/en/manual/c14.html>`_ a new GPG key "
+"locally, to sign the repository."
+msgstr ""
+
+#: ../../hosting-a-repository.rst:206
+msgid ""
+"Go to ``https://gitlab.com/-/profile/personal_access_tokens`` and create "
+"a token for ``$CI_GIT_TOKEN``. Note that the token is valid for a maximum"
+" of one year and you should renew it before it expires."
+msgstr ""
+
+#: ../../hosting-a-repository.rst:210
+msgid ""
+"Go to ``https://gitlab.com/your_user_name/repo_name/-/settings/ci_cd``. "
+"Expand `General` and disable public pipeline. Click Save. Expand "
+"`variables`. Add the following `variables "
+"<https://docs.gitlab.com/ee/ci/variables/#define-a-cicd-variable-in-the-"
+"gitlab-ciyml-file>`_ necessary for the pipeline to run:"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:220
+msgid "Type"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:221
+msgid "Key"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:222
+msgid "Value"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:223
+msgid "Protected"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:224
+msgid "Masked"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:225 ../../hosting-a-repository.rst:230
+#: ../../hosting-a-repository.rst:245
+msgid "Variable"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:226
+msgid "GPG_KEY_GREP"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:227
+msgid "Keygrip of GPG key"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:228 ../../hosting-a-repository.rst:233
+#: ../../hosting-a-repository.rst:238 ../../hosting-a-repository.rst:243
+#: ../../hosting-a-repository.rst:248
+msgid "Yes"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:229 ../../hosting-a-repository.rst:234
+#: ../../hosting-a-repository.rst:239 ../../hosting-a-repository.rst:244
+#: ../../hosting-a-repository.rst:249
+msgid "Optional"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:231
+msgid "GPG_KEY_ID"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:232
+msgid "Keyid of GPG key"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:235 ../../hosting-a-repository.rst:240
+msgid "File"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:236
+msgid "GPG_PASSPHRASE"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:237
+msgid "Passphrase of GPG Key"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:241
+msgid "GPG_PRIVATE_KEY"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:242
+msgid "ASCII armoured private key"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:246
+msgid "CI_GIT_TOKEN"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:247
+msgid "Token"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:251
+msgid ""
+"To get the keygrip of the GPG key generated in step 4, run the following "
+"in your terminal and look at the ``Keygrip`` section:"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:258
+msgid ""
+"To find the keyid of the GPG key run the following in the terminal. The "
+"keyid should be in the first line starting with ``sec`` and "
+"``algorithm/id``. The ``id`` part is the required keyid."
+msgstr ""
+
+#: ../../hosting-a-repository.rst:266
+msgid ""
+"The following will generate an ASCII armoured private key. Then paste the"
+" contents of that file in the CI variable settings."
+msgstr ""
+
+#: ../../hosting-a-repository.rst:273
+msgid ""
+"Create a ``app_name.flatpakref`` in the root of the git repo with the "
+"following contents."
+msgstr ""
+
+#: ../../hosting-a-repository.rst:290
+msgid ""
+"You can find the Gitlab page in "
+"``https://gitlab.com/your_user_name/repo_name/pages``. Disable `Use "
+"unique domain` there and hit save. To generate the base64 encoded "
+"``GPGKey``, run the following and paste the string:"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:300
+msgid ""
+"The root of the repository should contain the following files: ``.gitlab-"
+"ci.yml``, ``app_name.flatpakref``, the flatpak manifest "
+"``tld.vendor.app_name.yaml`` and any other files/folders referenced in "
+"the manifest. ``git add`` these files, ``git commit`` and ``git push``."
+msgstr ""
+
+#: ../../hosting-a-repository.rst:306
+msgid ""
+"If everything was set up correctly, the push will trigger the pipeline to"
+" build and deploy your application with flatpak."
+msgstr ""
+
+#: ../../hosting-a-repository.rst:309
+msgid "To install the build, you can run:"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:315
+msgid ""
+"This will set up a flatpak remote userwide, install the dependencies and "
+"the application. Updates will be fetched when running ``flatpak update`` "
+"if they are available."
+msgstr ""
+
+#: ../../hosting-a-repository.rst:319
+msgid ""
+"You can set up a `pipeline schedule "
+"<https://docs.gitlab.com/ee/ci/pipelines/schedules.html>`_, optionally to"
+" automatically check for updates using `flatpak-x-checker "
+"<https://github.com/flathub-infra/flatpak-external-data-checker>`_ and "
+"send PRs to the repo."
+msgstr ""
+
+#: ../../hosting-a-repository.rst:326
+msgid "Multi-architecture workflow"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:328
+msgid ""
+"This uses Gitlab.com's `hosted aarch64 runners "
+"<https://docs.gitlab.com/ee/ci/runners/hosted_runners/linux.html#machine-"
+"types-available-for-linux---arm64>`_ for building on aarch64."
+msgstr ""
+
+#: ../../hosting-a-repository.rst:430
+msgid "Credits"
+msgstr ""
+
+#: ../../hosting-a-repository.rst:431
+msgid ""
+"The CI template is based on the `work <https://gitlab.com/accessable-net"
+"/gitlab-ci-templates>`_ of Flatpak community member `proletarius101 "
+"<https://gitlab.com/proletarius101>`_."
 msgstr ""
 
 #~ msgid ""
