@@ -45,23 +45,18 @@ By default, the document being built is in English. If you want to build
 documents in other languages, such as Chinese, you can use the following
 command::
 
-  sphinx-build -b html -D language=zh_CN docs docs/_build/html/zh_CN
-
-Then you will see the Chinese documentation in the directory
-``docs/_build/html/zh_CN`` .
+  make -C docs html SPHINXOPTS='-D language=zh_CN'
 
 Translate the Documentation
 ---------------------------
 
 You can open a pull request adding a new language.
 
-Maintainers can generate the ``.pot`` files by running::
+Maintainers can generate the template files (``.pot``), update the translation
+files (``.po``) and remove obsolete translation files (i.e. a matching ``.pot``
+file no longer exists) by running::
 
-  make -C docs gettext
-
-To update ``.po`` files run::
-
-  sphinx-intl update -p docs/_build/gettext -d po
+  make -C docs update-po
 
 Audience
 --------
