@@ -16,7 +16,19 @@ endif
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-.PHONY: help Makefile
+update-po:
+	@$(SPHINXBUILD) -M gettext "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@sphinx-intl update -p "$(BUILDDIR)/gettext" -d $(SOURCEDIR)/../po
+	@potfiles=$$(find $(BUILDDIR)/gettext -name '*.pot' | sed 's|.*/||'); \
+	pofiles=$$(find ../po -name '*.po' | sort -u); \
+	for po in $$pofiles; do \
+	  name=$$(echo $$po | sed 's|.*/LC_MESSAGES/||'); \
+	  if ! [[ $$potfiles =~ $${name}t ]]; then \
+	    rm $$po; \
+	  fi; \
+	done
+
+.PHONY: help Makefile update-po
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).

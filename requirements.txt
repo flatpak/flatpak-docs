@@ -3,3 +3,4 @@ furo
 matplotlib
 sphinxext-opengraph
 sphinx-copybutton
+sphinx-intl
