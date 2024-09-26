@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
-"POT-Creation-Date: 2023-05-31 14:18-0300\n"
+"POT-Creation-Date: 2024-09-26 16:32-0300\n"
 "PO-Revision-Date: 2022-11-03 12:09-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../manifests.rst:2
 msgid "Manifests"
@@ -75,9 +75,10 @@ msgid "Basic properties"
 msgstr "Propriedades básicas"
 
 #: ../../manifests.rst:24
+#, fuzzy
 msgid ""
 "Each manifest file should specify basic information about the application"
-" that is to be built, including the ``app-id``, ``runtime``, ``runtime-"
+" that is to be built, including the ``id``, ``runtime``, ``runtime-"
 "version``, ``sdk`` and ``command`` parameters. These properties are "
 "typically specified at the beginning of the file."
 msgstr ""
@@ -145,7 +146,8 @@ msgid "``rename-desktop-file`` - rename the ``.desktop`` filename"
 msgstr "``rename-desktop-file`` – renomeia o arquivo ``.desktop``"
 
 #: ../../manifests.rst:59
-msgid "``rename-appdata-file`` - rename the AppData file"
+#, fuzzy
+msgid "``rename-appdata-file`` - rename the MetaInfo file"
 msgstr "``rename-appdata-file`` – renomeia o arquivo AppData"
 
 #: ../../manifests.rst:61
@@ -188,37 +190,29 @@ msgstr ""
 "A seção de manifesto de acabamento usa a propriedade ``finish-args``, que"
 " pode ser vista no arquivo de manifesto do Dicionário:"
 
-#: ../../manifests.rst:93
+#: ../../manifests.rst:94
+#, fuzzy
 msgid ""
 "Guidance on which permissions to use can be found in the :doc:`sandbox-"
-"permissions`, and a full list of ``finish-args`` options can be found in "
-":doc:`sandbox-permissions-reference`."
+"permissions`."
 msgstr ""
 "As orientações sobre quais permissões usar podem ser encontradas em :doc"
 ":`sandbox-permissions`, e uma lista completa das opções ``finish-args`` "
 "pode ser encontrada em :doc:`sandbox-permissions-reference`."
 
-#: ../../manifests.rst:97
-msgid ""
-"If you're wondering about the last finish arg, see `this blog post "
-"<https://blogs.gnome.org/mclasen/2019/07/12/settings-in-a-sandbox-"
-"world/>`__."
-msgstr ""
-"Se você está se perguntando sobre o último argumento de acabamento "
-"(finish), consulte `esta postagem do blog "
-"<https://blogs.gnome.org/mclasen/2019/07/12/settings-in-a-sandbox-"
-"world/>`__."
-
-#: ../../manifests.rst:101
+#: ../../manifests.rst:98
 msgid "Cleanup"
 msgstr "Limpeza"
 
-#: ../../manifests.rst:103
+#: ../../manifests.rst:100
+#, fuzzy
 msgid ""
 "The cleanup property can be used to remove files produced by the build "
 "process that are not wanted as part of the application, such as headers "
 "or developer documentation. Two properties in the manifest file are used "
-"for this."
+"for this. This can be either done for each modules in which case only "
+"names created by that module will be matched or at the toplevel which "
+"will match anything created in the entire manifest."
 msgstr ""
 "A propriedade cleanup pode ser usada para remover arquivos produzidos "
 "pelo processo de construção que não são desejados como parte do "
@@ -226,31 +220,41 @@ msgstr ""
 "propriedades no arquivo de manifesto são usadas para isso."
 
 #: ../../manifests.rst:107
+msgid ""
+"Items starting with `/` are taken to be relative to the prefix, so "
+"``/include`` will cleanup ``/app/include``, otherwise it matches the "
+"basename."
+msgstr ""
+
+#: ../../manifests.rst:111
 msgid "First, a list of filename patterns can be included::"
 msgstr "Primeiro, uma lista de padrões de nome de arquivo pode ser incluída::"
 
-#: ../../manifests.rst:114
+#: ../../manifests.rst:118
 msgid ""
-"The second cleanup property is a list of commands that are run during the"
-" cleanup phase::"
+"A cleanup with ``*``, at the `module level` will cleanup all artifacts "
+"built from that module. This is often useful for build dependencies of a "
+"module that does not need to be shipped in the final Flatpak package::"
 msgstr ""
-"A segunda propriedade de limpeza é uma lista de comandos que são "
-"executados durante a fase de cleanup::"
 
-#: ../../manifests.rst:120
+#: ../../manifests.rst:125
+msgid "The `cleanup-commands` property can be a list of cleanup commands::"
+msgstr ""
+
+#: ../../manifests.rst:130
 msgid ""
-"Cleanup properties can be set on a per-module basis, in which case only "
-"filenames that were created by that particular module will be matched."
+"Note that, instead of cleaning up unnecessary files, it is often better "
+"to build less components through ``config-opts, build-commands, make-"
+"args``. For example, if the application does not need documentation files"
+" or manpages, it's best to stop building them. This should make the build"
+" faster in some cases and reduce the need for excessive cleanups."
 msgstr ""
-"As propriedades de limpeza podem ser definidas por módulo, caso em que "
-"apenas os nomes de arquivos criados por esse módulo específico serão "
-"correspondidos."
 
-#: ../../manifests.rst:124
+#: ../../manifests.rst:137
 msgid "Modules"
 msgstr "Módulos"
 
-#: ../../manifests.rst:126
+#: ../../manifests.rst:139
 msgid ""
 "The module list specifies each of the modules that are to be built as "
 "part of the build process. One of these modules is the application "
@@ -268,7 +272,7 @@ msgstr ""
 "alguns aplicativos podem agrupar vários módulos e, portanto, ter seções "
 "de módulos longas."
 
-#: ../../manifests.rst:133
+#: ../../manifests.rst:146
 msgid ""
 "GNOME Dictionary's modules section is short, since it just contains the "
 "application itself, and looks like:"
@@ -276,7 +280,7 @@ msgstr ""
 "A seção de módulos do Dicionário do GNOME é curta, pois contém apenas o "
 "próprio aplicativo e se parece com:"
 
-#: ../../manifests.rst:150
+#: ../../manifests.rst:163
 msgid ""
 "As can be seen, each listed module has a ``name`` (which can be freely "
 "assigned) and a list of ``sources``. Each source has a ``type``, and "
@@ -286,31 +290,31 @@ msgstr ""
 " atribuído livremente) e uma lista de ``sources``. Cada fonte possui um "
 "``type``, e os tipos disponíveis incluem:"
 
-#: ../../manifests.rst:154
+#: ../../manifests.rst:167
 msgid "``archive`` - ``.tar`` or ``.zip`` archive files"
 msgstr "``archive`` – arquivos em ``.tar`` ou ``.zip``"
 
-#: ../../manifests.rst:155
+#: ../../manifests.rst:168
 msgid "``git`` - Git repositories"
 msgstr "``git`` – repositórios Git"
 
-#: ../../manifests.rst:156
+#: ../../manifests.rst:169
 msgid "``bzr`` - Bazaar repositories"
 msgstr "``bzr`` – repositórios Bazaar"
 
-#: ../../manifests.rst:157
+#: ../../manifests.rst:170
 msgid "``file`` - local/remote files (these are copied into the source directory)"
 msgstr ""
-"``file`` – arquivos locais/remotos (esses são copiados para dentro do diretório "
-"fonte)"
+"``file`` – arquivos locais/remotos (esses são copiados para dentro do "
+"diretório fonte)"
 
-#: ../../manifests.rst:158
+#: ../../manifests.rst:171
 msgid "``dir`` - local directories (these are copied into the source directory)"
 msgstr ""
 "``dir`` – diretórios locais (esses são copiados para dentro do diretório "
 "fonte)"
 
-#: ../../manifests.rst:159
+#: ../../manifests.rst:172
 msgid ""
 "``script`` - an array of shell commands (these are put in a shellscript "
 "file)"
@@ -318,7 +322,7 @@ msgstr ""
 "``script`` – um vetor de comandos shell (esses são colocados em um "
 "arquivo de script shell)"
 
-#: ../../manifests.rst:161
+#: ../../manifests.rst:174
 msgid ""
 "``shell`` - an array of shell commands that are run during source "
 "extraction"
@@ -326,11 +330,11 @@ msgstr ""
 "``shell`` – um vetor de comandos shell que são executados durante a "
 "extração do fonte"
 
-#: ../../manifests.rst:162
+#: ../../manifests.rst:175
 msgid "``patch`` - a patch (are applied to the source directory)"
 msgstr "``patch`` – um patch (são aplicados ao diretório fonte)"
 
-#: ../../manifests.rst:163
+#: ../../manifests.rst:176
 msgid ""
 "``extra-data`` - data that can be downloaded at install time; this can "
 "include archive or package files"
@@ -338,25 +342,26 @@ msgstr ""
 "``extra-data`` – dados que podem ser baixados em tempo de instalação; "
 "esto pode incluir um arquivo compactado ou arquivos de pacote"
 
-#: ../../manifests.rst:166
+#: ../../manifests.rst:179
+#, fuzzy
 msgid ""
 "Different properties are available for each source type, which are listed"
-" in the :doc:`flatpak-builder-command-reference`."
+" in the :doc:`module-sources`."
 msgstr ""
 "Diferentes propriedades estão disponíveis para cada tipo de fonte, "
 "listadas em :doc:`flatpak-builder-command-reference`."
 
-#: ../../manifests.rst:170
+#: ../../manifests.rst:183
 msgid "Supported build systems"
 msgstr "Suporte a sistemas de compilação"
 
-#: ../../manifests.rst:172
+#: ../../manifests.rst:185
 msgid "Modules can be built with a variety of build systems, including:"
 msgstr ""
 "Os módulos podem ser compilados com uma variedade de sistemas de "
 "construção, incluindo:"
 
-#: ../../manifests.rst:174
+#: ../../manifests.rst:187
 msgid ""
 "`autotools <https://www.gnu.org/software/automake/manual/html_node"
 "/Autotools-Introduction.html>`_"
@@ -364,27 +369,27 @@ msgstr ""
 "`autotools <https://www.gnu.org/software/automake/manual/html_node"
 "/Autotools-Introduction.html>`_"
 
-#: ../../manifests.rst:175
+#: ../../manifests.rst:188
 msgid "`cmake <https://cmake.org/>`_"
 msgstr "`cmake <https://cmake.org/>`_"
 
-#: ../../manifests.rst:176
+#: ../../manifests.rst:189
 msgid "`cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_"
 msgstr "`cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_"
 
-#: ../../manifests.rst:177
+#: ../../manifests.rst:190
 msgid "`meson <https://mesonbuild.com/>`_"
 msgstr "`meson <https://mesonbuild.com/>`_"
 
-#: ../../manifests.rst:178
+#: ../../manifests.rst:191
 msgid "`qmake <https://doc.qt.io/qt-5/qmake-overview.html>`_"
 msgstr "`qmake <https://doc.qt.io/qt-5/qmake-overview.html>`_"
 
-#: ../../manifests.rst:179
+#: ../../manifests.rst:192
 msgid "the \"`Build API <https://github.com/cgwalters/build-api/>`_\""
 msgstr "a “`Build API <https://github.com/cgwalters/build-api/>`_”"
 
-#: ../../manifests.rst:181
+#: ../../manifests.rst:194
 msgid ""
 "A \"simple\" build method is also available, which allows a series of "
 "commands to be specified."
@@ -392,11 +397,11 @@ msgstr ""
 "Um método de compilação “simples” também está disponível, o que permite "
 "que uma série de comandos seja especificada."
 
-#: ../../manifests.rst:185
+#: ../../manifests.rst:198
 msgid "Shared Modules"
 msgstr "Shared Modules"
 
-#: ../../manifests.rst:187
+#: ../../manifests.rst:200
 msgid ""
 "`Shared Modules (or shared-modules) <https://github.com/flathub/shared-"
 "modules>`_ is a repository containing various manifests to build common "
@@ -406,27 +411,27 @@ msgstr ""
 "modules>`_ é um repositório contendo vários manifestos para compilar "
 "bibliotecas comuns. Destina-se a ser usado como um submódulo git."
 
-#: ../../manifests.rst:189
+#: ../../manifests.rst:202
 msgid "To add it to your repository, run this command:"
 msgstr "Para adicioná-lo ao seu repositório, execute este comando:"
 
-#: ../../manifests.rst:195
+#: ../../manifests.rst:208
 msgid "Then, add whichever module you want. In this example, we will use `gtk2`:"
 msgstr "Em seguida, adicione o módulo desejado. Neste exemplo, usaremos `gtk2`:"
 
-#: ../../manifests.rst:202
+#: ../../manifests.rst:215
 msgid "To update the submodule, run this command:"
 msgstr "Para atualizar o submódulo, execute este comando:"
 
-#: ../../manifests.rst:208
+#: ../../manifests.rst:221
 msgid "To remove the submodule, run these commands:"
 msgstr "Para remover o submódulo, execute estes comandos:"
 
-#: ../../manifests.rst:218
+#: ../../manifests.rst:231
 msgid "Flatpak Builder Tools"
 msgstr "Flatpak Builder Tools"
 
-#: ../../manifests.rst:220
+#: ../../manifests.rst:233
 msgid ""
 "`Flatpak Builder Tools (or flatpak-builder-tools) "
 "<https://github.com/flatpak/flatpak-builder-tools>`_ is a collection of "
@@ -440,11 +445,11 @@ msgstr ""
 "diretório contém instruções para gerar um manifesto para a respectiva "
 "plataforma."
 
-#: ../../manifests.rst:223
+#: ../../manifests.rst:236
 msgid "Example manifests"
 msgstr "Exemplo de manifestos "
 
-#: ../../manifests.rst:225
+#: ../../manifests.rst:238
 msgid ""
 "A `complete manifest for GNOME Dictionary built from Git "
 "<https://github.com/flathub/org.gnome.Dictionary/blob/master/org.gnome.Dictionary.yml>`_."
@@ -470,4 +475,37 @@ msgstr ""
 #~ " Também é possível navegador por "
 #~ "`todos os manifestos hospedados no "
 #~ "Flathub <https://github.com/flathub>`_."
+
+#~ msgid ""
+#~ "If you're wondering about the last "
+#~ "finish arg, see `this blog post "
+#~ "<https://blogs.gnome.org/mclasen/2019/07/12/settings-in-a"
+#~ "-sandbox-world/>`__."
+#~ msgstr ""
+#~ "Se você está se perguntando sobre "
+#~ "o último argumento de acabamento "
+#~ "(finish), consulte `esta postagem do "
+#~ "blog <https://blogs.gnome.org/mclasen/2019/07/12/settings-"
+#~ "in-a-sandbox-world/>`__."
+
+#~ msgid ""
+#~ "The second cleanup property is a "
+#~ "list of commands that are run "
+#~ "during the cleanup phase::"
+#~ msgstr ""
+#~ "A segunda propriedade de limpeza é "
+#~ "uma lista de comandos que são "
+#~ "executados durante a fase de cleanup::"
+
+#~ msgid ""
+#~ "Cleanup properties can be set on a"
+#~ " per-module basis, in which case "
+#~ "only filenames that were created by "
+#~ "that particular module will be matched."
+#~ msgstr ""
+#~ "As propriedades de limpeza podem ser "
+#~ "definidas por módulo, caso em que "
+#~ "apenas os nomes de arquivos criados "
+#~ "por esse módulo específico serão "
+#~ "correspondidos."
 

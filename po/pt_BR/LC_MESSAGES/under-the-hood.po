@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
-"POT-Creation-Date: 2023-05-31 14:18-0300\n"
+"POT-Creation-Date: 2024-09-26 16:32-0300\n"
 "PO-Revision-Date: 2023-05-31 14:32-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../under-the-hood.rst:2
 msgid "Under the Hood"
@@ -130,15 +130,22 @@ msgstr ""
 "sejam deduplicados, portanto, o mesmo arquivo que pertence a vários "
 "aplicativos (ou runtimes) é armazenado apenas uma vez."
 
-#: ../../under-the-hood.rst:48
+#: ../../under-the-hood.rst:47
+msgid ""
+"This `blog post <https://blogs.gnome.org/alexl/2017/10/02/on-application-"
+"sizes-and-bloat-in-flatpak/>`_ explains the underlying structure of a "
+"Flatpak repository in more detail."
+msgstr ""
+
+#: ../../under-the-hood.rst:51
 msgid "Underlying technologies"
 msgstr "Tecnologias subjacentes"
 
-#: ../../under-the-hood.rst:50
+#: ../../under-the-hood.rst:53
 msgid "Flatpak utilises a number of pre-existing technologies. These include:"
 msgstr "O Flatpak utiliza várias tecnologias preexistentes. Esses incluem:"
 
-#: ../../under-the-hood.rst:52
+#: ../../under-the-hood.rst:55
 msgid ""
 "The `bubblewrap <https://github.com/containers/bubblewrap>`_ utility from"
 " `Project Atomic <https://projectatomic.io/>`_, which lets unprivileged "
@@ -149,19 +156,19 @@ msgstr ""
 "sem privilégios configurem e executem contêineres, usando recursos do "
 "kernel, como:"
 
-#: ../../under-the-hood.rst:56
+#: ../../under-the-hood.rst:59
 msgid "Namespaces"
 msgstr "Espaços de nomes"
 
-#: ../../under-the-hood.rst:57
+#: ../../under-the-hood.rst:60
 msgid "Bind mounts"
 msgstr "Montagens vinculadas (\"bind\")"
 
-#: ../../under-the-hood.rst:58
+#: ../../under-the-hood.rst:61
 msgid "Seccomp rules"
 msgstr "Regras seccomp"
 
-#: ../../under-the-hood.rst:60
+#: ../../under-the-hood.rst:63
 msgid ""
 "`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_ to set up"
 " cgroups for sandboxes"
@@ -169,7 +176,7 @@ msgstr ""
 "`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_ para "
 "configurar cgroups para sandboxes"
 
-#: ../../under-the-hood.rst:62
+#: ../../under-the-hood.rst:65
 msgid ""
 "`D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_, a well-"
 "established way to provide high-level APIs to applications"
@@ -177,15 +184,16 @@ msgstr ""
 "`D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_, uma maneira "
 "bem estabelecida de fornecer APIs de alto nível para aplicativos"
 
-#: ../../under-the-hood.rst:64
+#: ../../under-the-hood.rst:67
+#, fuzzy
 msgid ""
-"The `OSTree <https://ostree.readthedocs.io/en/latest/>`__ system for "
+"The `OSTree <https://ostreedev.github.io/ostree/>`__ system for "
 "versioning and distributing filesystem trees"
 msgstr ""
 "O sistema `OSTree <https://ostree.readthedocs.io/en/latest/>`__ para "
 "versionamento  e distribuição de árvores de sistema de arquivos"
 
-#: ../../under-the-hood.rst:66
+#: ../../under-the-hood.rst:69
 msgid ""
 "The OCI format from the `Open Container Initiative "
 "<https://opencontainers.org/>`_, as an alternative to OSTree used by the "
@@ -197,11 +205,11 @@ msgstr ""
 "pela `infraestrutura do Fedora <https://blog.fishsoup.net/2018/12/04"
 "/flatpaks-in-fedora-now-live/>`__"
 
-#: ../../under-the-hood.rst:70
+#: ../../under-the-hood.rst:73
 msgid "Flatpak can use either OSTree or OCI for single-file bundles."
 msgstr "Flatpak pode usar OSTree ou OCI para pacotes de arquivo único."
 
-#: ../../under-the-hood.rst:71
+#: ../../under-the-hood.rst:74
 msgid ""
 "`Appstream <https://www.freedesktop.org/software/appstream/docs/>`_ "
 "metadata, to allow Flatpak applications to show up nicely in software "

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-31 14:18-0300\n"
+"POT-Creation-Date: 2024-09-26 16:32-0300\n"
 "PO-Revision-Date: 2018-11-03 01:52-0400\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language: zh_Hans_CN\n"
@@ -13,7 +13,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../manifests.rst:2
 msgid "Manifests"
@@ -65,9 +65,10 @@ msgid "Basic properties"
 msgstr "基本属性"
 
 #: ../../manifests.rst:24
+#, fuzzy
 msgid ""
 "Each manifest file should specify basic information about the application"
-" that is to be built, including the ``app-id``, ``runtime``, ``runtime-"
+" that is to be built, including the ``id``, ``runtime``, ``runtime-"
 "version``, ``sdk`` and ``command`` parameters. These properties are "
 "typically specified at the beginning of the file."
 msgstr ""
@@ -124,7 +125,8 @@ msgid "``rename-desktop-file`` - rename the ``.desktop`` filename"
 msgstr "``rename-desktop-file``  - 重命名  ``.desktop`` 文件"
 
 #: ../../manifests.rst:59
-msgid "``rename-appdata-file`` - rename the AppData file"
+#, fuzzy
+msgid "``rename-appdata-file`` - rename the MetaInfo file"
 msgstr "``rename-appdata-file``  - 重命名AppData文件"
 
 #: ../../manifests.rst:61
@@ -157,57 +159,66 @@ msgid ""
 "can be seen in the Dictionary manifest file:"
 msgstr "finishing清单节点使用 ``finish-args`` 属性，可以在Dictionary的清单文件见到："
 
-#: ../../manifests.rst:93
+#: ../../manifests.rst:94
 #, fuzzy
 msgid ""
 "Guidance on which permissions to use can be found in the :doc:`sandbox-"
-"permissions`, and a full list of ``finish-args`` options can be found in "
-":doc:`sandbox-permissions-reference`."
+"permissions`."
 msgstr ""
 "正如 :doc:`first-build` 中解释的，这两个属性为应用授予X11显示服务和网络的权限。权限的使用指南可以参考 :doc"
 ":`sandbox-permissions` , 所有的 ``finish-args`` 选项可以查看 :doc:`sandbox-"
 "permissions-reference` 。"
 
-#: ../../manifests.rst:97
-msgid ""
-"If you're wondering about the last finish arg, see `this blog post "
-"<https://blogs.gnome.org/mclasen/2019/07/12/settings-in-a-sandbox-"
-"world/>`__."
-msgstr ""
-
-#: ../../manifests.rst:101
+#: ../../manifests.rst:98
 msgid "Cleanup"
 msgstr "cleanup"
 
-#: ../../manifests.rst:103
+#: ../../manifests.rst:100
 msgid ""
 "The cleanup property can be used to remove files produced by the build "
 "process that are not wanted as part of the application, such as headers "
 "or developer documentation. Two properties in the manifest file are used "
-"for this."
+"for this. This can be either done for each modules in which case only "
+"names created by that module will be matched or at the toplevel which "
+"will match anything created in the entire manifest."
 msgstr ""
 
 #: ../../manifests.rst:107
+msgid ""
+"Items starting with `/` are taken to be relative to the prefix, so "
+"``/include`` will cleanup ``/app/include``, otherwise it matches the "
+"basename."
+msgstr ""
+
+#: ../../manifests.rst:111
 msgid "First, a list of filename patterns can be included::"
 msgstr ""
 
-#: ../../manifests.rst:114
+#: ../../manifests.rst:118
 msgid ""
-"The second cleanup property is a list of commands that are run during the"
-" cleanup phase::"
-msgstr "第二个cleanup属性是一系列命令，在cleanup阶段执行::"
+"A cleanup with ``*``, at the `module level` will cleanup all artifacts "
+"built from that module. This is often useful for build dependencies of a "
+"module that does not need to be shipped in the final Flatpak package::"
+msgstr ""
 
-#: ../../manifests.rst:120
+#: ../../manifests.rst:125
+msgid "The `cleanup-commands` property can be a list of cleanup commands::"
+msgstr ""
+
+#: ../../manifests.rst:130
 msgid ""
-"Cleanup properties can be set on a per-module basis, in which case only "
-"filenames that were created by that particular module will be matched."
-msgstr "cleanup属性可以根据每个模块进行设置，在这种情况下，只会匹配该特定的模块产生的文件名。"
+"Note that, instead of cleaning up unnecessary files, it is often better "
+"to build less components through ``config-opts, build-commands, make-"
+"args``. For example, if the application does not need documentation files"
+" or manpages, it's best to stop building them. This should make the build"
+" faster in some cases and reduce the need for excessive cleanups."
+msgstr ""
 
-#: ../../manifests.rst:124
+#: ../../manifests.rst:137
 msgid "Modules"
 msgstr "模块"
 
-#: ../../manifests.rst:126
+#: ../../manifests.rst:139
 msgid ""
 "The module list specifies each of the modules that are to be built as "
 "part of the build process. One of these modules is the application "
@@ -218,13 +229,13 @@ msgid ""
 "modules sections."
 msgstr "这个模块列表作为构建过程的一部分，指明了每个模块。其中一个模块是应用本身，其他的是依赖和库，作为flatpak的一部分进行绑定。当应用比较简单的时候，只有一到两个模块，因此有较短的模块节点，一些应用会有大量的模块需要绑定，因此会有较长的模块节点。"
 
-#: ../../manifests.rst:133
+#: ../../manifests.rst:146
 msgid ""
 "GNOME Dictionary's modules section is short, since it just contains the "
 "application itself, and looks like:"
 msgstr "GNOME Dictionary的模块节点是较短的，因为它仅仅包含应用本身，大概如下所示："
 
-#: ../../manifests.rst:150
+#: ../../manifests.rst:163
 msgid ""
 "As can be seen, each listed module has a ``name`` (which can be freely "
 "assigned) and a list of ``sources``. Each source has a ``type``, and "
@@ -233,65 +244,66 @@ msgstr ""
 "可以看出，每个列出的模块有一个 ``name`` （可以自由分配）和一个 ``sources`` 列表。每个source都有一个 ``type``"
 " ，可用的type有："
 
-#: ../../manifests.rst:154
+#: ../../manifests.rst:167
 msgid "``archive`` - ``.tar`` or ``.zip`` archive files"
 msgstr "``archive``  -  ``.tar``  or  ``.zip``  归档文件"
 
-#: ../../manifests.rst:155
+#: ../../manifests.rst:168
 msgid "``git`` - Git repositories"
 msgstr "``git``  - Git 仓库"
 
-#: ../../manifests.rst:156
+#: ../../manifests.rst:169
 msgid "``bzr`` - Bazaar repositories"
 msgstr "``bzr``  - Bazaar 仓库"
 
-#: ../../manifests.rst:157
+#: ../../manifests.rst:170
 #, fuzzy
 msgid "``file`` - local/remote files (these are copied into the source directory)"
 msgstr "``file``  - 本地文件（这些复制到源码目录）"
 
-#: ../../manifests.rst:158
+#: ../../manifests.rst:171
 #, fuzzy
 msgid "``dir`` - local directories (these are copied into the source directory)"
 msgstr "``dir`` - 本地目录 (这些将复制到源码目录)"
 
-#: ../../manifests.rst:159
+#: ../../manifests.rst:172
 msgid ""
 "``script`` - an array of shell commands (these are put in a shellscript "
 "file)"
 msgstr "``script``  - 一个shell命令数组（这些都被放在shell脚本文件里）"
 
-#: ../../manifests.rst:161
+#: ../../manifests.rst:174
 msgid ""
 "``shell`` - an array of shell commands that are run during source "
 "extraction"
 msgstr "``shell`` - 再源码抽取期间运行的一组shell命令"
 
-#: ../../manifests.rst:162
+#: ../../manifests.rst:175
 msgid "``patch`` - a patch (are applied to the source directory)"
 msgstr "``patch``  - 补丁（用于源代码目录）"
 
-#: ../../manifests.rst:163
+#: ../../manifests.rst:176
 msgid ""
 "``extra-data`` - data that can be downloaded at install time; this can "
 "include archive or package files"
 msgstr "``extra-data``  - 在安装时下载的数据；可以包含归档文件或者package文件"
 
-#: ../../manifests.rst:166
+#: ../../manifests.rst:179
+#, fuzzy
 msgid ""
 "Different properties are available for each source type, which are listed"
-" in the :doc:`flatpak-builder-command-reference`."
+" in the :doc:`module-sources`."
 msgstr "每种source类型有不同的属性，在 :doc:`flatpak-builder-command-reference` 列出了。"
 
-#: ../../manifests.rst:170
+#: ../../manifests.rst:183
 msgid "Supported build systems"
 msgstr "受支持的构建系统"
 
-#: ../../manifests.rst:172
+#: ../../manifests.rst:185
 msgid "Modules can be built with a variety of build systems, including:"
 msgstr "模块可以用多种构建系统构建，包含："
 
-#: ../../manifests.rst:174
+#: ../../manifests.rst:187
 msgid ""
 "`autotools <https://www.gnu.org/software/automake/manual/html_node"
 "/Autotools-Introduction.html>`_"
@@ -299,68 +311,68 @@ msgstr ""
 "`autotools <https://www.gnu.org/software/automake/manual/html_node"
 "/Autotools-Introduction.html>`_"
 
-#: ../../manifests.rst:175
+#: ../../manifests.rst:188
 msgid "`cmake <https://cmake.org/>`_"
 msgstr "`cmake <https://cmake.org/>`_"
 
-#: ../../manifests.rst:176
+#: ../../manifests.rst:189
 #, fuzzy
 msgid "`cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_"
 msgstr ""
 " `cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_"
 "  ,  `meson <http://mesonbuild.com/>`_ "
 
-#: ../../manifests.rst:177
+#: ../../manifests.rst:190
 #, fuzzy
 msgid "`meson <https://mesonbuild.com/>`_"
 msgstr "`cmake <https://cmake.org/>`_"
 
-#: ../../manifests.rst:178
+#: ../../manifests.rst:191
 msgid "`qmake <https://doc.qt.io/qt-5/qmake-overview.html>`_"
 msgstr ""
 
-#: ../../manifests.rst:179
+#: ../../manifests.rst:192
 msgid "the \"`Build API <https://github.com/cgwalters/build-api/>`_\""
 msgstr "\" `Build API <https://github.com/cgwalters/build-api/>`_ \""
 
-#: ../../manifests.rst:181
+#: ../../manifests.rst:194
 msgid ""
 "A \"simple\" build method is also available, which allows a series of "
 "commands to be specified."
 msgstr "一个“简单的”构建方法，需要指定一系列命令。"
 
-#: ../../manifests.rst:185
+#: ../../manifests.rst:198
 msgid "Shared Modules"
 msgstr ""
 
-#: ../../manifests.rst:187
+#: ../../manifests.rst:200
 msgid ""
 "`Shared Modules (or shared-modules) <https://github.com/flathub/shared-"
 "modules>`_ is a repository containing various manifests to build common "
 "libraries. It is intended to be used as a git submodule."
 msgstr ""
 
-#: ../../manifests.rst:189
+#: ../../manifests.rst:202
 msgid "To add it to your repository, run this command:"
 msgstr ""
 
-#: ../../manifests.rst:195
+#: ../../manifests.rst:208
 msgid "Then, add whichever module you want. In this example, we will use `gtk2`:"
 msgstr ""
 
-#: ../../manifests.rst:202
+#: ../../manifests.rst:215
 msgid "To update the submodule, run this command:"
 msgstr ""
 
-#: ../../manifests.rst:208
+#: ../../manifests.rst:221
 msgid "To remove the submodule, run these commands:"
 msgstr ""
 
-#: ../../manifests.rst:218
+#: ../../manifests.rst:231
 msgid "Flatpak Builder Tools"
 msgstr ""
 
-#: ../../manifests.rst:220
+#: ../../manifests.rst:233
 msgid ""
 "`Flatpak Builder Tools (or flatpak-builder-tools) "
 "<https://github.com/flatpak/flatpak-builder-tools>`_ is a collection of "
@@ -369,11 +381,11 @@ msgid ""
 " platform."
 msgstr ""
 
-#: ../../manifests.rst:223
+#: ../../manifests.rst:236
 msgid "Example manifests"
 msgstr "实例清单文件"
 
-#: ../../manifests.rst:225
+#: ../../manifests.rst:238
 msgid ""
 "A `complete manifest for GNOME Dictionary built from Git "
 "<https://github.com/flathub/org.gnome.Dictionary/blob/master/org.gnome.Dictionary.yml>`_."
@@ -408,4 +420,34 @@ msgstr ""
 
 #~ msgid "`meson <http://mesonbuild.com/>`_"
 #~ msgstr ""
+
+#~ msgid ""
+#~ "If you're wondering about the last "
+#~ "finish arg, see `this blog post "
+#~ "<https://blogs.gnome.org/mclasen/2019/07/12/settings-in-a"
+#~ "-sandbox-world/>`__."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The cleanup property can be used "
+#~ "to remove files produced by the "
+#~ "build process that are not wanted "
+#~ "as part of the application, such "
+#~ "as headers or developer documentation. "
+#~ "Two properties in the manifest file "
+#~ "are used for this."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The second cleanup property is a "
+#~ "list of commands that are run "
+#~ "during the cleanup phase::"
+#~ msgstr "第二个cleanup属性是一系列命令，在cleanup阶段执行::"
+
+#~ msgid ""
+#~ "Cleanup properties can be set on a"
+#~ " per-module basis, in which case "
+#~ "only filenames that were created by "
+#~ "that particular module will be matched."
+#~ msgstr "cleanup属性可以根据每个模块进行设置，在这种情况下，只会匹配该特定的模块产生的文件名。"
 

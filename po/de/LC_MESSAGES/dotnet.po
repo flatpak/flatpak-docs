@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-26 16:32-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../dotnet.rst:2
+msgid "Dotnet"
+msgstr ""
+
+#: ../../dotnet.rst:5
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../dotnet.rst:6
+msgid ":doc:`first-build`"
+msgstr ""
+
+#: ../../dotnet.rst:7
+msgid ""
+"The application is built with a Linux-compatible .NET desktop application"
+" framework such as:"
+msgstr ""
+
+#: ../../dotnet.rst:8
+msgid "`Avalonia UI <https://avaloniaui.net/>`_"
+msgstr ""
+
+#: ../../dotnet.rst:9
+msgid "`Uno Platform <https://platform.uno/>`_"
+msgstr ""
+
+#: ../../dotnet.rst:10
+msgid "`Eto <https://github.com/picoe/Eto>`_"
+msgstr ""
+
+#: ../../dotnet.rst:11
+msgid "`GTKSharp <https://github.com/GtkSharp/GtkSharp>`_"
+msgstr ""
+
+#: ../../dotnet.rst:12
+msgid ""
+"The application's source code is hosted on a Git server such as GitHub, "
+"GitLab, or Bitbucket"
+msgstr ""
+
+#: ../../dotnet.rst:15
+msgid "Steps for Packaging"
+msgstr ""
+
+#: ../../dotnet.rst:18
+msgid "Installing Flatpak and Flatpak builder"
+msgstr ""
+
+#: ../../dotnet.rst:20
+msgid ""
+"Install Flatpak using the method provided for your distribution `Flatpak "
+"- Quick Setup <https://flatpak.org/setup/>`_"
+msgstr ""
+
+#: ../../dotnet.rst:23
+msgid ""
+"Install Flatpak Builder through your distribution package manager (e.g. "
+"``apt`` / ``dnf``)"
+msgstr ""
+
+#: ../../dotnet.rst:31
+msgid "Creating the Flatpak"
+msgstr ""
+
+#: ../../dotnet.rst:33
+msgid ""
+"A few placeholders have been used in the steps below, while going through"
+" the steps replace these with the ones respective to your project:"
+msgstr ""
+
+#: ../../dotnet.rst:35
+msgid ""
+"``<app-id>``: The name of your Flatpak, see :ref:`conventions:application"
+" ids`."
+msgstr ""
+
+#: ../../dotnet.rst:36
+msgid "``<app-name>``: The name of the root folder of your app repository"
+msgstr ""
+
+#: ../../dotnet.rst:37
+msgid "``<project-name>``: The name of your ``.csproj`` file"
+msgstr ""
+
+#: ../../dotnet.rst:38
+msgid "``<git-url>``: The URL to the git repository of the project"
+msgstr ""
+
+#: ../../dotnet.rst:40
+msgid "Create a new folder somewhere different from your existing project"
+msgstr ""
+
+#: ../../dotnet.rst:42
+msgid ""
+"Create a YAML file titled ``<app-id>.yaml`` with the following example "
+"template, replacing the placeholders with the appropriate information. "
+"(Note: If your project file lives in a subfolder, be sure to include that"
+" in the build paths in this file and subsequent commands as well.):"
+msgstr ""
+
+#: ../../dotnet.rst:87
+msgid ""
+"For providing access to other things such as the network or filesystem, "
+"see :doc:`sandbox-permissions`"
+msgstr ""
+
+#: ../../dotnet.rst:90
+msgid ""
+"Copy and save the dotnet NuGet sources generator script ``flatpak-dotnet-"
+"generator.py`` from the `Flatpak Builder Tools repository "
+"<https://github.com/flatpak/flatpak-builder-tools>`_, to the current "
+"folder, or run the following command to download it:"
+msgstr ""
+
+#: ../../dotnet.rst:99
+msgid "Clone down your project repository to the folder"
+msgstr ""
+
+#: ../../dotnet.rst:105
+msgid "Install dependencies from Flathub"
+msgstr ""
+
+#: ../../dotnet.rst:111
+msgid ""
+"Run the NuGet source config generator script ``flatpak-dotnet-"
+"generator.py`` with the following arguments:"
+msgstr ""
+
+#: ../../dotnet.rst:117
+msgid "Build and install using Flatpak builder"
+msgstr ""
+
+#: ../../dotnet.rst:125
+msgid "Testing the build"
+msgstr ""
+
+#: ../../dotnet.rst:127
+msgid "Run the installed Flatpak application"
+msgstr ""
+

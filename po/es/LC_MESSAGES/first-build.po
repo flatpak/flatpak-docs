@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-07 16:26-0600\n"
+"POT-Creation-Date: 2024-09-26 16:32-0300\n"
 "PO-Revision-Date: 2018-05-20 10:37-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../first-build.rst:2
 msgid "Building your first Flatpak"
@@ -25,187 +25,122 @@ msgstr ""
 
 #: ../../first-build.rst:4
 msgid ""
-"This tutorial provides a quick introduction to building Flatpaks. In it, "
-"you will learn how to create a basic Flatpak application, which can be "
-"installed and run."
+"This tutorial provides a quick introduction to build, install and share a"
+" basic flatpak package."
 msgstr ""
 
-#: ../../first-build.rst:8
+#: ../../first-build.rst:7
 msgid ""
-"In order to complete this tutorial, you should have followed the `setup "
-"guide on flatpak.org <https://flatpak.org/setup/>`_. You also need to "
-"have installed ``flatpak-builder``, which is usually available from the "
-"same repository as the ``flatpak`` package (e.g. use ``apt`` or ``dnf``)."
-" You can also install it as a flatpak with ``flatpak install flathub "
-"org.flatpak.Builder``."
+"In order to complete this tutorial, please install ``flatpak`` and "
+"``flatpak-builder`` packages from your distribution. The `setup page "
+"<https://flatpak.org/setup/>`_ covers steps for most of the popular "
+"distributions."
 msgstr ""
 
-#: ../../first-build.rst:15
-msgid "1. Install a runtime and the matching SDK"
+#: ../../first-build.rst:11
+msgid "Then install the Flathub repository `userwide`::"
 msgstr ""
 
-#: ../../first-build.rst:17
+#: ../../first-build.rst:16
+msgid "1. Runtime and SDK"
+msgstr ""
+
+#: ../../first-build.rst:18
 msgid ""
-"Flatpak requires every app to specify a runtime that it uses for its "
-"basic dependencies. Each runtime has a matching SDK (Software Development"
-" Kit), which contains all the things that are in the runtime, plus "
-"headers and development tools. This SDK is required to build apps for the"
-" runtime."
+"Flatpak requires every app to specify a runtime for its basic runtime "
+"dependencies and a matching SDK which is a superset of the runtime "
+"containing additional development tools, libraries and headers."
 msgstr ""
 
 #: ../../first-build.rst:22
 msgid ""
-"In this tutorial we will use the Freedesktop 22.08 runtime and SDK. To "
-"install these, run::"
+"In this tutorial we will use the Freedesktop 23.08 runtime and SDK from "
+"the Flathub repository."
+msgstr ""
+
+#: ../../first-build.rst:26
+msgid "2. Add a manifest"
 msgstr ""
 
 #: ../../first-build.rst:28
-msgid "2. Create the app"
-msgstr ""
-
-#: ../../first-build.rst:30
-msgid ""
-"The app that is going to be created for this tutorial is a simple script."
-" To create it, copy the following::"
-msgstr ""
-
-#: ../../first-build.rst:36
-msgid "Now paste this into an empty file and save it as ``hello.sh``."
-msgstr ""
-
-#: ../../first-build.rst:39
-msgid "3. Add a manifest"
-msgstr ""
-
-#: ../../first-build.rst:41
 msgid ""
 "Each Flatpak is built using a manifest file which provides basic "
-"information about the application and instructions for how it is to be "
-"built. To add a manifest to the hello world app, add the following to an "
-"empty file:"
+"information about the application and build instructions."
+msgstr ""
+
+#: ../../first-build.rst:31
+msgid ""
+"To create a manifest for our hello world app, paste the following into an"
+" empty file and save it as ``org.flatpak.Hello.yml``."
+msgstr ""
+
+#: ../../first-build.rst:52
+msgid ""
+"The `application` here is a simple script, that is self contained in the "
+"manifest! The `install -Dm755 "
+"<https://www.gnu.org/software/coreutils/manual/html_node/install-"
+"invocation.html>`_ command will create a file containing our hello world "
+"script in ``/app/bin/hello`` with `execution permissions "
+"<https://www.gnu.org/software/coreutils/manual/html_node/Numeric-"
+"Modes.html>`_ inside the sandbox."
+msgstr ""
+
+#: ../../first-build.rst:55
+msgid ""
+"In a more complex application, the manifest would list multiple modules "
+"and build instructions."
+msgstr ""
+
+#: ../../first-build.rst:59
+msgid "3. Build and install"
 msgstr ""
 
 #: ../../first-build.rst:61
 msgid ""
-"Now save the file alongside ``hello.sh`` and call it "
-"``org.flatpak.Hello.yml``."
-msgstr ""
-
-#: ../../first-build.rst:64
-msgid ""
-"In a more complex application, the manifest would list multiple modules. "
-"The last one would typically be the application itself, and the earlier "
-"ones would be dependencies that are bundled with the app because they are"
-" not part of the runtime."
-msgstr ""
-
-#: ../../first-build.rst:70
-msgid "4. Build the application"
-msgstr ""
-
-#: ../../first-build.rst:72
-msgid ""
 "Now that the app has a manifest, ``flatpak-builder`` can be used to build"
-" it. This is done by specifying the manifest file and a target "
-"directory::"
+" and install it::"
+msgstr ""
+
+#: ../../first-build.rst:66
+msgid ""
+"This command will first build each module that is listed in the manifest,"
+" install the contents of ``builddir/files`` in ``/app`` inside the "
+"sandbox and finally install the the whole application as a flatpak."
+msgstr ""
+
+#: ../../first-build.rst:71
+msgid "4. Run the application"
+msgstr ""
+
+#: ../../first-build.rst:73
+msgid "To run the application::"
 msgstr ""
 
 #: ../../first-build.rst:77
 msgid ""
-"This command will build each module that is listed in the manifest and "
-"install it to the ``/app`` subdirectory, inside the ``build-dir`` "
-"directory."
+"If you see ``Hello world, from a sandbox`` on the terminal then "
+"congratulations, you've made an app!"
 msgstr ""
 
 #: ../../first-build.rst:81
-msgid "5. Test the build"
+msgid "5. Share the application"
 msgstr ""
 
 #: ../../first-build.rst:83
-msgid "To verify that the build was successful, run the following::"
-msgstr ""
-
-#: ../../first-build.rst:88
 msgid ""
-"This second time we passed in ``--force-clean``, which means that the "
-"previously created ``build-dir`` directory was deleted before the new "
-"build was started."
+"If you want to share the application you can create a single-file bundle."
+" See :doc:`single-file-bundles` for more details on it."
 msgstr ""
 
-#: ../../first-build.rst:92
-msgid "Congratulations, you've made an app!"
-msgstr ""
-
-#: ../../first-build.rst:95
-msgid "6. Put the app in a repository"
-msgstr ""
-
-#: ../../first-build.rst:97
+#: ../../first-build.rst:90
 msgid ""
-"If you want to share the application you can put it in a repository. This"
-" is done by passing the ``--repo`` argument to ``flatpak-builder``::"
+"Now you can send the ``hello.flatpak`` file to someone and if they have "
+"the Flathub repository set up and a working network connection to install"
+" the runtime, they can install it with::"
 msgstr ""
 
-#: ../../first-build.rst:103
-msgid ""
-"This does the build again, and at the end exports the result to a local "
-"directory called ``repo``. Note that ``flatpak-builder`` keeps a cache of"
-" previous builds in the ``.flatpak-builder`` subdirectory, so doing a "
-"second build like this is very fast."
-msgstr ""
-
-#: ../../first-build.rst:108
-msgid ""
-"In order for your application to show up in application stores while "
-"testing with a local repository, you might have to run ``flatpak build-"
-"update-repo repo``. For more information how to publish to application "
-"stores see `Appdata files <https://docs.flatpak.org/en/latest"
-"/freedesktop-quick-reference.html#appdata-files>`_."
-msgstr ""
-
-#: ../../first-build.rst:113
-msgid "7. Install the app"
-msgstr ""
-
-#: ../../first-build.rst:115
-msgid ""
-"Now we're ready to add the repository that was just created and install "
-"the app. This is done with two commands::"
-msgstr ""
-
-#: ../../first-build.rst:121
-msgid ""
-"The first command adds the repository that was created in the previous "
-"step. The second command installs the app from the repository."
-msgstr ""
-
-#: ../../first-build.rst:124
-msgid ""
-"Both these commands use the ``--user`` argument, which means that the "
-"repository and the app are added per-user rather than system-wide. This "
-"is useful for testing."
-msgstr ""
-
-#: ../../first-build.rst:128
-msgid ""
-"Note that the repository was added with ``--no-gpg-verify``, since a GPG "
-"key wasn't specified when the app was built. This is fine for testing, "
-"but for official repositories you should sign them with a private GPG "
-"key."
-msgstr ""
-
-#: ../../first-build.rst:133
-msgid "8. Run the app"
-msgstr ""
-
-#: ../../first-build.rst:135
-msgid ""
-"All that's left is to try the app. This can be done with the following "
-"command::"
-msgstr ""
-
-#: ../../first-build.rst:140
-msgid "This runs the app, so that it prints 'Hello world, from a sandbox'."
+#: ../../first-build.rst:98
+msgid "To uninstall, run ``flatpak remove org.flatpak.Hello``"
 msgstr ""
 
 #~ msgid ""
@@ -266,5 +201,205 @@ msgstr ""
 #~ " see `Appdata files "
 #~ "<http://docs.flatpak.org/en/latest/freedesktop-quick-"
 #~ "reference.html#appdata-files>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This tutorial provides a quick "
+#~ "introduction to building Flatpaks. In "
+#~ "it, you will learn how to create"
+#~ " a basic Flatpak application, which "
+#~ "can be installed and run."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In order to complete this tutorial, "
+#~ "you should have followed the `setup "
+#~ "guide on flatpak.org <https://flatpak.org/setup/>`_."
+#~ " You also need to have installed "
+#~ "``flatpak-builder``, which is usually "
+#~ "available from the same repository as"
+#~ " the ``flatpak`` package (e.g. use "
+#~ "``apt`` or ``dnf``). You can also "
+#~ "install it as a flatpak with "
+#~ "``flatpak install flathub org.flatpak.Builder``."
+#~ msgstr ""
+
+#~ msgid "1. Install a runtime and the matching SDK"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Flatpak requires every app to specify"
+#~ " a runtime that it uses for its"
+#~ " basic dependencies. Each runtime has "
+#~ "a matching SDK (Software Development "
+#~ "Kit), which contains all the things "
+#~ "that are in the runtime, plus "
+#~ "headers and development tools. This SDK"
+#~ " is required to build apps for "
+#~ "the runtime."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In this tutorial we will use the"
+#~ " Freedesktop 22.08 runtime and SDK. "
+#~ "To install these, run::"
+#~ msgstr ""
+
+#~ msgid "2. Create the app"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The app that is going to be "
+#~ "created for this tutorial is a "
+#~ "simple script. To create it, copy "
+#~ "the following::"
+#~ msgstr ""
+
+#~ msgid "Now paste this into an empty file and save it as ``hello.sh``."
+#~ msgstr ""
+
+#~ msgid "3. Add a manifest"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Each Flatpak is built using a "
+#~ "manifest file which provides basic "
+#~ "information about the application and "
+#~ "instructions for how it is to be"
+#~ " built. To add a manifest to "
+#~ "the hello world app, add the "
+#~ "following to an empty file:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now save the file alongside ``hello.sh``"
+#~ " and call it ``org.flatpak.Hello.yml``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In a more complex application, the "
+#~ "manifest would list multiple modules. "
+#~ "The last one would typically be "
+#~ "the application itself, and the earlier"
+#~ " ones would be dependencies that are"
+#~ " bundled with the app because they"
+#~ " are not part of the runtime."
+#~ msgstr ""
+
+#~ msgid "4. Build the application"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now that the app has a manifest,"
+#~ " ``flatpak-builder`` can be used to"
+#~ " build it. This is done by "
+#~ "specifying the manifest file and a "
+#~ "target directory::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This command will build each module "
+#~ "that is listed in the manifest and"
+#~ " install it to the ``/app`` "
+#~ "subdirectory, inside the ``build-dir`` "
+#~ "directory."
+#~ msgstr ""
+
+#~ msgid "5. Test the build"
+#~ msgstr ""
+
+#~ msgid "To verify that the build was successful, run the following::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This second time we passed in "
+#~ "``--force-clean``, which means that the "
+#~ "previously created ``build-dir`` directory "
+#~ "was deleted before the new build "
+#~ "was started."
+#~ msgstr ""
+
+#~ msgid "Congratulations, you've made an app!"
+#~ msgstr ""
+
+#~ msgid "6. Put the app in a repository"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you want to share the "
+#~ "application you can put it in a"
+#~ " repository. This is done by passing"
+#~ " the ``--repo`` argument to ``flatpak-"
+#~ "builder``::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This does the build again, and at"
+#~ " the end exports the result to "
+#~ "a local directory called ``repo``. Note"
+#~ " that ``flatpak-builder`` keeps a "
+#~ "cache of previous builds in the "
+#~ "``.flatpak-builder`` subdirectory, so doing "
+#~ "a second build like this is very"
+#~ " fast."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In order for your application to "
+#~ "show up in application stores while "
+#~ "testing with a local repository, you "
+#~ "might have to run ``flatpak build-"
+#~ "update-repo repo``. For more information"
+#~ " how to publish to application stores"
+#~ " see `Appdata files "
+#~ "<https://docs.flatpak.org/en/latest/freedesktop-quick-"
+#~ "reference.html#appdata-files>`_."
+#~ msgstr ""
+
+#~ msgid "7. Install the app"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now we're ready to add the "
+#~ "repository that was just created and "
+#~ "install the app. This is done with"
+#~ " two commands::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The first command adds the repository"
+#~ " that was created in the previous "
+#~ "step. The second command installs the"
+#~ " app from the repository."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Both these commands use the ``--user``"
+#~ " argument, which means that the "
+#~ "repository and the app are added "
+#~ "per-user rather than system-wide. "
+#~ "This is useful for testing."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Note that the repository was added "
+#~ "with ``--no-gpg-verify``, since a "
+#~ "GPG key wasn't specified when the "
+#~ "app was built. This is fine for"
+#~ " testing, but for official repositories "
+#~ "you should sign them with a "
+#~ "private GPG key."
+#~ msgstr ""
+
+#~ msgid "8. Run the app"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "All that's left is to try the "
+#~ "app. This can be done with the "
+#~ "following command::"
+#~ msgstr ""
+
+#~ msgid "This runs the app, so that it prints 'Hello world, from a sandbox'."
 #~ msgstr ""
 

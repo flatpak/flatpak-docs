@@ -1,0 +1,340 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017-2024, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flatpak \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-26 16:32-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../flatpak-devel.rst:2
+msgid "Flatpak as a developer platform"
+msgstr ""
+
+#: ../../flatpak-devel.rst:4
+msgid ""
+"This sections contains an overview on how Flatpak can be used as part of "
+"a developer workflow."
+msgstr ""
+
+#: ../../flatpak-devel.rst:8
+msgid "CI Integration"
+msgstr ""
+
+#: ../../flatpak-devel.rst:10
+msgid ""
+"Flatpak can be integrated with the CI pipelines and bundles can be "
+"produced as artifacts for quick testing or it can be exported to a "
+"Flatpak repository on a webserver to provide a Nightly Flatpak package."
+msgstr ""
+
+#: ../../flatpak-devel.rst:14
+msgid ""
+"The CI setup will vary based on the code host and the CI service being "
+"used. A basic workflow for exporting to Gitlab pages is provided in "
+":doc:`hosting-a-repository` which can be used as a starting point."
+msgstr ""
+
+#: ../../flatpak-devel.rst:18
+msgid ""
+"`GNOME <https://gitlab.gnome.org/GNOME/Initiatives/-/wikis/DevOps-with-"
+"Flatpak#basic-ci>`_ and `KDE "
+"<https://develop.kde.org/docs/packaging/flatpak/publishing/#publishing-"
+"to-kdes-nightly-repositories>`_ also has their own respective CI setup "
+"for doing this, which can be also be used for inspiration."
+msgstr ""
+
+#: ../../flatpak-devel.rst:23
+msgid ""
+"`Flatpak Github Actions <https://github.com/flathub-infra/flatpak-github-"
+"actions>`_ can be used for GitHub."
+msgstr ""
+
+#: ../../flatpak-devel.rst:27
+msgid "Running tests"
+msgstr ""
+
+#: ../../flatpak-devel.rst:29
+msgid ""
+"Flatpak Builder can also run tests with ``run-tests, test-rule, test-"
+"commands, test-args``."
+msgstr ""
+
+#: ../../flatpak-devel.rst:31
+msgid ""
+"``run-tests: true`` in a module will run tests for that module after "
+"installing."
+msgstr ""
+
+#: ../../flatpak-devel.rst:34
+msgid ""
+"``test-rule`` is the default target to build when running tests. For "
+"``meson`` an ``cmake-ninja`` buildsystems it defaults to ``test``, "
+"otherwise ``check`` for ``cmake`` and ``autotools``. Setting it to an "
+"empty string like ``test-rule: ''`` will disable the target."
+msgstr ""
+
+#: ../../flatpak-devel.rst:39
+msgid ""
+"``test-commands`` is an array of additional commands that will be run "
+"during tests."
+msgstr ""
+
+#: ../../flatpak-devel.rst:49
+msgid ""
+"``test-args`` is used to provide finish-args for tests. These do not "
+"affect the normal installation."
+msgstr ""
+
+#: ../../flatpak-devel.rst:60
+msgid "Parallel nigthly and stable applications"
+msgstr ""
+
+#: ../../flatpak-devel.rst:62
+msgid ""
+"In general stable and nightly versions or any two parallel branches of an"
+" application should have different application IDs. This prevents many "
+"potential conflicts such as incompatible configuration files or "
+"overlapping well-known D-Bus names. This is mandatory if the application "
+"uses its own well-known D-Bus name."
+msgstr ""
+
+#: ../../flatpak-devel.rst:68
+msgid ""
+"A standard way is to use the ``.Devel`` suffix to the original Flatpak "
+"ID. The internal application ID, appstream ID, launchable, icon tags, "
+"icon files, desktop files, Dbus service names etc. must follow the new "
+"Flatpak ID for everything to work seamlessly for the user."
+msgstr ""
+
+#: ../../flatpak-devel.rst:73
+msgid ""
+"This can be integrated with buildsystem `profiles`, so simply building "
+"with ``-Dprofile=Devel`` for example will build the Nightly application "
+"and the default will build the stable appliction."
+msgstr ""
+
+#: ../../flatpak-devel.rst:78
+msgid "Buildsystem handling"
+msgstr ""
+
+#: ../../flatpak-devel.rst:80
+msgid "This is an example for the Meson buildsystem."
+msgstr ""
+
+#: ../../flatpak-devel.rst:82
+msgid ""
+"The ``src`` subdirectory will contain the main source code of the "
+"application and ``data`` subdirectory will have application metadata such"
+" as desktop file, metainfo file, icons and the ``po`` subdirectory will "
+"have translation files."
+msgstr ""
+
+#: ../../flatpak-devel.rst:87
+msgid "The root ``meson.build`` parts should be something like this:"
+msgstr ""
+
+#: ../../flatpak-devel.rst:121
+msgid "The root ``meson-options.txt`` should have something like::"
+msgstr ""
+
+#: ../../flatpak-devel.rst:125
+msgid ""
+"Now under ``src/meson.build`` or in any subdirectory this can be "
+"specified in a target."
+msgstr ""
+
+#: ../../flatpak-devel.rst:136
+msgid ""
+"Now in ``data/meson.build``, the icon, desktop file and metainfo file "
+"handling can be specified."
+msgstr ""
+
+#: ../../flatpak-devel.rst:139
+msgid ""
+"Place a desktop template file called "
+"``org.example.coolapp.desktop.in.in`` in ``data/`` with the contents"
+msgstr ""
+
+#: ../../flatpak-devel.rst:154
+msgid "The corresponding meson bits for the desktop file should be"
+msgstr ""
+
+#: ../../flatpak-devel.rst:177
+msgid ""
+"Appstream can be handled in the same ``meson.build``. Place a metainfo "
+"template file in ``data/``. Any tag containing part of the application ID"
+" should be templated. Ususally for desktop applications this involves "
+"only the ``id`` and ``launchable`` tag, but the ``icon`` tag, if present "
+"should also use it."
+msgstr ""
+
+#: ../../flatpak-devel.rst:193
+msgid "The corresponding meson.build part for metainfo should be"
+msgstr ""
+
+#: ../../flatpak-devel.rst:220
+msgid ""
+"Finally icons can be placed in ``data/icons/hicolor/{scalable, "
+"symbolic}/apps``. Two icons should be provided "
+"``org.example.coolapp.svg`` and ``org.example.coolapp.Devel.svg``. The "
+"meson.build should have"
+msgstr ""
+
+#: ../../flatpak-devel.rst:240
+msgid "Any gschemea file should also be similarly handled if present."
+msgstr ""
+
+#: ../../flatpak-devel.rst:249
+msgid ""
+"Any dbus service file if present should be handled. The "
+"``org.example.coolapp.service.in`` should have ``Name=@appid@``"
+msgstr ""
+
+#: ../../flatpak-devel.rst:264
+msgid ""
+"The same pattern can be used for search provider files if present. The "
+"``org.example.coolapp.service.ini.in`` should look like"
+msgstr ""
+
+#: ../../flatpak-devel.rst:273
+msgid "and the corresponding meson.build:"
+msgstr ""
+
+#: ../../flatpak-devel.rst:288
+msgid "Application handling"
+msgstr ""
+
+#: ../../flatpak-devel.rst:290
+msgid ""
+"The correct application ID must be supplied when initiating the "
+"application. For example in ``main.c``"
+msgstr ""
+
+#: ../../flatpak-devel.rst:318
+msgid ""
+"Similarly it can be handled in the about dialogue of the application and "
+"elsewhere."
+msgstr ""
+
+#: ../../flatpak-devel.rst:322
+msgid "Manifest handling"
+msgstr ""
+
+#: ../../flatpak-devel.rst:324
+msgid ""
+"Finally there must be two manifests for Devel and stable - "
+"``org.example.coolapp.Devel.yaml`` and ``org.example.coolapp.yaml`` "
+"respectively."
+msgstr ""
+
+#: ../../flatpak-devel.rst:327
+msgid ""
+"The manifest must have the correct ``id`` property. The devel manifest "
+"should use ``id: org.example.coolapp.Devel`` and the stable manifest "
+"should use ``id: org.example.coolapp``."
+msgstr ""
+
+#: ../../flatpak-devel.rst:331
+msgid ""
+"In ``config-opts`` for the application module, ``-Dprofile=Devel`` can be"
+" passed to build the Devel application."
+msgstr ""
+
+#: ../../flatpak-devel.rst:334
+msgid ""
+"In case, buildsystem handling for desktop file, icon and metainfo file is"
+" absent ``rename-desktop-file, rename-appdata-file, rename-mime-file, "
+"rename-icon`` can be used rename the files to match the ``.Devel`` "
+"application ID."
+msgstr ""
+
+#: ../../flatpak-devel.rst:338
+msgid ""
+"``desktop-file-name-prefix`` or ``desktop-file-name-suffix`` can be used "
+"to add a prefix or suffix to the desktop file name respectively."
+msgstr ""
+
+#: ../../flatpak-devel.rst:351
+msgid ""
+"The main drawback of modifying it in place with Flatpak Builder is that, "
+"the application ID, D-Bus names and configuration location cannot be "
+"changed. This might cause integration issues with desktop environment, "
+"potential configuration conflicts, or the application might not run in "
+"some cases when the D-Bus name is already in use. This would prevent "
+"running the stable and nightly applications parallely."
+msgstr ""
+
+#: ../../flatpak-devel.rst:359
+msgid ""
+"In case the application ID remains static, for GTK based applications the"
+" ``--name`` flag can be passed to the main binary with the correct "
+"application ID; ``--class`` and ``StartupWMClass`` in the desktop file to"
+" fix the window class."
+msgstr ""
+
+#: ../../flatpak-devel.rst:366
+msgid "Additional tools"
+msgstr ""
+
+#: ../../flatpak-devel.rst:368
+msgid ""
+"`Electron Builder "
+"<https://www.electron.build/configuration/flatpak.html>`_ supports "
+"exporting single file Flatpak bundles. Please also see the Electron "
+"application packaging guide :doc:`electron`."
+msgstr ""
+
+#: ../../flatpak-devel.rst:372
+msgid ""
+"`GNOME Builder <https://apps.gnome.org/Builder/>`_ is an IDE that can "
+"integrate with the development workflow of GNOME applications. `Qt "
+"Creator <https://flathub.org/apps/io.qt.QtCreator>`_ and `Qt Design "
+"Studio <https://flathub.org/apps/io.qt.qtdesignstudio>`_ are both "
+"available as Flatpaks from Flathub along with a variety of IDEs."
+msgstr ""
+
+#: ../../flatpak-devel.rst:378
+msgid ""
+"`Freedesktop SDK <https://gitlab.com/freedesktop-sdk/freedesktop-"
+"sdk/-/wikis/Freedesktop-SDK-Flatpak-repository>`_ and `GNOME Nightly "
+"<https://nightly.gnome.org/>`_ hosts nightly versions of the "
+"``org.freedesktop.Platform`` and ``org.gnome.Platform`` runtimes and "
+"SDKs."
+msgstr ""
+
+#: ../../flatpak-devel.rst:383
+msgid ""
+"`GNOME OS <https://os.gnome.org/>`_ is an immutable Flatpak first system "
+"that can also be used to build and test applications on upcoming GNOME "
+"versions."
+msgstr ""
+
+#: ../../flatpak-devel.rst:387
+msgid ""
+"Freedesktop SDK also builds Mesa from the git main branch. Please see the"
+" `docs <https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/wikis/mesa-"
+"git>`_ on how to use that."
+msgstr ""
+
+#: ../../flatpak-devel.rst:391
+msgid ""
+"`Flathub hosts "
+"<https://github.com/flathub?q=org.freedesktop.Sdk.Extension&type=all&language=&sort=>`_"
+" extensions for lots of tooling and languages that can be used to build "
+"applications."
+msgstr ""
+

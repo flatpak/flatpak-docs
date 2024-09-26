@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"POT-Creation-Date: 2024-09-26 16:32-0300\n"
 "PO-Revision-Date: 2023-02-03 00:03+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
-"Language-Team: \n"
 "Language: ru\n"
+"Language-Team: \n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2)\n"
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../dependencies.rst:2
 msgid "Dependencies"
@@ -138,7 +138,9 @@ msgstr "библиотеки, которых нет в выбранной вам
 
 #: ../../dependencies.rst:54
 msgid "different versions of libraries that are in your chosen runtime"
-msgstr "разные версии библиотек, которые находятся в выбранной вами среде выполнения"
+msgstr ""
+"разные версии библиотек, которые находятся в выбранной вами среде "
+"выполнения"
 
 #: ../../dependencies.rst:55
 msgid "patched versions of libraries"
@@ -181,7 +183,8 @@ msgid ""
 msgstr "Специфика объединения библиотек описана в разделе :doc:`manifest`."
 
 #: ../../dependencies.rst:73
-msgid "Base apps"
+#, fuzzy
+msgid "BaseApps"
 msgstr "Базовые приложения"
 
 #: ../../dependencies.rst:75
@@ -197,11 +200,12 @@ msgstr ""
 "контроль, с другой."
 
 #: ../../dependencies.rst:79
+#, fuzzy
 msgid ""
 "However, in some cases, dependencies come as part of a bigger framework "
 "or toolkit, which doesn't fit into a runtime but which is also cumbersome"
 " to manually bundle as a series of individual modules. This is where "
-"*base apps* come in."
+"*BaseApps* come in."
 msgstr ""
 "Однако в некоторых случаях зависимости являются частью более крупной "
 "структуры или набора инструментов, которые не вписываются в среду "
@@ -209,11 +213,12 @@ msgstr ""
 "серии отдельных модулей. Вот тут-то и пригодятся *base apps*."
 
 #: ../../dependencies.rst:84
+#, fuzzy
 msgid ""
-"Base apps contain collections of bundled dependencies which can then be "
+"BaseApps contain collections of bundled dependencies which can then be "
 "bundled as part of an application. They don't get rebuilt as part of the "
 "build process, which makes building faster (particularly when bundling "
-"large dependencies). And because each base app is only built once, it is "
+"large dependencies). And because each BaseApp is only built once, it is "
 "guaranteed to be identical wherever it is used, so it will only be saved "
 "once on disk."
 msgstr ""
@@ -225,12 +230,13 @@ msgstr ""
 "использовалось, поэтому оно будет сохранено на диске только один раз."
 
 #: ../../dependencies.rst:90
+#, fuzzy
 msgid ""
-"Base apps are a relatively specialized concept and only some applications"
-" need to use them (the most common base app is used for `Electron "
+"BaseApps are a relatively specialized concept and only some applications "
+"need to use them (the most common BaseApp is used for `Electron "
 "applications <https://github.com/flathub/io.atom.electron.BaseApp>`_). "
 "However, if your application uses a large, complex or specialized "
-"framework, it is a good idea to check for available base apps before you "
+"framework, it is a good idea to check for available BaseApps before you "
 "start building."
 msgstr ""
 "Базовые приложения - это относительно специализированная концепция, и "
@@ -240,3 +246,89 @@ msgstr ""
 "Однако, если ваше приложение использует большую, сложную или "
 "специализированную структуру, рекомендуется проверить доступные базовые "
 "приложения, прежде чем начинать сборку."
+
+#: ../../dependencies.rst:97
+msgid "Extensions"
+msgstr ""
+
+#: ../../dependencies.rst:99
+msgid ""
+"Runtimes and applications can define extension points which allow "
+"optional additional runtimes to be mounted at a specified location inside"
+" the sandbox when they are present on the system. Typical uses for "
+"extensions include translations for applications, debuginfo for sdks, or "
+"adding more functionality to the application. Some software refers to "
+"these extensions as \"Add-ons\"."
+msgstr ""
+
+#: ../../dependencies.rst:105
+msgid ""
+"For an extension to be loaded in the application or runtime, an extension"
+" point first needs to be defined in the application or runtime in "
+"question."
+msgstr ""
+
+#: ../../dependencies.rst:109
+msgid ""
+"By convention, extension points follow the ID of the application or "
+"runtime in question, followed by a generic term for the extension. For "
+"example, the OBS Studio flatpak may define an extension point "
+"``com.obsproject.Studio.Plugin``, where \"Plugin\" is the generic term "
+"prefixed by the application ID."
+msgstr ""
+
+#: ../../dependencies.rst:115
+msgid ""
+"To see available extension points, it's best to look at the application "
+"or runtime manifest."
+msgstr ""
+
+#: ../../dependencies.rst:118
+msgid ""
+"Any extension now choosing to be loaded inside the OBS Studio flatpak "
+"must prefix their ID by ``com.obsproject.Studio.Plugin`` for example "
+"``com.obsproject.Studio.Plugin.Gstreamer``."
+msgstr ""
+
+#: ../../dependencies.rst:122
+msgid "Some extension names having special significance are discussed below."
+msgstr ""
+
+#: ../../dependencies.rst:124
+msgid ""
+"``.Debug`` is used for Debug extensions by applications, runtimes and "
+"SDKs. They are used for debugging purposes. Every application or runtime "
+"built with ``flatpak-builder`` produces a ``.Debug`` extension unless "
+"specifically disabled in the manifest."
+msgstr ""
+
+#: ../../dependencies.rst:129
+msgid ""
+"A ``.Debug`` extension will be needed when generating useful backtraces. "
+"This is explained more in :doc:`debugging`."
+msgstr ""
+
+#: ../../dependencies.rst:132
+msgid ""
+"``.Locale`` is used for Locale extensions by applications or runtimes. "
+"They add support for more languages to the parent application or runtime."
+" These are usually partially downloaded by ``flatpak`` based on the "
+"configured system locale. Every application or runtime built with "
+"``flatpak-builder`` produces a ``.Locale`` extension unless specifically "
+"disabled in the manifest."
+msgstr ""
+
+#: ../../dependencies.rst:139
+msgid ""
+"``.Sources`` is used for Sources extension by application or runtime. "
+"They are used to bundle sources of the modules used in the application or"
+" runtime in question. ``flatpak-builder`` will produce a ``.Sources`` "
+"extension prefixed by ID when ``--bundle-sources`` is used."
+msgstr ""
+
+#: ../../dependencies.rst:144
+msgid ""
+"Please visit :doc:`extension` for a guide on how to create extension "
+"points and extensions."
+msgstr ""
+

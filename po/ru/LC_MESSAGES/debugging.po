@@ -6,20 +6,19 @@
 # Dmitry <dmitrydmitry761@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"Project-Id-Version: Flatpak\n"
+"Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"POT-Creation-Date: 2024-09-26 16:32-0300\n"
 "PO-Revision-Date: 2023-01-04 21:32+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
-"Language-Team: \n"
 "Language: ru\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n"
-"%100<12 || n%100>14) ? 1 : 2);\n"
-"Generated-By: Babel 2.9.1\n"
-"X-Generator: Poedit 3.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../debugging.rst:2
 msgid "Debugging"
@@ -30,152 +29,330 @@ msgid "This section includes documentation on how to debug Flatpak apps."
 msgstr "Этот раздел включает документацию по отладке приложений Flatpak."
 
 #: ../../debugging.rst:7
-msgid "Running debugging tools"
-msgstr "Запуск инструментов отладки"
+msgid "Debug packages"
+msgstr ""
 
 #: ../../debugging.rst:9
 msgid ""
-"Because Flatpak runs each application inside a sandbox, debugging tools can't be used in "
-"the usual way, and must instead be run from inside the sandbox. To get a shell inside an "
-"application's sandbox, it can be run with the ``--command`` option::"
+"Before debugging, it is essential to install the debug packages used by "
+"the application. This can be done by::"
 msgstr ""
-"Поскольку Flatpak запускает каждое приложение в песочнице, инструменты отладки нельзя "
-"использовать обычным способом, и вместо этого их нужно запускать из песочницы. Чтобы "
-"поместить оболочку в песочницу приложения, ее можно запустить с параметром ``--command``::"
 
-#: ../../debugging.rst:16
+#: ../../debugging.rst:15
 msgid ""
-"This creates a sandbox for the application with the given ID and, instead of running the "
-"application, runs a shell inside the sandbox. From the shell prompt, it is then possible to "
-"run the application. This can also be done using any debugging tools that you want to use. "
-"For example, to run the application with ``gdb``::"
+"This will install the SDK, the Debug SDK and the Debug extension for the "
+"application."
 msgstr ""
-"Это создает песочницу для приложения с заданным идентификатором и вместо запуска приложения "
-"запускает оболочку внутри песочницы. Затем из командной строки можно запустить приложение. "
-"Это также можно сделать с помощью любых инструментов отладки, которые вы хотите "
-"использовать. Например, чтобы запустить приложение с ``gdb``::"
 
-#: ../../debugging.rst:24
-msgid ""
-"This works because the ``--devel`` option tells Flatpak to use the SDK as the runtime, "
-"which includes debugging tools like ``gdb``. The ``--devel`` option also adjusts the "
-"sandbox setup to enable debugging."
+#: ../../debugging.rst:19
+msgid "Debug shell"
 msgstr ""
-"Это работает, потому что опция ``--devel`` указывает Flatpak использовать SDK в качестве "
-"среды выполнения, которая включает инструменты отладки, такие как ``gdb``. Параметр ``--"
-"devel`` также регулирует настройку песочницы для включения отладки."
 
-#: ../../debugging.rst:30
+#: ../../debugging.rst:21
 msgid ""
-"The Freedesktop SDK (on which many others are based), includes a range of debugging tools, "
-"such as ``gdb``, ``strace``, ``nm``, ``dbus-send``, ``dconf``, and many others."
+"A debugging environment can be created by starting a shell inside the "
+"sandbox::"
 msgstr ""
-"Freedesktop SDK (на котором основаны многие другие) включает ряд инструментов отладки, "
-"таких как ``gdb``, ``strace``, ``nm``, ``dbus-send``, ``dconf`` и многие другие."
 
-#: ../../debugging.rst:34
+#: ../../debugging.rst:26
+#, fuzzy
 msgid ""
-"``gdb`` is much more useful when it has access to debug information for the application and "
-"the runtime it is using. Flatpak splits this information off into debug extensions, which "
-"you should install before debugging an application::"
+"This creates a sandbox for the application with the given ID and, instead"
+" of running the application, runs a shell inside the sandbox. The "
+"``--devel`` option tells Flatpak to use the SDK as the runtime, which "
+"includes various debugging tools and it also adjusts the sandbox setup to"
+" enable debugging."
 msgstr ""
-"``gdb`` гораздо более полезен, когда у него есть доступ к отладочной информации для "
-"приложения и используемой среды выполнения. Flatpak разделяет эту информацию на отладочные "
-"расширения, которые вы должны установить перед отладкой приложения::"
+"Это работает, потому что опция ``--devel`` указывает Flatpak использовать"
+" SDK в качестве среды выполнения, которая включает инструменты отладки, "
+"такие как ``gdb``. Параметр ``--devel`` также регулирует настройку "
+"песочницы для включения отладки."
 
-#: ../../debugging.rst:41
+#: ../../debugging.rst:32
 msgid ""
-"When the ``--devel`` option is used, Flatpak will automatically use any matching debug "
-"extensions that it finds."
+"It is also possible to get a shell inside an application sandbox without "
+"having to install it. This is done using ``flatpak-builder``'s ``--run`` "
+"option::"
 msgstr ""
-"Когда используется параметр ``--devel``, Flatpak автоматически использует любые подходящие "
-"расширения отладки, которые он находит."
+"Также возможно получить оболочку внутри песочницы приложения без ее "
+"установки. Это делается с помощью параметра ``flatpak-builder``'s "
+"``--run``::"
+
+#: ../../debugging.rst:38
+msgid ""
+"This sets up a sandbox that is populated with the build results found in "
+"the build directory, and runs a shell inside it."
+msgstr ""
+"Это устанавливает песочницу, которая заполняется результатами сборки, "
+"найденными в каталоге сборки, и запускает оболочку внутри нее."
+
+#: ../../debugging.rst:42
+msgid "Using GDB in the sandbox"
+msgstr ""
 
 #: ../../debugging.rst:44
 msgid ""
-"It is also possible to get a shell inside an application sandbox without having to install "
-"it. This is done using ``flatpak-builder``'s ``--run`` option::"
+"Note that :ref:`debugging:Debug packages` must be installed to get "
+"meaningful traces from GDB. Once inside the :ref:`debugging:Debug shell` "
+"to run the application with ``gdb`` ::"
 msgstr ""
-"Также возможно получить оболочку внутри песочницы приложения без ее установки. Это делается "
-"с помощью параметра ``flatpak-builder``'s ``--run``::"
 
-#: ../../debugging.rst:49
-msgid ""
-"This sets up a sandbox that is populated with the build results found in the build "
-"directory, and runs a shell inside it."
+#: ../../debugging.rst:50
+msgid "To pass arguments to the application::"
 msgstr ""
-"Это устанавливает песочницу, которая заполняется результатами сборки, найденными в каталоге "
-"сборки, и запускает оболочку внутри нее."
-
-#: ../../debugging.rst:53
-msgid "Creating a .Debug extension"
-msgstr "Создание расширения .Debug"
 
 #: ../../debugging.rst:55
 msgid ""
-"Like many other packaging systems, Flatpak separates bulky debug information from regular "
-"content and ships it separately, in what is called a ``.Debug`` extension."
+"A breakpoint can also be set for example on the ``main`` function and "
+"once it is reached the source code can be listed::"
 msgstr ""
-"Как и многие другие системы упаковки, Flatpak отделяет объемную отладочную информацию от "
-"обычного контента и отправляет ее отдельно в так называемом расширении .Debug."
 
-#: ../../debugging.rst:59
+#: ../../debugging.rst:62
 msgid ""
-"When an application is built, ``flatpak-builder`` automatically creates a ``.Debug`` "
-"extension. This can be disabled with the ``no-debuginfo`` option."
+"Once the bug is reproduced, if it is a crash it will automatically return"
+" to the gdb prompt. In case of a freeze pressing Ctrl+c will cause it to "
+"return to the gdb prompt. Now enable logging to a file (this will be "
+"saved in the working directory and the Flatpak needs filesystem access to"
+" that ``--filesystem=$(pwd)``)::"
 msgstr ""
-"Когда приложение построено, ``flatpak-builder`` автоматически создает расширение ``."
-"Debug``. Это можно отключить с помощью опции ``no-debuginfo``."
 
-#: ../../debugging.rst:64
-msgid "Overriding sandbox permissions"
-msgstr "Переопределение разрешений песочницы"
-
-#: ../../debugging.rst:66
-msgid ""
-"It is sometimes useful to have extra permissions in a sandbox when debugging. This can be "
-"achieved using the various sandbox options that are accepted by the run command. For "
-"example::"
+#: ../../debugging.rst:70
+msgid "Then to get the backtrace::"
 msgstr ""
-"Иногда бывает полезно иметь дополнительные разрешения в песочнице при отладке. Этого можно "
-"добиться с помощью различных параметров песочницы, которые принимает команда запуска. "
-"Например::"
 
-#: ../../debugging.rst:72
-msgid ""
-"This command runs a shell in the sandbox for the given application, granting it system bus "
-"access to the bus name owned by logind."
+#: ../../debugging.rst:74
+msgid "Or for all threads, in case of a multi-threaded program::"
 msgstr ""
-"Эта команда запускает оболочку в изолированной программной среде для данного приложения, "
-"предоставляя ему доступ к системной шине с именем шины, принадлежащим logind."
-
-#: ../../debugging.rst:76
-msgid "Inspecting portal permissions"
-msgstr "Проверка разрешений портала"
 
 #: ../../debugging.rst:78
 msgid ""
-"Flatpak has a number of commands that allow to manage portal permissions for applications."
-msgstr "Flatpak имеет ряд команд, позволяющих управлять разрешениями портала для приложений."
+"Note that ``gdb`` inside the sandbox cannot use debug symbols from host's"
+" `debuginfod servers <https://sourceware.org/elfutils/Debuginfod.html>`_."
+msgstr ""
 
 #: ../../debugging.rst:81
+msgid ""
+"Please also see the `GDB user manual "
+"<https://sourceware.org/gdb/current/onlinedocs/gdb.html/>`_ for a more "
+"complete overview on how to use GDB."
+msgstr ""
+
+#: ../../debugging.rst:85
+msgid "Getting stacktraces from a crash"
+msgstr ""
+
+#: ../../debugging.rst:87
+msgid ""
+"If an application crashed and the system has coredumps and `systemd-"
+"coredump <https://www.freedesktop.org/software/systemd/man/latest"
+"/systemd-coredump.html#>`_ enabled, a coredump will be logged. Get the "
+"``PID`` from that coredump::"
+msgstr ""
+
+#: ../../debugging.rst:93
+msgid ""
+"Now run ``flatpak-coredumpctl`` (this requires :ref:`debugging:Debug "
+"packages` to be installed)::"
+msgstr ""
+
+#: ../../debugging.rst:100
+#, fuzzy
+msgid "Using other debugging tools"
+msgstr "Запуск инструментов отладки"
+
+#: ../../debugging.rst:102
+msgid ""
+"``org.freedesktop.Sdk`` also includes other debugging tools like "
+"`Valgrind <https://valgrind.org/>`_ which is useful to find memory leaks."
+" Once inside the :ref:`debugging:Debug shell`, it can be run with::"
+msgstr ""
+
+#: ../../debugging.rst:108
+msgid ""
+"`Strace <https://strace.io/>`_ can be useful to check what an application"
+" is doing. For example, to trace ``openat(), read()`` calls::"
+msgstr ""
+
+#: ../../debugging.rst:113
+msgid ""
+"`Perf <https://perf.wiki.kernel.org/index.php/Main_Page>`_ requires "
+"access to ``--filesystem=/sys`` to run::"
+msgstr ""
+
+#: ../../debugging.rst:119
+#, fuzzy
+msgid "Creating a Debug extension"
+msgstr "Создание расширения .Debug"
+
+#: ../../debugging.rst:121
+#, fuzzy
+msgid ""
+"Like many other packaging systems, Flatpak separates bulky debug "
+"information from regular content and ships it separately, in a Debug  "
+"extension."
+msgstr ""
+"Как и многие другие системы упаковки, Flatpak отделяет объемную "
+"отладочную информацию от обычного контента и отправляет ее отдельно в так"
+" называемом расширении .Debug."
+
+#: ../../debugging.rst:124
+#, fuzzy
+msgid ""
+"When an application is built, ``flatpak-builder`` automatically creates a"
+" Debug extension. This can be disabled with the ``no-debuginfo`` option."
+msgstr ""
+"Когда приложение построено, ``flatpak-builder`` автоматически создает "
+"расширение ``.Debug``. Это можно отключить с помощью опции ``no-"
+"debuginfo``."
+
+#: ../../debugging.rst:128
+msgid ""
+"To install the Debug extension created locally, pass ``--install`` to "
+"``flatpak-builder`` which will set up a new remote for the build. The "
+"remotes available can be checked with::"
+msgstr ""
+
+#: ../../debugging.rst:134
+msgid "Then install the Debug extension from that remote::"
+msgstr ""
+
+#: ../../debugging.rst:139
+msgid "Overriding sandbox permissions"
+msgstr "Переопределение разрешений песочницы"
+
+#: ../../debugging.rst:141
+msgid ""
+"It is sometimes useful to have extra permissions in a sandbox when "
+"debugging. This can be achieved using the various sandbox options that "
+"are accepted by the run command. For example::"
+msgstr ""
+"Иногда бывает полезно иметь дополнительные разрешения в песочнице при "
+"отладке. Этого можно добиться с помощью различных параметров песочницы, "
+"которые принимает команда запуска. Например::"
+
+#: ../../debugging.rst:147
+msgid ""
+"This command runs a shell in the sandbox for the given application, "
+"granting it system bus access to the bus name owned by logind."
+msgstr ""
+"Эта команда запускает оболочку в изолированной программной среде для "
+"данного приложения, предоставляя ему доступ к системной шине с именем "
+"шины, принадлежащим logind."
+
+#: ../../debugging.rst:151
+msgid "Inspecting portal permissions"
+msgstr "Проверка разрешений портала"
+
+#: ../../debugging.rst:153
+msgid ""
+"Flatpak has a number of commands that allow to manage portal permissions "
+"for applications."
+msgstr ""
+"Flatpak имеет ряд команд, позволяющих управлять разрешениями портала для "
+"приложений."
+
+#: ../../debugging.rst:156
 msgid "To see all portal permissions of an application, use::"
 msgstr "Чтобы увидеть все права доступа приложения к порталу, используйте::"
 
-#: ../../debugging.rst:85
+#: ../../debugging.rst:160
 msgid "To reset all portal permissions of an application, use::"
 msgstr "Чтобы сбросить все права доступа приложения к порталу, используйте::"
 
-#: ../../debugging.rst:91
+#: ../../debugging.rst:166
 msgid "Interacting with running sandboxes"
 msgstr "Взаимодействие с запущенными песочницами"
 
-#: ../../debugging.rst:93
-msgid "You can see all the apps that are currently running in Flatpak sandboxes (since 1.2)::"
+#: ../../debugging.rst:168
+msgid ""
+"You can see all the apps that are currently running in Flatpak sandboxes "
+"(since 1.2)::"
 msgstr ""
-"Вы можете увидеть все приложения, которые в настоящее время работают в песочницах Flatpak "
-"(начиная с версии 1.2)::"
+"Вы можете увидеть все приложения, которые в настоящее время работают в "
+"песочницах Flatpak (начиная с версии 1.2)::"
 
-#: ../../debugging.rst:98
+#: ../../debugging.rst:173
 msgid "And, if you need to, you can terminate one by force (since 1.2)::"
-msgstr "И, при необходимости, вы можете прекратить его принудительно (начиная с версии 1.2)::"
+msgstr ""
+"И, при необходимости, вы можете прекратить его принудительно (начиная с "
+"версии 1.2)::"
+
+#~ msgid ""
+#~ "Because Flatpak runs each application "
+#~ "inside a sandbox, debugging tools can't"
+#~ " be used in the usual way, and"
+#~ " must instead be run from inside "
+#~ "the sandbox. To get a shell inside"
+#~ " an application's sandbox, it can be"
+#~ " run with the ``--command`` option::"
+#~ msgstr ""
+#~ "Поскольку Flatpak запускает каждое приложение"
+#~ " в песочнице, инструменты отладки нельзя"
+#~ " использовать обычным способом, и вместо"
+#~ " этого их нужно запускать из "
+#~ "песочницы. Чтобы поместить оболочку в "
+#~ "песочницу приложения, ее можно запустить "
+#~ "с параметром ``--command``::"
+
+#~ msgid ""
+#~ "This creates a sandbox for the "
+#~ "application with the given ID and, "
+#~ "instead of running the application, runs"
+#~ " a shell inside the sandbox. From "
+#~ "the shell prompt, it is then "
+#~ "possible to run the application. This"
+#~ " can also be done using any "
+#~ "debugging tools that you want to "
+#~ "use. For example, to run the "
+#~ "application with ``gdb``::"
+#~ msgstr ""
+#~ "Это создает песочницу для приложения с"
+#~ " заданным идентификатором и вместо запуска"
+#~ " приложения запускает оболочку внутри "
+#~ "песочницы. Затем из командной строки "
+#~ "можно запустить приложение. Это также "
+#~ "можно сделать с помощью любых "
+#~ "инструментов отладки, которые вы хотите "
+#~ "использовать. Например, чтобы запустить "
+#~ "приложение с ``gdb``::"
+
+#~ msgid ""
+#~ "The Freedesktop SDK (on which many "
+#~ "others are based), includes a range "
+#~ "of debugging tools, such as ``gdb``, "
+#~ "``strace``, ``nm``, ``dbus-send``, ``dconf``,"
+#~ " and many others."
+#~ msgstr ""
+#~ "Freedesktop SDK (на котором основаны "
+#~ "многие другие) включает ряд инструментов "
+#~ "отладки, таких как ``gdb``, ``strace``, "
+#~ "``nm``, ``dbus-send``, ``dconf`` и "
+#~ "многие другие."
+
+#~ msgid ""
+#~ "``gdb`` is much more useful when "
+#~ "it has access to debug information "
+#~ "for the application and the runtime "
+#~ "it is using. Flatpak splits this "
+#~ "information off into debug extensions, "
+#~ "which you should install before "
+#~ "debugging an application::"
+#~ msgstr ""
+#~ "``gdb`` гораздо более полезен, когда у"
+#~ " него есть доступ к отладочной "
+#~ "информации для приложения и используемой "
+#~ "среды выполнения. Flatpak разделяет эту "
+#~ "информацию на отладочные расширения, которые"
+#~ " вы должны установить перед отладкой "
+#~ "приложения::"
+
+#~ msgid ""
+#~ "When the ``--devel`` option is used, "
+#~ "Flatpak will automatically use any "
+#~ "matching debug extensions that it finds."
+#~ msgstr ""
+#~ "Когда используется параметр ``--devel``, "
+#~ "Flatpak автоматически использует любые "
+#~ "подходящие расширения отладки, которые он "
+#~ "находит."
+

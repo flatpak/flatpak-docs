@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"POT-Creation-Date: 2024-09-26 16:32-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../multiarch.rst:2
 msgid "Multiarch support"
@@ -72,13 +72,13 @@ msgid ""
 "extension point for it:"
 msgstr ""
 
-#: ../../multiarch.rst:63
+#: ../../multiarch.rst:91
 msgid ""
-"Note that the ``versions`` property here must contain both ``1.4`` and "
-"the same value as in ``runtime-version``."
+"Note that the ``x-gl-versions`` property here must contain both ``1.4`` "
+"and the same value as in ``runtime-version``."
 msgstr ""
 
-#: ../../multiarch.rst:66
+#: ../../multiarch.rst:94
 msgid ""
 "Make sure to create directories where the extensions will be mounted (the"
 " mount points are specified in ``directory`` properties and are relative "
@@ -86,28 +86,28 @@ msgid ""
 "stage of the build."
 msgstr ""
 
-#: ../../multiarch.rst:70
+#: ../../multiarch.rst:98
 msgid ""
 "Finally, you need to make the dynamic library loader know the paths to "
 "32-bit libraries. In order to do this, you can install a "
 "``/app/etc/ld.so.conf`` file with contents like this:"
 msgstr ""
 
-#: ../../multiarch.rst:79
+#: ../../multiarch.rst:107
 msgid ""
 "Here ``/app/lib32`` is the directory where you install additional 32-bit "
 "libraries, if any."
 msgstr ""
 
-#: ../../multiarch.rst:82
+#: ../../multiarch.rst:110
 msgid "You can combine the above two steps in a special module, e.g."
 msgstr ""
 
-#: ../../multiarch.rst:100
+#: ../../multiarch.rst:132
 msgid "Building 32-bit modules"
 msgstr ""
 
-#: ../../multiarch.rst:102
+#: ../../multiarch.rst:134
 msgid ""
 "The section above describes how to run 32-bit programs that are already "
 "built. This section will describe the process of building 32-bit "
@@ -116,17 +116,17 @@ msgid ""
 "please refer to :doc:`flatpak-builder` guide first."
 msgstr ""
 
-#: ../../multiarch.rst:108
+#: ../../multiarch.rst:140
 msgid "First of all, you'll need to enable some SDK extensions at build time:"
 msgstr ""
 
-#: ../../multiarch.rst:116
+#: ../../multiarch.rst:148
 msgid ""
 "The first one is the 32-bit portion of the SDK, containing 32-bit "
 "libraries and development files."
 msgstr ""
 
-#: ../../multiarch.rst:119
+#: ../../multiarch.rst:151
 msgid ""
 "The second one is a cross-compiler. Usually ``gcc -m32`` is used for "
 "multilib builds, but the flatpak SDK comes with gcc without multilib "
@@ -134,14 +134,14 @@ msgid ""
 "just as you would need it for any foreign architecture like aarch64."
 msgstr ""
 
-#: ../../multiarch.rst:124
+#: ../../multiarch.rst:156
 msgid ""
 "In order to build a 32-bit module, some global build options needs to be "
 "overridden. Examples here assume that 32-bit libraries are installed in "
 "``/app/lib32`` directory:"
 msgstr ""
 
-#: ../../multiarch.rst:146
+#: ../../multiarch.rst:178
 msgid ""
 "These ``build-options`` need to be set for each 32-bit module. If your "
 "app manifest is in YAML format, the YAML anchors can come in handy and "
@@ -150,9 +150,16 @@ msgid ""
 "and then point each 32-bit modules' ``build-options`` to that anchor:"
 msgstr ""
 
-#: ../../multiarch.rst:170
+#: ../../multiarch.rst:202
 msgid ""
 "Of course, in order to actually use 32-bit modules you've build, you'll "
 "also need all the same setup from the previous section."
 msgstr ""
+
+#~ msgid ""
+#~ "Note that the ``versions`` property here"
+#~ " must contain both ``1.4`` and the"
+#~ " same value as in ``runtime-"
+#~ "version``."
+#~ msgstr ""
 
