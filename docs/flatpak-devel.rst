@@ -365,7 +365,7 @@ desktop file to fix the window class.
 Additional tools
 ----------------
 
-- `Electron Builder <https://www.electron.build/configuration/flatpak.html>`_
+- `Electron Builder <https://www.electron.build/flatpak.html>`_
   supports exporting single file Flatpak bundles. Please also see the
   Electron application packaging guide :doc:`electron`.
 
