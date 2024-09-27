@@ -568,7 +568,7 @@ The following extensions utilise the above two extension points::
   org.freedesktop.Platform.GL32.nvidia-${DRIVER_VERSION}
 
 - org.freedesktop.Platform.VulkanLayer - Extension point for
-  `Vulkan layers <https://github.com/KhronosGroup/Vulkan-Guide/blob/master/chapters/layers.md>`_.
+  `Vulkan layers <https://github.com/KhronosGroup/Vulkan-Guide/blob/main/chapters/layers.md>`_.
   Developers can provide extensions using this extension point
   and the user needs to install those extensions to have them available.
 - org.freedesktop.Platform.GStreamer - Extension point for GStreamer
