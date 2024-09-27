@@ -19,7 +19,7 @@ Create a Python `virtual environment <https://docs.python.org/3/tutorial/venv.ht
 
 Then install the dependencies with **pip**::
 
-  pip install -r requirements.txt sphinx-intl
+  pip install -r requirements.txt
 
 Build the Documentation
 -----------------------
