@@ -32,10 +32,16 @@ jobs:
           echo "NEW_FLATPAK_VERSION=${new_flatpak_version}" >> $GITHUB_ENV
 
       - name: Compare versions
+        id: vercomp
         run: |
           appstreamcli vercmp $NEW_FLATPAK_VERSION gt $OLD_FLATPAK_VERSION
 
+      - name: Update failed
+        if: ${{ steps.vercomp.outcome == 'failure' }}
+        run: echo "Docs version was same or no update was found in the previous step"
+
       - name: Create pull request
+        if: ${{ success() && steps.vercomp.outcome == 'success' }}
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
