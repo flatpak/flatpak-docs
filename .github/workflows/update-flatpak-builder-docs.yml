@@ -35,6 +35,7 @@ jobs:
         id: vercomp
         run: |
           appstreamcli vercmp $NEW_FLATPAK_BUILDER_VERSION gt $OLD_FLATPAK_BUILDER_VERSION
+        continue-on-error: true
 
       - name: Update failed
         if: ${{ steps.vercomp.outcome == 'failure' }}
