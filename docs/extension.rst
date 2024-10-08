@@ -66,8 +66,8 @@ further below.
   of an API/ABI break. The value here will be the ``branch`` used in the
   extension manifest.
 
-  If not specified it defaults to application or runtime branch of the
-  extension point.
+  If not specified it defaults to the ``runtime`` branch, that the
+  extension point belongs to. So in the above example it is ``45``.
 
 .. tip::
   ``versions`` is same as ``version`` but can be used for specifying
