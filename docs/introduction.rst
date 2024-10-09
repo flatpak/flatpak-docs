@@ -88,7 +88,7 @@ Flatpak also offers advantages over other universal approaches to Linux applicat
   users to easily browse, install, run, and manage Flatpak applications.
 - **Space efficiency**: Flatpak saves storage by deduplicating libraries and other files used by multiple
   applications.
-- **Delta updates**: only changed files are downloaded during updates.
+- **Delta updates**: only the differences between versions are downloaded during updates.
 
 Other benefits for developers include:
 
