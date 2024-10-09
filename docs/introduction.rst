@@ -24,8 +24,8 @@ Target audience
 
 Flatpak can be used by all kinds of desktop applications and aims to be as
 agnostic as possible in terms of how applications are built. There are no
-requirements regarding the programming languages, build tools, toolkits, or
-frameworks used.
+requirements regarding which programming languages, build tools, toolkits
+or frameworks can be used.
 
 While Flatpak only runs on Linux, it can be used by applications that target
 other operating systems as well as those that are Linux-specific. Applications
@@ -42,26 +42,21 @@ Understanding the problems with the current model
 of packaging applications helps explain why Flatpak exists:
 
 - **Duplicated work packaging apps**: many Linux distributions have their own
-  package manager, package format, and package repository. This leads to a lot of
+  package manager and package format that are incompatible with each other. This leads to a lot of fragmentation and duplicated work since the same application needs to be packaged multiple times for various distributions.
   duplicated work, with different maintainers packaging the same application
   for various distributions. Otherwise, developers either need to learn the format of
-  each distribution or ignore most distributions and support only a few. This makes
+  every distribution or support only a few. This makes
   the Linux desktop a difficult platform for software vendors to target.
-- **Limited to apps that are packaged**: not every application is natively
-  available in every Linux distribution. If an application is not available in
-  a specific distribution, users must manually download the archive of
-  the application, then extract it and hope the application will launch.
-- **Limited to distributions that have the apps**: users are limited to
-  distributions that have the necessary applications for their workflow.
-  This reduces the number of suitable distributions for a user.
-- **Hard to innovate in OS space**: distribution maintainers spend much of their time
-  packaging applications rather than focus on their end goals. This delays each
-  distribution's progress.
+- **Limited to apps that are packaged**: not every application is packaged for every Linux distribution. If an application isn't packaged for a specific distribution, users
+are left with limited and unreliable options, often technical in nature.
+- **Limited to distributions that have the apps**: users are limited only to
+  the distributions that have the all necessary applications for their workflow.
+- **Hard to innovate in OS space**: distribution maintainers spend a huge amount of
+time and effort in packaging rather than focusing on improving the distribution.
 - **Old and outdated packages**: LTS distributions often have very old
-  versions of applications packaged natively. This complicates bug
-  reproducibility since applications run in different environments, and
-  developers often have little control over how their applications are packaged
-  by distributions.
+  versions of applications packaged. This complicates bug
+  reproducibility or leads to support requests for bugs that are fixed
+  upstream in newer versions.
 
 Flatpak addresses these issues by enabling developers to distribute
 applications from one source and target the entire Linux desktop.
@@ -73,42 +68,34 @@ Flatpak offers major advantages over most system package managers:
 
 - **Universality**: Flatpak allows applications to be installed and run on virtually any Linux
   distribution, including non-GNU distributions, systemd-free distributions,
-  distributions with a read-only operating system (OS), and various architectures without requiring
+  immutable distributions and various architectures without requiring
   the developer to have access to the relevant hardware.
 - **Space for innovation**: Flatpak allows distribution maintainers to focus on
   innovating their distribution without being burdened by packaging concerns.
-- **Stability**: breakages in Flatpak applications won't affect the system,
+- **Stability**: breakages in Flatpak applications do not affect the system,
   since they run in isolated environments.
 - **Rootless install**: Flatpak does not require elevated privileges to install
   applications or runtimes.
-- **Sandboxed applications**: Flatpak increases security, one of its main goals, by
-  isolating applications from one another and limiting their access to the host environment.
+- **Sandboxed applications**: one of Flatpak's main goals is to increase the security of desktop systems. This is achieved by isolating applications from one another and limiting their access to the host environment.
 
 Flatpak also offers advantages over other universal approaches to Linux application distribution:
 
 - **Decentralized by design**: while Flatpak does provide a centralized service for distributing
   applications, it also offers decentralized hosting and distribution, allowing developers or
   downstreams to host their own applications and application repositories.
-- **Desktop integration**: Flatpak offers native integration with the main Linux desktops,
-  allowing users to easily browse, install, run, and manage Flatpak
-  applications through their existing desktop environment and tools.
+- **Desktop integration**: Flatpak offers native integration with the many Linux desktop environments allowing users to easily browse, install, run, and manage Flatpak
+  applications.
 - **Space efficiency**: Flatpak saves storage by deduplicating libraries and
   other files used by multiple applications.
 - **Delta updates**: only changed files are downloaded during updates.
 
 Other benefits for developers include:
 
-- **Forward-compatibility**: the same Flatpak application can run on different versions of
-  the same distribution, including unreleased versions, without changes from the application
-  developer.
-- **Bundling**: developers can ship almost any dependency or library as part of
-  their applications, giving them control over the softwares used to build them.
-- **Consistent application environments**: because application environments are identical across
-devices, applications run as expected; bug identification, as well as testing, is also made easier.
-- **Branches**: developers can distribute applications from different branches
-  (e.g. ``stable``, ``beta``, etc.) while the application name can stay the same.
-- **Maintained platforms**: Flatpak's maintained runtimes contain collections
-  of dependencies for applications to use, easing development.
+- **Forward-compatibility**: the same Flatpak application can run on different versions of a distribution, including unreleased versions, without needing any changes.
+- **Bundling**: this allows application developers to ship almost any dependency or library as part of their applications, giving them complete control over their application.
+- **Consistent application environments**: Flatpak provides a consistent and identical application runtime environment across devices and distributions. This makes bug identification and testing easier.
+- **Branches**: this allows application developers to distribute multiple branches of an applications (e.g. ``stable``, ``beta``, etc.) while retaining the same name.
+- **Maintained platforms**: Flatpak runtimes contains a collection of common dependencies for the applications to use, easing application development and maintenance.
 
 In general, Flatpak is best suited for desktop applications. While command-line
 applications also work, Flatpak may not be suitable in some cases:
