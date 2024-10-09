@@ -3,7 +3,7 @@ Introduction to Flatpak
 
 Flatpak is a framework for distributing desktop applications across various
 Linux distributions. It was created by developers with a long history of
-working on the Linux desktop and is run as an independent open-source project.
+working on the Linux desktop and is run as an independent open source project.
 
 Terminology
 -----------
@@ -29,7 +29,7 @@ or frameworks can be used.
 
 While Flatpak only runs on Linux, it can be used by applications that target
 other operating systems as well as those that are Linux-specific. Applications
-can be open-source or proprietary (although some distribution services, like
+can be open source or proprietary (although some distribution services, like
 `Flathub <https://flathub.org/>`_, can have restrictions in this respect).
 
 Flatpak's only technical requirements are that applications follow a few
@@ -38,11 +38,11 @@ Freedesktop standards to enable desktop integration (see :doc:`conventions`).
 Issues with current model of packaging
 --------------------------------------
 
-Understanding the problems with the current model
-of packaging applications helps explain why Flatpak exists:
+It is important to understand the problems with the current model
+of packaging applications to understand the existence of Flatpak:
 
 - **Fragmentation and duplicated work**: each Linux distribution has their own
-  package manager and package format that are incompatible with each other. This leads to a lot of fragmentation and duplicated work since the same application needs to be packaged multiple times for various distributions.
+  package managers and package formats that are incompatible with each other. This leads to a lot of fragmentation and duplicated work since the same application needs to be packaged multiple times for various distributions.
   duplicated work, with different maintainers packaging the same application
   for various distributions. Otherwise, developers either need to learn the format of
   every distribution or support only a few. This makes
@@ -50,12 +50,12 @@ of packaging applications helps explain why Flatpak exists:
 - **Limited to apps that are packaged**: not every application is packaged for every Linux distribution. If an application isn't packaged for a specific distribution, users
 are left with limited and unreliable options, often technical in nature.
 - **Limited to distributions that have the apps**: users are limited only to
-  the distributions that have the all necessary applications for their workflow.
+  the distributions that have all the necessary applications for their workflow.
 - **Hard to innovate in OS space**: distribution maintainers spend a huge amount of
-time and effort in packaging rather than focusing on improving the distribution.
+time and effort in packaging rather than focusing on improving their distributions.
 - **Old and outdated packages**: LTS distributions often have very old
   versions of applications packaged. This complicates bug
-  reproducibility or leads to support requests for bugs that are fixed
+  reproducibility or leads to support requests for bugs that have been fixed
   upstream in newer versions.
 
 Flatpak addresses these issues by enabling developers to distribute
@@ -80,10 +80,9 @@ Flatpak offers major advantages over most system package managers:
 
 Flatpak also offers advantages over other universal approaches to Linux application distribution:
 
-- **Decentralized by design**: while Flatpak does provide a centralized service for distributing
-  applications, it also offers decentralized hosting and distribution, allowing developers or
+- **Decentralized by design**: Flatpak offers decentralized hosting and distribution, allowing developers or
   downstreams to host their own applications and application repositories.
-- **Desktop integration**: Flatpak offers native integration with the many Linux desktop environments allowing users to easily browse, install, run, and manage Flatpak
+- **Desktop integration**: Flatpak offers native integration with the many Linux desktop environments, allowing users to easily browse, install, run, and manage Flatpak
   applications.
 - **Space efficiency**: Flatpak saves storage by deduplicating libraries and
   other files used by multiple applications.
@@ -92,7 +91,7 @@ Flatpak also offers advantages over other universal approaches to Linux applicat
 Other benefits for developers include:
 
 - **Forward-compatibility**: the same Flatpak application can run on different versions of a distribution, including unreleased versions, without needing any changes.
-- **Bundling**: this allows application developers to ship almost any dependency or library as part of their applications, giving them complete control over their application.
+- **Bundling**: this allows application developers to ship almost any dependency or library as part of their applications, giving them complete control over their applications.
 - **Consistent application environments**: Flatpak provides a consistent and identical application runtime environment across devices and distributions. This makes bug identification and testing easier.
 - **Branches**: this allows application developers to distribute multiple branches of an applications (e.g. ``stable``, ``beta``, etc.) while retaining the same name.
 - **Maintained platforms**: Flatpak runtimes contains a collection of common dependencies for the applications to use, easing application development and maintenance.
@@ -113,6 +112,6 @@ In general, if the sandbox prohibits an application's core functionality or beco
 too inconvenient or obtrusive, Flatpak may not be the most suitable packaging choice.
 
 Flatpak also won't export udev rules or systemd services from the sandbox
-to the host, requiring manual configuration after installing the Flatpak package.
+to the host and requires manual configuration after installing the Flatpak package.
 
 Information about Flatpak's internals can be found in :doc:`under-the-hood`.
