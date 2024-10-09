@@ -41,7 +41,7 @@ Issues with current model of packaging
 Understanding the problems with the current model
 of packaging applications helps explain why Flatpak exists:
 
-- **Duplicated work packaging apps**: many Linux distributions have their own
+- **Fragmentation and duplicated work**: each Linux distribution has their own
   package manager and package format that are incompatible with each other. This leads to a lot of fragmentation and duplicated work since the same application needs to be packaged multiple times for various distributions.
   duplicated work, with different maintainers packaging the same application
   for various distributions. Otherwise, developers either need to learn the format of
