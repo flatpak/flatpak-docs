@@ -15,7 +15,7 @@ Terminology
   utilities needed for a Flatpak application to work.
 - BaseApp: an integrated set of additional libraries and frameworks, such as Electron, for Flatpak
   applications that need more than just the basic runtime.
-- Flatpak bundle: a single-file export format containing a Flatpak appplication or runtime.
+- Flatpak bundle: a single-file export format containing a Flatpak application or runtime.
 
 Target audience
 ---------------
@@ -34,8 +34,8 @@ Flatpak's only technical requirements are that applications follow a
 few Freedesktop standards to enable desktop integration
 (see :doc:`conventions`).
 
-Issues with current model of packaging
---------------------------------------
+Issues with the current model of packaging
+------------------------------------------
 
 It is important to understand the problems with the current model
 of packaging applications to understand the existence of Flatpak:
@@ -88,7 +88,7 @@ Flatpak also offers advantages over other universal approaches to Linux applicat
   users to easily browse, install, run, and manage Flatpak applications.
 - **Space efficiency**: Flatpak saves storage by deduplicating libraries and other files used by multiple
   applications.
-- **Delta updates**: only the differences between versions are downloaded during updates.
+- **Delta updates**: only the differences between versions are downloaded during updates, saving network bandwidth.
 
 Other benefits for developers include:
 
@@ -101,8 +101,8 @@ Other benefits for developers include:
   application runtime environment across devices and distributions. This makes
   bug identification and testing easier.
 - **Branches**: this allows application developers to distribute multiple branches of
-  an applications (e.g. ``stable``, ``beta``, etc.) while retaining the same name.
-- **Maintained platforms**: Flatpak runtimes contains a collection
+  an application (e.g. ``stable``, ``beta``, etc.) while retaining the same name.
+- **Maintained platforms**: Flatpak runtimes contain a collection
   of common dependencies for the applications to use, easing
   application development and maintenance.
 
@@ -119,7 +119,7 @@ cases:
   For example, Flatpak won't allow spawning sub-namespaces
   in the sandbox.
 - Kernel modules or drivers are non-application packages and won't work
-  inside a flatpak.
+  inside Flatpak.
 
 In general, if the sandbox prohibits an application's core functionality
 or becomes too inconvenient or obtrusive, Flatpak may not be
