@@ -31,7 +31,7 @@ can be open source or proprietary (although some distribution services, like
 `Flathub <https://flathub.org/>`_, can have restrictions in this respect).
 
 Flatpak's only technical requirements are that applications follow a
-few Freedesktop standards to enable desktop integration
+small number of Freedesktop standards to enable desktop integration
 (see :doc:`conventions`).
 
 Issues with the current packaging model
