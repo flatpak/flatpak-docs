@@ -119,7 +119,7 @@ cases:
   For example, Flatpak won't allow spawning sub-namespaces
   in the sandbox.
 - Kernel modules or drivers are non-application packages and won't work
-  inside Flatpak.
+  as a Flatpak.
 
 In general, if the sandbox prohibits an application's core functionality
 or becomes too inconvenient or obtrusive, Flatpak may not be
