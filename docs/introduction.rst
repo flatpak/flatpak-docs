@@ -34,8 +34,8 @@ Flatpak's only technical requirements are that applications follow a
 few Freedesktop standards to enable desktop integration
 (see :doc:`conventions`).
 
-Issues with the current model of packaging
-------------------------------------------
+Issues with the current packaging model
+---------------------------------------
 
 It is important to understand the problems with the current model
 of packaging applications to understand the existence of Flatpak:
@@ -88,7 +88,7 @@ Flatpak also offers advantages over other universal approaches to Linux applicat
   users to easily browse, install, run, and manage Flatpak applications.
 - **Space efficiency**: Flatpak saves storage by deduplicating libraries and other files used by multiple
   applications.
-- **Delta updates**: only the differences between versions are downloaded during updates, saving network bandwidth.
+- **Delta updates**: only updated data is downloaded during updates, saving network bandwidth.
 
 Other benefits for developers include:
 
