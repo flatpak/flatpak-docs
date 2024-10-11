@@ -45,7 +45,7 @@ such as other processes, is deliberately not possible.
 
 By necessity, some resources inside the sandbox need to be exported
 outside to be used by the host system. These are known as 'exports'
-and include resources such as the application's ``.desktop`` file and
+and include resources such as the application's desktop file and
 its icon.
 
 Portals
