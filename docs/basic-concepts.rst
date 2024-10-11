@@ -66,7 +66,7 @@ Repositories
 ------------
 
 Flatpak applications and runtimes are typically stored and published using
-repositories, which behave very similarly to Git repositories. A Flatpak
+repositories, which behave very similarly to Git repositories: a Flatpak
 repository can contain a single object or multiple objects, and each object
 is versioned, allowing for upgrades and even downgrades.
 
