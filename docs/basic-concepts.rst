@@ -17,8 +17,8 @@ can automatically install the required runtime for an application.) Multiple
 runtimes and different versions of the same runtime can be installed
 alongside each other.
 
-Runtimes are distribution-agnostic and do not depend on particular distribution
-versions. This means that they provide a stable, cross-distribution base
+Runtimes are distribution agnostic and do not depend on a particular distribution
+version. This means that they provide a stable, cross-distribution base
 for applications and allow applications to work irrespective
 of operating system updates.
 
@@ -53,7 +53,7 @@ Portals
 
 Portals are a mechanism through which applications can interact with the
 host environment from within the sandbox. They enable access
-to data, files and services without additional sandbox permissions.
+to data, files and services without requiring additional static sandbox permissions.
 
 Examples of capabilities that can be accessed through portals include opening
 files through a file chooser dialog or printing. Interface toolkits can
