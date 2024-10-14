@@ -87,10 +87,12 @@ Depending on the exact implementation of StatusNotifier that your application is
 using it may need session bus ownership of ``org.kde.StatusNotifierItem-$PID-$ITEM_ID``.
 
 This permission is problematic in Flatpak as the ``$PID`` value is often the same
-in sandboxes and the item will possibly conflict with other applications.
-However if needed the ``--own-name=org.kde.*`` permission will allow this. This opens
-many new risks including the ability to impersonate any KDE service or application
-possibly capturing important user data.
+in sandboxes, leading to potential conflicts with other applications.
+However, if needed, the ``--own-name=org.kde.*`` permission will allow this. 
+
+.. warning::
+  This introduces many new risks, including the ability to impersonate any KDE
+  service or application, possibly capturing important user data.
 
 Most implementations of StatusNotifer have dropped this requirement but known exceptions
 to this are Electron versions older than 23.3.0.
