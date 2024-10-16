@@ -71,7 +71,7 @@ Here are some practical examples of poor ID choices:
 
 - ``Org.Example.App``
 
-  The top-level domain (TLD) portion of the ID must be in lowercase, and while not required,
+  The domain portion of the ID must be in lowercase, and while not required,
   the application portion is recommended to be in lowercase as well.
   Therefore, you should use ``org.example.app``.
 
