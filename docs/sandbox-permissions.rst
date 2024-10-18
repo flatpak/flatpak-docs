@@ -257,6 +257,101 @@ You can provide the following device permissions:
 While not ideal, ``--device=all`` can be used to access devices like
 webcams, CD/DVD drives etc.
 
+USB portal
+``````````
+
+New in 1.5.11.
+
+Sandboxed access to individual USB devices can be controlled
+controlled by portals. Flatpak allow specifying enumerable USB devices
+to allow access.
+
+Like ``--device=usb``, this is just about accessing the raw USB
+devices, that need libusb. By using the portal, you can restrict which
+device can be requested (enumerable) and then request an explicit
+permission to access. For example, if you run a scanner driver, there
+is no reason USB security devices be accessible.
+
+A list of valid use cases include scanners (handled, for example by
+SANE), photo cameras (handled by libgphoto2), flashing devices, etc.
+
+While this is portal dependent and ``xdg-desktop-portal`` is currently
+the only portal implementation, the overall permission flow is as
+follow:
+
+- The package specify which devices it wishes to enumerate.
+- The application requests the portal to enumerate the available USB
+  devices based on that list. If the list is empty it will enumerate
+  all USB devices.
+- When the application wants to access the device, it will request,
+  via the portal, the device it wants to access.
+- The portal then request permission to the user if not already
+  granted.
+- If the permission was granted, a file descriptor for the device is
+  passed back to the application.
+
+The application is able to open the devices it is supposed to use
+while the others would be hidden.
+
+Specifying the enumerable devices
+"""""""""""""""""""""""""""""""""
+
+You can specify devices on the flatpak command line, and by extension
+in the finish arguments for Flatpak Builder. Enumerable devices are
+specified with a query passed with ``--usb=`` while hidden devices are
+specified with a query passed with ``--nousb=``. The hidden list is
+always applied on top of the enumerable list, like an exception
+list. The goal is to be able to specify a broad range and then exclude
+the few devices that shall not be enumerated.
+
+Queries are made out of rules. These rules are composable with ``+``.
+
+The rule ``all`` enumerates every USB device. There is no further rule
+allowed in the query.
+
+The ``vnd`` and ``dev`` rules specify a USB vendor and a USB device ID
+respectively. A vendor can be specified alone, but a device rule
+always comes with a vendor rule as a device id is only unique within a
+vendor. Vendor and device ID are specified with 4 digit hex
+numbers. For more information about the USB IDs, you can refer to the
+`Linux USB ID repository <http://www.linux-usb.org/usb-ids.html>`_
+
+``cls`` specifies the device USB class and subclass. Both class and
+subclass are two digits hex numbers separated by a colon ``:``. You
+can use ``*`` to specify any subclass within the class.
+
+Some examples of the syntax:
+
+- ``vnd:1234``: Devices from vendor ``1234``
+- ``vnd:1234+dev:3456``: Only device 3456 from vendor ``1234``.
+- ``vnd:1234+cls:06:*``: All the PTP devices from vendor ``1234``.
+- ``cls:06:*``: All the PTP devices.
+
+Permission is merely granted to enumerate devices, to open them,
+permission must be requested from the portal. It is not possible to
+open a device that is not enumerable.
+
+.. note::
+
+   The ``--device=usb`` permission is broader than what the USB portal
+   is supposed to provide and allows unfettered access to any USB
+   device on the bus.
+
+In some situations you may need to specify a very long list of devices.
+
+Device lists can be passed in one single argument, or through a file.
+
+When using ``--usb-list``, the queries are separated by a semi-colon
+``;``, with queries for hidden devices (i.e. those that would be
+passed with ``--nousb``) prefixed with ``!``.
+
+When using ``--usb-list-file`` the file whose filename is passed
+contains USB queries, one per line. Like with ``--usb-list`` queries
+for hidden devices are prefixed with ``!``. Empty lines are ignored,
+so are lines starting with a ``#`` that can be used to comment. Note
+that comments are discarded. The file is no longer needed afterwards
+as the list is persisted internally.
+
 dconf access
 ````````````
 
