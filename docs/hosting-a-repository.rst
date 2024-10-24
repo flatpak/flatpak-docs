@@ -143,6 +143,7 @@ The instructions will use Gitlab.com.
       # Stable Flathub repo
       RUNTIME_REPO: "https://flathub.org/repo/flathub.flatpakrepo"
     script:
+      # Set up an user as the docker image used here comes with none
       - |
         cat <<EOF > /etc/passwd
         root:x:0:0:root:/root:/bin/bash
@@ -155,6 +156,7 @@ The instructions will use Gitlab.com.
       # Sets up the stable Flathub repository for dependencies
       - flatpak remote-add --user --if-not-exists flathub ${RUNTIME_REPO}
       # Sets up GPG signing
+      # Initialise GPG
       - gpg --list-keys --with-keygrip
       - echo "allow-preset-passphrase" >> ~/.gnupg/gpg-agent.conf
       - gpg-connect-agent reloadagent /bye
@@ -167,6 +169,7 @@ The instructions will use Gitlab.com.
       - flatpak build-update-repo --gpg-sign=${GPG_KEY_ID} --generate-static-deltas --prune repo/
     artifacts:
       paths:
+        - $BUNDLE
         - repo
       expire_in: 1 week
     rules:
@@ -347,6 +350,7 @@ This uses Gitlab.com's `hosted aarch64 runners <https://docs.gitlab.com/ee/ci/ru
     variables:
       RUNTIME_REPO: "https://flathub.org/repo/flathub.flatpakrepo"
     before_script:
+      # Set up an user as the docker image used here comes with none
       - |
         cat <<EOF > /etc/passwd
         root:x:0:0:root:/root:/bin/bash
