@@ -162,14 +162,17 @@ The instructions will use Gitlab.com.
       - gpg-connect-agent reloadagent /bye
       - cat $GPG_PASSPHRASE | /usr/libexec/gpg-preset-passphrase --preset $GPG_KEY_GREP
       - gpg --import --batch ${GPG_PRIVATE_KEY}
-      # Build & install build dependencies
+      # Build & install build dependencies, branch can be unset too then it will default to master see man flatpak-manifest > branch
       - flatpak-builder build --user --install-deps-from=flathub --gpg-sign=${GPG_KEY_ID} --disable-rofiles-fuse --disable-updates --force-clean --repo=repo ${BRANCH:+--default-branch=$BRANCH} ${MANIFEST_PATH}
-      # Generate a Flatpak bundle
+      # Generate a Flatpak bundle for testing in MRs
       - flatpak build-bundle --gpg-sign=${GPG_KEY_ID} repo ${BUNDLE} --runtime-repo=${RUNTIME_REPO} ${APP_ID} ${BRANCH}
+      # flatpak-builder exports contents to repo folder after building
+      # This generates summary, appstream refs and prunes the folder to keep the latest commit only in preparation for publishing
       - flatpak build-update-repo --gpg-sign=${GPG_KEY_ID} --generate-static-deltas --prune repo/
     artifacts:
       paths:
         - $BUNDLE
+        # This artifact will be used when publishing to the static site
         - repo
       expire_in: 1 week
     rules:
@@ -360,6 +363,7 @@ This uses Gitlab.com's `hosted aarch64 runners <https://docs.gitlab.com/ee/ci/ru
         root:x:0:
         EOF
 
+      # Add the flathub repository for installing build dependencies
       - flatpak remote-add --user --if-not-exists flathub ${RUNTIME_REPO}
       - gpg --list-keys --with-keygrip
       - echo "allow-preset-passphrase" >> ~/.gnupg/gpg-agent.conf
@@ -383,6 +387,7 @@ This uses Gitlab.com's `hosted aarch64 runners <https://docs.gitlab.com/ee/ci/ru
       ARCH: x86_64
     extends: .setup
     script:
+      # Build the app, ARCH should be host arch, BRANCH can be specified or if not it will default to master, see man flatpak-manifest > branch
       - flatpak-builder build --arch=${ARCH} --user --install-deps-from=flathub --gpg-sign=${GPG_KEY_ID} --disable-rofiles-fuse --disable-updates --force-clean --repo=repo ${BRANCH:+--default-branch=$BRANCH} ${MANIFEST_PATH}
     stage: build-x86_64
 
@@ -406,6 +411,8 @@ This uses Gitlab.com's `hosted aarch64 runners <https://docs.gitlab.com/ee/ci/ru
       - "build-aarch64"
     extends: .setup
     script:
+      # The repo folder must have contents for both arches present, so they are chained one after another through dependencies
+      # prune is run to keep the latest commit only
       - flatpak build-update-repo --gpg-sign=${GPG_KEY_ID} --generate-static-deltas --prune repo
 
   pages:
