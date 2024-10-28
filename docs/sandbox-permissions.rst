@@ -222,7 +222,8 @@ to them with ``--filesystem`` will have no effect::
 
 The entire ``/run`` is not allowed and all subpaths of ``/run`` except
 ``/run/flatpak, /run/host`` is allowed to be exposed via
-``--filesystem``.
+``--filesystem``. Additionally, if ``/var/run`` on host is a symlink to
+``../run``, exposing it or a subpath of it, is not allowed.
 
 Additionally the following directories from host need to be explicitly
 requested with ``--filesystem`` and are not available with
