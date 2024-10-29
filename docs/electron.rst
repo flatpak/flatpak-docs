@@ -116,6 +116,7 @@ access.
 
   finish-args:
     - --share=ipc
+    - --device=dri
     - --socket=x11
     - --socket=pulseaudio
     - --share=network
