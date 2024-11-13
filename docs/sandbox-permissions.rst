@@ -59,6 +59,12 @@ information on how to use them.
 Permissions guidelines
 ----------------------
 
+.. note::
+
+  Note, that these permissions are completely static and variable
+  expansion or substitution (for example in ``--filesystem`` or ``--env``)
+  is not possible.
+
 While application developers have control over the sandbox permissions they
 wish to configure, good practice is encouraged and can be enforced. For
 example, the Flathub hosting service places requirements on which permissions
