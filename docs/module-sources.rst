@@ -487,6 +487,15 @@ property. Instead of a symlink this also often a script like:
 The ``subdir`` directory comes from the contents of the extracted snap
 and how that is installed.
 
+.. note::
+
+  Note that variables like ``$FLATPAK_DEST`` are not available in the
+  runtime sandbox or in the sandbox where ``apply_extra`` is executed
+  when installing the Flatpak.
+
+  Please avoid using them when creating the script in the manifest
+  as this will be incorrectly expanded.
+
 The commands needed to extract the snap are specified in the ``apply_extra``
 script. These can be any shell commands that run when installing the
 Flatpak package but note that it won't have access to anything outside
