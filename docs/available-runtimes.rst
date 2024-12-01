@@ -72,9 +72,6 @@ org.gnome.Sdk.Docs                                     SDK documentation (extens
 KDE
 ---
 
-Runtime ID: ``org.kde.Platform``
-SDK ID: ``org.kde.Sdk``
-
 The `KDE runtime <https://invent.kde.org/packaging/flatpak-kde-runtime>`_
 is also based on the Freedesktop runtime and adds Qt and KDE Frameworks.
 It is appropriate for any application that makes use of the KDE
@@ -100,9 +97,6 @@ org.kde.Sdk.Docs                                       SDK documentation (extens
 
 elementary
 ----------
-
-Runtime ID: ``io.elementary.Platform``
-SDK ID: ``io.elementary.Platform``
 
 The `elementary runtime <https://github.com/elementary/flatpak-platform>`_
 is hosted by elementary and is appropriate for any application that
