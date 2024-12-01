@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
-"POT-Creation-Date: 2023-05-31 14:18-0300\n"
+"POT-Creation-Date: 2024-12-01 08:05+0530\n"
 "PO-Revision-Date: 2023-05-31 14:42-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../portals.rst:2
 msgid "Portal support in GTK"
@@ -50,8 +50,8 @@ msgid ""
 " As of `xdg-desktop-portal-gtk` 1.7.1 it can also open directories."
 msgstr ""
 "Use ``GtkFileChooserNative`` (ou ``GtkFileChooserButton``) para abrir "
-"arquivos. A partir do `xdg-desktop-portal-gtk` 1.7.1 ele também pode abrir "
-"diretórios."
+"arquivos. A partir do `xdg-desktop-portal-gtk` 1.7.1 ele também pode "
+"abrir diretórios."
 
 #: ../../portals.rst:13
 msgid "Use ``GtkPrintOperation`` for printing"
@@ -80,8 +80,8 @@ msgid ""
 "Use the ``GtkApplication::screensaver-active`` property to monitor "
 "scrensaver status"
 msgstr ""
-"Use a propriedade ``GtkApplication::screensaver-active`` para monitorar o "
-"status da proteção de tela"
+"Use a propriedade ``GtkApplication::screensaver-active`` para monitorar o"
+" status da proteção de tela"
 
 #: ../../portals.rst:21
 msgid ""
@@ -119,17 +119,17 @@ msgstr ""
 "abrir URIs ou enviar um e-mail por meio de URL ``mailto``"
 
 #: ../../portals.rst:33
+#, fuzzy
 msgid ""
 "Use ``QFileDialog`` class to open files and, as of Qt ``5.18.90``, "
-"directories. Avoid using ``QFileDialog::DontUseNativeDialog``. Note that "
-"portals cannot currently give access to directories on the host "
-"filesystem"
+"directories. Avoid using ``QFileDialog::DontUseNativeDialog``."
 msgstr ""
 "Use a classe ``QFileDialog`` para abrir arquivos e, a partir do Qt "
 "``5.18.90``, diretórios. Evite usar ``QFileDialog::DontUseNativeDialog``."
 " Observe que portais não podem atualmente dar acesso a diretórios no "
 "sistema de arquivos host"
 
-#: ../../portals.rst:36
+#: ../../portals.rst:35
 msgid "Use ``KNotification::notify()`` to show notification"
 msgstr "Use ``KNotification::notify()`` para mostrar notificação"
+

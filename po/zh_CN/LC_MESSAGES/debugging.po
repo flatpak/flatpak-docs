@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-26 16:32-0300\n"
+"POT-Creation-Date: 2024-12-01 08:05+0530\n"
 "PO-Revision-Date: 2018-11-03 01:03-0400\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language: zh_Hans_CN\n"
@@ -163,8 +163,8 @@ msgstr ""
 
 #: ../../debugging.rst:113
 msgid ""
-"`Perf <https://perf.wiki.kernel.org/index.php/Main_Page>`_ requires "
-"access to ``--filesystem=/sys`` to run::"
+"`Perf <https://perfwiki.github.io/main/>`_ requires access to "
+"``--filesystem=/sys`` to run::"
 msgstr ""
 
 #: ../../debugging.rst:119
@@ -303,4 +303,10 @@ msgstr ""
 #~ "Flatpak will automatically use any "
 #~ "matching debug extensions that it finds."
 #~ msgstr "当使用 ``--devel`` 选项时，Flatpak将自动使用任何它能找到的匹配的调试扩展。"
+
+#~ msgid ""
+#~ "`Perf <https://perf.wiki.kernel.org/index.php/Main_Page>`_ "
+#~ "requires access to ``--filesystem=/sys`` to"
+#~ " run::"
+#~ msgstr ""
 

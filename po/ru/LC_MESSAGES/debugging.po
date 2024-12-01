@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-26 16:32-0300\n"
+"POT-Creation-Date: 2024-12-01 08:05+0530\n"
 "PO-Revision-Date: 2023-01-04 21:32+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
 "Language: ru\n"
@@ -175,8 +175,8 @@ msgstr ""
 
 #: ../../debugging.rst:113
 msgid ""
-"`Perf <https://perf.wiki.kernel.org/index.php/Main_Page>`_ requires "
-"access to ``--filesystem=/sys`` to run::"
+"`Perf <https://perfwiki.github.io/main/>`_ requires access to "
+"``--filesystem=/sys`` to run::"
 msgstr ""
 
 #: ../../debugging.rst:119
@@ -355,4 +355,10 @@ msgstr ""
 #~ "Flatpak автоматически использует любые "
 #~ "подходящие расширения отладки, которые он "
 #~ "находит."
+
+#~ msgid ""
+#~ "`Perf <https://perf.wiki.kernel.org/index.php/Main_Page>`_ "
+#~ "requires access to ``--filesystem=/sys`` to"
+#~ " run::"
+#~ msgstr ""
 

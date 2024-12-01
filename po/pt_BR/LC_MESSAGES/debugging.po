@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
-"POT-Creation-Date: 2024-09-26 16:32-0300\n"
+"POT-Creation-Date: 2024-12-01 08:05+0530\n"
 "PO-Revision-Date: 2022-10-04 10:58-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
@@ -175,8 +175,8 @@ msgstr ""
 
 #: ../../debugging.rst:113
 msgid ""
-"`Perf <https://perf.wiki.kernel.org/index.php/Main_Page>`_ requires "
-"access to ``--filesystem=/sys`` to run::"
+"`Perf <https://perfwiki.github.io/main/>`_ requires access to "
+"``--filesystem=/sys`` to run::"
 msgstr ""
 
 #: ../../debugging.rst:119
@@ -355,4 +355,10 @@ msgstr "E, se necessário, você pode encerrar um à força (desde a versão 1.2
 #~ "o Flatpak automaticamente usa as "
 #~ "extensões de depuração correspondentes que "
 #~ "encontrar."
+
+#~ msgid ""
+#~ "`Perf <https://perf.wiki.kernel.org/index.php/Main_Page>`_ "
+#~ "requires access to ``--filesystem=/sys`` to"
+#~ " run::"
+#~ msgstr ""
 
