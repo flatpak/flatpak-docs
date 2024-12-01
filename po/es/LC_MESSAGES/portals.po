@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-31 14:18-0300\n"
+"POT-Creation-Date: 2024-12-01 08:05+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../portals.rst:2
 msgid "Portal support in GTK"
@@ -96,12 +96,19 @@ msgstr ""
 #: ../../portals.rst:33
 msgid ""
 "Use ``QFileDialog`` class to open files and, as of Qt ``5.18.90``, "
-"directories. Avoid using ``QFileDialog::DontUseNativeDialog``. Note that "
-"portals cannot currently give access to directories on the host "
-"filesystem"
+"directories. Avoid using ``QFileDialog::DontUseNativeDialog``."
 msgstr ""
 
-#: ../../portals.rst:36
+#: ../../portals.rst:35
 msgid "Use ``KNotification::notify()`` to show notification"
 msgstr ""
+
+#~ msgid ""
+#~ "Use ``QFileDialog`` class to open files"
+#~ " and, as of Qt ``5.18.90``, "
+#~ "directories. Avoid using "
+#~ "``QFileDialog::DontUseNativeDialog``. Note that "
+#~ "portals cannot currently give access to"
+#~ " directories on the host filesystem"
+#~ msgstr ""
 

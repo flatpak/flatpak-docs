@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-26 16:32-0300\n"
+"POT-Creation-Date: 2024-12-01 08:05+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ko\n"
@@ -434,7 +434,20 @@ msgid ""
 "and how that is installed."
 msgstr ""
 
-#: ../../module-sources.rst:490
+#: ../../module-sources.rst:492
+msgid ""
+"Note that variables like ``$FLATPAK_DEST`` are not available in the "
+"runtime sandbox or in the sandbox where ``apply_extra`` is executed when "
+"installing the Flatpak."
+msgstr ""
+
+#: ../../module-sources.rst:496
+msgid ""
+"Please avoid using them when creating the script in the manifest as this "
+"will be incorrectly expanded."
+msgstr ""
+
+#: ../../module-sources.rst:499
 msgid ""
 "The commands needed to extract the snap are specified in the "
 "``apply_extra`` script. These can be any shell commands that run when "
@@ -445,7 +458,7 @@ msgid ""
 "file too but must be installed as ``${FLATPAK_DEST}/bin/apply_extra``."
 msgstr ""
 
-#: ../../module-sources.rst:498
+#: ../../module-sources.rst:507
 msgid ""
 "``unsquashfs -quiet -no-progress foo.snap`` extracts the snap package "
 "into a directory called ``squashfs-root``, then the contents of that "
@@ -453,28 +466,28 @@ msgid ""
 " snap package itself is cleaned up to save space."
 msgstr ""
 
-#: ../../module-sources.rst:503
+#: ../../module-sources.rst:512
 msgid ""
 "This is another example that can be used to extract Debian packages "
 "(``.deb``)."
 msgstr ""
 
-#: ../../module-sources.rst:523
+#: ../../module-sources.rst:532
 msgid ""
 "Flatpak extensions can also use extra-data sources in a similar manner. "
 "This is an example of an extension manifest utilising an extra-data "
 "source."
 msgstr ""
 
-#: ../../module-sources.rst:551
+#: ../../module-sources.rst:560
 msgid "For more information on Flatpak extensions please see :doc:`extension`."
 msgstr ""
 
-#: ../../module-sources.rst:554
+#: ../../module-sources.rst:563
 msgid "Directory source"
 msgstr ""
 
-#: ../../module-sources.rst:556
+#: ../../module-sources.rst:565
 msgid ""
 "A directory source with ``type: dir`` is best suited for use in CI to "
 "build the latest changes and avoid downloading multiple times. These "
@@ -482,19 +495,19 @@ msgid ""
 "application is being built."
 msgstr ""
 
-#: ../../module-sources.rst:561
+#: ../../module-sources.rst:570
 msgid ""
 "When submitting an application to software stores like Flathub, ``dir`` "
 "should be avoided altogether."
 msgstr ""
 
-#: ../../module-sources.rst:564
+#: ../../module-sources.rst:573
 msgid ""
 "``path`` should be the path of the local directory relative to the "
 "manifest root path, whoose contents will be copied during build."
 msgstr ""
 
-#: ../../module-sources.rst:578
+#: ../../module-sources.rst:587
 msgid ""
 "Additonally there are `bzr`, `svn` and `inline` sources supported. `bzr` "
 "and `svn` requires the `bzr <https://code.launchpad.net/bzr>`_ and `svn "
