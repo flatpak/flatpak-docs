@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-01 08:05+0530\n"
+"POT-Creation-Date: 2024-12-01 08:17+0530\n"
 "PO-Revision-Date: 2018-05-20 10:36-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language: de\n"
@@ -77,12 +77,12 @@ msgid ""
 msgstr ""
 
 #: ../../available-runtimes.rst:38 ../../available-runtimes.rst:62
-#: ../../available-runtimes.rst:91 ../../available-runtimes.rst:113
+#: ../../available-runtimes.rst:88 ../../available-runtimes.rst:107
 msgid "ID"
 msgstr ""
 
 #: ../../available-runtimes.rst:38 ../../available-runtimes.rst:62
-#: ../../available-runtimes.rst:91 ../../available-runtimes.rst:113
+#: ../../available-runtimes.rst:88 ../../available-runtimes.rst:107
 msgid "Description"
 msgstr ""
 
@@ -91,7 +91,7 @@ msgid "org.freedesktop.Platform"
 msgstr ""
 
 #: ../../available-runtimes.rst:40 ../../available-runtimes.rst:64
-#: ../../available-runtimes.rst:93 ../../available-runtimes.rst:115
+#: ../../available-runtimes.rst:90 ../../available-runtimes.rst:109
 msgid "Runtime"
 msgstr ""
 
@@ -100,7 +100,7 @@ msgid "org.freedesktop.Sdk"
 msgstr ""
 
 #: ../../available-runtimes.rst:41 ../../available-runtimes.rst:65
-#: ../../available-runtimes.rst:94 ../../available-runtimes.rst:116
+#: ../../available-runtimes.rst:91 ../../available-runtimes.rst:110
 msgid "SDK"
 msgstr ""
 
@@ -109,7 +109,7 @@ msgid "org.freedesktop.Platform.Locale"
 msgstr ""
 
 #: ../../available-runtimes.rst:42 ../../available-runtimes.rst:66
-#: ../../available-runtimes.rst:95 ../../available-runtimes.rst:117
+#: ../../available-runtimes.rst:92 ../../available-runtimes.rst:111
 msgid "Runtime translations (extension)"
 msgstr ""
 
@@ -118,7 +118,7 @@ msgid "org.freedesktop.Sdk.Debug"
 msgstr ""
 
 #: ../../available-runtimes.rst:43 ../../available-runtimes.rst:67
-#: ../../available-runtimes.rst:96 ../../available-runtimes.rst:118
+#: ../../available-runtimes.rst:93 ../../available-runtimes.rst:112
 msgid "SDK debug information (extension)"
 msgstr ""
 
@@ -127,7 +127,7 @@ msgid "org.freedesktop.Sdk.Locale"
 msgstr ""
 
 #: ../../available-runtimes.rst:44 ../../available-runtimes.rst:68
-#: ../../available-runtimes.rst:97 ../../available-runtimes.rst:119
+#: ../../available-runtimes.rst:94 ../../available-runtimes.rst:113
 msgid "SDK translations (extension)"
 msgstr ""
 
@@ -136,7 +136,7 @@ msgid "org.freedesktop.Sdk.Docs"
 msgstr ""
 
 #: ../../available-runtimes.rst:45 ../../available-runtimes.rst:69
-#: ../../available-runtimes.rst:98 ../../available-runtimes.rst:120
+#: ../../available-runtimes.rst:95 ../../available-runtimes.rst:114
 msgid "SDK documentation (extension)"
 msgstr ""
 
@@ -190,10 +190,6 @@ msgid "KDE"
 msgstr ""
 
 #: ../../available-runtimes.rst:75
-msgid "Runtime ID: ``org.kde.Platform`` SDK ID: ``org.kde.Sdk``"
-msgstr ""
-
-#: ../../available-runtimes.rst:78
 msgid ""
 "The `KDE runtime <https://invent.kde.org/packaging/flatpak-kde-runtime>`_"
 " is also based on the Freedesktop runtime and adds Qt and KDE Frameworks."
@@ -201,7 +197,7 @@ msgid ""
 " and most Qt-based applications."
 msgstr ""
 
-#: ../../available-runtimes.rst:83
+#: ../../available-runtimes.rst:80
 msgid ""
 "Qt5 LTS (based on KDE's Qt patch collection) branches are created on "
 "Freedesktop runtime major version releases and Qt6 branches are created "
@@ -212,39 +208,35 @@ msgid ""
 "Discourse <https://discuss.kde.org/c/announcement/9>`_."
 msgstr ""
 
-#: ../../available-runtimes.rst:93
+#: ../../available-runtimes.rst:90
 msgid "org.kde.Platform"
 msgstr ""
 
-#: ../../available-runtimes.rst:94
+#: ../../available-runtimes.rst:91
 msgid "org.kde.Sdk"
 msgstr ""
 
-#: ../../available-runtimes.rst:95
+#: ../../available-runtimes.rst:92
 msgid "org.kde.Platform.Locale"
 msgstr ""
 
-#: ../../available-runtimes.rst:96
+#: ../../available-runtimes.rst:93
 msgid "org.kde.Sdk.Debug"
 msgstr ""
 
-#: ../../available-runtimes.rst:97
+#: ../../available-runtimes.rst:94
 msgid "org.kde.Sdk.Locale"
 msgstr ""
 
-#: ../../available-runtimes.rst:98
+#: ../../available-runtimes.rst:95
 msgid "org.kde.Sdk.Docs"
 msgstr ""
 
-#: ../../available-runtimes.rst:102
+#: ../../available-runtimes.rst:99
 msgid "elementary"
 msgstr ""
 
-#: ../../available-runtimes.rst:104
-msgid "Runtime ID: ``io.elementary.Platform`` SDK ID: ``io.elementary.Platform``"
-msgstr ""
-
-#: ../../available-runtimes.rst:107
+#: ../../available-runtimes.rst:101
 msgid ""
 "The `elementary runtime <https://github.com/elementary/flatpak-"
 "platform>`_ is hosted by elementary and is appropriate for any "
@@ -252,49 +244,49 @@ msgid ""
 " based on the GNOME runtime and adds the elementary platform."
 msgstr ""
 
-#: ../../available-runtimes.rst:115
+#: ../../available-runtimes.rst:109
 msgid "io.elementary.Platform"
 msgstr ""
 
-#: ../../available-runtimes.rst:116
+#: ../../available-runtimes.rst:110
 msgid "io.elementary.Sdk"
 msgstr ""
 
-#: ../../available-runtimes.rst:117
+#: ../../available-runtimes.rst:111
 msgid "io.elementary.Platform.Locale"
 msgstr ""
 
-#: ../../available-runtimes.rst:118
+#: ../../available-runtimes.rst:112
 msgid "io.elementary.Sdk.Debug"
 msgstr ""
 
-#: ../../available-runtimes.rst:119
+#: ../../available-runtimes.rst:113
 msgid "io.elementary.Sdk.Locale"
 msgstr ""
 
-#: ../../available-runtimes.rst:120
+#: ../../available-runtimes.rst:114
 msgid "io.elementary.Sdk.Docs"
 msgstr ""
 
-#: ../../available-runtimes.rst:124
+#: ../../available-runtimes.rst:118
 msgid "Check software available in runtimes"
 msgstr ""
 
-#: ../../available-runtimes.rst:126
+#: ../../available-runtimes.rst:120
 msgid ""
 "The best way to check software packaged in the runtime is to look at "
 "their respective manifests in the git repository or release contents."
 msgstr ""
 
-#: ../../available-runtimes.rst:129
+#: ../../available-runtimes.rst:123
 msgid "The latter can be done using::"
 msgstr ""
 
-#: ../../available-runtimes.rst:136
+#: ../../available-runtimes.rst:130
 msgid "``pkg-config`` can be used for modules that install pkg-config files::"
 msgstr ""
 
-#: ../../available-runtimes.rst:143
+#: ../../available-runtimes.rst:137
 msgid "``ldconfig`` can be used to list all libraries::"
 msgstr ""
 
@@ -513,5 +505,13 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Available elementary runtimes:"
+#~ msgstr ""
+
+#~ msgid "Runtime ID: ``org.kde.Platform`` SDK ID: ``org.kde.Sdk``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Runtime ID: ``io.elementary.Platform`` SDK ID:"
+#~ " ``io.elementary.Platform``"
 #~ msgstr ""
 
