@@ -173,3 +173,20 @@ You can see all the apps that are currently running in Flatpak sandboxes
 And, if you need to, you can terminate one by force (since 1.2)::
 
  $ flatpak kill <application-id>
+
+Audit session or system bus traffic
+-----------------------------------
+
+A ``--socket=session-bus`` or a ``--socket=system-bus`` permission must
+not be present for the logging to work.
+
+Session or system bus traffic can be audited by passing ``--log-session-bus``
+and ``--log-system-bus`` respectively to ``flatpak run``::
+
+  flatpak run --log-session-bus <application-id>
+
+This can be useful to figure out the bus names used by an application
+and the corresponding ``--talk-name`` or ``--own-name`` permissions
+required::
+
+  flatpak --log-session-bus run <application-id>| grep '(required 1)'

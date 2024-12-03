@@ -121,7 +121,8 @@ risk. So they must be avoided, unless the application is a development
 tool.
 
 ``flatpak run --log-session-bus $FLATPAK_ID`` can be used to find the specific
-D-Bus permissions needed.
+D-Bus permissions needed. See :ref:`debugging:Audit session or system bus traffic`
+for more information.
 
 **Ownership**
 
