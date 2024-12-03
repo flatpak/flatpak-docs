@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
-"POT-Creation-Date: 2024-12-01 08:05+0530\n"
+"POT-Creation-Date: 2024-12-03 21:08+0530\n"
 "PO-Revision-Date: 2023-05-31 14:38-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
@@ -339,25 +339,26 @@ msgstr ""
 #: ../../sandbox-permissions.rst:123
 msgid ""
 "``flatpak run --log-session-bus $FLATPAK_ID`` can be used to find the "
-"specific D-Bus permissions needed."
+"specific D-Bus permissions needed. See :ref:`debugging:Audit session or "
+"system bus traffic` for more information."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:126
+#: ../../sandbox-permissions.rst:127
 msgid "**Ownership**"
 msgstr "**Propriedade**"
 
-#: ../../sandbox-permissions.rst:128
+#: ../../sandbox-permissions.rst:129
 msgid ""
 "Any ownership beyond what is granted by default ie. own namespace and "
 "``org.mpris.MediaPlayer2.$FLAPTAK_ID`` is typically unnecessary although "
 "there can be exceptions."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:132
+#: ../../sandbox-permissions.rst:133
 msgid "**Talk**"
 msgstr "**Conversa**"
 
-#: ../../sandbox-permissions.rst:134
+#: ../../sandbox-permissions.rst:135
 msgid ""
 "Talk permissions can be freely used, although it is recommended to use "
 "the minimum required."
@@ -365,11 +366,11 @@ msgstr ""
 "As permissões de conversa podem ser usadas livremente, embora seja "
 "recomendável usar o mínimo necessário."
 
-#: ../../sandbox-permissions.rst:138
+#: ../../sandbox-permissions.rst:139
 msgid "Filesystem access"
 msgstr "Acesso ao sistema de arquivos"
 
-#: ../../sandbox-permissions.rst:140
+#: ../../sandbox-permissions.rst:141
 #, fuzzy
 msgid ""
 "As a general rule, static and permanent filesystem access should be "
@@ -378,7 +379,7 @@ msgstr ""
 "Como regra geral, o acesso ao sistema de arquivos deve ser limitado o "
 "máximo possível. Isso inclui o uso de:"
 
-#: ../../sandbox-permissions.rst:143
+#: ../../sandbox-permissions.rst:144
 msgid ""
 "Using portals as an alternative to blanket filesystem access, wherever "
 "possible."
@@ -386,266 +387,266 @@ msgstr ""
 "Usar portais como uma alternativa ao acesso geral ao sistema de arquivos,"
 " sempre que possível"
 
-#: ../../sandbox-permissions.rst:145
+#: ../../sandbox-permissions.rst:146
 msgid "Using read-only access wherever possible, using the ``:ro`` option."
 msgstr "Usar acesso somente leitura sempre que possível, usando a opção ``:ro``."
 
-#: ../../sandbox-permissions.rst:146
+#: ../../sandbox-permissions.rst:147
 msgid ""
 "Using :ref:`conventions:XDG base directories` to store application's "
 "cache, config and state. Then no additional filesystem access would be "
 "required."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:149
+#: ../../sandbox-permissions.rst:150
 msgid ""
 "Avoiding full home access and instead using XDG directories such as "
 "``xdg-music`` or ``xdg-download`` etc."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:152
+#: ../../sandbox-permissions.rst:153
 msgid "The following permission options are available:"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:154
+#: ../../sandbox-permissions.rst:155
 msgid "``:ro`` - read-only access"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:155
+#: ../../sandbox-permissions.rst:156
 msgid ""
 "``:create`` - read/write access, and create the directory if it doesn't "
 "exist"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:158
+#: ../../sandbox-permissions.rst:159
 msgid "Additionally the following permissions are available:"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:161
+#: ../../sandbox-permissions.rst:162
 msgid "``host``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:161
+#: ../../sandbox-permissions.rst:162
 msgid ""
 "Access to ``/home, /media, /opt, /run/media, /srv`` and everything "
 "provided by ``host-os, host-etc`` mounted in ``/run/host``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:161 ../../sandbox-permissions.rst:165
-#: ../../sandbox-permissions.rst:166
+#: ../../sandbox-permissions.rst:162 ../../sandbox-permissions.rst:166
+#: ../../sandbox-permissions.rst:167
 msgid "Includes any subpaths"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:162
+#: ../../sandbox-permissions.rst:163
 msgid "``host-etc``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:162
+#: ../../sandbox-permissions.rst:163
 msgid "Host's ``/etc``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:162
+#: ../../sandbox-permissions.rst:163
 msgid "Host's ``/etc`` is mounted at ``/run/host/etc``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:163
+#: ../../sandbox-permissions.rst:164
 msgid "``host-os``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:163
+#: ../../sandbox-permissions.rst:164
 msgid ""
 "Host's ``/usr, /bin, /sbin, /lib{32, 64}, /etc/ld.so.cache, "
 "/etc/alternatives``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:163
+#: ../../sandbox-permissions.rst:164
 msgid "Mounted at ``/run/host``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:164
+#: ../../sandbox-permissions.rst:165
 msgid "``home``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:164
+#: ../../sandbox-permissions.rst:165
 #, fuzzy
 msgid "Access the home directory"
 msgstr "``--filesystem=home`` – acessa a pasta pessoal (home) do usuário"
 
-#: ../../sandbox-permissions.rst:164
+#: ../../sandbox-permissions.rst:165
 msgid "Except ``~/.var/app``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:165
+#: ../../sandbox-permissions.rst:166
 msgid "``/some/dir``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:165
+#: ../../sandbox-permissions.rst:166
 msgid "Access an arbitrary path except any reserved path"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:166
+#: ../../sandbox-permissions.rst:167
 msgid "``~/some/dir``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:166
+#: ../../sandbox-permissions.rst:167
 msgid "Arbitrary path relative to the home directory"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:167
+#: ../../sandbox-permissions.rst:168
 msgid "``xdg-desktop``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:167
+#: ../../sandbox-permissions.rst:168
 msgid "Access the XDG desktop directory"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:167
+#: ../../sandbox-permissions.rst:168
 msgid "``$XDG_DESKTOP_DIR`` or ``$HOME/Desktop``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:168
+#: ../../sandbox-permissions.rst:169
 msgid "``xdg-documents``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:168
+#: ../../sandbox-permissions.rst:169
 msgid "Access the XDG documents directory"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:168
+#: ../../sandbox-permissions.rst:169
 msgid "``$XDG_DOCUMENTS_DIR`` or ``$HOME/Documents``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:169
+#: ../../sandbox-permissions.rst:170
 msgid "``xdg-download``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:169
+#: ../../sandbox-permissions.rst:170
 msgid "Access the XDG download directory"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:169
+#: ../../sandbox-permissions.rst:170
 msgid "``$XDG_DOWNLOAD_DIR`` or ``$HOME/Downloads``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:170
+#: ../../sandbox-permissions.rst:171
 msgid "``xdg-music``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:170
+#: ../../sandbox-permissions.rst:171
 msgid "Access the XDG music directory"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:170
+#: ../../sandbox-permissions.rst:171
 msgid "``$XDG_MUSIC_DIR`` or ``$HOME/Music``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:171
+#: ../../sandbox-permissions.rst:172
 msgid "``xdg-pictures``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:171
+#: ../../sandbox-permissions.rst:172
 msgid "Access the XDG pictures directory"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:171
+#: ../../sandbox-permissions.rst:172
 msgid "``$XDG_PICTURES_DIR`` or ``$HOME/Pictures``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:172
+#: ../../sandbox-permissions.rst:173
 msgid "``xdg-public-share``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:172
+#: ../../sandbox-permissions.rst:173
 msgid "Access the XDG public directory"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:172
+#: ../../sandbox-permissions.rst:173
 msgid "``$XDG_PUBLICSHARE_DIR`` or ``$HOME/Public``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:173
+#: ../../sandbox-permissions.rst:174
 msgid "``xdg-videos``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:173
+#: ../../sandbox-permissions.rst:174
 msgid "Access the XDG videos directory"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:173
+#: ../../sandbox-permissions.rst:174
 msgid "``$XDG_VIDEOS_DIR`` or ``$HOME/Videos``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:174
+#: ../../sandbox-permissions.rst:175
 msgid "``xdg-templates``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:174
+#: ../../sandbox-permissions.rst:175
 msgid "Access the XDG templates directory"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:174
+#: ../../sandbox-permissions.rst:175
 msgid "``$XDG_TEMPLATES_DIR`` or ``$HOME/Templates``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:175
+#: ../../sandbox-permissions.rst:176
 msgid "``xdg-config``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:175
+#: ../../sandbox-permissions.rst:176
 msgid "Access the XDG config directory [#f3]_"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:175
+#: ../../sandbox-permissions.rst:176
 msgid "``$XDG_CONFIG_HOME`` or ``$HOME/.config``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:176
+#: ../../sandbox-permissions.rst:177
 msgid "``xdg-cache``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:176
+#: ../../sandbox-permissions.rst:177
 msgid "Access the XDG cache directory  [#f3]_"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:176
+#: ../../sandbox-permissions.rst:177
 msgid "``$XDG_CACHE_HOME`` or ``$HOME/.cache``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:177
+#: ../../sandbox-permissions.rst:178
 msgid "``xdg-data``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:177
+#: ../../sandbox-permissions.rst:178
 msgid "Access the XDG data directory   [#f3]_"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:177
+#: ../../sandbox-permissions.rst:178
 msgid "``$XDG_DATA_HOME`` or ``$HOME/.local/share``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:178
+#: ../../sandbox-permissions.rst:179
 msgid "``xdg-run/path``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:178
+#: ../../sandbox-permissions.rst:179
 msgid "Access subdirectories of the XDG runtime directory"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:178
+#: ../../sandbox-permissions.rst:179
 msgid "``$XDG_RUNTIME_DIR/path`` (``/run/user/$UID/path``)"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:181
+#: ../../sandbox-permissions.rst:182
 msgid ""
 "Except ``host, host-etc, host-os`` paths can be added to all the above "
 "filesystem options. For example, ``--filesystem=xdg-documents/path``."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:184
+#: ../../sandbox-permissions.rst:185
 msgid "Other filesystem access guidelines include:"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:186
+#: ../../sandbox-permissions.rst:187
 #, fuzzy
 msgid ""
 "The ``--persist=DIR`` option can be used to map directories from the "
@@ -659,7 +660,7 @@ msgstr ""
 " e pode ser útil para aplicativos que codificam os caminhos do arquivo em"
 " ``~/``."
 
-#: ../../sandbox-permissions.rst:191
+#: ../../sandbox-permissions.rst:192
 msgid ""
 "For example, if an application hardcodes the directory ``~/.foo``, "
 "without any ``home`` access and no ``--persist`` the directory will be "
@@ -670,18 +671,18 @@ msgid ""
 "``~/.var/app/$FLATPAK_ID/.foo`` which would otherwise be lost."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:199
+#: ../../sandbox-permissions.rst:200
 msgid "A ``--persist=.`` will `persist` all directories."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:201
+#: ../../sandbox-permissions.rst:202
 msgid ""
 "This does not support ``:create, :ro, :rw`` suffixes or special values "
 "like ``xdg-documents``. However, the directory will be created by flatpak"
 " if it doesn't already exist."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:205
+#: ../../sandbox-permissions.rst:206
 #, fuzzy
 msgid ""
 "This makes it possible to avoid configuring access to the entire home "
@@ -694,7 +695,7 @@ msgstr ""
 " e pode ser útil para aplicativos que codificam os caminhos do arquivo em"
 " ``~/``."
 
-#: ../../sandbox-permissions.rst:208
+#: ../../sandbox-permissions.rst:209
 #, fuzzy
 msgid ""
 "If an application uses ``$TMPDIR`` to contain lock files you may want to "
@@ -705,7 +706,7 @@ msgstr ""
 " querer adicionar um script wrapper que o defina como "
 "``$XDG_RUNTIME_DIR/app/$FLATPAK_ID``."
 
-#: ../../sandbox-permissions.rst:212
+#: ../../sandbox-permissions.rst:213
 msgid ""
 "Retaining and sharing configuration with non-Flatpak installations is to "
 "be avoided."
@@ -713,17 +714,17 @@ msgstr ""
 "Reter e compartilhar a configuração com instalações que não sejam do "
 "Flatpak deve ser evitado."
 
-#: ../../sandbox-permissions.rst:216
+#: ../../sandbox-permissions.rst:217
 msgid "Reserved Paths"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:218
+#: ../../sandbox-permissions.rst:219
 msgid ""
 "The following paths and subpaths of them are reserved and asking access "
 "to them with ``--filesystem`` will have no effect::"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:223
+#: ../../sandbox-permissions.rst:224
 msgid ""
 "The entire ``/run`` is not allowed and all subpaths of ``/run`` except "
 "``/run/flatpak, /run/host`` is allowed to be exposed via "
@@ -731,44 +732,44 @@ msgid ""
 "``../run``, exposing it or a subpath of it, is not allowed."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:228
+#: ../../sandbox-permissions.rst:229
 msgid ""
 "Additionally the following directories from host need to be explicitly "
 "requested with ``--filesystem`` and are not available with ``home, host, "
 "host-os, host-etc`` by default:"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:232
+#: ../../sandbox-permissions.rst:233
 msgid ""
 "``~/.var/app`` - The app can access only its own directory in "
 "``~/.var/app/$FLATPAK_ID``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:233
+#: ../../sandbox-permissions.rst:234
 msgid "``$XDG_DATA_HOME/flatpak`` (``~/.local/share/flatpak``)"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:234
+#: ../../sandbox-permissions.rst:235
 msgid "``/boot``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:235
+#: ../../sandbox-permissions.rst:236
 msgid "``/efi``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:236
+#: ../../sandbox-permissions.rst:237
 msgid "``/root``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:237
+#: ../../sandbox-permissions.rst:238
 msgid "``/sys``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:238
+#: ../../sandbox-permissions.rst:239
 msgid "``/tmp``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:239
+#: ../../sandbox-permissions.rst:240
 msgid ""
 "``/var`` - Note that by default ``/var/{cache, config, data, tmp}`` "
 "inside the sandbox are the same as ``~/.var/app/$FLATPAK_ID/{cache, "
@@ -777,76 +778,76 @@ msgid ""
 "available."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:243
+#: ../../sandbox-permissions.rst:244
 msgid "``/var/lib/flatpak`` - ``/var`` does not give access to this."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:246
+#: ../../sandbox-permissions.rst:247
 msgid "Device access"
 msgstr "Acesso a dispositivo"
 
-#: ../../sandbox-permissions.rst:247
+#: ../../sandbox-permissions.rst:248
 msgid "You can provide the following device permissions:"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:250
+#: ../../sandbox-permissions.rst:251
 msgid "``dri``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:250
+#: ../../sandbox-permissions.rst:251
 msgid "Direct Rendering Interface. Necessary for GL."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:251
+#: ../../sandbox-permissions.rst:252
 msgid "``kvm``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:251
+#: ../../sandbox-permissions.rst:252
 msgid "Kernel based Virtual Machine ``/dev/kvm``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:252
+#: ../../sandbox-permissions.rst:253
 msgid "``shm``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:252
+#: ../../sandbox-permissions.rst:253
 msgid "Shared Memory in ``/dev/shm``."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:253
+#: ../../sandbox-permissions.rst:254
 msgid "``input``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:253
+#: ../../sandbox-permissions.rst:254
 msgid ""
 "Input devices as exposed in ``/dev/input``. This includes game "
 "controllers. Since Flatpak 1.15.6."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:254
+#: ../../sandbox-permissions.rst:255
 msgid "``usb``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:254
+#: ../../sandbox-permissions.rst:255
 msgid "Raw USB devices as exposed in ``/dev/bus/usb``. Since Flatpak 1.15.11."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:255
+#: ../../sandbox-permissions.rst:256
 msgid "``all``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:255
+#: ../../sandbox-permissions.rst:256
 msgid "All devices, including all of the above except ``shm``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:260
+#: ../../sandbox-permissions.rst:261
 msgid ""
 "Using newer permissions like ``input`` or ``usb`` will have no effect on "
 "older Flatpak versions and will fail when used through Flatpak "
 "commandline."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:264
+#: ../../sandbox-permissions.rst:265
 #, fuzzy
 msgid ""
 "While not ideal, ``--device=all`` can be used to access devices like "
@@ -855,22 +856,22 @@ msgstr ""
 "Embora não seja o ideal, ``--device=all`` pode ser usado para acessar "
 "dispositivos como controladores ou webcams."
 
-#: ../../sandbox-permissions.rst:268
+#: ../../sandbox-permissions.rst:269
 #, fuzzy
 msgid "USB portal"
 msgstr "Portais"
 
-#: ../../sandbox-permissions.rst:270
+#: ../../sandbox-permissions.rst:271
 msgid "Since 1.5.11."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:272
+#: ../../sandbox-permissions.rst:273
 msgid ""
 "Sandboxed access to individual USB devices can be controlled by portals. "
 "Flatpak allows specifying enumerable USB devices to allow access."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:276
+#: ../../sandbox-permissions.rst:277
 msgid ""
 "Like ``--device=usb``, this is just about accessing the raw USB device, "
 "that needs libusb (or equivalent). By using the portal, you can restrict "
@@ -879,59 +880,59 @@ msgid ""
 "no reason for USB security devices to be accessible."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:283
+#: ../../sandbox-permissions.rst:284
 msgid ""
 "A list of valid use cases includes scanners (handled, for example by "
 "SANE), photo cameras (handled by libgphoto2), flashing devices, etc."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:286
+#: ../../sandbox-permissions.rst:287
 msgid ""
 "While this is portal dependent and ``xdg-desktop-portal`` is currently "
 "the only portal implementation, the overall permission flow is as "
 "follows:"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:290
+#: ../../sandbox-permissions.rst:291
 msgid ""
 "The Flatpak package specifies the devices it wishes to enumerate through "
 "``finish-args``."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:292
+#: ../../sandbox-permissions.rst:293
 msgid ""
 "The application requests the portal to enumerate the available USB "
 "devices based on that list. If the list is empty it will enumerate all "
 "USB devices."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:295
+#: ../../sandbox-permissions.rst:296
 msgid ""
 "When the application wants to access the device, it will make a request "
 "for the device it wants to access via the portal."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:297
+#: ../../sandbox-permissions.rst:298
 msgid "The portal then requests permission from the user if not already granted."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:299
+#: ../../sandbox-permissions.rst:300
 msgid ""
 "If the permission was granted, a file descriptor for the device is passed"
 " back to the application."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:302
+#: ../../sandbox-permissions.rst:303
 msgid ""
 "The application is then able to open the devices it is supposed to use "
 "while the others would be hidden."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:306
+#: ../../sandbox-permissions.rst:307
 msgid "Specifying the enumerable devices"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:308
+#: ../../sandbox-permissions.rst:309
 msgid ""
 "You can specify devices on the ``flatpak`` command line, and by extension"
 " in the finish arguments for Flatpak Builder. Enumerable devices are "
@@ -942,17 +943,17 @@ msgid ""
 " shall not be enumerated."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:316
+#: ../../sandbox-permissions.rst:317
 msgid "Queries are made out of rules. These rules are composable with ``+``."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:318
+#: ../../sandbox-permissions.rst:319
 msgid ""
 "The rule ``all`` enumerates every USB device. There is no further rule "
 "allowed in the query."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:321
+#: ../../sandbox-permissions.rst:322
 msgid ""
 "The ``vnd`` and ``dev`` rules specify a USB vendor and a USB device ID "
 "respectively. A vendor can be specified alone, but a device rule always "
@@ -962,63 +963,63 @@ msgid ""
 "repository <http://www.linux-usb.org/usb-ids.html>`_"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:328
+#: ../../sandbox-permissions.rst:329
 msgid ""
 "``cls`` specifies the device USB class and subclass. Both class and "
 "subclass are two digit hex numbers separated by a colon ``:``. You can "
 "use ``*`` to specify any subclass within the class."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:332
+#: ../../sandbox-permissions.rst:333
 msgid "Some examples of the syntax:"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:334
+#: ../../sandbox-permissions.rst:335
 msgid "``vnd:1234``: Devices from vendor ``1234``"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:335
+#: ../../sandbox-permissions.rst:336
 msgid "``vnd:1234+dev:3456``: Only device ``3456`` from vendor ``1234``."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:336
+#: ../../sandbox-permissions.rst:337
 msgid "``vnd:1234+cls:06:*``: All the PTP devices from vendor ``1234``."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:337
+#: ../../sandbox-permissions.rst:338
 msgid "``cls:06:*``: All the PTP devices."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:339
+#: ../../sandbox-permissions.rst:340
 msgid ""
 "This permission only allows to enumerate devices. To open them, "
 "permission must be requested from the portal. It is not possible to open "
 "a device that is not enumerable."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:345
+#: ../../sandbox-permissions.rst:346
 msgid ""
 "The ``--device=usb`` permission is broader than what the USB portal is "
 "supposed to provide and allows unfettered access to any USB device on the"
 " bus."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:349
+#: ../../sandbox-permissions.rst:350
 msgid "In some situations you may need to specify a very long list of devices."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:351
+#: ../../sandbox-permissions.rst:352
 msgid "Device lists can be passed in one single argument, or through a file."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:353
+#: ../../sandbox-permissions.rst:354
 msgid ""
 "When using ``--usb-list``, the queries are separated by a semi-colon "
 "``;``, with queries for hidden devices (i.e. those that would be passed "
 "with ``--nousb``) prefixed with ``!``."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:357
+#: ../../sandbox-permissions.rst:358
 msgid ""
 "When using ``--usb-list-file``, the filename of the file containing USB "
 "queries is passed line by line. Like with ``--usb-list`` queries for "
@@ -1028,11 +1029,11 @@ msgid ""
 "list is persisted internally."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:365
+#: ../../sandbox-permissions.rst:366
 msgid "dconf access"
 msgstr "Acesso a dconf"
 
-#: ../../sandbox-permissions.rst:367
+#: ../../sandbox-permissions.rst:368
 msgid ""
 "As of xdg-desktop-portal 1.1.0 and glib 2.60.5 (in the runtime) you do "
 "not need direct DConf access in most cases."
@@ -1040,7 +1041,7 @@ msgstr ""
 "No xdg-desktop-portal 1.1.0 e glib 2.60.5 (no runtime), você não precisa "
 "de acesso direto ao DConf na maioria dos casos."
 
-#: ../../sandbox-permissions.rst:370
+#: ../../sandbox-permissions.rst:371
 msgid ""
 "As of now this glib version is included in "
 "``org.freedesktop.Platform//19.08`` and ``org.gnome.Platform//3.34`` and "
@@ -1050,7 +1051,7 @@ msgstr ""
 "``org.freedesktop.Platform//19.08`` e ``org.gnome.Platform//3.34`` e mais"
 " novos."
 
-#: ../../sandbox-permissions.rst:373
+#: ../../sandbox-permissions.rst:374
 msgid ""
 "If an application existed prior to these runtimes you can tell Flatpak "
 "(>= 1.3.4) to migrate the DConf settings on the host into the sandbox by "
@@ -1065,7 +1066,7 @@ msgstr ""
 "semelhante ao seu ID de aplicativo ou não será permitido (não diferencia "
 "maiúsculo de minúsculo, e ``_`` e `` -`` são tratados da mesma forma)."
 
-#: ../../sandbox-permissions.rst:380
+#: ../../sandbox-permissions.rst:381
 msgid ""
 "If you are targeting older runtimes or require direct DConf access for "
 "other reasons you can use these permissions::"
@@ -1073,11 +1074,11 @@ msgstr ""
 "Se você estiver direcionando runtimes mais antigos ou precisar de acesso "
 "direto ao DConf por outros motivos, poderá usar estas permissões::"
 
-#: ../../sandbox-permissions.rst:388
+#: ../../sandbox-permissions.rst:389
 msgid "With those permissions glib will continue using dconf directly."
 msgstr "Com essas permissões, o glib continuará usando o dconf diretamente."
 
-#: ../../sandbox-permissions.rst:390
+#: ../../sandbox-permissions.rst:391
 msgid ""
 "If you use a newer runtime where dconf is no longer built and still need "
 "it you will have to build the `dconf "
@@ -1085,11 +1086,11 @@ msgid ""
 "``--env=GIO_EXTRA_MODULES=/app/lib/gio/modules/``."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:395
+#: ../../sandbox-permissions.rst:396
 msgid "gvfs access"
 msgstr "Acesso a gvfs"
 
-#: ../../sandbox-permissions.rst:397
+#: ../../sandbox-permissions.rst:398
 msgid ""
 "As of gvfs 1.48, the gvfs daemons and applications use an on-disk socket "
 "to communicate, rather than an abstract socket so that the gvfs "
@@ -1101,7 +1102,7 @@ msgstr ""
 "infraestrutura do gvfs ainda funcione quando o suporte à rede estiver "
 "desabilitado no isolamento do aplicativo."
 
-#: ../../sandbox-permissions.rst:401
+#: ../../sandbox-permissions.rst:402
 msgid ""
 "A number of different options need to be passed depending on the "
 "application's use of gvfs."
@@ -1109,7 +1110,7 @@ msgstr ""
 "Várias opções diferentes precisam ser passadas dependendo do uso de gvfs "
 "do aplicativo."
 
-#: ../../sandbox-permissions.rst:404
+#: ../../sandbox-permissions.rst:405
 msgid ""
 "``--talk-name=org.gtk.vfs.*`` is necessary to talk to the gvfs daemons "
 "over D-Bus and list mounts using the GIO APIs."
@@ -1117,7 +1118,7 @@ msgstr ""
 "``--talk-name=org.gtk.vfs.*`` é necessário para falar com os daemons do "
 "gvfs sobre D-Bus e listar montagens usando as APIs do GIO."
 
-#: ../../sandbox-permissions.rst:407
+#: ../../sandbox-permissions.rst:408
 msgid ""
 "``--filesystem=xdg-run/gvfsd`` is necessary to use the GIO APIs to list "
 "and access non-native files using the GIO APIs, using URLs rather than "
@@ -1127,7 +1128,7 @@ msgstr ""
 "listar e acessar arquivos não nativos usando as APIs do GIO, usando URLs "
 "em vez de caminhos FUSE."
 
-#: ../../sandbox-permissions.rst:410
+#: ../../sandbox-permissions.rst:411
 msgid ""
 "``--filesystem=xdg-run/gvfs`` is necessary to give access to the FUSE "
 "mounts non-GIO and legacy applications can use. This is what will make "
@@ -1137,15 +1138,15 @@ msgstr ""
 "FUSE não-GIO e aplicativos legados podem usar. Isto é o que fará com que "
 "os arquivos nativos apareçam em ``/run/user/`id -u`/gvfs/``."
 
-#: ../../sandbox-permissions.rst:414
+#: ../../sandbox-permissions.rst:415
 msgid "Typical GNOME and GTK applications should use::"
 msgstr "Os aplicativos GNOME e GTK típicos devem usar::"
 
-#: ../../sandbox-permissions.rst:419
+#: ../../sandbox-permissions.rst:420
 msgid "Typical non-GNOME and non-GTK applications should use::"
 msgstr "Os aplicativos não-GNOME e não-GTK típicos devem usar::"
 
-#: ../../sandbox-permissions.rst:423
+#: ../../sandbox-permissions.rst:424
 msgid ""
 "No application should be using ``--talk-name=org.gtk.vfs`` in its "
 "manifest, as there are no D-Bus services named ``org.gtk.vfs``."
@@ -1153,11 +1154,11 @@ msgstr ""
 "Nenhum aplicativo deve usar ``--talk-name=org.gtk.vfs`` em seu manifesto,"
 " pois não há serviços D-Bus chamados ``org.gtk.vfs``."
 
-#: ../../sandbox-permissions.rst:427
+#: ../../sandbox-permissions.rst:428
 msgid "External drive access"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:429
+#: ../../sandbox-permissions.rst:430
 msgid ""
 "External drives are mounted by the host system using systemd, udev, udisk"
 " fstab etc. and each of them can have different defaults. Flatpak has no "
@@ -1165,30 +1166,30 @@ msgid ""
 "permissions should work in most cases::"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:438
+#: ../../sandbox-permissions.rst:439
 msgid ""
 "If ``--filesystem=host`` is used ``/media, /run/media`` is shared "
 "automatically if they exist."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:441
+#: ../../sandbox-permissions.rst:442
 msgid ""
 "Note that these should not have subpaths in them unless the value of the "
 "subpath can be consistently pre-determined. Block device naming depends "
 "on the kernel/fstab configuration and cannot be pre-determined."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:446
+#: ../../sandbox-permissions.rst:447
 msgid "Footnotes"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:447
+#: ../../sandbox-permissions.rst:448
 msgid ""
 "This is not necessarily required, but without it the X11 shared memory "
 "extension will not work, which is very bad for X11 performance."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:449
+#: ../../sandbox-permissions.rst:450
 msgid ""
 "Giving network access also grants access to all host services listening "
 "on abstract Unix sockets (due to how network namespaces work), and these "
@@ -1197,7 +1198,7 @@ msgid ""
 "secure distribution should disable these and just use regular sockets."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:454
+#: ../../sandbox-permissions.rst:455
 msgid ""
 "``xdg-{cache, config, data}`` bind mounts the paths from host to the per-"
 "app sandbox directory. Inside the sandbox ``$XDG_CACHE_HOME``, "
@@ -1370,5 +1371,11 @@ msgstr ""
 #~ "and all subpaths of ``/run`` except "
 #~ "``/run/flatpak, /run/host`` is allowed to "
 #~ "be exposed via ``--filesystem``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``flatpak run --log-session-bus "
+#~ "$FLATPAK_ID`` can be used to find "
+#~ "the specific D-Bus permissions needed."
 #~ msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-01 08:05+0530\n"
+"POT-Creation-Date: 2024-12-03 21:11+0530\n"
 "PO-Revision-Date: 2018-05-20 10:36-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language: de\n"
@@ -244,6 +244,29 @@ msgstr ""
 msgid "And, if you need to, you can terminate one by force (since 1.2)::"
 msgstr ""
 
+#: ../../debugging.rst:178
+msgid "Audit session or system bus traffic"
+msgstr ""
+
+#: ../../debugging.rst:180
+msgid ""
+"A ``--socket=session-bus`` or a ``--socket=system-bus`` permission must "
+"not be present for the logging to work."
+msgstr ""
+
+#: ../../debugging.rst:183
+msgid ""
+"Session or system bus traffic can be audited by passing ``--log-session-"
+"bus`` and ``--log-system-bus`` respectively to ``flatpak run``::"
+msgstr ""
+
+#: ../../debugging.rst:188
+msgid ""
+"This can be useful to figure out the bus names used by an application and"
+" the corresponding ``--talk-name`` or ``--own-name`` permissions "
+"required::"
+msgstr ""
+
 #~ msgid "Running debugging tools"
 #~ msgstr ""
 
@@ -326,5 +349,12 @@ msgstr ""
 #~ "`Perf <https://perf.wiki.kernel.org/index.php/Main_Page>`_ "
 #~ "requires access to ``--filesystem=/sys`` to"
 #~ " run::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This can be useful to figure out"
+#~ " the bus names used by an "
+#~ "application and the corresponding ``--talk-"
+#~ "names`` or ``--own-names`` required::"
 #~ msgstr ""
 
