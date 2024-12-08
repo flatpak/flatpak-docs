@@ -141,8 +141,8 @@ should be used in manifest and Wayland can be tested with::
 To make native wayland the `default` for users ``--socket=fallback-x11``
 and ``--socket=wayland`` must be used in the manifest.
 
-Client-side window decorations in native wayland can be enabled by
-passing ``--enable-features=WaylandWindowDecorations`` (Electron>=17).
+For Electron versions between 17 and 27, client-side window decorations in native wayland can be enabled by
+passing ``--enable-features=WaylandWindowDecorations``.
 
 Electron uses ``libnotify`` on Linux to provide desktop notifications.
 libnotify `since 0.8.0 <https://gitlab.gnome.org/GNOME/libnotify/-/merge_requests/27>`_
@@ -308,4 +308,4 @@ Make setProgressBar and setBadgeCount work
 The `setProgressBar <https://www.electronjs.org/docs/latest/api/browser-window#winsetprogressbarprogress-options>`_ and `setBadgeCount <https://www.electronjs.org/docs/latest/api/app#appsetbadgecountcount-linux-macos>`_ functions allow showing a progress bar and a badge count in the window icon. It is implemented under Linux using the `UnityLauncherAPI <https://wiki.ubuntu.com/Unity/LauncherAPI>`_. This API is not implemented on every desktop environment. A known desktop environment which implements this is KDE.
 It is also implemented by the popular `Dash to Dock <https://micheleg.github.io/dash-to-dock>`_ GNOME extension and `Plank <https://launchpad.net/plank>`_.
 
-To make it work in Flatpak, the app needs to :ref:`use the correct desktop filename <use-correct-desktop-filename>`. The Flatpak also needs the ``--talk-name=com.canonical.Unity`` permission. Electron versions earlier than v32 checks `checks if it's running on Unity or KDE <https://github.com/electron/electron/blob/fb88375ab4d2161dbf7e958a2a94c7c6d97dc84c/shell/browser/linux/unity_service.cc#L64>`_ before using the UnityLauncherAPI.
+To make it work in Flatpak, the app needs to :ref:`use the correct desktop filename <use-correct-desktop-filename>` in its embedded `package.json` file. The Flatpak also needs the ``--talk-name=com.canonical.Unity`` permission. Electron versions earlier than v32 checks `checks if it's running on Unity or KDE <https://github.com/electron/electron/blob/fb88375ab4d2161dbf7e958a2a94c7c6d97dc84c/shell/browser/linux/unity_service.cc#L64>`_ before using the UnityLauncherAPI.
