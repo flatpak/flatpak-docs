@@ -13,9 +13,12 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install dependencies
         run: |
-          sudo add-apt-repository ppa:flatpak/development
-          sudo apt update
-          sudo apt install -y flatpak flatpak-builder git libxml2-utils
+          sudo apt install -y appstream git libxml2-utils
+
+      - name: Download docs
+        run: |
+          curl -L -o flatpak-docs.pkg.tar.zst https://archlinux.org/packages/extra/x86_64/flatpak-docs/download/
+          tar --zstd -xf flatpak-docs.pkg.tar.zst
 
       - name: Get current docs version
         run: |
@@ -24,7 +27,7 @@ jobs:
 
       - name: Move docs
         run: |
-          cp -vf /usr/share/doc/flatpak/flatpak-docs.html docs/
+          cp -vf usr/share/doc/flatpak/flatpak-docs.html docs/
 
       - name: Get new docs version
         run: |
