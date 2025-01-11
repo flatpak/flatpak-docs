@@ -28,6 +28,7 @@ jobs:
       - name: Move docs
         run: |
           cp -vf usr/share/doc/flatpak-builder/flatpak-builder-docs.html docs/
+          rm -rf usr/
 
       - name: Get new docs version
         run: |
