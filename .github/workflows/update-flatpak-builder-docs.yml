@@ -18,7 +18,9 @@ jobs:
       - name: Download docs
         run: |
           curl -L -o flatpak-builder.pkg.tar.zst https://archlinux.org/packages/extra/x86_64/flatpak-builder/download/
-          tar --zstd -xf flatpak-builder.pkg.tar.zst
+          mkdir -p flatpak-builder
+          tar --zstd -xf flatpak-builder.pkg.tar.zst -C flatpak-builder
+          rm -f flatpak-builder.pkg.tar.zst
 
       - name: Get current docs version
         run: |
@@ -27,8 +29,8 @@ jobs:
 
       - name: Move docs
         run: |
-          cp -vf usr/share/doc/flatpak-builder/flatpak-builder-docs.html docs/
-          rm -rf usr/
+          cp -vf flatpak-builder/usr/share/doc/flatpak-builder/flatpak-builder-docs.html docs/
+          rm -rf flatpak-builder/
 
       - name: Get new docs version
         run: |

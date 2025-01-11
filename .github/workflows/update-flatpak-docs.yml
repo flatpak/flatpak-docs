@@ -18,7 +18,9 @@ jobs:
       - name: Download docs
         run: |
           curl -L -o flatpak-docs.pkg.tar.zst https://archlinux.org/packages/extra/x86_64/flatpak-docs/download/
-          tar --zstd -xf flatpak-docs.pkg.tar.zst
+          mkdir -p flatpak-docs
+          tar --zstd -xf flatpak-docs.pkg.tar.zst -C flatpak-docs
+          rm -f flatpak-docs.pkg.tar.zst
 
       - name: Get current docs version
         run: |
@@ -27,8 +29,8 @@ jobs:
 
       - name: Move docs
         run: |
-          cp -vf usr/share/doc/flatpak/flatpak-docs.html docs/
-          rm -rf usr/
+          cp -vf flatpak-docs/usr/share/doc/flatpak/flatpak-docs.html docs/
+          rm -rf flatpak-docs/
 
       - name: Get new docs version
         run: |
