@@ -53,7 +53,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Flatpak'
-copyright = '2017-2024, Flatpak Team. Licensed under Creative Commons Attribution 4.0 International License.'
+copyright = '2017-2025, Flatpak Team. Licensed under Creative Commons Attribution 4.0 International License.'
 author = 'Flatpak Team'
 
 # The version info for the project you're documenting, acts as replacement for
