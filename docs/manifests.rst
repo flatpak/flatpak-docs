@@ -270,35 +270,13 @@ to be specified.
 Shared Modules
 ``````````````
 
-`Shared Modules (or shared-modules) <https://github.com/flathub/shared-modules>`_ is a repository containing various manifests to build common libraries. It is intended to be used as a git submodule.
+Flathub contains a `shared modules <https://github.com/flathub/shared-modules>`_
+repository containing build manifests for commonly used modules. These
+are usally shared by apps on Flathub and maintained in a single place.
+The repository is intended to be used as a git submodule.
 
-To add it to your repository, run this command:
-
-.. code-block:: bash
-
-  git submodule add https://github.com/flathub/shared-modules.git
-
-Then, add whichever module you want. In this example, we will use `gtk2`:
-
-.. code-block:: yaml
-
-  modules:
-    - shared-modules/gtk2/gtk2.json
-
-To update the submodule, run this command:
-
-.. code-block:: bash
-
-  git submodule update --remote --merge
-
-To remove the submodule, run these commands:
-
-.. code-block:: bash
-
-  git submodule deinit -f -- shared-modules
-  rm -rf .git/modules/shared-modules
-  git rm -f shared-modules
-  rm .gitmodules
+Please see the `readme <https://github.com/flathub/shared-modules/blob/master/README.md>`_
+for details on how to use this.
 
 Flatpak Builder Tools
 `````````````````````
@@ -308,7 +286,5 @@ Flatpak Builder Tools
 Example manifests
 -----------------
 
-A `complete manifest for GNOME Dictionary built from Git
-<https://github.com/flathub/org.gnome.Dictionary/blob/master/org.gnome.Dictionary.yml>`_.
-It is also possible to browse `all the manifests hosted by Flathub
-<https://github.com/flathub>`_.
+Flathub hosts a large collection of applications and the respective
+manifests can be browsed and searched via `GitHub <https://github.com/flathub>`_.
