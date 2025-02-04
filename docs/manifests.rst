@@ -262,10 +262,72 @@ Modules can be built with a variety of build systems, including:
 - `cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_
 - `meson <https://mesonbuild.com/>`_
 - `qmake <https://doc.qt.io/qt-5/qmake-overview.html>`_
-- the "`Build API <https://github.com/cgwalters/build-api/>`_"
 
-A "simple" build method is also available, which allows a series of commands
-to be specified.
+A "simple" build method is also available, which allows a series of
+commands to be specified.
+
+Each of the above buildsystem sets up the installation prefix, libdir
+etc. and runs a series of commands to configure (``meson setup``, or
+``./autogen.sh, ./configure`` or ``cmake``), build, install
+(``ninja install, make install`` etc.) and optionally run tests
+(``make check, ninja test`` etc.).
+
+Thus they can also be achieved by using the ``simple`` buildsystem and
+manually specifying the commands.
+
+.. note::
+
+  Using the proper buildsystem is almost always preferred rather than
+  manually handling the correct setup.
+
+An example is provided below.
+
+.. code-block:: yaml
+
+  # Using autotools without configure
+  - name: ffnvcodec
+    buildsystem: autotools
+    no-autogen: true
+    make-install-args:
+      - PREFIX=/app
+    sources:
+      - type: git
+        url: https://github.com/FFmpeg/nv-codec-headers.git
+        commit: 43d91706e097565f57b311e567f0219838bcc2f6
+        tag: n11.1.5.3
+
+  # Using meson buildsystem
+  - name: libdrm
+    buildsystem: meson
+    builddir: true
+    config-opts:
+      - -Dtests=false
+    sources:
+      - type: git
+        url: https://gitlab.freedesktop.org/mesa/drm.git
+        tag: libdrm-2.4.124
+
+  # Using simple
+
+  - name: ffnvcodec
+    buildsystem: simple
+    build-commands:
+      - make -j$FLATPAK_BUILDER_N_JOBS PREFIX=/app install
+    sources:
+      - type: git
+        url: https://github.com/FFmpeg/nv-codec-headers.git
+        commit: 43d91706e097565f57b311e567f0219838bcc2f6
+        tag: n11.1.5.3
+
+  - name: libdrm
+    buildsystem: simple
+    build-commands:
+      - meson setup builddir --prefix=/app --libdir=/app/lib -Dtests=false
+      - ninja -C builddir install
+    sources:
+      - type: git
+        url: https://gitlab.freedesktop.org/mesa/drm.git
+        tag: libdrm-2.4.124
 
 Shared Modules
 ``````````````
