@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-26 16:32-0300\n"
+"POT-Creation-Date: 2025-02-05 01:10+0530\n"
 "PO-Revision-Date: 2018-11-03 01:52-0400\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language: zh_Hans_CN\n"
@@ -231,11 +231,27 @@ msgstr "这个模块列表作为构建过程的一部分，指明了每个模块
 
 #: ../../manifests.rst:146
 msgid ""
-"GNOME Dictionary's modules section is short, since it just contains the "
-"application itself, and looks like:"
-msgstr "GNOME Dictionary的模块节点是较短的，因为它仅仅包含应用本身，大概如下所示："
+"Modules are built in the order they are declared in the manifest. If any "
+"module changes, that module and all the subsequent modules below it will "
+"be rebuilt, otherwise it should use the cache."
+msgstr ""
 
-#: ../../manifests.rst:163
+#: ../../manifests.rst:150
+msgid ""
+"The general recommendation is to place the \"main\" module, usually the "
+"module for the main application as the last module in the manifest but if"
+" there is a module which gets updated often and is independent from the "
+"rest, that module can also be placed as the last module to avoid "
+"rebuilding everything else."
+msgstr ""
+
+#: ../../manifests.rst:156
+msgid ""
+"Modules can either be nested to clearly show the dependency structure or "
+"be linearly declared."
+msgstr ""
+
+#: ../../manifests.rst:236
 msgid ""
 "As can be seen, each listed module has a ``name`` (which can be freely "
 "assigned) and a list of ``sources``. Each source has a ``type``, and "
@@ -244,66 +260,66 @@ msgstr ""
 "可以看出，每个列出的模块有一个 ``name`` （可以自由分配）和一个 ``sources`` 列表。每个source都有一个 ``type``"
 " ，可用的type有："
 
-#: ../../manifests.rst:167
+#: ../../manifests.rst:240
 msgid "``archive`` - ``.tar`` or ``.zip`` archive files"
 msgstr "``archive``  -  ``.tar``  or  ``.zip``  归档文件"
 
-#: ../../manifests.rst:168
+#: ../../manifests.rst:241
 msgid "``git`` - Git repositories"
 msgstr "``git``  - Git 仓库"
 
-#: ../../manifests.rst:169
+#: ../../manifests.rst:242
 msgid "``bzr`` - Bazaar repositories"
 msgstr "``bzr``  - Bazaar 仓库"
 
-#: ../../manifests.rst:170
+#: ../../manifests.rst:243
 #, fuzzy
 msgid "``file`` - local/remote files (these are copied into the source directory)"
 msgstr "``file``  - 本地文件（这些复制到源码目录）"
 
-#: ../../manifests.rst:171
+#: ../../manifests.rst:244
 #, fuzzy
 msgid "``dir`` - local directories (these are copied into the source directory)"
 msgstr "``dir`` - 本地目录 (这些将复制到源码目录)"
 
-#: ../../manifests.rst:172
+#: ../../manifests.rst:245
 msgid ""
 "``script`` - an array of shell commands (these are put in a shellscript "
 "file)"
 msgstr "``script``  - 一个shell命令数组（这些都被放在shell脚本文件里）"
 
-#: ../../manifests.rst:174
+#: ../../manifests.rst:247
 msgid ""
 "``shell`` - an array of shell commands that are run during source "
 "extraction"
 msgstr "``shell`` - 再源码抽取期间运行的一组shell命令"
 
-#: ../../manifests.rst:175
+#: ../../manifests.rst:248
 msgid "``patch`` - a patch (are applied to the source directory)"
 msgstr "``patch``  - 补丁（用于源代码目录）"
 
-#: ../../manifests.rst:176
+#: ../../manifests.rst:249
 msgid ""
 "``extra-data`` - data that can be downloaded at install time; this can "
 "include archive or package files"
 msgstr "``extra-data``  - 在安装时下载的数据；可以包含归档文件或者package文件"
 
-#: ../../manifests.rst:179
+#: ../../manifests.rst:252
 #, fuzzy
 msgid ""
 "Different properties are available for each source type, which are listed"
 " in the :doc:`module-sources`."
 msgstr "每种source类型有不同的属性，在 :doc:`flatpak-builder-command-reference` 列出了。"
 
-#: ../../manifests.rst:183
+#: ../../manifests.rst:256
 msgid "Supported build systems"
 msgstr "受支持的构建系统"
 
-#: ../../manifests.rst:185
+#: ../../manifests.rst:258
 msgid "Modules can be built with a variety of build systems, including:"
 msgstr "模块可以用多种构建系统构建，包含："
 
-#: ../../manifests.rst:187
+#: ../../manifests.rst:260
 msgid ""
 "`autotools <https://www.gnu.org/software/automake/manual/html_node"
 "/Autotools-Introduction.html>`_"
@@ -311,68 +327,80 @@ msgstr ""
 "`autotools <https://www.gnu.org/software/automake/manual/html_node"
 "/Autotools-Introduction.html>`_"
 
-#: ../../manifests.rst:188
+#: ../../manifests.rst:261
 msgid "`cmake <https://cmake.org/>`_"
 msgstr "`cmake <https://cmake.org/>`_"
 
-#: ../../manifests.rst:189
+#: ../../manifests.rst:262
 #, fuzzy
 msgid "`cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_"
 msgstr ""
 " `cmake-ninja <https://cmake.org/cmake/help/v3.0/generator/Ninja.html>`_"
 "  ,  `meson <http://mesonbuild.com/>`_ "
 
-#: ../../manifests.rst:190
+#: ../../manifests.rst:263
 #, fuzzy
 msgid "`meson <https://mesonbuild.com/>`_"
 msgstr "`cmake <https://cmake.org/>`_"
 
-#: ../../manifests.rst:191
+#: ../../manifests.rst:264
 msgid "`qmake <https://doc.qt.io/qt-5/qmake-overview.html>`_"
 msgstr ""
 
-#: ../../manifests.rst:192
-msgid "the \"`Build API <https://github.com/cgwalters/build-api/>`_\""
-msgstr "\" `Build API <https://github.com/cgwalters/build-api/>`_ \""
-
-#: ../../manifests.rst:194
+#: ../../manifests.rst:266
 msgid ""
 "A \"simple\" build method is also available, which allows a series of "
 "commands to be specified."
 msgstr "一个“简单的”构建方法，需要指定一系列命令。"
 
-#: ../../manifests.rst:198
+#: ../../manifests.rst:269
+msgid ""
+"Each of the above buildsystem sets up the installation prefix, libdir "
+"etc. and runs a series of commands to configure (``meson setup``, or "
+"``./autogen.sh, ./configure`` or ``cmake``), build, install (``ninja "
+"install, make install`` etc.) and optionally run tests (``make check, "
+"ninja test`` etc.)."
+msgstr ""
+
+#: ../../manifests.rst:275
+msgid ""
+"Thus they can also be achieved by using the ``simple`` buildsystem and "
+"manually specifying the commands."
+msgstr ""
+
+#: ../../manifests.rst:280
+msgid ""
+"Using the proper buildsystem is almost always preferred rather than "
+"manually handling the correct setup."
+msgstr ""
+
+#: ../../manifests.rst:283
+msgid "An example is provided below."
+msgstr ""
+
+#: ../../manifests.rst:333
 msgid "Shared Modules"
 msgstr ""
 
-#: ../../manifests.rst:200
+#: ../../manifests.rst:335
 msgid ""
-"`Shared Modules (or shared-modules) <https://github.com/flathub/shared-"
-"modules>`_ is a repository containing various manifests to build common "
-"libraries. It is intended to be used as a git submodule."
+"Flathub contains a `shared modules <https://github.com/flathub/shared-"
+"modules>`_ repository containing build manifests for commonly used "
+"modules. These are usally shared by apps on Flathub and maintained in a "
+"single place. The repository is intended to be used as a git submodule."
 msgstr ""
 
-#: ../../manifests.rst:202
-msgid "To add it to your repository, run this command:"
+#: ../../manifests.rst:340
+msgid ""
+"Please see the `readme <https://github.com/flathub/shared-"
+"modules/blob/master/README.md>`_ for details on how to use this."
 msgstr ""
 
-#: ../../manifests.rst:208
-msgid "Then, add whichever module you want. In this example, we will use `gtk2`:"
-msgstr ""
-
-#: ../../manifests.rst:215
-msgid "To update the submodule, run this command:"
-msgstr ""
-
-#: ../../manifests.rst:221
-msgid "To remove the submodule, run these commands:"
-msgstr ""
-
-#: ../../manifests.rst:231
+#: ../../manifests.rst:344
 msgid "Flatpak Builder Tools"
 msgstr ""
 
-#: ../../manifests.rst:233
+#: ../../manifests.rst:346
 msgid ""
 "`Flatpak Builder Tools (or flatpak-builder-tools) "
 "<https://github.com/flatpak/flatpak-builder-tools>`_ is a collection of "
@@ -381,15 +409,14 @@ msgid ""
 " platform."
 msgstr ""
 
-#: ../../manifests.rst:236
+#: ../../manifests.rst:349
 msgid "Example manifests"
 msgstr "实例清单文件"
 
-#: ../../manifests.rst:238
+#: ../../manifests.rst:351
 msgid ""
-"A `complete manifest for GNOME Dictionary built from Git "
-"<https://github.com/flathub/org.gnome.Dictionary/blob/master/org.gnome.Dictionary.yml>`_."
-" It is also possible to browse `all the manifests hosted by Flathub "
+"Flathub hosts a large collection of applications and the respective "
+"manifests can be browsed and searched via `GitHub "
 "<https://github.com/flathub>`_."
 msgstr ""
 
@@ -450,4 +477,46 @@ msgstr ""
 #~ "only filenames that were created by "
 #~ "that particular module will be matched."
 #~ msgstr "cleanup属性可以根据每个模块进行设置，在这种情况下，只会匹配该特定的模块产生的文件名。"
+
+#~ msgid ""
+#~ "GNOME Dictionary's modules section is "
+#~ "short, since it just contains the "
+#~ "application itself, and looks like:"
+#~ msgstr "GNOME Dictionary的模块节点是较短的，因为它仅仅包含应用本身，大概如下所示："
+
+#~ msgid "the \"`Build API <https://github.com/cgwalters/build-api/>`_\""
+#~ msgstr "\" `Build API <https://github.com/cgwalters/build-api/>`_ \""
+
+#~ msgid ""
+#~ "`Shared Modules (or shared-modules) "
+#~ "<https://github.com/flathub/shared-modules>`_ is a"
+#~ " repository containing various manifests to"
+#~ " build common libraries. It is "
+#~ "intended to be used as a git "
+#~ "submodule."
+#~ msgstr ""
+
+#~ msgid "To add it to your repository, run this command:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Then, add whichever module you want. "
+#~ "In this example, we will use "
+#~ "`gtk2`:"
+#~ msgstr ""
+
+#~ msgid "To update the submodule, run this command:"
+#~ msgstr ""
+
+#~ msgid "To remove the submodule, run these commands:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A `complete manifest for GNOME "
+#~ "Dictionary built from Git "
+#~ "<https://github.com/flathub/org.gnome.Dictionary/blob/master/org.gnome.Dictionary.yml>`_."
+#~ " It is also possible to browse "
+#~ "`all the manifests hosted by Flathub "
+#~ "<https://github.com/flathub>`_."
+#~ msgstr ""
 

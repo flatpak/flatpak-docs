@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
-"POT-Creation-Date: 2024-12-03 21:08+0530\n"
+"POT-Creation-Date: 2025-02-05 01:10+0530\n"
 "PO-Revision-Date: 2023-11-06 23:55+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
 "Language: ru\n"
@@ -1158,11 +1158,27 @@ msgstr ""
 "Ни одно приложение не должно использовать ``--talk-name=org.gtk.vfs`` в "
 "своем манифесте, так как нет сервисов D-Bus с именем ``org.gtk.vfs``."
 
-#: ../../sandbox-permissions.rst:428
+#: ../../sandbox-permissions.rst:427
+msgid ""
+"These permission grants the app, the ability to communicate with the gvfs"
+" daemon and backends running on host. Depending on the backends installed"
+" or running on host, it grants the ability to list mounted devices (USB, "
+"optical etc.), detach/format/eject them, mount them locally, read and "
+"write data. This is usually used with network storages like WebDAV, "
+"Google Drive, SMB etc. but backends exist for MTP/PTP, `USB "
+"<https://gitlab.gnome.org/GNOME/gvfs/-/tree/master/monitor/udisks2?ref_type=heads>`_,"
+" special locations like ``trash://`` and the `local filesystem "
+"<https://gitlab.gnome.org/GNOME/gvfs/-/blob/master/daemon/gvfsbackendlocaltest.c?ref_type=heads>`_"
+" too. So the app can access, read and write data from all of these "
+"locations provided the daemon and backends are installed and running on "
+"host."
+msgstr ""
+
+#: ../../sandbox-permissions.rst:441
 msgid "External drive access"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:430
+#: ../../sandbox-permissions.rst:443
 msgid ""
 "External drives are mounted by the host system using systemd, udev, udisk"
 " fstab etc. and each of them can have different defaults. Flatpak has no "
@@ -1170,30 +1186,30 @@ msgid ""
 "permissions should work in most cases::"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:439
+#: ../../sandbox-permissions.rst:452
 msgid ""
 "If ``--filesystem=host`` is used ``/media, /run/media`` is shared "
 "automatically if they exist."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:442
+#: ../../sandbox-permissions.rst:455
 msgid ""
 "Note that these should not have subpaths in them unless the value of the "
 "subpath can be consistently pre-determined. Block device naming depends "
 "on the kernel/fstab configuration and cannot be pre-determined."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:447
+#: ../../sandbox-permissions.rst:460
 msgid "Footnotes"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:448
+#: ../../sandbox-permissions.rst:461
 msgid ""
 "This is not necessarily required, but without it the X11 shared memory "
 "extension will not work, which is very bad for X11 performance."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:450
+#: ../../sandbox-permissions.rst:463
 msgid ""
 "Giving network access also grants access to all host services listening "
 "on abstract Unix sockets (due to how network namespaces work), and these "
@@ -1202,7 +1218,7 @@ msgid ""
 "secure distribution should disable these and just use regular sockets."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:455
+#: ../../sandbox-permissions.rst:468
 msgid ""
 "``xdg-{cache, config, data}`` bind mounts the paths from host to the per-"
 "app sandbox directory. Inside the sandbox ``$XDG_CACHE_HOME``, "
