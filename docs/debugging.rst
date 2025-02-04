@@ -180,8 +180,8 @@ Audit session or system bus traffic
 A ``--socket=session-bus`` or a ``--socket=system-bus`` permission must
 not be present for the logging to work.
 
-Session or system bus traffic can be audited by passing ``--log-session-bus``
-and ``--log-system-bus`` respectively to ``flatpak run``::
+Session bus traffic can be audited by passing ``--log-session-bus`` to
+``flatpak run``::
 
   flatpak run --log-session-bus <application-id>
 
@@ -190,3 +190,9 @@ and the corresponding ``--talk-name`` or ``--own-name`` permissions
 required::
 
   flatpak --log-session-bus run <application-id>| grep '(required 1)'
+
+Similarly, system bus traffic can be audited by passing ``--log-system-bus``
+to ``flatpak run``. This also requires a system bus name to be present
+in the permissions. If not a bogus bus name can be passed::
+
+  flatpak run --log-system-bus --system-talk-name=org.example.foo <application-id>
