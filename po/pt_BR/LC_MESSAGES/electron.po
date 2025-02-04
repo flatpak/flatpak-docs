@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
-"POT-Creation-Date: 2024-09-26 16:32-0300\n"
+"POT-Creation-Date: 2025-02-05 01:10+0530\n"
 "PO-Revision-Date: 2022-09-29 14:47-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
@@ -209,14 +209,14 @@ msgid ""
 "access."
 msgstr ""
 
-#: ../../electron.rst:126
+#: ../../electron.rst:127
 msgid ""
 "Native wayland support in electron is experimental and often unstable. It"
 " is advised to stick with the X11 and Xwayland configuration above as the"
 " default."
 msgstr ""
 
-#: ../../electron.rst:130
+#: ../../electron.rst:131
 msgid ""
 "To enable experimental `native Wayland` support in Electron>=20, the "
 "``--ozone-platform-hint=auto`` flag can be passed to the program. `auto` "
@@ -224,25 +224,26 @@ msgid ""
 "otherwise."
 msgstr ""
 
-#: ../../electron.rst:135
+#: ../../electron.rst:136
 msgid ""
 "The recommended option is to leave it to the user. So ``--socket=x11`` "
 "should be used in manifest and Wayland can be tested with::"
 msgstr ""
 
-#: ../../electron.rst:140
+#: ../../electron.rst:141
 msgid ""
 "To make native wayland the `default` for users ``--socket=fallback-x11`` "
 "and ``--socket=wayland`` must be used in the manifest."
 msgstr ""
 
-#: ../../electron.rst:143
+#: ../../electron.rst:144
 msgid ""
-"Client-side window decorations in native wayland can be enabled by "
-"passing ``--enable-features=WaylandWindowDecorations`` (Electron>=17)."
+"For Electron versions between 17 and 27, client-side window decorations "
+"in native wayland can be enabled by passing ``--enable-"
+"features=WaylandWindowDecorations``."
 msgstr ""
 
-#: ../../electron.rst:146
+#: ../../electron.rst:147
 msgid ""
 "Electron uses ``libnotify`` on Linux to provide desktop notifications. "
 "libnotify `since 0.8.0 "
@@ -253,17 +254,17 @@ msgid ""
 "name=org.freedesktop.Notifications`` is not required."
 msgstr ""
 
-#: ../../electron.rst:152
+#: ../../electron.rst:153
 msgid ""
 "``org.electronjs.Electron2.BaseApp`` since ``branch/23.08`` comes with "
 "``libnotify>=0.8.0``"
 msgstr ""
 
-#: ../../electron.rst:158
+#: ../../electron.rst:159
 msgid "Using correct desktop file name"
 msgstr ""
 
-#: ../../electron.rst:160
+#: ../../electron.rst:161
 msgid ""
 "It's important for Linux applications to set the correct desktop file "
 "name. If not, it can lead to problems like missing the window icon under "
@@ -274,7 +275,7 @@ msgid ""
 "\"com.example.MyApp.desktop\"``."
 msgstr ""
 
-#: ../../electron.rst:164
+#: ../../electron.rst:165
 msgid ""
 "In case you repack a binary, you can use the ``patch-desktop-filename`` "
 "script provided by the BaseApp. Each Electron binary ships with "
@@ -284,11 +285,11 @@ msgid ""
 "${FLATPAK_DEST}/my-app/resources/app.asar``."
 msgstr ""
 
-#: ../../electron.rst:169
+#: ../../electron.rst:170
 msgid "Build options"
 msgstr "Opções de compilação"
 
-#: ../../electron.rst:171
+#: ../../electron.rst:172
 msgid ""
 "These build options aren't strictly necessary, but can be useful if "
 "something goes wrong. ``env`` allows setting an array of environment "
@@ -301,11 +302,11 @@ msgstr ""
 " ``info``, para que ``npm`` nos forneça mensagens de erro mais "
 "detalhadas."
 
-#: ../../electron.rst:187
+#: ../../electron.rst:188
 msgid "The application module"
 msgstr "O módulo do aplicativo"
 
-#: ../../electron.rst:189
+#: ../../electron.rst:190
 msgid ""
 "The final section of the manifest defines how the application module "
 "should be built. This is where some of the additional logic for Electron "
@@ -315,7 +316,7 @@ msgstr ""
 "compilado. É aqui que algumas das lógicas adicionais para Electron e "
 "Node.js podem ser encontradas."
 
-#: ../../electron.rst:193
+#: ../../electron.rst:194
 msgid ""
 "By default, ``flatpak-builder`` doesn't allow build tools to access the "
 "network. This means that tools which rely on downloading sources will not"
@@ -330,7 +331,7 @@ msgstr ""
 " ambiente ``electron_config_cache`` significa que elas serão encontradas "
 "quando se trata da compilação."
 
-#: ../../electron.rst:199
+#: ../../electron.rst:200
 msgid ""
 "The next part of the manifest describes how the application should be "
 "built. The simple buildsystem option is used, which allows a sequence of "
@@ -343,17 +344,17 @@ msgstr ""
 "compilação. O local do download e o hash do aplicativo também são "
 "especificados."
 
-#: ../../electron.rst:222
+#: ../../electron.rst:223
 msgid "Bundling NPM packages"
 msgstr "Empacotando pacotes NPM"
 
-#: ../../electron.rst:224
+#: ../../electron.rst:225
 msgid "The next line is how NPM modules get bundled as part of Flatpaks:"
 msgstr ""
 "A próxima linha é como os módulos NPM são empacotados como parte de "
 "Flatpaks:"
 
-#: ../../electron.rst:230
+#: ../../electron.rst:231
 msgid ""
 "Since even simple Node.js applications depend on dozens of packages, it "
 "would be impractical to specify all of them as part of a manifest file. A"
@@ -369,7 +370,7 @@ msgstr ""
 "para baixar pacotes Node.js com o NPM ou Yarn e inclui-los nas fontes do "
 "aplicativo."
 
-#: ../../electron.rst:236
+#: ../../electron.rst:237
 msgid ""
 "The Python script requires a ``package-lock.json`` (or ``yarn.lock``) "
 "file. This file contains information about the packages that an "
@@ -383,7 +384,7 @@ msgstr ""
 "--package-lock-only`` no diretório raiz de um aplicativo. O script é "
 "então executado da seguinte maneira::"
 
-#: ../../electron.rst:243
+#: ../../electron.rst:244
 msgid ""
 "This generates the manifest JSON needed to build the NPM/Yarn packages "
 "for the application, which are outputted to a file called ``generated-"
@@ -401,11 +402,11 @@ msgstr ""
 "``generated-source.json`` como um linha na seção do manifesto, como visto"
 " acima."
 
-#: ../../electron.rst:251
+#: ../../electron.rst:252
 msgid "Launching the app"
 msgstr "Iniciando o aplicativo"
 
-#: ../../electron.rst:253
+#: ../../electron.rst:254
 msgid ""
 "The Electron app is run through a simple script. This can be given any "
 "name but must be specified in the manifest's ``\"command\":`` property. "
@@ -416,11 +417,11 @@ msgstr ""
 "``\"command\":`` do manifesto. Veja abaixo um exemplo de wrapper para "
 "iniciar um aplicativo:"
 
-#: ../../electron.rst:265
+#: ../../electron.rst:266
 msgid "Build commands"
 msgstr "Comandos de compilação"
 
-#: ../../electron.rst:267
+#: ../../electron.rst:268
 msgid ""
 "Last but not least, since the simple build option is being used, a list "
 "of build commands must be provided. As can be seen, ``npm`` is run with "
@@ -437,7 +438,7 @@ msgstr ""
 "Finalmente, o script ``run.sh`` é instalado em ``/app/bin/`` para que ele"
 " esteja em ``$PATH``:"
 
-#: ../../electron.rst:289
+#: ../../electron.rst:290
 msgid ""
 "Note that if the application you are trying to package contains a "
 "``build`` block in ``package.json`` with instructions for Linux, this can"
@@ -452,7 +453,7 @@ msgstr ""
 "seguir mostra uma configuração que tentará baixar os binários do "
 "AppImage:"
 
-#: ../../electron.rst:299
+#: ../../electron.rst:300
 msgid ""
 "The preferred way of fixing this, is not a patch, but a build-time edit "
 "using ``jq``. The following command will replace ``\"target\": "
@@ -462,11 +463,11 @@ msgstr ""
 "tempo de construção usando ``jq``. O comando a seguir substituirá "
 "``\"target\": \"AppImage\"`` por ``\"target\": \"dir\"``:"
 
-#: ../../electron.rst:306
+#: ../../electron.rst:307
 msgid "Make setProgressBar and setBadgeCount work"
 msgstr ""
 
-#: ../../electron.rst:307
+#: ../../electron.rst:308
 msgid ""
 "The `setProgressBar <https://www.electronjs.org/docs/latest/api/browser-"
 "window#winsetprogressbarprogress-options>`_ and `setBadgeCount "
@@ -480,12 +481,13 @@ msgid ""
 "extension and `Plank <https://launchpad.net/plank>`_."
 msgstr ""
 
-#: ../../electron.rst:310
+#: ../../electron.rst:311
 msgid ""
 "To make it work in Flatpak, the app needs to :ref:`use the correct "
-"desktop filename <use-correct-desktop-filename>`. The Flatpak also needs "
-"the ``--talk-name=com.canonical.Unity`` permission. Electron versions "
-"earlier than v32 checks `checks if it's running on Unity or KDE "
+"desktop filename <use-correct-desktop-filename>` in its embedded "
+"`package.json` file. The Flatpak also needs the ``--talk-"
+"name=com.canonical.Unity`` permission. Electron versions earlier than v32"
+" checks `checks if it's running on Unity or KDE "
 "<https://github.com/electron/electron/blob/fb88375ab4d2161dbf7e958a2a94c7c6d97dc84c/shell/browser/linux/unity_service.cc#L64>`_"
 " before using the UnityLauncherAPI."
 msgstr ""
@@ -544,4 +546,24 @@ msgstr ""
 
 #~ msgid "Then you can run the build::"
 #~ msgstr "Então, você pode executar a compilação::"
+
+#~ msgid ""
+#~ "Client-side window decorations in native"
+#~ " wayland can be enabled by passing"
+#~ " ``--enable-features=WaylandWindowDecorations`` "
+#~ "(Electron>=17)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To make it work in Flatpak, the"
+#~ " app needs to :ref:`use the correct"
+#~ " desktop filename <use-correct-desktop-"
+#~ "filename>`. The Flatpak also needs the"
+#~ " ``--talk-name=com.canonical.Unity`` permission. "
+#~ "Electron versions earlier than v32 "
+#~ "checks `checks if it's running on "
+#~ "Unity or KDE "
+#~ "<https://github.com/electron/electron/blob/fb88375ab4d2161dbf7e958a2a94c7c6d97dc84c/shell/browser/linux/unity_service.cc#L64>`_"
+#~ " before using the UnityLauncherAPI."
+#~ msgstr ""
 

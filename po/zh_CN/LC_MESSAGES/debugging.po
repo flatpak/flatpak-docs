@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-03 21:11+0530\n"
+"POT-Creation-Date: 2025-02-05 01:10+0530\n"
 "PO-Revision-Date: 2018-11-03 01:03-0400\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language: zh_Hans_CN\n"
@@ -262,8 +262,8 @@ msgstr ""
 
 #: ../../debugging.rst:183
 msgid ""
-"Session or system bus traffic can be audited by passing ``--log-session-"
-"bus`` and ``--log-system-bus`` respectively to ``flatpak run``::"
+"Session bus traffic can be audited by passing ``--log-session-bus`` to "
+"``flatpak run``::"
 msgstr ""
 
 #: ../../debugging.rst:188
@@ -271,6 +271,13 @@ msgid ""
 "This can be useful to figure out the bus names used by an application and"
 " the corresponding ``--talk-name`` or ``--own-name`` permissions "
 "required::"
+msgstr ""
+
+#: ../../debugging.rst:194
+msgid ""
+"Similarly, system bus traffic can be audited by passing ``--log-system-"
+"bus`` to ``flatpak run``. This also requires a system bus name to be "
+"present in the permissions. If not a bogus bus name can be passed::"
 msgstr ""
 
 #~ msgid ""
@@ -338,5 +345,12 @@ msgstr ""
 #~ " the bus names used by an "
 #~ "application and the corresponding ``--talk-"
 #~ "names`` or ``--own-names`` required::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Session or system bus traffic can "
+#~ "be audited by passing ``--log-"
+#~ "session-bus`` and ``--log-system-bus`` "
+#~ "respectively to ``flatpak run``::"
 #~ msgstr ""
 
