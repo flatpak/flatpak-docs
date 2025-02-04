@@ -143,22 +143,95 @@ the Flatpak. While simple applications may only specify one or two modules,
 and therefore have short modules sections, some applications can bundle
 numerous modules and therefore have lengthy modules sections.
 
-GNOME Dictionary's modules section is short, since it just contains the
-application itself, and looks like:
+Modules are built in the order they are declared in the manifest. If any
+module changes, that module and all the subsequent modules below it will
+be rebuilt, otherwise it should use the cache.
+
+The general recommendation is to place the "main" module, usually the
+module for the main application as the last module in the manifest but
+if there is a module which gets updated often and is independent from the
+rest, that module can also be placed as the last module to avoid
+rebuilding everything else.
+
+Modules can either be nested to clearly show the dependency structure
+or be linearly declared.
 
 .. code-block:: yaml
 
-  modules:
-    - name: gnome-dictionary
-      buildsystem: meson
-      config-opts:
-        - -Dbuild_man=false
-      sources:
-        - type: archive
-          url: https://download.gnome.org/sources/gnome-dictionary/3.26/gnome-dictionary-3.26.1.tar.xz
-          sha256: 16b8bc248dcf68987826d5e39234b1bb7fd24a2607fcdbf4258fde88f012f300
-        - type: patch
-          path: appdata_oars.patch
+  # Nested
+
+  finish-args:
+    - --share=ipc
+    - --socket=fallback-x11
+    - --socket=wayland
+    - --socket=pulseaudio
+
+    modules:
+      - name: video-player-app
+        buildsystem: meson
+        config-opts:
+          - --buildtype=release
+        cleanup:
+          - /share/man
+        sources:
+          - type: archive
+            url: https://example.com/release.tar.gz
+            sha256: 216656c4495bb3ca02dc4ad9cf3da8e8f15c8f80e870eeac8eb1eedab4c3788b
+        modules:
+          - name: libmpv
+            buildsystem: meson
+            config-opts:
+              - -Dlibmpv=true
+            sources:
+              - type: archive
+                url: https://example.com/mpv.tar.gz
+                sha256: 2ca92437affb62c2b559b4419ea4785c70d023590500e8a52e95ea3ab4554683
+            modules:
+              - "shared-modules/lua5.1/lua-5.1.5.json"
+
+              - name: libv4l2
+                buildsystem: meson
+                sources:
+                  - type: archive
+                    url: url: https://example.com/libv4l2.tar.gz
+                    sha256: 0fa075ce59b6618847af6ea191b6155565ccaa44de0504581ddfed795a328a82
+  # Linear
+
+  finish-args:
+    - --share=ipc
+    - --socket=fallback-x11
+    - --socket=wayland
+    - --socket=pulseaudio
+
+    modules:
+      - "shared-modules/lua5.1/lua-5.1.5.json"
+
+      - name: libv4l2
+        buildsystem: meson
+        sources:
+          - type: archive
+            url: url: https://example.com/libv4l2.tar.gz
+            sha256: 0fa075ce59b6618847af6ea191b6155565ccaa44de0504581ddfed795a328a82
+
+      - name: libmpv
+        buildsystem: meson
+         config-opts:
+           - -Dlibmpv=true
+        sources:
+          - type: archive
+            url: https://example.com/mpv.tar.gz
+            sha256: 2ca92437affb62c2b559b4419ea4785c70d023590500e8a52e95ea3ab4554683
+
+      - name: video-player-app
+        buildsystem: meson
+        config-opts:
+          - --buildtype=release
+        cleanup:
+          - /share/man
+        sources:
+          - type: archive
+            url: https://example.com/release.tar.gz
+            sha256: 216656c4495bb3ca02dc4ad9cf3da8e8f15c8f80e870eeac8eb1eedab4c3788b
 
 As can be seen, each listed module has a ``name`` (which can be freely
 assigned) and a list of ``sources``. Each source has a ``type``, and available
