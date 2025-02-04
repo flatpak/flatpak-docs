@@ -430,7 +430,7 @@ installed or running on host, it grants the ability to list mounted
 devices (USB, optical etc.), detach/format/eject them, mount them
 locally, read and write data. This is usually used with network storages
 like WebDAV, Google Drive, SMB etc. but backends exist for MTP/PTP,
-`USB <https://gitlab.gnome.org/GNOME/gvfs/-/tree/master/monitor/udisks2?ref_type=heads>_`,
+`USB <https://gitlab.gnome.org/GNOME/gvfs/-/tree/master/monitor/udisks2?ref_type=heads>`_,
 special locations like ``trash://`` and the
 `local filesystem <https://gitlab.gnome.org/GNOME/gvfs/-/blob/master/daemon/gvfsbackendlocaltest.c?ref_type=heads>`_
 too. So the app can access, read and write data from all of these
