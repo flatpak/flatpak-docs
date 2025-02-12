@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-31 14:18-0300\n"
+"POT-Creation-Date: 2025-02-12 09:12+0530\n"
 "PO-Revision-Date: 2018-11-03 11:05-0400\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language: zh_Hans_CN\n"
@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../building-introduction.rst:2
 msgid "Building Introduction"
@@ -29,11 +29,18 @@ msgstr ""
 "我们已在 :doc:`first-build` "
 "一节中展示了如何使用Flatpak构建应用的简单案例。在本节中，我们将概述讨论构建过程涉及到的其他要素。"
 
-#: ../../building-introduction.rst:9
+#: ../../building-introduction.rst:10
+msgid ""
+"App stores like `Flathub <https://docs.flathub.org/docs/for-app-"
+"authors/submission>`_ has additional requirements on the building "
+"process. Please refer to their respective documentation for details."
+msgstr ""
+
+#: ../../building-introduction.rst:15
 msgid "flatpak-builder"
 msgstr "flatpak-builder"
 
-#: ../../building-introduction.rst:11
+#: ../../building-introduction.rst:17
 msgid ""
 "``flatpak-builder`` is the primary tool for building Flatpak "
 "applications. It allows you to take the source files for an application "
@@ -44,7 +51,14 @@ msgstr ""
 "``flatpak-builder``  是构建Flatpak应用的基础工具. "
 "它允许您获取应用程序的源文件，并将其构建为一个Flatpak应用程序。它还允许同时构建多个其他依赖项，这些依赖项被捆绑到构建中。"
 
-#: ../../building-introduction.rst:16
+#: ../../building-introduction.rst:22
+msgid ""
+"It is packaged by several distributions and there is a `Flatpak package "
+"<https://flathub.org/apps/org.flatpak.Builder>`_ called "
+"``org.flatpak.Builder`` available for it too on Flathub."
+msgstr ""
+
+#: ../../building-introduction.rst:26
 msgid ""
 "The input to ``flatpak-builder`` is a manifest file. This specifies the "
 "parameters for the application that will be built, such as its name and "
@@ -57,11 +71,11 @@ msgstr ""
 "输入给  ``flatpak-builder``  "
 "的是一个清单文件。它指定了要构建应用的参数，例如它的名字和依赖的运行时。这个清单还列出了作为构建过程的一部分构建的所有模块（不是很确定，译者注）。可以指定每个模块的源，包括指向文件存档或版本控制存储库的链接。某个模块（通常是最后一个）是应用代码它本身。"
 
-#: ../../building-introduction.rst:24
+#: ../../building-introduction.rst:34
 msgid "The basic format used to invoke ``flatpak-builder`` is::"
 msgstr "调用  ``flatpak-builder``  的基本格式是:"
 
-#: ../../building-introduction.rst:28
+#: ../../building-introduction.rst:38
 msgid ""
 "Where ``<build-dir>`` is the path to the directory that the application "
 "will be built into, and ``<manifest>`` is the path to a manifest file. "
@@ -71,48 +85,48 @@ msgstr ""
 "其中 ``<build-dir>`` 是构建应用程序的目标文件夹，``<manifest>`` 是清单文件的路径。``<build-dir>`` "
 "中的内容可以被用来调试和测试应用程序，不过大多数情况下它只是构建过程的中间产物。"
 
-#: ../../building-introduction.rst:33
+#: ../../building-introduction.rst:43
 msgid "When ``flatpak-builder`` is run:"
 msgstr "当  ``flatpak-builder``  运行的时候："
 
-#: ../../building-introduction.rst:35
+#: ../../building-introduction.rst:45
 msgid "The build directory is created, if it doesn't already exist"
 msgstr "构建目录如果不存在则进行创建"
 
-#: ../../building-introduction.rst:36
+#: ../../building-introduction.rst:46
 msgid "The source code for each module is downloaded and verified"
 msgstr "下载和验证每个模块的源代码"
 
-#: ../../building-introduction.rst:37
+#: ../../building-introduction.rst:47
 msgid "The source code for each module is built and installed"
 msgstr "构建和安装每个模块的源代码"
 
-#: ../../building-introduction.rst:38
+#: ../../building-introduction.rst:48
 #, fuzzy
 msgid "The build is finished by setting sandbox permissions"
 msgstr "设置沙箱的权限并完成构建"
 
-#: ../../building-introduction.rst:39
+#: ../../building-introduction.rst:49
 msgid ""
 "The build result is exported to a repository (which will be created if it"
 " doesn't exist already)"
 msgstr "构建结果会被导出到仓库（如果不存在将会被创建）"
 
-#: ../../building-introduction.rst:42
+#: ../../building-introduction.rst:52
 msgid "The application can then be installed from the repository and run."
 msgstr "然后这个应用就可以从仓库进行安装和运行了"
 
-#: ../../building-introduction.rst:45
+#: ../../building-introduction.rst:55
 msgid "Software Development Kits (SDKs)"
 msgstr "软件开发套件（SDKs）"
 
-#: ../../building-introduction.rst:47
+#: ../../building-introduction.rst:57
 msgid ""
 "Instead of being built using the host environment, Flatpak applications "
 "are built inside a separate environment, called an SDK."
 msgstr "Flatpak应用是在一个称作SDK的隔离环境中，而不是宿主的环境中构建的。"
 
-#: ../../building-introduction.rst:50
+#: ../../building-introduction.rst:60
 msgid ""
 "SDKs are like the regular runtime that applications run in. The "
 "difference is that SDKs also include all the development resources and "
@@ -120,7 +134,7 @@ msgid ""
 "packaging tools, header files, compilers and debuggers."
 msgstr "这些SDK类似与应用所运行在的常规运行时。不同的是，这些SDK还包含了构建一个应用需要的所有开发资源和工具，例如构建和打包工具、头文件、编译器和调试器"
 
-#: ../../building-introduction.rst:55
+#: ../../building-introduction.rst:65
 #, fuzzy
 msgid ""
 "Each runtime has an accompanying SDK. For example, there is both a GNOME "
@@ -130,11 +144,19 @@ msgstr ""
 "每个运行时都有一个附带的SDK。例如，一个GNOME 3.26 runtime和一个GNOME 3.26 "
 "SDK同时存在。使用这个运行时的是用这个对应的SDK构建的。"
 
-#: ../../building-introduction.rst:59
+#: ../../building-introduction.rst:69
 #, fuzzy
 msgid ""
 "Like runtimes, SDKs will sometimes be automatically installed for you, "
 "but if you do need to manually install them, they are installed in the "
 "same way as applications and runtimes, such as::"
 msgstr "和运行时一样，一般SDK会自动地进行安装。但是如果你需要手动安装他们，他们的安装和运行时的安装一样，例如："
+
+#~ msgid ""
+#~ "It is packaged by several distributions"
+#~ " and there is a Flatpak package "
+#~ "called ``org.flatpak.Builder`` available for "
+#~ "it too on `Flathub "
+#~ "<https://flathub.org/apps/org.flatpak.Builder>`_."
+#~ msgstr ""
 
