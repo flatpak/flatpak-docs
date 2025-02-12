@@ -1,12 +1,22 @@
 Building your first Flatpak
 ===========================
 
+.. note::
+
+  App stores like `Flathub <https://docs.flathub.org/docs/for-app-authors/submission>`_
+  have additional requirements on the building process. Please refer to
+  their respective documentation for details.
+
 This tutorial provides a quick introduction to build, install and share
 a basic flatpak package.
 
-In order to complete this tutorial, please install ``flatpak`` and
-``flatpak-builder`` packages from your distribution. The `setup page <https://flatpak.org/setup/>`_
-covers steps for most of the popular distributions.
+In order to complete this tutorial, please install ``flatpak``. The
+`setup page <https://flatpak.org/setup/>`_ covers steps for most of the
+popular distributions.
+
+Please also install ``flatpak-builder`` from your distribution. There is
+also a flatpak-builder `Flatpak package <https://flathub.org/apps/org.flatpak.Builder>`_
+on Flathub.
 
 Then install the Flathub repository `userwide`::
 
