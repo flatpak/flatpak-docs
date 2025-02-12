@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-26 16:32-0300\n"
+"POT-Creation-Date: 2025-02-12 23:23+0530\n"
 "PO-Revision-Date: 2018-05-20 10:37-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language: ko\n"
@@ -17,37 +17,50 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../first-build.rst:2
 msgid "Building your first Flatpak"
 msgstr "첫번째 플랫팩 응용프로그램 빌드"
 
-#: ../../first-build.rst:4
+#: ../../first-build.rst:6
+msgid ""
+"App stores like `Flathub <https://docs.flathub.org/docs/for-app-"
+"authors/submission>`_ have additional requirements on the building "
+"process. Please refer to their respective documentation for details."
+msgstr ""
+
+#: ../../first-build.rst:10
 #, fuzzy
 msgid ""
 "This tutorial provides a quick introduction to build, install and share a"
 " basic flatpak package."
 msgstr "이 튜토리얼은 플랫팩을 간략히 소개한다. 이를 통해 기본 플랫팩 응용프로그램을 생성하고, 설치 및 실행하는 방법을 배운다."
 
-#: ../../first-build.rst:7
+#: ../../first-build.rst:13
 msgid ""
-"In order to complete this tutorial, please install ``flatpak`` and "
-"``flatpak-builder`` packages from your distribution. The `setup page "
-"<https://flatpak.org/setup/>`_ covers steps for most of the popular "
-"distributions."
+"In order to complete this tutorial, please install ``flatpak``. The "
+"`setup page <https://flatpak.org/setup/>`_ covers steps for most of the "
+"popular distributions."
 msgstr ""
 
-#: ../../first-build.rst:11
+#: ../../first-build.rst:17
+msgid ""
+"Please also install ``flatpak-builder`` from your distribution. There is "
+"also a flatpak-builder `Flatpak package "
+"<https://flathub.org/apps/org.flatpak.Builder>`_ on Flathub."
+msgstr ""
+
+#: ../../first-build.rst:21
 msgid "Then install the Flathub repository `userwide`::"
 msgstr ""
 
-#: ../../first-build.rst:16
+#: ../../first-build.rst:26
 #, fuzzy
 msgid "1. Runtime and SDK"
 msgstr "1. 런타임과 SDK 쌍 설치"
 
-#: ../../first-build.rst:18
+#: ../../first-build.rst:28
 #, fuzzy
 msgid ""
 "Flatpak requires every app to specify a runtime for its basic runtime "
@@ -58,7 +71,7 @@ msgstr ""
 "SDK(Software Development Kit)가 존재하는데, 여기에는 실행시간에 필요한 모든 자원 및 헤더파일과 개발도구들이"
 " 담겨있다. SDK는 응용프로그램을 빌드할 때 사용된다."
 
-#: ../../first-build.rst:22
+#: ../../first-build.rst:32
 #, fuzzy
 msgid ""
 "In this tutorial we will use the Freedesktop 23.08 runtime and SDK from "
@@ -67,12 +80,12 @@ msgstr ""
 "이 튜토리얼는 Freedesktop 런타임 버전 1.6을 사용할 예정이며, 해당 런타임은 플랫팩 저장소에서 제공한다. 저장소를 "
 "추가하려면 다음과 같이 입력한다:"
 
-#: ../../first-build.rst:26
+#: ../../first-build.rst:36
 #, fuzzy
 msgid "2. Add a manifest"
 msgstr "3. manifest 추가"
 
-#: ../../first-build.rst:28
+#: ../../first-build.rst:38
 #, fuzzy
 msgid ""
 "Each Flatpak is built using a manifest file which provides basic "
@@ -81,14 +94,14 @@ msgstr ""
 "각 플랫팩은 빌드 시, 응용프로그램에 대한 기본 정보와 빌드 방법을 기술하고 있는 manifest 파일을 사용한다. Hello "
 "world 응용을 위해 manifest를 추가하려면 빈 파일에 다음과 같은 내용을 추가한다:"
 
-#: ../../first-build.rst:31
+#: ../../first-build.rst:41
 #, fuzzy
 msgid ""
 "To create a manifest for our hello world app, paste the following into an"
 " empty file and save it as ``org.flatpak.Hello.yml``."
 msgstr "이제 새 파일에 붙여넣고 `hello.sh`라는 이름으로 저장한다."
 
-#: ../../first-build.rst:52
+#: ../../first-build.rst:62
 msgid ""
 "The `application` here is a simple script, that is self contained in the "
 "manifest! The `install -Dm755 "
@@ -99,17 +112,17 @@ msgid ""
 "Modes.html>`_ inside the sandbox."
 msgstr ""
 
-#: ../../first-build.rst:55
+#: ../../first-build.rst:65
 msgid ""
 "In a more complex application, the manifest would list multiple modules "
 "and build instructions."
 msgstr ""
 
-#: ../../first-build.rst:59
+#: ../../first-build.rst:69
 msgid "3. Build and install"
 msgstr ""
 
-#: ../../first-build.rst:61
+#: ../../first-build.rst:71
 #, fuzzy
 msgid ""
 "Now that the app has a manifest, ``flatpak-builder`` can be used to build"
@@ -118,7 +131,7 @@ msgstr ""
 "응용프로그램의 manifest가 준비되면, 플랫팩 빌더(`flatpak-builder`)를 이용하여 빌드할 수 있다. 빌드 명령 시"
 " manifest파일과 빌드된 결과물이 위치할 디렉토리를 지정할 수 있다::"
 
-#: ../../first-build.rst:66
+#: ../../first-build.rst:76
 #, fuzzy
 msgid ""
 "This command will first build each module that is listed in the manifest,"
@@ -128,41 +141,41 @@ msgstr ""
 "위 명령을 입력하면 manifest에 열거된 각 모듈이 빌드되고, `app-dir` 디렉토리를 기준으로 하여 `/app` 아래에 "
 "빌드된 결과물을 설치한다."
 
-#: ../../first-build.rst:71
+#: ../../first-build.rst:81
 #, fuzzy
 msgid "4. Run the application"
 msgstr "4. 응용프로그램 빌드"
 
-#: ../../first-build.rst:73
+#: ../../first-build.rst:83
 #, fuzzy
 msgid "To run the application::"
 msgstr "4. 응용프로그램 빌드"
 
-#: ../../first-build.rst:77
+#: ../../first-build.rst:87
 msgid ""
 "If you see ``Hello world, from a sandbox`` on the terminal then "
 "congratulations, you've made an app!"
 msgstr ""
 
-#: ../../first-build.rst:81
+#: ../../first-build.rst:91
 #, fuzzy
 msgid "5. Share the application"
 msgstr "4. 응용프로그램 빌드"
 
-#: ../../first-build.rst:83
+#: ../../first-build.rst:93
 msgid ""
 "If you want to share the application you can create a single-file bundle."
 " See :doc:`single-file-bundles` for more details on it."
 msgstr ""
 
-#: ../../first-build.rst:90
+#: ../../first-build.rst:100
 msgid ""
 "Now you can send the ``hello.flatpak`` file to someone and if they have "
 "the Flathub repository set up and a working network connection to install"
 " the runtime, they can install it with::"
 msgstr ""
 
-#: ../../first-build.rst:98
+#: ../../first-build.rst:108
 msgid "To uninstall, run ``flatpak remove org.flatpak.Hello``"
 msgstr ""
 
@@ -363,4 +376,13 @@ msgstr ""
 
 #~ msgid "This runs the app, so that it prints 'Hello world, from a sandbox'."
 #~ msgstr "성공적으로 실행되면 `Hello world, from a sandbox` 라는 메시지가 출력된다."
+
+#~ msgid ""
+#~ "In order to complete this tutorial, "
+#~ "please install ``flatpak`` and ``flatpak-"
+#~ "builder`` packages from your distribution. "
+#~ "The `setup page <https://flatpak.org/setup/>`_ "
+#~ "covers steps for most of the "
+#~ "popular distributions."
+#~ msgstr ""
 

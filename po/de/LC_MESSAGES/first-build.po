@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-26 16:32-0300\n"
+"POT-Creation-Date: 2025-02-12 23:23+0530\n"
 "PO-Revision-Date: 2019-06-26 12:05-0400\n"
 "Last-Translator: Markus Richter <semanticdesign@pm.me>\n"
 "Language: de\n"
@@ -17,13 +17,20 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../first-build.rst:2
 msgid "Building your first Flatpak"
 msgstr "Erstellen des ersten Flatpaks"
 
-#: ../../first-build.rst:4
+#: ../../first-build.rst:6
+msgid ""
+"App stores like `Flathub <https://docs.flathub.org/docs/for-app-"
+"authors/submission>`_ have additional requirements on the building "
+"process. Please refer to their respective documentation for details."
+msgstr ""
+
+#: ../../first-build.rst:10
 #, fuzzy
 msgid ""
 "This tutorial provides a quick introduction to build, install and share a"
@@ -34,24 +41,30 @@ msgstr ""
 "Flatpak-Anwendung erstellt, die dann installiert und gestartet werden "
 "kann."
 
-#: ../../first-build.rst:7
+#: ../../first-build.rst:13
 msgid ""
-"In order to complete this tutorial, please install ``flatpak`` and "
-"``flatpak-builder`` packages from your distribution. The `setup page "
-"<https://flatpak.org/setup/>`_ covers steps for most of the popular "
-"distributions."
+"In order to complete this tutorial, please install ``flatpak``. The "
+"`setup page <https://flatpak.org/setup/>`_ covers steps for most of the "
+"popular distributions."
 msgstr ""
 
-#: ../../first-build.rst:11
+#: ../../first-build.rst:17
+msgid ""
+"Please also install ``flatpak-builder`` from your distribution. There is "
+"also a flatpak-builder `Flatpak package "
+"<https://flathub.org/apps/org.flatpak.Builder>`_ on Flathub."
+msgstr ""
+
+#: ../../first-build.rst:21
 msgid "Then install the Flathub repository `userwide`::"
 msgstr ""
 
-#: ../../first-build.rst:16
+#: ../../first-build.rst:26
 #, fuzzy
 msgid "1. Runtime and SDK"
 msgstr "1. Installieren einer Laufzeitumgebung und des zugehörigen SDK"
 
-#: ../../first-build.rst:18
+#: ../../first-build.rst:28
 #, fuzzy
 msgid ""
 "Flatpak requires every app to specify a runtime for its basic runtime "
@@ -65,7 +78,7 @@ msgstr ""
 "enthält, sowie Header-Dateien und Entwicklung-Tools. Das SDK wird "
 "benötigt, um Anwendungen für die Laufzeitumgebung zu erstellen."
 
-#: ../../first-build.rst:22
+#: ../../first-build.rst:32
 #, fuzzy
 msgid ""
 "In this tutorial we will use the Freedesktop 23.08 runtime and SDK from "
@@ -74,12 +87,12 @@ msgstr ""
 "In diesem Tutorial verwenden wir Laufzeitumgebung und SDK zu Freedesktop "
 "18.08. Um diese zu installieren, verwendet man:: "
 
-#: ../../first-build.rst:26
+#: ../../first-build.rst:36
 #, fuzzy
 msgid "2. Add a manifest"
 msgstr "3. Hinzufügen eines Manifests"
 
-#: ../../first-build.rst:28
+#: ../../first-build.rst:38
 #, fuzzy
 msgid ""
 "Each Flatpak is built using a manifest file which provides basic "
@@ -91,14 +104,14 @@ msgstr ""
 "world``-anwendung hinzuzufügen, fügt man das Folgende in eine leere Datei"
 " ein::"
 
-#: ../../first-build.rst:31
+#: ../../first-build.rst:41
 #, fuzzy
 msgid ""
 "To create a manifest for our hello world app, paste the following into an"
 " empty file and save it as ``org.flatpak.Hello.yml``."
 msgstr "Dies wird in eine leere Datei eingefügt und als ``hello.sh`` gespeichert."
 
-#: ../../first-build.rst:52
+#: ../../first-build.rst:62
 msgid ""
 "The `application` here is a simple script, that is self contained in the "
 "manifest! The `install -Dm755 "
@@ -109,17 +122,17 @@ msgid ""
 "Modes.html>`_ inside the sandbox."
 msgstr ""
 
-#: ../../first-build.rst:55
+#: ../../first-build.rst:65
 msgid ""
 "In a more complex application, the manifest would list multiple modules "
 "and build instructions."
 msgstr ""
 
-#: ../../first-build.rst:59
+#: ../../first-build.rst:69
 msgid "3. Build and install"
 msgstr ""
 
-#: ../../first-build.rst:61
+#: ../../first-build.rst:71
 #, fuzzy
 msgid ""
 "Now that the app has a manifest, ``flatpak-builder`` can be used to build"
@@ -129,7 +142,7 @@ msgstr ""
 "verwendet werden, um sie zu erzeugen. Durchgeführt wird dies, indem ein "
 "Zielverzeichnis und die Manifest-Datei angegeben wird::"
 
-#: ../../first-build.rst:66
+#: ../../first-build.rst:76
 #, fuzzy
 msgid ""
 "This command will first build each module that is listed in the manifest,"
@@ -140,41 +153,41 @@ msgstr ""
 "installiert es, innerhalb des ``build-dir``-Verzeichnisses, in das "
 "``/app``-Unterverzeichnis."
 
-#: ../../first-build.rst:71
+#: ../../first-build.rst:81
 #, fuzzy
 msgid "4. Run the application"
 msgstr "4. Erzeugen der Anwendung"
 
-#: ../../first-build.rst:73
+#: ../../first-build.rst:83
 #, fuzzy
 msgid "To run the application::"
 msgstr "4. Erzeugen der Anwendung"
 
-#: ../../first-build.rst:77
+#: ../../first-build.rst:87
 msgid ""
 "If you see ``Hello world, from a sandbox`` on the terminal then "
 "congratulations, you've made an app!"
 msgstr ""
 
-#: ../../first-build.rst:81
+#: ../../first-build.rst:91
 #, fuzzy
 msgid "5. Share the application"
 msgstr "4. Erzeugen der Anwendung"
 
-#: ../../first-build.rst:83
+#: ../../first-build.rst:93
 msgid ""
 "If you want to share the application you can create a single-file bundle."
 " See :doc:`single-file-bundles` for more details on it."
 msgstr ""
 
-#: ../../first-build.rst:90
+#: ../../first-build.rst:100
 msgid ""
 "Now you can send the ``hello.flatpak`` file to someone and if they have "
 "the Flathub repository set up and a working network connection to install"
 " the runtime, they can install it with::"
 msgstr ""
 
-#: ../../first-build.rst:98
+#: ../../first-build.rst:108
 msgid "To uninstall, run ``flatpak remove org.flatpak.Hello``"
 msgstr ""
 
@@ -399,4 +412,13 @@ msgstr ""
 #~ "Das startet die Anwendung und gibt "
 #~ "den Text 'Hello world, from a "
 #~ "sandbox' aus."
+
+#~ msgid ""
+#~ "In order to complete this tutorial, "
+#~ "please install ``flatpak`` and ``flatpak-"
+#~ "builder`` packages from your distribution. "
+#~ "The `setup page <https://flatpak.org/setup/>`_ "
+#~ "covers steps for most of the "
+#~ "popular distributions."
+#~ msgstr ""
 

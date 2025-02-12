@@ -8,54 +8,65 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
-"POT-Creation-Date: 2022-09-29 11:37-0300\n"
+"POT-Creation-Date: 2025-02-12 23:23+0530\n"
 "PO-Revision-Date: 2022-09-29 15:20-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
 "Language-Team: Brazilian Portuguese\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
-"X-Generator: Gtranslator 42.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../flatpak-builder.rst:2
 msgid "Flatpak Builder"
 msgstr "Flatpak Builder"
 
 #: ../../flatpak-builder.rst:4
+#, fuzzy
 msgid ""
-"``flatpak-builder`` has already been introduced in :doc:`first-build` and :"
-"doc:`building-introduction`. This page provides additional detail on how to "
-"use ``flatpak-builder``, including the various command options that are "
-"available."
+"``flatpak-builder`` has already been introduced in :doc:`first-build` and"
+" :doc:`building-introduction`. It is packaged by most of the popular "
+"distributions and there is also a flatpak-builder `Flatpak package "
+"<https://flathub.org/apps/org.flatpak.Builder>`_ on Flathub."
 msgstr ""
-"``flatpak-builder`` já foi introduzido em :doc:`first-build` e :doc:"
-"`building-introduction`. Esta página fornece detalhes adicionais sobre como "
-"usar o ``flatpak-builder``, incluindo as várias opções de comando "
+"``flatpak-builder`` já foi introduzido em :doc:`first-build` e :doc"
+":`building-introduction`. Esta página fornece detalhes adicionais sobre "
+"como usar o ``flatpak-builder``, incluindo as várias opções de comando "
 "disponíveis."
 
-#: ../../flatpak-builder.rst:10
+#: ../../flatpak-builder.rst:9
+#, fuzzy
+msgid ""
+"This page provides additional details on how to use ``flatpak-builder``, "
+"including the various command options that are available."
+msgstr ""
+"``flatpak-builder`` já foi introduzido em :doc:`first-build` e :doc"
+":`building-introduction`. Esta página fornece detalhes adicionais sobre "
+"como usar o ``flatpak-builder``, incluindo as várias opções de comando "
+"disponíveis."
+
+#: ../../flatpak-builder.rst:13
 msgid "Exporting"
 msgstr "Exportando"
 
-#: ../../flatpak-builder.rst:12
+#: ../../flatpak-builder.rst:15
 msgid ""
 "``flatpak-builder`` provides two options for exporting an application in "
 "order to run it. The first is to export to a repository, from which the "
 "application can be run. The second is to automatically install locally."
 msgstr ""
 "``flatpak-builder`` fornece duas opções para exportar um aplicativo para "
-"executá-lo. O primeiro é exportar para um repositório, a partir do qual o "
-"aplicativo pode ser executado. O segundo é instalar automaticamente "
+"executá-lo. O primeiro é exportar para um repositório, a partir do qual o"
+" aplicativo pode ser executado. O segundo é instalar automaticamente "
 "localmente."
 
-#: ../../flatpak-builder.rst:17
+#: ../../flatpak-builder.rst:20
 msgid "Exporting to a repository"
 msgstr "Exportando para um repositório"
 
-#: ../../flatpak-builder.rst:19
+#: ../../flatpak-builder.rst:22
 msgid ""
 "The ``--repo`` option allows a repository to be specified, for the "
 "application to be exported to. This takes the format::"
@@ -63,93 +74,94 @@ msgstr ""
 "A opção ``--repo`` permite que um repositório seja especificado para o "
 "aplicativo ser exportado. Isso assume o formato::"
 
-#: ../../flatpak-builder.rst:24
+#: ../../flatpak-builder.rst:27
 msgid ""
-"Here, ``<repo>`` is a path to a repository. If no repository exists at the "
-"specified location, the repository will be created. If the application is "
-"already in the specified repository, ``flatpak-builder`` will add the build "
-"as a new version of the existing application."
+"Here, ``<repo>`` is a path to a repository. If no repository exists at "
+"the specified location, the repository will be created. If the "
+"application is already in the specified repository, ``flatpak-builder`` "
+"will add the build as a new version of the existing application."
 msgstr ""
 "Aqui, ``<repo>`` é um caminho para um repositório. Se nenhum repositório "
-"existir no local especificado, o repositório será criado. Se o aplicativo já "
-"estiver no repositório especificado, o ``flatpak-builder`` adicionará a "
-"compilação como uma nova versão do aplicativo existente."
+"existir no local especificado, o repositório será criado. Se o aplicativo"
+" já estiver no repositório especificado, o ``flatpak-builder`` adicionará"
+" a compilação como uma nova versão do aplicativo existente."
 
-#: ../../flatpak-builder.rst:29
+#: ../../flatpak-builder.rst:32
 msgid ""
-"You can put more than one application in the same repository by using the "
-"same ``--repo`` path for multiple invocations of ``flatpak-builder``."
+"You can put more than one application in the same repository by using the"
+" same ``--repo`` path for multiple invocations of ``flatpak-builder``."
 msgstr ""
-"Você pode colocar mais de um aplicativo no mesmo repositório usando o mesmo "
-"caminho ``--repo`` para várias invocações do ``flatpak-builder``."
+"Você pode colocar mais de um aplicativo no mesmo repositório usando o "
+"mesmo caminho ``--repo`` para várias invocações do ``flatpak-builder``."
 
-#: ../../flatpak-builder.rst:34
+#: ../../flatpak-builder.rst:37
 msgid ""
 "By default, ``flatpak-builder`` splits off translations and debug "
 "information into separate `.Locale` and `.Debug` extensions. These "
 "extensions are automatically exported into a repository along with the "
 "application."
 msgstr ""
-"Por padrão, o ``flatpak-builder`` divide as traduções e as informações de "
-"depuração em extensões `.Locale` e `.Debug`. Essas extensões são exportadas "
-"automaticamente para um repositório junto com o aplicativo."
+"Por padrão, o ``flatpak-builder`` divide as traduções e as informações de"
+" depuração em extensões `.Locale` e `.Debug`. Essas extensões são "
+"exportadas automaticamente para um repositório junto com o aplicativo."
 
-#: ../../flatpak-builder.rst:40
+#: ../../flatpak-builder.rst:43
 msgid "Installing builds directly"
 msgstr "Instalando compilações diretamente"
 
-#: ../../flatpak-builder.rst:42
+#: ../../flatpak-builder.rst:45
 msgid ""
 "Instead of exporting to a repository, the Flatpak that is produced by "
-"``flatpak-builder`` can be automatically installed locally, using the ``--"
-"install`` option::"
+"``flatpak-builder`` can be automatically installed locally, using the "
+"``--install`` option::"
 msgstr ""
-"Em vez de exportar para um repositório, o Flatpak produzido por ``flatpak-"
-"builder`` pode ser instalado automaticamente localmente, usando a opção ``--"
-"install``::"
+"Em vez de exportar para um repositório, o Flatpak produzido por "
+"``flatpak-builder`` pode ser instalado automaticamente localmente, usando"
+" a opção ``--install``::"
 
-#: ../../flatpak-builder.rst:48
+#: ../../flatpak-builder.rst:51
 msgid ""
-"This approach has the advantage of skipping the separate install step that "
-"is needed when exporting to a repository."
+"This approach has the advantage of skipping the separate install step "
+"that is needed when exporting to a repository."
 msgstr ""
 "Essa abordagem tem a vantagem de ignorar a etapa separada de instalação "
 "necessária para exportar para um repositório."
 
-#: ../../flatpak-builder.rst:52
+#: ../../flatpak-builder.rst:55
 msgid "Signing"
 msgstr "Assinando"
 
-#: ../../flatpak-builder.rst:54
+#: ../../flatpak-builder.rst:57
 msgid ""
-"Every commit to a Flatpak repository should be signed with a GPG signature. "
-"If ``flatpak-builder`` is being used to modify or create a repository, a GPG "
-"key should therefore be passed to it. This can be done with the ``--gpg-"
-"sign`` option, such as::"
+"Every commit to a Flatpak repository should be signed with a GPG "
+"signature. If ``flatpak-builder`` is being used to modify or create a "
+"repository, a GPG key should therefore be passed to it. This can be done "
+"with the ``--gpg-sign`` option, such as::"
 msgstr ""
-"Cada commit em um repositório Flatpak deve ser assinado com uma assinatura "
-"GPG. Se o ``flatpak-builder`` estiver sendo usado para modificar ou criar um "
-"repositório, uma chave GPG deve ser passada para ele. Isso pode ser feito "
-"com a opção ``--gpg-sign``, como::"
+"Cada commit em um repositório Flatpak deve ser assinado com uma "
+"assinatura GPG. Se o ``flatpak-builder`` estiver sendo usado para "
+"modificar ou criar um repositório, uma chave GPG deve ser passada para "
+"ele. Isso pode ser feito com a opção ``--gpg-sign``, como::"
 
-#: ../../flatpak-builder.rst:61
+#: ../../flatpak-builder.rst:64
 msgid ""
 "Here, ``<key>`` is the ID of the GPG key that is to be used. The ``--gpg-"
-"homedir`` option can also be used to specify the home directory of the key "
-"that is being used."
+"homedir`` option can also be used to specify the home directory of the "
+"key that is being used."
 msgstr ""
 "Aqui, ``<key>`` é o ID da chave GPG que deve ser usada. A opção ``--gpg-"
 "homedir`` também pode ser usada para especificar o diretório inicial da "
 "chave que está sendo usada."
 
-#: ../../flatpak-builder.rst:65
+#: ../../flatpak-builder.rst:68
 msgid ""
 "Though it generally isn't recommended, it is possible not to use GPG "
-"verification. In this case, the ``--no-gpg-verify`` option should be used "
-"when adding the repository. Note that it is necessary to become root in "
+"verification. In this case, the ``--no-gpg-verify`` option should be used"
+" when adding the repository. Note that it is necessary to become root in "
 "order to update a repository that does not have GPG verification enabled."
 msgstr ""
-"Embora geralmente não seja recomendado, é possível não usar a verificação "
-"GPG. Nesse caso, a opção ``--no-gpg-confirm`` deve ser usada ao adicionar o "
-"repositório. Observe que é necessário tornar-se root para atualizar um "
-"repositório que não possui a verificação GPG ativada."
+"Embora geralmente não seja recomendado, é possível não usar a verificação"
+" GPG. Nesse caso, a opção ``--no-gpg-confirm`` deve ser usada ao "
+"adicionar o repositório. Observe que é necessário tornar-se root para "
+"atualizar um repositório que não possui a verificação GPG ativada."
+

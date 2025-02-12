@@ -8,39 +8,51 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"POT-Creation-Date: 2025-02-12 23:23+0530\n"
 "PO-Revision-Date: 2023-02-04 00:45+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
-"Language-Team: \n"
 "Language: ru\n"
+"Language-Team: \n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2)\n"
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../flatpak-builder.rst:2
 msgid "Flatpak Builder"
 msgstr "Flatpak Builder"
 
 #: ../../flatpak-builder.rst:4
+#, fuzzy
 msgid ""
 "``flatpak-builder`` has already been introduced in :doc:`first-build` and"
-" :doc:`building-introduction`. This page provides additional detail on "
-"how to use ``flatpak-builder``, including the various command options "
-"that are available."
+" :doc:`building-introduction`. It is packaged by most of the popular "
+"distributions and there is also a flatpak-builder `Flatpak package "
+"<https://flathub.org/apps/org.flatpak.Builder>`_ on Flathub."
 msgstr ""
 "``flatpak-builder`` уже был представлен в :doc:`first-build` и :doc"
 ":`building-Introduction`. На этой странице представлены дополнительные "
 "сведения о том, как использовать ``flatpak-builder``, включая различные "
 "доступные параметры команд."
 
-#: ../../flatpak-builder.rst:10
+#: ../../flatpak-builder.rst:9
+#, fuzzy
+msgid ""
+"This page provides additional details on how to use ``flatpak-builder``, "
+"including the various command options that are available."
+msgstr ""
+"``flatpak-builder`` уже был представлен в :doc:`first-build` и :doc"
+":`building-Introduction`. На этой странице представлены дополнительные "
+"сведения о том, как использовать ``flatpak-builder``, включая различные "
+"доступные параметры команд."
+
+#: ../../flatpak-builder.rst:13
 msgid "Exporting"
 msgstr "Экспорт"
 
-#: ../../flatpak-builder.rst:12
+#: ../../flatpak-builder.rst:15
 msgid ""
 "``flatpak-builder`` provides two options for exporting an application in "
 "order to run it. The first is to export to a repository, from which the "
@@ -50,11 +62,11 @@ msgstr ""
 "его запуска. Первый - это экспорт в репозиторий, из которого можно "
 "запустить приложение. Второй -  локальная автоматическая установка."
 
-#: ../../flatpak-builder.rst:17
+#: ../../flatpak-builder.rst:20
 msgid "Exporting to a repository"
 msgstr "Экспорт в репозиторий"
 
-#: ../../flatpak-builder.rst:19
+#: ../../flatpak-builder.rst:22
 msgid ""
 "The ``--repo`` option allows a repository to be specified, for the "
 "application to be exported to. This takes the format::"
@@ -62,7 +74,7 @@ msgstr ""
 "Параметр ``--repo`` позволяет указать репозиторий для экспорта "
 "приложения. Это принимает формат::"
 
-#: ../../flatpak-builder.rst:24
+#: ../../flatpak-builder.rst:27
 msgid ""
 "Here, ``<repo>`` is a path to a repository. If no repository exists at "
 "the specified location, the repository will be created. If the "
@@ -74,15 +86,16 @@ msgstr ""
 "репозитории, ``flatpak-builder`` добавит сборку как новую версию "
 "существующего приложения."
 
-#: ../../flatpak-builder.rst:29
+#: ../../flatpak-builder.rst:32
 msgid ""
 "You can put more than one application in the same repository by using the"
 " same ``--repo`` path for multiple invocations of ``flatpak-builder``."
 msgstr ""
 "Вы можете разместить более одного приложения в одном репозитории, "
-"используя один и тот же путь ``--repo`` для многократных вызовов ``flatpak-builder``."
+"используя один и тот же путь ``--repo`` для многократных вызовов "
+"``flatpak-builder``."
 
-#: ../../flatpak-builder.rst:34
+#: ../../flatpak-builder.rst:37
 msgid ""
 "By default, ``flatpak-builder`` splits off translations and debug "
 "information into separate `.Locale` and `.Debug` extensions. These "
@@ -93,11 +106,11 @@ msgstr ""
 "информацию на отдельные расширения `.Locale` и `.Debug`. Эти расширения "
 "автоматически экспортируются в репозиторий вместе с приложением."
 
-#: ../../flatpak-builder.rst:40
+#: ../../flatpak-builder.rst:43
 msgid "Installing builds directly"
 msgstr "Установка сборок напрямую"
 
-#: ../../flatpak-builder.rst:42
+#: ../../flatpak-builder.rst:45
 msgid ""
 "Instead of exporting to a repository, the Flatpak that is produced by "
 "``flatpak-builder`` can be automatically installed locally, using the "
@@ -107,7 +120,7 @@ msgstr ""
 "builder``, можно автоматически установить локально с помощью параметра "
 "``--install``::"
 
-#: ../../flatpak-builder.rst:48
+#: ../../flatpak-builder.rst:51
 msgid ""
 "This approach has the advantage of skipping the separate install step "
 "that is needed when exporting to a repository."
@@ -115,11 +128,11 @@ msgstr ""
 "Преимущество этого подхода в том, что он пропускает отдельный этап "
 "установки, необходимый при экспорте в репозиторий."
 
-#: ../../flatpak-builder.rst:52
+#: ../../flatpak-builder.rst:55
 msgid "Signing"
 msgstr "Подписывание"
 
-#: ../../flatpak-builder.rst:54
+#: ../../flatpak-builder.rst:57
 msgid ""
 "Every commit to a Flatpak repository should be signed with a GPG "
 "signature. If ``flatpak-builder`` is being used to modify or create a "
@@ -131,17 +144,17 @@ msgstr ""
 "builder``, ему следует передать ключ GPG. Это можно сделать с помощью "
 "параметра ``--gpg-sign``, например::"
 
-#: ../../flatpak-builder.rst:61
+#: ../../flatpak-builder.rst:64
 msgid ""
 "Here, ``<key>`` is the ID of the GPG key that is to be used. The ``--gpg-"
 "homedir`` option can also be used to specify the home directory of the "
 "key that is being used."
 msgstr ""
-"Здесь ``<key>`` - это идентификатор ключа GPG, который будет использоваться. "
-"Параметр ``--gpg-homedir`` также можно использовать для указания "
-"домашнего каталога используемого ключа."
+"Здесь ``<key>`` - это идентификатор ключа GPG, который будет "
+"использоваться. Параметр ``--gpg-homedir`` также можно использовать для "
+"указания домашнего каталога используемого ключа."
 
-#: ../../flatpak-builder.rst:65
+#: ../../flatpak-builder.rst:68
 msgid ""
 "Though it generally isn't recommended, it is possible not to use GPG "
 "verification. In this case, the ``--no-gpg-verify`` option should be used"
@@ -153,3 +166,4 @@ msgstr ""
 "``--no-gpg-verify``. Обратите внимание, что необходимо стать "
 "пользователем root, чтобы обновить репозиторий, в котором не включена "
 "проверка GPG."
+
