@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-31 14:18-0300\n"
+"POT-Creation-Date: 2025-02-12 09:12+0530\n"
 "PO-Revision-Date: 2018-05-20 10:37-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../building-introduction.rst:2
 msgid "Building Introduction"
@@ -30,11 +30,18 @@ msgid ""
 "general overview of what's involved."
 msgstr ""
 
-#: ../../building-introduction.rst:9
+#: ../../building-introduction.rst:10
+msgid ""
+"App stores like `Flathub <https://docs.flathub.org/docs/for-app-"
+"authors/submission>`_ has additional requirements on the building "
+"process. Please refer to their respective documentation for details."
+msgstr ""
+
+#: ../../building-introduction.rst:15
 msgid "flatpak-builder"
 msgstr ""
 
-#: ../../building-introduction.rst:11
+#: ../../building-introduction.rst:17
 msgid ""
 "``flatpak-builder`` is the primary tool for building Flatpak "
 "applications. It allows you to take the source files for an application "
@@ -43,7 +50,14 @@ msgid ""
 "build."
 msgstr ""
 
-#: ../../building-introduction.rst:16
+#: ../../building-introduction.rst:22
+msgid ""
+"It is packaged by several distributions and there is a `Flatpak package "
+"<https://flathub.org/apps/org.flatpak.Builder>`_ called "
+"``org.flatpak.Builder`` available for it too on Flathub."
+msgstr ""
+
+#: ../../building-introduction.rst:26
 msgid ""
 "The input to ``flatpak-builder`` is a manifest file. This specifies the "
 "parameters for the application that will be built, such as its name and "
@@ -54,11 +68,11 @@ msgid ""
 "application code itself."
 msgstr ""
 
-#: ../../building-introduction.rst:24
+#: ../../building-introduction.rst:34
 msgid "The basic format used to invoke ``flatpak-builder`` is::"
 msgstr ""
 
-#: ../../building-introduction.rst:28
+#: ../../building-introduction.rst:38
 msgid ""
 "Where ``<build-dir>`` is the path to the directory that the application "
 "will be built into, and ``<manifest>`` is the path to a manifest file. "
@@ -66,47 +80,47 @@ msgid ""
 "purposes, but is generally treated as an artifact of the build process."
 msgstr ""
 
-#: ../../building-introduction.rst:33
+#: ../../building-introduction.rst:43
 msgid "When ``flatpak-builder`` is run:"
 msgstr ""
 
-#: ../../building-introduction.rst:35
+#: ../../building-introduction.rst:45
 msgid "The build directory is created, if it doesn't already exist"
 msgstr ""
 
-#: ../../building-introduction.rst:36
+#: ../../building-introduction.rst:46
 msgid "The source code for each module is downloaded and verified"
 msgstr ""
 
-#: ../../building-introduction.rst:37
+#: ../../building-introduction.rst:47
 msgid "The source code for each module is built and installed"
 msgstr ""
 
-#: ../../building-introduction.rst:38
+#: ../../building-introduction.rst:48
 msgid "The build is finished by setting sandbox permissions"
 msgstr ""
 
-#: ../../building-introduction.rst:39
+#: ../../building-introduction.rst:49
 msgid ""
 "The build result is exported to a repository (which will be created if it"
 " doesn't exist already)"
 msgstr ""
 
-#: ../../building-introduction.rst:42
+#: ../../building-introduction.rst:52
 msgid "The application can then be installed from the repository and run."
 msgstr ""
 
-#: ../../building-introduction.rst:45
+#: ../../building-introduction.rst:55
 msgid "Software Development Kits (SDKs)"
 msgstr ""
 
-#: ../../building-introduction.rst:47
+#: ../../building-introduction.rst:57
 msgid ""
 "Instead of being built using the host environment, Flatpak applications "
 "are built inside a separate environment, called an SDK."
 msgstr ""
 
-#: ../../building-introduction.rst:50
+#: ../../building-introduction.rst:60
 msgid ""
 "SDKs are like the regular runtime that applications run in. The "
 "difference is that SDKs also include all the development resources and "
@@ -114,14 +128,14 @@ msgid ""
 "packaging tools, header files, compilers and debuggers."
 msgstr ""
 
-#: ../../building-introduction.rst:55
+#: ../../building-introduction.rst:65
 msgid ""
 "Each runtime has an accompanying SDK. For example, there is both a GNOME "
 "43 runtime and a GNOME 43 SDK. Applications that use the runtime are "
 "built with the matching SDK."
 msgstr ""
 
-#: ../../building-introduction.rst:59
+#: ../../building-introduction.rst:69
 msgid ""
 "Like runtimes, SDKs will sometimes be automatically installed for you, "
 "but if you do need to manually install them, they are installed in the "
@@ -147,5 +161,13 @@ msgstr ""
 #~ "3.26 SDK. Applications that use the "
 #~ "runtime are built with the matching "
 #~ "SDK."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It is packaged by several distributions"
+#~ " and there is a Flatpak package "
+#~ "called ``org.flatpak.Builder`` available for "
+#~ "it too on `Flathub "
+#~ "<https://flathub.org/apps/org.flatpak.Builder>`_."
 #~ msgstr ""
 
