@@ -8,7 +8,7 @@ overview of what's involved.
 .. note::
 
   App stores like `Flathub <https://docs.flathub.org/docs/for-app-authors/submission>`_
-  has additional requirements on the building process. Please refer to
+  have additional requirements on the building process. Please refer to
   their respective documentation for details.
 
 flatpak-builder
@@ -19,9 +19,9 @@ allows you to take the source files for an application and build it into a
 Flatpak application. It also allows multiple other dependencies to be built
 at the same time, which get bundled into the build.
 
-It is packaged by several distributions and there is a
+It is packaged by several distributions and there is also a
 `Flatpak package <https://flathub.org/apps/org.flatpak.Builder>`_ called
-``org.flatpak.Builder`` available for it too on Flathub.
+``org.flatpak.Builder`` available for it on Flathub.
 
 The input to ``flatpak-builder`` is a manifest file. This specifies the
 parameters for the application that will be built, such as its name and
