@@ -4,53 +4,63 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 17:03-0500\n"
+"POT-Creation-Date: 2025-02-12 23:23+0530\n"
 "PO-Revision-Date: 2018-11-03 01:37-0400\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language: zh_Hans_CN\n"
 "Language-Team: Chinese (Simplified, China)\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../flatpak-builder.rst:2
 msgid "Flatpak Builder"
 msgstr "Flatpak Builder"
 
 #: ../../flatpak-builder.rst:4
+#, fuzzy
 msgid ""
 "``flatpak-builder`` has already been introduced in :doc:`first-build` and"
-" :doc:`building-introduction`. This page provides additional detail on "
-"how to use ``flatpak-builder``, including the various command options "
-"that are available."
+" :doc:`building-introduction`. It is packaged by most of the popular "
+"distributions and there is also a flatpak-builder `Flatpak package "
+"<https://flathub.org/apps/org.flatpak.Builder>`_ on Flathub."
 msgstr ""
 "``flatpak-builder``  在  :doc:`first-build`  和   :doc:`building-"
 "introduction` 有过介绍。这个页面提供了更为详尽的  ``flatpak-builder``  命令使用方法，如可用的命令行选项。"
 
-#: ../../flatpak-builder.rst:10
+#: ../../flatpak-builder.rst:9
+#, fuzzy
+msgid ""
+"This page provides additional details on how to use ``flatpak-builder``, "
+"including the various command options that are available."
+msgstr ""
+"``flatpak-builder``  在  :doc:`first-build`  和   :doc:`building-"
+"introduction` 有过介绍。这个页面提供了更为详尽的  ``flatpak-builder``  命令使用方法，如可用的命令行选项。"
+
+#: ../../flatpak-builder.rst:13
 msgid "Exporting"
 msgstr "导出"
 
-#: ../../flatpak-builder.rst:12
+#: ../../flatpak-builder.rst:15
 msgid ""
 "``flatpak-builder`` provides two options for exporting an application in "
 "order to run it. The first is to export to a repository, from which the "
 "application can be run. The second is to automatically install locally."
 msgstr "``flatpak-builder`` 为导出应用提供了两个选项。一个是导出仓库，然后从仓库运行。另一个是自动在本地安装。"
 
-#: ../../flatpak-builder.rst:17
+#: ../../flatpak-builder.rst:20
 msgid "Exporting to a repository"
 msgstr "导出到仓库"
 
-#: ../../flatpak-builder.rst:19
+#: ../../flatpak-builder.rst:22
 msgid ""
 "The ``--repo`` option allows a repository to be specified, for the "
 "application to be exported to. This takes the format::"
 msgstr "``--repo``  选项指定应用导出的仓库。格式为："
 
-#: ../../flatpak-builder.rst:24
+#: ../../flatpak-builder.rst:27
 msgid ""
 "Here, ``<repo>`` is a path to a repository. If no repository exists at "
 "the specified location, the repository will be created. If the "
@@ -60,13 +70,13 @@ msgstr ""
 "``<repo>``  是仓库路径。如果仓库不存在，将创建一个新的仓库。如果应用在指定的仓库中已经存在， ``flatpak-builder`` "
 "将会把当前构建作为已存在应用的一个新的版本。"
 
-#: ../../flatpak-builder.rst:29
+#: ../../flatpak-builder.rst:32
 msgid ""
 "You can put more than one application in the same repository by using the"
 " same ``--repo`` path for multiple invocations of ``flatpak-builder``."
 msgstr ""
 
-#: ../../flatpak-builder.rst:34
+#: ../../flatpak-builder.rst:37
 msgid ""
 "By default, ``flatpak-builder`` splits off translations and debug "
 "information into separate `.Locale` and `.Debug` extensions. These "
@@ -74,11 +84,11 @@ msgid ""
 "application."
 msgstr "默认情况下，  ``flatpak-builder``   把翻译和调试信息分隔到 `.Locale`  和  `.Debug`  扩展中。"
 
-#: ../../flatpak-builder.rst:40
+#: ../../flatpak-builder.rst:43
 msgid "Installing builds directly"
 msgstr "直接安装当前构建"
 
-#: ../../flatpak-builder.rst:42
+#: ../../flatpak-builder.rst:45
 msgid ""
 "Instead of exporting to a repository, the Flatpak that is produced by "
 "``flatpak-builder`` can be automatically installed locally, using the "
@@ -87,17 +97,17 @@ msgstr ""
 "使用  ``--install``  选项，由  ``flatpak-builder``  "
 "产生的Flatpak应用将自动安装到本地，而不是导出到仓库中。"
 
-#: ../../flatpak-builder.rst:48
+#: ../../flatpak-builder.rst:51
 msgid ""
 "This approach has the advantage of skipping the separate install step "
 "that is needed when exporting to a repository."
 msgstr "这个方式的优点是跳过了导出到仓库中必需的安装步骤。"
 
-#: ../../flatpak-builder.rst:52
+#: ../../flatpak-builder.rst:55
 msgid "Signing"
 msgstr "签名"
 
-#: ../../flatpak-builder.rst:54
+#: ../../flatpak-builder.rst:57
 msgid ""
 "Every commit to a Flatpak repository should be signed with a GPG "
 "signature. If ``flatpak-builder`` is being used to modify or create a "
@@ -107,14 +117,14 @@ msgstr ""
 "往Flatpak仓库中的每一次提交都需要使用GPG签名。如果用  ``flatpak-builder``  "
 "修改或创建仓库，需要传一个GPG秘钥作为参数。使用方式是用  ``--gpg-sign``  选项，如："
 
-#: ../../flatpak-builder.rst:61
+#: ../../flatpak-builder.rst:64
 msgid ""
 "Here, ``<key>`` is the ID of the GPG key that is to be used. The ``--gpg-"
 "homedir`` option can also be used to specify the home directory of the "
 "key that is being used."
 msgstr "``<key>``  是使用的GPG秘钥的ID。也可以使用  ``--gpg-homedir``  指定使用的秘钥的家目录。"
 
-#: ../../flatpak-builder.rst:65
+#: ../../flatpak-builder.rst:68
 msgid ""
 "Though it generally isn't recommended, it is possible not to use GPG "
 "verification. In this case, the ``--no-gpg-verify`` option should be used"
