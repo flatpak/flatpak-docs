@@ -15,6 +15,22 @@ the application. This can be done by::
 This will install the SDK, the Debug SDK and the Debug extension for
 the application.
 
+If it's a crash in the graphics stack, the GL debug extension will also
+be needed.
+
+First, note down the runtime branch used by the application::
+
+  $ flatpak info --show-runtime $FLATPAK_ID
+  org.freedesktop.Platform/x86_64/24.08
+
+In the above example it is the Freedesktop SDK and the branch is
+``24.08``. Then install the ``GL.debug`` extension for the above branch::
+
+  $ flatpak install org.freedesktop.Platform.{GL,GL32}.Debug.default//24.08
+
+The same process should be followed for any extension or baseapp used
+by the app.
+
 Debug shell
 -----------
 
