@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-01 08:05+0530\n"
+"POT-Creation-Date: 2025-02-19 19:25+0530\n"
 "PO-Revision-Date: 2018-05-20 10:37-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language: ko\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../conventions.rst:2
 msgid "Requirements & Conventions"
@@ -297,10 +297,29 @@ msgid ""
 msgstr ""
 
 #: ../../conventions.rst:182
+msgid ""
+"The metainfo file along with the other metadata such as icon and desktop "
+"files is composed into a catalogue by ``appstream``. Since 1.3.4, Flatpak"
+" Builder by default uses ``appstreamcli`` from `libappstream "
+"<https://github.com/ximion/appstream/>`_ to compose this and executes the"
+" following command::"
+msgstr ""
+
+#: ../../conventions.rst:190
+#, python-brace-format
+msgid ""
+"``${FLATPAK_ID}`` is the Flatpak application ID and ``${FLATPAK_DEST}`` "
+"is set to ``/app`` for apps and ``/usr`` for runtimes. The ``media-"
+"baseurl`` controls the base URL used for mirroring screenshots. Usually "
+"each app store will have their own base URL for this. On Flathub this is "
+"set to ``https://dl.flathub.org/media/``."
+msgstr ""
+
+#: ../../conventions.rst:197
 msgid "Technical conventions"
 msgstr ""
 
-#: ../../conventions.rst:184
+#: ../../conventions.rst:199
 msgid ""
 "The following are standard technical conventions used by Flatpak and "
 "Linux desktops. Those with Linux experience will likely already be aware "
@@ -308,18 +327,18 @@ msgid ""
 " information useful."
 msgstr ""
 
-#: ../../conventions.rst:190
+#: ../../conventions.rst:205
 msgid "D-Bus"
 msgstr ""
 
-#: ../../conventions.rst:192
+#: ../../conventions.rst:207
 msgid ""
 "D-Bus is the standard IPC framework used on Linux desktops. A lot of "
 "applications won't need to use it, but it is supported by Flatpak should "
 "it be required."
 msgstr ""
 
-#: ../../conventions.rst:196
+#: ../../conventions.rst:211
 msgid ""
 "D-Bus can be used for application launching and communicating with some "
 "system services. Applications can also provide their own D-Bus services "
@@ -327,11 +346,11 @@ msgid ""
 "the application ID)."
 msgstr ""
 
-#: ../../conventions.rst:201
+#: ../../conventions.rst:216
 msgid "Filesystem layout"
 msgstr ""
 
-#: ../../conventions.rst:203
+#: ../../conventions.rst:218
 msgid ""
 "Each Flatpak sandbox, which is the environment in which an application is"
 " run, contains the filesystem of the application's runtime. This follows "
@@ -339,7 +358,7 @@ msgid ""
 "<https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>`_."
 msgstr ""
 
-#: ../../conventions.rst:208
+#: ../../conventions.rst:223
 msgid ""
 "For example, the root of the sandbox contains the ``/etc`` directory for "
 "configuration files and ``/usr`` for multi-user utilities and "
@@ -348,11 +367,11 @@ msgid ""
 "located."
 msgstr ""
 
-#: ../../conventions.rst:214
+#: ../../conventions.rst:229
 msgid "XDG base directories"
 msgstr ""
 
-#: ../../conventions.rst:216
+#: ../../conventions.rst:231
 msgid ""
 "`XDG base directories <https://specifications.freedesktop.org/basedir-"
 "spec/basedir-spec-latest.html>`_ are standard locations for user-specific"
@@ -360,94 +379,94 @@ msgid ""
 "accessing XDG base directories. These include:"
 msgstr ""
 
-#: ../../conventions.rst:221
+#: ../../conventions.rst:236
 msgid "Electron: XDG base directories can be accessed with ``app.getPath``."
 msgstr ""
 
-#: ../../conventions.rst:222
+#: ../../conventions.rst:237
 msgid ""
 "Glib: XDG base directories can be accessed through the "
 "``g_get_user_cache_dir ()``, ``g_get_user_data_dir ()``, "
 "``g_get_user_config_dir ()`` functions."
 msgstr ""
 
-#: ../../conventions.rst:225
+#: ../../conventions.rst:240
 msgid ""
 "Qt: XDG base directories can be accessed with the `QStandardPaths Class "
 "<https://doc.qt.io/qt-5/qstandardpaths.html>`_."
 msgstr ""
 
-#: ../../conventions.rst:228
+#: ../../conventions.rst:243
 msgid ""
 "However, applications that aren't using one of these toolkits can expect "
 "to find their XDG base directories in the following locations:"
 msgstr ""
 
-#: ../../conventions.rst:232
+#: ../../conventions.rst:247
 msgid "Base directory"
 msgstr ""
 
-#: ../../conventions.rst:232
+#: ../../conventions.rst:247
 msgid "Usage"
 msgstr ""
 
-#: ../../conventions.rst:232
+#: ../../conventions.rst:247
 msgid "Default location"
 msgstr ""
 
-#: ../../conventions.rst:234
+#: ../../conventions.rst:249
 msgid "XDG_CONFIG_HOME"
 msgstr ""
 
-#: ../../conventions.rst:234
+#: ../../conventions.rst:249
 msgid "User-specific configuration files"
 msgstr ""
 
-#: ../../conventions.rst:234
+#: ../../conventions.rst:249
 msgid "~/.var/app/<app-id>/config"
 msgstr ""
 
-#: ../../conventions.rst:235
+#: ../../conventions.rst:250
 msgid "XDG_DATA_HOME"
 msgstr ""
 
-#: ../../conventions.rst:235
+#: ../../conventions.rst:250
 msgid "User-specific data"
 msgstr ""
 
-#: ../../conventions.rst:235
+#: ../../conventions.rst:250
 msgid "~/.var/app/<app-id>/data"
 msgstr ""
 
-#: ../../conventions.rst:236
+#: ../../conventions.rst:251
 msgid "XDG_CACHE_HOME"
 msgstr ""
 
-#: ../../conventions.rst:236
+#: ../../conventions.rst:251
 msgid "Non-essential user-specific data"
 msgstr ""
 
-#: ../../conventions.rst:236
+#: ../../conventions.rst:251
 msgid "~/.var/app/<app-id>/cache"
 msgstr ""
 
-#: ../../conventions.rst:237
+#: ../../conventions.rst:252
 msgid "XDG_STATE_HOME"
 msgstr ""
 
-#: ../../conventions.rst:237
+#: ../../conventions.rst:252
 msgid "State data such as undo history"
 msgstr ""
 
-#: ../../conventions.rst:237
+#: ../../conventions.rst:252
 msgid "~/.var/app/<app-id>/.local/state"
 msgstr ""
 
-#: ../../conventions.rst:240
+#: ../../conventions.rst:255
 msgid "For example, GNOME Dictionary will store user-specific data in::"
 msgstr ""
 
-#: ../../conventions.rst:244
+#: ../../conventions.rst:259
 msgid ""
 "These environment variables are always set by Flatpak and override any "
 "host values. However, if access to directories on the host is needed, the"
@@ -456,7 +475,7 @@ msgid ""
 "variables will be set if they are also available on the host."
 msgstr ""
 
-#: ../../conventions.rst:249
+#: ../../conventions.rst:264
 msgid ""
 "Note that ``$XDG_STATE_HOME`` and ``$HOST_XDG_STATE_HOME`` are only "
 "supported by Flatpak 1.13 and later. If your application needs to work on"
@@ -466,7 +485,7 @@ msgid ""
 ">1.13."
 msgstr ""
 
-#: ../../conventions.rst:255
+#: ../../conventions.rst:270
 msgid ""
 "Also, note that applications can be configured to use non-default base "
 "directory locations (see :doc:`sandbox-permissions`)."
