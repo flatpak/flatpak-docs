@@ -132,8 +132,7 @@ although there can be exceptions.
 
 **Talk**
 
-Talk permissions can be freely used, although it is recommended to use the
-minimum required.
+It is recommended to use the minimum required talk-name permissions.
 
 Filesystem access
 `````````````````
