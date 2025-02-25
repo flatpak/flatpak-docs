@@ -107,7 +107,7 @@ commonly require, and can therefore be freely used.
 D-Bus access
 ````````````
 
-DBus access is filtered by default. The default policy for the session bus
+D-Bus access is filtered by default. The default policy for the session bus
 only allows the application to own its own namespace named by
 ``$FLATPAK_ID``, subnames of it and ``org.mpris.MediaPlayer2.$FLATPAK_ID``
 for `MPRIS <https://www.freedesktop.org/wiki/Specifications/mpris-spec/>`_.
@@ -127,7 +127,7 @@ for more information.
 **Ownership**
 
 Any ownership beyond what is granted by default ie. own namespace and
-``org.mpris.MediaPlayer2.$FLAPTAK_ID`` is typically unnecessary
+``org.mpris.MediaPlayer2.$FLATPAK_ID`` is typically unnecessary
 although there can be exceptions.
 
 **Talk**
