@@ -298,9 +298,9 @@ manifests. These are:
   command: foo
 
 - ``sdk-extensions`` can be used to install extra extensions having
-  extension point in the parent runtime that has to be installed for the
+  an extension point in the parent runtime that has to be installed for the
   app to build. These are similarly made available during build and
-  not in the final flatapk.
+  not in the final flatpak.
 
 .. code-block:: yaml
 
