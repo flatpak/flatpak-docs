@@ -220,9 +220,9 @@ to them with ``--filesystem`` will have no effect::
 
 /app, /bin, /dev, /etc, /lib, /lib32, /lib64, /proc, /run/flatpak, /run/host, /sbin, /usr
 
-The entire ``/run`` is not allowed and all subpaths of ``/run`` except
-``/run/flatpak, /run/host`` is allowed to be exposed via
-``--filesystem``. Additionally, if ``/var/run`` on host is a symlink to
+The entire ``/run`` is not allowed but all subpaths of ``/run`` except
+``/run/flatpak, /run/host`` are allowed to be exposed via
+``--filesystem``. Additionally, if ``/var/run`` on the host is a symlink to
 ``../run``, exposing it or a subpath of it, is not allowed.
 
 Additionally the following directories from host need to be explicitly
