@@ -1,9 +1,10 @@
 Electron
 ========
 
-Due to the nature of Electron, building Electron applications as Flatpaks
-requires a few extra steps compared with other applications. Thankfully,
-several tools and resources are available which make this much easier.
+Due to the nature of `Electron <https://www.electronjs.org/>`_, building
+Electron applications as Flatpaks requires a few extra steps compared with other
+applications. Thankfully, several tools and resources are available which make
+this much easier.
 
 This guide provides information on how building Electron applications differs
 from other applications. It also includes information on the tooling for
