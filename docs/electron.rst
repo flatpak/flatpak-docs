@@ -103,14 +103,14 @@ later.
 Sandbox permissions
 -------------------
 
-The standard guidelines on sandbox permissions apply to Electron
-applications. However, Electron does not use Wayland by default. So for
+The standard sandbox :doc:`sandbox-permissions` also apply to Electron
+applications. However, Electron's Wayland support is still experimental. So for
 display access, only X11 should be used as the default configuration.
-This will make Electron use Xwayland in a wayland session and nothing
+This will make Electron use Xwayland in a Wayland session and nothing
 else is required.
 
-The sample app also configures pulseaudio for sound and enables network
-access.
+The sample app also configures PulseAudio for sound and enables network
+access:
 
 .. code-block:: yaml
 
@@ -122,36 +122,48 @@ access.
     - --share=network
     - --env=ELECTRON_TRASH=gio
 
-.. note::
-
-  Native wayland support in electron is experimental and often unstable.
-  It is advised to stick with the X11 and Xwayland configuration above
-  as the default.
-
-To enable experimental `native Wayland` support in Electron>=20, the
+To allow experimental `native Wayland` support in Electron>=20, the
 ``--ozone-platform-hint=auto`` flag can be passed to the program. `auto`
-will choose Wayland when the session is wayland and Xwayland or X11
-otherwise.
+will choose Wayland when the current session is running under Wayland and
+Xwayland or X11 otherwise.
 
-The recommended option is to leave it to the user. So ``--socket=x11``
-should be used in manifest and Wayland can be tested with::
+It's recommended to leave actually `enabling` Wayland up to the user for now,
+i.e. set ``--socket=x11`` in the manifest. Wayland can then be tested with::
 
   flatpak run --socket=wayland org.flathub.electron-sample-app
 
-To make native wayland the `default` for users ``--socket=fallback-x11``
+Enable native Wayland support by default
+````````````````````````````````````````
+
+.. note::
+
+  Native Wayland support in Electron is experimental and often unstable.
+  It is advised to stick with the X11/Xwayland configuration above
+  as the default.
+
+To make native Wayland the `default` for users, ``--socket=fallback-x11``
 and ``--socket=wayland`` must be used in the manifest.
 
-For Electron versions between 17 and 27, client-side window decorations in native wayland can be enabled by
-passing ``--enable-features=WaylandWindowDecorations``.
+For Electron versions between 17 and 27, client-side window decorations under
+native Wayland can be enabled by passing
+``--enable-features=WaylandWindowDecorations`` to the program. For newer
+versions of Electron , this isn't necessary anymore.
 
 Electron uses ``libnotify`` on Linux to provide desktop notifications.
-libnotify `since 0.8.0 <https://gitlab.gnome.org/GNOME/libnotify/-/merge_requests/27>`_
+`Since version 0.8.0 <https://gitlab.gnome.org/GNOME/libnotify/-/merge_requests/27>`_ libnotify
 automatically uses the `notification portal <https://flatpak.github.io/xdg-desktop-portal/docs/doc-org.freedesktop.portal.Notification.html>`_
 when inside a sandboxed environment and ``--talk-name=org.freedesktop.Notifications``
-is not required.
+is not required anymore. ``org.electronjs.Electron2.BaseApp`` includes
+``libnotify>=0.8.0`` since ``branch/23.08``.
 
-``org.electronjs.Electron2.BaseApp`` since ``branch/23.08`` comes with
-``libnotify>=0.8.0``
+To ensure proper mouse cursor scaling on HiDPI displays under Wayland, the
+``XCURSOR_PATH`` environment variable must be set to the host's corresponding
+directories:
+
+.. code-block:: yaml
+
+  finish-args:
+    - --env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons
 
 .. _use-correct-desktop-filename:
 
