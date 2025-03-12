@@ -62,7 +62,7 @@ manifest:
   base: org.electronjs.Electron2.BaseApp
   base-version: '23.08'
 
-BaseApps are described in :doc:`dependencies`.  Using the Electron base
+BaseApps are described in :doc:`dependencies`. Using the Electron base
 app is much faster and more convenient than manually building Electron
 dependencies. It also has the advantage of reducing the amount of duplication
 on users' machines, since it means that Electron is only saved once on disk.
@@ -103,11 +103,11 @@ later.
 Sandbox permissions
 -------------------
 
-The standard sandbox :doc:`sandbox-permissions` also apply to Electron
-applications. However, Electron's Wayland support is still experimental. So for
-display access, only X11 should be used as the default configuration.
-This will make Electron use Xwayland in a Wayland session and nothing
-else is required.
+The standard sandbox :ref:`sandbox-permissions-guidelines` also apply to
+Electron applications. However, Electron's Wayland support is still
+experimental. So for display access, only X11 should be used as the default
+configuration. This will make Electron use Xwayland in a Wayland session and
+nothing else is required.
 
 The sample app also configures PulseAudio for sound and enables network
 access:
@@ -137,9 +137,9 @@ Enable native Wayland support by default
 
 .. note::
 
-  Native Wayland support in Electron is experimental and often unstable.
-  It is advised to stick with the X11/Xwayland configuration above
-  as the default.
+  Native Wayland support in Electron is still experimental and often unstable.
+  It is advised to stick with the X11/Xwayland configuration above as the
+  default.
 
 To make native Wayland the `default` for users, ``--socket=fallback-x11``
 and ``--socket=wayland`` must be used in the manifest.
