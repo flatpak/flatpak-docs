@@ -210,7 +210,7 @@ The extensions are mounted in alphabetical path order of directory.
 
 ``org.freedesktop.Platform.ffmpeg-full`` is an application extension
 (mounted inside ``/app/extension_directory``) belonging to
-org.freedesktop.Platform.
+``org.freedesktop.Platform``.
 
 .. code-block:: yaml
 
@@ -538,67 +538,67 @@ Freedesktop runtime/SDK or are shipped along with it. Most of these
 are inherited by the GNOME and KDE runtimes as well. These may
 change over time, please check the respective project.
 
-These are common to the Freedesktop SDK and runtime.
+These are common to the Freedesktop SDK and runtime:
 
-- org.freedesktop.Platform.GL - Extension for graphics drivers managed
+- ``org.freedesktop.Platform.GL`` – Extension for graphics drivers managed
   by the runtime and installed or removed automatically. The default
   has two branches ``${RUNTIME_VERSION}`` and
   ``${RUNTIME_VERSION}-extra``, the latter containing support for
   patented codecs.
-- org.freedesktop.Platform.GL.Debug - Debug extension point for
-  org.freedesktop.Platform.GL, managed by the runtime but the user needs
+  
+  ``org.freedesktop.Platform.GL.Debug`` – Debug extension point for
+  ``org.freedesktop.Platform.GL``, managed by the runtime but the user needs
   to explicitly install ``org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}``
   and ``org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}-extra``
   to have the debug symbols available.
 
+  The following extensions utilise the above two extension points::
+  
+    org.freedesktop.Platform.GL.default//${RUNTIME_VERSION}
+    org.freedesktop.Platform.GL.default//${RUNTIME_VERSION}-extra
+    org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}
+    org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}-extra
+  
+    org.freedesktop.Platform.GL32.default//${RUNTIME_VERSION}
+    org.freedesktop.Platform.GL32.default//${RUNTIME_VERSION}-extra
+    org.freedesktop.Platform.GL32.Debug.default//${RUNTIME_VERSION}
+    org.freedesktop.Platform.GL32.Debug.default//${RUNTIME_VERSION}-extra
+  
+    org.freedesktop.Platform.GL.nvidia-${DRIVER_VERSION}
+    org.freedesktop.Platform.GL32.nvidia-${DRIVER_VERSION}
 
-The following extensions utilise the above two extension points::
-
-  org.freedesktop.Platform.GL.default//${RUNTIME_VERSION}
-  org.freedesktop.Platform.GL.default//${RUNTIME_VERSION}-extra
-  org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}
-  org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}-extra
-
-  org.freedesktop.Platform.GL32.default//${RUNTIME_VERSION}
-  org.freedesktop.Platform.GL32.default//${RUNTIME_VERSION}-extra
-  org.freedesktop.Platform.GL32.Debug.default//${RUNTIME_VERSION}
-  org.freedesktop.Platform.GL32.Debug.default//${RUNTIME_VERSION}-extra
-
-  org.freedesktop.Platform.GL.nvidia-${DRIVER_VERSION}
-  org.freedesktop.Platform.GL32.nvidia-${DRIVER_VERSION}
-
-- org.freedesktop.Platform.VulkanLayer - Extension point for
+- ``org.freedesktop.Platform.VulkanLayer`` – Extension point for
   `Vulkan layers <https://github.com/KhronosGroup/Vulkan-Guide/blob/main/chapters/layers.md>`_.
   Developers can provide extensions using this extension point
   and the user needs to install those extensions to have them available.
-- org.freedesktop.Platform.GStreamer - Extension point for GStreamer
+- ``org.freedesktop.Platform.GStreamer`` – Extension point for GStreamer
   plugins. Developers can provide extensions using this extension point
   and the user needs to install those extensions to have them available.
-- org.freedesktop.Platform.Icontheme - Extension point for icon themes.
+- ``org.freedesktop.Platform.Icontheme`` – Extension point for icon themes.
   Developers can provide extensions using this extension point
   and the user needs to install those extensions to have them available.
-- org.gtk.Gtk3theme - Extension point for Gtk3 themes. Extensions
+- ``org.gtk.Gtk3theme`` – Extension point for Gtk3 themes. Extensions
   under this extension point are automatically installed by Flatpak
   if an extension matching the host theme is available. Developers can
   provide extensions using this extension point.
-- org.freedesktop.Platform.VAAPI.Intel - Extension providing Intel
+- ``org.freedesktop.Platform.VAAPI.Intel`` – Extension providing Intel
   VAAPI media drivers. This is automatically installed if the user
   has an Intel GPU.
 
   This has a compat i386 extension ``org.freedesktop.Platform.VAAPI.Intel.i386``.
 
-- org.freedesktop.Platform.openh264 - Extension providing OpenH264,
+- ``org.freedesktop.Platform.openh264`` – Extension providing OpenH264,
   automatically installed by the runtime.
-- org.freedesktop.Platform.ffmpeg - Extension providing ffmpeg with
+- ``org.freedesktop.Platform.ffmpeg`` – Extension providing ffmpeg with
   support for patented codecs. This needs to explicitly added to the
   manifest using ``add-extensions`` by the developer, so that it becomes
   available when the user installs it.
 
   This has a compat i386 extension ``org.freedesktop.Platform.ffmpeg_full.i386``.
 
-These are only in Freedesktop SDK.
+These are only in Freedesktop SDK:
 
-- org.freedesktop.Sdk.Extension - Extension point for SDK extensions
+- ``org.freedesktop.Sdk.Extension`` – Extension point for SDK extensions
   like extra toolchains (eg. LLVM), compilers and language specific
   tools to aid building applications or provide language support for
   development tools such as IDEs.
