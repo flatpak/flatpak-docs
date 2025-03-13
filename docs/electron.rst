@@ -254,7 +254,7 @@ Launching the app
 
 The Electron app is run through a simple shell script that wraps
 `zypak <https://github.com/refi64/zypak>`_. This script can be given any name
-but must be specified in the manifest's :ref:`Command` property. See below for a
+but must be specified in the manifest's ``command`` property. See below for a
 sample wrapper to launch the app:
 
 .. code-block:: yaml
