@@ -216,7 +216,7 @@ The instructions will use Gitlab.com.
 6. Go to ``https://gitlab.com/your_user_name/repo_name/-/settings/ci_cd``.
    Expand `General` and disable public pipeline. Click Save.
    Expand `variables`. Add the following
-   `variables <https://docs.gitlab.com/ee/ci/variables/#define-a-cicd-variable-in-the-gitlab-ciyml-file>`_
+   `variables <https://docs.gitlab.com/ci/variables/#define-a-cicd-variable-in-the-gitlab-ciyml-file>`_
    necessary for the pipeline to run:
 
 .. list-table::
@@ -322,7 +322,7 @@ This will set up a flatpak remote userwide, install the dependencies and
 the application. Updates will be fetched when running ``flatpak update``
 if they are available.
 
-11. You can set up a `pipeline schedule <https://docs.gitlab.com/ee/ci/pipelines/schedules.html>`_,
+11. You can set up a `pipeline schedule <https://docs.gitlab.com/ci/pipelines/schedules/>`_,
     optionally to automatically check for updates using
     `flatpak-x-checker <https://github.com/flathub-infra/flatpak-external-data-checker>`_
     and send PRs to the repo.
@@ -331,7 +331,7 @@ if they are available.
 Multi-architecture workflow
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This uses Gitlab.com's `hosted aarch64 runners <https://docs.gitlab.com/ee/ci/runners/hosted_runners/linux.html#machine-types-available-for-linux---arm64>`_ for building on aarch64.
+This uses Gitlab.com's `hosted aarch64 runners <https://docs.gitlab.com/ci/runners/hosted_runners/linux/#machine-types-available-for-linux---arm64>`_ for building on aarch64.
 
 .. code-block:: yaml
 
