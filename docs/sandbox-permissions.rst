@@ -56,8 +56,6 @@ for portals can refer to the `xdg-desktop-portal API documentation
 <https://flatpak.github.io/xdg-desktop-portal/>`_ for
 information on how to use them.
 
-.. _sandbox-permissions-guidelines:
-
 Permissions guidelines
 ----------------------
 
