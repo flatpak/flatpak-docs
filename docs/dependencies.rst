@@ -99,7 +99,7 @@ Extensions
 Runtimes and applications can define extension points which allow optional
 additional runtimes to be mounted at a specified location inside the sandbox
 when they are present on the system. Typical uses for extensions include
-translations for applications, debuginfo for sdks, or adding more functionality
+translations for applications, debuginfo for SDKs, or adding more functionality
 to the application. Some software refers to these extensions as "Add-ons".
 
 For an extension to be loaded in the application or runtime, an extension
