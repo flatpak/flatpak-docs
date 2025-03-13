@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-01 08:05+0530\n"
+"POT-Creation-Date: 2025-03-13 09:30+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -19,7 +19,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../extension.rst:2
 msgid "Extensions"
@@ -172,6 +172,7 @@ msgid ""
 msgstr ""
 
 #: ../../extension.rst:112
+#, python-brace-format
 msgid ""
 "``mkdir -p ${FLATPAK_DEST}/extension_directory`` runs during the cleanup "
 "phase. It is used to initialise an empty directory for the extension to "
@@ -269,12 +270,14 @@ msgid "``have-intel-gpu`` is true if the i915 kernel module is loaded."
 msgstr ""
 
 #: ../../extension.rst:184
+#, python-brace-format
 msgid ""
 "``have-kernel-module-{module_name}`` is true if ``module_name`` is found "
 "in ``/proc/modules``."
 msgstr ""
 
 #: ../../extension.rst:186
+#, python-brace-format
 msgid ""
 "``on-xdg-desktop-{desktop_name}`` is true if ``desktop_name`` matches the"
 " value of ``XDG_CURRENT_DESKTOP`` on host."
@@ -316,7 +319,7 @@ msgstr ""
 msgid ""
 "``org.freedesktop.Platform.ffmpeg-full`` is an application extension "
 "(mounted inside ``/app/extension_directory``) belonging to "
-"org.freedesktop.Platform."
+"``org.freedesktop.Platform``."
 msgstr ""
 
 #: ../../extension.rst:230
@@ -372,10 +375,10 @@ msgstr ""
 
 #: ../../extension.rst:300
 msgid ""
-"``sdk-extensions`` can be used to install extra extensions having "
+"``sdk-extensions`` can be used to install extra extensions having an "
 "extension point in the parent runtime that has to be installed for the "
 "app to build. These are similarly made available during build and not in "
-"the final flatapk."
+"the final flatpak."
 msgstr ""
 
 #: ../../extension.rst:315
@@ -466,6 +469,7 @@ msgid ""
 msgstr ""
 
 #: ../../extension.rst:388
+#, python-brace-format
 msgid ""
 "In case a manual compose is still required ``appstream-compose "
 "--basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak "
@@ -585,22 +589,24 @@ msgid ""
 msgstr ""
 
 #: ../../extension.rst:541
-msgid "These are common to the Freedesktop SDK and runtime."
+msgid "These are common to the Freedesktop SDK and runtime:"
 msgstr ""
 
 #: ../../extension.rst:543
+#, python-brace-format
 msgid ""
-"org.freedesktop.Platform.GL - Extension for graphics drivers managed by "
-"the runtime and installed or removed automatically. The default has two "
-"branches ``${RUNTIME_VERSION}`` and ``${RUNTIME_VERSION}-extra``, the "
-"latter containing support for patented codecs."
+"``org.freedesktop.Platform.GL`` – Extension for graphics drivers managed "
+"by the runtime and installed or removed automatically. The default has "
+"two branches ``${RUNTIME_VERSION}`` and ``${RUNTIME_VERSION}-extra``, the"
+" latter containing support for patented codecs."
 msgstr ""
 
-#: ../../extension.rst:548
+#: ../../extension.rst:549
+#, python-brace-format
 msgid ""
-"org.freedesktop.Platform.GL.Debug - Debug extension point for "
-"org.freedesktop.Platform.GL, managed by the runtime but the user needs to"
-" explicitly install "
+"``org.freedesktop.Platform.GL.Debug`` – Debug extension point for "
+"``org.freedesktop.Platform.GL``, managed by the runtime but the user "
+"needs to explicitly install "
 "``org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}`` and "
 "``org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}-extra`` "
 "to have the debug symbols available."
@@ -612,8 +618,8 @@ msgstr ""
 
 #: ../../extension.rst:570
 msgid ""
-"org.freedesktop.Platform.VulkanLayer - Extension point for `Vulkan layers"
-" <https://github.com/KhronosGroup/Vulkan-"
+"``org.freedesktop.Platform.VulkanLayer`` – Extension point for `Vulkan "
+"layers <https://github.com/KhronosGroup/Vulkan-"
 "Guide/blob/main/chapters/layers.md>`_. Developers can provide extensions "
 "using this extension point and the user needs to install those extensions"
 " to have them available."
@@ -621,31 +627,31 @@ msgstr ""
 
 #: ../../extension.rst:574
 msgid ""
-"org.freedesktop.Platform.GStreamer - Extension point for GStreamer "
+"``org.freedesktop.Platform.GStreamer`` – Extension point for GStreamer "
 "plugins. Developers can provide extensions using this extension point and"
 " the user needs to install those extensions to have them available."
 msgstr ""
 
 #: ../../extension.rst:577
 msgid ""
-"org.freedesktop.Platform.Icontheme - Extension point for icon themes. "
-"Developers can provide extensions using this extension point and the user"
-" needs to install those extensions to have them available."
+"``org.freedesktop.Platform.Icontheme`` – Extension point for icon themes."
+" Developers can provide extensions using this extension point and the "
+"user needs to install those extensions to have them available."
 msgstr ""
 
 #: ../../extension.rst:580
 msgid ""
-"org.gtk.Gtk3theme - Extension point for Gtk3 themes. Extensions under "
-"this extension point are automatically installed by Flatpak if an "
+"``org.gtk.Gtk3theme`` – Extension point for Gtk3 themes. Extensions under"
+" this extension point are automatically installed by Flatpak if an "
 "extension matching the host theme is available. Developers can provide "
 "extensions using this extension point."
 msgstr ""
 
 #: ../../extension.rst:584
 msgid ""
-"org.freedesktop.Platform.VAAPI.Intel - Extension providing Intel VAAPI "
-"media drivers. This is automatically installed if the user has an Intel "
-"GPU."
+"``org.freedesktop.Platform.VAAPI.Intel`` – Extension providing Intel "
+"VAAPI media drivers. This is automatically installed if the user has an "
+"Intel GPU."
 msgstr ""
 
 #: ../../extension.rst:588
@@ -656,16 +662,16 @@ msgstr ""
 
 #: ../../extension.rst:590
 msgid ""
-"org.freedesktop.Platform.openh264 - Extension providing OpenH264, "
+"``org.freedesktop.Platform.openh264`` – Extension providing OpenH264, "
 "automatically installed by the runtime."
 msgstr ""
 
 #: ../../extension.rst:592
 msgid ""
-"org.freedesktop.Platform.ffmpeg - Extension providing ffmpeg with support"
-" for patented codecs. This needs to explicitly added to the manifest "
-"using ``add-extensions`` by the developer, so that it becomes available "
-"when the user installs it."
+"``org.freedesktop.Platform.ffmpeg`` – Extension providing ffmpeg with "
+"support for patented codecs. This needs to explicitly added to the "
+"manifest using ``add-extensions`` by the developer, so that it becomes "
+"available when the user installs it."
 msgstr ""
 
 #: ../../extension.rst:597
@@ -675,30 +681,36 @@ msgid ""
 msgstr ""
 
 #: ../../extension.rst:599
-msgid "These are only in Freedesktop SDK."
+msgid "These are only in Freedesktop SDK:"
 msgstr ""
 
 #: ../../extension.rst:601
 msgid ""
-"org.freedesktop.Sdk.Extension - Extension point for SDK extensions like "
-"extra toolchains (eg. LLVM), compilers and language specific tools to aid"
-" building applications or provide language support for development tools "
-"such as IDEs."
+"``org.freedesktop.Sdk.Extension`` – Extension point for SDK extensions "
+"like extra toolchains (eg. LLVM), compilers and language specific tools "
+"to aid building applications or provide language support for development "
+"tools such as IDEs."
 msgstr ""
 
 #: ../../extension.rst:606
+msgid ""
+"SDK extensions available on Flathub are listed `here "
+"<https://github.com/orgs/flathub/repositories?q=org.freedesktop.Sdk.Extension.>`_."
+msgstr ""
+
+#: ../../extension.rst:609
 msgid ""
 "The application developer needs to explicitly add these extensions in the"
 " manifest by using ``sdk-extensions`` when building an app."
 msgstr ""
 
-#: ../../extension.rst:609
+#: ../../extension.rst:612
 msgid ""
 "Extensions marked as ``Compat`` in the name or ``GL32`` provide compat "
 "support for extra architectures and needs to explicitly requested."
 msgstr ""
 
-#: ../../extension.rst:612
+#: ../../extension.rst:615
 msgid "Additionally all SDKs provide a ``.Docs`` extension for documentation."
 msgstr ""
 
@@ -717,5 +729,120 @@ msgstr ""
 #~ " point and the user needs to "
 #~ "install those extensions to have them"
 #~ " available."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``org.freedesktop.Platform.ffmpeg-full`` is an "
+#~ "application extension (mounted inside "
+#~ "``/app/extension_directory``) belonging to "
+#~ "org.freedesktop.Platform."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``sdk-extensions`` can be used to "
+#~ "install extra extensions having extension "
+#~ "point in the parent runtime that "
+#~ "has to be installed for the app"
+#~ " to build. These are similarly made"
+#~ " available during build and not in"
+#~ " the final flatapk."
+#~ msgstr ""
+
+#~ msgid "These are common to the Freedesktop SDK and runtime."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "org.freedesktop.Platform.GL - Extension for "
+#~ "graphics drivers managed by the runtime"
+#~ " and installed or removed automatically."
+#~ " The default has two branches "
+#~ "``${RUNTIME_VERSION}`` and ``${RUNTIME_VERSION}-extra``,"
+#~ " the latter containing support for "
+#~ "patented codecs."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "org.freedesktop.Platform.GL.Debug - Debug extension"
+#~ " point for org.freedesktop.Platform.GL, managed"
+#~ " by the runtime but the user "
+#~ "needs to explicitly install "
+#~ "``org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}`` "
+#~ "and "
+#~ "``org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}-extra``"
+#~ " to have the debug symbols available."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "org.freedesktop.Platform.VulkanLayer - Extension "
+#~ "point for `Vulkan layers "
+#~ "<https://github.com/KhronosGroup/Vulkan-"
+#~ "Guide/blob/main/chapters/layers.md>`_. Developers can "
+#~ "provide extensions using this extension "
+#~ "point and the user needs to "
+#~ "install those extensions to have them"
+#~ " available."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "org.freedesktop.Platform.GStreamer - Extension point"
+#~ " for GStreamer plugins. Developers can "
+#~ "provide extensions using this extension "
+#~ "point and the user needs to "
+#~ "install those extensions to have them"
+#~ " available."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "org.freedesktop.Platform.Icontheme - Extension point"
+#~ " for icon themes. Developers can "
+#~ "provide extensions using this extension "
+#~ "point and the user needs to "
+#~ "install those extensions to have them"
+#~ " available."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "org.gtk.Gtk3theme - Extension point for "
+#~ "Gtk3 themes. Extensions under this "
+#~ "extension point are automatically installed"
+#~ " by Flatpak if an extension matching"
+#~ " the host theme is available. "
+#~ "Developers can provide extensions using "
+#~ "this extension point."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "org.freedesktop.Platform.VAAPI.Intel - Extension "
+#~ "providing Intel VAAPI media drivers. "
+#~ "This is automatically installed if the"
+#~ " user has an Intel GPU."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "org.freedesktop.Platform.openh264 - Extension "
+#~ "providing OpenH264, automatically installed by"
+#~ " the runtime."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "org.freedesktop.Platform.ffmpeg - Extension "
+#~ "providing ffmpeg with support for "
+#~ "patented codecs. This needs to "
+#~ "explicitly added to the manifest using"
+#~ " ``add-extensions`` by the developer, "
+#~ "so that it becomes available when "
+#~ "the user installs it."
+#~ msgstr ""
+
+#~ msgid "These are only in Freedesktop SDK."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "org.freedesktop.Sdk.Extension - Extension point "
+#~ "for SDK extensions like extra toolchains"
+#~ " (eg. LLVM), compilers and language "
+#~ "specific tools to aid building "
+#~ "applications or provide language support "
+#~ "for development tools such as IDEs."
 #~ msgstr ""
 
