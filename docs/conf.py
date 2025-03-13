@@ -161,6 +161,10 @@ linkcheck_anchors_ignore_for_url = [
     r'https://gitlab\.gnome\.org/GNOME/Initiatives/-/wikis/DevOps-with-Flatpak'
 ]
 
+linkcheck_ignore = [
+    r"https://www\.gnu\.org/.*",  # Broken in GitHub actions
+]
+
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
