@@ -44,12 +44,44 @@ Then you deploy the commit::
 .. note::
 
    The example here uses ``sudo`` for system installations because, unlike normal updates, downgrades are considered a privileged action. If the application is installed per-user you would run it as that user.
-   
-If you have Flatpak 1.5.0 or later, you can also prevent the app from being
-included in updates (either manual or automatic)::
 
- $ flatpak mask org.gnome.Recipes
+Masking
+--------
 
+Flatpak 1.5.0 or later allows to mask a ref to prevent it from being
+automatically updated or installed.
+
+If the Flatpak remote is configured in user location,
+``flatpak mask --user`` needs to be used otherwise it defaults to
+system location. ``flatpak remote-list`` can be used to find the
+location of the Flatpak remote.
+
+To list the currently masked patterns::
+
+  # System
+  $ flatpak mask
+
+  # User
+  $ flatpak mask --user
+
+To mask a ref pattern::
+
+  # System
+  $ flatpak mask org.example.brokenapp
+
+  # User
+  $ flatpak mask --user org.example.brokenapp
+
+  # Mask only the beta branch of the ref
+  $ flatpak mask org.example.brokenapp//beta
+
+To remove a masked pattern::
+
+  # System
+  $ flatpak mask --remove org.example.brokenapp
+
+  # User
+  $ flatpak mask --user --remove org.example.brokenapp
 
 Bisecting regressions in application builds
 -------------------------------------------
