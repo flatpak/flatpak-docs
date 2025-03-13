@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
-"POT-Creation-Date: 2023-01-07 16:26-0600\n"
+"POT-Creation-Date: 2025-03-13 09:53+0530\n"
 "PO-Revision-Date: 2023-05-31 14:33-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../tips-and-tricks.rst:2
 msgid "Tips and Tricks"
@@ -96,19 +96,41 @@ msgstr ""
 "uma ação privilegiada. Se o aplicativo for instalado por usuário, você o "
 "executará como esse usuário."
 
-#: ../../tips-and-tricks.rst:48
-msgid ""
-"If you have Flatpak 1.5.0 or later, you can also prevent the app from "
-"being included in updates (either manual or automatic)::"
+#: ../../tips-and-tricks.rst:49
+msgid "Masking"
 msgstr ""
-"Se você possui o Flatpak 1.5.0 ou posterior, também pode impedir que o "
-"aplicativo seja incluído nas atualizações (manuais ou automáticas)::"
 
-#: ../../tips-and-tricks.rst:55
+#: ../../tips-and-tricks.rst:51
+msgid ""
+"Flatpak 1.5.0 or later allows to mask a ref to prevent it from being "
+"automatically updated or installed."
+msgstr ""
+
+#: ../../tips-and-tricks.rst:54
+msgid ""
+"If the Flatpak remote is configured in user location, ``flatpak mask "
+"--user`` needs to be used otherwise it defaults to system location. "
+"``flatpak remote-list`` can be used to find the location of the Flatpak "
+"remote."
+msgstr ""
+
+#: ../../tips-and-tricks.rst:59
+msgid "To list the currently masked patterns::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:67
+msgid "To mask a ref pattern::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:78
+msgid "To remove a masked pattern::"
+msgstr ""
+
+#: ../../tips-and-tricks.rst:87
 msgid "Bisecting regressions in application builds"
 msgstr "Fazendo bisect em regressões em compilações de aplicativos"
 
-#: ../../tips-and-tricks.rst:57
+#: ../../tips-and-tricks.rst:89
 msgid ""
 "In case the newest builds of an application introduce regressions, you "
 "can use ``flatpak-bisect`` to discover which commit introduced the "
@@ -118,7 +140,7 @@ msgstr ""
 "você pode usar ``flatpak-bisect`` para descobrir qual commit introduziu a"
 " regressão. Funciona como ``git bisect``."
 
-#: ../../tips-and-tricks.rst:61
+#: ../../tips-and-tricks.rst:93
 msgid ""
 "In case your distribution doesn't install the ``flatpak-bisect`` utility,"
 " you can find it distributed alongside the Flatpak source code, in "
@@ -128,17 +150,17 @@ msgstr ""
 "poderá encontrá-lo distribuído juntamente com o código-fonte Flatpak, em "
 "https://github.com/flatpak/flatpak/blob/main/scripts/flatpak-bisect"
 
-#: ../../tips-and-tricks.rst:65
+#: ../../tips-and-tricks.rst:97
 msgid "First you update the application and get its history::"
 msgstr "Primeiro, você atualiza o aplicativo e obtém seu histórico::"
 
-#: ../../tips-and-tricks.rst:69
+#: ../../tips-and-tricks.rst:101
 msgid "Then, you should set the current commit as the first bad commit::"
 msgstr ""
 "Em seguida, você deve definir o commit atual como o primeiro commit "
 "incorreto::"
 
-#: ../../tips-and-tricks.rst:73
+#: ../../tips-and-tricks.rst:105
 msgid ""
 "Now you need to find the hash of the first known good commit. For that, "
 "you can see the build history by running::"
@@ -146,13 +168,13 @@ msgstr ""
 "Agora você precisa encontrar o hash do primeiro bom commit conhecido. "
 "Para isso, você pode ver o histórico da compilação executando::"
 
-#: ../../tips-and-tricks.rst:78
+#: ../../tips-and-tricks.rst:110
 msgid "To start bisecting, checkout the first known good commit you find::"
 msgstr ""
 "Para começar a dividir, faça o checkout do primeiro commit conhecido que "
 "você encontrar::"
 
-#: ../../tips-and-tricks.rst:82
+#: ../../tips-and-tricks.rst:114
 msgid ""
 "After setting the bad commit and the first known good commit, you can "
 "launch the application to verify if the current commit in the bisecting "
@@ -162,25 +184,25 @@ msgstr ""
 "iniciar o aplicativo para verificar se o commit atual na sessão de "
 "divisão é bom ou ruim."
 
-#: ../../tips-and-tricks.rst:86
+#: ../../tips-and-tricks.rst:118
 msgid "To mark a commit as good or bad, run::"
 msgstr "Para marcar um commit como bom ou ruim, execute::"
 
-#: ../../tips-and-tricks.rst:90
+#: ../../tips-and-tricks.rst:122
 msgid "Or::"
 msgstr "Ou::"
 
-#: ../../tips-and-tricks.rst:94
+#: ../../tips-and-tricks.rst:126
 msgid "``flatpak-bisect`` will inform you when the first bad commit is found."
 msgstr ""
 "``flatpak-bisect`` vai lhe informar quando o primeiro commit ruim for "
 "encontrado."
 
-#: ../../tips-and-tricks.rst:97
+#: ../../tips-and-tricks.rst:129
 msgid "Adding a custom installation"
 msgstr "Adicionando uma instalação personalizada"
 
-#: ../../tips-and-tricks.rst:99
+#: ../../tips-and-tricks.rst:131
 msgid ""
 "By default Flatpak installs apps system-wide, and can also be made to "
 "install per-user with the ``--user`` option accepted by most commands. A "
@@ -192,19 +214,19 @@ msgstr ""
 " comandos. Uma terceira opção é configurar uma instalação personalizada, "
 "que pode ser armazenada em um disco rígido externo."
 
-#: ../../tips-and-tricks.rst:104
+#: ../../tips-and-tricks.rst:136
 msgid "First ensure that the config directory exists::"
 msgstr "Primeiro, certifique-se de que o diretório de configuração existe::"
 
-#: ../../tips-and-tricks.rst:108
+#: ../../tips-and-tricks.rst:140
 msgid "Then open a file in that directory as root::"
 msgstr "Em seguida, abra um arquivo nesse diretório como root::"
 
-#: ../../tips-and-tricks.rst:112
+#: ../../tips-and-tricks.rst:144
 msgid "And write something like this::"
 msgstr "E escreva algo assim::"
 
-#: ../../tips-and-tricks.rst:119
+#: ../../tips-and-tricks.rst:151
 msgid ""
 "See `flatpak-installation(5) <https://docs.flatpak.org/en/latest/flatpak-"
 "command-reference.html#flatpak-installation>`_ for the full format "
@@ -219,15 +241,15 @@ msgstr ""
 " montados e ``mkdir`` para criar um diretório ``flatpak`` para que o "
 "caminho especificado por ``Path=`` exista."
 
-#: ../../tips-and-tricks.rst:125
+#: ../../tips-and-tricks.rst:157
 msgid "Then you can add a remote using a command like::"
 msgstr "Então você pode adicionar um controle remoto usando um comando como::"
 
-#: ../../tips-and-tricks.rst:129
+#: ../../tips-and-tricks.rst:161
 msgid "And install to it with::"
 msgstr "E instale nele com::"
 
-#: ../../tips-and-tricks.rst:135
+#: ../../tips-and-tricks.rst:167
 msgid ""
 "If your custom installation is the only one with the remote you're "
 "installing from, ``--installation`` can be omitted."
@@ -235,11 +257,11 @@ msgstr ""
 "Se sua instalação personalizada for a única com o controle remoto do qual"
 " você está instalando, ``--installation`` pode ser omitido."
 
-#: ../../tips-and-tricks.rst:138
+#: ../../tips-and-tricks.rst:170
 msgid "And run apps from it with::"
 msgstr "E execute aplicativos a partir dele com::"
 
-#: ../../tips-and-tricks.rst:144
+#: ../../tips-and-tricks.rst:176
 msgid ""
 "If your custom installation is the only one with the app you're running, "
 "``--installation`` can be omitted."
@@ -247,11 +269,11 @@ msgstr ""
 "Se sua instalação personalizada for a única com o aplicativo que você "
 "está executando, ``--installation`` pode ser omitido."
 
-#: ../../tips-and-tricks.rst:148
+#: ../../tips-and-tricks.rst:180
 msgid "Configuring resource limits for apps"
 msgstr "Configurando limites de recursos para aplicativos"
 
-#: ../../tips-and-tricks.rst:150
+#: ../../tips-and-tricks.rst:182
 msgid ""
 "When systemd is available, Flatpak tries to put app processes in a scope "
 "such as ``app-flatpak-com.brave.Browser-*.scope`` (in the case of Brave),"
@@ -266,7 +288,7 @@ msgstr ""
 "/app-flatpak-com.brave.Browser-.scope.d/memory.conf`` com conteúdos "
 "como::"
 
-#: ../../tips-and-tricks.rst:159
+#: ../../tips-and-tricks.rst:191
 msgid ""
 "Then after a ``systemctl --user daemon-reload``, those ``systemd"
 ".resource-control(5)`` parameters will apply to all instances of that "
@@ -275,4 +297,15 @@ msgstr ""
 "Então, após um ``systemctl --user daemon-reload``, esses parâmetros "
 "``systemd.resource-control(5)`` serão aplicados a todas as instâncias "
 "desse aplicativo."
+
+#~ msgid ""
+#~ "If you have Flatpak 1.5.0 or "
+#~ "later, you can also prevent the "
+#~ "app from being included in updates "
+#~ "(either manual or automatic)::"
+#~ msgstr ""
+#~ "Se você possui o Flatpak 1.5.0 ou"
+#~ " posterior, também pode impedir que o"
+#~ " aplicativo seja incluído nas atualizações"
+#~ " (manuais ou automáticas)::"
 
