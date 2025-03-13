@@ -267,7 +267,7 @@ sample wrapper to launch the app:
 Build commands
 --------------
 
-Last but not least, since the ``simple`` build system is being used, a list of
+Last but not least, since the ``simple`` buildsystem is being used, a list of
 build commands must be provided. As can be seen, ``npm`` is run with the
 ``npm_config_offline=true`` environment variable, installing dependencies from
 packages that have already been cached. These are copied to ``/app/main/``.
