@@ -1,9 +1,10 @@
 Electron
 ========
 
-Due to the nature of Electron, building Electron applications as Flatpaks
-requires a few extra steps compared with other applications. Thankfully,
-several tools and resources are available which make this much easier.
+Due to the nature of `Electron <https://www.electronjs.org/>`_, building
+Electron applications as Flatpaks requires a few extra steps compared with other
+applications. Thankfully, several tools and resources are available which make
+this much easier.
 
 This guide provides information on how building Electron applications differs
 from other applications. It also includes information on the tooling for
@@ -263,21 +264,22 @@ often best to link to it from the main manifest, which is done by adding
 Launching the app
 -----------------
 
-The Electron app is run through a simple script. This can be given any name
-but must be specified in the manifest's ``"command":`` property. See below
-a sample wrapper for launching app:
+The Electron app is run through a simple shell script that wraps
+`zypak <https://github.com/refi64/zypak>`_. This script can be given any name
+but must be specified in the manifest's ``command`` property. See below for a
+sample wrapper to launch the app:
 
 .. code-block:: yaml
 
   - type: script
     dest-filename: run.sh
     commands:
-      - zypak-wrapper.sh /app/main/electron-sample-app "$@"
+      - zypak-wrapper /app/main/electron-sample-app "$@"
 
 Build commands
 --------------
 
-Last but not least, since the simple build option is being used, a list of
+Last but not least, since the ``simple`` buildsystem is being used, a list of
 build commands must be provided. As can be seen, ``npm`` is run with the
 ``npm_config_offline=true`` environment variable, installing dependencies from
 packages that have already been cached. These are copied to ``/app/main/``.
