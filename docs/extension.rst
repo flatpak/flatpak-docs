@@ -606,6 +606,9 @@ These are only in Freedesktop SDK.
   The application developer needs to explicitly add these extensions
   in the manifest by using ``sdk-extensions`` when building an app.
 
+  All SDK extensions already available on Flathub are listed
+  `here <https://github.com/orgs/flathub/repositories?q=org.freedesktop.Sdk.Extension.+sort%3Aname-asc>`_.
+
 Extensions marked as ``Compat`` in the name or ``GL32`` provide compat
 support for extra architectures and needs to explicitly requested.
 
