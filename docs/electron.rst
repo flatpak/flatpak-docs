@@ -103,8 +103,8 @@ later.
 Sandbox permissions
 -------------------
 
-The standard sandbox :ref:`sandbox-permissions-guidelines` also apply to
-Electron applications. However, Electron's Wayland support is still
+The standard sandbox :ref:`sandbox-permissions:permissions-guidelines` also
+apply to Electron applications. However, Electron's Wayland support is still
 experimental. So for display access, only X11 should be used as the default
 configuration. This will make Electron use Xwayland in a Wayland session and
 nothing else is required.
