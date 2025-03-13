@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-05 01:10+0530\n"
+"POT-Creation-Date: 2025-03-13 09:30+0530\n"
 "PO-Revision-Date: 2018-11-03 12:59-0400\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language: zh_Hans_CN\n"
@@ -13,27 +13,29 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../electron.rst:2
 msgid "Electron"
 msgstr "Electron"
 
 #: ../../electron.rst:4
+#, fuzzy
 msgid ""
-"Due to the nature of Electron, building Electron applications as Flatpaks"
-" requires a few extra steps compared with other applications. Thankfully,"
-" several tools and resources are available which make this much easier."
+"Due to the nature of `Electron <https://www.electronjs.org/>`_, building "
+"Electron applications as Flatpaks requires a few extra steps compared "
+"with other applications. Thankfully, several tools and resources are "
+"available which make this much easier."
 msgstr "由于Electron的性质，与其他应用相比，将Electron应用构建为Flatpak应用需要一些额外的步骤。值得庆幸的是，有几种工具和资源可以使这些步骤更容易。"
 
-#: ../../electron.rst:8
+#: ../../electron.rst:9
 msgid ""
 "This guide provides information on how building Electron applications "
 "differs from other applications. It also includes information on the "
 "tooling for building Electron applications and how to use it."
 msgstr "本教程提供有关如何构建Electron应用程序与其他应用程序不同的信息。 它还包括有关构建Electron应用程序的工具以及如何使用它的信息。"
 
-#: ../../electron.rst:12
+#: ../../electron.rst:13
 #, fuzzy
 msgid ""
 "The guide walks through the `manifest file <https://github.com/flathub"
@@ -48,17 +50,17 @@ msgstr ""
 "`示例Electron Flatpak应用程序 <https://github.com/flathub/electron-sample-"
 "app>`_  。在开始之前，最好先在线查看或下载该应用程序。"
 
-#: ../../electron.rst:21
+#: ../../electron.rst:22
 msgid "Building the sample application"
 msgstr "构建示例应用程序"
 
-#: ../../electron.rst:23
+#: ../../electron.rst:24
 msgid ""
 "While it isn't strictly necessary, you might want to try building and "
 "running the sample application yourself."
 msgstr "虽然并非绝对必要，但最好自己尝试构建和运行示例应用程序。"
 
-#: ../../electron.rst:26
+#: ../../electron.rst:27
 #, fuzzy
 msgid ""
 "To get setup for the build, download or clone the sample app from GitHub,"
@@ -68,33 +70,33 @@ msgstr ""
 "要获取构建的设置，请从GitHub下载或克隆示例应用程序，然后导航到终端中的 ``/flatpak`` 目录。 "
 "您还必须安装Electron基础应用程序："
 
-#: ../../electron.rst:32
+#: ../../electron.rst:33
 msgid "Finally, the application can be run with::"
 msgstr "最后，运行应用："
 
-#: ../../electron.rst:37
+#: ../../electron.rst:38
 msgid "Basic configuration"
 msgstr "基本配置"
 
-#: ../../electron.rst:39
+#: ../../electron.rst:40
 msgid ""
 "The first part of the sample application's manifest specifies the "
 "application's ID. It also configures the runtime and SDK:"
 msgstr "示例应用清单文件的第一部分指定了应用ID、runtime和SDK："
 
-#: ../../electron.rst:49
+#: ../../electron.rst:50
 msgid ""
 "The Freedesktop runtime is generally the best runtime to use with "
 "Electron applications, since it is the most minimal runtime, and other "
 "dependencies will be specific to Electron itself."
 msgstr "Freedesktop运行时通常是与Electron应用程序一起使用的最佳运行时，因为它是最小的运行时，其他依赖项将特定于Electron本身。"
 
-#: ../../electron.rst:54
+#: ../../electron.rst:55
 #, fuzzy
 msgid "The Electron BaseApp"
 msgstr "Electron base应用"
 
-#: ../../electron.rst:56
+#: ../../electron.rst:57
 #, fuzzy
 msgid ""
 "Next, the manifest specifies that the Electron BaseApp should be used, by"
@@ -102,10 +104,10 @@ msgid ""
 "application manifest:"
 msgstr "然后，清单文件通过 ``base`` 和 ``base-version`` 属性指明了Electron要使用的的base app::"
 
-#: ../../electron.rst:65
+#: ../../electron.rst:66
 #, fuzzy
 msgid ""
-"BaseApps are described in :doc:`dependencies`.  Using the Electron base "
+"BaseApps are described in :doc:`dependencies`. Using the Electron base "
 "app is much faster and more convenient than manually building Electron "
 "dependencies. It also has the advantage of reducing the amount of "
 "duplication on users' machines, since it means that Electron is only "
@@ -114,115 +116,125 @@ msgstr ""
 "base app在 :doc:`building-basics` 有介绍。使用Electron的base "
 "app比手动构建Electron和它的依赖要方便和快速得多。也有在用户的机器上减少大量副本文件的优点，因为这意味着Electron在磁盘上只保存一份。"
 
-#: ../../electron.rst:71
+#: ../../electron.rst:72
 msgid "The Node.js SDK extension"
 msgstr ""
 
-#: ../../electron.rst:73
+#: ../../electron.rst:74
 msgid ""
 "In order to build Electron-based apps, you need Node.js available at "
 "build time. Flathub provides Node.js LTS versions as extensions for the "
 "SDK, so you can install one of them and add it in your apps' manifest:"
 msgstr ""
 
-#: ../../electron.rst:82
+#: ../../electron.rst:83
 msgid "Enable the extension by adding it to ``PATH``:"
 msgstr ""
 
-#: ../../electron.rst:89
+#: ../../electron.rst:90
 msgid ""
 "Note that the extension name (last portion of reverse-dns notation, "
 "``node18`` in this example) must be the same in ``sdk-extensions`` and "
 "``append-path``."
 msgstr ""
 
-#: ../../electron.rst:93
+#: ../../electron.rst:94
 msgid "Command"
 msgstr "命令"
 
-#: ../../electron.rst:95
+#: ../../electron.rst:96
 msgid ""
 "The ``command`` property indicates that a script called ``run.sh`` is to "
 "be executed to run the application. This will be explained in further "
 "detail later."
 msgstr "这个 ``command`` 表明执行一个名为 ``run.sh`` 的脚本用来运行这个应用。这会在后续详细介绍。"
 
-#: ../../electron.rst:104
+#: ../../electron.rst:105
 msgid "Sandbox permissions"
 msgstr "沙箱权限"
 
-#: ../../electron.rst:106
+#: ../../electron.rst:107
 #, fuzzy
 msgid ""
-"The standard guidelines on sandbox permissions apply to Electron "
-"applications. However, Electron does not use Wayland by default. So for "
-"display access, only X11 should be used as the default configuration. "
-"This will make Electron use Xwayland in a wayland session and nothing "
-"else is required."
+"The standard sandbox :ref:`sandbox-permissions:Permissions guidelines` "
+"also apply to Electron applications. However, Electron's Wayland support "
+"is still experimental. So for display access, only X11 should be used as "
+"the default configuration. This will make Electron use Xwayland in a "
+"Wayland session and nothing else is required."
 msgstr "标准的指南可以用于Electron应用。可是Electron还不支持Wayland，所以只能使用X11进行显示。示例的应用也为声音配置了pulseaudio和开启了网络的访问："
 
-#: ../../electron.rst:112
+#: ../../electron.rst:113
 msgid ""
-"The sample app also configures pulseaudio for sound and enables network "
-"access."
+"The sample app also configures PulseAudio for sound and enables network "
+"access:"
 msgstr ""
 
-#: ../../electron.rst:127
+#: ../../electron.rst:126
 msgid ""
-"Native wayland support in electron is experimental and often unstable. It"
-" is advised to stick with the X11 and Xwayland configuration above as the"
-" default."
+"To allow experimental `native Wayland` support in Electron>=20, the "
+"``--ozone-platform-hint=auto`` flag can be passed to the program. `auto` "
+"will choose Wayland when the current session is running under Wayland and"
+" Xwayland or X11 otherwise."
 msgstr ""
 
 #: ../../electron.rst:131
 msgid ""
-"To enable experimental `native Wayland` support in Electron>=20, the "
-"``--ozone-platform-hint=auto`` flag can be passed to the program. `auto` "
-"will choose Wayland when the session is wayland and Xwayland or X11 "
-"otherwise."
+"It's recommended to leave actually `enabling` Wayland up to the user for "
+"now, i.e. set ``--socket=x11`` in the manifest. Wayland can then be "
+"tested with::"
 msgstr ""
 
-#: ../../electron.rst:136
-msgid ""
-"The recommended option is to leave it to the user. So ``--socket=x11`` "
-"should be used in manifest and Wayland can be tested with::"
+#: ../../electron.rst:137
+msgid "Enable native Wayland support by default"
 msgstr ""
 
 #: ../../electron.rst:141
 msgid ""
-"To make native wayland the `default` for users ``--socket=fallback-x11`` "
-"and ``--socket=wayland`` must be used in the manifest."
+"Native Wayland support in Electron is still experimental and often "
+"unstable. It is advised to stick with the X11/Xwayland configuration "
+"above as the default."
 msgstr ""
 
-#: ../../electron.rst:144
+#: ../../electron.rst:145
+msgid ""
+"To make native Wayland the `default` for users, ``--socket=fallback-x11``"
+" and ``--socket=wayland`` must be used in the manifest."
+msgstr ""
+
+#: ../../electron.rst:148
 msgid ""
 "For Electron versions between 17 and 27, client-side window decorations "
-"in native wayland can be enabled by passing ``--enable-"
-"features=WaylandWindowDecorations``."
-msgstr ""
-
-#: ../../electron.rst:147
-msgid ""
-"Electron uses ``libnotify`` on Linux to provide desktop notifications. "
-"libnotify `since 0.8.0 "
-"<https://gitlab.gnome.org/GNOME/libnotify/-/merge_requests/27>`_ "
-"automatically uses the `notification portal <https://flatpak.github.io"
-"/xdg-desktop-portal/docs/doc-org.freedesktop.portal.Notification.html>`_ "
-"when inside a sandboxed environment and ``--talk-"
-"name=org.freedesktop.Notifications`` is not required."
+"under native Wayland can be enabled by passing ``--enable-"
+"features=WaylandWindowDecorations`` to the program. For newer versions of"
+" Electron , this isn't necessary anymore."
 msgstr ""
 
 #: ../../electron.rst:153
 msgid ""
-"``org.electronjs.Electron2.BaseApp`` since ``branch/23.08`` comes with "
-"``libnotify>=0.8.0``"
+"Electron uses ``libnotify`` on Linux to provide desktop notifications. "
+"`Since version 0.8.0 "
+"<https://gitlab.gnome.org/GNOME/libnotify/-/merge_requests/27>`_ "
+"libnotify automatically uses the `notification portal "
+"<https://flatpak.github.io/xdg-desktop-portal/docs/doc-"
+"org.freedesktop.portal.Notification.html>`_ when inside a sandboxed "
+"environment and ``--talk-name=org.freedesktop.Notifications`` is not "
+"required anymore. ``org.electronjs.Electron2.BaseApp`` includes "
+"``libnotify>=0.8.0`` since ``branch/23.08``."
 msgstr ""
 
-#: ../../electron.rst:159
+#: ../../electron.rst:160
+msgid ""
+"To ensure proper mouse cursor scaling on HiDPI displays under Wayland, "
+"the ``XCURSOR_PATH`` environment variable must be set to the host's "
+"corresponding directories:"
+msgstr ""
+
+#: ../../electron.rst:172
 msgid "Using correct desktop file name"
 msgstr ""
 
-#: ../../electron.rst:161
+#: ../../electron.rst:174
+#, python-brace-format
 msgid ""
 "It's important for Linux applications to set the correct desktop file "
 "name. If not, it can lead to problems like missing the window icon under "
@@ -233,7 +245,8 @@ msgid ""
 "\"com.example.MyApp.desktop\"``."
 msgstr ""
 
-#: ../../electron.rst:165
+#: ../../electron.rst:178
+#, python-brace-format
 msgid ""
 "In case you repack a binary, you can use the ``patch-desktop-filename`` "
 "script provided by the BaseApp. Each Electron binary ships with "
@@ -243,11 +256,11 @@ msgid ""
 "${FLATPAK_DEST}/my-app/resources/app.asar``."
 msgstr ""
 
-#: ../../electron.rst:170
+#: ../../electron.rst:183
 msgid "Build options"
 msgstr "构建选项"
 
-#: ../../electron.rst:172
+#: ../../electron.rst:185
 msgid ""
 "These build options aren't strictly necessary, but can be useful if "
 "something goes wrong. ``env`` allows setting an array of environment "
@@ -257,18 +270,18 @@ msgstr ""
 "构建选项不是必要的，但是在发生一些错误的时候很有用。 ``env`` 允许设置一个环境变量数组，这时将 "
 "``NPM_CONFIG_LOGLEVEL`` 设置为 ``info`` 可以让 ``npm`` 给我们更多关于错误的详情。"
 
-#: ../../electron.rst:188
+#: ../../electron.rst:201
 msgid "The application module"
 msgstr "应用模块"
 
-#: ../../electron.rst:190
+#: ../../electron.rst:203
 msgid ""
 "The final section of the manifest defines how the application module "
 "should be built. This is where some of the additional logic for Electron "
 "and Node.js can be found."
 msgstr "清单文件的最后一部分是定义应用模块如何构建。可以找到一些Electron和Node.js的一些附加逻辑。"
 
-#: ../../electron.rst:194
+#: ../../electron.rst:207
 msgid ""
 "By default, ``flatpak-builder`` doesn't allow build tools to access the "
 "network. This means that tools which rely on downloading sources will not"
@@ -280,7 +293,7 @@ msgstr ""
 "默认不能访问网络。这意味着依赖于下载资源的工具无法工作。因此，Node.js包必须在构建之前提前下载好。设置环境变量 "
 "``electron_config_cache`` 表明这些包会在构建的时候被找到。"
 
-#: ../../electron.rst:200
+#: ../../electron.rst:213
 msgid ""
 "The next part of the manifest describes how the application should be "
 "built. The simple buildsystem option is used, which allows a sequence of "
@@ -288,15 +301,15 @@ msgid ""
 "location and hash of the application are also specified."
 msgstr "清单文件的下一部分描述了怎样构建应用。使用了简单构建系统的选项，允许指定一系列命令来构建。下载地址和应用的hash也会进行指定。"
 
-#: ../../electron.rst:223
+#: ../../electron.rst:236
 msgid "Bundling NPM packages"
 msgstr "绑定NPM包"
 
-#: ../../electron.rst:225
+#: ../../electron.rst:238
 msgid "The next line is how NPM modules get bundled as part of Flatpaks:"
 msgstr "下一行是NPM模块如何作为flatpak的一部分进行绑定："
 
-#: ../../electron.rst:231
+#: ../../electron.rst:244
 #, fuzzy
 msgid ""
 "Since even simple Node.js applications depend on dozens of packages, it "
@@ -310,7 +323,7 @@ msgstr ""
 "  <https://github.com/flatpak/flatpak-builder-tools/tree/master/npm>`_ "
 "被开发出来，使用NPM下载Node.js包并将他们包含在应用源码里。"
 
-#: ../../electron.rst:237
+#: ../../electron.rst:250
 #, fuzzy
 msgid ""
 "The Python script requires a ``package-lock.json`` (or ``yarn.lock``) "
@@ -323,7 +336,7 @@ msgstr ""
 " install --package-lock-only`` 生成（示例包含了一个 ``package-lock.json`` "
 "供参考）。下面运行这个脚本::"
 
-#: ../../electron.rst:244
+#: ../../electron.rst:257
 #, fuzzy
 msgid ""
 "This generates the manifest JSON needed to build the NPM/Yarn packages "
@@ -338,28 +351,29 @@ msgstr ""
 "的文件。这个文件的内容可以拷贝到应用的清单文件中，但是因为通常它非常长，最好是从主要的清单链接它。如上所示，可以在清单文件中添加一行 "
 "``generated-source.json`` 来实现链接。"
 
-#: ../../electron.rst:252
+#: ../../electron.rst:265
 msgid "Launching the app"
 msgstr "启动应用"
 
-#: ../../electron.rst:254
+#: ../../electron.rst:267
 #, fuzzy
 msgid ""
-"The Electron app is run through a simple script. This can be given any "
-"name but must be specified in the manifest's ``\"command\":`` property. "
-"See below a sample wrapper for launching app:"
+"The Electron app is run through a simple shell script that wraps `zypak "
+"<https://github.com/refi64/zypak>`_. This script can be given any name "
+"but must be specified in the manifest's ``command`` property. See below "
+"for a sample wrapper to launch the app:"
 msgstr "Electron应用通过一个简单的脚本文件运行。可以用任何名字，但是必须在清单文件中 ``“command\":`` 属性指明。"
 
-#: ../../electron.rst:266
+#: ../../electron.rst:280
 msgid "Build commands"
 msgstr "构建命令"
 
-#: ../../electron.rst:268
+#: ../../electron.rst:282
 #, fuzzy
 msgid ""
-"Last but not least, since the simple build option is being used, a list "
-"of build commands must be provided. As can be seen, ``npm`` is run with "
-"the ``npm_config_offline=true`` environment variable, installing "
+"Last but not least, since the ``simple`` buildsystem is being used, a "
+"list of build commands must be provided. As can be seen, ``npm`` is run "
+"with the ``npm_config_offline=true`` environment variable, installing "
 "dependencies from packages that have already been cached. These are "
 "copied to ``/app/main/``. Finally the ``run.sh`` script is installed to "
 "``/app/bin/`` so that it will be on ``$PATH``:"
@@ -368,7 +382,7 @@ msgstr ""
 "选项运行，使用的包已经缓存好了。这些被拷贝到了 ``/app/main/`` 。最后 ``run.sh`` 脚本安装到了 "
 "``/app/bin/`` ，所以最后它会在 ``$PATH`` ："
 
-#: ../../electron.rst:290
+#: ../../electron.rst:304
 msgid ""
 "Note that if the application you are trying to package contains a "
 "``build`` block in ``package.json`` with instructions for Linux, this can"
@@ -377,18 +391,18 @@ msgid ""
 "configuration that will try to download AppImage binaries:"
 msgstr ""
 
-#: ../../electron.rst:300
+#: ../../electron.rst:314
 msgid ""
 "The preferred way of fixing this, is not a patch, but a build-time edit "
 "using ``jq``. The following command will replace ``\"target\": "
 "\"AppImage\"`` with ``\"target\": \"dir\"``:"
 msgstr ""
 
-#: ../../electron.rst:307
+#: ../../electron.rst:321
 msgid "Make setProgressBar and setBadgeCount work"
 msgstr ""
 
-#: ../../electron.rst:308
+#: ../../electron.rst:322
 msgid ""
 "The `setProgressBar <https://www.electronjs.org/docs/latest/api/browser-"
 "window#winsetprogressbarprogress-options>`_ and `setBadgeCount "
@@ -402,7 +416,7 @@ msgid ""
 "extension and `Plank <https://launchpad.net/plank>`_."
 msgstr ""
 
-#: ../../electron.rst:311
+#: ../../electron.rst:325
 msgid ""
 "To make it work in Flatpak, the app needs to :ref:`use the correct "
 "desktop filename <use-correct-desktop-filename>` in its embedded "
@@ -479,5 +493,67 @@ msgstr ""
 #~ "Unity or KDE "
 #~ "<https://github.com/electron/electron/blob/fb88375ab4d2161dbf7e958a2a94c7c6d97dc84c/shell/browser/linux/unity_service.cc#L64>`_"
 #~ " before using the UnityLauncherAPI."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The sample app also configures "
+#~ "pulseaudio for sound and enables network"
+#~ " access."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Native wayland support in electron is"
+#~ " experimental and often unstable. It "
+#~ "is advised to stick with the X11"
+#~ " and Xwayland configuration above as "
+#~ "the default."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To enable experimental `native Wayland` "
+#~ "support in Electron>=20, the ``--ozone-"
+#~ "platform-hint=auto`` flag can be passed "
+#~ "to the program. `auto` will choose "
+#~ "Wayland when the session is wayland "
+#~ "and Xwayland or X11 otherwise."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The recommended option is to leave "
+#~ "it to the user. So ``--socket=x11`` "
+#~ "should be used in manifest and "
+#~ "Wayland can be tested with::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To make native wayland the `default` "
+#~ "for users ``--socket=fallback-x11`` and "
+#~ "``--socket=wayland`` must be used in the"
+#~ " manifest."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For Electron versions between 17 and "
+#~ "27, client-side window decorations in"
+#~ " native wayland can be enabled by "
+#~ "passing ``--enable-features=WaylandWindowDecorations``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Electron uses ``libnotify`` on Linux to"
+#~ " provide desktop notifications. libnotify "
+#~ "`since 0.8.0 "
+#~ "<https://gitlab.gnome.org/GNOME/libnotify/-/merge_requests/27>`_ "
+#~ "automatically uses the `notification portal"
+#~ " <https://flatpak.github.io/xdg-desktop-portal/docs"
+#~ "/doc-org.freedesktop.portal.Notification.html>`_ when "
+#~ "inside a sandboxed environment and "
+#~ "``--talk-name=org.freedesktop.Notifications`` is not"
+#~ " required."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``org.electronjs.Electron2.BaseApp`` since "
+#~ "``branch/23.08`` comes with ``libnotify>=0.8.0``"
 #~ msgstr ""
 
