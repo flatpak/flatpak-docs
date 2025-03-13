@@ -603,6 +603,9 @@ These are only in Freedesktop SDK:
   tools to aid building applications or provide language support for
   development tools such as IDEs.
 
+  SDK extensions available on Flathub are listed
+  `here <https://github.com/orgs/flathub/repositories?q=org.freedesktop.Sdk.Extension.>`_.
+
   The application developer needs to explicitly add these extensions
   in the manifest by using ``sdk-extensions`` when building an app.
 
