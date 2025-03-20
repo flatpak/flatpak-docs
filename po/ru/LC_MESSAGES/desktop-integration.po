@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak-docs/issues\n"
-"POT-Creation-Date: 2024-12-01 08:05+0530\n"
+"POT-Creation-Date: 2025-03-20 23:19+0530\n"
 "PO-Revision-Date: 2023-11-07 00:57+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
 "Language: ru\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../desktop-integration.rst:2
 msgid "Desktop Integration"
@@ -358,27 +358,24 @@ msgid "Theming"
 msgstr "Тематика"
 
 #: ../../desktop-integration.rst:149
-#, fuzzy
 msgid ""
-"Flatpak applications cannot directly use the system theme because "
-"flatpaks do not have access to data files or libraries in ``/usr`` (where"
-" system themes are typically located). The solution is to package themes "
-"as flatpaks; relying on the host to have the correct version for every "
-"flatpak defeats the portability benefits Flatpak provides. These themes "
+"Flatpak applications cannot directly use the system theme from the host "
+"as the ``/usr`` directory inside the sandbox is reserved by the runtime, "
+"and host's ``/usr`` where system themes are typically stored cannot be "
+"made available over that. Additionally, themes often depend on specific "
+"toolkit versions, which may differ between the host and the runtime. "
+"Relying on the host to have the correct version for every flatpak also "
+"defeats the portability benefits Flatpak provides."
+msgstr ""
+
+#: ../../desktop-integration.rst:157
+msgid ""
+"The solution to this is to package the themes as flatpaks. These themes "
 "are provided as :doc:`extension` to the Freedesktop runtime for Gtk3 "
 "themes and to the KDE runtime for Qt themes."
 msgstr ""
-"Приложения Flatpak не могут напрямую использовать системную тему. Это "
-"происходит потому, что у flatpaks нет возможности использовать файлы "
-"данных или библиотеки в ``/usr`` (где обычно находятся системные темы). "
-"Решением было упаковать темы как Flatpaks, поскольку надежда на то, что "
-"хост будет иметь правильную версию для каждого Flatpak, лишает его "
-"преимуществ переносимости. Эти темы предоставляются как `расширения "
-"<https://github.com/flatpak/flatpak/wiki/Extensions>`_, для среды "
-"выполнения Freedesktop, когда точкой расширения является Gtk, и для среды"
-" выполнения KDE, когда точкой расширения является Qt."
 
-#: ../../desktop-integration.rst:157
+#: ../../desktop-integration.rst:161
 #, fuzzy
 msgid ""
 "The theming system requires Flatpak 0.8.4+ and applications using up-to-"
@@ -389,54 +386,54 @@ msgstr ""
 "версию org.gnome.Platform 3.24+, org.freedesktop.Platform 1.6+ или "
 "org.kde.Platform. 5.9+."
 
-#: ../../desktop-integration.rst:162
+#: ../../desktop-integration.rst:166
 msgid "Installing themes"
 msgstr "Установка тем"
 
-#: ../../desktop-integration.rst:165
+#: ../../desktop-integration.rst:169
 #, fuzzy
 msgid "Instructions for Gtk themes"
 msgstr "Инструкции для Gtk"
 
-#: ../../desktop-integration.rst:167
+#: ../../desktop-integration.rst:171
 msgid ""
 "As of Flatpak 0.10.1, Flatpak can automatically detect the active Gtk "
 "theme on the host by reading the value of the ``gtk-theme`` DConf key."
 msgstr ""
 
-#: ../../desktop-integration.rst:170
+#: ../../desktop-integration.rst:174
 msgid ""
 "If the corresponding theme is packaged as an extension in the remote, "
 "Flatpak will automatically install it during ``flatpak install`` or "
 "``flatpak update``."
 msgstr ""
 
-#: ../../desktop-integration.rst:175
+#: ../../desktop-integration.rst:179
 #, fuzzy
 msgid "Instructions for Qt themes"
 msgstr "Инструкции для Qt"
 
-#: ../../desktop-integration.rst:177
+#: ../../desktop-integration.rst:181
 msgid ""
 "There are a few Qt theme extensions packaged on Flathub. To see a list, "
 "you can run::"
 msgstr ""
 
-#: ../../desktop-integration.rst:182
+#: ../../desktop-integration.rst:186
 msgid "Then you can install the theme with::"
 msgstr ""
 
-#: ../../desktop-integration.rst:186
+#: ../../desktop-integration.rst:190
 msgid ""
 "replacing ``Foo`` with the name of the desired theme. The theme needs to "
 "be available for the KDE runtime branch used by the application."
 msgstr ""
 
-#: ../../desktop-integration.rst:190
+#: ../../desktop-integration.rst:194
 msgid "Gtk look and feel in Qt applications"
 msgstr ""
 
-#: ../../desktop-integration.rst:192
+#: ../../desktop-integration.rst:196
 msgid ""
 "On Wayland, starting from the 5.15-22.08+ and 6.5+ branches of the "
 "``org.kde.Platform`` runtime, "
@@ -447,35 +444,35 @@ msgid ""
 "file#usage>`_ instructions as well."
 msgstr ""
 
-#: ../../desktop-integration.rst:198
+#: ../../desktop-integration.rst:202
 msgid "These plugins will be part of upstream starting at Qt 6.8."
 msgstr ""
 
-#: ../../desktop-integration.rst:200
+#: ../../desktop-integration.rst:204
 msgid ""
 "For older runtimes, ``org.kde.PlatformTheme.QGnomePlatform`` and "
 "``org.kde.WaylandDecoration.QGnomePlatform-decoration`` need to be "
 "installed."
 msgstr ""
 
-#: ../../desktop-integration.rst:205
+#: ../../desktop-integration.rst:209
 msgid "Applying themes"
 msgstr "Применение тем"
 
-#: ../../desktop-integration.rst:207
+#: ../../desktop-integration.rst:211
 msgid ""
 "The prerequisite for applying themes in Flatpak is to have the theme "
 "available to the application in the sandbox, commonly done by packaging "
 "them as theme extensions."
 msgstr ""
 
-#: ../../desktop-integration.rst:211
+#: ../../desktop-integration.rst:215
 msgid ""
 "Now the system theme needs to be communicated from the host to the "
 "sandbox."
 msgstr ""
 
-#: ../../desktop-integration.rst:213
+#: ../../desktop-integration.rst:217
 msgid ""
 "On X11, Gtk3 picks up themes from XSettings. Specifically, on GNOME, the "
 "GNOME XSettings daemon ``gsd-xsettings`` reads the DConf values and "
@@ -483,28 +480,28 @@ msgid ""
 "default, provided ``gsd-xsettings`` is running."
 msgstr ""
 
-#: ../../desktop-integration.rst:218
+#: ../../desktop-integration.rst:222
 msgid ""
 "On Wayland, the active theme is exposed via the corresponding Settings "
 "portal. This requires the portal backend for the desktop environment to "
 "be installed."
 msgstr ""
 
-#: ../../desktop-integration.rst:222
+#: ../../desktop-integration.rst:226
 msgid ""
 "Once the theme is installed and exposed in the sandbox, it will be "
 "automatically applied, depending on the toolkit or libraries used by the "
 "application."
 msgstr ""
 
-#: ../../desktop-integration.rst:226
+#: ../../desktop-integration.rst:230
 msgid ""
 "If the theme is not available via Flatpak extensions, or either the "
 "Settings portal or XSettings support is lacking, Gtk and Qt applications "
 "will fall back to using Adwaita or the default Qt theme."
 msgstr ""
 
-#: ../../desktop-integration.rst:230
+#: ../../desktop-integration.rst:234
 msgid ""
 "In that case, either the theme needs to be packaged as an extension, or "
 "the application needs to have permission to read the theme and Gtk or Qt "
@@ -514,18 +511,18 @@ msgid ""
 "for the Settings portal or XSettings daemon."
 msgstr ""
 
-#: ../../desktop-integration.rst:237
+#: ../../desktop-integration.rst:241
 msgid ""
 "If a Gtk theme is not packaged as an extension, an unmaintained extension"
 " can be created for it. Please see :ref:`extension:Creating an "
 "unmaintained Gtk theme extension`."
 msgstr ""
 
-#: ../../desktop-integration.rst:242
+#: ../../desktop-integration.rst:246
 msgid "Appearance Settings"
 msgstr ""
 
-#: ../../desktop-integration.rst:244
+#: ../../desktop-integration.rst:248
 msgid ""
 "Appearance settings, such as the Freedesktop color-scheme preference, are"
 " also exposed similarly via the respective Settings portal. The "
@@ -533,43 +530,43 @@ msgid ""
 "need to be installed for this to work."
 msgstr ""
 
-#: ../../desktop-integration.rst:250
+#: ../../desktop-integration.rst:254
 msgid "Icons"
 msgstr ""
 
-#: ../../desktop-integration.rst:252
+#: ../../desktop-integration.rst:256
 msgid ""
 "Since Flatpak 0.8.8, host icons from ``/usr/share/icons`` are exposed in "
 "the sandbox at ``/run/host/share/icons`` and ``$XDG_DATA_HOME/icons`` in "
 "``/run/host/user-share/icons``."
 msgstr ""
 
-#: ../../desktop-integration.rst:256
+#: ../../desktop-integration.rst:260
 msgid "``~/.icons`` is a legacy path and should not be used."
 msgstr ""
 
-#: ../../desktop-integration.rst:259
+#: ../../desktop-integration.rst:263
 msgid "Fonts"
 msgstr ""
 
-#: ../../desktop-integration.rst:261
+#: ../../desktop-integration.rst:265
 msgid ""
 "Flatpak exposes fonts from the host to the sandbox, and the runtime ships"
 " the default fontconfig from upstream."
 msgstr ""
 
-#: ../../desktop-integration.rst:264
+#: ../../desktop-integration.rst:268
 msgid ""
 "Fonts from ``/usr/share/fonts`` are exposed at ``/run/host/fonts``, from "
 "``/usr/local/share/fonts`` at ``/run/host/local-fonts``, and from "
 "``$XDG_DATA_HOME/fonts`` at ``/run/host/user-fonts``."
 msgstr ""
 
-#: ../../desktop-integration.rst:268
+#: ../../desktop-integration.rst:272
 msgid "``~/.fonts`` is a legacy path and should not be used."
 msgstr ""
 
-#: ../../desktop-integration.rst:270
+#: ../../desktop-integration.rst:274
 msgid "Fontconfig config files from the host are not exposed."
 msgstr ""
 
@@ -1080,4 +1077,37 @@ msgstr ""
 
 #~ msgid "Fontconfig config files from host are not exposed."
 #~ msgstr ""
+
+#~ msgid ""
+#~ "Flatpak applications cannot directly use "
+#~ "the system theme because flatpaks do "
+#~ "not have access to data files or"
+#~ " libraries in ``/usr`` (where system "
+#~ "themes are typically located). The "
+#~ "solution is to package themes as "
+#~ "flatpaks; relying on the host to "
+#~ "have the correct version for every "
+#~ "flatpak defeats the portability benefits "
+#~ "Flatpak provides. These themes are "
+#~ "provided as :doc:`extension` to the "
+#~ "Freedesktop runtime for Gtk3 themes and"
+#~ " to the KDE runtime for Qt "
+#~ "themes."
+#~ msgstr ""
+#~ "Приложения Flatpak не могут напрямую "
+#~ "использовать системную тему. Это происходит"
+#~ " потому, что у flatpaks нет "
+#~ "возможности использовать файлы данных или "
+#~ "библиотеки в ``/usr`` (где обычно "
+#~ "находятся системные темы). Решением было "
+#~ "упаковать темы как Flatpaks, поскольку "
+#~ "надежда на то, что хост будет "
+#~ "иметь правильную версию для каждого "
+#~ "Flatpak, лишает его преимуществ переносимости."
+#~ " Эти темы предоставляются как `расширения"
+#~ " <https://github.com/flatpak/flatpak/wiki/Extensions>`_, для"
+#~ " среды выполнения Freedesktop, когда точкой"
+#~ " расширения является Gtk, и для среды"
+#~ " выполнения KDE, когда точкой расширения"
+#~ " является Qt."
 
