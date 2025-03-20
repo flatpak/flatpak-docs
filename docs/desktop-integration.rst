@@ -88,7 +88,7 @@ using, it may need session bus ownership of ``org.kde.StatusNotifierItem-$PID-$I
 
 This permission is problematic in Flatpak as the ``$PID`` value is often the same
 in sandboxes, leading to potential conflicts with other applications.
-However, if needed, the ``--own-name=org.kde.*`` permission will allow this. 
+However, if needed, the ``--own-name=org.kde.*`` permission will allow this.
 
 .. warning::
   This introduces many new risks, including the ability to impersonate any KDE
@@ -146,13 +146,17 @@ it will work as expected within a sandboxed application.
 Theming
 -------
 
-Flatpak applications cannot directly use the system theme because flatpaks
-do not have access to data files or libraries in ``/usr`` (where system
-themes are typically located). The solution is to package themes as
-flatpaks; relying on the host to have the correct version for every
-flatpak defeats the portability benefits Flatpak provides. These themes are
-provided as :doc:`extension` to the Freedesktop runtime for Gtk3 themes
-and to the KDE runtime for Qt themes.
+Flatpak applications cannot directly use the system theme from the host
+as the ``/usr`` directory inside the sandbox is reserved by the runtime,
+and host's ``/usr`` where system themes are typically stored cannot be
+made available over that. Additionally, themes often depend on
+specific toolkit versions, which may differ between the host and the
+runtime. Relying on the host to have the correct version for every
+flatpak also defeats the portability benefits Flatpak provides.
+
+The solution to this is to package the themes as flatpaks. These themes
+are provided as :doc:`extension` to the Freedesktop runtime for Gtk3
+themes and to the KDE runtime for Qt themes.
 
 The theming system requires Flatpak 0.8.4+ and applications using
 up-to-date ``org.gnome.Platform`` 3.24+, ``org.freedesktop.Platform`` 1.6+,
