@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Flatpak Command Reference</title><link rel="stylesheet" type="text/css" href="docbook.css" /><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" /></head><body><div class="reference"><div class="titlepage"><div><div><h1 class="title"><a id="id1337"></a>Flatpak Command Reference</h1></div><div><p class="releaseinfo">Version 1.16.0</p></div></div><hr /></div><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Important</h3><p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Flatpak Command Reference</title><link rel="stylesheet" type="text/css" href="docbook.css" /><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" /></head><body><div class="reference"><div class="titlepage"><div><div><h1 class="title"><a id="id1337"></a>Flatpak Command Reference</h1></div><div><p class="releaseinfo">Version 1.16.1</p></div></div><hr /></div><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Important</h3><p>
             The command reference is generated from the flatpak repo; see <a class="ulink" href="https://github.com/flatpak/flatpak/tree/main/doc" target="_top">https://github.com/flatpak/flatpak/tree/main/doc</a>
         </p></div><div class="partintro"><div></div><p>
         Flatpak comes with a rich commandline interface.
@@ -183,13 +183,98 @@
                     Information about an application or runtime
                 </p></dd></dl></div></div><div class="refsect1"><a id="id1345"></a><h2>Environment</h2><p>
               Besides standard environment variables such as <code class="envar">XDG_DATA_DIRS</code> and
-              <code class="envar">XDG_DATA_HOME</code>, flatpak is consulting some of its own.
-            </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="envar">FLATPAK_FANCY_OUTPUT</code></span></dt><dd><p>
+              <code class="envar">XDG_DATA_HOME</code>, flatpak consults some of its own.
+            </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="envar">FLATPAK_BINARY</code></span></dt><dd><p>
+                        Path to the flatpak executable that will be written
+                        into exported <code class="filename">.desktop</code> files
+                        and scripts when an app is installed.
+                        The default is <code class="filename">/usr/bin/flatpak</code>,
+                        unless overridden at build time by
+                        <code class="option">--bindir</code>.
+                    </p></dd><dt><span class="term"><code class="envar">FLATPAK_BWRAP</code></span></dt><dd><p>
+                        Path to the
+                        <a class="citerefentry" href="#bwrap"><span class="citerefentry"><span class="refentrytitle">bwrap</span>(1)</span></a>
+                        executable that will be used to create the sandbox.
+                        Depending on how Flatpak was configured at build-time,
+                        the default is either to search the
+                        <code class="envar">PATH</code>,
+                        or use a vendored copy which is normally installed as
+                        <code class="filename">/usr/libexec/flatpak-bwrap</code>.
+                    </p></dd><dt><span class="term"><code class="envar">FLATPAK_CONFIG_DIR</code></span></dt><dd><p>
+                      The location of flatpak site configuration. If this is not set,
+                      <code class="filename">/etc/flatpak</code> is used (unless overridden at build
+                      time by --sysconfdir).
+                    </p></dd><dt><span class="term"><code class="envar">FLATPAK_DATA_DIR</code></span></dt><dd><p>
+                        The location of Flatpak's OS-level defaults and
+                        integration hooks.
+                        If this is not set,
+                        <code class="filename">/usr/share/flatpak</code> is used,
+                        unless overridden at build time by
+                        <code class="option">--datadir</code>.
+                    </p></dd><dt><span class="term"><code class="envar">FLATPAK_DBUSPROXY</code></span></dt><dd><p>
+                        Path to the
+                        <a class="citerefentry" href="#xdg-dbus-proxy"><span class="citerefentry"><span class="refentrytitle">xdg-dbus-proxy</span>(1)</span></a>
+                        executable that will be used to filter D-Bus
+                        traffic between the sandbox and the host system.
+                        Depending on how Flatpak was configured at build-time,
+                        the default is either to search the
+                        <code class="envar">PATH</code>,
+                        or use a vendored copy which is normally installed as
+                        <code class="filename">/usr/libexec/flatpak-dbus-proxy</code>.
+                    </p></dd><dt><span class="term"><code class="envar">FLATPAK_DOWNLOAD_TMPDIR</code></span></dt><dd><p>
+                        Path to a directory that will be used temporarily
+                        when downloading OCI layers,
+                        and potentially for other downloads in future.
+                        The standard <code class="envar">TMPDIR</code> is not used
+                        for this,
+                        because Flatpak apps are frequently too large to
+                        fit on a tmpfs.
+                    </p></dd><dt><span class="term"><code class="envar">FLATPAK_FANCY_OUTPUT</code></span></dt><dd><p>
                         May be set to <code class="literal">0</code> to avoid fancy
                         formatting when outputting to a terminal.
                         This feature is also disabled automatically when
                         standard output is not a terminal,
                         or when <code class="envar">G_MESSAGES_DEBUG</code> is set.
+                    </p></dd><dt><span class="term"><code class="envar">FLATPAK_FORCE_TEXT_AUTH</code></span></dt><dd><p>
+                        May be set to <code class="literal">1</code> to force use of
+                        a simple built-in
+                        <a class="citerefentry" href="#polkit"><span class="citerefentry"><span class="refentrytitle">polkit</span>(8)</span></a>
+                        agent when authentication is required to modify
+                        the system-wide installation.
+                        By default,
+                        the desktop environment's polkit agent is used,
+                        if one is available,
+                        usually resulting in a graphical prompt.
+                    </p></dd><dt><span class="term"><code class="envar">FLATPAK_GL_DRIVERS</code></span></dt><dd><p>
+                        A colon-separated list of graphics driver extensions
+                        to try to use for OpenGL, Vulkan and similar APIs,
+                        most-preferred first.
+                        The default is to select a graphics driver
+                        automatically.
+                        Values in this list match the last dot-separated
+                        component of the names of extensions with the
+                        <code class="literal">active-gl-driver</code> condition.
+                        Typical values are
+                        <code class="literal">default</code>,
+                        <code class="literal">mesa-git</code> or
+                        <code class="literal">nvidia-550-120</code>
+                        (replacing the version number by the major and minor
+                        version of the <code class="literal">nvidia</code> kernel module).
+                    </p></dd><dt><span class="term"><code class="envar">FLATPAK_RUN_DIR</code></span></dt><dd><p>
+                      The location of flatpak runtime global files. If this is not set,
+                      <code class="filename">/run/flatpak</code> is used.
+                    </p></dd><dt><span class="term"><code class="envar">FLATPAK_SYSTEM_CACHE_DIR</code></span></dt><dd><p>
+                      The location where temporary child repositories will be created during pulls
+                      into the system-wide installation.  If this is not set, a directory in
+                      <code class="filename">/var/tmp/</code> is used. This is useful because it is more
+                      likely to be on the same filesystem as the system repository (thus increasing
+                      the chances for e.g. reflink copying), and we can avoid filling the user's
+                      home directory with temporary data.
+                    </p></dd><dt><span class="term"><code class="envar">FLATPAK_SYSTEM_DIR</code></span></dt><dd><p>
+                      The location of the default system-wide installation. If this is not set,
+                      <code class="filename">/var/lib/flatpak</code> is used (unless overridden at build
+                      time by <code class="option">--localstatedir</code> or
+                      <code class="option">-Dsystem_install_dir</code>).
                     </p></dd><dt><span class="term"><code class="envar">FLATPAK_TTY_PROGRESS</code></span></dt><dd><p>
                         May be set to <code class="literal">1</code> to enable reporting
                         machine-readable progress to the terminal.
@@ -200,24 +285,6 @@
                     </p></dd><dt><span class="term"><code class="envar">FLATPAK_USER_DIR</code></span></dt><dd><p>
                       The location of the per-user installation. If this is not set,
                       <code class="filename">$XDG_DATA_HOME/flatpak</code> is used.
-                    </p></dd><dt><span class="term"><code class="envar">FLATPAK_SYSTEM_DIR</code></span></dt><dd><p>
-                      The location of the default system-wide installation. If this is not set,
-                      <code class="filename">/var/lib/flatpak</code> is used (unless overridden at build
-                      time by --localstatedir or --with-system-install-dir).
-                    </p></dd><dt><span class="term"><code class="envar">FLATPAK_SYSTEM_CACHE_DIR</code></span></dt><dd><p>
-                      The location where temporary child repositories will be created during pulls
-                      into the system-wide installation.  If this is not set, a directory in
-                      <code class="filename">/var/tmp/</code> is used. This is useful because it is more
-                      likely to be on the same filesystem as the system repository (thus increasing
-                      the chances for e.g. reflink copying), and we can avoid filling the user's
-                      home directory with temporary data.
-                    </p></dd><dt><span class="term"><code class="envar">FLATPAK_CONFIG_DIR</code></span></dt><dd><p>
-                      The location of flatpak site configuration. If this is not set,
-                      <code class="filename">/etc/flatpak</code> is used (unless overridden at build
-                      time by --sysconfdir).
-                    </p></dd><dt><span class="term"><code class="envar">FLATPAK_RUN_DIR</code></span></dt><dd><p>
-                      The location of flatpak runtime global files. If this is not set,
-                      <code class="filename">/run/flatpak</code> is used.
                     </p></dd></dl></div></div><div class="refsect1"><a id="id1346"></a><h2>See also</h2><p>
                 <a class="citerefentry" href="#ostree"><span class="citerefentry"><span class="refentrytitle">ostree</span>(1)</span></a>,
                 <a class="citerefentry" href="#ostree.repo"><span class="citerefentry"><span class="refentrytitle">ostree.repo</span>(5)</span></a>,
@@ -2119,12 +2186,6 @@ key=v1;v2;
           Lists dynamic permissions for the given app which are stored
           in the Flatpak permission store.
         </p><p>
-          When called without arguments, lists all
-          the entries in all permission store tables. When called
-          with one argument, lists all the entries in the named
-          table. When called with two arguments, lists the entry
-          in the named table for the given object ID.
-        </p><p>
           The permission store is used by portals.
           Each portal generally has its own table in the permission
           store, and the format of the table entries is specific to
@@ -2828,7 +2889,7 @@ testrepo	Test Repository	 http://209.132.179.91/repo/ no-gpg-verify
             as well as the <code class="option">--env</code> option. Apart from that, Flatpak always
             unsets or overrides the following variables, since their session values
             are likely to interfere with the functioning of the sandbox:
-        </p><table border="0" summary="Simple list" class="simplelist"><tr><td>PATH</td></tr><tr><td>LD_LIBRARY_PATH</td></tr><tr><td>LD_PRELOAD</td></tr><tr><td>LD_AUDIT</td></tr><tr><td>XDG_CONFIG_DIRS</td></tr><tr><td>XDG_DATA_DIRS</td></tr><tr><td>SHELL</td></tr><tr><td>TEMP</td></tr><tr><td>TEMPDIR</td></tr><tr><td>TMP</td></tr><tr><td>TMPDIR</td></tr><tr><td>XDG_RUNTIME_DIR</td></tr><tr><td>container</td></tr><tr><td>TZDIR</td></tr><tr><td>PYTHONPATH</td></tr><tr><td>PERLLIB</td></tr><tr><td>PERL5LIB</td></tr><tr><td>XCURSOR_PATH</td></tr><tr><td>GST_PLUGIN_PATH_1_0</td></tr><tr><td>GST_REGISTRY</td></tr><tr><td>GST_REGISTRY_1_0</td></tr><tr><td>GST_PLUGIN_PATH</td></tr><tr><td>GST_PLUGIN_SYSTEM_PATH</td></tr><tr><td>GST_PLUGIN_SCANNER</td></tr><tr><td>GST_PLUGIN_SCANNER_1_0</td></tr><tr><td>GST_PLUGIN_SYSTEM_PATH_1_0</td></tr><tr><td>GST_PRESET_PATH</td></tr><tr><td>GST_PTP_HELPER</td></tr><tr><td>GST_PTP_HELPER_1_0</td></tr><tr><td>GST_INSTALL_PLUGINS_HELPER</td></tr><tr><td>KRB5CCNAME</td></tr><tr><td>XKB_CONFIG_ROOT</td></tr><tr><td>GIO_EXTRA_MODULES</td></tr><tr><td>GDK_BACKEND</td></tr><tr><td>VK_ADD_DRIVER_FILES</td></tr><tr><td>VK_ADD_LAYER_PATH</td></tr><tr><td>VK_DRIVER_FILES</td></tr><tr><td>VK_ICD_FILENAMES</td></tr><tr><td>VK_LAYER_PATH</td></tr><tr><td>__EGL_EXTERNAL_PLATFORM_CONFIG_DIRS</td></tr><tr><td>__EGL_EXTERNAL_PLATFORM_CONFIG_FILENAMES</td></tr><tr><td>__EGL_VENDOR_LIBRARY_DIRS</td></tr><tr><td>__EGL_VENDOR_LIBRARY_FILENAMES</td></tr></table><p>
+        </p><table border="0" summary="Simple list" class="simplelist"><tr><td>PATH</td></tr><tr><td>LD_LIBRARY_PATH</td></tr><tr><td>LD_PRELOAD</td></tr><tr><td>LD_AUDIT</td></tr><tr><td>XDG_CONFIG_DIRS</td></tr><tr><td>XDG_DATA_DIRS</td></tr><tr><td>SHELL</td></tr><tr><td>TEMP</td></tr><tr><td>TEMPDIR</td></tr><tr><td>TMP</td></tr><tr><td>TMPDIR</td></tr><tr><td>XDG_RUNTIME_DIR</td></tr><tr><td>container</td></tr><tr><td>TZDIR</td></tr><tr><td>PYTHONPATH</td></tr><tr><td>PYTHONPYCACHEPREFIX</td></tr><tr><td>PERLLIB</td></tr><tr><td>PERL5LIB</td></tr><tr><td>XCURSOR_PATH</td></tr><tr><td>GST_PLUGIN_PATH_1_0</td></tr><tr><td>GST_REGISTRY</td></tr><tr><td>GST_REGISTRY_1_0</td></tr><tr><td>GST_PLUGIN_PATH</td></tr><tr><td>GST_PLUGIN_SYSTEM_PATH</td></tr><tr><td>GST_PLUGIN_SCANNER</td></tr><tr><td>GST_PLUGIN_SCANNER_1_0</td></tr><tr><td>GST_PLUGIN_SYSTEM_PATH_1_0</td></tr><tr><td>GST_PRESET_PATH</td></tr><tr><td>GST_PTP_HELPER</td></tr><tr><td>GST_PTP_HELPER_1_0</td></tr><tr><td>GST_INSTALL_PLUGINS_HELPER</td></tr><tr><td>KRB5CCNAME</td></tr><tr><td>XKB_CONFIG_ROOT</td></tr><tr><td>GIO_EXTRA_MODULES</td></tr><tr><td>GDK_BACKEND</td></tr><tr><td>VK_ADD_DRIVER_FILES</td></tr><tr><td>VK_ADD_LAYER_PATH</td></tr><tr><td>VK_DRIVER_FILES</td></tr><tr><td>VK_ICD_FILENAMES</td></tr><tr><td>VK_LAYER_PATH</td></tr><tr><td>__EGL_EXTERNAL_PLATFORM_CONFIG_DIRS</td></tr><tr><td>__EGL_EXTERNAL_PLATFORM_CONFIG_FILENAMES</td></tr><tr><td>__EGL_VENDOR_LIBRARY_DIRS</td></tr><tr><td>__EGL_VENDOR_LIBRARY_FILENAMES</td></tr></table><p>
             Also several environment variables with the prefix "GST_" that are used by gstreamer
             are unset (since Flatpak 1.12.5).
         </p><p>
@@ -4005,47 +4066,49 @@ StorageType=sdcard
             </p><p>
                 The default policy for the session bus only allows the
                 application to own its own application ID, its
-                subnames and its own application id as a subname of 
-                "org.mpris.MediaPlayer2". For instance if the app is called
-                "org.my.App", it can only own "org.my.App", "org.my.App.*"
-                and "org.mpris.MediaPlayer2.org.my.App".
+                subnames and its own application ID as a subname of
+                <code class="option">org.mpris.MediaPlayer2</code>. For instance if the app is called
+                <code class="option">org.my.App</code>, it can only own <code class="option">org.my.App</code>,
+                <code class="option">org.my.App.*</code>
+                and <code class="option">org.mpris.MediaPlayer2.org.my.App</code>.
                 It is only allowed to talk to names matching those patterns, plus
-                the bus itself (org.freedesktop.DBus)
-                and the portal APIs (bus names of the form org.freedesktop.portal.*).
+                the bus itself (<code class="option">org.freedesktop.DBus</code>)
+                and the portal APIs (bus names of the form <code class="option">org.freedesktop.portal.*</code>).
             </p><p>
                 Additionally the app is always allowed to reply to
                 messages sent to it, and emit broadcast signals (but
                 these will not reach other sandboxed apps unless they
                 are allowed to talk to your app.
             </p><p>
-                If the [Session Bus Policy] group is present, it provides
+                If the <code class="option">[Session Bus Policy]</code> group is present, it provides
                 policy for session bus access.
             </p><p>
                 Each key in this group has the form of a D-Bus bus name or
                 prefix thereof, for example <code class="option">org.gnome.SessionManager</code>
-                or <code class="option">org.freedesktop.portal.*</code>
+                or <code class="option">org.freedesktop.portal.*</code>.
             </p><p>
-                The possible values for entry are, in increasing order or
-                access:
+                The possible values for an entry are the following, in increasing order of
+                access. Each value implies all the access from any lower values:
             </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="option">none</code></span></dt><dd><p>
-                        The bus name or names in question is invisible to the application.
+                        The bus name is invisible to the application.
                         Available since 0.2.
                     </p></dd><dt><span class="term"><code class="option">see</code></span></dt><dd><p>
-                        The bus name or names can be enumerated by the application.
+                        The bus name can be enumerated by the application.
                         Available since 0.2.
                     </p></dd><dt><span class="term"><code class="option">talk</code></span></dt><dd><p>
-                        The application can send messages/ and receive replies and signals from the bus name or names.
+                        The application can send messages to, and receive replies and signals from, the bus name.
                         Available since 0.2.
                     </p></dd><dt><span class="term"><code class="option">own</code></span></dt><dd><p>
-                        The application can own the bus name or names (as well as all the above).
+                        The application can own the bus name.
                         Available since 0.2.
                     </p></dd></dl></div></div><div class="refsect2"><a id="system-bus-policy-metadata"></a><h3>[System Bus Policy]</h3><p>
                 If the <code class="option">sockets</code> key is not allowing full access
                 to the D-Bus system bus, then flatpak does not make the system
-                bus available unless the [System Bus Policy] group is present
+                bus available unless the <code class="option">[System Bus Policy]</code> group is present
                 and provides a policy for filtered access. Available since 0.2.
             </p><p>
-                Entries in this group have the same form as for the [Session Bus Policy] group.
+                Entries in this group have the same form as for the
+                <code class="option">[Session Bus Policy]</code> group.
                 However, the app has no permissions by default.
             </p></div><div class="refsect2"><a id="environment-metadata"></a><h3>[Environment]</h3><p>
                 The [Environment] group specifies environment variables to set
@@ -4283,6 +4346,11 @@ directory=lib/debug
                       is a Flatpak extension that indicates that the remote is not an ostree
                       repository, but is rather an URL to an index of OCI images that are stored
                       within a container image registry.
+                    </p><p>
+                      For OCI remotes, client and CA certificates are read from
+                      <code class="filename">/etc/containers/certs.d</code> and
+                      <code class="filename">~/.config/containers/certs.d</code> as documented in
+                      <a class="citerefentry" href="#containers-certs.d"><span class="citerefentry"><span class="refentrytitle">containers-certs.d</span>(5)</span></a>.
                     </p></dd><dt><span class="term"><code class="option">gpg-verify</code> (boolean)</span></dt><dd><p>Whether to use GPG verification for content from this remote.</p></dd><dt><span class="term"><code class="option">gpg-verify-summary</code> (boolean)</span></dt><dd><p>Whether to use GPG verification for the summary of this remote.</p><p>This is ignored if <code class="option">collection-id</code> is set, as refs are verified in commit metadata in that case. Enabling <code class="option">gpg-verify-summary</code> would break peer to peer distribution of refs.</p></dd><dt><span class="term"><code class="option">collection-id</code> (string)</span></dt><dd><p>The globally unique identifier for the upstream collection repository, to allow mirrors to be grouped.</p></dd></dl></div><p>
                 All flatpak-specific keys have a xa. prefix:
             </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="option">xa.disable</code> (boolean)</span></dt><dd><p>Whether the remote is disabled. Defaults to false.</p></dd><dt><span class="term"><code class="option">xa.prio</code> (integer)</span></dt><dd><p>The priority for the remote. This is used when listing remotes, and when
