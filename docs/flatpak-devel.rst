@@ -56,7 +56,7 @@ affect the normal installation.
           - "--socket=x11"
           - "--share=network"
 
-Parallel nigthly and stable applications
+Parallel nightly and stable applications
 ----------------------------------------
 
 In general stable and nightly versions or any two parallel branches
