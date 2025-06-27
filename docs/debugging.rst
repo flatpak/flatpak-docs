@@ -135,7 +135,7 @@ access to ``--filesystem=/sys`` to run::
 
 
 Multiple Debug shells in one sandbox
----------------------------
+------------------------------------
 
 Sometimes it can be helpful to have multiple debugging shells at a time.
 
@@ -154,13 +154,16 @@ Then you can enter this same sandbox from a new terminal window using::
   $ flatpak enter <instance id> /bin/bash
 
 
-Note that this second shell likely will not not be configured identically to the original debug
+Note that this second shell likely will not be configured identically to the original debug
 shell (for example it will likely have different environment variables such as PATH).
 
 
-It may be possible to check whether both shells are indeed in the same sandbox by `checking the namespace <https://unix.stackexchange.com/questions/113530/how-to-find-out-namespace-of-a-particular-process>`_
-for each debug shell.
+You can check whether both shells are indeed in the same sandbox by `checking the namespaces <https://unix.stackexchange.com/a/382406>`_
+visible in each debug shell and verifying that they are the same.
 
+The easiest way to do this is to list the visible namespaces using::
+
+  $ lsns --type pid
 
 
 Creating a Debug extension
