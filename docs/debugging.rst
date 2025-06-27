@@ -115,6 +115,7 @@ to be installed)::
 Using other debugging tools
 ---------------------------
 
+
 ``org.freedesktop.Sdk`` also includes other debugging tools like
 `Valgrind <https://valgrind.org/>`_ which is useful to find memory leaks.
 Once inside the :ref:`debugging:Debug shell`, it can be run with::
@@ -130,6 +131,37 @@ is doing. For example, to trace ``openat(), read()`` calls::
 access to ``--filesystem=/sys`` to run::
 
   $ flatpak run --command=perf --filesystem=/sys --filesystem=$(pwd) --devel $FLATPAK_ID record -v -- <command>
+
+
+
+Multiple Debug shells in one sandbox
+---------------------------
+
+Sometimes it can be helpful to have multiple debugging shells at a time.
+
+For example, some debugging commands such as `dotnet-dump <https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-dump>`_
+expect to be given an identifier for a running process that it will connect to for debugging.
+
+This essentially requires multiple instances of the :ref:`debugging:Debug shell`,
+one to run the app, and one for running the debugging tool.
+
+To accomplish this, locate either the instance or process ID of an existing debug shell with::
+
+  $ flatpak ps
+
+Then you can enter this same sandbox from a new terminal window using::
+
+  $ flatpak enter <instance id> /bin/bash
+
+
+Note that this second shell likely will not not be configured identically to the original debug
+shell (for example it will likely have different environment variables such as PATH).
+
+
+It may be possible to check whether both shells are indeed in the same sandbox by `checking the namespace <https://unix.stackexchange.com/questions/113530/how-to-find-out-namespace-of-a-particular-process>`_
+for each debug shell.
+
+
 
 Creating a Debug extension
 ---------------------------
