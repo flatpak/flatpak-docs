@@ -100,6 +100,19 @@ its respective extension.
 The ``appstreamcli validate --explain`` command can be used to check MetaInfo
 files for errors.
 
+The metainfo file along with the other metadata such as icon and desktop
+files is composed into a catalogue by ``appstream``. Since 1.3.4,
+Flatpak Builder by default uses ``appstreamcli`` from `libappstream <https://github.com/ximion/appstream/>`_
+to compose this and executes the following command::
+
+  $ appstreamcli compose --no-partial-urls --prefix=/ --origin=${FLATPAK_ID} --media-baseurl=<repo-media-url> --media-dir=${FLATPAK_DEST}/share/app-info/media --result-root=${FLATPAK_DEST} --data-dir=${FLATPAK_DEST}/share/app-info/xmls --icons-dir=${FLATPAK_DEST}/share/app-info/icons/flatpak --components=${FLATPAK_ID} ${FLATPAK_DEST}
+
+``${FLATPAK_ID}`` is the Flatpak application ID and ``${FLATPAK_DEST}``
+is set to ``/app`` for apps and ``/usr`` for runtimes. The ``media-baseurl``
+controls the base URL used for mirroring screenshots. Usually each app
+store will have their own base URL for this. On Flathub this is
+set to ``https://dl.flathub.org/media/``.
+
 Application icons
 `````````````````
 
@@ -307,20 +320,6 @@ is provided below::
 
 This is installed as ``/app/share/mime/packages/org.kde.akregator.xml``
 in Akregator.
-
-The metainfo file along with the other metadata such as icon and desktop
-files is composed into a catalogue by ``appstream``. Since 1.3.4,
-Flatpak Builder by default uses ``appstreamcli`` from `libappstream <https://github.com/ximion/appstream/>`_
-to compose this and executes the following command::
-
-  $ appstreamcli compose --no-partial-urls --prefix=/ --origin=${FLATPAK_ID} --media-baseurl=<repo-media-url> --media-dir=${FLATPAK_DEST}/share/app-info/media --result-root=${FLATPAK_DEST} --data-dir=${FLATPAK_DEST}/share/app-info/xmls --icons-dir=${FLATPAK_DEST}/share/app-info/icons/flatpak --components=${FLATPAK_ID} ${FLATPAK_DEST}
-
-
-``${FLATPAK_ID}`` is the Flatpak application ID and ``${FLATPAK_DEST}``
-is set to ``/app`` for apps and ``/usr`` for runtimes. The ``media-baseurl``
-controls the base URL used for mirroring screenshots. Usually each app
-store will have their own base URL for this. On Flathub this is
-set to ``https://dl.flathub.org/media/``.
 
 Technical conventions
 ---------------------
