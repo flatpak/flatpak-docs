@@ -230,6 +230,33 @@ An example is provided below::
   ObjectPath=/org/mozilla/coolapp/SearchProvider
   Version=2
 
+Krunner DBus plugins
+`````````````````````
+
+Krunner DBus plugins offer similar functionality in KDE as GNOME shell
+search providers. Flatpak supports exporting these since 1.16.0 and
+they are also disabled by default.
+
+The plugin file must be installed as
+``${FLATPAK_DEST}/share/krunner/dbusplugins/$NAME.desktop``. ``$NAME``
+can be either the ``$FLATPAK_ID`` or a subname of the Flatpak ID
+(``$FLATPAK_ID.foo``, ``$FLATPAK_ID-foo``).
+
+An example is provided below::
+
+  # Installed as /app/share/krunner/dbusplugins/org.example.coolapp.desktop
+
+  [Desktop Entry]
+  Name=Hello
+  X-KDE-ServiceTypes=Plasma/Runner
+  Type=Service
+  Icon=org.example.coolapp
+  X-KDE-ServiceTypes=Plasma/Runner
+  X-KDE-PluginInfo-EnabledByDefault=true
+  X-Plasma-API=DBus
+  X-Plasma-DBusRunner-Service=org.example.coolapp.KRunner
+  X-Plasma-DBusRunner-Path=/org/example/coolapp/KRunner
+
 The metainfo file along with the other metadata such as icon and desktop
 files is composed into a catalogue by ``appstream``. Since 1.3.4,
 Flatpak Builder by default uses ``appstreamcli`` from `libappstream <https://github.com/ximion/appstream/>`_
