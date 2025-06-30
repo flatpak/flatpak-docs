@@ -206,6 +206,29 @@ provided below::
   Name=org.example.coolapp.foobar
   Exec=/app/bin/coolapp --arg1 --gapplication-service
 
+GNOME shell search providers
+`````````````````````````````
+
+A GNOME Shell search provider is a mechanism by which an application
+can expose its search capabilities to the GNOME Shell. Note that
+Flatpak will mark all search providers files as disabled when exporting
+them.
+
+The search provider file must be installed as
+``${FLATPAK_DEST}/share/gnome-shell/search-providers/$NAME-search-provider.ini``
+
+``$NAME`` can be either the ``$FLATPAK_ID`` or a subname of the Flatpak
+ID (``$FLATPAK_ID.foo``, ``$FLATPAK_ID-foo``).
+
+An example is provided below::
+
+  # Installed as /app/share/gnome-shell/search-providers/org.example.coolapp-search-provider.ini
+
+  [Shell Search Provider]
+  DesktopId=org.example.coolapp.desktop
+  BusName=org.example.coolapp.SearchProvider
+  ObjectPath=/org/mozilla/coolapp/SearchProvider
+  Version=2
 
 The metainfo file along with the other metadata such as icon and desktop
 files is composed into a catalogue by ``appstream``. Since 1.3.4,
