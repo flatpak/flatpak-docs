@@ -366,7 +366,7 @@ convenience functions for accessing XDG base directories. These include:
   the ``g_get_user_cache_dir ()``, ``g_get_user_data_dir ()``,
   ``g_get_user_config_dir ()`` functions.
 - Qt: XDG base directories can be accessed with the `QStandardPaths
-  Class <https://doc.qt.io/qt-5/qstandardpaths.html>`_.
+  Class <https://doc.qt.io/archives/qt-5.15/qstandardpaths.html>`_.
 
 However, applications that aren't using one of these toolkits can expect to
 find their XDG base directories in the following locations:
