@@ -257,6 +257,57 @@ An example is provided below::
   X-Plasma-DBusRunner-Service=org.example.coolapp.KRunner
   X-Plasma-DBusRunner-Path=/org/example/coolapp/KRunner
 
+MIME files
+``````````
+
+MIME files define new MIME types, file extensions, and detection rules.
+The MIME file must be installed as
+``${FLATPAK_DEST}/share/mime/packages/$NAME.xml``. ``$NAME``
+can be either the ``$FLATPAK_ID`` or a subname of the Flatpak ID
+(``$FLATPAK_ID.foo``, ``$FLATPAK_ID-foo``). It is common to use
+``$FLATPAK_ID-mime.xml`` as the filename.
+
+Note, that Flatpak may rewrite these MIME files to remove magic mime
+rules and drop globs to a lower priority. An example MIME file of
+`Akonadi <https://github.com/KDE/akonadi/blob/master/akonadi-mime.xml>`_
+is provided below::
+
+  <?xml version="1.0" encoding="UTF-8"?>
+  <!--
+  SPDX-License-Identifier: GPL-2.0-or-later
+  -->
+  <!--
+  Notes:
+  - the mime types in this file are valid with the version 0.20 of the
+    shared-mime-info package.
+  - the "fdo #xxxxx" are the wish in the freedesktop.org bug database to include
+    the mime type there.
+  -->
+  <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+    <mime-type type="application/x-vnd.akonadi.calendar.event">
+      <sub-class-of type="text/calendar"/>
+      <comment>iCal Calendar Event Component</comment>
+    </mime-type>
+    <mime-type type="application/x-vnd.akonadi.calendar.freebusy">
+      <sub-class-of type="text/calendar"/>
+      <comment>iCal Calendar FreeBusy Component</comment>
+    </mime-type>
+    <mime-type type="application/x-vnd.akonadi.calendar.journal">
+      <sub-class-of type="text/calendar"/>
+      <comment>iCal Calendar Journal Component</comment>
+    </mime-type>
+    <mime-type type="application/x-vnd.akonadi.calendar.todo">
+      <sub-class-of type="text/calendar"/>
+      <comment>iCal Calendar TODO Component</comment>
+    </mime-type>
+    <mime-type type="application/x-vnd.akonadi.collection.virtual">
+      <comment>Virtual Akonadi Collection</comment>
+    </mime-type>
+  </mime-info>
+
+This is installed as ``/app/share/mime/packages/org.kde.akregator.xml``
+in Akregator.
+
 The metainfo file along with the other metadata such as icon and desktop
 files is composed into a catalogue by ``appstream``. Since 1.3.4,
 Flatpak Builder by default uses ``appstreamcli`` from `libappstream <https://github.com/ximion/appstream/>`_
