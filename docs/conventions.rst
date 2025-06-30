@@ -178,6 +178,34 @@ The distribution usually appends those paths to ``$XDG_DATA_DIRS`` on
 the host when installing the ``flatpak`` package. Unless a desktop file is
 exported by Flatpak, host applications cannot access it.
 
+D-Bus service files
+````````````````````
+
+D-Bus service files are sometimes supplied by applications for
+automatic "on demand" activation of services such as when setting up an
+appliction for D-Bus launching.
+
+The service file must be installed to ``${FLATPAK_DEST}/share/dbus-1/services``
+and must end in ``.service``. The rest of the filename must match
+the ``$FLATPAK_ID`` or a subname of the Flatpak ID
+(``$FLATPAK_ID.foo``).
+
+The value of the ``Name`` key inside the service file must match
+the filename without the ``.service`` part exactly. An example is
+provided below::
+
+  # Installed as /app/share/dbus-1/services/org.example.coolapp.service
+
+  [D-BUS Service]
+  Name=org.example.coolapp
+  Exec=/app/bin/coolapp --gapplication-service
+
+  # Installed as /app/share/dbus-1/services/org.example.coolapp.foobar.service
+
+  [D-BUS Service]
+  Name=org.example.coolapp.foobar
+  Exec=/app/bin/coolapp --arg1 --gapplication-service
+
 
 The metainfo file along with the other metadata such as icon and desktop
 files is composed into a catalogue by ``appstream``. Since 1.3.4,
