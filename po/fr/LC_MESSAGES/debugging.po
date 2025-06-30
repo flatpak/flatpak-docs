@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-18 06:55+0530\n"
+"POT-Creation-Date: 2025-06-30 14:59+0530\n"
 "PO-Revision-Date: 2018-05-20 10:37-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language: fr\n"
@@ -170,126 +170,166 @@ msgstr ""
 msgid "Using other debugging tools"
 msgstr ""
 
-#: ../../debugging.rst:118
+#: ../../debugging.rst:119
 msgid ""
 "``org.freedesktop.Sdk`` also includes other debugging tools like "
 "`Valgrind <https://valgrind.org/>`_ which is useful to find memory leaks."
 " Once inside the :ref:`debugging:Debug shell`, it can be run with::"
 msgstr ""
 
-#: ../../debugging.rst:124
+#: ../../debugging.rst:125
 msgid ""
 "`Strace <https://strace.io/>`_ can be useful to check what an application"
 " is doing. For example, to trace ``openat(), read()`` calls::"
 msgstr ""
 
-#: ../../debugging.rst:129
+#: ../../debugging.rst:130
 msgid ""
 "`Perf <https://perfwiki.github.io/main/>`_ requires access to "
 "``--filesystem=/sys`` to run::"
 msgstr ""
 
-#: ../../debugging.rst:135
+#: ../../debugging.rst:136
+msgid "Multiple Debug shells in one sandbox"
+msgstr ""
+
+#: ../../debugging.rst:138
+msgid ""
+"Sometimes it can be helpful to have multiple debugging shells at a time "
+"in the same sandox. For example, some debugging commands such as `dotnet-"
+"dump <https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-"
+"dump>`_ expect to be given an identifier for a running process that it "
+"will connect to for debugging. This essentially requires multiple "
+"instances of the :ref:`debugging:Debug shell`, one to run the app, and "
+"one for running the debugging tool."
+msgstr ""
+
+#: ../../debugging.rst:146
+msgid ""
+"To accomplish this, locate either the instance or process ID of an "
+"existing debug shell with::"
+msgstr ""
+
+#: ../../debugging.rst:151
+msgid "Then you can enter this same sandbox from a new terminal window using::"
+msgstr ""
+
+#: ../../debugging.rst:155
+msgid ""
+"Note that this second shell likely will not be configured identically to "
+"the original debug shell (for example it will likely have different "
+"environment variables such as PATH)."
+msgstr ""
+
+#: ../../debugging.rst:159
+msgid ""
+"You can verify whether both the shells are indeed in the same sandbox by "
+"checking the namespaces visible in each debug shell and verifying that "
+"they are the same. The easiest way to do this is to list the visible "
+"namespaces using::"
+msgstr ""
+
+#: ../../debugging.rst:167
 msgid "Creating a Debug extension"
 msgstr ""
 
-#: ../../debugging.rst:137
+#: ../../debugging.rst:169
 msgid ""
 "Like many other packaging systems, Flatpak separates bulky debug "
 "information from regular content and ships it separately, in a Debug  "
 "extension."
 msgstr ""
 
-#: ../../debugging.rst:140
+#: ../../debugging.rst:172
 msgid ""
 "When an application is built, ``flatpak-builder`` automatically creates a"
 " Debug extension. This can be disabled with the ``no-debuginfo`` option."
 msgstr ""
 
-#: ../../debugging.rst:144
+#: ../../debugging.rst:176
 msgid ""
 "To install the Debug extension created locally, pass ``--install`` to "
 "``flatpak-builder`` which will set up a new remote for the build. The "
 "remotes available can be checked with::"
 msgstr ""
 
-#: ../../debugging.rst:150
+#: ../../debugging.rst:182
 msgid "Then install the Debug extension from that remote::"
 msgstr ""
 
-#: ../../debugging.rst:155
+#: ../../debugging.rst:187
 msgid "Overriding sandbox permissions"
 msgstr ""
 
-#: ../../debugging.rst:157
+#: ../../debugging.rst:189
 msgid ""
 "It is sometimes useful to have extra permissions in a sandbox when "
 "debugging. This can be achieved using the various sandbox options that "
 "are accepted by the run command. For example::"
 msgstr ""
 
-#: ../../debugging.rst:163
+#: ../../debugging.rst:195
 msgid ""
 "This command runs a shell in the sandbox for the given application, "
 "granting it system bus access to the bus name owned by logind."
 msgstr ""
 
-#: ../../debugging.rst:167
+#: ../../debugging.rst:199
 msgid "Inspecting portal permissions"
 msgstr ""
 
-#: ../../debugging.rst:169
+#: ../../debugging.rst:201
 msgid ""
 "Flatpak has a number of commands that allow to manage portal permissions "
 "for applications."
 msgstr ""
 
-#: ../../debugging.rst:172
+#: ../../debugging.rst:204
 msgid "To see all portal permissions of an application, use::"
 msgstr ""
 
-#: ../../debugging.rst:176
+#: ../../debugging.rst:208
 msgid "To reset all portal permissions of an application, use::"
 msgstr ""
 
-#: ../../debugging.rst:182
+#: ../../debugging.rst:214
 msgid "Interacting with running sandboxes"
 msgstr ""
 
-#: ../../debugging.rst:184
+#: ../../debugging.rst:216
 msgid ""
 "You can see all the apps that are currently running in Flatpak sandboxes "
 "(since 1.2)::"
 msgstr ""
 
-#: ../../debugging.rst:189
+#: ../../debugging.rst:221
 msgid "And, if you need to, you can terminate one by force (since 1.2)::"
 msgstr ""
 
-#: ../../debugging.rst:194
+#: ../../debugging.rst:226
 msgid "Audit session or system bus traffic"
 msgstr ""
 
-#: ../../debugging.rst:196
+#: ../../debugging.rst:228
 msgid ""
 "A ``--socket=session-bus`` or a ``--socket=system-bus`` permission must "
 "not be present for the logging to work."
 msgstr ""
 
-#: ../../debugging.rst:199
+#: ../../debugging.rst:231
 msgid ""
 "Session bus traffic can be audited by passing ``--log-session-bus`` to "
 "``flatpak run``::"
 msgstr ""
 
-#: ../../debugging.rst:204
+#: ../../debugging.rst:236
 msgid ""
 "This can be useful to figure out the bus names used by an application and"
 " the corresponding ``--talk-name`` or ``--own-name`` permissions "
 "required::"
 msgstr ""
 
-#: ../../debugging.rst:210
+#: ../../debugging.rst:242
 msgid ""
 "Similarly, system bus traffic can be audited by passing ``--log-system-"
 "bus`` to ``flatpak run``. This also requires a system bus name to be "
