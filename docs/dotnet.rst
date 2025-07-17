@@ -9,6 +9,7 @@ Prerequisites
     - `Uno Platform <https://platform.uno/>`_
     - `Eto <https://github.com/picoe/Eto>`_
     - `GTKSharp <https://github.com/GtkSharp/GtkSharp>`_
+    - `Gir.Core <https://gircore.github.io/>`_
 - The application's source code is hosted on a Git server such as GitHub, GitLab, or Bitbucket
 
 Steps for Packaging
