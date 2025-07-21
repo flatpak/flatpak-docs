@@ -282,10 +282,6 @@ Note that ``Compat`` or ``GL32`` extensions need to specifically
 requested. For providing runtime i386 support or for building i386
 modules, please refer to :doc:`multiarch`.
 
-There is currently no way to `request` autodownload of a runtime
-extension from an application. The extension point in the runtime has
-to be set to autodownload or the user has to manually install it.
-
 A few related extension properties can be found in application or runtime
 manifests. These are:
 
