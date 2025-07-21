@@ -44,7 +44,7 @@ ID. It also configures the runtime and SDK:
 
   id: org.flathub.electron-sample-app
   runtime: org.freedesktop.Platform
-  runtime-version: '23.08'
+  runtime-version: '24.08'
   sdk: org.freedesktop.Sdk
 
 The Freedesktop runtime is generally the best runtime to use with Electron
@@ -61,7 +61,7 @@ manifest:
 .. code-block:: yaml
 
   base: org.electronjs.Electron2.BaseApp
-  base-version: '23.08'
+  base-version: '24.08'
 
 BaseApps are described in :doc:`dependencies`. Using the Electron base
 app is much faster and more convenient than manually building Electron

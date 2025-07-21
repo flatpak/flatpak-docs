@@ -38,7 +38,7 @@ This is a typical example of an application extension point.
 
   id: org.flatpak.app
   runtime: org.gnome.Platform
-  runtime-version: '45'
+  runtime-version: '48'
   sdk: org.gnome.Sdk
   command: foo
   add-extensions:
@@ -223,27 +223,27 @@ runtime version. This ensures ABI and API compatibility.
 For example, ``org.freedesktop.Platform.ffmpeg-full`` is built as part
 of the Freedesktop SDK and provides versions
 ``22.08, 23.08, 24.08, ...``. Suppose the application uses the runtime
-``org.kde.Platform//5.15-23.08``, which is based on Freedesktop SDK.
+``org.kde.Platform//5.15-24.08``, which is based on Freedesktop SDK.
 
-To find the base runtime version of ``org.kde.Platform//5.15-23.08``,
+To find the base runtime version of ``org.kde.Platform//5.15-24.08``,
 run::
 
-  flatpak remote-info flathub -m org.kde.Platform//5.15-23.08 | \
+  flatpak remote-info flathub -m org.kde.Platform//5.15-24.08 | \
     grep -A 5 -F '[Extension org.freedesktop.Platform.GL]'
 
-The output will have ``versions=23.08;23.08-extra;1.4``, and thus the
-base runtime version is of ````org.kde.Platform//5.15-23.08`` is
-``23.08``.
+The output will have ``versions=24.08;24.08-extra;1.4``, and thus the
+base runtime version is of ````org.kde.Platform//5.15-24.08`` is
+``24.08``.
 
 Similarly, for ``org.freedesktop.Sdk.Extension.texlive``, the extension
 point ``org.freedesktop.Sdk.Extension`` is defined in the Freedesktop
 SDK. To determine the base runtime version for a derived runtime such as
-``org.gnome.Platform//46``, run::
+``org.gnome.Platform//48``, run::
 
-  flatpak remote-info flathub -m org.gnome.Sdk//46 | \
+  flatpak remote-info flathub -m org.gnome.Sdk//48 | \
     grep -A 5 -F '[Extension org.freedesktop.Sdk.Extension]'
 
-The output will have ``versions=23.08``, and thus ``23.08`` needs
+The output will have ``versions=24.08``, and thus ``24.08`` needs
 to be used as ``version`` in ``add-extensions``.
 
 Examples
@@ -253,12 +253,12 @@ Examples
 
   id: org.flatpak.cool-app
   runtime: org.kde.Platform
-  runtime-version: '5.15-23.08'
+  runtime-version: '5.15-24.08'
   sdk: org.kde.Sdk
   command: foo
   add-extensions:
     org.freedesktop.Platform.ffmpeg-full:
-      version: '23.08' # replace by appropriate version
+      version: '24.08' # replace by appropriate version
       directory: lib/ffmpeg
       add-ld-path: .
   cleanup-commands:
@@ -268,13 +268,13 @@ Examples
 
   id: org.flatpak.cool-app
   runtime: org.gnome.Platform
-  runtime-version: '46'
+  runtime-version: '48'
   sdk: org.freedesktop.Sdk
   command: foo
   add-extensions:
     org.freedesktop.Sdk.Extension.texlive:
       directory: texlive
-      version: '23.08' # replace by appropriate version
+      version: '24.08' # replace by appropriate version
   cleanup-commands:
     - mkdir -p ${FLATPAK_DEST}/texlive
 
@@ -297,10 +297,10 @@ manifests. These are:
 
   id: org.flatpak.cool-app
   runtime: org.gnome.Platform
-  runtime-version: '45'
+  runtime-version: '48'
   sdk: org.gnome.Sdk
   base: org.winehq.Wine
-  base-version: stable-23.08
+  base-version: stable-24.08
   inherit-extensions:
     - org.freedesktop.Platform.GL32
     - org.freedesktop.Platform.ffmpeg-full
@@ -321,7 +321,7 @@ manifests. These are:
 
   id: org.flatpak.cool-app
   runtime: org.freedesktop.Platform
-  runtime-version: '23.08'
+  runtime-version: '24.08'
   sdk: org.freedesktop.Sdk
   add-build-extensions:
     - org.freedesktop.Sdk.Extension.openjdk11
@@ -337,7 +337,7 @@ manifests. These are:
 
   id: org.flatpak.cool-app
   runtime: org.freedesktop.Platform
-  runtime-version: '23.08'
+  runtime-version: '24.08'
   sdk: org.freedesktop.Sdk
   sdk-extensions:
     - org.freedesktop.Sdk.Extension.golang
@@ -379,7 +379,7 @@ is discussed below.
   branch: '1.0'
   runtime: org.flatpak.app
   runtime-version: 'stable'
-  sdk: org.gnome.Sdk//45
+  sdk: org.gnome.Sdk//48
   build-extension: true
   separate-locales: false
   build-options:
@@ -472,7 +472,7 @@ exported into that extension.
 
   id: org.flatpak.cool-app
   runtime: org.kde.Platform
-  runtime-version: '6.7'
+  runtime-version: '6.9'
   sdk: org.kde.Sdk
   command: foo
   add-extensions:

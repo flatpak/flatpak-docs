@@ -29,12 +29,12 @@ app, define an extension point for it in the app manifest:
   add-extensions:
     org.freedesktop.Platform.Compat.i386:
       directory: lib/i386-linux-gnu
-      version: '23.08'
+      version: '24.08'
 
     # This is not strictly required, but needed for debugging 32-bit programs
     org.freedesktop.Platform.Compat.i386.Debug:
       directory: lib/debug/lib/i386-linux-gnu
-      version: '23.08'
+      version: '24.08'
       no-autodownload: true
 
 For GNOME runtime, use ``org.gnome.Platform.Compat.i386`` instead.
@@ -48,11 +48,11 @@ in general, you'll also need 32-bit GL drivers. Add an extension point for it:
 .. code-block:: yaml
 
   runtime: org.freedesktop.Platform
-  runtime-version: &runtime-version '23.08'
+  runtime-version: &runtime-version '24.08'
   # Synced from Freedesktop runtime
   # https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/blob/ed97d222b21d0a8744779ce6e5e8af5b032bfee1/elements/flatpak-images/include/platform-vars.yml#L2
   x-gl-version: &gl-version '1.4'
-  x-gl-versions: &gl-versions 23.08;1.4
+  x-gl-versions: &gl-versions 24.08;1.4
   x-gl-merge-dirs: &gl-merge-dirs vulkan/icd.d;glvnd/egl_vendor.d;egl/egl_external_platform.d;OpenCL/vendors;lib/dri;lib/d3d;lib/gbm;vulkan/explicit_layer.d;vulkan/implicit_layer.d
 
   org.freedesktop.Platform.GL32:

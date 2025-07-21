@@ -46,7 +46,7 @@ A few placeholders have been used in the steps below, while going through the st
 
   id: <app-id>
   runtime: org.freedesktop.Platform
-  runtime-version: '23.08'
+  runtime-version: '24.08'
   sdk: org.freedesktop.Sdk
   sdk-extensions:
     - org.freedesktop.Sdk.Extension.dotnet8
