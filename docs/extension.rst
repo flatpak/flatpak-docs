@@ -208,9 +208,46 @@ The extensions are mounted in alphabetical path order of directory.
   by Flatpak builder like ``.Locale, .Debug`` also do not need to be
   in application manifest.
 
-``org.freedesktop.Platform.ffmpeg-full`` is an application extension
-(mounted inside ``/app/extension_directory``) belonging to
-``org.freedesktop.Platform``.
+Finding Base Runtime Version
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Some extensions are either built as part of the runtimes or have their
+extension points defined within them. These typically follow the branch
+pattern of the runtime. In case of
+``org.gnome.{Platform, Sdk}, org.kde.{Platform, Sdk}`` they follow the
+branch pattern of Freedesktop SDK (``org.freedesktop.{Platform, Sdk}``).
+
+When using such extensions, the extension version must match the base
+runtime version. This ensures ABI and API compatibility.
+
+For example, ``org.freedesktop.Platform.ffmpeg-full`` is built as part
+of the Freedesktop SDK and provides versions
+``22.08, 23.08, 24.08, ...``. Suppose the application uses the runtime
+``org.kde.Platform//5.15-23.08``, which is based on Freedesktop SDK.
+
+To find the base runtime version of ``org.kde.Platform//5.15-23.08``,
+run::
+
+  flatpak remote-info flathub -m org.kde.Platform//5.15-23.08 | \
+    grep -A 5 -F '[Extension org.freedesktop.Platform.GL]'
+
+The output will have ``versions=23.08;23.08-extra;1.4``, and thus the
+base runtime version is of ````org.kde.Platform//5.15-23.08`` is
+``23.08``.
+
+Similarly, for ``org.freedesktop.Sdk.Extension.texlive``, the extension
+point ``org.freedesktop.Sdk.Extension`` is defined in the Freedesktop
+SDK. To determine the base runtime version for a derived runtime such as
+``org.gnome.Platform//46``, run::
+
+  flatpak remote-info flathub -m org.gnome.Sdk//46 | \
+    grep -A 5 -F '[Extension org.freedesktop.Sdk.Extension]'
+
+The output will have ``versions=23.08``, and thus ``23.08`` needs
+to be used as ``version`` in ``add-extensions``.
+
+Examples
+^^^^^^^^^
 
 .. code-block:: yaml
 
@@ -221,26 +258,23 @@ The extensions are mounted in alphabetical path order of directory.
   command: foo
   add-extensions:
     org.freedesktop.Platform.ffmpeg-full:
-      version: '23.08'
+      version: '23.08' # replace by appropriate version
       directory: lib/ffmpeg
       add-ld-path: .
   cleanup-commands:
     - mkdir -p ${FLATPAK_DEST}/lib/ffmpeg
 
-``org.freedesktop.Sdk.Extension`` is an extension point defined in
-``org.freedesktop.Sdk``.
-
 .. code-block:: yaml
 
   id: org.flatpak.cool-app
-  runtime: org.freedesktop.Platform
-  runtime-version: '23.08'
+  runtime: org.gnome.Platform
+  runtime-version: '46'
   sdk: org.freedesktop.Sdk
   command: foo
   add-extensions:
     org.freedesktop.Sdk.Extension.texlive:
       directory: texlive
-      version: '23.08'
+      version: '23.08' # replace by appropriate version
   cleanup-commands:
     - mkdir -p ${FLATPAK_DEST}/texlive
 
@@ -298,9 +332,10 @@ manifests. These are:
   command: foo
 
 - ``sdk-extensions`` can be used to install extra extensions having
-  an extension point in the parent runtime that has to be installed for the
-  app to build. These are similarly made available during build and
-  not in the final flatpak.
+  an extension point in the parent runtime that has to be installed for
+  the app to build. These are similarly made available during build and
+  not in the final flatpak. These always follow the branch pattern
+  of the base runtime (see above).
 
 .. code-block:: yaml
 
@@ -545,7 +580,7 @@ These are common to the Freedesktop SDK and runtime:
   has two branches ``${RUNTIME_VERSION}`` and
   ``${RUNTIME_VERSION}-extra``, the latter containing support for
   patented codecs.
-  
+
   ``org.freedesktop.Platform.GL.Debug`` – Debug extension point for
   ``org.freedesktop.Platform.GL``, managed by the runtime but the user needs
   to explicitly install ``org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}``
@@ -553,17 +588,17 @@ These are common to the Freedesktop SDK and runtime:
   to have the debug symbols available.
 
   The following extensions utilise the above two extension points::
-  
+
     org.freedesktop.Platform.GL.default//${RUNTIME_VERSION}
     org.freedesktop.Platform.GL.default//${RUNTIME_VERSION}-extra
     org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}
     org.freedesktop.Platform.GL.Debug.default//${RUNTIME_VERSION}-extra
-  
+
     org.freedesktop.Platform.GL32.default//${RUNTIME_VERSION}
     org.freedesktop.Platform.GL32.default//${RUNTIME_VERSION}-extra
     org.freedesktop.Platform.GL32.Debug.default//${RUNTIME_VERSION}
     org.freedesktop.Platform.GL32.Debug.default//${RUNTIME_VERSION}-extra
-  
+
     org.freedesktop.Platform.GL.nvidia-${DRIVER_VERSION}
     org.freedesktop.Platform.GL32.nvidia-${DRIVER_VERSION}
 
