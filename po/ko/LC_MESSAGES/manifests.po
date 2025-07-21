@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-05 01:10+0530\n"
+"POT-Creation-Date: 2025-07-21 08:07+0530\n"
 "PO-Revision-Date: 2018-05-20 10:37-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language: ko\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../manifests.rst:2
 msgid "Manifests"
@@ -321,7 +321,7 @@ msgid "`meson <https://mesonbuild.com/>`_"
 msgstr ""
 
 #: ../../manifests.rst:264
-msgid "`qmake <https://doc.qt.io/qt-5/qmake-overview.html>`_"
+msgid "`qmake <https://doc.qt.io/archives/qt-5.15/qmake-overview.html>`_"
 msgstr ""
 
 #: ../../manifests.rst:266
@@ -581,5 +581,8 @@ msgstr ""
 #~ " It is also possible to browse "
 #~ "`all the manifests hosted by Flathub "
 #~ "<https://github.com/flathub>`_."
+#~ msgstr ""
+
+#~ msgid "`qmake <https://doc.qt.io/qt-5/qmake-overview.html>`_"
 #~ msgstr ""
 
