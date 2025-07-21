@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-26 16:32-0300\n"
+"POT-Creation-Date: 2025-07-21 08:07+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../dotnet.rst:2
 msgid "Dotnet"
@@ -55,64 +55,68 @@ msgid "`GTKSharp <https://github.com/GtkSharp/GtkSharp>`_"
 msgstr ""
 
 #: ../../dotnet.rst:12
+msgid "`Gir.Core <https://gircore.github.io/>`_"
+msgstr ""
+
+#: ../../dotnet.rst:13
 msgid ""
 "The application's source code is hosted on a Git server such as GitHub, "
 "GitLab, or Bitbucket"
 msgstr ""
 
-#: ../../dotnet.rst:15
+#: ../../dotnet.rst:16
 msgid "Steps for Packaging"
 msgstr ""
 
-#: ../../dotnet.rst:18
+#: ../../dotnet.rst:19
 msgid "Installing Flatpak and Flatpak builder"
 msgstr ""
 
-#: ../../dotnet.rst:20
+#: ../../dotnet.rst:21
 msgid ""
 "Install Flatpak using the method provided for your distribution `Flatpak "
 "- Quick Setup <https://flatpak.org/setup/>`_"
 msgstr ""
 
-#: ../../dotnet.rst:23
+#: ../../dotnet.rst:24
 msgid ""
 "Install Flatpak Builder through your distribution package manager (e.g. "
 "``apt`` / ``dnf``)"
 msgstr ""
 
-#: ../../dotnet.rst:31
+#: ../../dotnet.rst:32
 msgid "Creating the Flatpak"
 msgstr ""
 
-#: ../../dotnet.rst:33
+#: ../../dotnet.rst:34
 msgid ""
 "A few placeholders have been used in the steps below, while going through"
 " the steps replace these with the ones respective to your project:"
 msgstr ""
 
-#: ../../dotnet.rst:35
+#: ../../dotnet.rst:36
 msgid ""
 "``<app-id>``: The name of your Flatpak, see :ref:`conventions:application"
 " ids`."
 msgstr ""
 
-#: ../../dotnet.rst:36
+#: ../../dotnet.rst:37
 msgid "``<app-name>``: The name of the root folder of your app repository"
 msgstr ""
 
-#: ../../dotnet.rst:37
+#: ../../dotnet.rst:38
 msgid "``<project-name>``: The name of your ``.csproj`` file"
 msgstr ""
 
-#: ../../dotnet.rst:38
+#: ../../dotnet.rst:39
 msgid "``<git-url>``: The URL to the git repository of the project"
 msgstr ""
 
-#: ../../dotnet.rst:40
+#: ../../dotnet.rst:41
 msgid "Create a new folder somewhere different from your existing project"
 msgstr ""
 
-#: ../../dotnet.rst:42
+#: ../../dotnet.rst:43
 msgid ""
 "Create a YAML file titled ``<app-id>.yaml`` with the following example "
 "template, replacing the placeholders with the appropriate information. "
@@ -120,13 +124,13 @@ msgid ""
 " in the build paths in this file and subsequent commands as well.):"
 msgstr ""
 
-#: ../../dotnet.rst:87
+#: ../../dotnet.rst:88
 msgid ""
 "For providing access to other things such as the network or filesystem, "
 "see :doc:`sandbox-permissions`"
 msgstr ""
 
-#: ../../dotnet.rst:90
+#: ../../dotnet.rst:91
 msgid ""
 "Copy and save the dotnet NuGet sources generator script ``flatpak-dotnet-"
 "generator.py`` from the `Flatpak Builder Tools repository "
@@ -134,29 +138,29 @@ msgid ""
 "folder, or run the following command to download it:"
 msgstr ""
 
-#: ../../dotnet.rst:99
+#: ../../dotnet.rst:100
 msgid "Clone down your project repository to the folder"
 msgstr ""
 
-#: ../../dotnet.rst:105
+#: ../../dotnet.rst:106
 msgid "Install dependencies from Flathub"
 msgstr ""
 
-#: ../../dotnet.rst:111
+#: ../../dotnet.rst:112
 msgid ""
 "Run the NuGet source config generator script ``flatpak-dotnet-"
 "generator.py`` with the following arguments:"
 msgstr ""
 
-#: ../../dotnet.rst:117
+#: ../../dotnet.rst:118
 msgid "Build and install using Flatpak builder"
 msgstr ""
 
-#: ../../dotnet.rst:125
+#: ../../dotnet.rst:126
 msgid "Testing the build"
 msgstr ""
 
-#: ../../dotnet.rst:127
+#: ../../dotnet.rst:128
 msgid "Run the installed Flatpak application"
 msgstr ""
 
