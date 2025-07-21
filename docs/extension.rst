@@ -618,18 +618,31 @@ These are common to the Freedesktop SDK and runtime:
   provide extensions using this extension point.
 - ``org.freedesktop.Platform.VAAPI.Intel`` – Extension providing Intel
   VAAPI media drivers. This is automatically installed if the user
-  has an Intel GPU.
-
-  This has a compat i386 extension ``org.freedesktop.Platform.VAAPI.Intel.i386``.
-
+  has an Intel GPU. This has a compat i386 extension
+  ``org.freedesktop.Platform.VAAPI.Intel.i386``.
+- ``org.freedesktop.Platform.VAAPI.nvidia`` – Extension providing Nvidia
+  VAAPI media drivers. This is automatically installed if the user
+  has an Nvidia GPU. This has a compat i386 extension
+  ``org.freedesktop.Platform.VAAPI.nvidia.i386``.
 - ``org.freedesktop.Platform.openh264`` – Extension providing OpenH264,
-  automatically installed by the runtime.
-- ``org.freedesktop.Platform.ffmpeg`` – Extension providing ffmpeg with
-  support for patented codecs. This needs to explicitly added to the
+  automatically installed by the runtime. (This is discontinued since
+  Freedesktop SDK 25.08)
+- ``org.freedesktop.Platform.ffmpeg-full`` – Extension providing ffmpeg
+  with support for patented codecs. This needs to explicitly added to the
   manifest using ``add-extensions`` by the developer, so that it becomes
-  available when the user installs it.
-
-  This has a compat i386 extension ``org.freedesktop.Platform.ffmpeg_full.i386``.
+  available when the user installs it.This has a compat i386 extension
+  ``org.freedesktop.Platform.ffmpeg_full.i386``. (This is discontinued
+  since Freedesktop SDK 25.08)
+- ``org.freedesktop.Platform.codecs-extra`` – This is the successor
+  to ``org.freedesktop.Platform.ffmpeg-full`` available since
+  Freedesktop SDK 25.08. This is a runtime extension and it will be
+  automatically installed by the runtime when installing an app. This
+  has a compat i386 extension
+  ``org.freedesktop.Platform.codecs_extra.i386``. The branch is set to
+  ``$freedesktop-sdk-version-extra`` i.e. ``25.08-extra, 26.08-extra``
+  and so on. Users and distributors who want to block or not use
+  patented codecs can use ``flatpak mask`` to mask this extension or
+  the ``-extra`` branch pattern.
 
 These are only in Freedesktop SDK:
 
