@@ -12,7 +12,7 @@ straight-forward.
 
   id: org.flatpak.qtdemo
   runtime: org.kde.Platform
-  runtime-version: '5.15-22.08'
+  runtime-version: '5.15-24.08'
   sdk: org.kde.Sdk
   command: flatpak-demo
   finish-args:
