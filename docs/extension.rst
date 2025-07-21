@@ -232,7 +232,7 @@ run::
     grep -A 5 -F '[Extension org.freedesktop.Platform.GL]'
 
 The output will have ``versions=24.08;24.08-extra;1.4``, and thus the
-base runtime version is of ````org.kde.Platform//5.15-24.08`` is
+base runtime version is of ``org.kde.Platform//5.15-24.08`` is
 ``24.08``.
 
 Similarly, for ``org.freedesktop.Sdk.Extension.texlive``, the extension
