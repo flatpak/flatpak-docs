@@ -195,6 +195,15 @@ enable-if.
 to ``false`` the extension will be considered unused and removed
 automatically when doing ``flatpak uninstall --unused``.
 
+Extensions are automatically mounted inside the runtime or app sandbox
+provided the correct branch of the extension is installed, the
+extension point for that extension is specified in the app or runtime
+manifest and all the conditionals in the extension point match.
+
+The list of loaded extensions can be found by inspecting the
+``app-extensions`` and ``runtime-extensions`` keys of the ``Instance``
+group in ``/.flatpak-info`` of a running Flatpak.
+
 Loading existing extensions
 ---------------------------
 
