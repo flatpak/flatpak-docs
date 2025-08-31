@@ -4,7 +4,7 @@ Flatpak Builder
 ``flatpak-builder`` has already been introduced in :doc:`first-build`
 and :doc:`building-introduction`. It is packaged by most of the popular
 distributions and there is also a flatpak-builder `Flatpak package <https://flathub.org/apps/org.flatpak.Builder>`_
-on Flathub.
+on Flathub (this may contain Flathub specific downstream modifications).
 
 This page provides additional details on how to use ``flatpak-builder``,
 including the various command options that are available.
