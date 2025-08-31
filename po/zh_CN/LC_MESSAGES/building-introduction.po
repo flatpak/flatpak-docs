@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-12 09:37+0530\n"
+"POT-Creation-Date: 2025-08-31 14:40+0530\n"
 "PO-Revision-Date: 2018-11-03 11:05-0400\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language: zh_Hans_CN\n"
@@ -55,10 +55,11 @@ msgstr ""
 msgid ""
 "It is packaged by several distributions and there is also a `Flatpak "
 "package <https://flathub.org/apps/org.flatpak.Builder>`_ called "
-"``org.flatpak.Builder`` available for it on Flathub."
+"``org.flatpak.Builder`` available for it on Flathub (this may contain "
+"Flathub specific downstream modifications)."
 msgstr ""
 
-#: ../../building-introduction.rst:26
+#: ../../building-introduction.rst:27
 msgid ""
 "The input to ``flatpak-builder`` is a manifest file. This specifies the "
 "parameters for the application that will be built, such as its name and "
@@ -71,11 +72,11 @@ msgstr ""
 "输入给  ``flatpak-builder``  "
 "的是一个清单文件。它指定了要构建应用的参数，例如它的名字和依赖的运行时。这个清单还列出了作为构建过程的一部分构建的所有模块（不是很确定，译者注）。可以指定每个模块的源，包括指向文件存档或版本控制存储库的链接。某个模块（通常是最后一个）是应用代码它本身。"
 
-#: ../../building-introduction.rst:34
+#: ../../building-introduction.rst:35
 msgid "The basic format used to invoke ``flatpak-builder`` is::"
 msgstr "调用  ``flatpak-builder``  的基本格式是:"
 
-#: ../../building-introduction.rst:38
+#: ../../building-introduction.rst:39
 msgid ""
 "Where ``<build-dir>`` is the path to the directory that the application "
 "will be built into, and ``<manifest>`` is the path to a manifest file. "
@@ -85,48 +86,48 @@ msgstr ""
 "其中 ``<build-dir>`` 是构建应用程序的目标文件夹，``<manifest>`` 是清单文件的路径。``<build-dir>`` "
 "中的内容可以被用来调试和测试应用程序，不过大多数情况下它只是构建过程的中间产物。"
 
-#: ../../building-introduction.rst:43
+#: ../../building-introduction.rst:44
 msgid "When ``flatpak-builder`` is run:"
 msgstr "当  ``flatpak-builder``  运行的时候："
 
-#: ../../building-introduction.rst:45
+#: ../../building-introduction.rst:46
 msgid "The build directory is created, if it doesn't already exist"
 msgstr "构建目录如果不存在则进行创建"
 
-#: ../../building-introduction.rst:46
+#: ../../building-introduction.rst:47
 msgid "The source code for each module is downloaded and verified"
 msgstr "下载和验证每个模块的源代码"
 
-#: ../../building-introduction.rst:47
+#: ../../building-introduction.rst:48
 msgid "The source code for each module is built and installed"
 msgstr "构建和安装每个模块的源代码"
 
-#: ../../building-introduction.rst:48
+#: ../../building-introduction.rst:49
 #, fuzzy
 msgid "The build is finished by setting sandbox permissions"
 msgstr "设置沙箱的权限并完成构建"
 
-#: ../../building-introduction.rst:49
+#: ../../building-introduction.rst:50
 msgid ""
 "The build result is exported to a repository (which will be created if it"
 " doesn't exist already)"
 msgstr "构建结果会被导出到仓库（如果不存在将会被创建）"
 
-#: ../../building-introduction.rst:52
+#: ../../building-introduction.rst:53
 msgid "The application can then be installed from the repository and run."
 msgstr "然后这个应用就可以从仓库进行安装和运行了"
 
-#: ../../building-introduction.rst:55
+#: ../../building-introduction.rst:56
 msgid "Software Development Kits (SDKs)"
 msgstr "软件开发套件（SDKs）"
 
-#: ../../building-introduction.rst:57
+#: ../../building-introduction.rst:58
 msgid ""
 "Instead of being built using the host environment, Flatpak applications "
 "are built inside a separate environment, called an SDK."
 msgstr "Flatpak应用是在一个称作SDK的隔离环境中，而不是宿主的环境中构建的。"
 
-#: ../../building-introduction.rst:60
+#: ../../building-introduction.rst:61
 msgid ""
 "SDKs are like the regular runtime that applications run in. The "
 "difference is that SDKs also include all the development resources and "
@@ -134,7 +135,7 @@ msgid ""
 "packaging tools, header files, compilers and debuggers."
 msgstr "这些SDK类似与应用所运行在的常规运行时。不同的是，这些SDK还包含了构建一个应用需要的所有开发资源和工具，例如构建和打包工具、头文件、编译器和调试器"
 
-#: ../../building-introduction.rst:65
+#: ../../building-introduction.rst:66
 #, fuzzy
 msgid ""
 "Each runtime has an accompanying SDK. For example, there is both a GNOME "
@@ -144,7 +145,7 @@ msgstr ""
 "每个运行时都有一个附带的SDK。例如，一个GNOME 3.26 runtime和一个GNOME 3.26 "
 "SDK同时存在。使用这个运行时的是用这个对应的SDK构建的。"
 
-#: ../../building-introduction.rst:69
+#: ../../building-introduction.rst:70
 #, fuzzy
 msgid ""
 "Like runtimes, SDKs will sometimes be automatically installed for you, "
@@ -175,5 +176,13 @@ msgstr "和运行时一样，一般SDK会自动地进行安装。但是如果你
 #~ " on the building process. Please "
 #~ "refer to their respective documentation "
 #~ "for details."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It is packaged by several distributions"
+#~ " and there is also a `Flatpak "
+#~ "package <https://flathub.org/apps/org.flatpak.Builder>`_ "
+#~ "called ``org.flatpak.Builder`` available for "
+#~ "it on Flathub."
 #~ msgstr ""
 
