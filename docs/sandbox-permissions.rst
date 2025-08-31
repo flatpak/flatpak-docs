@@ -77,18 +77,28 @@ which can be used on an as-needed basis, and which should be avoided.
 Standard permissions
 ````````````````````
 
-The following permissions provide access to basic resources that applications
-commonly require, and can therefore be freely used.
+The following permissions are commonly used by applications.
 
 - ``--allow=bluetooth`` - Allow access to Bluetooth (``AF_BLUETOOTH``) sockets
 - ``--device=dri`` - OpenGL rendering
 - ``--share=ipc`` - Share IPC namespace with the host [#f1]_
 - ``--share=network`` - Access the network [#f2]_
-- ``--socket=cups`` - Talk to the CUPS printing system (``$CUPS_SERVER`` or server defined in CUPS's ``client.conf``. Falls back to ``/var/run/cups/cups.sock``)
-- ``--socket=gpg-agent`` - Talk to the GPG agent (The socket in ``gpgconf --list-dir agent-socket``)
-- ``--socket=pcsc`` - Smart card access ``$PCSCLITE_CSOCK_NAME``
-- ``--socket=pulseaudio`` - Access to PulseAudio, includes sound input (mic), sound output/playback, MIDI and ALSA sound devices in ``/dev/snd``
-- ``--socket=ssh-auth``- Allow access to ``$SSH_AUTH_SOCK``
+- ``--socket=pulseaudio`` - Access to PulseAudio. It includes sound input
+  (mic), sound output/playback, MIDI and ALSA sound devices in
+  ``/dev/snd``. This permission can be sensitive in certain situations.
+- ``--socket=cups`` - Talk to the CUPS printing system. ``$CUPS_SERVER``
+  or server defined in CUPS's ``client.conf``. Falls back to
+  ``/var/run/cups/cups.sock``.
+- ``--socket=pcsc`` - Smart card access ``$PCSCLITE_CSOCK_NAME``.
+- ``--socket=gpg-agent`` - Talk to the GPG agent running on host. This
+  may allow acquiring additional permissions that can be used to perform
+  priviledged GPG operations. The gives access to the socket in
+  ``gpgconf --list-dir agent-socket``. This is not commonly needed
+  unless the application interacts with GPG such as e-mail clients or
+  GPG frontends.
+- ``--socket=ssh-auth``- Allow access to ``$SSH_AUTH_SOCK``. This is not
+  commonly needed unless the application interacts with SSH such as
+  Git clients or SSH frontends.
 
 .. note::
 
