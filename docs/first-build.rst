@@ -16,7 +16,7 @@ popular distributions.
 
 Please also install ``flatpak-builder`` from your distribution. There is
 also a flatpak-builder `Flatpak package <https://flathub.org/apps/org.flatpak.Builder>`_
-on Flathub.
+on Flathub (this may contain Flathub specific downstream modifications).
 
 Then install the Flathub repository `userwide`::
 

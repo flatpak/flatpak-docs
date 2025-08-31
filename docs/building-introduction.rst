@@ -21,7 +21,8 @@ at the same time, which get bundled into the build.
 
 It is packaged by several distributions and there is also a
 `Flatpak package <https://flathub.org/apps/org.flatpak.Builder>`_ called
-``org.flatpak.Builder`` available for it on Flathub.
+``org.flatpak.Builder`` available for it on Flathub (this may contain
+Flathub specific downstream modifications).
 
 The input to ``flatpak-builder`` is a manifest file. This specifies the
 parameters for the application that will be built, such as its name and
