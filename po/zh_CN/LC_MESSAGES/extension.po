@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-21 08:16+0530\n"
+"POT-Creation-Date: 2025-08-31 14:40+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -66,35 +66,43 @@ msgid ""
 "loaded if installed."
 msgstr ""
 
-#: ../../extension.rst:30
+#: ../../extension.rst:29
+msgid ""
+"Note that, ``.Locale`` extensions are by default only partially installed"
+" (only for the configued languages) by Flatpak. To install the full "
+"locale extension ``flatpak update --subpath= $FLATPAK_ID.Locale`` can be "
+"used."
+msgstr ""
+
+#: ../../extension.rst:35
 msgid "Extension point"
 msgstr ""
 
-#: ../../extension.rst:32
+#: ../../extension.rst:37
 msgid ""
 "Now to define an extension point the ``add-extensions`` property can be "
 "used in the manifest."
 msgstr ""
 
-#: ../../extension.rst:35
+#: ../../extension.rst:40
 msgid "This is a typical example of an application extension point."
 msgstr ""
 
-#: ../../extension.rst:56
+#: ../../extension.rst:61
 msgid ""
 "The details of these properties are documented in the \"Extension NAME\" "
 "section of :doc:`flatpak-command-reference`. Some of it is discussed "
 "further below."
 msgstr ""
 
-#: ../../extension.rst:60
+#: ../../extension.rst:65
 msgid ""
 "``org.flatpak.app.plugin`` is the name of the extension point. Extensions"
 " using this extension point must start their ID with the same prefix, for"
 " example ``org.flatpak.app.plugin.foo``."
 msgstr ""
 
-#: ../../extension.rst:64
+#: ../../extension.rst:69
 msgid ""
 "``version`` is the branch to use when looking for the extension. This is "
 "useful to have parallel installations of the same extension in case of an"
@@ -102,13 +110,13 @@ msgid ""
 "extension manifest."
 msgstr ""
 
-#: ../../extension.rst:69
+#: ../../extension.rst:74
 msgid ""
 "If not specified it defaults to the ``runtime`` branch, that the "
 "extension point belongs to. So in the above example it is ``45``."
 msgstr ""
 
-#: ../../extension.rst:73
+#: ../../extension.rst:78
 msgid ""
 "``versions`` is same as ``version`` but can be used for specifying "
 "multiple versions. For example, if an extension is published in the "
@@ -117,7 +125,7 @@ msgid ""
 " the application needs to have ``versions: 'stable;beta'``."
 msgstr ""
 
-#: ../../extension.rst:79
+#: ../../extension.rst:84
 msgid ""
 "``directory`` is the path relative to prefix where everything is mounted "
 "by flatpak. For a runtime this will be relative to ``/usr`` and for an "
@@ -125,7 +133,7 @@ msgid ""
 "value."
 msgstr ""
 
-#: ../../extension.rst:84
+#: ../../extension.rst:89
 msgid ""
 "``add-ld-path`` adds a path relative to the extension prefix "
 "``/app/extension_directory/foo/lib``, so that a library residing there "
@@ -134,7 +142,7 @@ msgid ""
 "it is put in a ld config file in ``/run/flatpak/ld.so.conf.d``."
 msgstr ""
 
-#: ../../extension.rst:90
+#: ../../extension.rst:95
 msgid ""
 "``merge-dirs: plug-ins;help`` will merge the contents of these "
 "directories from multiple extensions using the same extension point. For "
@@ -144,7 +152,7 @@ msgid ""
 "``help``."
 msgstr ""
 
-#: ../../extension.rst:97
+#: ../../extension.rst:102
 msgid ""
 "``subdirectories: true`` allows to have multiple extensions under the "
 "same ``directory``. So two extensions like ``org.flatpak.app.plugin.foo``"
@@ -152,25 +160,25 @@ msgid ""
 "``/app/extension_directory/foo`` and ``/app/extension_directory/bar``."
 msgstr ""
 
-#: ../../extension.rst:103
+#: ../../extension.rst:108
 msgid ""
 "``no-autodownload: true`` will prevent installing all extensions under "
 "this extension point. This is the default."
 msgstr ""
 
-#: ../../extension.rst:106
+#: ../../extension.rst:111
 msgid ""
 "``autodelete: true`` will remove all extensions under this extension "
 "point when the application is removed."
 msgstr ""
 
-#: ../../extension.rst:109
+#: ../../extension.rst:114
 msgid ""
 "``.Debug`` and ``.Locale`` extensions are created with ``autodelete: "
 "true`` by default."
 msgstr ""
 
-#: ../../extension.rst:112
+#: ../../extension.rst:117
 #, python-brace-format
 msgid ""
 "``mkdir -p ${FLATPAK_DEST}/extension_directory`` runs during the cleanup "
@@ -180,11 +188,11 @@ msgid ""
 " If it is missing, there will be an error while running the application."
 msgstr ""
 
-#: ../../extension.rst:118
+#: ../../extension.rst:123
 msgid "There is no extension property to extend the ``PATH``."
 msgstr ""
 
-#: ../../extension.rst:122
+#: ../../extension.rst:127
 msgid ""
 "If the extension point is defined in a base runtime or SDK manifest "
 "``add-extensions`` will make the extension point land in both ``.Sdk`` "
@@ -193,7 +201,7 @@ msgid ""
 "should be used which is discussed below."
 msgstr ""
 
-#: ../../extension.rst:128
+#: ../../extension.rst:133
 msgid ""
 "There are other properties like ``download-if``, ``enable-if``, "
 "``autoprune-unless`` etc. These are conditionals which must be ``true`` "
@@ -201,7 +209,7 @@ msgid ""
 "extension points."
 msgstr ""
 
-#: ../../extension.rst:133
+#: ../../extension.rst:138
 msgid ""
 "An example of an extension point defined in runtime is the GL extension "
 "point used in `Freedesktop SDK <https://gitlab.com/freedesktop-sdk"
@@ -213,7 +221,7 @@ msgid ""
 "manifests."
 msgstr ""
 
-#: ../../extension.rst:156
+#: ../../extension.rst:161
 msgid ""
 "Most of this is already discussed above. Variables starting with ``%`` "
 "are private to the Freedesktop SDK. The version ``1.4`` is only used for "
@@ -221,7 +229,7 @@ msgid ""
 "guarantee."
 msgstr ""
 
-#: ../../extension.rst:161
+#: ../../extension.rst:166
 msgid ""
 "``active-gl-driver`` is a flatpak conditional that is true if the name of"
 " the active GL driver matches the extension point basename. The value can"
@@ -231,80 +239,95 @@ msgid ""
 "kernel module version."
 msgstr ""
 
-#: ../../extension.rst:168
+#: ../../extension.rst:173
 msgid ""
 "The ``default`` corresponds to a stable mesa fallback build whereas "
 "``host`` is for `unmaintained` Flatpak extensions installed on host."
 msgstr ""
 
-#: ../../extension.rst:171
+#: ../../extension.rst:176
 msgid ""
 "The resultant extension is called ``org.freedesktop.Platform.GL.default``"
 " and it is downloaded and enabled automatically if ``active-gl-driver`` "
 "is true and deleted if only it is false."
 msgstr ""
 
-#: ../../extension.rst:175
+#: ../../extension.rst:180
 msgid ""
 "The following conditionals are available: download-if, autoprune-unless "
 "enable-if."
 msgstr ""
 
-#: ../../extension.rst:178
+#: ../../extension.rst:183
 msgid "``download-if`` and ``enable-if`` supports the following:"
 msgstr ""
 
-#: ../../extension.rst:180
+#: ../../extension.rst:185
 msgid "``active-gl-driver``"
 msgstr ""
 
-#: ../../extension.rst:181
+#: ../../extension.rst:186
 msgid ""
 "``active-gtk-theme`` is true if the host GTK theme via "
 "``org.gnome.desktop.interface`` matches the extension basename."
 msgstr ""
 
-#: ../../extension.rst:183
+#: ../../extension.rst:188
 msgid "``have-intel-gpu`` is true if the i915 kernel module is loaded."
 msgstr ""
 
-#: ../../extension.rst:184
+#: ../../extension.rst:189
 #, python-brace-format
 msgid ""
 "``have-kernel-module-{module_name}`` is true if ``module_name`` is found "
 "in ``/proc/modules``."
 msgstr ""
 
-#: ../../extension.rst:186
+#: ../../extension.rst:191
 #, python-brace-format
 msgid ""
 "``on-xdg-desktop-{desktop_name}`` is true if ``desktop_name`` matches the"
 " value of ``XDG_CURRENT_DESKTOP`` on host."
 msgstr ""
 
-#: ../../extension.rst:189
+#: ../../extension.rst:194
 msgid ""
 "``autoprune-unless`` supports only ``active-gl-driver``. If this "
 "evaluates to ``false`` the extension will be considered unused and "
 "removed automatically when doing ``flatpak uninstall --unused``."
 msgstr ""
 
-#: ../../extension.rst:194
+#: ../../extension.rst:198
+msgid ""
+"Extensions are automatically mounted inside the runtime or app sandbox "
+"provided the correct branch of the extension is installed, the extension "
+"point for that extension is specified in the app or runtime manifest and "
+"all the conditionals in the extension point match."
+msgstr ""
+
+#: ../../extension.rst:203
+msgid ""
+"The list of loaded extensions can be found by inspecting the ``app-"
+"extensions`` and ``runtime-extensions`` keys of the ``Instance`` group in"
+" ``/.flatpak-info`` of a running Flatpak."
+msgstr ""
+
+#: ../../extension.rst:208
 msgid "Loading existing extensions"
 msgstr ""
 
-#: ../../extension.rst:196
+#: ../../extension.rst:210
 msgid ""
 "This is a typical example of loading an existing extension in the "
 "application. The extension is loaded at runtime and the user needs to "
 "have it installed."
 msgstr ""
 
-#: ../../extension.rst:200
+#: ../../extension.rst:214
 msgid "The extensions are mounted in alphabetical path order of directory."
 msgstr ""
 
-#: ../../extension.rst:204
+#: ../../extension.rst:218
 msgid ""
 "Some extensions are installed automatically by the runtime based on "
 "certain conditions and these do not need be added to application "
@@ -314,11 +337,11 @@ msgid ""
 "manifest."
 msgstr ""
 
-#: ../../extension.rst:212
+#: ../../extension.rst:226
 msgid "Finding Base Runtime Version"
 msgstr ""
 
-#: ../../extension.rst:214
+#: ../../extension.rst:228
 #, python-brace-format
 msgid ""
 "Some extensions are either built as part of the runtimes or have their "
@@ -328,13 +351,13 @@ msgid ""
 "SDK (``org.freedesktop.{Platform, Sdk}``)."
 msgstr ""
 
-#: ../../extension.rst:220
+#: ../../extension.rst:234
 msgid ""
 "When using such extensions, the extension version must match the base "
 "runtime version. This ensures ABI and API compatibility."
 msgstr ""
 
-#: ../../extension.rst:223
+#: ../../extension.rst:237
 msgid ""
 "For example, ``org.freedesktop.Platform.ffmpeg-full`` is built as part of"
 " the Freedesktop SDK and provides versions ``22.08, 23.08, 24.08, ...``. "
@@ -342,19 +365,19 @@ msgid ""
 "``org.kde.Platform//5.15-24.08``, which is based on Freedesktop SDK."
 msgstr ""
 
-#: ../../extension.rst:228
+#: ../../extension.rst:242
 msgid ""
 "To find the base runtime version of ``org.kde.Platform//5.15-24.08``, "
 "run::"
 msgstr ""
 
-#: ../../extension.rst:234
+#: ../../extension.rst:248
 msgid ""
 "The output will have ``versions=24.08;24.08-extra;1.4``, and thus the "
 "base runtime version is of ``org.kde.Platform//5.15-24.08`` is ``24.08``."
 msgstr ""
 
-#: ../../extension.rst:238
+#: ../../extension.rst:252
 msgid ""
 "Similarly, for ``org.freedesktop.Sdk.Extension.texlive``, the extension "
 "point ``org.freedesktop.Sdk.Extension`` is defined in the Freedesktop "
@@ -362,30 +385,30 @@ msgid ""
 "``org.gnome.Platform//48``, run::"
 msgstr ""
 
-#: ../../extension.rst:246
+#: ../../extension.rst:260
 msgid ""
 "The output will have ``versions=24.08``, and thus ``24.08`` needs to be "
 "used as ``version`` in ``add-extensions``."
 msgstr ""
 
-#: ../../extension.rst:250
+#: ../../extension.rst:264
 msgid "Examples"
 msgstr ""
 
-#: ../../extension.rst:281
+#: ../../extension.rst:295
 msgid ""
 "Note that ``Compat`` or ``GL32`` extensions need to specifically "
 "requested. For providing runtime i386 support or for building i386 "
 "modules, please refer to :doc:`multiarch`."
 msgstr ""
 
-#: ../../extension.rst:285
+#: ../../extension.rst:299
 msgid ""
 "A few related extension properties can be found in application or runtime"
 " manifests. These are:"
 msgstr ""
 
-#: ../../extension.rst:288
+#: ../../extension.rst:302
 msgid ""
 "``inherit-extensions`` can be used to specify an extra set of extension "
 "points or extensions from the parent runtime or base that is inherited "
@@ -396,21 +419,21 @@ msgid ""
 "it."
 msgstr ""
 
-#: ../../extension.rst:311
+#: ../../extension.rst:325
 msgid ""
 "``add-build-extensions`` is same as ``add-extensions`` but the extensions"
 " are made available during build. This can be used to add build "
 "dependencies that reside in an extension based on the runtime being used."
 msgstr ""
 
-#: ../../extension.rst:316
+#: ../../extension.rst:330
 msgid ""
 "For example an application using the runtime ``org.freedesktop.Platform``"
 " can use ``org.freedesktop.Sdk.Extension.openjdk11`` as a build-"
 "extension."
 msgstr ""
 
-#: ../../extension.rst:330
+#: ../../extension.rst:344
 msgid ""
 "``sdk-extensions`` can be used to install extra extensions having an "
 "extension point in the parent runtime that has to be installed for the "
@@ -419,7 +442,7 @@ msgid ""
 "runtime (see above)."
 msgstr ""
 
-#: ../../extension.rst:346
+#: ../../extension.rst:360
 msgid ""
 "``inherit-sdk-extensions`` is used to inherit extension points from the "
 "parent SDK into the child SDK. They aren't inherited into the child "
@@ -427,51 +450,51 @@ msgid ""
 "applications."
 msgstr ""
 
-#: ../../extension.rst:359
+#: ../../extension.rst:373
 msgid ""
 "There is currently no way to add or inherit extensions per-arch. This "
 "means the extension should be available or made available for all the "
 "arches used by the application and vice-versa."
 msgstr ""
 
-#: ../../extension.rst:363
+#: ../../extension.rst:377
 msgid ""
 "This also means that certain extensions like i386 compatibility "
 "extensions like ``org.freedesktop.Sdk.Compat.i386`` should not be added "
 "to modules that build for ``aarch64``."
 msgstr ""
 
-#: ../../extension.rst:368
+#: ../../extension.rst:382
 msgid "Extension manifest"
 msgstr ""
 
-#: ../../extension.rst:370
+#: ../../extension.rst:384
 msgid ""
 "Once the extension point is defined, an extension like "
 "``org.flatpak.app.plugin.foo`` can be created."
 msgstr ""
 
-#: ../../extension.rst:373
+#: ../../extension.rst:387
 msgid ""
 "This is a typical example of such an extension manifest. The explanation "
 "is discussed below."
 msgstr ""
 
-#: ../../extension.rst:399
+#: ../../extension.rst:413
 msgid "``id`` must have the correct prefix of the extension point."
 msgstr ""
 
-#: ../../extension.rst:400
+#: ../../extension.rst:414
 msgid "``branch`` must be the ``version`` declared in the extension point."
 msgstr ""
 
-#: ../../extension.rst:401
+#: ../../extension.rst:415
 msgid ""
 "``runtime`` should be the ID of the parent module where the extension "
 "point is defined."
 msgstr ""
 
-#: ../../extension.rst:403
+#: ../../extension.rst:417
 msgid ""
 "``runtime-version`` is the version of the runtime used by the "
 "application. If the runtime is built locally and has not specified the "
@@ -479,34 +502,34 @@ msgid ""
 " the value in ``branch`` is used."
 msgstr ""
 
-#: ../../extension.rst:408
+#: ../../extension.rst:422
 msgid "Applications on Flathub usually use either ``stable`` or ``beta``."
 msgstr ""
 
-#: ../../extension.rst:409
+#: ../../extension.rst:423
 msgid ""
 "``sdk`` should be the same SDK used to build the runtime, followed by its"
 " version."
 msgstr ""
 
-#: ../../extension.rst:411
+#: ../../extension.rst:425
 msgid "``build-extension: true`` instructs flatpak to build an extension."
 msgstr ""
 
-#: ../../extension.rst:412
+#: ../../extension.rst:426
 msgid ""
 "``separate-locales: false`` disables creating a ``.Locale`` extension for"
 " this extension."
 msgstr ""
 
-#: ../../extension.rst:415
+#: ../../extension.rst:429
 msgid ""
 "Flatpak-builder (>= 1.3.4), can compose metadata for extensions "
 "automatically and it is no longer required to manually compose them "
 "through commands in the manifest."
 msgstr ""
 
-#: ../../extension.rst:419
+#: ../../extension.rst:433
 #, python-brace-format
 msgid ""
 "In case a manual compose is still required ``appstream-compose "
@@ -519,7 +542,7 @@ msgid ""
 "compose: false`` in the top."
 msgstr ""
 
-#: ../../extension.rst:424
+#: ../../extension.rst:438
 msgid ""
 "Note that the extension prefix or location of pkg-config files will not "
 "be in ``$PATH`` or ``$PKG_CONFIG_PATH`` by default. Any such additional "
@@ -527,17 +550,17 @@ msgid ""
 "``prefix`` and ``prepend-*`` properties."
 msgstr ""
 
-#: ../../extension.rst:429
+#: ../../extension.rst:443
 msgid ""
 "A MetaInfo file should be provided for discoverability in software "
 "stores. This is a typical example of an extension MetaInfo file."
 msgstr ""
 
-#: ../../extension.rst:462
+#: ../../extension.rst:476
 msgid "Bundled extensions"
 msgstr ""
 
-#: ../../extension.rst:464
+#: ../../extension.rst:478
 msgid ""
 "Extensions can also be built directly from the application manifest "
 "instead of creating a separate extension manifest. The ``bundle: true`` "
@@ -547,11 +570,11 @@ msgid ""
 "``directory`` will be exported into that extension."
 msgstr ""
 
-#: ../../extension.rst:496
+#: ../../extension.rst:510
 msgid "Unmaintained Flatpak extensions"
 msgstr ""
 
-#: ../../extension.rst:498
+#: ../../extension.rst:512
 msgid ""
 "Flatpak also supports `unmaintained extensions` that allows loading "
 "extensions installed externally into ``/var/lib/flatpak/extension`` and "
@@ -561,7 +584,7 @@ msgid ""
 "the same as above."
 msgstr ""
 
-#: ../../extension.rst:505
+#: ../../extension.rst:519
 msgid ""
 "An example of an unmaintained extension can be found in browsers such as "
 "`Chromium "
@@ -571,11 +594,11 @@ msgid ""
 "/firefox-flatpak/runme.sh>`_ on Flathub."
 msgstr ""
 
-#: ../../extension.rst:510
+#: ../../extension.rst:524
 msgid "The Firefox snippet translates to:"
 msgstr ""
 
-#: ../../extension.rst:521
+#: ../../extension.rst:535
 msgid ""
 "Now the required policy files for Firefox ``pref`` and ``policies.json`` "
 "can be placed in "
@@ -591,34 +614,34 @@ msgid ""
 " reading policies from ``/app/etc``)"
 msgstr ""
 
-#: ../../extension.rst:530
+#: ../../extension.rst:544
 msgid ""
 "For details on Chromium, please look at the `readme "
 "<https://github.com/flathub/org.chromium.Chromium>`_."
 msgstr ""
 
-#: ../../extension.rst:534
+#: ../../extension.rst:548
 msgid "Creating an unmaintained Gtk theme extension"
 msgstr ""
 
-#: ../../extension.rst:536
+#: ../../extension.rst:550
 msgid ""
 "The following script can be used to create an unmaintained extension for "
 "the host's Gtk 3 theme. This is useful when the theme is not packaged as "
 "an extension in a remote."
 msgstr ""
 
-#: ../../extension.rst:540
+#: ../../extension.rst:554
 msgid ""
 "The script expects the theme to be installed in ``/usr/share/themes`` or "
 "``$XDG_DATA_HOME/themes``."
 msgstr ""
 
-#: ../../extension.rst:565
+#: ../../extension.rst:579
 msgid "Extensions or extension points defined by runtime"
 msgstr ""
 
-#: ../../extension.rst:567
+#: ../../extension.rst:581
 msgid ""
 "The following extensions and extension points are defined in the "
 "Freedesktop runtime/SDK or are shipped along with it. Most of these are "
@@ -626,11 +649,11 @@ msgid ""
 "time, please check the respective project."
 msgstr ""
 
-#: ../../extension.rst:572
+#: ../../extension.rst:586
 msgid "These are common to the Freedesktop SDK and runtime:"
 msgstr ""
 
-#: ../../extension.rst:574
+#: ../../extension.rst:588
 #, python-brace-format
 msgid ""
 "``org.freedesktop.Platform.GL`` – Extension for graphics drivers managed "
@@ -639,7 +662,7 @@ msgid ""
 " latter containing support for patented codecs."
 msgstr ""
 
-#: ../../extension.rst:580
+#: ../../extension.rst:594
 #, python-brace-format
 msgid ""
 "``org.freedesktop.Platform.GL.Debug`` – Debug extension point for "
@@ -650,11 +673,11 @@ msgid ""
 "to have the debug symbols available."
 msgstr ""
 
-#: ../../extension.rst:586
+#: ../../extension.rst:600
 msgid "The following extensions utilise the above two extension points::"
 msgstr ""
 
-#: ../../extension.rst:601
+#: ../../extension.rst:615
 msgid ""
 "``org.freedesktop.Platform.VulkanLayer`` – Extension point for `Vulkan "
 "layers <https://github.com/KhronosGroup/Vulkan-"
@@ -663,21 +686,21 @@ msgid ""
 " to have them available."
 msgstr ""
 
-#: ../../extension.rst:605
+#: ../../extension.rst:619
 msgid ""
 "``org.freedesktop.Platform.GStreamer`` – Extension point for GStreamer "
 "plugins. Developers can provide extensions using this extension point and"
 " the user needs to install those extensions to have them available."
 msgstr ""
 
-#: ../../extension.rst:608
+#: ../../extension.rst:622
 msgid ""
 "``org.freedesktop.Platform.Icontheme`` – Extension point for icon themes."
 " Developers can provide extensions using this extension point and the "
 "user needs to install those extensions to have them available."
 msgstr ""
 
-#: ../../extension.rst:611
+#: ../../extension.rst:625
 msgid ""
 "``org.gtk.Gtk3theme`` – Extension point for Gtk3 themes. Extensions under"
 " this extension point are automatically installed by Flatpak if an "
@@ -685,7 +708,7 @@ msgid ""
 "extensions using this extension point."
 msgstr ""
 
-#: ../../extension.rst:615
+#: ../../extension.rst:629
 msgid ""
 "``org.freedesktop.Platform.VAAPI.Intel`` – Extension providing Intel "
 "VAAPI media drivers. This is automatically installed if the user has an "
@@ -693,7 +716,7 @@ msgid ""
 "``org.freedesktop.Platform.VAAPI.Intel.i386``."
 msgstr ""
 
-#: ../../extension.rst:619
+#: ../../extension.rst:633
 msgid ""
 "``org.freedesktop.Platform.VAAPI.nvidia`` – Extension providing Nvidia "
 "VAAPI media drivers. This is automatically installed if the user has an "
@@ -701,14 +724,14 @@ msgid ""
 "``org.freedesktop.Platform.VAAPI.nvidia.i386``."
 msgstr ""
 
-#: ../../extension.rst:623
+#: ../../extension.rst:637
 msgid ""
 "``org.freedesktop.Platform.openh264`` – Extension providing OpenH264, "
 "automatically installed by the runtime. (This is discontinued since "
 "Freedesktop SDK 25.08)"
 msgstr ""
 
-#: ../../extension.rst:626
+#: ../../extension.rst:640
 msgid ""
 "``org.freedesktop.Platform.ffmpeg-full`` – Extension providing ffmpeg "
 "with support for patented codecs. This needs to explicitly added to the "
@@ -718,7 +741,7 @@ msgid ""
 "since Freedesktop SDK 25.08)"
 msgstr ""
 
-#: ../../extension.rst:632
+#: ../../extension.rst:646
 msgid ""
 "``org.freedesktop.Platform.codecs-extra`` – This is the successor to "
 "``org.freedesktop.Platform.ffmpeg-full`` available since Freedesktop SDK "
@@ -731,11 +754,11 @@ msgid ""
 "branch pattern."
 msgstr ""
 
-#: ../../extension.rst:643
+#: ../../extension.rst:657
 msgid "These are only in Freedesktop SDK:"
 msgstr ""
 
-#: ../../extension.rst:645
+#: ../../extension.rst:659
 msgid ""
 "``org.freedesktop.Sdk.Extension`` – Extension point for SDK extensions "
 "like extra toolchains (eg. LLVM), compilers and language specific tools "
@@ -743,25 +766,25 @@ msgid ""
 "tools such as IDEs."
 msgstr ""
 
-#: ../../extension.rst:650
+#: ../../extension.rst:664
 msgid ""
 "SDK extensions available on Flathub are listed `here "
 "<https://github.com/orgs/flathub/repositories?q=org.freedesktop.Sdk.Extension.>`_."
 msgstr ""
 
-#: ../../extension.rst:653
+#: ../../extension.rst:667
 msgid ""
 "The application developer needs to explicitly add these extensions in the"
 " manifest by using ``sdk-extensions`` when building an app."
 msgstr ""
 
-#: ../../extension.rst:656
+#: ../../extension.rst:670
 msgid ""
 "Extensions marked as ``Compat`` in the name or ``GL32`` provide compat "
 "support for extra architectures and needs to explicitly requested."
 msgstr ""
 
-#: ../../extension.rst:659
+#: ../../extension.rst:673
 msgid "Additionally all SDKs provide a ``.Docs`` extension for documentation."
 msgstr ""
 

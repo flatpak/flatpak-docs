@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-12 09:37+0530\n"
+"POT-Creation-Date: 2025-08-31 14:40+0530\n"
 "PO-Revision-Date: 2023-02-03 23:03+0700\n"
 "Last-Translator: Dmitry <dmitrydmitry761@gmail.com>\n"
 "Language: ru\n"
@@ -62,10 +62,11 @@ msgstr ""
 msgid ""
 "It is packaged by several distributions and there is also a `Flatpak "
 "package <https://flathub.org/apps/org.flatpak.Builder>`_ called "
-"``org.flatpak.Builder`` available for it on Flathub."
+"``org.flatpak.Builder`` available for it on Flathub (this may contain "
+"Flathub specific downstream modifications)."
 msgstr ""
 
-#: ../../building-introduction.rst:26
+#: ../../building-introduction.rst:27
 msgid ""
 "The input to ``flatpak-builder`` is a manifest file. This specifies the "
 "parameters for the application that will be built, such as its name and "
@@ -83,11 +84,11 @@ msgstr ""
 "ссылки на файловые архивы или репозитории системы контроля версий. Один "
 "из модулей (обычно последний) - это сам код приложения."
 
-#: ../../building-introduction.rst:34
+#: ../../building-introduction.rst:35
 msgid "The basic format used to invoke ``flatpak-builder`` is::"
 msgstr "Основной формат, используемый для вызова ``flatpak-builder``::"
 
-#: ../../building-introduction.rst:38
+#: ../../building-introduction.rst:39
 msgid ""
 "Where ``<build-dir>`` is the path to the directory that the application "
 "will be built into, and ``<manifest>`` is the path to a manifest file. "
@@ -99,27 +100,27 @@ msgstr ""
 "``<build-dir>`` может быть полезно для целей тестирования и отладки, но "
 "обычно рассматривается как артефакт процесса сборки."
 
-#: ../../building-introduction.rst:43
+#: ../../building-introduction.rst:44
 msgid "When ``flatpak-builder`` is run:"
 msgstr "При запуске ``Flatpak-builder``:"
 
-#: ../../building-introduction.rst:45
+#: ../../building-introduction.rst:46
 msgid "The build directory is created, if it doesn't already exist"
 msgstr "Каталог сборки создается, если он еще не существует"
 
-#: ../../building-introduction.rst:46
+#: ../../building-introduction.rst:47
 msgid "The source code for each module is downloaded and verified"
 msgstr "Исходный код для каждого модуля загружается и проверяется"
 
-#: ../../building-introduction.rst:47
+#: ../../building-introduction.rst:48
 msgid "The source code for each module is built and installed"
 msgstr "Исходный код для каждого модуля собран и установлен"
 
-#: ../../building-introduction.rst:48
+#: ../../building-introduction.rst:49
 msgid "The build is finished by setting sandbox permissions"
 msgstr "Сборка завершается установкой разрешений для песочницы."
 
-#: ../../building-introduction.rst:49
+#: ../../building-introduction.rst:50
 msgid ""
 "The build result is exported to a repository (which will be created if it"
 " doesn't exist already)"
@@ -127,15 +128,15 @@ msgstr ""
 "Результат сборки экспортируется в репозиторий (который будет создан, если"
 " он еще не существует)."
 
-#: ../../building-introduction.rst:52
+#: ../../building-introduction.rst:53
 msgid "The application can then be installed from the repository and run."
 msgstr "Затем приложение можно установить из репозитория и запустить."
 
-#: ../../building-introduction.rst:55
+#: ../../building-introduction.rst:56
 msgid "Software Development Kits (SDKs)"
 msgstr "Наборы для разработки программного обеспечения (SDK)"
 
-#: ../../building-introduction.rst:57
+#: ../../building-introduction.rst:58
 msgid ""
 "Instead of being built using the host environment, Flatpak applications "
 "are built inside a separate environment, called an SDK."
@@ -143,7 +144,7 @@ msgstr ""
 "Вместо создания с использованием среды хоста, приложения Flatpak "
 "создаются в отдельной среде, называемой SDK."
 
-#: ../../building-introduction.rst:60
+#: ../../building-introduction.rst:61
 msgid ""
 "SDKs are like the regular runtime that applications run in. The "
 "difference is that SDKs also include all the development resources and "
@@ -155,7 +156,7 @@ msgstr ""
 "разработки, необходимые для создания приложения, такие как средства "
 "сборки и упаковки, файлы заголовков, компиляторы и отладчики."
 
-#: ../../building-introduction.rst:65
+#: ../../building-introduction.rst:66
 msgid ""
 "Each runtime has an accompanying SDK. For example, there is both a GNOME "
 "43 runtime and a GNOME 43 SDK. Applications that use the runtime are "
@@ -165,7 +166,7 @@ msgstr ""
 " среда выполнения GNOME 43, так и SDK GNOME 43. Приложения, использующие "
 "среду выполнения, создаются с использованием соответствующего SDK."
 
-#: ../../building-introduction.rst:69
+#: ../../building-introduction.rst:70
 msgid ""
 "Like runtimes, SDKs will sometimes be automatically installed for you, "
 "but if you do need to manually install them, they are installed in the "
@@ -198,5 +199,13 @@ msgstr ""
 #~ " on the building process. Please "
 #~ "refer to their respective documentation "
 #~ "for details."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It is packaged by several distributions"
+#~ " and there is also a `Flatpak "
+#~ "package <https://flathub.org/apps/org.flatpak.Builder>`_ "
+#~ "called ``org.flatpak.Builder`` available for "
+#~ "it on Flathub."
 #~ msgstr ""
 
