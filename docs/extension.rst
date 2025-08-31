@@ -26,6 +26,11 @@ manifest.
 not need to be specified manually. These are automaitcally created and
 loaded if installed.
 
+Note that, ``.Locale`` extensions are by default only partially
+installed (only for the configued languages) by Flatpak. To install the
+full locale extension ``flatpak update --subpath= $FLATPAK_ID.Locale``
+can be used.
+
 Extension point
 ---------------
 
