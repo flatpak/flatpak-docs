@@ -29,7 +29,7 @@ Flatpak requires every app to specify a runtime for its basic runtime
 dependencies and a matching SDK which is a superset of the runtime
 containing additional development tools, libraries and headers.
 
-In this tutorial we will use the Freedesktop 23.08 runtime and SDK from
+In this tutorial we will use the Freedesktop 25.08 runtime and SDK from
 the Flathub repository.
 
 2. Add a manifest
@@ -45,7 +45,7 @@ an empty file and save it as ``org.flatpak.Hello.yml``.
 
   id: org.flatpak.Hello
   runtime: org.freedesktop.Platform
-  runtime-version: '23.08'
+  runtime-version: '25.08'
   sdk: org.freedesktop.Sdk
   command: hello
   modules:
