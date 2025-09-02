@@ -537,7 +537,7 @@ source.
 
   app-id: com.foo.app.Plugins.audio
   runtime: com.foo.app
-  sdk: org.freedesktop.Sdk//23.08
+  sdk: org.freedesktop.Sdk//25.08
   build-extension: true
   separate-locales: false
   modules:

@@ -113,7 +113,7 @@ A few placeholders have been used in the steps below, while going through the st
 
 .. code-block:: shell
 
-      python3 flatpak-dotnet-generator.py --dotnet 8 --freedesktop 23.08 nuget-sources.json <app-name>/<project-name>.csproj
+      python3 flatpak-dotnet-generator.py --dotnet 8 --freedesktop 24.08 nuget-sources.json <app-name>/<project-name>.csproj
 
 9. Build and install using Flatpak builder
 
