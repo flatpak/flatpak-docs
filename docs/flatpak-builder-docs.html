@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Flatpak Builder Command Reference</title><link rel="stylesheet" type="text/css" href="docbook.css" /><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" /></head><body><div class="reference"><div class="titlepage"><div><div><h1 class="title"><a id="id1337"></a>Flatpak Builder Command Reference</h1></div><div><p class="releaseinfo">Version 1.4.6</p></div></div><hr /></div><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Important</h3><p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Flatpak Builder Command Reference</title><link rel="stylesheet" type="text/css" href="docbook.css" /><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" /></head><body><div class="reference"><div class="titlepage"><div><div><h1 class="title"><a id="id1337"></a>Flatpak Builder Command Reference</h1></div><div><p class="releaseinfo">Version 1.4.7</p></div></div><hr /></div><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Important</h3><p>
           The command reference is generated from the flatpak-builder repo; see <a class="ulink" href="https://github.com/flatpak/flatpak-builder/tree/master/doc" target="_top">https://github.com/flatpak/flatpak-builder/tree/master/doc</a>
         </p></div><div class="partintro"><div></div><p>
         Flatpak-builder is a tool to build flatpak applications.
@@ -200,6 +200,19 @@
                 </p></dd><dt><span class="term"><code class="option">--extra-sources=SOURCE-DIR</code></span></dt><dd><p>
                   When downloading sources (archives, files, git, bzr, svn), look in this
                   directory for pre-existing copies and use them instead of downloading.
+                  The directory must match the state directory structure:
+                  </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Files and archives must be inside the folder: <code class="filename">downloads/&lt;sha256&gt;/</code></p></li><li class="listitem"><p>
+                            Sources of type <code class="literal">git</code>, <code class="literal">bzr</code> and <code class="literal">svn</code>
+                            must be inside the folder: <code class="filename">&lt;type&gt;/&lt;converted-uri&gt;/</code>
+                        </p></li></ul></div><p>
+                  The <code class="literal">converted-uri</code> is constructed from <code class="literal">path</code> or <code class="literal">url</code> (in case of <code class="literal">git</code>)
+                  and from <code class="literal">url</code> (in case of <code class="literal">bzr</code> and <code class="literal">svn</code>). <code class="literal">://</code> is converted to a single
+                  underscore and every other <code class="literal">/</code> is replaced by an underscore. For example, <code class="literal">https://github.com/user/repo.git</code>
+                  becomes <code class="literal">https_github.com_user_repo.git</code>.
+
+                  In case of <code class="literal">svn</code> sources if <code class="literal">revision</code> is present, the folder name is
+                  <code class="filename">svn/&lt;converted-uri&gt;__r&lt;revision&gt;/</code>. In case of <code class="literal">git</code>
+                  sources, it needs to be a mirrored clone.
                 </p></dd><dt><span class="term"><code class="option">--extra-sources-url=URL</code></span></dt><dd><p>
                   When downloading sources (archives, files, git, bzr, svn), look at this url
                   for mirrored downloads before downloading from the original url.
@@ -338,20 +351,19 @@
           These are the properties that are accepted:
         </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="option">id</code> or <code class="option">app-id</code> (string)</span></dt><dd><p>A string defining the application id.</p><p>Note, "app-id" is deprecated and preserved only for
                     backwards compatibility.</p></dd><dt><span class="term"><code class="option">branch</code> (string)</span></dt><dd><p>The branch to use when exporting
-                    the application. If this is unset the defaults
-                    come from the default-branch option.</p><p>This key overrides both the default-branch
+                    the application. If this is unset the default
+                    comes from the default-branch option.</p><p>This key overrides both the default-branch
                     key, and the --default-branch commandline
                     option. Unless you need a very specific branchname
                     (like for a runtime or an extension) it is
-                    recommended to use the default-branch key instead, because
-                    you can then override the default using --default-branch when
-                    building for instance a test build.</p></dd><dt><span class="term"><code class="option">default-branch</code> (string)</span></dt><dd><p>The default branch to use when
+                    recommended to use the default-branch key instead, as
+                    that can be overridden by the --default-branch option.</p></dd><dt><span class="term"><code class="option">default-branch</code> (string)</span></dt><dd><p>The default branch to use when
                     exporting the application. Defaults to master. </p><p>This key can be overridden by the
                     --default-branch commandline
                     option.</p></dd><dt><span class="term"><code class="option">collection-id</code> (string)</span></dt><dd><p>The collection ID of the repository,
                     defaults to being unset. Setting a globally
                     unique collection ID allows the apps in the repository to be shared over
-                    peer to peer systems without needing further configuration.
+                    peer-to-peer systems without needing further configuration.
                     If building in an existing repository, the collection ID
                     must match the existing configured collection ID for that
                     repository.</p></dd><dt><span class="term"><code class="option">extension-tag</code> (string)</span></dt><dd><p>If building an extension, the tag for the extension
@@ -369,7 +381,7 @@
                     implies that authentication will be needed to
                     install the flatpak.</p></dd><dt><span class="term"><code class="option">runtime</code> (string)</span></dt><dd><p>The name of the runtime that the application uses.</p></dd><dt><span class="term"><code class="option">runtime-version</code> (string)</span></dt><dd><p>The version of the runtime that the application uses, defaults to master.</p></dd><dt><span class="term"><code class="option">sdk</code> (string)</span></dt><dd><p>The name of the development runtime that the application builds with.</p></dd><dt><span class="term"><code class="option">var</code> (string)</span></dt><dd><p>Initialize the (otherwise empty) writable /var in the build with a copy of this runtime.</p></dd><dt><span class="term"><code class="option">metadata</code> (string)</span></dt><dd><p>Use this file as the base metadata file when finishing.</p></dd><dt><span class="term"><code class="option">command</code> (string)</span></dt><dd><p>
                         The filename or path to the main binary of the application. Note that this
-                        is really just a single file, not a commandline. If you want to pass arguments,
+                        must be a single executable, not a commandline or an absolute path. If you want to pass arguments,
                         install a shell script wrapper and use that as the command.
                     </p><p>
                         Also note that the command is used when the application is run via
@@ -404,12 +416,12 @@
                     needed).</p></dd><dt><span class="term"><code class="option">prepend-ld-library-path</code> (string)</span></dt><dd><p>This will get prepended to LD_LIBRARY_PATH in the build environment (with an trailing colon if
                     needed).</p></dd><dt><span class="term"><code class="option">append-pkg-config-path</code> (string)</span></dt><dd><p>This will get appended to PKG_CONFIG_PATH in the build environment (with an leading colon if
                     needed).</p></dd><dt><span class="term"><code class="option">prepend-pkg-config-path</code> (string)</span></dt><dd><p>This will get prepended to PKG_CONFIG_PATH in the build environment (with an trailing colon if
-                    needed).</p></dd><dt><span class="term"><code class="option">env</code> (object)</span></dt><dd><p>This is a dictionary defining environment variables to be set during the build. Elements in this override the properties that set the environment, like cflags and ldflags. Keys with a null value unset the corresponding variable. </p></dd><dt><span class="term"><code class="option">secret-env</code> (array of strings)</span></dt><dd><p>This is a array defining which host environment variables is transfered to build-commands or post-install environment.</p></dd><dt><span class="term"><code class="option">build-args</code> (array of strings)</span></dt><dd><p>This is an array containing extra options to pass to flatpak build.</p></dd><dt><span class="term"><code class="option">test-args</code> (array of strings)</span></dt><dd><p>Similar to build-args but affects the tests, not the normal build.</p></dd><dt><span class="term"><code class="option">config-opts</code> (array of strings)</span></dt><dd><p>This is an array containing extra options passed to the build system during configuration.</p></dd><dt><span class="term"><code class="option">secret-opts</code> (array of strings)</span></dt><dd><p>This is an array of options that will be passed to
-                    configure, meant to be used to pass secrets through host environment variables. Put
-                    the option with an environment variables and will be resolved beforehand. '-DSECRET_ID=$CI_SECRET'</p></dd><dt><span class="term"><code class="option">make-args</code> (array of strings)</span></dt><dd><p>An array of extra arguments that will be passed to make</p></dd><dt><span class="term"><code class="option">make-install-args</code> (array of strings)</span></dt><dd><p>An array of extra arguments that will be passed to make install</p></dd><dt><span class="term"><code class="option">strip</code> (boolean)</span></dt><dd><p>If this is true (the default is false) then all ELF files will be stripped after install.</p></dd><dt><span class="term"><code class="option">no-debuginfo</code> (boolean)</span></dt><dd><p>By default (if strip is not true) flatpak-builder extracts all debug info in ELF files to a separate files
-                    and puts this in an extension. If you want to disable this, set no-debuginfo to true.</p></dd><dt><span class="term"><code class="option">no-debuginfo-compression</code> (boolean)</span></dt><dd><p>By default when extracting debuginfo we compress the debug sections. If you want to disable this, set no-debuginfo-compression to true.</p></dd><dt><span class="term"><code class="option">arch</code> (object)</span></dt><dd><p>This is a dictionary defining for each arch a separate build options object that override the main one.</p></dd></dl></div></div><div class="refsect2"><a id="id1350"></a><h3>Extension</h3><p>
-              Extension define extension points in the app/runtime that can be implemented by extensions, supplying extra files
-              which are available during runtime..
+                    needed).</p></dd><dt><span class="term"><code class="option">env</code> (object)</span></dt><dd><p>This is a dictionary defining environment variables to be set during the build. Elements in this override the properties that set the environment, like cflags and ldflags. Keys with a null value unset the corresponding variable. </p></dd><dt><span class="term"><code class="option">secret-env</code> (array of strings)</span></dt><dd><p>This is an array defining which host environment variables are transfered to the build-commands or post-install environment.</p></dd><dt><span class="term"><code class="option">build-args</code> (array of strings)</span></dt><dd><p>This is an array containing extra options to pass to flatpak build.</p></dd><dt><span class="term"><code class="option">test-args</code> (array of strings)</span></dt><dd><p>Similar to build-args but affects the tests, not the normal build.</p></dd><dt><span class="term"><code class="option">config-opts</code> (array of strings)</span></dt><dd><p>This is an array containing extra options passed to the build system during configuration.</p></dd><dt><span class="term"><code class="option">secret-opts</code> (array of strings)</span></dt><dd><p>This is an array of options that will be passed to
+                    configure. This is meant to be used to pass secrets through host environment variables.
+                    Environment variables in the options will be expanded. '-DSECRET_ID=$CI_SECRET'</p></dd><dt><span class="term"><code class="option">make-args</code> (array of strings)</span></dt><dd><p>An array of extra arguments that will be passed to make</p></dd><dt><span class="term"><code class="option">make-install-args</code> (array of strings)</span></dt><dd><p>An array of extra arguments that will be passed to make install</p></dd><dt><span class="term"><code class="option">strip</code> (boolean)</span></dt><dd><p>If this is true (the default is false) then all ELF files will be stripped after install.</p></dd><dt><span class="term"><code class="option">no-debuginfo</code> (boolean)</span></dt><dd><p>By default (if strip is not true) flatpak-builder extracts all debug info in ELF files to separate files
+                    and puts them into an extension. If you want to disable this, set no-debuginfo to true.</p></dd><dt><span class="term"><code class="option">no-debuginfo-compression</code> (boolean)</span></dt><dd><p>By default when extracting debuginfo the debug sections are compressed. If you want to disable this, set no-debuginfo-compression to true.</p></dd><dt><span class="term"><code class="option">arch</code> (object)</span></dt><dd><p>This is a dictionary defining a separate build options object for each arch, to override the main build options.</p></dd></dl></div></div><div class="refsect2"><a id="id1350"></a><h3>Extension</h3><p>
+              Defines extension points in the app or runtime that can be implemented by extensions,
+              supplying extra files which are available during runtime.
             </p><p>
                 These are the properties that are accepted:
             </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="option">directory</code> (string)</span></dt><dd><p>
@@ -420,7 +432,7 @@
                     created in the extension directory is omitted from
                     the result, and instead packaged in a separate
                     extension.</p></dd><dt><span class="term"><code class="option">remove-after-build</code> (boolean)</span></dt><dd><p>If this is true, the extension is
-                    removed during when finishing. This is only
+                    removed when finishing. This is only
                     interesting for extensions in the
                     add-build-extensions property.</p></dd></dl></div><p>
               Additionally the standard flatpak extension properties
@@ -484,7 +496,8 @@
           <code class="filename">build/$modulename-$count</code> in the state dir (which is typically <code class="filename">.flatpak-builder/</code>).
           Additionally there is a symlink <code class="filename">build/$modulename</code> to the latest version.
           In order to generate reproducible builds this directory is also mounted as <code class="filename">/run/build/$modulename</code>
-          in the sandbox (or <code class="filename">/run/build-runtime/$modulename</code> when building runtimes).
+          in the sandbox (or <code class="filename">/run/build-runtime/$modulename</code> when building runtimes) and also as
+          <code class="filename">/run/active-build</code> since 1.4.7.
           This is used as current working directory for all build ops.
         </p><p>
           The destination directory for installation is accessible for writing at the place it will seen at runtime.
