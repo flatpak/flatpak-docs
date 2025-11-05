@@ -571,7 +571,7 @@ When submitting an application to software stores like Flathub, ``dir``
 should be avoided altogether.
 
 ``path`` should be the path of the local directory relative to the
-manifest root path, whoose contents will be copied during build.
+manifest root path, whose contents will be copied during build.
 
 .. code-block:: yaml
 
