@@ -6,7 +6,12 @@ This section includes documentation on how to debug Flatpak apps.
 Debug packages
 --------------
 
-Before debugging, it is essential to install the debug packages used by
+Before debugging, ensure you fully install the package, as simply running the package with "flatpak-builder --run ..." will run a version of the program with more limited system integration.  Many perceived bugs seen when running the application with "flatpak-builder --run" may completely disapear when the application is installed fully.  Some examples of features that might not work properly while running within flatpak-builder are file explorer dialogues and automatic detection of Wayland or X11 sessions.  To make a local test install of your application, and then run it, use the following::
+
+  $ flatpak-builder --install <build-dir> <manifest>  
+  $ flatpak run org.example.app
+
+To begin debugging, it is essential to install the debug packages used by
 the application. This can be done by::
 
 
