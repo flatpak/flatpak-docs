@@ -23,11 +23,11 @@ applications, please see the corresponding flatpak or build
 manifest.
 
 ``.Debug, .Locale, .Sources`` extensions created by Flatpak builder do
-not need to be specified manually. These are automaitcally created and
+not need to be specified manually. These are automatically created and
 loaded if installed.
 
 Note that, ``.Locale`` extensions are by default only partially
-installed (only for the configued languages) by Flatpak. To install the
+installed (only for the configured languages) by Flatpak. To install the
 full locale extension ``flatpak update --subpath= $FLATPAK_ID.Locale``
 can be used.
 
@@ -216,7 +216,7 @@ The extensions are mounted in alphabetical path order of directory.
 .. warning::
 
   Some extensions are installed automatically by the runtime based on
-  certain conditions and these do not need be added to application
+  certain conditions and these do not need to be added to application
   manifests. Please see below for the purpose of extensions or
   extension points defined in the runtime. Similarly extensions created
   by Flatpak builder like ``.Locale, .Debug`` also do not need to be
