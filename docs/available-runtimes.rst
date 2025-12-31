@@ -55,7 +55,7 @@ used by the GNOME platform.
 
 Major version releases of the runtime are synced with `GNOME releases <https://release.gnome.org/calendar/>`_
 and are announced on `GNOME Discourse <https://discourse.gnome.org/tag/announcement>`_.
-Usually a given branch of the runtime is supported for an year and EOL-ed
+Usually a given branch of the runtime is supported for a year and EOL-ed
 upon the release of a newstable version.
 
 ====================================================== =====================================
