@@ -244,7 +244,7 @@ requested with ``--filesystem`` and are not available with
 - ``/boot``
 - ``/efi``
 - ``/root``
-- ``/sys``
+- ``/sys`` - Only ``/sys/block, /sys/bus, /sys/class, /sys/dev, /sys/devices`` are shared as read-only by default (if exists)
 - ``/tmp``
 - ``/var`` - Note that by default ``/var/{cache, config, data, tmp}``
   inside the sandbox are the same as ``~/.var/app/$FLATPAK_ID/{cache, config, data, cache/tmp}``.
