@@ -20,7 +20,7 @@ and `KDE <https://develop.kde.org/docs/packaging/flatpak/publishing/#publishing-
 also has their own respective CI setup for doing this, which can be
 also be used for inspiration.
 
-`Flatpak Github Actions <https://github.com/flathub-infra/flatpak-github-actions>`_
+`Flatpak Github Actions <https://github.com/flatpak/flatpak-github-actions>`_
 can be used for GitHub.
 
 Running tests
