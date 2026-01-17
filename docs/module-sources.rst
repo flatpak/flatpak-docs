@@ -185,20 +185,22 @@ available on the host. A typical example of using this is:
   To use the ``file://`` scheme for a git repository, do
   ``git config --global protocol.file.allow always``.
 
-- A ``branch: branch_name`` can also be used in place of a ``tag`` and
-  ``commit``.
+- For reproducibility, platforms like Flathub require that a ``commit``
+  or a ``tag`` or both must be present. If a ``branch`` is used instead
+  of them, it must point to a git commit hash.
 
-- ``commit`` is the commit to use from the git repository.
+- Outside Flathub it is possile to use ``branch: branch_name``.
 
-  In case of a tag, this must be the commit, the tag points to
-  (``git rev-list -n 1 $tag``). In case of a ``branch``, it is verified
+- ``commit`` is the commit to use from the git repository. If ``tag``
+  is also present, the ``commit`` should point to its hash
+  (``git rev-list -n 1 $tag``). For a ``branch``, it is verified
   that the branch points to this specific commit
   (``git show-ref "refs/heads/$branch"``).
 
 .. tip::
 
-  To ensure reproduciblity and avoid build failures, it is best to avoid
-  using ``branch`` and always add a ``commit`` to a ``tag``.
+  To ensure reproduciblity and avoid build failures, always use
+  ``commit`` together with a ``tag``.
 
 By default ``flatpak-builder`` will do a shallow-clone of the git
 repository and checkout submodules if any. ``disable-shallow-clone: true``
