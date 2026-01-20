@@ -20,3 +20,4 @@ before reading this section.
    module-sources
    sandbox-permissions
    guides
+   troubleshooting
