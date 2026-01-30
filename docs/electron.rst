@@ -11,7 +11,7 @@ from other applications. It also includes information on the tooling for
 building Electron applications and how to use it.
 
 The guide walks through the `manifest file
-<https://github.com/flathub/electron-sample-app/blob/master/flatpak/org.flathub.electron-sample-app.yml>`_
+<https://github.com/flathub/electron-sample-app/blob/master/org.flathub.electron-sample-app.yml>`_
 of the `sample Electron Flatpak application
 <https://github.com/flathub/electron-sample-app>`_. Before you start,
 it is a good idea to take a look at this, either online or by downloading
@@ -25,8 +25,7 @@ While it isn't strictly necessary, you might want to try building and running
 the sample application yourself.
 
 To get setup for the build, download or clone the sample app from GitHub,
-and navigate to the ``/flatpak`` directory in the terminal. Then
-to build::
+and navigate to the project directory in the terminal. Then to build::
 
   $ flatpak-builder build org.flathub.electron-sample-app.yml --install-deps-from=flathub --force-clean --user --install
 
