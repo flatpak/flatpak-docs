@@ -99,6 +99,12 @@ The following permissions are commonly used by applications.
 - ``--socket=ssh-auth``- Allow access to ``$SSH_AUTH_SOCK``. This is not
   commonly needed unless the application interacts with SSH such as
   Git clients or SSH frontends.
+- ``--socket=inherit-wayland-socket`` - Inherit the ``$WAYLAND_SOCKET``
+  environment variable from the parent process (for example, the compositor).
+  This is not commonly needed unless the application needs access to
+  the parent process’ Wayland state. Input method applications may need
+  this. It’s a very sensitive permission as it prevents Wayland client
+  state from being sandboxed.
 
 .. note::
 
