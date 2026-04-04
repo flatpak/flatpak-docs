@@ -283,7 +283,7 @@ webcams, CD/DVD drives etc.
 USB portal
 ``````````
 
-Since 1.5.11.
+Since 1.15.11.
 
 Sandboxed access to individual USB devices can be controlled by
 portals. Flatpak allows specifying enumerable USB devices to allow
