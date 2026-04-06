@@ -472,6 +472,104 @@ Note that these should not have subpaths in them unless the value
 of the subpath can be consistently pre-determined. Block device naming
 depends on the kernel/fstab configuration and cannot be pre-determined.
 
+Conditional permissions
+-----------------------
+
+Since 1.17.0, Flatpak supports conditional permissions which allows
+them to be granted only when certain runtime conditions are satisfied
+and fallback otherwise. The intention of the system is to allow
+users or developers to specify tighter permission grants (as they are
+added in new Flatpak versions) while fallback to older grants for
+backwards compatibility at run time.
+
+.. note::
+
+   Older Flatpak versions will fail when encountering unknown
+   commandline options, while unrecognized metadata entries will be
+   silently ignored.
+
+   Flatpak manifests using conditional flags (for example,
+   ``--socket-if=`` etc.) will require Flatpak 1.17.0 or newer to
+   build and attempting to build them with older Flatpak versions will
+   produce an error.
+
+The following flags are available to specify conditional
+permissions in CLI and in Flatpak manifests::
+
+  --socket-if=
+  --device-if=
+  --share-if=
+  --allow-if=
+
+The syntax of all the options are ``--socket-if=PERMISSION:CONDITION``
+and so on where ``PERMISSION`` is the available grants for that flag
+(e.g., those listed for ``--socket=``). Conditions can be negated by
+prefixing with ``!``. The following conditions are supported:
+
+- ``true`` - Always evaluates to true
+- ``false``- Always evaluates to false
+- ``has-input-device`` - True if the Flatpak version supports
+  ``--device=input``
+- ``has-wayland`` - True if the current desktop session supports
+  Wayland
+
+Multiple conditionals can be specified for the same grant, in which
+case the permission is granted if any condition matches. If no
+conditional rule evaluates to ``true``, the grant is denied
+unless it is also unconditionally allowed. Duplicate conditions are
+ignored.
+
+Examples
+`````````
+
+#. The unconditional grant ``--socket=x11`` can be tightened using
+   conditional permissions to ``--socket-if=x11:!has-wayland``. This
+   allows access to X11 only when a Wayland desktop session is not
+   available. To preserve backwards compatibility, the following
+   pattern can be used::
+
+      --socket=x11
+      --socket-if=x11:!has-wayland
+
+   This allows older Flatpak versions which do not understand the
+   conditional permissions function by allowing X11 access always
+   while newer Flatpak, which understands the conditional system will
+   allow X11 access only when the session is not Wayland.
+
+#. If an application requires only access to ``input`` device permission,
+   the following flags can be used to move away from ``--device=all``
+   to ``--device=input``::
+
+      --device=all
+      --device-if=all:!has-input-device
+      --device=input
+
+   This allows older Flatpak versions which do not understand the
+   ``input`` device permission to function by having the broader
+   ``all`` access. Newer Flatpak versions which understand the
+   conditional system (and therefore understands the ``input``
+   permission) will deny ``all`` due to
+   ``--device-if=all:!has-input-device`` and allow only ``input`` due
+   to ``--device=input``.
+
+To explicitly deny a permission that might be granted through runtime
+metadata or overrides ``--nosocket=NAME, --unshare=NAME`` etc. can be
+used::
+
+  --nosocket=x11
+
+This denial can be combined with conditional grants to remove
+unconditional access while allowing conditional access::
+
+  --nosocket=x11
+  --socket=x11
+  --socket-if=x11:!has-wayland
+
+This denies unconditional X11 access but allows X11 conditionally when
+Wayland is unavailable. Older Flatpak versions will see only the final
+``--socket=x11`` grant and allow X11 unconditionally, while newer
+versions recognise the conditional logic and evaluates it at runtime.
+
 .. rubric:: Footnotes
 
 .. [#f1] This is not necessarily required, but without it the X11 shared
