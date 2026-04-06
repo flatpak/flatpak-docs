@@ -174,7 +174,7 @@ The following permission options are available:
 Additionally the following permissions are available:
 
 ====================  ==============================================================================================================================  ===================================================
-``host``              Access to ``/home, /media, /opt, /run/media, /srv`` and everything provided by ``host-os, host-etc`` mounted in ``/run/host``    Includes any subpaths
+``host``              Access to all toplevel paths and subpaths of ``/`` except some reserved paths listed below.                                      Paths provided by ``host-etc, host-os`` are mounted at ``/run/host`` as explained below.
 ``host-etc``          Host's ``/etc``                                                                                                                  Host's ``/etc`` is mounted at ``/run/host/etc``
 ``host-os``           Host's ``/usr, /bin, /sbin, /lib{32, 64}, /etc/ld.so.cache, /etc/alternatives``                                                  Mounted at ``/run/host``
 ``home``              Access the home directory                                                                                                        Except ``~/.var/app``
