@@ -172,6 +172,9 @@ linkcheck_request_headers = {
     }
 }
 
+linkcheck_retries = 2
+linkcheck_timeout = 10
+
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
