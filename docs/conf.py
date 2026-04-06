@@ -165,6 +165,7 @@ linkcheck_ignore = [
     r"https://www\.gnu\.org/.*",             # Broken in GitHub actions
     r"https://www\.freedesktop\.org/.*",     # Uses Anubis so get "418 Client Error: I'm a teapot for url: ..."
     r"https://gitlab\.gnome\.org/.*",        # 406 probably due to Anubis
+    r"https?://launchpad\.net/.*",           # Timeout in GitHub actions
 ]
 
 linkcheck_request_headers = {
