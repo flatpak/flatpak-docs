@@ -174,6 +174,7 @@ The following permission options are available:
 Additionally the following permissions are available:
 
 ====================  ==============================================================================================================================  ===================================================
+``host-root``         Complete host operating system with no exclusions mounted at ``/run/host/root`` inside the sandbox. (v1.17.0+)
 ``host``              Access to all toplevel paths and subpaths of ``/`` except some reserved paths listed below.                                      Paths provided by ``host-etc, host-os`` are mounted at ``/run/host`` as explained below.
 ``host-etc``          Host's ``/etc``                                                                                                                  Host's ``/etc`` is mounted at ``/run/host/etc``
 ``host-os``           Host's ``/usr, /bin, /sbin, /lib{32, 64}, /etc/ld.so.cache, /etc/alternatives``                                                  Mounted at ``/run/host``
