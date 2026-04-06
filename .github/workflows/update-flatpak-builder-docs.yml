@@ -10,7 +10,9 @@ jobs:
     name: Update Flatpak Builder docs
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      # 6.0.2
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+
       - name: Install dependencies
         run: |
           sudo apt install -y appstream git libxml2-utils
@@ -49,7 +51,8 @@ jobs:
 
       - name: Create pull request
         if: ${{ success() && steps.vercomp.outcome == 'success' }}
-        uses: peter-evans/create-pull-request@v7
+        # 8.1.0
+        uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch-suffix: "random"
