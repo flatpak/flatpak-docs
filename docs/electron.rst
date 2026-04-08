@@ -174,7 +174,8 @@ It's important for Linux applications to set the correct desktop file name. If n
 By default Electron uses ``{appname}.desktop`` as desktop file name. In Flatpak the name of the desktop file must be the id of the Flatpak.
 To tell Electron to use another name you need to set the ``desktopName`` key in your ``package.json`` e.g. ``"desktopName": "com.example.MyApp.desktop"``.
 
-In case you repack a binary, you can use the ``patch-desktop-filename`` script provided by the BaseApp. Each Electron binary ships with ``resources/app.asar`` file.
+In case you repack a binary, you can use the `patch-electron-desktop-filename <https://codeberg.org/JakobDev/patch-electron-desktop-filename>`_  tool included in the BaseApp.
+Each Electron binary ships with ``resources/app.asar`` file.
 You need to call ``patch-desktop-filename`` with this file as argument.
 If your application is installed under ``${FLATPAK_DEST}/my-app`` you need to run ``patch-desktop-filename ${FLATPAK_DEST}/my-app/resources/app.asar``.
 
