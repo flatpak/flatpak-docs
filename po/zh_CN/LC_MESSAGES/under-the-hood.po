@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-26 16:32-0300\n"
+"POT-Creation-Date: 2026-04-10 07:35+0530\n"
 "PO-Revision-Date: 2019-04-23 06:29-0400\n"
 "Last-Translator: ZiqiangXu <ziqiang_xu@yeah.net>\n"
 "Language: zh_Hans_CN\n"
@@ -13,7 +13,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../under-the-hood.rst:2
 msgid "Under the Hood"
@@ -109,14 +109,158 @@ msgid ""
 msgstr ""
 
 #: ../../under-the-hood.rst:51
+msgid "Conditional permission system"
+msgstr ""
+
+#: ../../under-the-hood.rst:53
+msgid ""
+"Since Flatpak 1.17.0, conditional permissions allow permissions to be "
+"granted only when certain runtime conditions are satisfied, with fallback"
+" to unconditional grants for compatibility with older versions."
+msgstr ""
+
+#: ../../under-the-hood.rst:57
+msgid "Permissions are internally represented as:"
+msgstr ""
+
+#: ../../under-the-hood.rst:59
+msgid "unconditionally allowed or denied"
+msgstr ""
+
+#: ../../under-the-hood.rst:60
+msgid ""
+"a reset flag indicating whether the current layer overrides rules from "
+"lower layers"
+msgstr ""
+
+#: ../../under-the-hood.rst:62
+msgid "a set of conditional rules under which the permission may be allowed"
+msgstr ""
+
+#: ../../under-the-hood.rst:64
+msgid "For example:"
+msgstr ""
+
+#: ../../under-the-hood.rst:66
+msgid ""
+"``--socket=NAME`` unconditionally allows the permission and resets any "
+"previously defined rules for that permission"
+msgstr ""
+
+#: ../../under-the-hood.rst:68
+msgid ""
+"``--nosocket=NAME`` unconditionally denies the permission and resets any "
+"previously defined rules"
+msgstr ""
+
+#: ../../under-the-hood.rst:70
+msgid ""
+"``--socket-if=NAME:CONDITION`` adds a conditional rule without resetting "
+"existing rules"
+msgstr ""
+
+#: ../../under-the-hood.rst:73
+msgid "Conditions may be negated using ``!``."
+msgstr ""
+
+#: ../../under-the-hood.rst:75
+msgid ""
+"Multiple conditional rules can be specified for the same permission. In "
+"this case, the permission is granted if any condition evaluates to true."
+msgstr ""
+
+#: ../../under-the-hood.rst:78
+msgid ""
+"Duplicate conditions are ignored. The order of conditions does not affect"
+" evaluation."
+msgstr ""
+
+#: ../../under-the-hood.rst:81
+msgid ""
+"If no conditional rules are present, the permission is granted only if it"
+" is unconditionally allowed."
+msgstr ""
+
+#: ../../under-the-hood.rst:84
+msgid ""
+"If conditional rules are present, the permission is granted if any "
+"condition evaluates to true, and denied otherwise, unless it is also "
+"unconditionally allowed."
+msgstr ""
+
+#: ../../under-the-hood.rst:88
+msgid ""
+"If an unconditional entry follows a conditional entry for the same grant "
+"in commandline flags, the earlier unconditional entry is treated as "
+"backwards compatibility fallback and does not affect the final permission"
+" state. So the following is effectively treated as ``--socket-if=x11"
+":!has-wayland`` in Flatpak versions supporting conditional permissions::"
+msgstr ""
+
+#: ../../under-the-hood.rst:98
+msgid "Permissions are written to metadata using the following rules:"
+msgstr ""
+
+#: ../../under-the-hood.rst:100
+msgid "Unconditionally allowed permissions are written as ``NAME``"
+msgstr ""
+
+#: ../../under-the-hood.rst:101
+msgid "Unconditionally denied permissions are written as ``!NAME``"
+msgstr ""
+
+#: ../../under-the-hood.rst:102
+msgid "Conditionally allowed permissions are written as:"
+msgstr ""
+
+#: ../../under-the-hood.rst:104
+msgid "unconditional ``NAME`` entry for compat"
+msgstr ""
+
+#: ../../under-the-hood.rst:105
+msgid "``if:NAME:CONDITION`` entries"
+msgstr ""
+
+#: ../../under-the-hood.rst:107
+msgid ""
+"If the permission resets previously defined rules, an explicit ``!NAME`` "
+"entry is written first, followed by the unconditional ``NAME`` entry and "
+"then the ``if:NAME:CONDITION`` entries. This is omitted when saving an "
+"application's own metadata, as opposed to overrides."
+msgstr ""
+
+#: ../../under-the-hood.rst:112
+msgid ""
+"When parsing metadata, a non-negated unconditional ``NAME`` entry "
+"appearing before a ``if:NAME:CONDITION`` entry is treated as a "
+"compatibility fallback and does not affect the final permission state. "
+"Eg. ``sockets=x11;if:x11:!has-wayland;`` is effectively treated as "
+"``if:x11:!has-wayland`` in Flatpak versions supporting conditional "
+"permissions."
+msgstr ""
+
+#: ../../under-the-hood.rst:119
+msgid ""
+"The ``fallback-x11`` socket, on pre-1.17 Flatpak versions implicitly "
+"granted ``x11`` access and at runtime X11 access was suppressed when "
+"Wayland was available, while on newer Flatpak (1.17+) it is internally "
+"converted to the conditional syntax ``if:x11:!has-wayland``. When saving "
+"the metadata, Flatpak converts ``if:x11:!has-wayland`` back to "
+"``fallback-x11`` only when it is the sole conditional on ``x11``. If "
+"additional conditionals are present, the new syntax is written directly "
+"and older Flatpak versions will not understand the conditional entries. A"
+" conditional grant for ``fallback-x11`` is not allowed."
+msgstr ""
+
+#: ../../under-the-hood.rst:130
 msgid "Underlying technologies"
 msgstr "基础技术"
 
-#: ../../under-the-hood.rst:53
+#: ../../under-the-hood.rst:132
 msgid "Flatpak utilises a number of pre-existing technologies. These include:"
 msgstr "Flatpak使用了许多已经存在的技术。如："
 
-#: ../../under-the-hood.rst:55
+#: ../../under-the-hood.rst:134
 #, fuzzy
 msgid ""
 "The `bubblewrap <https://github.com/containers/bubblewrap>`_ utility from"
@@ -126,25 +270,25 @@ msgstr ""
 " 来自 `Project Atomic <http://www.projectatomic.io/>`_的`bubblewrap "
 "<https://github.com/projectatomic/bubblewrap>`_，它可以让非特权的用户启动和运行容器。使用到的内核特性："
 
-#: ../../under-the-hood.rst:59
+#: ../../under-the-hood.rst:138
 msgid "Namespaces"
 msgstr "Namespaces"
 
-#: ../../under-the-hood.rst:60
+#: ../../under-the-hood.rst:139
 msgid "Bind mounts"
 msgstr "Bind mounts"
 
-#: ../../under-the-hood.rst:61
+#: ../../under-the-hood.rst:140
 msgid "Seccomp rules"
 msgstr "Seccomp rules"
 
-#: ../../under-the-hood.rst:63
+#: ../../under-the-hood.rst:142
 msgid ""
 "`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_ to set up"
 " cgroups for sandboxes"
 msgstr "`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`为沙盒启动cgroups"
 
-#: ../../under-the-hood.rst:65
+#: ../../under-the-hood.rst:144
 msgid ""
 "`D-Bus <https://www.freedesktop.org/wiki/Software/dbus/>`_, a well-"
 "established way to provide high-level APIs to applications"
@@ -152,14 +296,14 @@ msgstr ""
 "`D-Bus "
 "<https://www.freedesktop.org/wiki/Software/dbus/>`，一种成熟的为应用程序提供高级API的方法"
 
-#: ../../under-the-hood.rst:67
+#: ../../under-the-hood.rst:146
 #, fuzzy
 msgid ""
 "The `OSTree <https://ostreedev.github.io/ostree/>`__ system for "
 "versioning and distributing filesystem trees"
 msgstr "`OSTree <https://ostree.readthedocs.io/en/latest/>`系统，版本化和分布式文件系统树"
 
-#: ../../under-the-hood.rst:69
+#: ../../under-the-hood.rst:148
 msgid ""
 "The OCI format from the `Open Container Initiative "
 "<https://opencontainers.org/>`_, as an alternative to OSTree used by the "
@@ -167,11 +311,11 @@ msgid ""
 "fedora-now-live/>`__"
 msgstr ""
 
-#: ../../under-the-hood.rst:73
+#: ../../under-the-hood.rst:152
 msgid "Flatpak can use either OSTree or OCI for single-file bundles."
 msgstr ""
 
-#: ../../under-the-hood.rst:74
+#: ../../under-the-hood.rst:153
 msgid ""
 "`Appstream <https://www.freedesktop.org/software/appstream/docs/>`_ "
 "metadata, to allow Flatpak applications to show up nicely in software "

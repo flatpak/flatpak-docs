@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-01 08:05+0530\n"
+"POT-Creation-Date: 2026-04-10 07:35+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ko\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../module-sources.rst:2
 msgid "Module Sources"
@@ -420,6 +420,7 @@ msgid ""
 msgstr ""
 
 #: ../../module-sources.rst:475
+#, python-brace-format
 msgid ""
 "The last line creates an empty symlink from ``${FLATPAK_DEST}/extra/`` to"
 " ``${FLATPAK_DEST}/bin/`` so that the executable is found in ``$PATH`` "
@@ -448,6 +449,7 @@ msgid ""
 msgstr ""
 
 #: ../../module-sources.rst:499
+#, python-brace-format
 msgid ""
 "The commands needed to extract the snap are specified in the "
 "``apply_extra`` script. These can be any shell commands that run when "
@@ -504,7 +506,7 @@ msgstr ""
 #: ../../module-sources.rst:573
 msgid ""
 "``path`` should be the path of the local directory relative to the "
-"manifest root path, whoose contents will be copied during build."
+"manifest root path, whose contents will be copied during build."
 msgstr ""
 
 #: ../../module-sources.rst:587
@@ -515,4 +517,11 @@ msgid ""
 "respectively. Please see :doc:`flatpak-builder-command-reference` for "
 "them."
 msgstr ""
+
+#~ msgid ""
+#~ "``path`` should be the path of the"
+#~ " local directory relative to the "
+#~ "manifest root path, whoose contents will"
+#~ " be copied during build."
+#~ msgstr ""
 
