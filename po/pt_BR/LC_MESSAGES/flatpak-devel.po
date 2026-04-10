@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flatpak \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-30 14:59+0530\n"
+"POT-Creation-Date: 2026-04-10 07:35+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../flatpak-devel.rst:2
 msgid "Flatpak as a developer platform"
@@ -59,7 +59,7 @@ msgstr ""
 
 #: ../../flatpak-devel.rst:23
 msgid ""
-"`Flatpak Github Actions <https://github.com/flathub-infra/flatpak-github-"
+"`Flatpak Github Actions <https://github.com/flatpak/flatpak-github-"
 "actions>`_ can be used for GitHub."
 msgstr ""
 
@@ -347,5 +347,11 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Parallel nigthly and stable applications"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Flatpak Github Actions <https://github.com"
+#~ "/flathub-infra/flatpak-github-actions>`_ can "
+#~ "be used for GitHub."
 #~ msgstr ""
 

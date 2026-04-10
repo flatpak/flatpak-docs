@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-13 09:30+0530\n"
+"POT-Creation-Date: 2026-04-10 07:35+0530\n"
 "PO-Revision-Date: 2018-11-03 12:59-0400\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language: zh_Hans_CN\n"
@@ -13,7 +13,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../electron.rst:2
 msgid "Electron"
@@ -39,11 +39,10 @@ msgstr "本教程提供有关如何构建Electron应用程序与其他应用程�
 #, fuzzy
 msgid ""
 "The guide walks through the `manifest file <https://github.com/flathub"
-"/electron-sample-app/blob/master/flatpak/org.flathub.electron-sample-"
-"app.yml>`_ of the `sample Electron Flatpak application "
-"<https://github.com/flathub/electron-sample-app>`_. Before you start, it "
-"is a good idea to take a look at this, either online or by downloading "
-"the application."
+"/electron-sample-app/blob/master/org.flathub.electron-sample-app.yml>`_ "
+"of the `sample Electron Flatpak application <https://github.com/flathub"
+"/electron-sample-app>`_. Before you start, it is a good idea to take a "
+"look at this, either online or by downloading the application."
 msgstr ""
 "该指南介绍了 `清单文件 <https://github.com/flathub/electron-sample-"
 "app/blob/master/flatpak/org.flathub.electron-sample-app.json>`_  ，来自 "
@@ -64,39 +63,38 @@ msgstr "虽然并非绝对必要，但最好自己尝试构建和运行示例应
 #, fuzzy
 msgid ""
 "To get setup for the build, download or clone the sample app from GitHub,"
-" and navigate to the ``/flatpak`` directory in the terminal. Then to "
-"build::"
+" and navigate to the project directory in the terminal. Then to build::"
 msgstr ""
 "要获取构建的设置，请从GitHub下载或克隆示例应用程序，然后导航到终端中的 ``/flatpak`` 目录。 "
 "您还必须安装Electron基础应用程序："
 
-#: ../../electron.rst:33
+#: ../../electron.rst:32
 msgid "Finally, the application can be run with::"
 msgstr "最后，运行应用："
 
-#: ../../electron.rst:38
+#: ../../electron.rst:37
 msgid "Basic configuration"
 msgstr "基本配置"
 
-#: ../../electron.rst:40
+#: ../../electron.rst:39
 msgid ""
 "The first part of the sample application's manifest specifies the "
 "application's ID. It also configures the runtime and SDK:"
 msgstr "示例应用清单文件的第一部分指定了应用ID、runtime和SDK："
 
-#: ../../electron.rst:50
+#: ../../electron.rst:49
 msgid ""
 "The Freedesktop runtime is generally the best runtime to use with "
 "Electron applications, since it is the most minimal runtime, and other "
 "dependencies will be specific to Electron itself."
 msgstr "Freedesktop运行时通常是与Electron应用程序一起使用的最佳运行时，因为它是最小的运行时，其他依赖项将特定于Electron本身。"
 
-#: ../../electron.rst:55
+#: ../../electron.rst:54
 #, fuzzy
 msgid "The Electron BaseApp"
 msgstr "Electron base应用"
 
-#: ../../electron.rst:57
+#: ../../electron.rst:56
 #, fuzzy
 msgid ""
 "Next, the manifest specifies that the Electron BaseApp should be used, by"
@@ -104,7 +102,7 @@ msgid ""
 "application manifest:"
 msgstr "然后，清单文件通过 ``base`` 和 ``base-version`` 属性指明了Electron要使用的的base app::"
 
-#: ../../electron.rst:66
+#: ../../electron.rst:65
 #, fuzzy
 msgid ""
 "BaseApps are described in :doc:`dependencies`. Using the Electron base "
@@ -116,44 +114,44 @@ msgstr ""
 "base app在 :doc:`building-basics` 有介绍。使用Electron的base "
 "app比手动构建Electron和它的依赖要方便和快速得多。也有在用户的机器上减少大量副本文件的优点，因为这意味着Electron在磁盘上只保存一份。"
 
-#: ../../electron.rst:72
+#: ../../electron.rst:71
 msgid "The Node.js SDK extension"
 msgstr ""
 
-#: ../../electron.rst:74
+#: ../../electron.rst:73
 msgid ""
 "In order to build Electron-based apps, you need Node.js available at "
 "build time. Flathub provides Node.js LTS versions as extensions for the "
 "SDK, so you can install one of them and add it in your apps' manifest:"
 msgstr ""
 
-#: ../../electron.rst:83
+#: ../../electron.rst:82
 msgid "Enable the extension by adding it to ``PATH``:"
 msgstr ""
 
-#: ../../electron.rst:90
+#: ../../electron.rst:89
 msgid ""
 "Note that the extension name (last portion of reverse-dns notation, "
 "``node18`` in this example) must be the same in ``sdk-extensions`` and "
 "``append-path``."
 msgstr ""
 
-#: ../../electron.rst:94
+#: ../../electron.rst:93
 msgid "Command"
 msgstr "命令"
 
-#: ../../electron.rst:96
+#: ../../electron.rst:95
 msgid ""
 "The ``command`` property indicates that a script called ``run.sh`` is to "
 "be executed to run the application. This will be explained in further "
 "detail later."
 msgstr "这个 ``command`` 表明执行一个名为 ``run.sh`` 的脚本用来运行这个应用。这会在后续详细介绍。"
 
-#: ../../electron.rst:105
+#: ../../electron.rst:104
 msgid "Sandbox permissions"
 msgstr "沙箱权限"
 
-#: ../../electron.rst:107
+#: ../../electron.rst:106
 #, fuzzy
 msgid ""
 "The standard sandbox :ref:`sandbox-permissions:Permissions guidelines` "
@@ -163,13 +161,13 @@ msgid ""
 "Wayland session and nothing else is required."
 msgstr "标准的指南可以用于Electron应用。可是Electron还不支持Wayland，所以只能使用X11进行显示。示例的应用也为声音配置了pulseaudio和开启了网络的访问："
 
-#: ../../electron.rst:113
+#: ../../electron.rst:112
 msgid ""
 "The sample app also configures PulseAudio for sound and enables network "
 "access:"
 msgstr ""
 
-#: ../../electron.rst:126
+#: ../../electron.rst:125
 msgid ""
 "To allow experimental `native Wayland` support in Electron>=20, the "
 "``--ozone-platform-hint=auto`` flag can be passed to the program. `auto` "
@@ -177,31 +175,31 @@ msgid ""
 " Xwayland or X11 otherwise."
 msgstr ""
 
-#: ../../electron.rst:131
+#: ../../electron.rst:130
 msgid ""
 "It's recommended to leave actually `enabling` Wayland up to the user for "
 "now, i.e. set ``--socket=x11`` in the manifest. Wayland can then be "
 "tested with::"
 msgstr ""
 
-#: ../../electron.rst:137
+#: ../../electron.rst:136
 msgid "Enable native Wayland support by default"
 msgstr ""
 
-#: ../../electron.rst:141
+#: ../../electron.rst:140
 msgid ""
 "Native Wayland support in Electron is still experimental and often "
 "unstable. It is advised to stick with the X11/Xwayland configuration "
 "above as the default."
 msgstr ""
 
-#: ../../electron.rst:145
+#: ../../electron.rst:144
 msgid ""
 "To make native Wayland the `default` for users, ``--socket=fallback-x11``"
 " and ``--socket=wayland`` must be used in the manifest."
 msgstr ""
 
-#: ../../electron.rst:148
+#: ../../electron.rst:147
 msgid ""
 "For Electron versions between 17 and 27, client-side window decorations "
 "under native Wayland can be enabled by passing ``--enable-"
@@ -209,7 +207,7 @@ msgid ""
 " Electron , this isn't necessary anymore."
 msgstr ""
 
-#: ../../electron.rst:153
+#: ../../electron.rst:152
 msgid ""
 "Electron uses ``libnotify`` on Linux to provide desktop notifications. "
 "`Since version 0.8.0 "
@@ -222,18 +220,18 @@ msgid ""
 "``libnotify>=0.8.0`` since ``branch/23.08``."
 msgstr ""
 
-#: ../../electron.rst:160
+#: ../../electron.rst:159
 msgid ""
 "To ensure proper mouse cursor scaling on HiDPI displays under Wayland, "
 "the ``XCURSOR_PATH`` environment variable must be set to the host's "
 "corresponding directories:"
 msgstr ""
 
-#: ../../electron.rst:172
+#: ../../electron.rst:171
 msgid "Using correct desktop file name"
 msgstr ""
 
-#: ../../electron.rst:174
+#: ../../electron.rst:173
 #, python-brace-format
 msgid ""
 "It's important for Linux applications to set the correct desktop file "
@@ -245,15 +243,16 @@ msgid ""
 "\"com.example.MyApp.desktop\"``."
 msgstr ""
 
-#: ../../electron.rst:178
+#: ../../electron.rst:177
 #, python-brace-format
 msgid ""
-"In case you repack a binary, you can use the ``patch-desktop-filename`` "
-"script provided by the BaseApp. Each Electron binary ships with "
-"``resources/app.asar`` file. You need to call ``patch-desktop-filename`` "
-"with this file as argument. If your application is installed under "
-"``${FLATPAK_DEST}/my-app`` you need to run ``patch-desktop-filename "
-"${FLATPAK_DEST}/my-app/resources/app.asar``."
+"In case you repack a binary, you can use the `patch-electron-desktop-"
+"filename <https://codeberg.org/JakobDev/patch-electron-desktop-"
+"filename>`_  tool included in the BaseApp. Each Electron binary ships "
+"with ``resources/app.asar`` file. You need to call ``patch-desktop-"
+"filename`` with this file as argument. If your application is installed "
+"under ``${FLATPAK_DEST}/my-app`` you need to run ``patch-desktop-filename"
+" ${FLATPAK_DEST}/my-app/resources/app.asar``."
 msgstr ""
 
 #: ../../electron.rst:183
@@ -555,5 +554,19 @@ msgstr ""
 #~ msgid ""
 #~ "``org.electronjs.Electron2.BaseApp`` since "
 #~ "``branch/23.08`` comes with ``libnotify>=0.8.0``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In case you repack a binary, you"
+#~ " can use the ``patch-desktop-"
+#~ "filename`` script provided by the "
+#~ "BaseApp. Each Electron binary ships with"
+#~ " ``resources/app.asar`` file. You need to"
+#~ " call ``patch-desktop-filename`` with "
+#~ "this file as argument. If your "
+#~ "application is installed under "
+#~ "``${FLATPAK_DEST}/my-app`` you need to "
+#~ "run ``patch-desktop-filename ${FLATPAK_DEST"
+#~ "}/my-app/resources/app.asar``."
 #~ msgstr ""
 
