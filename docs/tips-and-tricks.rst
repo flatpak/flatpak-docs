@@ -191,3 +191,12 @@ with contents like::
 Then after a ``systemctl --user daemon-reload``, those
 ``systemd.resource-control(5)`` parameters will apply to all instances of that
 app.
+
+Flatpak packaging AI assistant skill
+------------------------------------
+
+You can also find the optional AI assistant guidance for Flatpak packaging in 
+https://github.com/flatpak/flatpak-docs/tree/master/skills. Compatible assistants 
+can use it as context for tasks such as writing manifests, choosing runtimes, 
+reviewing sandbox permissions, and debugging packaging issues. It is assistant 
+metadata only; Flatpak itself does not read or require it.
