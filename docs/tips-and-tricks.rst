@@ -196,7 +196,7 @@ Flatpak packaging AI assistant skill
 ------------------------------------
 
 You can also find the optional AI assistant guidance for Flatpak packaging in 
-https://github.com/flatpak/flatpak-docs/tree/master/skills. Compatible assistants 
+https://github.com/flatpak/flatpak-docs/tree/master/skills. AI assistants 
 can use it as context for tasks such as writing manifests, choosing runtimes, 
 reviewing sandbox permissions, and debugging packaging issues. It is assistant 
 metadata only; Flatpak itself does not read or require it.

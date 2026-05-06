@@ -25,7 +25,7 @@ AI Assistant Skill
 ------------------
 
 This repository also includes optional AI assistant guidance for Flatpak
-packaging in ``skills/flatpak-packaging``. Compatible assistants can use it to
+packaging in ``skills/flatpak-packaging``. AI assistants can use it to
 help draft manifests, choose runtimes, review sandbox permissions, and debug
 packaging issues. It is assistant metadata only; Flatpak and the documentation
 build do not require it.
