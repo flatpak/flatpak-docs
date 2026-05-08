@@ -88,12 +88,11 @@ unconditionally allowed.
 If an unconditional entry follows a conditional entry for the same
 grant in commandline flags, the earlier unconditional entry is treated
 as backwards compatibility fallback and does not affect the final
-permission state. So the following is effectively treated as
-``--socket-if=x11:!has-wayland`` in Flatpak versions supporting
-conditional permissions::
+permission state.
 
-  --socket=x11
-  --socket-if=x11:!has-wayland
+A ``--socket-if=NAME:CONDITION`` is written in the metadata as::
+
+  sockets=NAME;if:NAME:CONDITION;
 
 Permissions are written to metadata using the following rules:
 
@@ -115,16 +114,6 @@ compatibility fallback and does not affect the final permission
 state. Eg. ``sockets=x11;if:x11:!has-wayland;`` is effectively treated
 as ``if:x11:!has-wayland`` in Flatpak versions supporting
 conditional permissions.
-
-The ``fallback-x11`` socket, on pre-1.17 Flatpak versions implicitly
-granted ``x11`` access and at runtime X11 access was suppressed when
-Wayland was available, while on newer Flatpak (1.17+) it is internally
-converted to the conditional syntax ``if:x11:!has-wayland``. When saving
-the metadata, Flatpak converts ``if:x11:!has-wayland`` back to
-``fallback-x11`` only when it is the sole conditional on ``x11``. If
-additional conditionals are present, the new syntax is written directly
-and older Flatpak versions will not understand the conditional entries.
-A conditional grant for ``fallback-x11`` is not allowed.
 
 Underlying technologies
 -----------------------

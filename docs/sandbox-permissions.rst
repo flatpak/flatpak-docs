@@ -522,27 +522,12 @@ ignored.
 Examples
 `````````
 
-#. The unconditional grant ``--socket=x11`` can be tightened using
-   conditional permissions to ``--socket-if=x11:!has-wayland``. This
-   allows access to X11 only when a Wayland desktop session is not
-   available. To preserve backwards compatibility, the following
-   pattern can be used::
-
-      --socket=x11
-      --socket-if=x11:!has-wayland
-
-   This allows older Flatpak versions which do not understand the
-   conditional permissions function by allowing X11 access always
-   while newer Flatpak, which understands the conditional system will
-   allow X11 access only when the session is not Wayland.
-
 #. If an application requires only access to ``input`` device permission,
    the following flags can be used to move away from ``--device=all``
    to ``--device=input``::
 
-      --device=all
-      --device-if=all:!has-input-device
-      --device=input
+      - --device-if=all:!has-input-device
+      - --device=input
 
    This allows older Flatpak versions which do not understand the
    ``input`` device permission to function by having the broader
@@ -556,18 +541,17 @@ To explicitly deny a permission that might be granted through runtime
 metadata or overrides ``--nosocket=NAME, --unshare=NAME`` etc. can be
 used::
 
-  --nosocket=x11
+   - --nosocket=x11
 
 This denial can be combined with conditional grants to remove
 unconditional access while allowing conditional access::
 
-  --nosocket=x11
-  --socket=x11
-  --socket-if=x11:!has-wayland
+  - --nosocket=x11
+  - --socket-if=x11:!has-wayland
 
 This denies unconditional X11 access but allows X11 conditionally when
 Wayland is unavailable. Older Flatpak versions will see only the final
-``--socket=x11`` grant and allow X11 unconditionally, while newer
+X11 grant and allow X11 unconditionally, while newer
 versions recognise the conditional logic and evaluates it at runtime.
 
 .. rubric:: Footnotes
