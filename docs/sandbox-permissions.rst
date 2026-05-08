@@ -537,6 +537,19 @@ Examples
    ``--device-if=all:!has-input-device`` and allow only ``input`` due
    to ``--device=input``.
 
+#. The following permissions can be used to restrict from
+   ``--device=all`` to ``--device=usb`` in a backwards compatible way
+   if only access to ``usb`` is required::
+
+      - --device-if=all:!has-usb-device
+      - --device=usb
+
+#. The following permission can be used to restrict to ``--device=usb``
+   if the portal is available and falling back to ``--device=usb``
+   if not::
+
+      - --device-if=usb:!has-usb-portal
+
 To explicitly deny a permission that might be granted through runtime
 metadata or overrides ``--nosocket=NAME, --unshare=NAME`` etc. can be
 used::
