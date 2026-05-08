@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-10 07:35+0530\n"
+"POT-Creation-Date: 2026-05-08 19:27+0530\n"
 "PO-Revision-Date: 2018-11-03 02:03-0400\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language: zh_Hans_CN\n"
@@ -1202,28 +1202,12 @@ msgstr ""
 
 #: ../../sandbox-permissions.rst:525
 msgid ""
-"The unconditional grant ``--socket=x11`` can be tightened using "
-"conditional permissions to ``--socket-if=x11:!has-wayland``. This allows "
-"access to X11 only when a Wayland desktop session is not available. To "
-"preserve backwards compatibility, the following pattern can be used::"
-msgstr ""
-
-#: ../../sandbox-permissions.rst:534
-msgid ""
-"This allows older Flatpak versions which do not understand the "
-"conditional permissions function by allowing X11 access always while "
-"newer Flatpak, which understands the conditional system will allow X11 "
-"access only when the session is not Wayland."
-msgstr ""
-
-#: ../../sandbox-permissions.rst:539
-msgid ""
 "If an application requires only access to ``input`` device permission, "
 "the following flags can be used to move away from ``--device=all`` to "
 "``--device=input``::"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:547
+#: ../../sandbox-permissions.rst:532
 msgid ""
 "This allows older Flatpak versions which do not understand the ``input`` "
 "device permission to function by having the broader ``all`` access. Newer"
@@ -1233,38 +1217,51 @@ msgid ""
 "``--device=input``."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:555
+#: ../../sandbox-permissions.rst:540
+msgid ""
+"The following permissions can be used to restrict from ``--device=all`` "
+"to ``--device=usb`` in a backwards compatible way if only access to "
+"``usb`` is required::"
+msgstr ""
+
+#: ../../sandbox-permissions.rst:547
+msgid ""
+"The following permission can be used to restrict to ``--device=usb`` if "
+"the portal is available and falling back to ``--device=usb`` if not::"
+msgstr ""
+
+#: ../../sandbox-permissions.rst:553
 msgid ""
 "To explicitly deny a permission that might be granted through runtime "
 "metadata or overrides ``--nosocket=NAME, --unshare=NAME`` etc. can be "
 "used::"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:561
+#: ../../sandbox-permissions.rst:559
 msgid ""
 "This denial can be combined with conditional grants to remove "
 "unconditional access while allowing conditional access::"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:568
+#: ../../sandbox-permissions.rst:565
 msgid ""
 "This denies unconditional X11 access but allows X11 conditionally when "
 "Wayland is unavailable. Older Flatpak versions will see only the final "
-"``--socket=x11`` grant and allow X11 unconditionally, while newer "
-"versions recognise the conditional logic and evaluates it at runtime."
+"X11 grant and allow X11 unconditionally, while newer versions recognise "
+"the conditional logic and evaluates it at runtime."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:574
+#: ../../sandbox-permissions.rst:571
 msgid "Footnotes"
 msgstr ""
 
-#: ../../sandbox-permissions.rst:575
+#: ../../sandbox-permissions.rst:572
 msgid ""
 "This is not necessarily required, but without it the X11 shared memory "
 "extension will not work, which is very bad for X11 performance."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:577
+#: ../../sandbox-permissions.rst:574
 msgid ""
 "Giving network access also grants access to all host services listening "
 "on abstract Unix sockets (due to how network namespaces work), and these "
@@ -1273,7 +1270,7 @@ msgid ""
 "secure distribution should disable these and just use regular sockets."
 msgstr ""
 
-#: ../../sandbox-permissions.rst:582
+#: ../../sandbox-permissions.rst:579
 #, python-brace-format
 msgid ""
 "``xdg-{cache, config, data}`` bind mounts the paths from host to the per-"
@@ -1502,5 +1499,37 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Since 1.5.11."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The unconditional grant ``--socket=x11`` can"
+#~ " be tightened using conditional permissions"
+#~ " to ``--socket-if=x11:!has-wayland``. This"
+#~ " allows access to X11 only when "
+#~ "a Wayland desktop session is not "
+#~ "available. To preserve backwards "
+#~ "compatibility, the following pattern can "
+#~ "be used::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This allows older Flatpak versions which"
+#~ " do not understand the conditional "
+#~ "permissions function by allowing X11 "
+#~ "access always while newer Flatpak, which"
+#~ " understands the conditional system will"
+#~ " allow X11 access only when the "
+#~ "session is not Wayland."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This denies unconditional X11 access but"
+#~ " allows X11 conditionally when Wayland "
+#~ "is unavailable. Older Flatpak versions "
+#~ "will see only the final ``--socket=x11``"
+#~ " grant and allow X11 unconditionally, "
+#~ "while newer versions recognise the "
+#~ "conditional logic and evaluates it at"
+#~ " runtime."
 #~ msgstr ""
 
