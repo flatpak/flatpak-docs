@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Flatpak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-07 16:26-0600\n"
+"POT-Creation-Date: 2026-07-01 09:53+0530\n"
 "PO-Revision-Date: 2018-10-08 03:07-0400\n"
 "Last-Translator: PikachuHy <pikachuhy@163.com>\n"
 "Language: zh_Hans_CN\n"
@@ -12,7 +12,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../index.rst:2
 msgid "Welcome to Flatpak's documentation!"
@@ -41,7 +41,7 @@ msgstr "本文档主要针对应用开发者和分发者。对Flatpak感兴趣�
 msgid ""
 "If you are looking for information about how to use Flatpak to install "
 "and run applications, please refer to `the Flatpak website "
-"<https://flatpak.org>`_."
+"<https://flatpak.org/>`_."
 msgstr "如果你正在查找如何使用Flatpak来安装和运行应用，请参考 `Flatpak网站 <http://flatpak.org>`_ 。"
 
 #: ../../index.rst:18
