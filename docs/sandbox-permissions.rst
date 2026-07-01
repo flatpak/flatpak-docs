@@ -510,6 +510,10 @@ prefixing with ``!``. The following conditions are supported:
 - ``false``- Always evaluates to false
 - ``has-input-device`` - True if the Flatpak version supports
   ``--device=input``
+- ``has-usb-device`` - True if the Flatpak version supports
+  ``--device=usb``
+- ``has-usb-portal`` - True if the current desktop session supports
+  the USB Portal
 - ``has-wayland`` - True if the current desktop session supports
   Wayland
 
