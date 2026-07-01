@@ -174,6 +174,18 @@ linkcheck_request_headers = {
     }
 }
 
+linkcheck_allowed_redirects = {
+    # Locale redirects
+    r"https://flathub\.org/?":
+        r"https://flathub\.org/en/?",
+
+    r"https://flathub\.org/apps/.*":
+        r"https://flathub\.org/en/apps/.*",
+
+    r"https://flatpak\.org/setup":
+        r"https://flathub\.org(/en)?/setup/?",
+}
+
 linkcheck_retries = 2
 linkcheck_timeout = 10
 
