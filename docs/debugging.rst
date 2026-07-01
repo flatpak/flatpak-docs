@@ -101,7 +101,7 @@ Getting stacktraces from a crash
 --------------------------------
 
 If an application crashed and the system has coredumps and
-`systemd-coredump <https://www.freedesktop.org/software/systemd/man/latest/systemd-coredump.html#>`_
+`systemd-coredump <https://www.freedesktop.org/software/systemd/man/latest/systemd-coredump.html>`_
 enabled, a coredump will be logged. Get the ``PID`` from that coredump::
 
   $ coredumpctl list

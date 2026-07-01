@@ -137,7 +137,7 @@ extension points.
 
 An example of an extension point defined in runtime is the GL extension
 point used in `Freedesktop SDK <https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/blob/1a8039407f8573725b16eab8779f2b0e1cd01629/elements/flatpak-images/platform.bst>`_
-Freedesktop SDK uses `buildstream <https://buildstream.build/index.html>`_,
+Freedesktop SDK uses `buildstream <https://buildstream.apache.org/index.html>`_,
 so the `format <https://docs.buildstream.build/master/format_project.html>`_
 is different from the usual ``json`` or ``yaml`` format used by Flatpak
 manifests.
@@ -456,7 +456,7 @@ stores. This is a typical example of an extension MetaInfo file.
     <developer id="com.example">
       <name>Bar</name>
     </developer>
-    <url type="homepage">https://flatpak.github.io/</url>
+    <url type="homepage">https://flatpak.org/</url>
     <update_contact>bar_AT_example.org</update_contact>
     <releases>
       <release version="1.2.0" date="2023-12-03">
@@ -518,7 +518,7 @@ the same as above.
 
 An example of an unmaintained extension can be found in browsers such as
 `Chromium <https://github.com/flathub/org.chromium.Chromium/blob/dc7f731e7b62199a00bfa3ea3d123ff6d16936dc/org.chromium.Chromium.yaml>`_
-or `Firefox <https://hg.mozilla.org/mozilla-central/diff/59e57f57dcb73a286822276d02f16e7b17018de6/taskcluster/docker/firefox-flatpak/runme.sh>`_
+or `Firefox <https://hg-edge.mozilla.org/mozilla-central/diff/59e57f57dcb73a286822276d02f16e7b17018de6/taskcluster/docker/firefox-flatpak/runme.sh>`_
 on Flathub.
 
 The Firefox snippet translates to:
@@ -538,7 +538,7 @@ and ``/var/lib/flatpak/extension/org.mozilla.firefox.systemconfig/x86_64/stable/
 (or in ``$XDG_DATA_HOME/flatpak/extension/...``) respectively on host.
 The path here is dependent on the extension point. These would appear
 under ``/app/etc/firefox/policies/policies.json`` and
-``/app/etc/firefox/defaults/pref`` inside the sandbox. (Firefox `supports <https://hg.mozilla.org/mozilla-central/file/23ee4ac2d048de0aac3fa27ce7eb0925c1903096/xpcom/io/SpecialSystemDirectory.cpp#l198>`_
+``/app/etc/firefox/defaults/pref`` inside the sandbox. (Firefox `supports <https://hg-edge.mozilla.org/mozilla-central/file/23ee4ac2d048de0aac3fa27ce7eb0925c1903096/xpcom/io/SpecialSystemDirectory.cpp#l198>`_
 reading policies from ``/app/etc``)
 
 For details on Chromium, please look at the

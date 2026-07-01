@@ -27,7 +27,7 @@ straight-forward.
         - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       sources:
         - type: archive
-          url: https://github.com/flatpak/qt-flatpak-demo/archive/v1.1.2.tar.gz
+          url: https://codeload.github.com/flatpak/qt-flatpak-demo/tar.gz/refs/tags/v1.1.2
           sha256: 1a1cc5d0f06ad949d6854c772ec9624b8856a0a4f880355f51058bc0dd52ba7a
 
 Contents

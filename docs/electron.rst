@@ -11,9 +11,9 @@ from other applications. It also includes information on the tooling for
 building Electron applications and how to use it.
 
 The guide walks through the `manifest file
-<https://github.com/flathub/electron-sample-app/blob/master/org.flathub.electron-sample-app.yml>`_
+<https://github.com/flathub/org.flathub.electron-sample-app/blob/master/org.flathub.electron-sample-app.yml>`_
 of the `sample Electron Flatpak application
-<https://github.com/flathub/electron-sample-app>`_. Before you start,
+<https://github.com/flathub/org.flathub.electron-sample-app>`_. Before you start,
 it is a good idea to take a look at this, either online or by downloading
 the application.
 
@@ -228,7 +228,7 @@ and hash of the application are also specified.
   subdir: main
   sources:
     - type: archive
-      url: https://github.com/flathub/electron-sample-app/archive/1.0.1.tar.gz
+      url: https://github.com/flathub/org.flathub.electron-sample-app/archive/1.0.1.tar.gz
       sha256: a2feb3f1cf002a2e4e8900f718cc5c54db4ad174e48bfcfbddcd588c7b716d5b
       dest: main
 
@@ -320,6 +320,6 @@ The preferred way of fixing this, is not a patch, but a build-time edit using ``
 Make setProgressBar and setBadgeCount work
 -------------------------------------------
 The `setProgressBar <https://www.electronjs.org/docs/latest/api/browser-window#winsetprogressbarprogress-options>`_ and `setBadgeCount <https://www.electronjs.org/docs/latest/api/app#appsetbadgecountcount-linux-macos>`_ functions allow showing a progress bar and a badge count in the window icon. It is implemented under Linux using the `UnityLauncherAPI <https://wiki.ubuntu.com/Unity/LauncherAPI>`_. This API is not implemented on every desktop environment. A known desktop environment which implements this is KDE.
-It is also implemented by the popular `Dash to Dock <https://micheleg.github.io/dash-to-dock>`_ GNOME extension and `Plank <https://launchpad.net/plank>`_.
+It is also implemented by the popular `Dash to Dock <https://micheleg.github.io/dash-to-dock/>`_ GNOME extension and `Plank <https://launchpad.net/plank>`_.
 
 To make it work in Flatpak, the app needs to :ref:`use the correct desktop filename <use-correct-desktop-filename>` in its embedded `package.json` file. The Flatpak also needs the ``--talk-name=com.canonical.Unity`` permission. Electron versions earlier than v32 checks `checks if it's running on Unity or KDE <https://github.com/electron/electron/blob/fb88375ab4d2161dbf7e958a2a94c7c6d97dc84c/shell/browser/linux/unity_service.cc#L64>`_ before using the UnityLauncherAPI.
