@@ -5,3 +5,4 @@ sphinxext-opengraph
 sphinx-copybutton
 sphinx-intl
 numpy>2,<2.5.0
+sphinx>9,<9.1.0
