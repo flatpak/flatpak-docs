@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Flatpak Command Reference</title><link rel="stylesheet" type="text/css" href="docbook.css" /><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" /></head><body><div class="reference"><div class="titlepage"><div><div><h1 class="title"><a id="id1337"></a>Flatpak Command Reference</h1></div><div><p class="releaseinfo">Version 1.17.0</p></div></div><hr /></div><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Important</h3><p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Flatpak Command Reference</title><link rel="stylesheet" type="text/css" href="docbook.css" /><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" /></head><body><div class="reference"><div class="titlepage"><div><div><h1 class="title"><a id="id1337"></a>Flatpak Command Reference</h1></div><div><p class="releaseinfo">Version 1.18.0</p></div></div><hr /></div><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Important</h3><p>
             The command reference is generated from the flatpak repo; see <a class="ulink" href="https://github.com/flatpak/flatpak/tree/main/doc" target="_top">https://github.com/flatpak/flatpak/tree/main/doc</a>
         </p></div><div class="partintro"><div></div><p>
         Flatpak comes with a rich commandline interface.
@@ -276,11 +276,10 @@
                       time by <code class="option">--localstatedir</code> or
                       <code class="option">-Dsystem_install_dir</code>).
                     </p></dd><dt><span class="term"><code class="envar">FLATPAK_TTY_PROGRESS</code></span></dt><dd><p>
-                        May be set to <code class="literal">1</code> to enable reporting
+                        May be set to <code class="literal">0</code> to disable reporting
                         machine-readable progress to the terminal.
-                        This feature is not currently enabled by default
-                        because it uses the OSC 9;4 sequence,
-                        which some terminal emulators interpret as a
+                        This feature can be disabled because it uses the OSC 9;4
+                        sequence, which some terminal emulators interpret as a
                         popup notification.
                     </p></dd><dt><span class="term"><code class="envar">FLATPAK_USER_DIR</code></span></dt><dd><p>
                       The location of the per-user installation. If this is not set,
@@ -329,6 +328,11 @@
                     The OSTree commit to create a delta bundle from.
                 </p></dd><dt><span class="term"><code class="option">--oci</code></span></dt><dd><p>
                     Export to an OCI image instead of a Flatpak bundle.
+                </p></dd><dt><span class="term"><code class="option">--oci-layer-compress=gzip|zstd</code></span></dt><dd><p>
+                  Choose how to compress the layers in OCI images. gzip (the
+                  default) is universally supported, but zstd compresses faster
+                  and results in smaller images. As of 2023, zstd support is
+                  present in most major registries.
                 </p></dd><dt><span class="term"><code class="option">-v</code>, </span><span class="term"><code class="option">--verbose</code></span></dt><dd><p>
                     Print debug information during command processing.
                 </p></dd><dt><span class="term"><code class="option">--ostree-verbose</code></span></dt><dd><p>
@@ -385,7 +389,7 @@
                     to be put in the named subset summary (in addition to the main one), allowing
                     users to see only this subset instead of the whole repo.
                 </p></dd><dt><span class="term"><code class="option">--untrusted</code></span></dt><dd><p>
-                    The source repostory is not trusted, all objects are copied (not hardlinked) and
+                    The source repository is not trusted, all objects are copied (not hardlinked) and
                     all checksums are verified.
                 </p></dd><dt><span class="term"><code class="option">-s</code>, </span><span class="term"><code class="option">--subject=SUBJECT</code></span></dt><dd><p>
                     One line subject for the commit message. If not specified, will be taken from the source commit.
@@ -593,6 +597,23 @@ Content Bytes Written: 305
                     the [Context] group in the metadata.
                     SUBSYSTEM must be one of: network, ipc.
                     This option can be used multiple times.
+                </p></dd><dt><span class="term"><code class="option">--share-if=SUBSYSTEM:CONDITION</code></span></dt><dd><p>
+                    Share a subsystem with the host session conditionally,
+                    only when the specified condition is met at runtime.
+                    This updates the [Context] group in the metadata.
+                     SUBSYSTEM  must be one of: network, ipc.
+                      CONDITION  must be one of:
+                    <code class="option">true</code>, <code class="option">false</code>,
+                    <code class="option">has-input-device</code>, <code class="option">has-wayland</code>,
+                    <code class="option">has-usb-device</code>, <code class="option">has-usb-portal</code>.
+                    Conditions can be negated with <code class="literal">!</code>,
+                    for example <code class="option">!has-input-device</code>.
+                    This option can be used multiple times.
+                    Available since 1.17.
+                </p><p>
+                    See the Conditional Permissions section in
+                    <a class="citerefentry" href="#flatpak-metadata"><span class="citerefentry"><span class="refentrytitle">flatpak-metadata</span>(5)</span></a>
+                    for more details.
                 </p></dd><dt><span class="term"><code class="option">--socket=SOCKET</code></span></dt><dd><p>
                     Expose a well-known socket to the application. This updates
                     the [Context] group in the metadata.
@@ -610,6 +631,21 @@ Content Bytes Written: 305
                     SOCKET must be one of: x11, wayland, fallback-x11, pulseaudio, system-bus, session-bus,
                     ssh-auth, pcsc, cups, gpg-agent, inherit-wayland-socket.
                     This option can be used multiple times.
+                </p></dd><dt><span class="term"><code class="option">--socket-if=SOCKET:CONDITION</code></span></dt><dd><p>
+                    Expose a well-known socket to the application conditionally,
+                    only when the specified condition is met at runtime.
+                    This updates the [Context] group in the metadata.
+                    SOCKET must be one of: x11, wayland, fallback-x11, pulseaudio, system-bus, session-bus,
+                    ssh-auth, pcsc, cups, gpg-agent, inherit-wayland-socket.
+                    CONDITION must be one of: true, false, has-input-device, has-wayland, has-usb-device, has-usb-portal.
+                    Conditions can be negated with <code class="literal">!</code>,
+                    for example <code class="option">!has-wayland</code>.
+                    This option can be used multiple times.
+                    Available since 1.17.
+                </p><p>
+                    See the Conditional Permissions section in
+                    <a class="citerefentry" href="#flatpak-metadata"><span class="citerefentry"><span class="refentrytitle">flatpak-metadata</span>(5)</span></a>
+                    for more details.
                 </p></dd><dt><span class="term"><code class="option">--device=DEVICE</code></span></dt><dd><p>
                     Expose a device to the application. This updates
                     the [Context] group in the metadata.
@@ -620,6 +656,20 @@ Content Bytes Written: 305
                     the [Context] group in the metadata.
                     DEVICE must be one of: dri, input, usb, kvm, shm, all.
                     This option can be used multiple times.
+                </p></dd><dt><span class="term"><code class="option">--device-if=DEVICE:CONDITION</code></span></dt><dd><p>
+                    Expose a device to the application conditionally,
+                    only when the specified condition is met at runtime.
+                    This updates the [Context] group in the metadata.
+                    DEVICE must be one of: dri, input, usb, kvm, shm, all.
+                    CONDITION must be one of: true, false, has-input-device, has-wayland, has-usb-device, has-usb-portal.
+                    Conditions can be negated with <code class="literal">!</code>,
+                    for example <code class="option">!has-input-device</code>.
+                    This option can be used multiple times.
+                    Available since 1.17.
+                </p><p>
+                    See the Conditional Permissions section in
+                    <a class="citerefentry" href="#flatpak-metadata"><span class="citerefentry"><span class="refentrytitle">flatpak-metadata</span>(5)</span></a>
+                    for more details.
                 </p></dd><dt><span class="term"><code class="option">--allow=FEATURE</code></span></dt><dd><p>
                     Allow access to a specific feature. This updates
                     the [Context] group in the metadata.
@@ -656,6 +706,23 @@ Content Bytes Written: 305
                     FEATURE must be one of: devel, multiarch, bluetooth, canbus,
                     per-app-dev-shm.
                     This option can be used multiple times.
+                </p></dd><dt><span class="term"><code class="option">--allow-if=FEATURE:CONDITION</code></span></dt><dd><p>
+                    Allow access to a specific feature conditionally,
+                    only when the specified condition is met at runtime.
+                    This updates the [Context] group in the metadata.
+                     FEATURE  must be one of: devel, multiarch, bluetooth.
+                      CONDITION  must be one of:
+                    <code class="option">true</code>, <code class="option">false</code>,
+                    <code class="option">has-input-device</code>, <code class="option">has-wayland</code>,
+                    <code class="option">has-usb-device</code>, <code class="option">has-usb-portal</code>.
+                    Conditions can be negated with <code class="literal">!</code>,
+                    for example <code class="option">!has-input-device</code>.
+                    This option can be used multiple times.
+                    Available since 1.17.
+                </p><p>
+                    See the Conditional Permissions section in
+                    <a class="citerefentry" href="#flatpak-metadata"><span class="citerefentry"><span class="refentrytitle">flatpak-metadata</span>(5)</span></a>
+                    for more details.
                 </p></dd><dt><span class="term"><code class="option">--filesystem=FS</code></span></dt><dd><p>
                     Allow the application access to a subset of the filesystem.
                     This updates the [Context] group in the metadata.
@@ -828,7 +895,12 @@ Exporting share/dbus-1/services/org.gnome.Calculator.SearchProvider.service
 More than one executable
 Using gcalccmd as command
 Please review the exported files and the metadata
-</pre></div><div class="refsect1"><a id="id1362"></a><h2>See also</h2><p>
+</pre><p>
+            <span class="command"><strong>$ flatpak build-finish /build/my-app --socket=wayland --socket-if=x11:!has-wayland --share=ipc</strong></span>
+        </p><p>
+            This grants Wayland access unconditionally and X11 access only when not running in a Wayland session,
+            allowing the application to fall back to X11 when needed.
+        </p></div><div class="refsect1"><a id="id1362"></a><h2>See also</h2><p>
             <a class="citerefentry" href="#flatpak"><span class="citerefentry"><span class="refentrytitle">flatpak</span>(1)</span></a>,
             <a class="citerefentry" href="#flatpak-build-init"><span class="citerefentry"><span class="refentrytitle">flatpak-build-init</span>(1)</span></a>,
             <a class="citerefentry" href="#flatpak-build"><span class="citerefentry"><span class="refentrytitle">flatpak-build</span>(1)</span></a>,
@@ -1130,6 +1202,7 @@ Please review the exported files and the metadata
                     See the "[Context] filesystems" list in
                     <a class="citerefentry" href="#flatpak-metadata"><span class="citerefentry"><span class="refentrytitle">flatpak-metadata</span>(5)</span></a>
                     for details of the meanings of these filesystems.
+                    Before flatpak 1.17.0, access to host was granted by default.
                 </p></dd><dt><span class="term"><code class="option">--nofilesystem=FILESYSTEM</code></span></dt><dd><p>
                     Remove access to the specified subset of the filesystem from
                     the application. This overrides to the Context section from the
@@ -1236,6 +1309,12 @@ key=v1;v2;
                    (language, optional locale, optional codeset, optional modifier) as documented by
                    <a class="citerefentry" href="#setlocale"><span class="citerefentry"><span class="refentrytitle">setlocale</span>(3)</span></a>
                    (for example, <code class="literal">en;en_DK;zh_HK.big5hkscs;uz_UZ.utf8@cyrillic</code>).
+                </p></dd><dt><span class="term"><code class="varname">report-os-info</code></span></dt><dd><p>
+                   If this key is set to <code class="literal">false</code> or the <code class="filename">no-report-os-info</code>
+                   file exists at <code class="envar">FLATPAK_CONFIG_DIR</code> Flatpak will not report the OS name,
+                   version, and architecture from <code class="filename">/etc/os-release</code> to the Flatpak
+                   remote via the <code class="literal">Flatpak-Os-Info</code> HTTP header when pulling objects.
+                   The default value of the key if unset is <code class="literal">true</code>.
                 </p></dd></dl></div><p>
             For configuration of individual remotes, see
             <a class="citerefentry" href="#flatpak-remote-modify"><span class="citerefentry"><span class="refentrytitle">flatpak-remote-modify</span>(1)</span></a>.
@@ -1647,7 +1726,7 @@ permissions:
         </p></div></div><div class="refentry"><div class="refentry.separator"><hr /></div><a id="flatpak-install"></a><div class="titlepage"></div><div class="refnamediv"><h2>Name</h2><p>flatpak-install — Install an application or runtime</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><div class="cmdsynopsis"><p><code class="command">flatpak install</code>  [OPTION...] [REMOTE]  REF... </p></div><div class="cmdsynopsis"><p><code class="command">flatpak install</code>  [OPTION...] [--from|--bundle|--image]  LOCATION </p></div></div><div class="refsect1"><a id="id1415"></a><h2>Description</h2><p>
           Installs an application or runtime. The primary way to
           install is to specify a  REMOTE 
-          name as the source and one ore more   REF s to specify the
+          name as the source and one or more   REF s to specify the
           application or runtime to install. If   REMOTE  is omitted,
           the configured remotes are searched for the first   REF 
           and the user is asked to confirm the resulting choice.
@@ -1677,6 +1756,14 @@ permissions:
           either with the <code class="option">--sideload-repo</code> option, or on a per-installation or
           system-wide basis (see
           <a class="citerefentry" href="#flatpak"><span class="citerefentry"><span class="refentrytitle">flatpak</span>(1)</span></a>).
+        </p><p>
+          For OCI remotes, sideload repositories can also be specified as
+          <code class="option">--sideload-repo=oci:PATH</code> or <code class="option">--sideload-repo=oci-archive:PATH</code>,
+          where path points to an OCI image layout or archive of an OCI image layout.
+          (See <a class="citerefentry" href="#containers-transports"><span class="citerefentry"><span class="refentrytitle">containers-transports</span>(5)</span></a>.)
+          When specified in this fashion, the images found in the image layout are available for all OCI remotes,
+          without regard to collection ID. For this reason, there is no directory equivalent -
+          it can only be specified on the command line.
         </p><p>
           The alternative form of the command (with <code class="option">--from</code>, <code class="option">--bundle</code>,
           or <code class="option">--image</code>) allows to install directly from a source. The source can be a
@@ -1973,6 +2060,23 @@ org.gnome.gedit
                     the Context section from the application metadata.
                      SUBSYSTEM  must be one of: network, ipc.
                     This option can be used multiple times.
+                </p></dd><dt><span class="term"><code class="option">--share-if=SUBSYSTEM:CONDITION</code></span></dt><dd><p>
+                    Share a subsystem with the host session conditionally,
+                    only when the specified condition is met at runtime.
+                    This overrides to the Context section from the application metadata.
+                     SUBSYSTEM  must be one of: network, ipc.
+                      CONDITION  must be one of:
+                    <code class="option">true</code>, <code class="option">false</code>,
+                    <code class="option">has-input-device</code>, <code class="option">has-wayland</code>,
+                    <code class="option">has-usb-device</code>, <code class="option">has-usb-portal</code>.
+                    Conditions can be negated with <code class="literal">!</code>,
+                    for example <code class="option">!has-input-device</code>.
+                    This option can be used multiple times.
+                    Available since 1.17.
+                </p><p>
+                    See the Conditional Permissions section in
+                    <a class="citerefentry" href="#flatpak-metadata"><span class="citerefentry"><span class="refentrytitle">flatpak-metadata</span>(5)</span></a>
+                    for more details.
                 </p></dd><dt><span class="term"><code class="option">--socket=SOCKET</code></span></dt><dd><p>
                     Expose a well-known socket to the application. This overrides to
                     the Context section from the application metadata.
@@ -1985,6 +2089,22 @@ org.gnome.gedit
                      SOCKET  must be one of: x11, wayland, fallback-x11, pulseaudio, system-bus, session-bus,
                     ssh-auth, pcsc, cups, gpg-agent, inherit-wayland-socket.
                     This option can be used multiple times.
+                </p></dd><dt><span class="term"><code class="option">--socket-if=SOCKET:CONDITION</code></span></dt><dd><p>
+                    Expose a well-known socket to the application conditionally,
+                    only when the specified condition is met at runtime.
+                    This overrides to the Context section from the application
+                    metadata.
+                     SOCKET  must be one of: x11, wayland, fallback-x11, pulseaudio, system-bus, session-bus,
+                    ssh-auth, pcsc, cups, gpg-agent, inherit-wayland-socket.
+                      CONDITION  must be one of: true, false, has-input-device, has-wayland, has-usb-device, has-usb-portal.
+                    Conditions can be negated with <code class="literal">!</code>,
+                    for example <code class="option">!has-wayland</code>.
+                    This option can be used multiple times.
+                    Available since 1.17.
+                </p><p>
+                    See the Conditional Permissions section in
+                    <a class="citerefentry" href="#flatpak-metadata"><span class="citerefentry"><span class="refentrytitle">flatpak-metadata</span>(5)</span></a>
+                    for more details.
                 </p></dd><dt><span class="term"><code class="option">--device=DEVICE</code></span></dt><dd><p>
                     Expose a device to the application. This overrides to
                     the Context section from the application metadata.
@@ -1995,6 +2115,21 @@ org.gnome.gedit
                     the Context section from the application metadata.
                      DEVICE  must be one of: dri, input, usb, kvm, shm, all.
                     This option can be used multiple times.
+                </p></dd><dt><span class="term"><code class="option">--device-if=DEVICE:CONDITION</code></span></dt><dd><p>
+                    Expose a device to the application conditionally,
+                    only when the specified condition is met at runtime.
+                    This overrides to the Context section from the application
+                    metadata.
+                     DEVICE  must be one of: dri, input, usb, kvm, shm, all.
+                      CONDITION  must be one of: true, false, has-input-device, has-wayland, has-usb-device, has-usb-portal.
+                    Conditions can be negated with <code class="literal">!</code>,
+                    for example <code class="option">!has-input-device</code>.
+                    This option can be used multiple times.
+                    Available since 1.17.
+                </p><p>
+                    See the Conditional Permissions section in
+                    <a class="citerefentry" href="#flatpak-metadata"><span class="citerefentry"><span class="refentrytitle">flatpak-metadata</span>(5)</span></a>
+                    for more details.
                 </p></dd><dt><span class="term"><code class="option">--allow=FEATURE</code></span></dt><dd><p>
                     Allow access to a specific feature. This updates
                     the [Context] group in the metadata.
@@ -2012,6 +2147,23 @@ org.gnome.gedit
                     devel, multiarch, bluetooth, canbus,
                     per-app-dev-shm.
                     This option can be used multiple times.
+                </p></dd><dt><span class="term"><code class="option">--allow-if=FEATURE:CONDITION</code></span></dt><dd><p>
+                    Allow access to a specific feature conditionally,
+                    only when the specified condition is met at runtime.
+                    This overrides to the Context section from the application metadata.
+                     FEATURE  must be one of: devel, multiarch, bluetooth.
+                      CONDITION  must be one of:
+                    <code class="option">true</code>, <code class="option">false</code>,
+                    <code class="option">has-input-device</code>, <code class="option">has-wayland</code>,
+                    <code class="option">has-usb-device</code>, <code class="option">has-usb-portal</code>.
+                    Conditions can be negated with <code class="literal">!</code>,
+                    for example <code class="option">!has-input-device</code>.
+                    This option can be used multiple times.
+                    Available since 1.17.
+                </p><p>
+                    See the Conditional Permissions section in
+                    <a class="citerefentry" href="#flatpak-metadata"><span class="citerefentry"><span class="refentrytitle">flatpak-metadata</span>(5)</span></a>
+                    for more details.
                 </p></dd><dt><span class="term"><code class="option">--filesystem=FILESYSTEM</code></span></dt><dd><p>
                     Allow the application access to a subset of the filesystem.
                     This overrides to the Context section from the application metadata.
@@ -2138,6 +2290,10 @@ key=v1;v2;
             <span class="command"><strong>$ flatpak override --nosocket=wayland org.gnome.gedit</strong></span>
         </p><p>
             <span class="command"><strong>$ flatpak override --filesystem=home org.mozilla.Firefox</strong></span>
+        </p><p>
+            <span class="command"><strong>$ flatpak override --socket-if=x11:!has-wayland org.example.App</strong></span>
+        </p><p>
+            Grant X11 socket access only when not running in a Wayland session.
         </p></div><div class="refsect1"><a id="id1435"></a><h2>See also</h2><p>
             <a class="citerefentry" href="#flatpak"><span class="citerefentry"><span class="refentrytitle">flatpak</span>(1)</span></a>,
             <a class="citerefentry" href="#flatpak-run"><span class="citerefentry"><span class="refentrytitle">flatpak-run</span>(1)</span></a>
@@ -2466,6 +2622,9 @@ allow org.signal.Signal.*/*/stable
                      Import gpg keys from the specified keyring file as
                      trusted for the new remote. If the file is - the
                      keyring is read from standard input.
+                </p></dd><dt><span class="term"><code class="option">--signature-lookaside=URL</code></span></dt><dd><p>
+                    Specify an URL to be used to look up signatures for this
+                    remote (OCI remotes only).
                 </p></dd><dt><span class="term"><code class="option">--authenticator-name=NAME</code></span></dt><dd><p>
                     Specify the authenticator to use for the remote.
                 </p></dd><dt><span class="term"><code class="option">--authenticator-option=KEY=VALUE</code></span></dt><dd><p>
@@ -2769,6 +2928,9 @@ org.kde.Khangman
                      Import gpg keys from the specified keyring file as
                      trusted for the new remote. If the file is - the
                      keyring is read from standard input.
+                </p></dd><dt><span class="term"><code class="option">--signature-lookaside=URL</code></span></dt><dd><p>
+                    Specify an URL to be used to look up signatures for this
+                    remote (OCI remotes only).
                 </p></dd><dt><span class="term"><code class="option">--authenticator-name=NAME</code></span></dt><dd><p>
                     Specify the authenticator to use for the remote.
                 </p></dd><dt><span class="term"><code class="option">--authenticator-option=KEY=VALUE</code></span></dt><dd><p>
@@ -2966,10 +3128,10 @@ testrepo	Test Repository	 http://209.132.179.91/repo/ no-gpg-verify
             arguments.
         </p><p>
             Environment variables are generally passed on to the sandboxed application, with
-            certain exceptions. The application metadata can override environment variables,
-            as well as the <code class="option">--env</code> option. Apart from that, Flatpak always
-            unsets or overrides the following variables, since their session values
-            are likely to interfere with the functioning of the sandbox:
+            certain exceptions, if <code class="option">--clear-env</code> is not specified. The application
+            metadata can override environment variables, as well as the <code class="option">--env</code>
+            option. Apart from that, Flatpak always unsets or overrides the following variables,
+            since their session values are likely to interfere with the functioning of the sandbox:
         </p><table border="0" summary="Simple list" class="simplelist"><tr><td>PATH</td></tr><tr><td>LD_LIBRARY_PATH</td></tr><tr><td>LD_PRELOAD</td></tr><tr><td>LD_AUDIT</td></tr><tr><td>XDG_CONFIG_DIRS</td></tr><tr><td>XDG_DATA_DIRS</td></tr><tr><td>SHELL</td></tr><tr><td>TEMP</td></tr><tr><td>TEMPDIR</td></tr><tr><td>TMP</td></tr><tr><td>TMPDIR</td></tr><tr><td>XDG_RUNTIME_DIR</td></tr><tr><td>container</td></tr><tr><td>TZDIR</td></tr><tr><td>PYTHONPATH</td></tr><tr><td>PYTHONPYCACHEPREFIX</td></tr><tr><td>PERLLIB</td></tr><tr><td>PERL5LIB</td></tr><tr><td>XCURSOR_PATH</td></tr><tr><td>GST_PLUGIN_PATH_1_0</td></tr><tr><td>GST_REGISTRY</td></tr><tr><td>GST_REGISTRY_1_0</td></tr><tr><td>GST_PLUGIN_PATH</td></tr><tr><td>GST_PLUGIN_SYSTEM_PATH</td></tr><tr><td>GST_PLUGIN_SCANNER</td></tr><tr><td>GST_PLUGIN_SCANNER_1_0</td></tr><tr><td>GST_PLUGIN_SYSTEM_PATH_1_0</td></tr><tr><td>GST_PRESET_PATH</td></tr><tr><td>GST_PTP_HELPER</td></tr><tr><td>GST_PTP_HELPER_1_0</td></tr><tr><td>GST_INSTALL_PLUGINS_HELPER</td></tr><tr><td>KRB5CCNAME</td></tr><tr><td>XKB_CONFIG_ROOT</td></tr><tr><td>GIO_EXTRA_MODULES</td></tr><tr><td>GDK_BACKEND</td></tr><tr><td>VK_ADD_DRIVER_FILES</td></tr><tr><td>VK_ADD_LAYER_PATH</td></tr><tr><td>VK_DRIVER_FILES</td></tr><tr><td>VK_ICD_FILENAMES</td></tr><tr><td>VK_LAYER_PATH</td></tr><tr><td>__EGL_EXTERNAL_PLATFORM_CONFIG_DIRS</td></tr><tr><td>__EGL_EXTERNAL_PLATFORM_CONFIG_FILENAMES</td></tr><tr><td>__EGL_VENDOR_LIBRARY_DIRS</td></tr><tr><td>__EGL_VENDOR_LIBRARY_FILENAMES</td></tr></table><p>
             Also several environment variables with the prefix "GST_" that are used by gstreamer
             are unset (since Flatpak 1.12.5).
@@ -3043,6 +3205,23 @@ testrepo	Test Repository	 http://209.132.179.91/repo/ no-gpg-verify
                     the Context section from the application metadata.
                      SUBSYSTEM  must be one of: network, ipc.
                     This option can be used multiple times.
+                </p></dd><dt><span class="term"><code class="option">--share-if=SUBSYSTEM:CONDITION</code></span></dt><dd><p>
+                    Share a subsystem with the host session conditionally,
+                    only when the specified condition is met at runtime.
+                    This overrides to the Context section from the application metadata.
+                     SUBSYSTEM  must be one of: network, ipc.
+                      CONDITION  must be one of:
+                    <code class="option">true</code>, <code class="option">false</code>,
+                    <code class="option">has-input-device</code>, <code class="option">has-wayland</code>,
+                    <code class="option">has-usb-device</code>, <code class="option">has-usb-portal</code>.
+                    Conditions can be negated with <code class="literal">!</code>,
+                    for example <code class="option">!has-input-device</code>.
+                    This option can be used multiple times.
+                    Available since 1.17.
+                </p><p>
+                    See the Conditional Permissions section in
+                    <a class="citerefentry" href="#flatpak-metadata"><span class="citerefentry"><span class="refentrytitle">flatpak-metadata</span>(5)</span></a>
+                    for more details.
                 </p></dd><dt><span class="term"><code class="option">--socket=SOCKET</code></span></dt><dd><p>
                     Expose a well known socket to the application. This overrides to
                     the Context section from the application metadata.
@@ -3055,16 +3234,51 @@ testrepo	Test Repository	 http://209.132.179.91/repo/ no-gpg-verify
                      SOCKET  must be one of: x11, wayland, fallback-x11, pulseaudio, system-bus, session-bus,
                     ssh-auth, pcsc, cups, gpg-agent, inherit-wayland-socket.
                     This option can be used multiple times.
+                </p></dd><dt><span class="term"><code class="option">--socket-if=SOCKET:CONDITION</code></span></dt><dd><p>
+                    Expose a well-known socket to the application conditionally,
+                    only when the specified condition is met at runtime.
+                    This overrides to the Context section from the application metadata.
+                     SOCKET  must be one of: x11, wayland, fallback-x11, pulseaudio, system-bus, session-bus,
+                    ssh-auth, pcsc, cups, gpg-agent, inherit-wayland-socket.
+                      CONDITION  must be one of:
+                    <code class="option">true</code>, <code class="option">false</code>,
+                    <code class="option">has-input-device</code>, <code class="option">has-wayland</code>,
+                    <code class="option">has-usb-device</code>, <code class="option">has-usb-portal</code>.
+                    Conditions can be negated with <code class="literal">!</code>,
+                    for example <code class="option">!has-wayland</code>.
+                    This option can be used multiple times.
+                    Available since 1.17.
+                </p><p>
+                    See the Conditional Permissions section in
+                    <a class="citerefentry" href="#flatpak-metadata"><span class="citerefentry"><span class="refentrytitle">flatpak-metadata</span>(5)</span></a>
+                    for more details.
                 </p></dd><dt><span class="term"><code class="option">--device=DEVICE</code></span></dt><dd><p>
                     Expose a device to the application. This overrides to
                     the Context section from the application metadata.
-                     DEVICE  must be one of: dri, usb, input, kvm, shm, all.
+                     DEVICE  must be one of: dri, input, usb, kvm, shm, all.
                     This option can be used multiple times.
                 </p></dd><dt><span class="term"><code class="option">--nodevice=DEVICE</code></span></dt><dd><p>
                     Don't expose a device to the application. This overrides to
                     the Context section from the application metadata.
-                     DEVICE  must be one of: dri, usb, input, kvm, shm, all.
+                     DEVICE  must be one of: dri, input, usb, kvm, shm, all.
                     This option can be used multiple times.
+                </p></dd><dt><span class="term"><code class="option">--device-if=DEVICE:CONDITION</code></span></dt><dd><p>
+                    Expose a device to the application conditionally,
+                    only when the specified condition is met at runtime.
+                    This overrides to the Context section from the application metadata.
+                     DEVICE  must be one of: dri, input, usb, kvm, shm, all.
+                      CONDITION  must be one of:
+                    <code class="option">true</code>, <code class="option">false</code>,
+                    <code class="option">has-input-device</code>, <code class="option">has-wayland</code>,
+                    <code class="option">has-usb-device</code>, <code class="option">has-usb-portal</code>.
+                    Conditions can be negated with <code class="literal">!</code>,
+                    for example <code class="option">!has-input-device</code>.
+                    This option can be used multiple times.
+                    Available since 1.17.
+                </p><p>
+                    See the Conditional Permissions section in
+                    <a class="citerefentry" href="#flatpak-metadata"><span class="citerefentry"><span class="refentrytitle">flatpak-metadata</span>(5)</span></a>
+                    for more details.
                 </p></dd><dt><span class="term"><code class="option">--allow=FEATURE</code></span></dt><dd><p>
                     Allow access to a specific feature. This overrides to
                     the Context section from the application metadata.
@@ -3078,6 +3292,23 @@ testrepo	Test Repository	 http://209.132.179.91/repo/ no-gpg-verify
                     the Context section from the application metadata.
                      FEATURE  must be one of: devel, multiarch, bluetooth.
                     This option can be used multiple times.
+                </p></dd><dt><span class="term"><code class="option">--allow-if=FEATURE:CONDITION</code></span></dt><dd><p>
+                    Allow access to a specific feature conditionally,
+                    only when the specified condition is met at runtime.
+                    This overrides to the Context section from the application metadata.
+                     FEATURE  must be one of: devel, multiarch, bluetooth.
+                      CONDITION  must be one of:
+                    <code class="option">true</code>, <code class="option">false</code>,
+                    <code class="option">has-input-device</code>, <code class="option">has-wayland</code>,
+                    <code class="option">has-usb-device</code>, <code class="option">has-usb-portal</code>.
+                    Conditions can be negated with <code class="literal">!</code>,
+                    for example <code class="option">!has-input-device</code>.
+                    This option can be used multiple times.
+                    Available since 1.17.
+                </p><p>
+                    See the Conditional Permissions section in
+                    <a class="citerefentry" href="#flatpak-metadata"><span class="citerefentry"><span class="refentrytitle">flatpak-metadata</span>(5)</span></a>
+                    for more details.
                 </p></dd><dt><span class="term"><code class="option">--filesystem=FILESYSTEM</code></span></dt><dd><p>
                     Allow the application access to a subset of the filesystem.
                     This overrides to the Context section from the application metadata.
@@ -3188,6 +3419,10 @@ key=v1;v2;
                     followed by a zero byte. This is the same format used by
                     <code class="literal">env -0</code> and
                     <code class="filename">/proc/*/environ</code>.
+                </p></dd><dt><span class="term"><code class="option">--clear-env</code></span></dt><dd><p>
+                    Do not pass environment variables from the outside to the
+                    sandboxed application. Explicitly set and unset environment
+                    variables still get applied.
                 </p></dd><dt><span class="term"><code class="option">--own-name=NAME</code></span></dt><dd><p>
                     Allow the application to own the well known name  NAME  on the session bus.
                     If   NAME  ends with .*, it allows the application to own all matching names.
@@ -3243,7 +3478,7 @@ key=v1;v2;
                     Allow access to the accessibility bus. This is the default, except when run with --sandbox.
                 </p></dd><dt><span class="term"><code class="option">--sandbox</code></span></dt><dd><p>
                   Run the application in sandboxed mode, which means dropping all the extra permissions it would otherwise have, as
-                  well as access to the session/system/a11y busses and document portal.
+                  well as access to the session/system/a11y buses and document portal.
                 </p></dd><dt><span class="term"><code class="option">--log-session-bus</code></span></dt><dd><p>
                     Log session bus traffic. This can be useful to see what access you need to allow in
                     your D-Bus policy.
@@ -3463,6 +3698,14 @@ key=v1;v2;
             system-wide basis (see
             <a class="citerefentry" href="#flatpak"><span class="citerefentry"><span class="refentrytitle">flatpak</span>(1)</span></a>).
         </p><p>
+          For OCI remotes, sideload repositories can also be specified as
+          <code class="option">--sideload-repo=oci:PATH</code> or <code class="option">--sideload-repo=oci-archive:PATH</code>,
+          where path points to an OCI image layout or archive of an OCI image layout.
+          (See <a class="citerefentry" href="#containers-transports"><span class="citerefentry"><span class="refentrytitle">containers-transports</span>(5)</span></a>.)
+          When specified in this fashion, the images found in the image layout are available for all OCI remotes,
+          without regard to collection ID. For this reason, there is no directory equivalent -
+          it can only be specified on the command line.
+        </p><p>
             Note that updating a runtime is different from installing
             a different branch, and runtime updates are expected to keep
             strict compatibility. If an application update does cause
@@ -3675,7 +3918,7 @@ DeployCollectionID=org.gnome.Apps
                         It is recommended to use this key over DeployCollectionID or CollectionID because
                         only newer clients (Flatpak 1.12.8 or later) pay attention to it (and older clients don't handle
                         collection IDs properly).
-                    </p></dd><dt><span class="term"><code class="option">DeployCollectionID</code> (string)</span></dt><dd><p>This is deprecated but still supported for backwards compatibility. Use DeploySideloadCollectionID instead.</p></dd><dt><span class="term"><code class="option">CollectionID</code> (string)</span></dt><dd><p>This is deprecated but still supported for backwards compatibility. Use DeploySideloadCollectionID instead.</p></dd><dt><span class="term"><code class="option">IsRuntime</code> (boolean)</span></dt><dd><p>Whether this file refers to a runtime. If this key is not specified, the file is assumed to refer to an application.</p></dd><dt><span class="term"><code class="option">GPGKey</code> (string)</span></dt><dd><p>The base64-encoded gpg key for the remote.</p></dd><dt><span class="term"><code class="option">RuntimeRepo</code> (string)</span></dt><dd><p>The url for a .flatpakrepo file for the remote where the runtime can be found.
+                    </p></dd><dt><span class="term"><code class="option">DeployCollectionID</code> (string)</span></dt><dd><p>This is deprecated but still supported for backwards compatibility. Use DeploySideloadCollectionID instead.</p></dd><dt><span class="term"><code class="option">CollectionID</code> (string)</span></dt><dd><p>This is deprecated but still supported for backwards compatibility. Use DeploySideloadCollectionID instead.</p></dd><dt><span class="term"><code class="option">IsRuntime</code> (boolean)</span></dt><dd><p>Whether this file refers to a runtime. If this key is not specified, the file is assumed to refer to an application.</p></dd><dt><span class="term"><code class="option">GPGKey</code> (string)</span></dt><dd><p>The base64-encoded gpg key for the remote.</p></dd><dt><span class="term"><code class="option">SignatureLookaside</code> (string)</span></dt><dd><p>URL to use to look up signatures (OCI remotes only)</p></dd><dt><span class="term"><code class="option">RuntimeRepo</code> (string)</span></dt><dd><p>The url for a .flatpakrepo file for the remote where the runtime can be found.
                     Note that if the runtime is available in the remote providing the app, that remote may be
                     used instead but the one specified by this option will still be added.</p></dd><dt><span class="term"><code class="option">SuggestRemoteName</code> (string)</span></dt><dd><p>A suggested name for the remote.</p></dd></dl></div></div></div><div class="refsect1"><a id="id1525"></a><h2>Example</h2><pre class="programlisting">
 [Flatpak Ref]
@@ -3763,12 +4006,97 @@ StorageType=sdcard
                     </p></dd></dl></div></div><div class="refsect2"><a id="context-metadata"></a><h3>[Context]</h3><p>
                 This group determines various system resources that may be shared
                 with the application when it is run in a flatpak sandbox.
-            </p><p>
+            </p><div class="refsect3"><a id="conditional-permissions"></a><h4>Conditional Permissions</h4><p>
+                    Some permissions (such as <code class="option">sockets</code> and
+                    <code class="option">devices</code>) support conditional grants,
+                    where access is only provided when specific runtime
+                    conditions are met. This allows applications to adapt
+                    to different system capabilities and session types.
+                    Available since 1.17.
+                </p><p>
+                    Conditional permissions use the syntax
+                    <code class="literal">if:PERMISSION:CONDITION</code> in the
+                    metadata file. For example,
+                    <code class="literal">if:wayland:has-wayland</code> grants
+                    Wayland socket access only when running in a Wayland session.
+                </p><p>
+                    The following conditions are supported:
+                </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="option">true</code></span></dt><dd><p>
+                            Always evaluates to true.
+                        </p></dd><dt><span class="term"><code class="option">false</code></span></dt><dd><p>
+                            Always evaluates to false.
+                        </p></dd><dt><span class="term"><code class="option">has-input-device</code></span></dt><dd><p>
+                            True if this version of Flatpak supports the
+                            <code class="option">input</code> device permission.
+                            This is always true in Flatpak 1.15.6 and later,
+                            and can be used to provide fallback behavior for
+                            older Flatpak versions.
+                        </p></dd><dt><span class="term"><code class="option">has-wayland</code></span></dt><dd><p>
+                            True if the current desktop session supports
+                            Wayland.
+                        </p></dd><dt><span class="term"><code class="option">has-usb-device</code></span></dt><dd><p>
+                            True if this version of Flatpak supports the
+                            <code class="option">usb</code> device permission.
+                            This is always true in Flatpak 1.16.0 and later,
+                            and can be used to provide fallback behavior for
+                            older Flatpak versions.
+                        </p></dd><dt><span class="term"><code class="option">has-usb-portal</code></span></dt><dd><p>
+                            True if the current desktop session supports
+                            the USB Portal.
+                        </p></dd></dl></div><p>
+                    Conditions can be negated by prefixing with
+                    <code class="literal">!</code>. For example,
+                    <code class="literal">if:x11:!has-wayland</code> grants
+                    X11 socket access only when NOT running in a Wayland session.
+                </p><p>
+                    Multiple conditional permissions can be specified for
+                    the same resource. If any condition matches, the
+                    permission is granted (OR logic). For example:
+</p><pre class="programlisting">
+sockets=wayland;if:x11:!has-wayland;if:x11:false
+</pre><p>
+                </p><p>
+                    For backward compatibility with older Flatpak versions,
+                    conditional permissions can be combined with unconditional
+                    grants:
+</p><pre class="programlisting">
+sockets=x11;if:x11:!has-wayland;
+</pre><p>
+                    Older Flatpak versions will grant X11 access unconditionally
+                    (seeing only <code class="literal">x11</code>), while newer
+                    versions recognize the conditional syntax and grant
+                    X11 access only when not in Wayland sessions.
+                </p><p>
+                    To explicitly deny a permission that might be granted at
+                    a lower layer (such as from the runtime or a global override),
+                    prefix the permission name with <code class="literal">!</code>:
+</p><pre class="programlisting">
+sockets=!x11;
+</pre><p>
+                    This denial can be combined with conditional grants to
+                    remove unconditional access while allowing conditional access:
+</p><pre class="programlisting">
+sockets=!x11;x11;if:x11:!has-wayland;
+</pre><p>
+                    This denies unconditional X11 access, but allows X11
+                    access conditionally when not running in a Wayland session.
+                    The seemingly contradictory <code class="literal">!x11</code> and
+                    <code class="literal">x11</code> ensures backward compatibility:
+                    older Flatpak versions see the final <code class="literal">x11</code>
+                    grant, while newer versions understand the conditional logic.
+                </p></div><p>
                 All keys in this group (and the group itself) are optional.
+            </p><p>
+                The keys supported in this group are:
             </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="option">shared</code> (list)</span></dt><dd><p>
                         List of subsystems to share with the host system.
                         Possible subsystems: network, ipc.
                         Available since 0.3.
+                    </p><p>
+                        This option supports conditional permissions.
+                        See <a class="link" href="#conditional-permissions" title="Conditional Permissions">Conditional Permissions</a>
+                        for details on how to share subsystem access conditionally
+                        based on runtime conditions.
                     </p></dd><dt><span class="term"><code class="option">sockets</code> (list)</span></dt><dd><p>
                         List of well-known sockets to make available in the sandbox.
                         Possible sockets: x11, wayland, fallback-x11, pulseaudio, session-bus, system-bus,
@@ -3778,14 +4106,20 @@ StorageType=sdcard
                         DBUS_SYSTEM_BUS_ADDRESS to let the application
                         find sockets that are not in a fixed location.
                         Available since 0.3.
+                    </p><p>
+                        This option supports conditional permissions.
+                        See <a class="link" href="#conditional-permissions" title="Conditional Permissions">Conditional Permissions</a>
+                        for details on how to grant socket access conditionally
+                        based on runtime conditions.
                     </p></dd><dt><span class="term"><code class="option">devices</code> (list)</span></dt><dd><p>
                         List of devices to make available in the sandbox. This
                         just expose the devices nodes, it doesn't grant any
                         permission that the user doesn't already have.
                         Possible values:
                         </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="option">dri</code></span></dt><dd><p>
-                                Graphics direct rendering
-                                (<code class="filename">/dev/dri</code>).
+                                GPU graphics and compute
+                                (<code class="filename">/dev/dri</code>), including
+                                vendor specific render and compute devices.
                                 Available since 0.3.
                             </p></dd><dt><span class="term"><code class="option">input</code></span></dt><dd><p>
                                 Input devices
@@ -3808,6 +4142,11 @@ StorageType=sdcard
                                 (<code class="filename">/dev/shm</code>).
                                 Available since 1.6.1.
                             </p></dd></dl></div><p>
+                    </p><p>
+                        This option supports conditional permissions.
+                        See <a class="link" href="#conditional-permissions" title="Conditional Permissions">Conditional Permissions</a>
+                        for details on how to grant device access conditionally
+                        based on runtime conditions.
                     </p></dd><dt><span class="term"><code class="option">filesystems</code> (list)</span></dt><dd><p>
                         List of filesystem subsets to make available to the
                         application. Possible values:
@@ -4060,6 +4399,11 @@ StorageType=sdcard
                         indicate the absence of that feature, for example
                         <code class="option">!devel</code> if development and debugging
                         are not allowed.
+                    </p><p>
+                        This option supports conditional permissions.
+                        See <a class="link" href="#conditional-permissions" title="Conditional Permissions">Conditional Permissions</a>
+                        for details on how to allow features based
+                        conditionally on runtime conditions.
                     </p></dd><dt><span class="term"><code class="option">unset-environment</code> (list)</span></dt><dd><p>
                         A list of names of environment variables to unset.
                         Note that environment variables to set to a value
@@ -4395,11 +4739,11 @@ StorageType=sdcard
                         syntax the arguments to `--usb`.
                         Available since 1.15.11.
                     </p></dd><dt><span class="term"><code class="option">hidden-devices</code> (string list)</span></dt><dd><p>
-                        List of hidden USB devices, i.e. to remove the enumarable
+                        List of hidden USB devices, i.e. to remove the enumerable
                         devices list. Each element is the same syntax the arguments
                         to `--nousb`. Hidden devices take precedence over enumerable
                         devices. Available since 1.15.11.
-                    </p></dd></dl></div></div></div><div class="refsect1"><a id="id1533"></a><h2>Example</h2><pre class="programlisting">
+                    </p></dd></dl></div></div></div><div class="refsect1"><a id="id9997"></a><h2>Example</h2><pre class="programlisting">
 [Application]
 name=org.gnome.Calculator
 runtime=org.gnome.Platform/x86_64/3.20
@@ -4427,11 +4771,28 @@ subdirectories=true
 
 [Extension org.gnome.Calculator.Debug]
 directory=lib/debug
-</pre></div><div class="refsect1"><a id="id1534"></a><h2>See also</h2><p>
+</pre><p>
+            Example using conditional permissions to support fallback
+            from Wayland to X11:
+        </p><pre class="programlisting">
+[Application]
+name=org.example.App
+runtime=org.gnome.Platform/x86_64/3.20
+sdk=org.gnome.Sdk/x86_64/3.20
+
+[Context]
+shared=network;ipc;
+sockets=wayland;x11;if:x11:!has-wayland;
+</pre><p>
+            In this example, the application will always have access to
+            the Wayland socket if there the app runs in a Wayland session.
+            The X11 socket only is available if the app does not run in
+            a wayland session (<code class="option">!has-wayland</code>).
+        </p></div><div class="refsect1"><a id="id10004"></a><h2>See also</h2><p>
             <a class="citerefentry" href="#flatpak"><span class="citerefentry"><span class="refentrytitle">flatpak</span>(1)</span></a>,
             <a class="citerefentry" href="#flatpak-run"><span class="citerefentry"><span class="refentrytitle">flatpak-run</span>(1)</span></a>,
             <a class="citerefentry" href="#flatpak-override"><span class="citerefentry"><span class="refentrytitle">flatpak-override</span>(1)</span></a>
-        </p></div></div><div class="refentry"><div class="refentry.separator"><hr /></div><a id="flatpak-remote"></a><div class="titlepage"></div><div class="refnamediv"><h2>Name</h2><p>flatpak-remote — Configuration for a remote</p></div><div class="refsect1"><a id="id1535"></a><h2>Description</h2><p>
+        </p></div></div><div class="refentry"><div class="refentry.separator"><hr /></div><a id="flatpak-remote"></a><div class="titlepage"></div><div class="refnamediv"><h2>Name</h2><p>flatpak-remote — Configuration for a remote</p></div><div class="refsect1"><a id="id10032"></a><h2>Description</h2><p>
             Flatpak stores information about configured remotes for an installation location in
             <code class="filename">$installation/repo/config</code>. For example, the remotes for the
             default system-wide installation are in
@@ -4447,10 +4808,10 @@ directory=lib/debug
             <code class="filename">/etc/flatpak/remotes.d/</code>. Ifa file with
             the same name exists in both, the file under
             <code class="filename">/etc</code> will take precedence.
-       </p></div><div class="refsect1"><a id="id1536"></a><h2>File format</h2><p>
+       </p></div><div class="refsect1"><a id="id10047"></a><h2>File format</h2><p>
             The remote config file format is using the same .ini file format that is used for systemd
             unit files or application .desktop files.
-        </p><div class="refsect2"><a id="id1537"></a><h3>[remote …]</h3><p>
+        </p><div class="refsect2"><a id="id10050"></a><h3>[remote …]</h3><p>
                 All the configuration for the the remote with name NAME is contained in the
                 [remote "NAME"] group.
             </p><p>
@@ -4470,7 +4831,10 @@ directory=lib/debug
             </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="option">xa.disable</code> (boolean)</span></dt><dd><p>Whether the remote is disabled. Defaults to false.</p></dd><dt><span class="term"><code class="option">xa.prio</code> (integer)</span></dt><dd><p>The priority for the remote. This is used when listing remotes, and when
                     searching them for the runtime needed by an app. The remote providing the app is
                     searched for its runtime before others with equal priority. Defaults to 1.</p></dd><dt><span class="term"><code class="option">xa.noenumerate</code> (boolean)</span></dt><dd><p>Whether this remote should be ignored when presenting available apps/runtimes,
-                    or when searching for a runtime dependency. Defaults to false.</p></dd><dt><span class="term"><code class="option">xa.nodeps</code> (boolean)</span></dt><dd><p>Whether this remote should be excluded when searching for dependencies. Defaults to false.</p></dd><dt><span class="term"><code class="option">xa.title</code> (string)</span></dt><dd><p>An optional title to use when presenting this remote in a UI.</p></dd><dt><span class="term"><code class="option">xa.title-is-set</code> (boolean)</span></dt><dd><p>This key is set to true if <code class="option">xa.title</code> has been explicitly set.</p></dd><dt><span class="term"><code class="option">xa.comment</code> (string)</span></dt><dd><p>An optional single-line comment to use when presenting this remote in a UI.</p></dd><dt><span class="term"><code class="option">xa.comment-is-set</code> (boolean)</span></dt><dd><p>This key is set to true if <code class="option">xa.comment</code> has been explicitly set.</p></dd><dt><span class="term"><code class="option">xa.description</code> (string)</span></dt><dd><p>An optional full-paragraph of text to use when presenting this remote in a UI.</p></dd><dt><span class="term"><code class="option">xa.description-is-set</code> (boolean)</span></dt><dd><p>This key is set to true if <code class="option">xa.description</code> has been explicitly set.</p></dd><dt><span class="term"><code class="option">xa.homepage</code> (string)</span></dt><dd><p>An optional URL that points to a website for this repository to use when presenting this remote in a UI.</p></dd><dt><span class="term"><code class="option">xa.homepage-is-set</code> (boolean)</span></dt><dd><p>This key is set to true if <code class="option">xa.homepage</code> has been explicitly set.</p></dd><dt><span class="term"><code class="option">xa.icon</code> (string)</span></dt><dd><p>An optional URL that points to an icon for this repository to use when presenting this remote in a UI.</p></dd><dt><span class="term"><code class="option">xa.icon-is-set</code> (boolean)</span></dt><dd><p>This key is set to true if <code class="option">xa.icon</code> has been explicitly set.</p></dd><dt><span class="term"><code class="option">xa.default-branch</code> (string)</span></dt><dd><p>The default branch to use when installing from this remote.</p></dd><dt><span class="term"><code class="option">xa.default-branch-is-set</code> (boolean)</span></dt><dd><p>This key is set to true if <code class="option">xa.default-branch</code> has been explicitly set.</p></dd><dt><span class="term"><code class="option">xa.main-ref</code> (string)</span></dt><dd><p>The main reference served by this remote. This is used for origin remotes of applications installed via a flatpakref file.</p></dd></dl></div></div></div><div class="refsect1"><a id="id1538"></a><h2>Examples</h2><pre class="programlisting">
+                    or when searching for a runtime dependency. Defaults to false.</p></dd><dt><span class="term"><code class="option">xa.nodeps</code> (boolean)</span></dt><dd><p>Whether this remote should be excluded when searching for dependencies. Defaults to false.</p></dd><dt><span class="term"><code class="option">xa.title</code> (string)</span></dt><dd><p>An optional title to use when presenting this remote in a UI.</p></dd><dt><span class="term"><code class="option">xa.title-is-set</code> (boolean)</span></dt><dd><p>This key is set to true if <code class="option">xa.title</code> has been explicitly set.</p></dd><dt><span class="term"><code class="option">xa.comment</code> (string)</span></dt><dd><p>An optional single-line comment to use when presenting this remote in a UI.</p></dd><dt><span class="term"><code class="option">xa.comment-is-set</code> (boolean)</span></dt><dd><p>This key is set to true if <code class="option">xa.comment</code> has been explicitly set.</p></dd><dt><span class="term"><code class="option">xa.description</code> (string)</span></dt><dd><p>An optional full-paragraph of text to use when presenting this remote in a UI.</p></dd><dt><span class="term"><code class="option">xa.description-is-set</code> (boolean)</span></dt><dd><p>This key is set to true if <code class="option">xa.description</code> has been explicitly set.</p></dd><dt><span class="term"><code class="option">xa.homepage</code> (string)</span></dt><dd><p>An optional URL that points to a website for this repository to use when presenting this remote in a UI.</p></dd><dt><span class="term"><code class="option">xa.homepage-is-set</code> (boolean)</span></dt><dd><p>This key is set to true if <code class="option">xa.homepage</code> has been explicitly set.</p></dd><dt><span class="term"><code class="option">xa.icon</code> (string)</span></dt><dd><p>An optional URL that points to an icon for this repository to use when presenting this remote in a UI.</p></dd><dt><span class="term"><code class="option">xa.icon-is-set</code> (boolean)</span></dt><dd><p>This key is set to true if <code class="option">xa.icon</code> has been explicitly set.</p></dd><dt><span class="term"><code class="option">xa.default-branch</code> (string)</span></dt><dd><p>The default branch to use when installing from this remote.</p></dd><dt><span class="term"><code class="option">xa.default-branch-is-set</code> (boolean)</span></dt><dd><p>This key is set to true if <code class="option">xa.default-branch</code> has been explicitly set.</p></dd><dt><span class="term"><code class="option">xa.main-ref</code> (string)</span></dt><dd><p>The main reference served by this remote. This is used for origin remotes of applications installed via a flatpakref file.</p></dd><dt><span class="term"><code class="option">xa.signature-lookaside</code> (string)</span></dt><dd><p>URL to load signatures from (OCI remotes only),
+                    using the <a class="ulink" href="https://github.com/containers/image/blob/main/docs/signature-protocols.md" target="_top">
+                    containers/image separate storage mechanism.</a>
+                    </p></dd></dl></div></div></div><div class="refsect1"><a id="id10183"></a><h2>Examples</h2><pre class="programlisting">
 [remote "gnome-nightly-apps"]
 gpg-verify=true
 gpg-verify-summary=true
@@ -4483,6 +4847,6 @@ gpg-verify-summary=false
 collection-id=org.flathub.Stable
 url=https://dl.flathub.org/repo/
 xa.title=Flathub
-</pre></div><div class="refsect1"><a id="id1539"></a><h2>See also</h2><p>
+</pre></div><div class="refsect1"><a id="id10187"></a><h2>See also</h2><p>
             <a class="citerefentry" href="#flatpak-remote-modify"><span class="citerefentry"><span class="refentrytitle">flatpak-remote-modify</span>(1)</span></a>
         </p></div></div></div></div></body></html>
