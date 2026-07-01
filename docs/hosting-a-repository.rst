@@ -131,7 +131,7 @@ The instructions will use Gitlab.com.
         - $MANIFEST_PATH
       expire_in: 1 week
     rules:
-      # Set up a pipeline schedule for this https://docs.gitlab.com/ee/ci/pipelines/schedules.html
+      # Set up a pipeline schedule for this https://docs.gitlab.com/ci/pipelines/schedules/
       - if: $CI_PIPELINE_SOURCE == "schedule" || $CI_PIPELINE_SOURCE == "trigger"
         when: always
       - when: never
@@ -141,7 +141,7 @@ The instructions will use Gitlab.com.
     image: ${DOCKER_IMAGE}
     variables:
       # Stable Flathub repo
-      RUNTIME_REPO: "https://flathub.org/repo/flathub.flatpakrepo"
+      RUNTIME_REPO: "https://dl.flathub.org/repo/flathub.flatpakrepo"
     script:
       # Set up an user as the docker image used here comes with none
       - |
@@ -351,7 +351,7 @@ This uses Gitlab.com's `hosted aarch64 runners <https://docs.gitlab.com/ci/runne
     stage: setup
     image: ${DOCKER_IMAGE}
     variables:
-      RUNTIME_REPO: "https://flathub.org/repo/flathub.flatpakrepo"
+      RUNTIME_REPO: "https://dl.flathub.org/repo/flathub.flatpakrepo"
     before_script:
       # Set up an user as the docker image used here comes with none
       - |
@@ -398,7 +398,7 @@ This uses Gitlab.com's `hosted aarch64 runners <https://docs.gitlab.com/ci/runne
     script:
       - flatpak-builder build --arch=${ARCH} --user --install-deps-from=flathub --gpg-sign=${GPG_KEY_ID} --disable-rofiles-fuse --disable-updates --force-clean --repo=repo ${BRANCH:+--default-branch=$BRANCH} ${MANIFEST_PATH}
     stage: build-aarch64
-    # https://docs.gitlab.com/ee/ci/runners/hosted_runners/linux.html#machine-types-available-for-linux---arm64
+    # https://docs.gitlab.com/ci/runners/hosted_runners/linux/#machine-types-available-for-linux---arm64
     tags:
       - saas-linux-large-arm64
     dependencies:

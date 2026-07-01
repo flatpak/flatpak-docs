@@ -21,7 +21,7 @@ rather straightforward:
     - pip3 install --prefix=/app --no-deps .
   sources:
     - type: archive
-      url: https://files.pythonhosted.org/packages/source/r/requests/requests-2.18.4.tar.gz
+      url: https://files.pythonhosted.org/packages/b0/e1/eab4fc3752e3d240468a8c0b284607899d2fbfb236a56b7377a329aa8d09/requests-2.18.4.tar.gz
       sha256: 9c443e7324ba5b85070c4a818ade28bfabedf16ea10206da1132edaa6dda237e
 
 Here, ``build-commands`` is an array containing the commands required to

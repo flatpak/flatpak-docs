@@ -292,7 +292,7 @@ An example is provided below.
       - PREFIX=/app
     sources:
       - type: git
-        url: https://github.com/FFmpeg/nv-codec-headers.git
+        url: https://github.com/FFmpeg/nv-codec-headers
         commit: 43d91706e097565f57b311e567f0219838bcc2f6
         tag: n11.1.5.3
 
@@ -304,7 +304,7 @@ An example is provided below.
       - -Dtests=false
     sources:
       - type: git
-        url: https://gitlab.freedesktop.org/mesa/drm.git
+        url: https://gitlab.freedesktop.org/mesa/libdrm.git
         tag: libdrm-2.4.124
 
   # Using simple
@@ -315,7 +315,7 @@ An example is provided below.
       - make -j$FLATPAK_BUILDER_N_JOBS PREFIX=/app install
     sources:
       - type: git
-        url: https://github.com/FFmpeg/nv-codec-headers.git
+        url: https://github.com/FFmpeg/nv-codec-headers
         commit: 43d91706e097565f57b311e567f0219838bcc2f6
         tag: n11.1.5.3
 
@@ -326,7 +326,7 @@ An example is provided below.
       - ninja -C builddir install
     sources:
       - type: git
-        url: https://gitlab.freedesktop.org/mesa/drm.git
+        url: https://gitlab.freedesktop.org/mesa/libdrm.git
         tag: libdrm-2.4.124
 
 Shared Modules

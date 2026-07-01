@@ -157,7 +157,7 @@ latex_documents = [
 linkcheck_anchors_ignore_for_url = [
     r'https://github\.com/.*',
     r'https://gitlab\.com/.*',
-    r'https://hg\.mozilla\.org/.*',
+    r'https://hg-edge\.mozilla\.org/.*',
     r'https://gitlab\.gnome\.org/GNOME/Initiatives/-/wikis/DevOps-with-Flatpak'
 ]
 

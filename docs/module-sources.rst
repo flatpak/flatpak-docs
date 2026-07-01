@@ -71,7 +71,7 @@ where the given source will be placed:
           url: https://example.org/foo.tar.xz
           sha256: 834b06e423d360c97197e7abec99b623fdc5ed3a0c39b88d6467e499074585e1
         - type: git
-          url: https://github.com/foo/bar.git
+          url: https://github.com/foo/bar
           commit: 3f9389edc6cdf3f78a6896d550c236860aed62b2
           dest: 'src/deps/bar'
 
@@ -253,7 +253,7 @@ A typical example is:
        - install -Dpm755 -t "${FLATPAK_DEST}/bin" squashfs-tools/unsquashfs
       sources:
         - type: git
-          url: https://github.com/plougher/squashfs-tools.git
+          url: https://github.com/plougher/squashfs-tools
           tag: 4.6.1
           commit: d8cb82d9840330f9344ec37b992595b5d7b44184
 
@@ -585,7 +585,7 @@ manifest root path, whose contents will be copied during build.
           path: icons
 
 Additonally there are `bzr`, `svn` and `inline` sources supported.
-`bzr` and `svn` requires the `bzr <https://code.launchpad.net/bzr>`_
+`bzr` and `svn` requires the `bzr <https://github.com/bazaar-community/bazaar-old>`_
 and `svn <https://subversion.apache.org/>`_ commandline tools to be
 installed respectively. Please see
 :doc:`flatpak-builder-command-reference` for them.

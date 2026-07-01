@@ -33,7 +33,7 @@ Developers must follow the standard `D-Bus naming conventions for bus names
 <https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names>`_
 when creating their own IDs. This format is
 already recommended by the `Desktop File specification
-<https://specifications.freedesktop.org/desktop-entry-spec/latest/file-naming.html>`_
+<https://specifications.freedesktop.org/desktop-entry/latest/file-naming.html>`_
 and also the `Appstream specification
 <https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#sect-Metadata-GenericComponent>`_.
 
@@ -119,7 +119,7 @@ Application icons
 Applications are expected to provide an application icon, which
 is used for their application launcher. These icons should be
 provided in accordance with the `Freedesktop icon specification
-<https://specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html>`_.
+<https://specifications.freedesktop.org/icon-theme/icon-theme-spec-latest.html>`_.
 
 Icons must be named using the application's ID, be in either PNG or SVG
 format, and must be placed in the standard location::
@@ -152,7 +152,7 @@ Desktop files
 
 Desktop files are used to provide the desktop environment with
 information about each application. The `Freedesktop specification
-<https://specifications.freedesktop.org/desktop-entry-spec/latest/>`_
+<https://specifications.freedesktop.org/desktop-entry/latest/>`_
 provides a complete reference for writing desktop files.
 
 Desktop files must be named using the application's ID, followed
@@ -296,7 +296,7 @@ is provided below::
   - the "fdo #xxxxx" are the wish in the freedesktop.org bug database to include
     the mime type there.
   -->
-  <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-info xmlns="https://specifications.freedesktop.org/shared-mime-info/">
     <mime-type type="application/x-vnd.akonadi.calendar.event">
       <sub-class-of type="text/calendar"/>
       <comment>iCal Calendar Event Component</comment>
@@ -357,7 +357,7 @@ XDG base directories
 --------------------
 
 `XDG base directories
-<https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html>`_ are
+<https://specifications.freedesktop.org/basedir/basedir-spec-latest.html>`_ are
 standard locations for user-specific application data. Popular toolkits provide
 convenience functions for accessing XDG base directories. These include:
 

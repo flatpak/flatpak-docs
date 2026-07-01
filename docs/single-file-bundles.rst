@@ -27,7 +27,7 @@ GNOME dictionary app from the repository at ~/repositories/apps, run::
 
 You can also set a runtime repo in the bundle::
 
-  $ flatpak build-bundle ~/repositories/apps dictionary.flatpak org.gnome.Dictionary --runtime-repo=https://flathub.org/repo/flathub.flatpakrepo
+  $ flatpak build-bundle ~/repositories/apps dictionary.flatpak org.gnome.Dictionary --runtime-repo=https://dl.flathub.org/repo/flathub.flatpakrepo
 
 To import the bundle into a repository on another machine, run::
 

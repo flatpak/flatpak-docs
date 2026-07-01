@@ -95,7 +95,7 @@ See :doc:`single-file-bundles` for more details on it.
 
 .. code-block:: bash
 
-  flatpak build-bundle repo hello.flatpak org.flatpak.Hello --runtime-repo=https://flathub.org/repo/flathub.flatpakrepo
+  flatpak build-bundle repo hello.flatpak org.flatpak.Hello --runtime-repo=https://dl.flathub.org/repo/flathub.flatpakrepo
 
 Now you can send the ``hello.flatpak`` file to someone and if they have
 the Flathub repository set up and a working network connection to install

@@ -97,7 +97,7 @@ Add a remote
 The most convenient way to add a remote is by using a ``.flatpakrepo`` file,
 which includes both the details of the remote and its GPG key::
 
- $ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+ $ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 Here, ``flathub`` is the local name that is given to the remote. The URL
 points to the remote's ``.flatpakrepo`` file. ``--if-not-exists`` stops the
@@ -142,7 +142,7 @@ The details of the application to be installed can also be provided by a
 ``.flatpakref`` instead of manually providing the remote and application
 ID, run::
 
- $ flatpak install https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
+ $ flatpak install https://dl.flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
 
 If the ``.flatpakref`` file specifies that the application is to be installed
 from a remote that hasn't already been added, you will be asked whether to

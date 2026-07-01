@@ -156,7 +156,7 @@ create a ``flatpak`` directory so the path specified by ``Path=`` exists.
 
 Then you can add a remote using a command like::
 
-  $ flatpak --installation=extra remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
+  $ flatpak --installation=extra remote-add flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 And install to it with::
 
