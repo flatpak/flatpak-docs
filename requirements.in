@@ -4,3 +4,4 @@ matplotlib
 sphinxext-opengraph
 sphinx-copybutton
 sphinx-intl
+numpy>2,<2.5.0
