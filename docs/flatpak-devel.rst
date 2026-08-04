@@ -118,7 +118,7 @@ The root ``meson.build`` parts should be something like this:
   }, section: 'Development')
 
 
-The root ``meson-options.txt`` should have something like::
+The root ``meson.options`` should have something like::
 
   option('profile', type: 'combo', choices: ['default', 'development'], value: 'default')
 
