@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Flatpak Builder Command Reference</title><link rel="stylesheet" type="text/css" href="docbook.css" /><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" /></head><body><div class="reference"><div class="titlepage"><div><div><h1 class="title"><a id="id1337"></a>Flatpak Builder Command Reference</h1></div><div><p class="releaseinfo">Version 1.4.10</p></div></div><hr /></div><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Important</h3><p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Flatpak Builder Command Reference</title><link rel="stylesheet" type="text/css" href="docbook.css" /><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" /></head><body><div class="reference"><div class="titlepage"><div><div><h1 class="title"><a id="id1337"></a>Flatpak Builder Command Reference</h1></div><div><p class="releaseinfo">Version 1.4.12</p></div></div><hr /></div><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Important</h3><p>
           The command reference is generated from the flatpak-builder repo; see <a class="ulink" href="https://github.com/flatpak/flatpak-builder/tree/master/doc" target="_top">https://github.com/flatpak/flatpak-builder/tree/master/doc</a>
         </p></div><div class="partintro"><div></div><p>
         Flatpak-builder is a tool to build flatpak applications.
@@ -236,6 +236,12 @@
                   with <code class="option">--mirror-screenshots-url=URL</code>;
                   otherwise the Appstream catalogue will preserve
                   the source media URLs.
+                </p></dd><dt><span class="term"><code class="option">--compose-image-format=FORMAT</code></span></dt><dd><p>
+                  Set the AppStream compose image format used for
+                  generated icons and screenshots. Accepted values
+                  are <code class="literal">png</code> and <code class="literal">jxl</code>.
+                  <code class="literal">jxl</code> requires AppStream version &gt;= 1.2.0.
+                  Defaults to <code class="literal">png</code> if unspecified.
                 </p></dd><dt><span class="term"><code class="option">--add-tag=TAG</code></span></dt><dd><p>
                   Add this tag to the tags list of the manifest before building.
                 </p></dd><dt><span class="term"><code class="option">--remove-tag=TAG</code></span></dt><dd><p>
